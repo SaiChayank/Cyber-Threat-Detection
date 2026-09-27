@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ps26145-threat-detector"
+version = "0.1.0"
+description = "AI-Based Detection of Cyber Threats in Unidirectional IP Traffic (NTRO / SIH)"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [
+    { name = "PS26145 Team" }
+]
+dependencies = [
+    "fastapi>=0.110.0",
+    "uvicorn[standard]>=0.28.0",
+    "pydantic>=2.6.0",
+    "redis>=5.0.0",
+    "fakeredis>=2.20.0",
+    "sse-starlette>=2.0.0",
+    "sqlalchemy>=2.0.0",
+    "scapy>=2.5.0",
+    "numpy>=1.26.0",
+    "pandas>=2.2.0",
+    "scikit-learn>=1.4.0",
+    "xgboost>=2.0.0",
+    "datasketch>=1.6.0",
+    "python-dotenv>=1.0.0",
+    "httpx>=0.27.0"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.23.0",
+    "pip-audit>=2.7.0"
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+asyncio_mode = "auto"
