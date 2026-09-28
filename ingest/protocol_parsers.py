@@ -56,18 +56,22 @@ class ProtocolParser:
                     self.dlq.record_corrupt_packet("SHORT_IPV4", "Truncated IPv4 header", len(raw_data))
                     return None, None, None
                 
-                version_ihl, _, total_len, _, _, ttl, protocol, _, src_bytes, dst_bytes = struct.unpack(
+                version_ihl, _, total_len, _, fragment, ttl, protocol, _, src_bytes, dst_bytes = struct.unpack(
                     "!BBHHHBBH4s4s", raw_data[ip_offset:ip_offset + 20]
                 )
                 ihl = (version_ihl & 0x0F) * 4
-                if ihl < 20:
+                if ihl < 20 or version_ihl >> 4 != 4 or total_len < ihl or len(raw_data) < ip_offset + ihl:
                     self.dlq.record_corrupt_packet("INVALID_IHL", f"Invalid IHL {ihl}", len(raw_data))
                     return None, None, None
+                if fragment & 0x3FFF:
+                    self.dlq.unsupported_protocol_count += 1
+                    return None, None, None  # No speculative parsing of IP fragments.
 
                 src_ip = socket.inet_ntoa(src_bytes)
                 dst_ip = socket.inet_ntoa(dst_bytes)
                 l4_offset = ip_offset + ihl
                 total_ip_len = min(total_len, len(raw_data) - ip_offset)
+                raw_data = raw_data[:ip_offset + total_ip_len]
 
             elif eth_type == 0x86DD:  # IPv6
                 if len(raw_data) < ip_offset + 40:
@@ -79,6 +83,7 @@ class ProtocolParser:
                 dst_ip = socket.inet_ntop(socket.AF_INET6, raw_data[ip_offset + 24:ip_offset + 40])
                 l4_offset = ip_offset + 40
                 total_ip_len = 40 + payload_len
+                raw_data = raw_data[:ip_offset + total_ip_len]
 
             else:
                 # Non-IP packet (ARP, etc.)
@@ -101,6 +106,9 @@ class ProtocolParser:
                 )
                 tcp_flags = data_offset_flags & 0x01FF
                 tcp_header_len = ((data_offset_flags >> 12) & 0x0F) * 4
+                if tcp_header_len < 20 or l4_offset + tcp_header_len > len(raw_data):
+                    self.dlq.record_corrupt_packet('INVALID_TCP_LENGTH', 'Invalid TCP header length', len(raw_data))
+                    return None, None, None
                 payload_offset = l4_offset + tcp_header_len
                 payload_data = raw_data[payload_offset:]
 
@@ -110,6 +118,9 @@ class ProtocolParser:
                     return None, None, None
                 
                 src_port, dst_port, udp_len, _ = struct.unpack("!HHHH", raw_data[l4_offset:l4_offset + 8])
+                if udp_len < 8 or l4_offset + udp_len > len(raw_data):
+                    self.dlq.record_corrupt_packet('INVALID_UDP_LENGTH', 'Invalid UDP length', len(raw_data))
+                    return None, None, None
                 payload_data = raw_data[l4_offset + 8:l4_offset + udp_len]
 
             # 4. Construct Core FlowRecord

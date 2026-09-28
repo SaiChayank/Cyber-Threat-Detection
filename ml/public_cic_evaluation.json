@@ -1,0 +1,65 @@
+{
+  "inventory": {
+    "BENIGN": 2273097,
+    "DDoS": 128027,
+    "PortScan": 158930,
+    "Bot": 1966,
+    "Infiltration": 36,
+    "Web Attack \ufffd Brute Force": 1507,
+    "Web Attack \ufffd XSS": 652,
+    "Web Attack \ufffd Sql Injection": 21,
+    "FTP-Patator": 7938,
+    "SSH-Patator": 5897,
+    "DoS slowloris": 5796,
+    "DoS Slowhttptest": 5499,
+    "DoS Hulk": 231073,
+    "DoS GoldenEye": 10293,
+    "Heartbleed": 11
+  },
+  "invalid": {
+    "Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv": 2,
+    "Monday-WorkingHours.pcap_ISCX.csv": 15,
+    "Tuesday-WorkingHours.pcap_ISCX.csv": 17,
+    "Wednesday-workingHours.pcap_ISCX.csv": 21
+  },
+  "training_counts": {
+    "BENIGN": 31738,
+    "DDOS": 9517
+  },
+  "training_captures": [
+    "Monday",
+    "Wednesday"
+  ],
+  "validation_captures": [
+    "Tuesday"
+  ],
+  "test_captures": [
+    "Friday DDoS"
+  ],
+  "validation": {
+    "tn": 281684,
+    "fp": 14134,
+    "duplicate_vectors_excluded": 136239,
+    "recall": null,
+    "false_positive_rate": 0.04777937786071165
+  },
+  "test": {
+    "tn": 70334,
+    "duplicate_vectors_excluded": 16351,
+    "fp": 11092,
+    "fn": 119084,
+    "tp": 8882,
+    "recall": 0.06940906178203585,
+    "false_positive_rate": 0.13622184560214182
+  },
+  "production_enabled": false,
+  "caveats": [
+    "Original archive has no addresses or event timestamps; cannot replay as real packet traffic",
+    "DoS variants train; unseen Friday DDoS capture tests transfer",
+    "Tuesday labelled attacks outside target class excluded: benign-only validation has no recall",
+    "Forward IAT units and duration retained as provided by CICFlowMeter",
+    "Predeclared 0.99 threshold; no holdout tuning",
+    "Exact feature vectors deduplicated against training and within each evaluation partition; full capture duplicates cannot be ruled out without raw tuples",
+    "Other official labels inventoried, not silently collapsed to benign"
+  ]
+}

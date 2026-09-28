@@ -1,0 +1,20 @@
+{
+  "source": "https://www.unb.ca/cic/datasets/ids-2017.html",
+  "licence": "Publisher permits reuse with citation",
+  "citation": "Sharafaldin, Lashkari and Ghorbani (2018), Toward Generating a New Intrusion Detection Dataset and Intrusion Traffic Characterization",
+  "files": [
+    {
+      "file": "data\\raw\\cicids2017\\MachineLearningCSV.md5",
+      "bytes": 57,
+      "sha256": "9f8789602d7f885f1e024eac19653592e25d42a5218af25090d29a06f27fa362",
+      "url": "https://cicresearch.ca/CICDataset/CIC-IDS-2017/download.php?file=CIC-IDS-2017%2FCSVs%2FMachineLearningCSV.md5"
+    },
+    {
+      "file": "data\\raw\\cicids2017\\MachineLearningCSV.zip",
+      "bytes": 235102953,
+      "sha256": "c3f26274b36c837ccf28ffd2dbf4582941c30b3ee70a635c6e5b2f87c4727928",
+      "url": "https://cicresearch.ca/CICDataset/CIC-IDS-2017/download.php?file=CIC-IDS-2017%2FCSVs%2FMachineLearningCSV.zip"
+    }
+  ],
+  "verified_publisher_md5": "4f83860afbf29cac8163854095bf6cf7"
+}

@@ -1,0 +1,805 @@
+{
+  "generated_at_utc": "2026-09-28T06:06:06.674467+00:00",
+  "model_sha256": "4d8e08323374535789e21f9f7cd1ee3f1c84b663ce555e67bb4ced57c95e8010",
+  "model": "Current synthetic-trained hybrid streaming pipeline",
+  "umudga": {
+    "scope": "Runtime DGA alert decisions on public strings in isolated simulated DNS events",
+    "families": [
+      {
+        "family": "banjori",
+        "source_sha256": "552770009ba5640d37b5a7eee310434a1d8ff641c5c69702e75f3d6c035bcabb",
+        "evaluated_unique_domains": 1000,
+        "tp": 1000,
+        "fn": 0,
+        "fp": 0,
+        "tn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "false_positive_rate": null,
+        "error_examples": []
+      },
+      {
+        "family": "corebot",
+        "source_sha256": "26e2535ead55fbfecef8a0e0e3214914ce62f0c03062c9bbaa744d8f2430d6f2",
+        "evaluated_unique_domains": 1000,
+        "tp": 1000,
+        "fn": 0,
+        "fp": 0,
+        "tn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "false_positive_rate": null,
+        "error_examples": []
+      },
+      {
+        "family": "dircrypt",
+        "source_sha256": "97938e517ba99dc9781cd437982cf304cb3c658246cd4267801b81b148832470",
+        "evaluated_unique_domains": 1000,
+        "tp": 1000,
+        "fn": 0,
+        "fp": 0,
+        "tn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "false_positive_rate": null,
+        "error_examples": []
+      },
+      {
+        "family": "legit",
+        "source_sha256": "5431e97b5ae41fdfcf4dbef10e08a1c81d9b252514ce8bba36452a1500c0e49e",
+        "evaluated_unique_domains": 1000,
+        "tp": 0,
+        "fn": 0,
+        "fp": 912,
+        "tn": 88,
+        "precision": 0.0,
+        "recall": null,
+        "false_positive_rate": 0.912,
+        "error_examples": [
+          "google.com",
+          "youtube.com",
+          "facebook.com",
+          "baidu.com",
+          "wikipedia.org"
+        ]
+      },
+      {
+        "family": "matsnu",
+        "source_sha256": "32fbd0fb5844172b92ff45f34c23c6be4867a3be19db988a6866a0abee2fb2d6",
+        "evaluated_unique_domains": 996,
+        "tp": 996,
+        "fn": 0,
+        "fp": 0,
+        "tn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "false_positive_rate": null,
+        "error_examples": []
+      },
+      {
+        "family": "necurs",
+        "source_sha256": "8c9bf2684cc57717606b0ce1e7a6f3d91d9e83ca9be957ad844a4e3e6596b147",
+        "evaluated_unique_domains": 1000,
+        "tp": 1000,
+        "fn": 0,
+        "fp": 0,
+        "tn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "false_positive_rate": null,
+        "error_examples": []
+      },
+      {
+        "family": "ramnit",
+        "source_sha256": "21f274e8f5888354c5d1611a44b5a09cdc42af89c80b02b6e7274bdc85286cc4",
+        "evaluated_unique_domains": 1000,
+        "tp": 1000,
+        "fn": 0,
+        "fp": 0,
+        "tn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "false_positive_rate": null,
+        "error_examples": []
+      }
+    ],
+    "combined": {
+      "tp": 5996,
+      "fn": 0,
+      "fp": 912,
+      "tn": 88,
+      "precision": 0.8679791546033584,
+      "recall": 1.0,
+      "false_positive_rate": 0.912
+    },
+    "caveats": [
+      "Counts are unique-domain decisions, not real network flow accuracy",
+      "Other emitted threat classes are excluded from DGA confusion counts",
+      "Only first-label lexical features currently reach the detector",
+      "No thresholds were changed using these results"
+    ]
+  },
+  "captures": [
+    {
+      "capture": "benign-benign_1",
+      "category": "benign",
+      "source_sha256": "2df7769f8e6b4db753ad968ce1da10427275d9456d38548e993eaaaf6484ae99",
+      "parsed_ip_packets": 132180,
+      "dns_observations": 73937,
+      "dns_query_types": {
+        "1": 73937
+      },
+      "max_dns_query_length": 36,
+      "long_txt_first_labels": 0,
+      "top_udp_destination_ports": [
+        [
+          5355,
+          55072
+        ],
+        [
+          53,
+          50594
+        ],
+        [
+          137,
+          1763
+        ],
+        [
+          1947,
+          759
+        ],
+        [
+          5353,
+          568
+        ]
+      ],
+      "alerts_by_class": {
+        "BOTNET_C2": 12,
+        "DGA_DOMAINS": 958,
+        "RECONNAISSANCE": 1
+      },
+      "elapsed_seconds": 26.469868000014685,
+      "parsed_packets_per_second": 4993.602537040482,
+      "telemetry": {
+        "processed": 132180,
+        "late_events": 2,
+        "state_evictions": 0,
+        "active_sources": 67,
+        "processing_p95_ms": 0.26729999808594584
+      },
+      "interpretation": "Benign-reference alerts are false-positive candidates; deduplicated counts are not FPR"
+    },
+    {
+      "capture": "benign-benign_2",
+      "category": "benign",
+      "source_sha256": "5ace9b02ecc7539cb806bbfedb9e7467d1b0b8ad14921938a09e6d7e2d2d3f93",
+      "parsed_ip_packets": 93684,
+      "dns_observations": 53073,
+      "dns_query_types": {
+        "1": 53073
+      },
+      "max_dns_query_length": 36,
+      "long_txt_first_labels": 0,
+      "top_udp_destination_ports": [
+        [
+          53,
+          33406
+        ],
+        [
+          5355,
+          32695
+        ],
+        [
+          443,
+          4566
+        ],
+        [
+          137,
+          1159
+        ],
+        [
+          1947,
+          449
+        ]
+      ],
+      "alerts_by_class": {
+        "BOTNET_C2": 1,
+        "DGA_DOMAINS": 641,
+        "DDOS": 55,
+        "RECONNAISSANCE": 3
+      },
+      "elapsed_seconds": 22.599039199994877,
+      "parsed_packets_per_second": 4145.485972696629,
+      "telemetry": {
+        "processed": 93684,
+        "late_events": 2,
+        "state_evictions": 4233,
+        "active_sources": 83,
+        "processing_p95_ms": 1.6592000029049814
+      },
+      "interpretation": "Benign-reference alerts are false-positive candidates; deduplicated counts are not FPR"
+    },
+    {
+      "capture": "heavy-heavy_audio",
+      "category": "heavy",
+      "source_sha256": "d42812933acb1cbc377f4caeff676baa8b393548a0aae558531bc6b9d7351eaf",
+      "parsed_ip_packets": 54412,
+      "dns_observations": 99,
+      "dns_query_types": {
+        "1": 99
+      },
+      "max_dns_query_length": 34,
+      "long_txt_first_labels": 0,
+      "top_udp_destination_ports": [
+        [
+          5355,
+          34450
+        ],
+        [
+          443,
+          8560
+        ],
+        [
+          64655,
+          1920
+        ],
+        [
+          64657,
+          1879
+        ],
+        [
+          137,
+          1170
+        ]
+      ],
+      "alerts_by_class": {
+        "BOTNET_C2": 109,
+        "DGA_DOMAINS": 15,
+        "ENCRYPTED_MALWARE": 1327,
+        "DDOS": 1
+      },
+      "elapsed_seconds": 9.350706299999729,
+      "parsed_packets_per_second": 5819.025670820351,
+      "telemetry": {
+        "processed": 54412,
+        "late_events": 1,
+        "state_evictions": 0,
+        "active_sources": 89,
+        "processing_p95_ms": 0.3066000062972307
+      },
+      "interpretation": "Mixed capture: no per-flow labels; recall cannot be measured"
+    },
+    {
+      "capture": "heavy-heavy_compressed",
+      "category": "heavy",
+      "source_sha256": "3f2b5a84a4ab0a560907e6304ba94081ff5dbebe7a5fb53e76e95e3ab20c9b8f",
+      "parsed_ip_packets": 52910,
+      "dns_observations": 100,
+      "dns_query_types": {
+        "1": 100
+      },
+      "max_dns_query_length": 34,
+      "long_txt_first_labels": 0,
+      "top_udp_destination_ports": [
+        [
+          5355,
+          34382
+        ],
+        [
+          443,
+          7864
+        ],
+        [
+          64655,
+          1931
+        ],
+        [
+          137,
+          1170
+        ],
+        [
+          63484,
+          1169
+        ]
+      ],
+      "alerts_by_class": {
+        "BOTNET_C2": 134,
+        "ENCRYPTED_MALWARE": 1388,
+        "DGA_DOMAINS": 20,
+        "RECONNAISSANCE": 3
+      },
+      "elapsed_seconds": 8.635130500013474,
+      "parsed_packets_per_second": 6127.295933734578,
+      "telemetry": {
+        "processed": 52910,
+        "late_events": 2,
+        "state_evictions": 0,
+        "active_sources": 86,
+        "processing_p95_ms": 0.18400000408291817
+      },
+      "interpretation": "Mixed capture: no per-flow labels; recall cannot be measured"
+    },
+    {
+      "capture": "heavy-heavy_exe",
+      "category": "heavy",
+      "source_sha256": "f36df2cc710fe35fd9567df44b77dd953a532d1f1ee737e99c1363c615604441",
+      "parsed_ip_packets": 35350,
+      "dns_observations": 114,
+      "dns_query_types": {
+        "1": 114
+      },
+      "max_dns_query_length": 36,
+      "long_txt_first_labels": 0,
+      "top_udp_destination_ports": [
+        [
+          5355,
+          33318
+        ],
+        [
+          137,
+          1119
+        ],
+        [
+          1947,
+          458
+        ],
+        [
+          5353,
+          302
+        ],
+        [
+          53,
+          112
+        ]
+      ],
+      "alerts_by_class": {
+        "BOTNET_C2": 42,
+        "DGA_DOMAINS": 40
+      },
+      "elapsed_seconds": 5.74738129999605,
+      "parsed_packets_per_second": 6150.627243058381,
+      "telemetry": {
+        "processed": 35350,
+        "late_events": 1,
+        "state_evictions": 0,
+        "active_sources": 63,
+        "processing_p95_ms": 0.2586999908089638
+      },
+      "interpretation": "Mixed capture: no per-flow labels; recall cannot be measured"
+    },
+    {
+      "capture": "heavy-heavy_image",
+      "category": "heavy",
+      "source_sha256": "8030da093ea153bccdfd505f87034bd68eb4a0feda1317452fbbbc5da90b2f40",
+      "parsed_ip_packets": 53668,
+      "dns_observations": 90,
+      "dns_query_types": {
+        "1": 90
+      },
+      "max_dns_query_length": 34,
+      "long_txt_first_labels": 0,
+      "top_udp_destination_ports": [
+        [
+          5355,
+          35017
+        ],
+        [
+          443,
+          7872
+        ],
+        [
+          64655,
+          1966
+        ],
+        [
+          53972,
+          1941
+        ],
+        [
+          137,
+          1206
+        ]
+      ],
+      "alerts_by_class": {
+        "BOTNET_C2": 104,
+        "ENCRYPTED_MALWARE": 1407,
+        "DGA_DOMAINS": 15
+      },
+      "elapsed_seconds": 7.955315400002291,
+      "parsed_packets_per_second": 6746.181301621874,
+      "telemetry": {
+        "processed": 53668,
+        "late_events": 0,
+        "state_evictions": 0,
+        "active_sources": 82,
+        "processing_p95_ms": 0.1784000196494162
+      },
+      "interpretation": "Mixed capture: no per-flow labels; recall cannot be measured"
+    },
+    {
+      "capture": "heavy-heavy_text",
+      "category": "heavy",
+      "source_sha256": "a57d13d2f0e9b8328bcb6f31742560963b2413238c89fd1ab61100cca5c4c2b9",
+      "parsed_ip_packets": 105031,
+      "dns_observations": 228,
+      "dns_query_types": {
+        "1": 228
+      },
+      "max_dns_query_length": 36,
+      "long_txt_first_labels": 0,
+      "top_udp_destination_ports": [
+        [
+          5355,
+          68405
+        ],
+        [
+          443,
+          15509
+        ],
+        [
+          64655,
+          3832
+        ],
+        [
+          64681,
+          3030
+        ],
+        [
+          137,
+          2316
+        ]
+      ],
+      "alerts_by_class": {
+        "BOTNET_C2": 218,
+        "ENCRYPTED_MALWARE": 2869,
+        "DGA_DOMAINS": 37,
+        "DDOS": 1
+      },
+      "elapsed_seconds": 15.258706900000107,
+      "parsed_packets_per_second": 6883.348680090268,
+      "telemetry": {
+        "processed": 105031,
+        "late_events": 0,
+        "state_evictions": 0,
+        "active_sources": 95,
+        "processing_p95_ms": 0.17389998538419604
+      },
+      "interpretation": "Mixed capture: no per-flow labels; recall cannot be measured"
+    },
+    {
+      "capture": "heavy-heavy_video",
+      "category": "heavy",
+      "source_sha256": "425c26e2317f73c2ebb4fe273b96cde634e48e3a858f882e3d9addfc864cccdc",
+      "parsed_ip_packets": 38798,
+      "dns_observations": 136,
+      "dns_query_types": {
+        "1": 136
+      },
+      "max_dns_query_length": 34,
+      "long_txt_first_labels": 0,
+      "top_udp_destination_ports": [
+        [
+          5355,
+          36558
+        ],
+        [
+          137,
+          1236
+        ],
+        [
+          1947,
+          507
+        ],
+        [
+          5353,
+          328
+        ],
+        [
+          53,
+          136
+        ]
+      ],
+      "alerts_by_class": {
+        "BOTNET_C2": 52,
+        "DGA_DOMAINS": 29
+      },
+      "elapsed_seconds": 6.09745830000611,
+      "parsed_packets_per_second": 6362.97914492685,
+      "telemetry": {
+        "processed": 38798,
+        "late_events": 0,
+        "state_evictions": 0,
+        "active_sources": 62,
+        "processing_p95_ms": 0.2094999945256859
+      },
+      "interpretation": "Mixed capture: no per-flow labels; recall cannot be measured"
+    },
+    {
+      "capture": "light-light_audio",
+      "category": "light",
+      "source_sha256": "03d36e23f0ac9d2b05fce4a7cd8c0395c5ffec0edc42e988c5e9790e86675c5c",
+      "parsed_ip_packets": 17968,
+      "dns_observations": 29,
+      "dns_query_types": {
+        "1": 29
+      },
+      "max_dns_query_length": 34,
+      "long_txt_first_labels": 0,
+      "top_udp_destination_ports": [
+        [
+          5355,
+          16977
+        ],
+        [
+          137,
+          570
+        ],
+        [
+          1947,
+          234
+        ],
+        [
+          5353,
+          152
+        ],
+        [
+          53,
+          28
+        ]
+      ],
+      "alerts_by_class": {
+        "BOTNET_C2": 21,
+        "DGA_DOMAINS": 26
+      },
+      "elapsed_seconds": 2.7498186000157148,
+      "parsed_packets_per_second": 6534.249204619285,
+      "telemetry": {
+        "processed": 17968,
+        "late_events": 0,
+        "state_evictions": 0,
+        "active_sources": 62,
+        "processing_p95_ms": 0.1914000022225082
+      },
+      "interpretation": "Mixed capture: no per-flow labels; recall cannot be measured"
+    },
+    {
+      "capture": "light-light_compressed",
+      "category": "light",
+      "source_sha256": "1b757214d96a42339e5b5204eaaf9e385d483e4e6f60fd8f89debf97ff0c3110",
+      "parsed_ip_packets": 10458,
+      "dns_observations": 20,
+      "dns_query_types": {
+        "1": 20
+      },
+      "max_dns_query_length": 34,
+      "long_txt_first_labels": 0,
+      "top_udp_destination_ports": [
+        [
+          5355,
+          9879
+        ],
+        [
+          137,
+          332
+        ],
+        [
+          1947,
+          136
+        ],
+        [
+          5353,
+          81
+        ],
+        [
+          53,
+          19
+        ]
+      ],
+      "alerts_by_class": {
+        "BOTNET_C2": 12,
+        "DGA_DOMAINS": 15
+      },
+      "elapsed_seconds": 1.597978100006003,
+      "parsed_packets_per_second": 6544.520228381549,
+      "telemetry": {
+        "processed": 10458,
+        "late_events": 0,
+        "state_evictions": 0,
+        "active_sources": 61,
+        "processing_p95_ms": 0.17559999832883477
+      },
+      "interpretation": "Mixed capture: no per-flow labels; recall cannot be measured"
+    },
+    {
+      "capture": "light-light_exe",
+      "category": "light",
+      "source_sha256": "128b5aed4dda9e2d8004bcc881c1993c98a8b9b1ea69f438d76e8272fd201107",
+      "parsed_ip_packets": 6580,
+      "dns_observations": 13,
+      "dns_query_types": {
+        "1": 12,
+        "16": 1
+      },
+      "max_dns_query_length": 34,
+      "long_txt_first_labels": 0,
+      "top_udp_destination_ports": [
+        [
+          5355,
+          6215
+        ],
+        [
+          137,
+          202
+        ],
+        [
+          1947,
+          85
+        ],
+        [
+          5353,
+          58
+        ],
+        [
+          53,
+          13
+        ]
+      ],
+      "alerts_by_class": {
+        "BOTNET_C2": 7,
+        "DGA_DOMAINS": 10
+      },
+      "elapsed_seconds": 1.0136963999830186,
+      "parsed_packets_per_second": 6491.095361599615,
+      "telemetry": {
+        "processed": 6580,
+        "late_events": 0,
+        "state_evictions": 0,
+        "active_sources": 60,
+        "processing_p95_ms": 0.18289999570697546
+      },
+      "interpretation": "Mixed capture: no per-flow labels; recall cannot be measured"
+    },
+    {
+      "capture": "light-light_image",
+      "category": "light",
+      "source_sha256": "74414eeb8e700debdd3548ba24a7156b608e1e6a2960f9157ca49f8f9fbec13a",
+      "parsed_ip_packets": 537,
+      "dns_observations": 0,
+      "dns_query_types": {},
+      "max_dns_query_length": 0,
+      "long_txt_first_labels": 0,
+      "top_udp_destination_ports": [
+        [
+          5355,
+          495
+        ],
+        [
+          137,
+          30
+        ],
+        [
+          1947,
+          7
+        ],
+        [
+          5353,
+          5
+        ]
+      ],
+      "alerts_by_class": {
+        "BOTNET_C2": 2
+      },
+      "elapsed_seconds": 0.07606620001024567,
+      "parsed_packets_per_second": 7059.640154597828,
+      "telemetry": {
+        "processed": 537,
+        "late_events": 0,
+        "state_evictions": 0,
+        "active_sources": 14,
+        "processing_p95_ms": 0.1660000125411898
+      },
+      "interpretation": "Mixed capture: no per-flow labels; recall cannot be measured"
+    },
+    {
+      "capture": "light-light_text",
+      "category": "light",
+      "source_sha256": "83bd120fd3ab1ab50a952e51791a6a86fca0e1322c1a008d693636b6a57a54bb",
+      "parsed_ip_packets": 3552,
+      "dns_observations": 8,
+      "dns_query_types": {
+        "1": 8
+      },
+      "max_dns_query_length": 34,
+      "long_txt_first_labels": 0,
+      "top_udp_destination_ports": [
+        [
+          5355,
+          3347
+        ],
+        [
+          137,
+          119
+        ],
+        [
+          1947,
+          46
+        ],
+        [
+          5353,
+          29
+        ],
+        [
+          53,
+          8
+        ]
+      ],
+      "alerts_by_class": {
+        "BOTNET_C2": 5,
+        "DGA_DOMAINS": 6
+      },
+      "elapsed_seconds": 0.5293885999999475,
+      "parsed_packets_per_second": 6709.626916787313,
+      "telemetry": {
+        "processed": 3552,
+        "late_events": 0,
+        "state_evictions": 0,
+        "active_sources": 37,
+        "processing_p95_ms": 0.17270000535063446
+      },
+      "interpretation": "Mixed capture: no per-flow labels; recall cannot be measured"
+    },
+    {
+      "capture": "light-light_video",
+      "category": "light",
+      "source_sha256": "b2303aa5d2a20b1396cc2f5129949cd794162f7a4e21e777d66cac76bbe100ec",
+      "parsed_ip_packets": 4455,
+      "dns_observations": 8,
+      "dns_query_types": {
+        "1": 8
+      },
+      "max_dns_query_length": 34,
+      "long_txt_first_labels": 0,
+      "top_udp_destination_ports": [
+        [
+          5355,
+          4210
+        ],
+        [
+          137,
+          144
+        ],
+        [
+          1947,
+          58
+        ],
+        [
+          5353,
+          33
+        ],
+        [
+          53,
+          8
+        ]
+      ],
+      "alerts_by_class": {
+        "BOTNET_C2": 5,
+        "DGA_DOMAINS": 7
+      },
+      "elapsed_seconds": 0.6815462999802548,
+      "parsed_packets_per_second": 6536.606537412155,
+      "telemetry": {
+        "processed": 4455,
+        "late_events": 0,
+        "state_evictions": 0,
+        "active_sources": 42,
+        "processing_p95_ms": 0.18160001491196454
+      },
+      "interpretation": "Mixed capture: no per-flow labels; recall cannot be measured"
+    }
+  ],
+  "limitations": [
+    "PCAP throughput includes parsing, feature extraction and inference; excludes replay pacing, persistence and UI",
+    "No malware payloads were decrypted and no monitored host was contacted",
+    "CIC and TLS completed-flow research candidates are evaluated separately; they are not runtime models"
+  ]
+}

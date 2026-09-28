@@ -1,0 +1,46 @@
+{
+  "inventory": {
+    "winapps:BENIGN_REFERENCE": 29526,
+    "malware:UNLABELLED": 649138,
+    "malware:MALWARE_RELATED": 755941,
+    "soho:UNLABELLED": 108036
+  },
+  "training_counts": {
+    "BENIGN_REFERENCE": 19831,
+    "MALWARE_RELATED": 376274
+  },
+  "split": "SHA256 family/app group modulo 10: 0-5 train, 6-7 validation, 8-9 test",
+  "groups": {
+    "train": 106,
+    "validation": 35,
+    "test": 37
+  },
+  "validation": {
+    "tp": 161365,
+    "fn": 75755,
+    "fp": 958,
+    "tn": 3809,
+    "precision": 0.9940981869482451,
+    "recall": 0.6805204116059379,
+    "false_positive_rate": 0.20096496748479128
+  },
+  "test": {
+    "tp": 110428,
+    "fn": 32119,
+    "fp": 118,
+    "tn": 4810,
+    "precision": 0.9989325710563928,
+    "recall": 0.7746778255592892,
+    "false_positive_rate": 0.023944805194805196
+  },
+  "production_enabled": false,
+  "scope": "completed TLS connection; forward-only view",
+  "caveats": [
+    "Completed-session features cannot be used at the first packet",
+    "Malware-related label is inherited from sandbox annotations, not independently verified per-flow compromise",
+    "SOHO and ambiguous malware sandbox records excluded from supervised labels",
+    "Forward TLS record sizes are not IP packet sizes",
+    "Source environment differences may inflate classification performance",
+    "Uncalibrated posterior; no QUIC validation"
+  ]
+}

@@ -1,0 +1,114 @@
+[
+  {
+    "id": "benign-benign_1",
+    "category": "benign",
+    "file": "data\\raw\\cicdns2021\\pcaps\\benign\\benign_1.pcap",
+    "sha256": "2df7769f8e6b4db753ad968ce1da10427275d9456d38548e993eaaaf6484ae99",
+    "label_scope": "benign reference",
+    "public_source": "CICBellEXFDNS2021"
+  },
+  {
+    "id": "benign-benign_2",
+    "category": "benign",
+    "file": "data\\raw\\cicdns2021\\pcaps\\benign\\benign_2.pcap",
+    "sha256": "5ace9b02ecc7539cb806bbfedb9e7467d1b0b8ad14921938a09e6d7e2d2d3f93",
+    "label_scope": "benign reference",
+    "public_source": "CICBellEXFDNS2021"
+  },
+  {
+    "id": "heavy-heavy_audio",
+    "category": "heavy",
+    "file": "data\\raw\\cicdns2021\\pcaps\\heavy\\heavy_audio.pcap",
+    "sha256": "d42812933acb1cbc377f4caeff676baa8b393548a0aae558531bc6b9d7351eaf",
+    "label_scope": "mixed attack/benign capture; per-flow labels unavailable",
+    "public_source": "CICBellEXFDNS2021"
+  },
+  {
+    "id": "heavy-heavy_compressed",
+    "category": "heavy",
+    "file": "data\\raw\\cicdns2021\\pcaps\\heavy\\heavy_compressed.pcap",
+    "sha256": "3f2b5a84a4ab0a560907e6304ba94081ff5dbebe7a5fb53e76e95e3ab20c9b8f",
+    "label_scope": "mixed attack/benign capture; per-flow labels unavailable",
+    "public_source": "CICBellEXFDNS2021"
+  },
+  {
+    "id": "heavy-heavy_exe",
+    "category": "heavy",
+    "file": "data\\raw\\cicdns2021\\pcaps\\heavy\\heavy_exe.pcap",
+    "sha256": "f36df2cc710fe35fd9567df44b77dd953a532d1f1ee737e99c1363c615604441",
+    "label_scope": "mixed attack/benign capture; per-flow labels unavailable",
+    "public_source": "CICBellEXFDNS2021"
+  },
+  {
+    "id": "heavy-heavy_image",
+    "category": "heavy",
+    "file": "data\\raw\\cicdns2021\\pcaps\\heavy\\heavy_image.pcap",
+    "sha256": "8030da093ea153bccdfd505f87034bd68eb4a0feda1317452fbbbc5da90b2f40",
+    "label_scope": "mixed attack/benign capture; per-flow labels unavailable",
+    "public_source": "CICBellEXFDNS2021"
+  },
+  {
+    "id": "heavy-heavy_text",
+    "category": "heavy",
+    "file": "data\\raw\\cicdns2021\\pcaps\\heavy\\heavy_text.pcap",
+    "sha256": "a57d13d2f0e9b8328bcb6f31742560963b2413238c89fd1ab61100cca5c4c2b9",
+    "label_scope": "mixed attack/benign capture; per-flow labels unavailable",
+    "public_source": "CICBellEXFDNS2021"
+  },
+  {
+    "id": "heavy-heavy_video",
+    "category": "heavy",
+    "file": "data\\raw\\cicdns2021\\pcaps\\heavy\\heavy_video.pcap",
+    "sha256": "425c26e2317f73c2ebb4fe273b96cde634e48e3a858f882e3d9addfc864cccdc",
+    "label_scope": "mixed attack/benign capture; per-flow labels unavailable",
+    "public_source": "CICBellEXFDNS2021"
+  },
+  {
+    "id": "light-light_audio",
+    "category": "light",
+    "file": "data\\raw\\cicdns2021\\pcaps\\light\\light_audio.pcap",
+    "sha256": "03d36e23f0ac9d2b05fce4a7cd8c0395c5ffec0edc42e988c5e9790e86675c5c",
+    "label_scope": "mixed attack/benign capture; per-flow labels unavailable",
+    "public_source": "CICBellEXFDNS2021"
+  },
+  {
+    "id": "light-light_compressed",
+    "category": "light",
+    "file": "data\\raw\\cicdns2021\\pcaps\\light\\light_compressed.pcap",
+    "sha256": "1b757214d96a42339e5b5204eaaf9e385d483e4e6f60fd8f89debf97ff0c3110",
+    "label_scope": "mixed attack/benign capture; per-flow labels unavailable",
+    "public_source": "CICBellEXFDNS2021"
+  },
+  {
+    "id": "light-light_exe",
+    "category": "light",
+    "file": "data\\raw\\cicdns2021\\pcaps\\light\\light_exe.pcap",
+    "sha256": "128b5aed4dda9e2d8004bcc881c1993c98a8b9b1ea69f438d76e8272fd201107",
+    "label_scope": "mixed attack/benign capture; per-flow labels unavailable",
+    "public_source": "CICBellEXFDNS2021"
+  },
+  {
+    "id": "light-light_image",
+    "category": "light",
+    "file": "data\\raw\\cicdns2021\\pcaps\\light\\light_image.pcap",
+    "sha256": "74414eeb8e700debdd3548ba24a7156b608e1e6a2960f9157ca49f8f9fbec13a",
+    "label_scope": "mixed attack/benign capture; per-flow labels unavailable",
+    "public_source": "CICBellEXFDNS2021"
+  },
+  {
+    "id": "light-light_text",
+    "category": "light",
+    "file": "data\\raw\\cicdns2021\\pcaps\\light\\light_text.pcap",
+    "sha256": "83bd120fd3ab1ab50a952e51791a6a86fca0e1322c1a008d693636b6a57a54bb",
+    "label_scope": "mixed attack/benign capture; per-flow labels unavailable",
+    "public_source": "CICBellEXFDNS2021"
+  },
+  {
+    "id": "light-light_video",
+    "category": "light",
+    "file": "data\\raw\\cicdns2021\\pcaps\\light\\light_video.pcap",
+    "sha256": "b2303aa5d2a20b1396cc2f5129949cd794162f7a4e21e777d66cac76bbe100ec",
+    "label_scope": "mixed attack/benign capture; per-flow labels unavailable",
+    "public_source": "CICBellEXFDNS2021"
+  }
+]

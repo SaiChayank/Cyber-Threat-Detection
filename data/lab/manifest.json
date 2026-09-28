@@ -1,0 +1,16 @@
+{
+  "seed": 100,
+  "classes": [
+    "BENIGN",
+    "DDOS",
+    "BOTNET_C2",
+    "DGA_DOMAINS",
+    "DNS_TUNNELLING",
+    "ENCRYPTED_MALWARE",
+    "RECONNAISSANCE",
+    "DATA_EXFILTRATION"
+  ],
+  "format": "metadata JSONL",
+  "provenance": "synthetic offline experiments",
+  "events_per_class": 32
+}

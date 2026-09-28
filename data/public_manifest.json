@@ -1,0 +1,44 @@
+{
+  "source": "https://zenodo.org/records/18336960",
+  "doi": "10.5281/zenodo.18336960",
+  "author": "Ondrej Rysavy",
+  "version": "1.0.0",
+  "licence": "CC-BY-4.0",
+  "files": [
+    {
+      "file": "Data.md",
+      "bytes": 3100,
+      "sha256": "f58f5112ca438b883ef8c775f0351eb44284de745e195d1599d1cc772be1657e",
+      "publisher_checksum": "md5:d23d01a273cbc796c70946cdda6a6662",
+      "url": "https://zenodo.org/api/records/18336960/files/Data.md/content"
+    },
+    {
+      "file": "Readme.md",
+      "bytes": 4773,
+      "sha256": "b13713f3503da1e3badea3e6c7972a21a6f4bed64bdc7e5707f6f5bbc1472ce9",
+      "publisher_checksum": "md5:16c1783e3dd45611c7c15b89101c602d",
+      "url": "https://zenodo.org/api/records/18336960/files/Readme.md/content"
+    },
+    {
+      "file": "winapps.parquet.zip",
+      "bytes": 21126681,
+      "sha256": "4e3e80c4cd50b823f99553348ab49ac4bf09158decb470390380d10341737fa3",
+      "publisher_checksum": "md5:c43fba63b45848ba9846d29ac712d383",
+      "url": "https://zenodo.org/api/records/18336960/files/winapps.parquet.zip/content"
+    },
+    {
+      "file": "malware.parquet.zip",
+      "bytes": 43195248,
+      "sha256": "767bcd2b552496b9d878b6b15b975cf7d3b04a27c656fd1557b065a42f6a3750",
+      "publisher_checksum": "md5:258d1a042e80f3c85bb361ec3cb03a07",
+      "url": "https://zenodo.org/api/records/18336960/files/malware.parquet.zip/content"
+    },
+    {
+      "file": "soho.parquet.zip",
+      "bytes": 10106940,
+      "sha256": "0981dea89b23af6085a4fe9d0fb213a43e03b46c509a0b4e48f7e26457e8307b",
+      "publisher_checksum": "md5:e8b8317b480958daf10f2a51680be4d8",
+      "url": "https://zenodo.org/api/records/18336960/files/soho.parquet.zip/content"
+    }
+  ]
+}

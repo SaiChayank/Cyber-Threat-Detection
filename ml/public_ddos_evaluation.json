@@ -1,0 +1,20 @@
+{
+  "labels": {
+    "UDP": 99895,
+    "BENIGN": 105
+  },
+  "counts": {
+    "fn": 43145,
+    "duplicate_vectors_excluded": 56770,
+    "tn": 76,
+    "fp": 9
+  },
+  "recall": 0.0,
+  "false_positive_rate": 0.10588235294117647,
+  "caveats": [
+    "External 100k-row prefix; selection bias, not the full release",
+    "Completed-flow forward-only baseline, not the streaming model",
+    "Missing negative/positive class metrics are null, never zero accuracy",
+    "Threshold fixed from source training; no test tuning"
+  ]
+}

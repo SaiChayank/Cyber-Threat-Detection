@@ -1,0 +1,181 @@
+{
+  "source": "https://data.mendeley.com/datasets/y8ph45msv8/1",
+  "doi": "10.17632/y8ph45msv8.1",
+  "licence": "MIT",
+  "authors": [
+    "Mattia Zago",
+    "Manuel Gil Perez",
+    "Gregorio Martinez Perez"
+  ],
+  "subset": "One raw-list experiment per selected family and legitimate reference",
+  "files": [
+    {
+      "family": "legit",
+      "file": "data\\raw\\umudga\\legit.txt",
+      "publisher_file": {
+        "filename": "1000.txt",
+        "id": "00fb9854-e6df-4c71-a752-841363a0909a",
+        "folder_id": "dfe5d7bb-b5b3-47d9-a0e0-b19264ba17d7",
+        "content_details": {
+          "id": "cf478546-e9e2-4e78-b888-f375d5960ade",
+          "sha256_hash": "5431e97b5ae41fdfcf4dbef10e08a1c81d9b252514ce8bba36452a1500c0e49e",
+          "content_type": "application/octet-stream",
+          "size": 12378,
+          "created_date": "2020-02-19T00:00:00Z",
+          "download_url": "https://data.mendeley.com/public-files/datasets/y8ph45msv8/files/00fb9854-e6df-4c71-a752-841363a0909a/file_downloaded",
+          "view_url": "https://data.mendeley.com/public-files/datasets/y8ph45msv8/files/00fb9854-e6df-4c71-a752-841363a0909a/file_viewed",
+          "download_expiry_time": "2126-09-28T04:43:27.070764072Z"
+        },
+        "size": 12378,
+        "last_modified_date": "2020-02-19T00:00:00Z",
+        "status": "COMPLETED"
+      },
+      "sha256": "5431e97b5ae41fdfcf4dbef10e08a1c81d9b252514ce8bba36452a1500c0e49e",
+      "bytes": 12378
+    },
+    {
+      "family": "banjori",
+      "file": "data\\raw\\umudga\\banjori.txt",
+      "publisher_file": {
+        "filename": "1000.txt",
+        "id": "3ac2a3d8-ee3c-47ee-8031-8005a234d548",
+        "folder_id": "c9dae95a-62dc-44d3-8311-ac6c758680ae",
+        "content_details": {
+          "id": "d22ee307-2a04-4a83-b869-6de13477421e",
+          "sha256_hash": "552770009ba5640d37b5a7eee310434a1d8ff641c5c69702e75f3d6c035bcabb",
+          "content_type": "application/octet-stream",
+          "size": 24000,
+          "created_date": "2020-02-19T00:00:00Z",
+          "download_url": "https://data.mendeley.com/public-files/datasets/y8ph45msv8/files/3ac2a3d8-ee3c-47ee-8031-8005a234d548/file_downloaded",
+          "view_url": "https://data.mendeley.com/public-files/datasets/y8ph45msv8/files/3ac2a3d8-ee3c-47ee-8031-8005a234d548/file_viewed",
+          "download_expiry_time": "2126-09-28T04:43:28.672673771Z"
+        },
+        "size": 24000,
+        "last_modified_date": "2020-02-19T00:00:00Z",
+        "status": "COMPLETED"
+      },
+      "sha256": "552770009ba5640d37b5a7eee310434a1d8ff641c5c69702e75f3d6c035bcabb",
+      "bytes": 24000
+    },
+    {
+      "family": "corebot",
+      "file": "data\\raw\\umudga\\corebot.txt",
+      "publisher_file": {
+        "filename": "1000.txt",
+        "id": "d473f06f-0692-4ac5-ad48-657519ce539f",
+        "folder_id": "812b7c3e-183d-4d56-ac77-7ed8cbe200fc",
+        "content_details": {
+          "id": "647fd996-c5f5-4eb8-8b58-9c2aed98ce71",
+          "sha256_hash": "26e2535ead55fbfecef8a0e0e3214914ce62f0c03062c9bbaa744d8f2430d6f2",
+          "content_type": "application/octet-stream",
+          "size": 27623,
+          "created_date": "2020-02-19T00:00:00Z",
+          "download_url": "https://data.mendeley.com/public-files/datasets/y8ph45msv8/files/d473f06f-0692-4ac5-ad48-657519ce539f/file_downloaded",
+          "view_url": "https://data.mendeley.com/public-files/datasets/y8ph45msv8/files/d473f06f-0692-4ac5-ad48-657519ce539f/file_viewed",
+          "download_expiry_time": "2126-09-28T04:43:29.706478646Z"
+        },
+        "size": 27623,
+        "last_modified_date": "2020-02-19T00:00:00Z",
+        "status": "COMPLETED"
+      },
+      "sha256": "26e2535ead55fbfecef8a0e0e3214914ce62f0c03062c9bbaa744d8f2430d6f2",
+      "bytes": 27623
+    },
+    {
+      "family": "dircrypt",
+      "file": "data\\raw\\umudga\\dircrypt.txt",
+      "publisher_file": {
+        "filename": "1000.txt",
+        "id": "40ac4804-aaf0-4122-b315-fce0740431ed",
+        "folder_id": "5a97f025-2a5f-4bac-b6dc-ed3bcc35163c",
+        "content_details": {
+          "id": "76383f9c-171e-4b04-b68e-d3845f65717c",
+          "sha256_hash": "97938e517ba99dc9781cd437982cf304cb3c658246cd4267801b81b148832470",
+          "content_type": "application/octet-stream",
+          "size": 19056,
+          "created_date": "2020-02-19T00:00:00Z",
+          "download_url": "https://data.mendeley.com/public-files/datasets/y8ph45msv8/files/40ac4804-aaf0-4122-b315-fce0740431ed/file_downloaded",
+          "view_url": "https://data.mendeley.com/public-files/datasets/y8ph45msv8/files/40ac4804-aaf0-4122-b315-fce0740431ed/file_viewed",
+          "download_expiry_time": "2126-09-28T04:43:30.534688923Z"
+        },
+        "size": 19056,
+        "last_modified_date": "2020-02-19T00:00:00Z",
+        "status": "COMPLETED"
+      },
+      "sha256": "97938e517ba99dc9781cd437982cf304cb3c658246cd4267801b81b148832470",
+      "bytes": 19056
+    },
+    {
+      "family": "matsnu",
+      "file": "data\\raw\\umudga\\matsnu.txt",
+      "publisher_file": {
+        "filename": "1000.txt",
+        "id": "ce44a56c-394e-42b0-8eb1-2c4fbf128eb2",
+        "folder_id": "44cdcad8-42dd-4331-9f1e-94c2f71e8f7f",
+        "content_details": {
+          "id": "4c5a4189-07ce-4255-aef7-05a18b37c9c5",
+          "sha256_hash": "32fbd0fb5844172b92ff45f34c23c6be4867a3be19db988a6866a0abee2fb2d6",
+          "content_type": "application/octet-stream",
+          "size": 20377,
+          "created_date": "2020-02-19T00:00:00Z",
+          "download_url": "https://data.mendeley.com/public-files/datasets/y8ph45msv8/files/ce44a56c-394e-42b0-8eb1-2c4fbf128eb2/file_downloaded",
+          "view_url": "https://data.mendeley.com/public-files/datasets/y8ph45msv8/files/ce44a56c-394e-42b0-8eb1-2c4fbf128eb2/file_viewed",
+          "download_expiry_time": "2126-09-28T04:43:31.413252582Z"
+        },
+        "size": 20377,
+        "last_modified_date": "2020-02-19T00:00:00Z",
+        "status": "COMPLETED"
+      },
+      "sha256": "32fbd0fb5844172b92ff45f34c23c6be4867a3be19db988a6866a0abee2fb2d6",
+      "bytes": 20377
+    },
+    {
+      "family": "necurs",
+      "file": "data\\raw\\umudga\\necurs.txt",
+      "publisher_file": {
+        "filename": "1000.txt",
+        "id": "4b87ed44-a77a-4f9f-8d10-4af6e1d97f37",
+        "folder_id": "bc2a9a23-b2f5-4611-9783-0a0d78df6d4e",
+        "content_details": {
+          "id": "ab7b53e9-5c5e-4e2d-9475-58b48f05568e",
+          "sha256_hash": "8c9bf2684cc57717606b0ce1e7a6f3d91d9e83ca9be957ad844a4e3e6596b147",
+          "content_type": "application/octet-stream",
+          "size": 17919,
+          "created_date": "2020-02-19T00:00:00Z",
+          "download_url": "https://data.mendeley.com/public-files/datasets/y8ph45msv8/files/4b87ed44-a77a-4f9f-8d10-4af6e1d97f37/file_downloaded",
+          "view_url": "https://data.mendeley.com/public-files/datasets/y8ph45msv8/files/4b87ed44-a77a-4f9f-8d10-4af6e1d97f37/file_viewed",
+          "download_expiry_time": "2126-09-28T04:43:32.422867655Z"
+        },
+        "size": 17919,
+        "last_modified_date": "2020-02-19T00:00:00Z",
+        "status": "COMPLETED"
+      },
+      "sha256": "8c9bf2684cc57717606b0ce1e7a6f3d91d9e83ca9be957ad844a4e3e6596b147",
+      "bytes": 17919
+    },
+    {
+      "family": "ramnit",
+      "file": "data\\raw\\umudga\\ramnit.txt",
+      "publisher_file": {
+        "filename": "1000.txt",
+        "id": "214ed392-19a2-40e8-a5e2-fc179ba0bb4d",
+        "folder_id": "b620f068-30c6-431e-84ad-c120b9c61288",
+        "content_details": {
+          "id": "20b550b0-e57b-426a-86f4-2b43958f97d7",
+          "sha256_hash": "21f274e8f5888354c5d1611a44b5a09cdc42af89c80b02b6e7274bdc85286cc4",
+          "content_type": "application/octet-stream",
+          "size": 18113,
+          "created_date": "2020-02-19T00:00:00Z",
+          "download_url": "https://data.mendeley.com/public-files/datasets/y8ph45msv8/files/214ed392-19a2-40e8-a5e2-fc179ba0bb4d/file_downloaded",
+          "view_url": "https://data.mendeley.com/public-files/datasets/y8ph45msv8/files/214ed392-19a2-40e8-a5e2-fc179ba0bb4d/file_viewed",
+          "download_expiry_time": "2126-09-28T04:43:33.24179595Z"
+        },
+        "size": 18113,
+        "last_modified_date": "2020-02-19T00:00:00Z",
+        "status": "COMPLETED"
+      },
+      "sha256": "21f274e8f5888354c5d1611a44b5a09cdc42af89c80b02b6e7274bdc85286cc4",
+      "bytes": 18113
+    }
+  ]
+}

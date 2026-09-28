@@ -1,120 +1,109 @@
-# PS26145: AI-Based Detection of Cyber Threats in Unidirectional IP Traffic
+# PS26145 — AI-Based Detection of Cyber Threats in Unidirectional IP Traffic
 
-> **National Technical Research Organisation (NTRO) / Smart India Hackathon**  
-> *Theme: Blockchain & Cybersecurity*  
-> *Status: Active Development (100% Free & Open-Source)*
+Working local NTRO / SIH prototype: read-only input → causal features → trained model
+and rules → structured alerts → replay dashboard. The project owner's four supplied
+screenshots govern the requirements, including encrypted-session malware detection.
 
----
+## Run locally
 
-## 1. Project Overview
+Requires Python 3.11+ and Node.js 22.12+ (the current frontend uses Vite 8).
+From the repository root in PowerShell:
 
-**PS26145** is an AI/ML and rule-based threat detection pipeline designed to passively ingest a **unidirectional stream of IP network traffic** (e.g., from an optical data diode or mirror port) and detect, classify, and score cyber-security threats in near real-time without ever transmitting any packets back into the source network.
-
-### Key Constraints & Architecture
-* **Strictly Passive / No Return Path:** The ingestion link never sends probes, performs handshakes, sends RST packets, or pushes inline blocks.
-* **No Payload Decryption:** All TLS 1.3/QUIC traffic is analyzed solely via handshake metadata (`JA3`, `JA3S`, `JA4`, `SNI`) and packet dynamics (inter-arrival times, packet-size sequences).
-* **Streaming & Bounded Latency:** Continuous stream processing with target throughput $\ge 2,000\text{ flows/sec}$ and $\text{p95 alert latency} < 2\text{s}$.
-* **Hybrid Detection:** Fast rule-based heuristics combined with calibrated machine learning classifiers (Random Forest, XGBoost, Logistic Regression).
-* **Zero Train/Serve Skew:** Replays captured experiments through the **exact same** streaming and feature computation code path as live inference.
-
----
-
-## 2. Monitored Threat Categories
-
-| Category | Primary Engine | Corroborating Model | Key Features |
-| :--- | :--- | :--- | :--- |
-| **DDoS (SYN / Volumetric / Spoofed)** | Rule Engine | Random Forest | Packet/byte rates, SYN-no-completion ratio, IP entropy (Count-Min Sketch) |
-| **Botnet C2 Beaconing** | Classifier | Random Forest / XGBoost | Inter-arrival timing regularity (Welford CV), size consistency, destination repeat counts |
-| **DGA Domains** | Classifier | Random Forest / XGBoost | Character entropy, character n-gram frequencies, NXDOMAIN burst ratios |
-| **DNS Tunnelling** | Classifier | Random Forest | Query length distribution, TXT/NULL record concentration, response size ratios |
-| **Encrypted-Session Malware** | Rule Engine | *Documented Future Work* | Curated JA3 blocklist matching + session packet-size/timing variance |
-| **Reconnaissance / Port Scanning** | Rule Engine | Logistic Regression | Host & port fan-out tracking (HyperLogLog), scan attempt rates |
-| **Data Exfiltration** | Classifier | Random Forest / XGBoost | Outbound:inbound byte ratio asymmetry, cumulative volume, destination novelty (Bloom filter) |
-
----
-
-## 3. Repository Structure
-
-```
-ps26145/
-├── ingest/         # Passive capture, PCAP parsing, dead-letter routing
-├── schemas/        # Canonical FlowRecord, DNSRecord, TLSQUICMetadata, and Alert schemas
-├── streaming/      # Stream normalizer, watermarking, state store (Welford, HyperLogLog, CMS)
-├── features/       # Modular causal feature extractors per threat class
-├── detection/      # Rule detectors, ML inference wrappers, severity scoring, and dedup
-├── ml/             # Experiment dataset assembly, temporal splits, model training & calibration
-├── alerts/         # Alert object assembly, deterministic explanations, Redis publisher
-├── backend/        # FastAPI modular monolith, SSE live broadcast, REST endpoints
-├── persistence/    # SQLAlchemy models, SQLite/PostgreSQL storage, audit logging
-├── frontend/       # React + Vite + TypeScript + Tailwind CSS SOC analyst dashboard
-├── replay/         # Experiment archive replay engine (real-time and accelerated)
-├── benchmarks/     # Automated throughput (flows/sec) and latency benchmark harness
-├── tests/          # Unit, integration, security, and architectural-compliance test suites
-├── deployment/     # Docker Compose lab definitions, fake-DNS resolver, generator configs
-└── docs/           # Authoritative design specifications, audits, and master blueprint
-```
-
----
-
-## 4. Quickstart Guide (100% Free & Local)
-
-### Prerequisites
-* **Python 3.11+**
-* **Node.js 18+ & npm**
-* Git
-
-### Step 1: Clone & Python Virtual Environment
-```bash
-git clone <your-github-repo-url>
-cd PS26145
-
-# Create & activate virtual environment
+```powershell
 python -m venv .venv
-# On Windows:
-.\.venv\Scripts\activate
-# On Linux/macOS:
-source .venv/bin/activate
-
-# Install dependencies
-pip install -r requirements.txt
+.venv/Scripts/python.exe -m pip install -r requirements.txt
+npm.cmd install --prefix frontend
+npm.cmd run build --prefix frontend
+.venv/Scripts/python.exe -m uvicorn backend.main:app --host 127.0.0.1 --port 8000
 ```
 
-### Step 2: Environment Configuration
-Copy `.env.example` to `.env`:
-```bash
-cp .env.example .env
+Open http://127.0.0.1:8000 for the dashboard or http://127.0.0.1:8000/docs for
+interactive API documentation. The fitted model is included, so training is optional.
+No Redis server, paid service, network attack generator or model download is required.
+Use one API worker so streaming state and replay controls stay consistent.
+
+Select **All threat scenarios**, choose a speed, and start replay. Alerts appear while
+processing continues. Click an alert for its connection details and numeric evidence.
+Replay each class individually or upload a classic Ethernet `.pcap` file (up to 16 MiB).
+Filters and JSON export operate on the latest 200 displayed alerts. SQLite retains the
+full alert history; `/api/alerts` supports sequence-based pagination and class filtering.
+
+For frontend development, run `npm.cmd run dev --prefix frontend` alongside the API.
+The development dashboard at port 5173 connects to the local API on port 8000.
+
+## Required detection coverage
+
+- DDoS: SYN / high-rate flood summaries, traffic volume and source entropy.
+- Botnet C2: inter-arrival regularity and repeated peer communication.
+- DGA: domain entropy, digits and bigram statistics.
+- DNS tunnelling: long query names and TXT / NULL anomalies.
+- Encrypted-session malware suspicion: TLS fingerprints and encrypted packet-size /
+  timing patterns; no application payload decryption.
+- Reconnaissance: destination host and port fan-out.
+- Exfiltration: outbound volume and observed directional byte ratios when available.
+
+DGA and tunnelling are two modules within one official threat category.
+Every alert includes timestamp, flow identifier, threat class, confidence, evidence
+and severity. Severity is separate from the model score. Rule-only scores are heuristic
+strengths; model scores are synthetic-trained posteriors, not calibrated deployment
+probabilities. The evidence and dashboard disclose this distinction.
+
+## Reproduce validation
+
+```powershell
+.venv/Scripts/python.exe -m pytest -q
+.venv/Scripts/python.exe -m datasets.validate_streaming
+.venv/Scripts/python.exe -m ml.train
+.venv/Scripts/python.exe -m benchmarks.run --events 20000
+.venv/Scripts/python.exe -m replay.export
+.venv/Scripts/python.exe -m replay.cli data/lab/dga_domains.jsonl
 ```
-*(By default, `USE_FAKEREDIS=true` enables pure-Python in-memory Redis Streams, requiring zero external server installations!)*
 
-### Step 3: Run the Backend
-```bash
-uvicorn backend.main:app --reload --port 8000
-```
-API Documentation will be accessible at: `http://localhost:8000/docs`  
-Health check endpoint: `http://localhost:8000/api/health`
+`ml/train.py` trains Gaussian naive Bayes on independent synthetic experiments using
+exactly the runtime feature extractor. It writes the hash-verified JSON model and
+`ml/evaluation.json` with per-class metrics and confusion matrices. Whole experiments
+are split into training seeds 1–30, validation 31–40 and test 41–50. The same generator
+family supplies each split; this is lab validation, not real-malware validation.
 
-### Step 4: Run the Frontend SOC Dashboard
-In a separate terminal:
-```bash
-cd frontend
-npm install
-npm run dev
-```
-Dashboard will be accessible at: `http://localhost:5173`
+The target is **2,000 simulated flow-metadata events/sec** with core processing and
+SQLite persistence **p95 below 50 ms**. Actual measured results and test workload are
+stored in `benchmarks/latest.json`; the benchmark excludes HTTP, browser delivery and
+raw capture overhead. Packet records and flow summaries are different units.
 
-### Step 5: Run the Verification Tests
-```bash
-pytest tests/
-```
+## Passive architecture and visibility
 
----
+The detector never probes hosts, completes a handshake, issues mitigation, or decrypts
+application payload. Input files are read-only. The offline CLI can operate with no
+network IO. The dashboard API is a separate loopback analyst service, not a return
+path to monitored hosts. Software tests do not certify physical data-diode isolation.
 
-## 5. Verification & Architectural Compliance
+Missing reverse traffic produces an unavailable ratio, rather than a fabricated
+measurement. Volume-only exfiltration suspicion states this limitation. Exported
+records may include reverse-byte counts only when explicitly passively observed.
 
-PS26145 enforces 6 zero-tolerance architectural compliance checks in `tests/`:
-1. **No-Return-Path Proof:** Verification that the capture interface has no assigned IP address and no egress routing.
-2. **Zero In-Band Probing:** Assertion that no packets are transmitted out of the capture NIC.
-3. **No Inline Blocking:** Verification that traffic flows unobstructed without inline proxy interception.
-4. **No Payload Decryption:** TLS inspection operates strictly on unencrypted ClientHello/ServerHello metadata and packet dynamics.
-5. **Incremental Streaming:** Alert latency remains bounded without batch-delay accumulation.
-6. **Pre-Completion Alerting:** Long-running attacks trigger alerts *before* session termination.
+The initial encrypted-session model uses controlled synthetic patterns and a lab
+fingerprint, not a production malware feed. Complete single-record TLS ClientHello
+JA3 is parsed from PCAP. QUIC packet dynamics and supplied metadata are accepted,
+but raw QUIC handshake fingerprint extraction is not implemented. TCP reassembly,
+PCAPNG, IPv6 extension decoding and production authentication are outside this local
+prototype. DoH / DoT hide DNS names. Read the full limits before assessing accuracy.
+
+## Project files
+
+- `schemas/`: validated metadata and standardized alert contracts.
+- `ingest/`: PCAP reader, protocol parsers, metadata adapter and dead-letter handling.
+- `features/`: bounded causal feature state shared with training.
+- `ml/`: fitted portable model, reproducible training and evaluation.
+- `detection/`: model inference, rule baseline, evidence and alert deduplication.
+- `persistence/`: SQLite alert storage.
+- `backend/`: FastAPI, event ingestion, replay, SSE and dashboard serving.
+- `frontend/`: TypeScript / Vite analyst dashboard.
+- `replay/`: offline scenario simulation, JSONL export and passive CLI replay.
+- `benchmarks/` and `tests/`: measured performance and behavior verification.
+
+Current implementation and requirement traceability: [Expected solution](docs/EXPECTED_SOLUTION.md).
+Model, features and evaluation: [Model documentation](docs/MODEL_AND_VALIDATION.md).
+Downloaded public sources, replay presets and measured limitations: [Dataset integration](docs/DATASETS.md).
+Current runtime results and prioritized detection gaps: [Streaming validation](docs/STREAMING_VALIDATION.md).
+Older design documents describe proposals; they do not override the supplied screenshots
+or establish implemented features and measured results.

@@ -1,4 +1,5 @@
 # PS26145 — Implementation Plan
+> Historical plan. The owner's supplied screenshots govern the current build; encrypted-session detection remains in scope. Current implementation and verification are described in `EXPECTED_SOLUTION.md` and the root README.
 **Purpose:** a working document to execute against, day to day. Full rationale for every decision lives in the Master Blueprint (`PS26145_MASTER_BLUEPRINT.md`) — this file only tells you what to do, in what order, and how to know when to move on.
 
 ---

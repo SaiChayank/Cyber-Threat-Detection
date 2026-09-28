@@ -1,0 +1,14 @@
+{
+  "source": "https://www.unb.ca/cic/datasets/ddos-2019.html",
+  "licence": "CIC reuse with citation",
+  "url": "https://cicresearch.ca/CICDataset/CICDDoS2019/download.php?file=CSVs%2FCSV-03-11.zip",
+  "original_member": "03-11/UDPLag.csv",
+  "original_member_size": 319793413,
+  "subset": "First 100000 complete data lines from first CSV member; intentionally not the full archive",
+  "rows": 100000,
+  "compressed_bytes_received": 6160384,
+  "file": "data\\raw\\cicddos2019\\first-csv-100000-rows.csv",
+  "bytes": 47567488,
+  "sha256": "019d85ea5c5811a3896822195bb68262139e13774648e3e0db1e5a47587336fc",
+  "integrity": "Local SHA256 and valid CSV; full ZIP CRC unavailable for a deliberately partial member"
+}

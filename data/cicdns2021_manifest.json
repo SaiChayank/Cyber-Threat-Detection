@@ -1,0 +1,31 @@
+{
+  "source": "https://www.unb.ca/cic/datasets/dns-exf-2021.html",
+  "licence": "CIC reuse with citation",
+  "subset": "Full benign archive and one complete capture archive each for light/heavy exfiltration",
+  "files": [
+    {
+      "category": "benign",
+      "file": "data\\raw\\cicdns2021\\benign-Benign.zip",
+      "bytes": 11802528,
+      "sha256": "299787ac7f88f56dd9caf1aa7dd60d21bd398f9f46e5ae4b2d165b0363add899",
+      "url": "https://cicresearch.ca/CICDataset/CICBellEXFDNS2021/download.php?file=PCAP%2FBenign.zip",
+      "label_scope": "Benign reference"
+    },
+    {
+      "category": "light",
+      "file": "data\\raw\\cicdns2021\\light-Attacks.zip",
+      "bytes": 4672969,
+      "sha256": "1ab347229846cfa92a100b3c603982b0eb95799ca35b422235d310a578287dd0",
+      "url": "https://cicresearch.ca/CICDataset/CICBellEXFDNS2021/download.php?file=PCAP%2FAttack_Light_Benign%2FAttacks.zip",
+      "label_scope": "Capture contains attack and benign traffic; no blanket per-flow attack label"
+    },
+    {
+      "category": "heavy",
+      "file": "data\\raw\\cicdns2021\\heavy-Attacks.zip",
+      "bytes": 39420696,
+      "sha256": "1d9dd77380df3b004c5387e2771c24fab8ce6756e3dc6f3e2a5675df160df343",
+      "url": "https://cicresearch.ca/CICDataset/CICBellEXFDNS2021/download.php?file=PCAP%2FAttack_heavy_Benign%2FAttacks.zip",
+      "label_scope": "Capture contains attack and benign traffic; no blanket per-flow attack label"
+    }
+  ]
+}

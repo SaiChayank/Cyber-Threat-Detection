@@ -1,0 +1,286 @@
+{
+  "scope": "Unmodified synthetic-trained streaming pipeline on real PCAP; full captures; metadata only",
+  "captures": [
+    {
+      "capture": "benign-benign_1",
+      "parsed_ip_packets": 132180,
+      "dns_observations": 73937,
+      "first_timestamp": 1605880718988.039,
+      "last_timestamp": 1605914513911.649,
+      "alerts_by_class": {
+        "BOTNET_C2": 12,
+        "DGA_DOMAINS": 958,
+        "RECONNAISSANCE": 1
+      },
+      "telemetry": {
+        "processed": 132180,
+        "late_events": 2,
+        "state_evictions": 0,
+        "active_sources": 67,
+        "processing_p95_ms": 0.19989997963421047
+      },
+      "interpretation": "Benign-capture alerts are false-positive candidates"
+    },
+    {
+      "capture": "benign-benign_2",
+      "parsed_ip_packets": 93684,
+      "dns_observations": 53073,
+      "first_timestamp": 1605914708168.242,
+      "last_timestamp": 1605934658977.982,
+      "alerts_by_class": {
+        "BOTNET_C2": 1,
+        "DGA_DOMAINS": 641,
+        "DDOS": 55,
+        "RECONNAISSANCE": 3
+      },
+      "telemetry": {
+        "processed": 93684,
+        "late_events": 2,
+        "state_evictions": 4233,
+        "active_sources": 83,
+        "processing_p95_ms": 1.7870999872684479
+      },
+      "interpretation": "Benign-capture alerts are false-positive candidates"
+    },
+    {
+      "capture": "heavy-heavy_audio",
+      "parsed_ip_packets": 54412,
+      "dns_observations": 99,
+      "first_timestamp": 1606056751248.351,
+      "last_timestamp": 1606077810969.5972,
+      "alerts_by_class": {
+        "BOTNET_C2": 109,
+        "DGA_DOMAINS": 15,
+        "ENCRYPTED_MALWARE": 1327,
+        "DDOS": 1
+      },
+      "telemetry": {
+        "processed": 54412,
+        "late_events": 1,
+        "state_evictions": 0,
+        "active_sources": 89,
+        "processing_p95_ms": 0.23350000265054405
+      },
+      "interpretation": "Alert counts only; no recall/accuracy without per-flow labels"
+    },
+    {
+      "capture": "heavy-heavy_compressed",
+      "parsed_ip_packets": 52910,
+      "dns_observations": 100,
+      "first_timestamp": 1606077917503.53,
+      "last_timestamp": 1606099045777.984,
+      "alerts_by_class": {
+        "BOTNET_C2": 134,
+        "ENCRYPTED_MALWARE": 1388,
+        "DGA_DOMAINS": 20,
+        "RECONNAISSANCE": 3
+      },
+      "telemetry": {
+        "processed": 52910,
+        "late_events": 2,
+        "state_evictions": 0,
+        "active_sources": 86,
+        "processing_p95_ms": 0.2361000224482268
+      },
+      "interpretation": "Alert counts only; no recall/accuracy without per-flow labels"
+    },
+    {
+      "capture": "heavy-heavy_exe",
+      "parsed_ip_packets": 35350,
+      "dns_observations": 114,
+      "first_timestamp": 1606259905442.015,
+      "last_timestamp": 1606280330745.807,
+      "alerts_by_class": {
+        "BOTNET_C2": 42,
+        "DGA_DOMAINS": 40
+      },
+      "telemetry": {
+        "processed": 35350,
+        "late_events": 1,
+        "state_evictions": 0,
+        "active_sources": 63,
+        "processing_p95_ms": 0.23169998894445598
+      },
+      "interpretation": "Alert counts only; no recall/accuracy without per-flow labels"
+    },
+    {
+      "capture": "heavy-heavy_image",
+      "parsed_ip_packets": 53668,
+      "dns_observations": 90,
+      "first_timestamp": 1606155985912.239,
+      "last_timestamp": 1606177435035.306,
+      "alerts_by_class": {
+        "BOTNET_C2": 104,
+        "ENCRYPTED_MALWARE": 1407,
+        "DGA_DOMAINS": 15
+      },
+      "telemetry": {
+        "processed": 53668,
+        "late_events": 0,
+        "state_evictions": 0,
+        "active_sources": 82,
+        "processing_p95_ms": 0.22410001838579774
+      },
+      "interpretation": "Alert counts only; no recall/accuracy without per-flow labels"
+    },
+    {
+      "capture": "heavy-heavy_text",
+      "parsed_ip_packets": 105031,
+      "dns_observations": 228,
+      "first_timestamp": 1606177680575.73,
+      "last_timestamp": 1606219539806.9712,
+      "alerts_by_class": {
+        "BOTNET_C2": 218,
+        "ENCRYPTED_MALWARE": 2869,
+        "DGA_DOMAINS": 37,
+        "DDOS": 1
+      },
+      "telemetry": {
+        "processed": 105031,
+        "late_events": 0,
+        "state_evictions": 0,
+        "active_sources": 95,
+        "processing_p95_ms": 0.16379999578930438
+      },
+      "interpretation": "Alert counts only; no recall/accuracy without per-flow labels"
+    },
+    {
+      "capture": "heavy-heavy_video",
+      "parsed_ip_packets": 38798,
+      "dns_observations": 136,
+      "first_timestamp": 1606237244878.5652,
+      "last_timestamp": 1606259786353.886,
+      "alerts_by_class": {
+        "BOTNET_C2": 52,
+        "DGA_DOMAINS": 29
+      },
+      "telemetry": {
+        "processed": 38798,
+        "late_events": 0,
+        "state_evictions": 0,
+        "active_sources": 62,
+        "processing_p95_ms": 0.23710000095888972
+      },
+      "interpretation": "Alert counts only; no recall/accuracy without per-flow labels"
+    },
+    {
+      "capture": "light-light_audio",
+      "parsed_ip_packets": 17968,
+      "dns_observations": 29,
+      "first_timestamp": 1605986007034.607,
+      "last_timestamp": 1605996413068.591,
+      "alerts_by_class": {
+        "BOTNET_C2": 21,
+        "DGA_DOMAINS": 26
+      },
+      "telemetry": {
+        "processed": 17968,
+        "late_events": 0,
+        "state_evictions": 0,
+        "active_sources": 62,
+        "processing_p95_ms": 0.18200001795776188
+      },
+      "interpretation": "Alert counts only; no recall/accuracy without per-flow labels"
+    },
+    {
+      "capture": "light-light_compressed",
+      "parsed_ip_packets": 10458,
+      "dns_observations": 20,
+      "first_timestamp": 1605996546308.6619,
+      "last_timestamp": 1606002594893.073,
+      "alerts_by_class": {
+        "BOTNET_C2": 12,
+        "DGA_DOMAINS": 15
+      },
+      "telemetry": {
+        "processed": 10458,
+        "late_events": 0,
+        "state_evictions": 0,
+        "active_sources": 61,
+        "processing_p95_ms": 0.17649997607804835
+      },
+      "interpretation": "Alert counts only; no recall/accuracy without per-flow labels"
+    },
+    {
+      "capture": "light-light_exe",
+      "parsed_ip_packets": 6580,
+      "dns_observations": 13,
+      "first_timestamp": 1606002713869.2378,
+      "last_timestamp": 1606006504984.251,
+      "alerts_by_class": {
+        "BOTNET_C2": 7,
+        "DGA_DOMAINS": 10
+      },
+      "telemetry": {
+        "processed": 6580,
+        "late_events": 0,
+        "state_evictions": 0,
+        "active_sources": 60,
+        "processing_p95_ms": 0.17350001144222915
+      },
+      "interpretation": "Alert counts only; no recall/accuracy without per-flow labels"
+    },
+    {
+      "capture": "light-light_image",
+      "parsed_ip_packets": 537,
+      "dns_observations": 0,
+      "first_timestamp": 1606009578018.2542,
+      "last_timestamp": 1606009887493.885,
+      "alerts_by_class": {
+        "BOTNET_C2": 2
+      },
+      "telemetry": {
+        "processed": 537,
+        "late_events": 0,
+        "state_evictions": 0,
+        "active_sources": 14,
+        "processing_p95_ms": 0.18659999477677047
+      },
+      "interpretation": "Alert counts only; no recall/accuracy without per-flow labels"
+    },
+    {
+      "capture": "light-light_text",
+      "parsed_ip_packets": 3552,
+      "dns_observations": 8,
+      "first_timestamp": 1606011699564.157,
+      "last_timestamp": 1606013753162.062,
+      "alerts_by_class": {
+        "BOTNET_C2": 5,
+        "DGA_DOMAINS": 6
+      },
+      "telemetry": {
+        "processed": 3552,
+        "late_events": 0,
+        "state_evictions": 0,
+        "active_sources": 37,
+        "processing_p95_ms": 0.19260001135990024
+      },
+      "interpretation": "Alert counts only; no recall/accuracy without per-flow labels"
+    },
+    {
+      "capture": "light-light_video",
+      "parsed_ip_packets": 4455,
+      "dns_observations": 8,
+      "first_timestamp": 1606013761040.597,
+      "last_timestamp": 1606016313985.499,
+      "alerts_by_class": {
+        "BOTNET_C2": 5,
+        "DGA_DOMAINS": 7
+      },
+      "telemetry": {
+        "processed": 4455,
+        "late_events": 0,
+        "state_evictions": 0,
+        "active_sources": 42,
+        "processing_p95_ms": 0.21470000501722097
+      },
+      "interpretation": "Alert counts only; no recall/accuracy without per-flow labels"
+    }
+  ],
+  "caveats": [
+    "No capture is used to tune the model or thresholds",
+    "Attack archives contain mixed traffic; not blanket positives",
+    "Bidirectional captured packets are individually observed; reverse-byte ratio is unavailable in this adapter",
+    "Source models remain synthetic-trained; results are external sanity checks, not claims of public-data accuracy"
+  ]
+}

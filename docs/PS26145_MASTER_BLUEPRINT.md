@@ -1,4 +1,5 @@
 # SIH PS26145 — UNIFIED FINAL MASTER BLUEPRINT & EXECUTION ROADMAP
+> Historical design proposal. For the current implementation and screenshot-governed requirements, see `EXPECTED_SOLUTION.md`, `MODEL_AND_VALIDATION.md`, and the root README. Performance figures below are proposed targets, not measured results.
 ## AI-Based Detection of Cyber Threats in Unidirectional IP Traffic
 **Organization:** National Technical Research Organisation (NTRO)  
 **Theme:** Blockchain & Cybersecurity | **Category:** Software  

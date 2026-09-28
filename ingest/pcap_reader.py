@@ -15,6 +15,21 @@ from ingest.protocol_parsers import ProtocolParser
 from ingest.dead_letter import DeadLetterQueue
 
 
+def validate_header(header):
+    if len(header) != 24:
+        raise ValueError('PCAP requires a complete 24-byte header')
+    magic = struct.unpack('!I', header[:4])[0]
+    if magic not in (0xA1B2C3D4, 0xD4C3B2A1, 0xA1B23C4D, 0x4D3CB2A1):
+        raise ValueError('Unsupported capture format; upload classic Ethernet PCAP')
+    endian = '>' if magic in (0xA1B2C3D4, 0xA1B23C4D) else '<'
+    major, minor, _, _, snaplen, linktype = struct.unpack(f'{endian}HHiIII', header[4:])
+    if (major, minor) != (2, 4) or linktype != 1:
+        raise ValueError('Only PCAP v2.4 Ethernet captures are supported')
+    if not 1 <= snaplen <= 16 * 1024 * 1024:
+        raise ValueError('Invalid PCAP snap length')
+    return snaplen
+
+
 class PcapReader:
     """Zero-overhead binary streaming PCAP reader"""
 
@@ -36,6 +51,7 @@ class PcapReader:
         with open(pcap_file, "rb") as f:
             # 1. Read Global Header (24 bytes)
             global_header = f.read(24)
+            snaplen = validate_header(global_header)
             if len(global_header) < 24:
                 raise ValueError("Corrupt PCAP: File smaller than 24-byte global header")
 
@@ -61,9 +77,13 @@ class PcapReader:
             while True:
                 pkt_hdr = f.read(16)
                 if len(pkt_hdr) < 16:
+                    if pkt_hdr:
+                        raise ValueError('Truncated PCAP packet header')
                     break  # Normal EOF
 
                 ts_sec, ts_frac, incl_len, orig_len = struct.unpack(f"{endian}IIII", pkt_hdr)
+                if incl_len > snaplen or incl_len > 16 * 1024 * 1024 or incl_len > orig_len:
+                    raise ValueError('Invalid PCAP packet length')
                 pkt_data = f.read(incl_len)
                 if len(pkt_data) < incl_len:
                     self.parser.dlq.record_truncated_packet(len(pkt_data), incl_len)

@@ -19,7 +19,7 @@ class AlertEvent:
     timestamp: float                  # Millisecond UTC epoch when threat occurred
     flow_id: str                      # Identifier of the flow
     threat_class: str                 # Member of ThreatClass enum
-    confidence_score: float           # Calibrated statistical confidence [0.0 - 1.0]
+    confidence_score: float           # Model posterior or heuristic strength; see evidence confidence_kind
     severity: str                     # LOW, MEDIUM, HIGH, CRITICAL
     supporting_evidence: str          # Deterministic narrative and key feature metrics
     alert_id: str                     # UUID or deterministic alert identifier
@@ -60,7 +60,7 @@ class AlertEvent:
         timestamp: Optional[float] = None,
         raw_evidence_metrics: Optional[Dict[str, Any]] = None
     ) -> "AlertEvent":
-        now_ms = timestamp or (time.time() * 1000.0)
+        now_ms = timestamp if timestamp is not None else time.time() * 1000.0
         return cls(
             timestamp=now_ms,
             flow_id=flow_id,
@@ -76,6 +76,6 @@ class AlertEvent:
             protocol=protocol,
             detection_source=detection_source.value,
             occurrence_count=1,
-            created_at_ms=now_ms,
+            created_at_ms=time.time() * 1000.0,
             raw_evidence_metrics=raw_evidence_metrics or {}
         )
