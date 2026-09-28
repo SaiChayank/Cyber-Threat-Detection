@@ -115,6 +115,7 @@ def test_persistence_survives_restart(tmp_path):
 
 def test_api_validation_replay_and_alert_output(tmp_path, monkeypatch):
     monkeypatch.setenv('ALERT_DB', str(tmp_path / 'api.db'))
+    monkeypatch.setenv('WEB_PORT', '3300')
     with TestClient(app) as client:
         assert client.get('/api/health').status_code == 200
         assert client.post('/api/events', json={'timestamp': -1}).status_code == 422
@@ -126,7 +127,13 @@ def test_api_validation_replay_and_alert_output(tmp_path, monkeypatch):
         assert client.get('/api/telemetry').json()['replay_status'] == 'complete'
         alerts = client.get('/api/alerts?limit=1000').json()
         assert set(CLASSES[1:]) <= {a['threat_class'] for a in alerts}
-        assert client.get('/').status_code == 200
+        root = client.get('/', follow_redirects=False)
+        assert root.status_code == 307
+        assert root.headers['location'] == 'http://localhost:3300'
+        benchmark = client.get('/api/benchmark')
+        assert benchmark.status_code == 200
+        assert benchmark.json()['throughput_target'] == 2000
+        assert 'excludes capture, HTTP, SSE and rendering' in benchmark.json()['scope']
 
 
 def test_passive_pipeline_never_opens_network_socket(monkeypatch):

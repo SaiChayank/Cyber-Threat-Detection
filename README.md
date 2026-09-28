@@ -6,19 +6,24 @@ screenshots govern the requirements, including encrypted-session malware detecti
 
 ## Run locally
 
-Requires Python 3.11+ and Node.js 22.12+ (the current frontend uses Vite 8).
+Requires Python 3.11+ on PATH and Node.js 22.14+. The website uses Next.js 16,
+React 19, TypeScript, Tailwind CSS 4, Radix UI, Motion, Lucide, Recharts and Three.js.
 From the repository root in PowerShell:
 
 ```powershell
-python -m venv .venv
-.venv/Scripts/python.exe -m pip install -r requirements.txt
-npm.cmd install --prefix frontend
-npm.cmd run build --prefix frontend
-.venv/Scripts/python.exe -m uvicorn backend.main:app --host 127.0.0.1 --port 8000
+npm install
+npm run dev
 ```
 
-Open http://127.0.0.1:8000 for the dashboard or http://127.0.0.1:8000/docs for
-interactive API documentation. The fitted model is included, so training is optional.
+Open http://localhost:3000 for the platform, http://localhost:3000/monitor for the
+dashboard, or http://localhost:3000/docs for interactive API documentation.
+The launcher creates `.venv` and installs `requirements.txt` on first use if needed,
+then starts FastAPI on loopback port 8000 and Next.js on loopback port 3000.
+If a compatible API is already running, it reuses that service. Stop with Ctrl+C.
+If port 3000 is occupied, the launcher selects a free port up to 3010 and prints
+the website URL. An explicitly configured `WEB_PORT` is respected.
+PowerShell installations that block `npm.ps1` can use `npm.cmd` for the same commands.
+The fitted model is included, so training is optional.
 No Redis server, paid service, network attack generator or model download is required.
 Use one API worker so streaming state and replay controls stay consistent.
 
@@ -28,8 +33,15 @@ Replay each class individually or upload a classic Ethernet `.pcap` file (up to 
 Filters and JSON export operate on the latest 200 displayed alerts. SQLite retains the
 full alert history; `/api/alerts` supports sequence-based pagination and class filtering.
 
-For frontend development, run `npm.cmd run dev --prefix frontend` alongside the API.
-The development dashboard at port 5173 connects to the local API on port 8000.
+To run the optimized website, use `npm run build` followed by `npm start`.
+`npm run typecheck` checks frontend types. Copy `.env.example` to `.env` to customize
+ports, API proxy and alert database; defaults work without an environment file.
+The browser uses same-origin `/api` requests, including SSE and PCAP uploads.
+Root build and runtime commands both load `.env`; rebuild after changing the proxy URL.
+For manual Python setup: `python -m venv .venv`, then
+`.venv/Scripts/python.exe -m pip install -r requirements.txt` (Windows) or
+`.venv/bin/python -m pip install -r requirements.txt` (macOS/Linux).
+See [Website guide](docs/FRONTEND.md) for architecture, environment variables and verification.
 
 ## Required detection coverage
 
@@ -96,8 +108,10 @@ prototype. DoH / DoT hide DNS names. Read the full limits before assessing accur
 - `ml/`: fitted portable model, reproducible training and evaluation.
 - `detection/`: model inference, rule baseline, evidence and alert deduplication.
 - `persistence/`: SQLite alert storage.
-- `backend/`: FastAPI, event ingestion, replay, SSE and dashboard serving.
-- `frontend/`: TypeScript / Vite analyst dashboard.
+- `backend/`: FastAPI, event ingestion, replay, SSE and saved benchmark output.
+- `frontend/`: Next.js / React website and analyst dashboard; modular features,
+  shared UI, typed services, Zod schemas, hooks and procedural 3D illustrations.
+- `scripts/`: local service launcher and Python environment setup.
 - `replay/`: offline scenario simulation, JSONL export and passive CLI replay.
 - `benchmarks/` and `tests/`: measured performance and behavior verification.
 

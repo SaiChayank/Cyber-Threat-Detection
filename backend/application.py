@@ -7,8 +7,7 @@ from contextlib import asynccontextmanager
 from pathlib import Path
 from fastapi import FastAPI, HTTPException, Query, Request
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import StreamingResponse, FileResponse
-from fastapi.staticfiles import StaticFiles
+from fastapi.responses import StreamingResponse, RedirectResponse
 from pydantic import BaseModel, Field
 from detection.pipeline import Pipeline
 from ingest.metadata import from_packet
@@ -30,7 +29,7 @@ async def lifespan(app):
     app.state.store.close()
 
 app = FastAPI(title='PS26145 Cyber Threat Detection API', lifespan=lifespan)
-app.add_middleware(CORSMiddleware, allow_origins=['http://localhost:5173', 'http://127.0.0.1:5173'], allow_methods=['GET', 'POST'], allow_headers=['Content-Type'])
+app.add_middleware(CORSMiddleware, allow_origins=['http://localhost:3000', 'http://127.0.0.1:3000'], allow_methods=['GET', 'POST'], allow_headers=['Content-Type'])
 
 def consume(event):
     return [app.state.store.append(a) for a in app.state.pipeline.process(event)]
@@ -42,6 +41,16 @@ async def health():
 @app.get('/api/datasets')
 async def datasets():
     return available()
+
+@app.get('/api/benchmark')
+async def benchmark():
+    path = Path(__file__).resolve().parent.parent / 'benchmarks' / 'latest.json'
+    if not path.is_file():
+        raise HTTPException(404, 'No saved benchmark; run python -m benchmarks.run')
+    try:
+        return json.loads(path.read_text(encoding='utf-8'))
+    except (OSError, ValueError) as exc:
+        raise HTTPException(503, 'Saved benchmark is unreadable') from exc
 
 @app.get('/api/telemetry')
 async def telemetry():
@@ -73,7 +82,7 @@ async def stream(request: Request, after: int = Query(0, ge=0)):
             if not rows:
                 yield ': heartbeat\n\n'
             await asyncio.sleep(.25)
-    return StreamingResponse(generate(), media_type='text/event-stream', headers={'Cache-Control': 'no-cache'})
+    return StreamingResponse(generate(), media_type='text/event-stream', headers={'Cache-Control': 'no-cache, no-transform', 'X-Accel-Buffering': 'no'})
 
 class ReplayConfig(BaseModel):
     scenario: str = 'ALL'
@@ -166,9 +175,6 @@ async def pcap(request: Request, speed: float = Query(20, ge=.1, le=10000)):
         path.unlink(missing_ok=True)
         raise
 
-dist = Path(__file__).resolve().parent.parent / 'frontend' / 'dist'
-if dist.exists():
-    app.mount('/assets', StaticFiles(directory=dist / 'assets'), name='assets')
-    @app.get('/')
-    async def dashboard():
-        return FileResponse(dist / 'index.html')
+@app.get('/', include_in_schema=False)
+async def dashboard():
+    return RedirectResponse(f"http://localhost:{os.getenv('WEB_PORT', '3000')}", status_code=307)

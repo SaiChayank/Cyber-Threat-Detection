@@ -32,6 +32,9 @@ htmlcov/
 frontend/node_modules/
 frontend/dist/
 frontend/.vite/
+frontend/.next/
+*.tsbuildinfo
+frontend/public/__verify-responsive.html
 node_modules/
 dist/
 npm-debug.log*
@@ -46,6 +49,7 @@ raw_pcap/
 data/raw/
 data/public_replay/
 .freebuff/
+.firecrawl/
 
 # IDE / OS specific
 .vscode/

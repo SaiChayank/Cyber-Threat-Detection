@@ -29,10 +29,12 @@ Optional features must not replace the expected solution.
    threat class, confidence score, and supporting evidence, plus severity, connection
    endpoints, engine, and numeric evidence. `persistence/store.py` records alerts in
    SQLite. `/api/stream` delivers them through SSE while processing continues.
-6. **Simple dashboard.** `frontend/src/main.ts` displays replayed detections with
-   severity and confidence, and provides class filters, evidence inspection, replay
-   controls, PCAP upload, telemetry, and JSON export. The local API can serve the
-   production build on the same port. Additional tools do not replace core coverage.
+6. **Dashboard and website.** `frontend/src/features/monitor/` displays streaming
+   detections with severity and confidence, search and class/severity filters,
+   evidence inspection, replay controls, PCAP upload, telemetry, and JSON export.
+   The Next.js website runs at port 3000 and proxies the FastAPI analyst service
+   at port 8000. `/` explains the platform with original procedural 3D illustrations;
+   `/monitor` presents actual API data. Additional visuals do not replace core coverage.
 7. **Streaming and bounded latency.** Each event updates state and runs inference
    immediately. Alerts do not wait for end-of-run aggregation. Event-time replay is
    paced and stoppable. State and query response sizes are bounded. The browser shows

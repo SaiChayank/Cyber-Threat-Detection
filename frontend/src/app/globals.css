@@ -1,0 +1,96 @@
+@import 'tailwindcss';
+
+@theme inline {
+  --font-sans: var(--font-dm-sans);
+  --font-display: var(--font-space-grotesk);
+  --color-ink: #08060e;
+  --color-panel: #110e19;
+  --color-line: #292332;
+  --color-muted: #a39aad;
+  --color-lilac: #b38cfc;
+  --color-lime: #d5f5bd;
+}
+
+:root {
+  color-scheme: dark;
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 110px;
+}
+body {
+  background: #08060e;
+  color: #f2eff8;
+}
+::selection {
+  background: #a67bfa55;
+  color: #fff;
+}
+button,
+a,
+input,
+select {
+  -webkit-tap-highlight-color: transparent;
+}
+button:not(:disabled),
+select {
+  cursor: pointer;
+}
+a:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 2px solid #b38cfc;
+  outline-offset: 4px;
+}
+select {
+  color-scheme: dark;
+}
+.scene-surface canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+  mask-image: radial-gradient(ellipse at 50% 50%, #000 48%, transparent 76%);
+}
+.scene-surface {
+  touch-action: pan-y;
+}
+.radar-orbit {
+  border: 1px solid #a67bfa25;
+  border-radius: 50%;
+}
+.dialog-overlay {
+  animation: overlay-enter 160ms ease-out;
+}
+.dialog-content {
+  animation: dialog-enter 200ms ease-out;
+}
+@keyframes overlay-enter {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes dialog-enter {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -48%) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

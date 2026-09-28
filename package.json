@@ -1,0 +1,22 @@
+{
+  "name": "sentinel-ps26145",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "frontend"
+  ],
+  "engines": {
+    "node": ">=22.14.0"
+  },
+  "scripts": {
+    "dev": "node scripts/run-local.mjs dev",
+    "build": "node scripts/run-local.mjs build",
+    "start": "node scripts/run-local.mjs start",
+    "typecheck": "npm run typecheck --workspace frontend",
+    "format": "prettier --write \"frontend/src/**/*.{ts,tsx,css}\" frontend/next.config.ts frontend/tsconfig.json \"scripts/*.mjs\""
+  },
+  "devDependencies": {
+    "prettier": "^3.9.9"
+  }
+}
