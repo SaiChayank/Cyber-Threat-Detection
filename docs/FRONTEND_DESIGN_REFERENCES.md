@@ -1,4 +1,4 @@
-# Animated design references for Sentinel
+# Animated design references for Univect
 
 Research date: 28 September 2026.
 
@@ -16,7 +16,7 @@ visualization, geographic context and severity. Use it as a layout reference for
 metric hierarchy, alert density and threat inspection. A designer showcase is
 visual inspiration; its animation behavior was not independently observed.
 
-For Sentinel, prioritize the event-rate chart, threat classes, evidence drawer,
+For Univect, prioritize the event-rate chart, threat classes, evidence drawer,
 replay controls and severity. A topology of the observed lab network suits our
 existing metadata better than a geographic attack map with invented coordinates.
 
@@ -27,7 +27,7 @@ existing metadata better than a geographic attack map with invented coordinates.
    mirror feed → metadata features → inference → structured alerts. Configure
    motion in one direction to communicate the PS collection boundary.
 2. [Background Beams — Aceternity](https://ui.aceternity.com/components/background-beams)
-   uses multiple animated SVG paths. Adapt a sparse version for a Sentinel
+   uses multiple animated SVG paths. Adapt a sparse version for a Univect
    introduction or landing page, alongside a product screenshot and an Open
    Monitor action.
 3. [World Map — Aceternity](https://ui.aceternity.com/components/world-map)
@@ -41,7 +41,7 @@ existing metadata better than a geographic attack map with invented coordinates.
    demonstrates animated light paths around a framed product view. This is a
    premium block; it provides a complete landing-page composition reference.
 
-## Suggested Sentinel direction
+## Suggested Univect direction
 
 Use CyberDefend's dashboard hierarchy with a custom one-way animated pipeline
 diagram inspired by Magic UI. Add a restrained beam/grid introduction for project

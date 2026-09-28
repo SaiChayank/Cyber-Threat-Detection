@@ -12,7 +12,10 @@ export default function ErrorPage({
     console.error(error)
   }, [error])
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center gap-5 px-6 text-center">
+    <main
+      id="main-content"
+      className="flex min-h-screen flex-col items-center justify-center gap-5 px-6 text-center"
+    >
       <h1 className="font-display text-3xl">The interface needs a moment.</h1>
       <p className="max-w-md text-muted">
         A display error interrupted this page. Your recorded alerts remain in the local database.
@@ -20,7 +23,7 @@ export default function ErrorPage({
       <Button variant="primary" onClick={reset}>
         Try again
       </Button>
-      <a href="/" className="text-sm text-lilac">
+      <a href="/" className="text-sm text-accent">
         Return home
       </a>
     </main>

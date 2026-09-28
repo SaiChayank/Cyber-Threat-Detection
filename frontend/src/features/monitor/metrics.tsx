@@ -1,4 +1,5 @@
 'use client'
+import { motion } from 'motion/react'
 import { Activity, ShieldAlert, Timer, ArrowDownLeft, Info } from 'lucide-react'
 import { Panel, Skeleton, Eyebrow } from '@/components/ui/panel'
 import { Hint } from '@/components/ui/tooltip'
@@ -54,34 +55,48 @@ export function Metrics({
       aria-label="Live telemetry"
       className="grid grid-cols-1 gap-3 min-[460px]:grid-cols-2 xl:grid-cols-4"
     >
-      {cards.map(({ icon: Icon, title, value, unit, note, hint }) => (
-        <Panel className="p-5" key={title}>
-          <div className="flex items-center justify-between gap-2">
-            <Eyebrow className="text-[9px] tracking-[.1em]">{title}</Eyebrow>
-            <Hint text={hint}>
-              <button
-                aria-label={`About ${title.toLowerCase()}`}
-                className="flex h-8 w-8 items-center justify-center rounded-lg text-lilac hover:bg-lilac/10"
-              >
-                <Info size={13} />
-              </button>
-            </Hint>
-          </div>
-          {loading ? (
-            <Skeleton className="mt-4 h-9 w-28" />
-          ) : (
-            <div className="mt-3 flex items-baseline gap-2">
-              <strong className="font-display text-3xl font-medium tracking-[-.04em]">
-                {value}
-              </strong>
-              <span className="text-[11px] text-muted">{unit}</span>
+      {cards.map(({ icon: Icon, title, value, unit, note, hint }, index) => (
+        <motion.div
+          key={title}
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4, delay: index * 0.05 }}
+        >
+          <Panel className="relative h-full overflow-hidden p-5 sm:p-6">
+            <div aria-hidden="true" className="absolute top-0 left-6 h-px w-12 bg-brand/60" />
+            <div className="flex items-center justify-between gap-2">
+              <Eyebrow className="text-[9px] tracking-[.1em]">{title}</Eyebrow>
+              <Hint text={hint}>
+                <button
+                  aria-label={`About ${title.toLowerCase()}`}
+                  className="flex h-8 w-8 items-center justify-center rounded-lg text-accent hover:bg-accent/10"
+                >
+                  <Info size={13} />
+                </button>
+              </Hint>
             </div>
-          )}
-          <div className="mt-4 flex items-center gap-2 text-[10px] text-muted">
-            <Icon size={12} />
-            {note}
-          </div>
-        </Panel>
+            {loading ? (
+              <Skeleton className="mt-4 h-9 w-28" />
+            ) : (
+              <div className="mt-3 flex items-baseline gap-2">
+                <motion.strong
+                  key={value}
+                  initial={{ opacity: 0.5 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.2 }}
+                  className="font-display text-4xl font-medium tracking-[-.04em] tabular-nums"
+                >
+                  {value}
+                </motion.strong>
+                <span className="text-[11px] text-muted">{unit}</span>
+              </div>
+            )}
+            <div className="mt-4 flex items-center gap-2 text-[10px] text-muted">
+              <Icon size={12} />
+              {note}
+            </div>
+          </Panel>
+        </motion.div>
       ))}
     </section>
   )

@@ -1,8 +1,13 @@
-# PS26145 — AI-Based Detection of Cyber Threats in Unidirectional IP Traffic
+# Univect — Passive Threat Intelligence · PS26145
 
 Working local NTRO / SIH prototype: read-only input → causal features → trained model
 and rules → structured alerts → replay dashboard. The project owner's four supplied
 screenshots govern the requirements, including encrypted-session malware detection.
+
+Univect means a unidirectional vector: one-way traffic, deeper insight. Its shared
+black/red/white interface includes an original U/vector symbol, responsive top
+navigation, glass panels, a redesigned Monitor and a project footer. See
+[the design system](docs/UNIVECT_DESIGN_SYSTEM.md) for branding and motion conventions.
 
 ## Run locally
 

@@ -2,10 +2,10 @@ import type { HTMLAttributes } from 'react'
 import { cn } from '@/lib/utils'
 
 export function Panel({ className, ...props }: HTMLAttributes<HTMLDivElement>) {
-  return <div className={cn('rounded-2xl border border-line bg-panel', className)} {...props} />
+  return <div className={cn('glass-panel rounded-2xl', className)} {...props} />
 }
 export function Skeleton({ className }: { className?: string }) {
-  return <div aria-hidden="true" className={cn('animate-pulse rounded-md bg-white/8', className)} />
+  return <div aria-hidden="true" className={cn('skeleton-surface rounded-md', className)} />
 }
 export function Eyebrow({
   children,

@@ -28,7 +28,7 @@ export function Coverage({
       <div className="grid grid-cols-1 gap-2 min-[460px]:grid-cols-2 xl:grid-cols-4">
         {detectionModules.map(({ id, name, icon: Icon }) => (
           <Panel key={id} className="flex items-center gap-3 px-4 py-4">
-            <span className="rounded-lg bg-lilac/10 p-2 text-lilac">
+            <span className="rounded-lg bg-accent/10 p-2 text-accent">
               <Icon size={15} />
             </span>
             <span className="flex-1 text-xs">{name}</span>
@@ -45,7 +45,7 @@ export function Coverage({
         validated real-world accuracy.
       </p>
       <details className="mt-5 rounded-xl border border-line bg-panel p-5">
-        <summary className="cursor-pointer text-xs font-medium text-lilac">
+        <summary className="cursor-pointer text-xs font-medium text-accent">
           <span className="inline-flex items-center gap-2">
             <Database size={14} />
             Public-source dataset readiness
@@ -60,11 +60,11 @@ export function Coverage({
                 key={dataset.id}
                 className="flex items-start gap-3 border-t border-line pt-3 text-[11px]"
               >
-                <span className="mt-0.5 text-lime">
+                <span className="mt-0.5 text-signal">
                   {dataset.ready ? (
                     <CheckCircle2 size={13} />
                   ) : (
-                    <CircleAlert size={13} className="text-amber-300" />
+                    <CircleAlert size={13} className="text-accent" />
                   )}
                 </span>
                 <div>
@@ -109,7 +109,7 @@ export function Benchmark() {
   return (
     <Panel className="p-5 sm:p-6">
       <div className="flex items-center gap-3">
-        <span className="rounded-lg bg-lilac/10 p-2 text-lilac">
+        <span className="rounded-lg bg-accent/10 p-2 text-accent">
           <Gauge size={19} />
         </span>
         <div>
@@ -129,7 +129,7 @@ export function Benchmark() {
           <div className="mt-5 grid gap-4 sm:grid-cols-3">
             <div>
               <p className="text-[10px] text-muted">Measured processing + persistence</p>
-              <p className="mt-2 font-display text-2xl text-lime">
+              <p className="mt-2 font-display text-2xl text-signal">
                 {formatNumber(Math.round(report.metadata_events_per_second))}
                 <span className="ml-2 font-sans text-[10px] text-muted">events/s</span>
               </p>

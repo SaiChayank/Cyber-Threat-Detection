@@ -49,7 +49,7 @@ export function AlertFeed({
     const url = URL.createObjectURL(blob)
     const link = document.createElement('a')
     link.href = url
-    link.download = `sentinel-alerts-${Date.now()}.json`
+    link.download = `univect-alerts-${Date.now()}.json`
     link.click()
     setTimeout(() => URL.revokeObjectURL(url), 1000)
     setExported(true)
@@ -64,7 +64,7 @@ export function AlertFeed({
               <h2 className="mt-2 flex items-center gap-3 font-display text-xl">
                 Alert stream{' '}
                 <span
-                  className={`rounded-full border px-2 py-1 font-sans text-[8px] tracking-[.1em] ${live ? 'border-lime/20 bg-lime/5 text-lime' : 'border-line text-muted'}`}
+                  className={`rounded-full border px-2 py-1 font-sans text-[8px] tracking-[.1em] ${live ? 'border-signal/20 bg-signal/5 text-signal' : 'border-line text-muted'}`}
                 >
                   {live ? 'LIVE' : 'RECONNECTING'}
                 </span>
@@ -134,7 +134,7 @@ export function AlertFeed({
             </select>
           </div>
           {exported && (
-            <p role="status" className="text-[11px] text-lime">
+            <p role="status" className="text-[11px] text-signal">
               JSON export generated with {filtered.length} matching records.
             </p>
           )}
@@ -177,7 +177,7 @@ export function AlertFeed({
                 rows.map((alert) => (
                   <tr
                     key={alert.sequence}
-                    className="border-b border-line/60 text-xs transition hover:bg-lilac/4"
+                    className="border-b border-white/6 text-xs transition odd:bg-white/[.015] hover:bg-brand/5"
                   >
                     <td className="py-4 pr-3 pl-6 font-mono text-[10px] text-muted">
                       {formatTime(alert.timestamp)}
@@ -205,7 +205,7 @@ export function AlertFeed({
                             'Uncalibrated detector score',
                         )}
                       >
-                        <span tabIndex={0} className="inline-block min-w-11 text-xs text-lilac">
+                        <span tabIndex={0} className="inline-block min-w-11 text-xs text-accent">
                           {(alert.confidence_score * 100).toFixed(1)}%
                         </span>
                       </Hint>
@@ -218,7 +218,7 @@ export function AlertFeed({
                     <td className="px-4 py-4">
                       <Button
                         variant="ghost"
-                        className="min-h-9 px-3 text-[10px] text-lilac"
+                        className="min-h-9 px-3 text-[10px] text-accent"
                         data-alert={alert.sequence}
                         aria-label={`Inspect ${threatName(alert.threat_class)} alert ${alert.sequence}`}
                         onClick={() => setSelected(alert)}
@@ -232,7 +232,7 @@ export function AlertFeed({
                 <tr>
                   <td colSpan={7}>
                     <div className="flex min-h-60 flex-col items-center justify-center gap-3 p-8 text-center">
-                      <Radar size={32} strokeWidth={1.2} className="text-lilac" />
+                      <Radar size={32} strokeWidth={1.2} className="text-accent" />
                       <h3 className="font-display text-lg">
                         {filtering ? 'No matching signals.' : 'Ready to observe.'}
                       </h3>

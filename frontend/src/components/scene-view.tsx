@@ -1,6 +1,7 @@
 'use client'
 import { useEffect, useRef, useState } from 'react'
-import { Pause, Play, ShieldCheck } from 'lucide-react'
+import { Pause, Play } from 'lucide-react'
+import { BrandMark } from './brand'
 import { cn } from '@/lib/utils'
 
 export function SceneView({
@@ -61,19 +62,22 @@ export function SceneView({
         role="img"
         aria-label={
           mode === 'pipeline'
-            ? 'Illustration: captured signals pass through a purple analysis portal in one direction'
-            : 'Three metallic observation robots with purple sensor eyes'
+            ? 'Illustration: captured signals pass through a red analysis portal in one direction'
+            : 'Three metallic observation robots with red sensor eyes'
         }
         className="scene-surface absolute inset-0"
       />
       {status === 'loading' && (
         <div className="absolute inset-0 grid place-items-center text-xs text-muted" role="status">
-          <span className="animate-pulse">Assembling the observation layer…</span>
+          <span className="flex flex-col items-center gap-4">
+            <BrandMark className="h-10 w-10 text-white/60" />
+            <span className="animate-pulse">Assembling the observation layer…</span>
+          </span>
         </div>
       )}
       {status === 'fallback' && (
         <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 text-muted">
-          <ShieldCheck size={80} strokeWidth={0.8} className="text-lilac" />
+          <BrandMark className="h-20 w-20 text-white/80" />
           <span className="text-xs">Passive signals → analysis → evidence</span>
           <span className="text-[10px]">3D preview unavailable on this device</span>
         </div>
@@ -82,7 +86,7 @@ export function SceneView({
         <div className="absolute right-1 bottom-3 left-1 flex items-center justify-between gap-2 text-[9px] tracking-[.12em] text-muted uppercase">
           <span>01 / Pipeline illustration</span>
           <button
-            className="flex min-h-11 items-center gap-2 rounded-lg px-2 text-[10px] hover:text-white focus-visible:outline-2 focus-visible:outline-lilac"
+            className="flex min-h-11 items-center gap-2 rounded-lg px-2 text-[10px] hover:text-white focus-visible:outline-2 focus-visible:outline-accent"
             aria-label={paused ? 'Play animation' : 'Pause animation'}
             aria-pressed={paused}
             disabled={status !== 'ready'}

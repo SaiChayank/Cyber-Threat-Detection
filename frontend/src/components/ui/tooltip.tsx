@@ -9,10 +9,10 @@ export function Hint({ children, text }: { children: ReactNode; text: string }) 
       <Tooltip.Portal>
         <Tooltip.Content
           sideOffset={8}
-          className="z-100 max-w-72 rounded-xl border border-line bg-[#201a2d] px-3 py-2 text-xs text-white shadow-xl"
+          className="z-100 max-w-72 rounded-xl border border-white/15 bg-[#202222]/95 px-3 py-2 text-xs leading-5 text-white shadow-xl backdrop-blur-md"
         >
           {text}
-          <Tooltip.Arrow className="fill-[#201a2d]" />
+          <Tooltip.Arrow className="fill-[#202222]" />
         </Tooltip.Content>
       </Tooltip.Portal>
     </Tooltip.Root>

@@ -18,7 +18,7 @@ export function mountScene(container: HTMLElement, mode: 'pipeline' | 'agents') 
   let previous = 0
   const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)')
   const scene = new THREE.Scene()
-  scene.background = new THREE.Color('#08060e')
+  scene.background = new THREE.Color('#080909')
   const camera = new THREE.OrthographicCamera(-4, 4, 4, -4, 0.1, 100)
   camera.position.set(mode === 'pipeline' ? 6.7 : 3.4, mode === 'pipeline' ? 5 : 1.8, 10)
   camera.lookAt(0, mode === 'pipeline' ? 0.2 : 0.1, 0)
@@ -47,7 +47,7 @@ export function mountScene(container: HTMLElement, mode: 'pipeline' | 'agents') 
   composer.addPass(new OutputPass())
 
   const metal = new THREE.MeshPhysicalMaterial({
-    color: '#69728d',
+    color: '#929797',
     metalness: 0.86,
     roughness: 0.27,
     clearcoat: 1,
@@ -55,41 +55,41 @@ export function mountScene(container: HTMLElement, mode: 'pipeline' | 'agents') 
     envMapIntensity: 1.05,
   })
   const charcoal = new THREE.MeshStandardMaterial({
-    color: '#1b182b',
+    color: '#202222',
     metalness: 0.8,
     roughness: 0.32,
   })
   const glass = new THREE.MeshPhysicalMaterial({
-    color: '#080a19',
+    color: '#090a0a',
     metalness: 0.5,
     roughness: 0.13,
     clearcoat: 1,
   })
-  const pink = new THREE.MeshStandardMaterial({
-    color: '#ffc6ff',
-    emissive: '#df43ff',
-    emissiveIntensity: 2.4,
+  const sensorRed = new THREE.MeshStandardMaterial({
+    color: '#ffaaaa',
+    emissive: '#c9323c',
+    emissiveIntensity: 1.2,
     roughness: 0.2,
     metalness: 0.2,
   })
-  const violet = new THREE.MeshStandardMaterial({
-    color: '#b28aff',
-    emissive: '#7028ff',
-    emissiveIntensity: 1.8,
+  const crimson = new THREE.MeshStandardMaterial({
+    color: '#bb3038',
+    emissive: '#9b1e26',
+    emissiveIntensity: 0.9,
   })
-  const mint = new THREE.MeshStandardMaterial({
-    color: '#d5ffe9',
-    emissive: '#86eebd',
-    emissiveIntensity: 1.7,
+  const pearl = new THREE.MeshStandardMaterial({
+    color: '#f4f4f4',
+    emissive: '#cccccc',
+    emissiveIntensity: 0.3,
   })
-  scene.add(new THREE.HemisphereLight('#dbe4ff', '#301044', 1.2))
-  const key = new THREE.DirectionalLight('#f2edff', 3)
+  scene.add(new THREE.HemisphereLight('#eeeeee', '#261719', 1.2))
+  const key = new THREE.DirectionalLight('#fff5f5', 3)
   key.position.set(-3, 6, 5)
   scene.add(key)
-  const rim = new THREE.DirectionalLight('#ae79ff', 3)
+  const rim = new THREE.DirectionalLight('#cf9292', 3)
   rim.position.set(4, 3, -3)
   scene.add(rim)
-  const portalLight = new THREE.PointLight('#d835ff', 12, 7, 2)
+  const portalLight = new THREE.PointLight('#c9323c', 6, 7, 2)
   portalLight.position.set(0, 0.1, 0)
   scene.add(portalLight)
 
@@ -130,7 +130,7 @@ export function mountScene(container: HTMLElement, mode: 'pipeline' | 'agents') 
     const eyes = [-0.29, 0.29].map((x) => {
       const eye = mesh(
         rounded(0.34, 0.22, 0.085, 0.09),
-        pink,
+        sensorRed,
         head,
         new THREE.Vector3(x, 0.12, 0.73),
       )
@@ -142,7 +142,7 @@ export function mountScene(container: HTMLElement, mode: 'pipeline' | 'agents') 
       head,
       new THREE.Vector3(0, 0.78, 0),
     )
-    mesh(new THREE.SphereGeometry(0.09, 16, 12), violet, head, new THREE.Vector3(0, 0.94, 0))
+    mesh(new THREE.SphereGeometry(0.09, 16, 12), crimson, head, new THREE.Vector3(0, 0.94, 0))
     mesh(rounded(0.35, 0.1, 0.05, 0.04), charcoal, head, new THREE.Vector3(0, -0.28, 0.724))
     for (const side of [-1, 1]) {
       const ear = mesh(
@@ -183,7 +183,7 @@ export function mountScene(container: HTMLElement, mode: 'pipeline' | 'agents') 
     mesh(rounded(0.65, 0.38, 0.06, 0.09), glass, group, new THREE.Vector3(0, -1.05, 0.421))
     mesh(
       new THREE.TorusGeometry(0.12, 0.03, 10, 30),
-      violet,
+      crimson,
       group,
       new THREE.Vector3(0, -1.05, 0.46),
     )
@@ -230,8 +230,8 @@ export function mountScene(container: HTMLElement, mode: 'pipeline' | 'agents') 
     )
     for (const [radius, width, material, y] of [
       [1.39, 0.085, metal, 0],
-      [1.3, 0.029, pink, 0.025],
-      [1.49, 0.011, violet, -0.14],
+      [1.3, 0.029, sensorRed, 0.025],
+      [1.49, 0.011, crimson, -0.14],
     ] as const) {
       const ring = mesh(
         new THREE.TorusGeometry(radius, width, 16, 90),
@@ -250,9 +250,9 @@ export function mountScene(container: HTMLElement, mode: 'pipeline' | 'agents') 
         float wave=sin(a*5.+uTime*.8)+sin(p.x*5.-uTime)*.5;
         float edge=.74+wave*.035; float shape=1.-smoothstep(edge-.025,edge+.025,r);
         float highlight=pow(max(0.,1.-abs(r-edge)),36.);
-        vec3 base=mix(vec3(.065,.006,.15),vec3(.67,.25,1.2),shape);
-        base+=shape*vec3(.5,.58,.6)*(sin(p.x*3.+p.y*3.+uTime*.5)*.25+.45);
-        base+=highlight*vec3(1.4,.25,1.8); gl_FragColor=vec4(base,1.); }`,
+        vec3 base=mix(vec3(.04,.005,.007),vec3(.65,.06,.09),shape);
+        base+=shape*vec3(.4,.2,.2)*(sin(p.x*3.+p.y*3.+uTime*.5)*.25+.45);
+        base+=highlight*vec3(.9,.12,.16); gl_FragColor=vec4(base,1.); }`,
       side: THREE.DoubleSide,
     })
     const pool = mesh(
@@ -298,7 +298,7 @@ export function mountScene(container: HTMLElement, mode: 'pipeline' | 'agents') 
       mesh(
         geometry,
         new THREE.MeshStandardMaterial({
-          color: '#171320',
+          color: '#1b1d1d',
           roughness: 0.58,
           metalness: 0.73,
           side: THREE.DoubleSide,
@@ -308,7 +308,7 @@ export function mountScene(container: HTMLElement, mode: 'pipeline' | 'agents') 
       scene.add(
         new THREE.LineSegments(
           new THREE.WireframeGeometry(geometry),
-          new THREE.LineBasicMaterial({ color: '#706482', transparent: true, opacity: 0.2 }),
+          new THREE.LineBasicMaterial({ color: '#828888', transparent: true, opacity: 0.2 }),
         ),
       )
       for (const side of [-1, 1]) {
@@ -331,35 +331,31 @@ export function mountScene(container: HTMLElement, mode: 'pipeline' | 'agents') 
       coin.rotation.x = Math.PI / 2
       mesh(
         new THREE.TorusGeometry(0.33, 0.025, 12, 50),
-        output ? mint : metal,
+        output ? pearl : metal,
         group,
         new THREE.Vector3(0, 0, 0.065),
       )
       mesh(new THREE.CircleGeometry(0.29, 40), glass, group, new THREE.Vector3(0, 0, 0.071))
-      const shieldPoints = [
-        [-0.12, 0.13],
-        [0, 0.18],
-        [0.12, 0.13],
-        [0.1, -0.06],
-        [0, -0.17],
-        [-0.1, -0.06],
-        [-0.12, 0.13],
+      const observationPoints = [
+        [-0.14, 0.15],
+        [-0.14, -0.06],
+        [-0.11, -0.13],
+        [-0.04, -0.17],
+        [0.05, -0.16],
+        [0.1, -0.1],
+        [0.1, 0.01],
       ]
       tube(
-        shieldPoints.map(([x, y]) => new THREE.Vector3(x, y, 0.084)),
-        0.013,
-        output ? mint : metal,
+        observationPoints.map(([x, y]) => new THREE.Vector3(x, y, 0.084)),
+        0.023,
+        output ? pearl : metal,
         group,
       )
       if (output)
         tube(
-          [
-            new THREE.Vector3(-0.06, 0.01, 0.09),
-            new THREE.Vector3(-0.01, -0.04, 0.09),
-            new THREE.Vector3(0.07, 0.06, 0.09),
-          ],
-          0.013,
-          mint,
+          [new THREE.Vector3(-0.01, 0.04, 0.09), new THREE.Vector3(0.13, 0.17, 0.09)],
+          0.022,
+          crimson,
           group,
         )
       else
@@ -371,6 +367,20 @@ export function mountScene(container: HTMLElement, mode: 'pipeline' | 'agents') 
             new THREE.Vector3(0, 0.07 - i * 0.056, 0.085),
           )
       scene.add(group)
+      if (output) {
+        tube(
+          [new THREE.Vector3(0.04, 0.17, 0.09), new THREE.Vector3(0.13, 0.17, 0.09)],
+          0.022,
+          crimson,
+          group,
+        )
+        tube(
+          [new THREE.Vector3(0.13, 0.17, 0.09), new THREE.Vector3(0.13, 0.08, 0.09)],
+          0.022,
+          crimson,
+          group,
+        )
+      }
       return group
     }
     for (let i = 0; i < 4; i++) {
@@ -390,7 +400,7 @@ export function mountScene(container: HTMLElement, mode: 'pipeline' | 'agents') 
   scene.add(
     new THREE.Points(
       particles,
-      new THREE.PointsMaterial({ color: '#ae88dd', size: 0.018, transparent: true, opacity: 0.45 }),
+      new THREE.PointsMaterial({ color: '#a97d7d', size: 0.018, transparent: true, opacity: 0.45 }),
     ),
   )
   const pointer = new THREE.Vector2()

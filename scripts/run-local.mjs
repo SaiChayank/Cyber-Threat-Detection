@@ -97,7 +97,7 @@ if (mode === 'build') {
     env: process.env,
   })
 } else if (await ready()) {
-  console.log(`Using the running Sentinel API at ${api}`)
+  console.log(`Using the running Univect API at ${api}`)
 } else {
   if (api !== `http://${host}:${apiPort}`) {
     console.error(`The configured API is unavailable: ${api}`)
@@ -127,7 +127,7 @@ if (mode === 'build') {
 
 if (!stopping && mode !== 'build') {
   const require = createRequire(path.join(root, 'frontend', 'package.json'))
-  console.log(`Sentinel: http://localhost:${port}`)
+  console.log(`Univect: http://localhost:${port}`)
   launch(
     process.execPath,
     [require.resolve('next/dist/bin/next'), mode, '-p', String(port), '-H', '127.0.0.1'],

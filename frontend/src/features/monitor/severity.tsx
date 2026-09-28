@@ -1,9 +1,9 @@
 import { cn } from '@/lib/utils'
 const colors: Record<string, string> = {
-  CRITICAL: 'border-rose-400/20 bg-rose-400/10 text-rose-300',
-  HIGH: 'border-orange-400/20 bg-orange-400/10 text-orange-300',
-  MEDIUM: 'border-amber-300/20 bg-amber-300/10 text-amber-200',
-  LOW: 'border-lime/20 bg-lime/10 text-lime',
+  CRITICAL: 'border-brand/50 bg-brand/25 text-white',
+  HIGH: 'border-brand/30 bg-brand/10 text-accent',
+  MEDIUM: 'border-white/20 bg-white/5 text-signal',
+  LOW: 'border-line bg-white/2 text-muted',
 }
 export function Severity({ severity }: { severity: string }) {
   return (

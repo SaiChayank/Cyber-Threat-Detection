@@ -21,7 +21,7 @@ import { api } from '@/services/api'
 import { cn } from '@/lib/utils'
 
 const inputClass =
-  'min-h-11 w-full rounded-xl border border-line bg-ink px-3 text-xs text-white transition focus:border-lilac disabled:opacity-40'
+  'min-h-11 w-full rounded-xl border border-line bg-ink px-3 text-xs text-white transition focus:border-accent disabled:opacity-40'
 export function ReplayControls({
   datasets,
   state,
@@ -201,10 +201,10 @@ export function ReplayControls({
             </Button>
             <label
               className={cn(
-                'relative flex min-h-11 items-center justify-center gap-2 overflow-hidden rounded-xl border border-line bg-panel px-4 text-xs font-medium focus-within:outline-2 focus-within:outline-lilac',
+                'relative flex min-h-11 items-center justify-center gap-2 overflow-hidden rounded-xl border border-line bg-panel px-4 text-xs font-medium focus-within:outline-2 focus-within:outline-accent',
                 running || busy || !connected
                   ? 'opacity-40'
-                  : 'cursor-pointer hover:border-lilac/50',
+                  : 'cursor-pointer hover:border-accent/50',
               )}
             >
               <input
@@ -225,7 +225,7 @@ export function ReplayControls({
           </form>
         </div>
         {(errors.scenario || errors.speed) && (
-          <p role="alert" className="mt-3 text-xs text-rose-300">
+          <p role="alert" className="mt-3 text-xs text-accent">
             {errors.scenario?.message || errors.speed?.message}
           </p>
         )}
@@ -251,8 +251,8 @@ export function ReplayControls({
               className={cn(
                 'mt-3 flex items-center gap-3 rounded-xl border px-4 py-3 text-xs leading-5',
                 notice.error
-                  ? 'border-rose-400/20 bg-rose-400/5 text-rose-300'
-                  : 'border-lime/20 bg-lime/5 text-lime',
+                  ? 'border-brand/20 bg-brand/5 text-accent'
+                  : 'border-signal/20 bg-signal/5 text-signal',
               )}
             >
               {notice.error ? (

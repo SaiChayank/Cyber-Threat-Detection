@@ -31,8 +31,8 @@ export function Hero() {
           className="relative z-10"
         >
           <div className="mb-7 inline-flex items-center gap-2.5 rounded-full border border-line bg-panel px-3 py-2 text-[9px] tracking-[.14em] text-muted uppercase">
-            <span className="h-1.5 w-1.5 rounded-full bg-lilac" />
-            An observation layer for a safer network
+            <span className="h-1.5 w-1.5 rounded-full bg-accent" />
+            Univect / Passive network intelligence
           </div>
           <h1
             id="hero-heading"
@@ -42,10 +42,10 @@ export function Hero() {
             <br />
             See them
             <br />
-            <span className="text-lilac">clearly.</span>
+            <span className="text-accent">clearly.</span>
           </h1>
           <p className="mt-7 max-w-[355px] text-sm leading-7 text-muted lg:text-[15px]">
-            Meet the intelligence layer that listens.
+            One-way traffic. Deeper insight.
             <br />
             Turn one-way traffic into streaming detections, meaningful evidence and a clearer
             picture.
@@ -66,7 +66,7 @@ export function Hero() {
           </div>
           <div className="mt-7 flex flex-wrap gap-x-5 gap-y-2 text-[10px] text-muted">
             <span className="inline-flex items-center gap-1.5">
-              <ShieldCheck size={12} className="text-lilac" />
+              <ShieldCheck size={12} className="text-accent" />
               Read-only by design
             </span>
             <span className="inline-flex items-center gap-1.5">
@@ -74,9 +74,9 @@ export function Hero() {
                 className={cn(
                   'h-1.5 w-1.5 rounded-full',
                   health === 'online'
-                    ? 'bg-lime'
+                    ? 'bg-signal'
                     : health === 'offline'
-                      ? 'bg-amber-400'
+                      ? 'bg-accent'
                       : 'bg-muted',
                 )}
               />
@@ -96,17 +96,17 @@ export function Hero() {
         >
           <div
             aria-hidden="true"
-            className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_55%_48%,#7340ac20,transparent_65%)]"
+            className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_55%_48%,#b8232c18,transparent_65%)]"
           />
           <span className="absolute top-10 left-5 z-10 text-[9px] tracking-[.15em] text-muted uppercase md:top-12">
             Signal in. Insight out.
           </span>
           <SceneView mode="pipeline" controls className="h-full w-full" />
-          <div className="pointer-events-none absolute right-3 bottom-20 z-10 rounded-xl border border-lilac/15 bg-panel/75 px-4 py-3 text-[10px] backdrop-blur-md sm:right-10">
+          <div className="pointer-events-none absolute right-3 bottom-20 z-10 rounded-xl border border-accent/15 bg-panel/75 px-4 py-3 text-[10px] backdrop-blur-md sm:right-10">
             <span className="mb-1.5 block text-[8px] tracking-[.15em] text-muted uppercase">
               Analysis boundary
             </span>
-            <span className="flex items-center gap-2 text-lilac">
+            <span className="flex items-center gap-2 text-accent">
               <LockKeyhole size={12} /> Metadata only
             </span>
           </div>

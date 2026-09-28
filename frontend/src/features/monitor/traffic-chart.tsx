@@ -8,6 +8,7 @@ import {
   XAxis,
   YAxis,
 } from 'recharts'
+import { useReducedMotion } from 'motion/react'
 import { LockKeyhole, Network, ArrowRight, ShieldCheck } from 'lucide-react'
 import { Panel, Eyebrow, Skeleton } from '@/components/ui/panel'
 import type { RateSample } from '@/schemas/api'
@@ -22,6 +23,7 @@ export function TrafficChart({
   loading: boolean
   rate: number
 }) {
+  const reducedMotion = useReducedMotion()
   return (
     <div className="grid gap-4 xl:grid-cols-[1.5fr_1fr]">
       <Panel className="min-w-0 p-5 sm:p-6">
@@ -32,7 +34,7 @@ export function TrafficChart({
             <p className="mt-2 text-[11px] text-muted">24 recent samples · local UTC clock</p>
           </div>
           <div className="text-right">
-            <strong className="font-display text-2xl font-medium text-lime">
+            <strong className="font-display text-2xl font-medium text-signal">
               {formatNumber(Math.round(rate))}
             </strong>
             <span className="mt-1 block text-[9px] text-muted">events / sec</span>
@@ -50,20 +52,20 @@ export function TrafficChart({
               <AreaChart data={samples} margin={{ top: 6, right: 5, bottom: 0, left: -15 }}>
                 <defs>
                   <linearGradient id="rate-fill" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stopColor="#d5f5bd" stopOpacity={0.22} />
-                    <stop offset="100%" stopColor="#d5f5bd" stopOpacity={0} />
+                    <stop offset="0%" stopColor="#c9323c" stopOpacity={0.3} />
+                    <stop offset="100%" stopColor="#c9323c" stopOpacity={0} />
                   </linearGradient>
                 </defs>
-                <CartesianGrid vertical={false} stroke="#292332" strokeDasharray="3 5" />
+                <CartesianGrid vertical={false} stroke="#303232" strokeDasharray="3 5" />
                 <XAxis
                   dataKey="time"
-                  tick={{ fill: '#a39aad', fontSize: 9 }}
+                  tick={{ fill: '#a8abab', fontSize: 9 }}
                   axisLine={false}
                   tickLine={false}
                   minTickGap={60}
                 />
                 <YAxis
-                  tick={{ fill: '#a39aad', fontSize: 9 }}
+                  tick={{ fill: '#a8abab', fontSize: 9 }}
                   axisLine={false}
                   tickLine={false}
                   width={45}
@@ -74,10 +76,12 @@ export function TrafficChart({
                   name="Events/s"
                   type="linear"
                   dataKey="rate"
-                  stroke="#d5f5bd"
+                  stroke="#f07878"
                   strokeWidth={2}
                   fill="url(#rate-fill)"
-                  isAnimationActive={false}
+                  isAnimationActive={!reducedMotion}
+                  animationDuration={300}
+                  animationEasing="ease-out"
                 />
               </AreaChart>
             </ResponsiveContainer>
@@ -103,9 +107,9 @@ function RateTooltip({
 }) {
   if (!active || !payload?.length) return null
   return (
-    <div className="rounded-lg border border-line bg-[#201a2d] p-3 text-xs">
+    <div className="rounded-lg border border-line bg-[#202222] p-3 text-xs">
       <p className="text-muted">{label} UTC</p>
-      <p className="mt-1 text-lime">{payload[0].value} events / sec</p>
+      <p className="mt-1 text-signal">{payload[0].value} events / sec</p>
     </div>
   )
 }
@@ -125,9 +129,9 @@ function Boundary() {
           <span className="text-[10px]">Mirror feed</span>
           <span className="text-[9px] text-muted">Read only</span>
         </div>
-        <ArrowRight size={20} className="text-lilac/60" />
+        <ArrowRight size={20} className="text-accent/60" />
         <div className="flex flex-col items-center gap-2">
-          <span className="rounded-xl border border-lilac/25 bg-lilac/10 p-3 text-lilac">
+          <span className="rounded-xl border border-accent/25 bg-accent/10 p-3 text-accent">
             <ShieldCheck size={20} />
           </span>
           <span className="text-[10px]">Analytics enclave</span>

@@ -3,27 +3,27 @@
 @theme inline {
   --font-sans: var(--font-dm-sans);
   --font-display: var(--font-space-grotesk);
-  --color-ink: #08060e;
-  --color-panel: #110e19;
-  --color-line: #292332;
-  --color-muted: #a39aad;
-  --color-lilac: #b38cfc;
-  --color-lime: #d5f5bd;
+  --color-ink: #080909;
+  --color-panel: #151616;
+  --color-line: #303232;
+  --color-muted: #a8abab;
+  --color-accent: #f07878;
+  --color-signal: #efefef;
+  --color-brand: #c9323c;
 }
-
 :root {
   color-scheme: dark;
 }
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 110px;
+  scroll-padding-top: 160px;
 }
 body {
-  background: #08060e;
-  color: #f2eff8;
+  background: #080909;
+  color: #f4f5f5;
 }
 ::selection {
-  background: #a67bfa55;
+  background: #c9323c55;
   color: #fff;
 }
 button,
@@ -33,17 +33,95 @@ select {
   -webkit-tap-highlight-color: transparent;
 }
 button:not(:disabled),
-select {
+select,
+summary {
   cursor: pointer;
 }
 a:focus-visible,
+button:focus-visible,
 input:focus-visible,
-select:focus-visible {
-  outline: 2px solid #b38cfc;
+select:focus-visible,
+summary:focus-visible {
+  outline: 2px solid #f07878;
   outline-offset: 4px;
 }
+input,
 select {
   color-scheme: dark;
+  transition:
+    border-color 180ms,
+    background 180ms;
+}
+input:hover,
+select:hover {
+  border-color: #595d5d;
+}
+input::placeholder {
+  color: #a8abab;
+}
+section[id] {
+  scroll-margin-top: 0;
+}
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #535656 #111212;
+}
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #111212;
+}
+::-webkit-scrollbar-thumb {
+  background: #535656;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a1474d;
+}
+.glass-panel {
+  background: linear-gradient(145deg, #ffffff04, transparent 60%), #151616bf;
+  border: 1px solid #ffffff14;
+  box-shadow:
+    inset 0 1px 0 #ffffff06,
+    0 12px 40px #00000014;
+  backdrop-filter: blur(16px);
+  transition:
+    border-color 220ms,
+    box-shadow 220ms;
+}
+.glass-panel:hover {
+  border-color: #ffffff25;
+}
+.product-background {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+.product-background::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  left: 25%;
+  width: 75%;
+  height: 800px;
+  background: radial-gradient(ellipse at 55% 15%, #ac202a1d, transparent 65%);
+  animation: atmosphere-drift 20s ease-in-out infinite alternate;
+}
+.product-background::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.16;
+  background-image: linear-gradient(90deg, #ffffff13 1px, transparent 1px);
+  background-size: 160px 100%;
+  mask-image: linear-gradient(#000, transparent 950px);
+}
+.section-rule {
+  background: linear-gradient(90deg, transparent, #ffffff17 25%, #ffffff17 75%, transparent);
+  height: 1px;
 }
 .scene-surface canvas {
   width: 100%;
@@ -55,14 +133,38 @@ select {
   touch-action: pan-y;
 }
 .radar-orbit {
-  border: 1px solid #a67bfa25;
+  border: 1px solid #c9323c35;
   border-radius: 50%;
+}
+.signal-scan {
+  animation: signal-scan 12s linear infinite;
+}
+.skeleton-surface {
+  background: linear-gradient(100deg, #ffffff04 25%, #ffffff0b 45%, #ffffff04 65%);
+  background-size: 250% 100%;
+  animation: skeleton-shift 2.5s ease-in-out infinite;
 }
 .dialog-overlay {
   animation: overlay-enter 160ms ease-out;
 }
 .dialog-content {
   animation: dialog-enter 200ms ease-out;
+}
+@keyframes atmosphere-drift {
+  to {
+    transform: translate3d(-5%, 35px, 0);
+    opacity: 0.6;
+  }
+}
+@keyframes signal-scan {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes skeleton-shift {
+  to {
+    background-position: -150% 0;
+  }
 }
 @keyframes overlay-enter {
   from {
@@ -75,11 +177,11 @@ select {
 @keyframes dialog-enter {
   from {
     opacity: 0;
-    transform: translate(-50%, -48%) scale(0.98);
+    transform: translateY(10px) scale(0.98);
   }
   to {
     opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
+    transform: translateY(0) scale(1);
   }
 }
 @media (prefers-reduced-motion: reduce) {

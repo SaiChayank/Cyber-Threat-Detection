@@ -23,10 +23,10 @@ const body = localFont({
 })
 
 export const metadata: Metadata = {
-  title: 'Sentinel · Passive threat intelligence',
+  title: 'Univect · Passive threat intelligence',
   description:
     'One-way network observation, streaming threat detection and evidence-backed alerts. PS26145 research prototype for passive IP traffic analysis.',
-  icons: { icon: '/assets/sentinel.svg' },
+  icons: { icon: '/assets/univect.svg' },
 }
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
@@ -38,7 +38,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <body className="font-sans antialiased">
         <a
           href="#main-content"
-          className="sr-only z-100 focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:rounded-lg focus:bg-lime focus:px-4 focus:py-3 focus:text-ink"
+          className="sr-only z-100 focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:rounded-lg focus:bg-signal focus:px-4 focus:py-3 focus:text-ink"
         >
           Skip to content
         </a>

@@ -1,4 +1,4 @@
-# Sentinel website and analyst interface
+# Univect website and analyst interface
 
 The website implements the supplied PS26145 requirements on top of the existing
 passive detection pipeline. This redesign preserves the Python models, metadata
@@ -13,7 +13,7 @@ extractor, read-only capture parser, event-time replay and SQLite alert history.
 - Lucide React icons and Recharts for actual sampled telemetry.
 - React Hook Form + Zod for replay inputs and runtime API contract validation.
 - Three.js for original robots, curved wire conveyors, metallic signal tokens,
-  purple portal shader, environment lighting and bloom. No reference video/model is embedded.
+  red portal shader, environment lighting and bloom. No reference video/model is embedded.
 - Locally hosted Space Grotesk and DM Sans via `next/font/local`; license notices
   are under `frontend/public/assets/licenses/`. Builds do not request Google Fonts.
 - Existing FastAPI, Pydantic and SQLite backend.
@@ -22,7 +22,7 @@ extractor, read-only capture parser, event-time replay and SQLite alert history.
 frontend/src/
   app/                 Routes, metadata, layout, loading/error/404 boundaries
   components/          Brand, providers, 3D lifecycle wrapper, reusable UI
-  features/landing/    Navigation, hero, platform, threat tabs, architecture
+  features/landing/    Hero, platform, threat tabs, architecture
   features/monitor/    Metrics, chart, replay, dataset coverage, table, evidence
   hooks/               Health polling and monitor fetch/SSE lifecycle
   services/            Same-origin typed API access
@@ -91,13 +91,21 @@ the default proxy unless `API_PROXY_URL` is set in that shell.
 
 The landing page combines the stacked metallic character language of
 [AiAf Agents](https://dribbble.com/shots/25941150-AiAf-Agents-3D-Landing-page-animation-ai-agents)
-with the purple portal/conveyor concept of
+with the portal/conveyor concept of
 [Portals](https://dribbble.com/shots/26011595-Portals-landing-page-web-design-3D-animation).
-It is an original adaptation for Sentinel. The 3D illustration is labelled and
+It is an original adaptation for Univect. The 3D illustration is labelled and
 does not simulate real attack counts or geographic locations. Scenes load near the
 viewport, pause offscreen or in background tabs, respect reduced motion, cap device
 pixel ratio, and dispose GPU resources on navigation. A text/icon fallback handles
 unavailable or lost WebGL contexts; the hero also has a pause/play control.
+
+Both routes share `SiteNav`, `SiteFooter`, the U/vector `BrandMark`, glass panels,
+typography and black/red/white tokens. The Monitor sidebar has been replaced by
+top navigation retaining all four section links, API reference, platform return
+and passive-sensor constraints. Mobile navigation overlays the content rather
+than shifting anchor positions, closes on selection, outside click or Escape,
+and highlights the visible section. See `UNIVECT_DESIGN_SYSTEM.md` for the palette,
+motion and accessibility conventions.
 
 The monitor fetches current telemetry, dataset readiness and the latest 200 alerts.
 SSE supplies new alerts and reconnects using sequence IDs. Telemetry polling is
@@ -124,13 +132,17 @@ and allow long-lived connections. Ordinary assets may be compressed by that prox
 
 ## Verification and limits
 
-The migration was verified using a separate SQLite database rather than adding test
-alerts to the existing analyst history. Browser checks covered landing/monitor routing,
-live streaming, replay start/stop, all threat modules, public CIC DNS replay (2,000
-events), invalid and valid PCAP uploads (three parsed packets), search empty states,
-class filtering, pagination, evidence dialogs, Escape/focus return and downloaded
-filtered JSON contents. Phone (320/390) and tablet (768) layouts were inspected using
-real iframe CSS viewports. API outage feedback and disabled replay controls were checked.
+The Univect redesign was verified using a separate SQLite database rather than adding
+test alerts to the existing analyst history. Browser checks covered landing/monitor
+routing, streaming while replay was running, start/stop, all threat modules, class
+filtering, evidence dialogs, JSON copying, Escape/focus return and downloaded filtered
+JSON contents (nine DGA records with required evidence fields). Phone (320/390), tablet
+(768) and desktop layouts were inspected with actual browser viewport overrides.
+Mobile menus and stable section anchoring were checked. API outage feedback, disabled
+replay controls and reconnection were checked. Invalid and valid PCAP requests were
+verified through the Next.js proxy, including three parsed packets. Browser file-picker
+automation timed out, so file selection itself was not reverified in this redesign.
+The earlier migration also verified public CIC DNS replay, search and pagination.
 Production build, strict type checking and the 34-test Python regression suite pass.
 
 This is a local research prototype. It does not add authentication or multi-user

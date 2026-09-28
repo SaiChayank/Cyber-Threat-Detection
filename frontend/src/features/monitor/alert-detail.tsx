@@ -49,7 +49,7 @@ export function AlertDetail({
       <Dialog.Portal>
         <Dialog.Overlay className="dialog-overlay fixed inset-0 z-60 bg-black/75 backdrop-blur-sm" />
         <Dialog.Content
-          className="dialog-content fixed top-1/2 left-1/2 z-70 max-h-[88dvh] w-[calc(100%-32px)] max-w-[680px] -translate-x-1/2 -translate-y-1/2 overflow-y-auto rounded-2xl border border-line bg-[#110e19] p-5 shadow-2xl focus:outline-none sm:p-7"
+          className="dialog-content fixed top-1/2 left-1/2 z-70 max-h-[88dvh] w-[calc(100%-32px)] max-w-[680px] -translate-x-1/2 -translate-y-1/2 overflow-y-auto rounded-3xl border border-white/15 bg-[#151616]/95 p-5 shadow-[0_30px_100px_#00000080] backdrop-blur-xl focus:outline-none sm:p-7"
           onCloseAutoFocus={(event) => {
             event.preventDefault()
             if (returnFocus.current?.isConnected) returnFocus.current.focus()
@@ -80,7 +80,7 @@ export function AlertDetail({
                 <strong className="text-sm">
                   {(alert.confidence_score * 100).toFixed(1)}% confidence score
                 </strong>
-                <span className="rounded bg-lilac/10 px-2 py-1 text-[10px] text-lilac">
+                <span className="rounded bg-accent/10 px-2 py-1 text-[10px] text-accent">
                   {alert.detection_source}
                 </span>
                 <p className="w-full text-[10px] text-muted">
@@ -92,7 +92,7 @@ export function AlertDetail({
               </div>
               <section>
                 <h3 className="text-xs font-semibold text-white">Observed connection</h3>
-                <div className="mt-3 flex flex-wrap items-center gap-2 font-mono text-xs text-lilac">
+                <div className="mt-3 flex flex-wrap items-center gap-2 font-mono text-xs text-accent">
                   <span>
                     {alert.src_ip}:{alert.src_port ?? '—'}
                   </span>
@@ -125,7 +125,7 @@ export function AlertDetail({
               </section>
               <section>
                 <h3 className="flex items-center gap-2 text-xs font-semibold">
-                  <Fingerprint size={14} className="text-lilac" />
+                  <Fingerprint size={14} className="text-accent" />
                   Identifiers
                 </h3>
                 <dl className="mt-3 space-y-2 font-mono text-[10px] break-all text-muted">
@@ -150,7 +150,7 @@ export function AlertDetail({
                 </Button>
               </div>
               {copyError && (
-                <p role="alert" className="text-xs text-rose-300">
+                <p role="alert" className="text-xs text-accent">
                   Clipboard unavailable. Use the alert table’s JSON export.
                 </p>
               )}
