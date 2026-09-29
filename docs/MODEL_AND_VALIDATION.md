@@ -20,6 +20,22 @@ severity is assigned separately by threat category. Repeated source/destination/
 alerts are suppressed for 30 event-time seconds. C2 needs eight peer observations;
 reconnaissance requires at least ten observed ports or hosts even for a model hit.
 
+The 29 September noise fix requires lexical corroboration for **every** DGA hit,
+including an otherwise confident model prediction: first-label entropy >=3.5,
+bigram surprise >=0.8 and first-label length >=20. The length rule now measures
+the same label used for entropy and bigrams, rather than counting a readable suffix.
+The first-label length is additional evidence, not a new model input: the 20-feature
+artifact, weights and SHA256 remain unchanged. The long TXT/NULL rule similarly
+requires a first label of at least 50 characters. Model-only tunnelling predictions
+still require an observed DNS name, as before.
+
+This is a conservative alert guard, not a newly validated DGA classifier. It prevents
+unsupported model-only DGA alerts on common domains but misses short and word-based
+families. The public bigram research candidate remains disabled after its failed
+promotion gate. See the before/after false-positive **and recall** measurements in
+[Streaming validation](STREAMING_VALIDATION.md); do not interpret reduced alert
+volume as complete attack coverage.
+
 Training consists of 30 independently seeded experiments per class, 32 incremental
 observations per experiment: 7,680 rows. Validation uses seeds 31–40 (2,560 rows),
 and the untouched test set uses seeds 41–50 (2,560 rows). Whole experiments remain
@@ -51,5 +67,7 @@ synthetic streaming metrics above must not be reported as public-data accuracy.
 
 The latest external runtime check is documented in
 [Streaming validation](STREAMING_VALIDATION.md). It evaluates the actual hybrid
-alert decisions, rather than only the model classifier, and exposes substantial
-legitimate-domain false positives. No model or threshold was changed during that run.
+alert decisions, rather than only the model classifier. The original baseline
+exposed substantial legitimate-domain false positives; the follow-up documents the
+conservative guard's reduction in noise and loss of recall. Neither run establishes
+deployment accuracy.

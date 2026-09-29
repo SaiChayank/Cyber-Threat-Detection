@@ -1,11 +1,87 @@
-# External streaming validation — 28 September 2026
+# External streaming validation
+
+## Follow-up — 29 September 2026
+
+Focused changes preserve the existing pipeline, model weights, API and frontend:
+
+- Every DGA alert now requires the existing entropy/bigram rule, including a
+  model-only prediction. Length >=20 is measured on the first label, consistently
+  with the other lexical features. A readable suffix cannot satisfy this guard.
+- The long TXT/NULL rule likewise measures first-label length >=50.
+- DNS/TCP skips the two-byte message length and parses a complete first message
+  within the packet. Partial TCP messages are left unparsed; no reassembly is added.
+- DNS name compression is decoded with cycle, truncation, label, expanded-length
+  and 128-step traversal checks. Invalid names no longer produce partial evidence.
+
+The unchanged model SHA256 is
+`4d8e08323374535789e21f9f7cd1ee3f1c84b663ce555e67bb4ced57c95e8010`.
+The current report also records hashes of the pipeline, extractor and parser source.
+No dependency, model promotion, source query or payload decryption was added.
+
+### DGA comparison on the same inspected domain lists
+
+| Measure | Original baseline | Conservative guard |
+| --- | ---: | ---: |
+| Legitimate domains evaluated | 1,000 | 1,000 |
+| Legitimate false positives | 912 | 0 |
+| Legitimate false-positive rate | 91.2% | 0% |
+| DGA true positives | 5,996 | 478 |
+| DGA false negatives | 0 | 5,518 |
+| DGA recall | 100% | 7.97% |
+| DGA precision in this sample | 86.80% | 100% |
+
+**This fixes unsupported alert noise, not DGA coverage.** Most short and word-based
+DGA families remain undetected. Zero false positives applies only to this limited
+legitimate reference list; it does not establish deployment FPR. The same previously
+inspected data is reused, so this is regression comparison, not an untouched holdout
+or a promotion-quality evaluation. Addresses and timing remain explicitly simulated.
+
+### Capture comparison and DNS visibility
+
+All 14 captures still contribute 609,583 parsed IP packets. Across the two benign
+references, DGA alerts fall from 1,599 to 25; total alerts fall from 1,671 to 97.
+The remaining counts are 55 DDoS, 13 C2 and four reconnaissance alerts. These counts
+remain deduplicated false-positive candidates, not per-flow FPR.
+
+The final capture run takes 120.80 seconds, about 5,046 parsed IP packets/sec for
+parsing, metadata adaptation, features and inference. It excludes hashing, replay
+pacing, SQLite, HTTP and UI, and must not be compared directly with flow/event rates.
+
+There are still **zero DNS-tunnelling alerts** in the downloaded captures. The
+largest observed DNS/53 name is 36 characters; no long TXT/NULL first label reaches
+the rule. Separate packet inspection of `heavy_text.pcap` found 97,017 UDP/5355
+packets, including 68,703 parseable first questions: 66,685 PTR, 1,912 ANY and 106 A.
+Common names are reverse lookups such as `252.0.0.224.in-addr.arpa`. This is consistent
+with local name-resolution traffic, not evidence that the tunnel detector should
+flag port 5355. LLMNR traffic remains distinct from DNS attack inputs.
+
+Controlled UDP and complete-message TCP captures with a long TXT question do
+produce a DNS-tunnelling alert through the parser, metadata adapter, API upload,
+asynchronous replay and SQLite. This verifies that the implemented path works; it
+does not establish recall on the public captures or justify lowering thresholds.
+
+Verification: **59 tests pass**, including all seven threat scenarios, common-domain
+regressions, malformed/compressed DNS and DNS/TCP capture upload. The unchanged
+website's same-origin health, telemetry and benchmark routes respond successfully.
+The refreshed 20,000-event core + SQLite benchmark sustains **2,827 metadata
+events/sec** (target 2,000), with processing/persistence p95 **1.13 ms** (target
+50 ms). It excludes capture, HTTP, SSE and browser rendering. Original dashboard
+history is preserved; tests and benchmarking use separate databases.
+
+Remaining priority: train and independently evaluate a stronger lexical DGA model,
+obtain labelled tunnel traffic with visible DNS metadata, and validate other threat
+classes before calibration or deployment claims. Authentication and broader capture
+support remain separate deployment work.
+
+## Original baseline — 28 September 2026
 
 The current detector runs successfully, but its external detection quality does
 not yet meet a defensible deployment standard. This validation establishes a
 baseline before any model or threshold changes.
 
 Run `.venv/Scripts/python.exe -m datasets.validate_streaming` from the repository
-root. Results are saved to `ml/streaming_validation.json`. The command reads local
+root for current results in `ml/streaming_validation.json`. The original run below
+is retained in `ml/streaming_validation_baseline.json`. The command reads local
 inputs, checks PCAP SHA256 values against the capture catalog, and records the
 runtime model hash. It does not train a model, modify captures, write dashboard
 alerts, contact monitored hosts, or decrypt encrypted payloads.
@@ -91,11 +167,12 @@ gates are described in [Dataset integration](DATASETS.md).
 5. Reevaluate, calibrate scores, and measure persistence/API alert latency after
    a candidate meets a predefined detection-quality gate.
 
-All seven domain lists and 14 captures have now been inspected. Reusing them
+All seven domain lists and 14 captures were inspected in the original run. Reusing them
 after changes is a regression/comparison experiment, not an untouched holdout.
 Credible generalization claims need new independent data or an explicitly
-documented evaluation design. The current validation changes no deployed model
-and promotes no public-data research candidate.
+documented evaluation design. The original validation changed no deployed model
+and promoted no public-data research candidate; the follow-up keeps model weights
+unchanged but adds the conservative alert guard described above.
 
 Verification: all 34 existing and validation-metric tests pass; the frontend
 production build also passes. Functional checks do not establish detection accuracy.

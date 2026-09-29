@@ -116,12 +116,20 @@ public replay is an external test of that pipeline.
   prefix recall **0%**, false-positive rate **10.59%** on only 85 unique benign
   vectors. These failures require a stronger baseline and broader experiments.
   Reports: `ml/public_cic_evaluation.json`, `ml/public_ddos_evaluation.json`.
-- Unmodified streaming pipeline on real DNS PCAP: 1,671 alerts across the two benign
+- Original streaming baseline on real DNS PCAP: 1,671 alerts across the two benign
   reference captures, including 1,599 DGA alerts. These are false-positive candidates;
   deduplicated alert counts are not per-flow FPR. Mixed attack captures have no
   trustworthy per-flow labels in this download, so recall is not claimed. The current
   long-TXT tunnelling rule did not fire on these captures. Report:
   `ml/public_dns_evaluation.json`.
+
+The 29 September runtime follow-up adds a conservative DGA corroboration guard and
+fixes DNS/TCP framing and compressed-name parsing. The before/after report is in
+[Streaming validation](STREAMING_VALIDATION.md), with machine-readable original
+results in `ml/streaming_validation_baseline.json` and current results in
+`ml/streaming_validation.json`. Reduced noise comes with substantially lower DGA
+recall; no research candidate was promoted. These already inspected sources are
+regression inputs, not independent holdouts.
 
 Confidence remains an uncalibrated posterior or heuristic strength. None of these
 results establishes deployment accuracy. Public-data next work should focus on

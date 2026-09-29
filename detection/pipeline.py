@@ -10,8 +10,8 @@ from schemas.flow_record import FlowRecord
 EVIDENCE = {
     'DDOS': ['packet_rate', 'byte_rate', 'source_entropy', 'syn_fraction'],
     'BOTNET_C2': ['iat_mean', 'iat_cv', 'history_count', 'destination_count'],
-    'DGA_DOMAINS': ['domain_entropy', 'domain_length', 'bigram_surprise'],
-    'DNS_TUNNELLING': ['domain_length', 'domain_entropy', 'txt_record'],
+    'DGA_DOMAINS': ['domain_entropy', 'domain_length', 'domain_label_length', 'bigram_surprise'],
+    'DNS_TUNNELLING': ['domain_length', 'domain_label_length', 'domain_entropy', 'txt_record'],
     'ENCRYPTED_MALWARE': ['encrypted', 'fingerprint_risk', 'size_cv', 'iat_cv'],
     'RECONNAISSANCE': ['destination_count', 'port_count', 'syn_fraction'],
     'DATA_EXFILTRATION': ['egress_bytes', 'observed_byte_ratio', 'reverse_available'],
@@ -47,11 +47,16 @@ class Pipeline:
         label, confidence = self.model.predict(f)
         fid = self.flow_id(event)
         hits = {label: (confidence, DetectorType.ML)} if label != 'BENIGN' and confidence >= .8 else {}
+        # The synthetic model's DNS posterior alone does not generalize to real
+        # domains. Require the existing lexical rule for DGA alerts, measuring
+        # length on the same first label as entropy and bigram surprise.
+        dga_evidence = (f['domain_entropy'] >= 3.5 and f['bigram_surprise'] >= .8
+                        and f['domain_label_length'] >= 20)
         rules = {
             'DDOS': f['packet_rate'] >= 1000,
             'RECONNAISSANCE': max(f['destination_count'], f['port_count']) >= 20,
-            'DNS_TUNNELLING': f['domain_length'] >= 50 and f['txt_record'] == 1,
-            'DGA_DOMAINS': f['domain_entropy'] >= 3.5 and f['bigram_surprise'] >= .8 and f['domain_length'] >= 20,
+            'DNS_TUNNELLING': f['domain_label_length'] >= 50 and f['txt_record'] == 1,
+            'DGA_DOMAINS': dga_evidence,
             'BOTNET_C2': f['history_count'] >= 8 and f['iat_mean'] >= 1 and f['iat_cv'] < .05,
             'ENCRYPTED_MALWARE': f['encrypted'] and f['fingerprint_risk'],
             'DATA_EXFILTRATION': f['egress_bytes'] > 20000000,
@@ -69,6 +74,8 @@ class Pipeline:
             if threat == 'ENCRYPTED_MALWARE' and not event.encrypted:
                 continue
             if threat in ('DGA_DOMAINS', 'DNS_TUNNELLING') and not event.dns_name:
+                continue
+            if threat == 'DGA_DOMAINS' and not dga_evidence:
                 continue
             key = (str(event.src_ip), str(event.dst_ip), threat)
             if key in self.dedup:

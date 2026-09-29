@@ -31,6 +31,46 @@ def test_benign_demo_has_no_alerts():
     assert not [a for event in scenario('BENIGN', 100) for a in pipeline.process(event)]
 
 
+@pytest.mark.parametrize('name', ['google.com', 'youtube.com', 'facebook.com',
+                                  'baidu.com', 'wikipedia.org', 'mail.company.test'])
+def test_normal_domains_do_not_emit_dga_even_with_overconfident_model(name):
+    pipeline = Pipeline()
+    pipeline.model.predict = lambda _: ('DGA_DOMAINS', .99999)
+    event = TrafficEvent(timestamp=1700000000000, src_ip='192.0.2.1',
+                         dst_ip='192.0.2.53', dst_port=53, protocol=17, dns_name=name)
+    assert not [a for a in pipeline.process(event) if a.threat_class == 'DGA_DOMAINS']
+
+
+def test_domain_length_rule_does_not_count_suffix_as_suspicious_label():
+    pipeline = Pipeline()
+    pipeline.model.predict = lambda _: ('BENIGN', 1.0)
+    event = TrafficEvent(timestamp=1700000000000, src_ip='192.0.2.1',
+                         dst_ip='192.0.2.53', dst_port=53, protocol=17,
+                         dns_name='q7x9k2z4m6b8.service.example.org', dns_type=16)
+    f = FeatureExtractor().update(event)
+    assert f['domain_length'] >= 20 and f['domain_label_length'] == 12
+    assert f['domain_entropy'] >= 3.5 and f['bigram_surprise'] >= .8
+    assert not pipeline.process(event)
+    # A long readable suffix cannot manufacture the long-TXT rule either.
+    event = event.model_copy(update={'dns_name': 'mail.' + 'service.' * 8 + 'example.org',
+                                     'timestamp': event.timestamp + 1000})
+    assert not pipeline.process(event)
+
+
+def test_long_random_txt_query_keeps_both_lexical_alerts_and_evidence():
+    pipeline = Pipeline()
+    pipeline.model.predict = lambda _: ('BENIGN', 1.0)
+    name = 'q7x9k2z4m6b8v1j3p5d0r2s4w6y8a1c3e5f7g9h0i2l4n6o8u1t3' + '.example.org'
+    event = TrafficEvent(timestamp=1700000000000, src_ip='192.0.2.1',
+                         dst_ip='192.0.2.53', dst_port=53, protocol=17,
+                         dns_name=name, dns_type=16)
+    alerts = pipeline.process(event)
+    assert {a.threat_class for a in alerts} == {'DGA_DOMAINS', 'DNS_TUNNELLING'}
+    for alert in alerts:
+        assert alert.raw_evidence_metrics['domain_label_length'] == len(name.split('.')[0])
+        assert alert.raw_evidence_metrics['confidence_kind'] == 'heuristic strength'
+
+
 def test_udp_flood_and_encrypted_sequences_without_fingerprint():
     pipeline = Pipeline()
     flood = [e.model_copy(update={'protocol': 17, 'syn': False, 'dst_port': 53}) for e in scenario('DDOS')]

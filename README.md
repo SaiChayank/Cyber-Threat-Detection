@@ -65,6 +65,11 @@ and severity. Severity is separate from the model score. Rule-only scores are he
 strengths; model scores are synthetic-trained posteriors, not calibrated deployment
 probabilities. The evidence and dashboard disclose this distinction.
 
+DGA alerts require corroborating first-label lexical evidence even when the model
+is confident. This reduces false alarms but misses short and word-based families.
+The [before/after validation](docs/STREAMING_VALIDATION.md) reports both noise and
+recall; detection quality remains a prototype limitation.
+
 ## Reproduce validation
 
 ```powershell
@@ -104,6 +109,11 @@ JA3 is parsed from PCAP. QUIC packet dynamics and supplied metadata are accepted
 but raw QUIC handshake fingerprint extraction is not implemented. TCP reassembly,
 PCAPNG, IPv6 extension decoding and production authentication are outside this local
 prototype. DoH / DoT hide DNS names. Read the full limits before assessing accuracy.
+
+DNS extraction supports UDP/53 and a complete first length-prefixed DNS/TCP message
+in one packet, with bounded compression-pointer decoding. Segmented TCP questions
+are not reconstructed. Local LLMNR/5355 traffic is not silently classified as DNS
+tunnelling; the available captures still need independently labelled attack flows.
 
 ## Project files
 

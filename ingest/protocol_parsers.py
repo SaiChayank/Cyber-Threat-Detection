@@ -150,9 +150,17 @@ class ProtocolParser:
             dns_record: Optional[DNSRecord] = None
             tls_record: Optional[TLSMetadataRecord] = None
 
-            # Check for DNS (Port 53)
-            if (src_port == 53 or dst_port == 53) and payload_data:
-                dns_record = self._try_parse_dns(payload_data, flow_id, src_ip, dst_ip, timestamp_ms)
+            # DNS/TCP prefixes each message with a two-byte length. Parse only a
+            # complete first message; TCP stream reassembly is deliberately absent.
+            if protocol in (6, 17) and (src_port == 53 or dst_port == 53) and payload_data:
+                dns_payload = payload_data
+                if protocol == 6:
+                    if len(payload_data) < 2:
+                        dns_payload = b''
+                    else:
+                        message_length = struct.unpack('!H', payload_data[:2])[0]
+                        dns_payload = payload_data[2:2 + message_length] if len(payload_data) >= 2 + message_length else b''
+                dns_record = self._try_parse_dns(dns_payload, flow_id, src_ip, dst_ip, timestamp_ms)
 
             # Check for TLS ClientHello (Port 443 / TLS handshake)
             if protocol == 6 and payload_data:
@@ -163,6 +171,45 @@ class ProtocolParser:
         except Exception as exc:
             self.dlq.record_corrupt_packet("UNHANDLED_EXCEPTION", str(exc), len(raw_data))
             return None, None, None
+
+    @staticmethod
+    def _read_dns_name(payload: bytes, offset: int) -> Tuple[str, int]:
+        """Decode one bounded DNS wire name, including compression pointers."""
+        labels, visited = [], set()
+        next_offset = None
+        wire_length = 1  # Root terminator, including the expanded name.
+        while True:
+            if offset < 0 or offset >= len(payload) or offset in visited:
+                raise ValueError('Truncated or cyclic DNS name')
+            if len(visited) >= 128:
+                raise ValueError('DNS compression traversal limit exceeded')
+            visited.add(offset)
+            length = payload[offset]
+            if length & 0xC0 == 0xC0:
+                if offset + 1 >= len(payload):
+                    raise ValueError('Truncated DNS pointer')
+                target = ((length & 0x3F) << 8) | payload[offset + 1]
+                if target >= offset:
+                    raise ValueError('DNS pointer must reference an earlier name')
+                if next_offset is None:
+                    next_offset = offset + 2
+                offset = target
+                continue
+            if length & 0xC0:
+                raise ValueError('Unsupported DNS label encoding')
+            offset += 1
+            if length == 0:
+                return '.'.join(labels), next_offset if next_offset is not None else offset
+            if offset + length > len(payload):
+                raise ValueError('Truncated DNS label')
+            label = payload[offset:offset + length].decode('ascii')
+            if '.' in label or any(ord(c) < 33 or ord(c) > 126 for c in label):
+                raise ValueError('DNS label cannot be represented as a plain ASCII name')
+            wire_length += length + 1
+            if wire_length > 255:
+                raise ValueError('DNS name exceeds wire length limit')
+            labels.append(label)
+            offset += length
 
     def _try_parse_dns(
         self,
@@ -184,29 +231,12 @@ class ProtocolParser:
             if qdcount == 0:
                 return None
 
-            # Read first Query Name
-            idx = 12
-            labels = []
-            while idx < len(payload):
-                length = payload[idx]
-                if length == 0:
-                    idx += 1
-                    break
-                if (length & 0xC0) == 0xC0:  # Pointer
-                    idx += 2
-                    break
-                idx += 1
-                if idx + length > len(payload):
-                    return None
-                labels.append(payload[idx:idx + length].decode("ascii", errors="ignore"))
-                idx += length
-
-            if not labels or idx + 4 > len(payload):
+            # Read the first question without silently dropping compressed labels.
+            query_name, idx = self._read_dns_name(payload, 12)
+            if not query_name or idx + 4 > len(payload):
                 return None
 
             qtype, _ = struct.unpack("!HH", payload[idx:idx + 4])
-            query_name = ".".join(labels)
-
             return DNSRecord.from_query(
                 query_id=tx_id,
                 flow_id=flow_id,

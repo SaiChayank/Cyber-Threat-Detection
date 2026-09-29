@@ -79,5 +79,6 @@ class FeatureExtractor:
                   sum(e.bytes for e in history), ratio or 0, float(event.reverse_observed),
                   float(any(e.tls_fingerprint == DEMO_FINGERPRINT for e in peer)), len(peer)]
         return dict(zip(FEATURES, values)) | {'observed_byte_ratio': ratio,
+                                             'domain_label_length': len(lexical),
                                              'window_partial': t - history[0].timestamp / 1000 < 60,
                                              'state_evictions': self.evictions}

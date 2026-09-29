@@ -68,7 +68,8 @@ def validate_domains():
                 caveats=['Counts are unique-domain decisions, not real network flow accuracy',
                          'Other emitted threat classes are excluded from DGA confusion counts',
                          'Only first-label lexical features currently reach the detector',
-                         'No thresholds were changed using these results'])
+                         'Previously inspected inputs: this run is regression validation, not an untouched holdout',
+                         'DGA requires first-label length >=20, entropy >=3.5 and bigram surprise >=0.8 even for an ML hit'])
 
 
 def validate_captures():
@@ -111,6 +112,8 @@ def validate_captures():
 def main():
     report = dict(generated_at_utc=datetime.now(timezone.utc).isoformat(),
                   model_sha256=sha256(ARTIFACT), model='Current synthetic-trained hybrid streaming pipeline',
+                  runtime_source_sha256={file: sha256(ROOT / file) for file in
+                                         ('detection/pipeline.py', 'features/extractor.py', 'ingest/protocol_parsers.py')},
                   umudga=validate_domains(), captures=validate_captures(),
                   limitations=['PCAP throughput includes parsing, feature extraction and inference; excludes replay pacing, persistence and UI',
                                'No malware payloads were decrypted and no monitored host was contacted',
