@@ -1,5 +1,10 @@
 # DGA classifier development — 29 September 2026
 
+This records the DGA development stage. Subsequent stream accounting and delivery
+checks are documented in [Streaming reliability](STREAM_RELIABILITY.md); current
+benchmark and streaming reports have been refreshed there. The candidate and its
+development-comparison results below are unchanged and it remains disabled.
+
 The broader lexical classifier is implemented, fitted, exported and integrated
 behind a quality gate. **It is not active in the dashboard.** The final candidate
 fails the predeclared comparison-recall and benign-DNS false-positive gates, so the

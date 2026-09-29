@@ -5,6 +5,12 @@ It remains disabled after failing its gates. This streaming report checks the
 active conservative guard and records the inactive candidate's hash/status; it
 must not be confused with the candidate's development comparison metrics.
 
+The later stream-accounting fix is documented in
+[Streaming reliability](STREAM_RELIABILITY.md). `ml/streaming_validation.json` has
+been refreshed with that code, including the rate-window helper hash. Numeric
+tables below retain the earlier guard comparison; read the newer report for current
+capture counts. Detection quality limitations and the disabled DGA candidate remain.
+
 ## Follow-up — 29 September 2026
 
 Focused changes preserve the existing pipeline, model weights, API and frontend:

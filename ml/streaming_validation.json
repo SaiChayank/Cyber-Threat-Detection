@@ -1,12 +1,13 @@
 {
-  "generated_at_utc": "2026-09-29T12:53:57.998355+00:00",
+  "generated_at_utc": "2026-09-29T13:19:51.134240+00:00",
   "model_sha256": "4d8e08323374535789e21f9f7cd1ee3f1c84b663ce555e67bb4ced57c95e8010",
   "model": "Current synthetic-trained hybrid streaming pipeline",
   "dga_candidate_sha256": "c0314dd5f1fe360db11e2494326fd6e99f267d6e920fa091f6c9fcebc796996e",
   "dga_candidate_enabled": false,
   "runtime_source_sha256": {
-    "detection/pipeline.py": "9b469d13d68d1ac7cc7f8532d8bfeb43e12da632495259911532daf9c003b0ba",
-    "features/extractor.py": "f707a198a80ed6073ec5d2bb30561ebb49e2190f0f8c8bd65b8b73e4f39af797",
+    "detection/pipeline.py": "5f8b6809a81c45374c1fb685aa53b6f5635be141278a1b86756a10aec5a3d7ee",
+    "features/extractor.py": "ae9e7361704b581a6ae63113447f1d984ee51970a1ee98b8e5fb70ff3f9acffc",
+    "features/rate_window.py": "718c07419c1103ad2b68400d49e330dea46cc667997244c01601e9d0ff3a9445",
     "ingest/protocol_parsers.py": "cf8cda0df2a543e85f1ad822d0634a2e417c049d2df2b56fd23a23890c56a6cd",
     "ml/dga.py": "0a03098bf4cc22d8f5b7ff5fe3bd75d82d735479730e1890a7f99bedb9d6c0b7"
   },
@@ -197,8 +198,8 @@
         "DGA_DOMAINS": 12,
         "RECONNAISSANCE": 1
       },
-      "elapsed_seconds": 30.996251100004883,
-      "parsed_packets_per_second": 4264.386669650485,
+      "elapsed_seconds": 25.00742889999674,
+      "parsed_packets_per_second": 5285.629343527484,
       "telemetry": {
         "processed": 132180,
         "late_events": 2,
@@ -206,7 +207,9 @@
         "active_sources": 67,
         "dga_detector": "conservative-lexical-guard",
         "dga_candidate_enabled": false,
-        "processing_p95_ms": 0.2885000067180954
+        "rate_window_resolution_ms": 1000,
+        "source_entropy_partial": false,
+        "processing_p95_ms": 0.2151000007870607
       },
       "interpretation": "Benign-reference alerts are false-positive candidates; deduplicated counts are not FPR"
     },
@@ -247,10 +250,10 @@
         "BOTNET_C2": 1,
         "DGA_DOMAINS": 13,
         "DDOS": 55,
-        "RECONNAISSANCE": 3
+        "RECONNAISSANCE": 2
       },
-      "elapsed_seconds": 31.333826399997633,
-      "parsed_packets_per_second": 2989.867844547932,
+      "elapsed_seconds": 18.873345200001495,
+      "parsed_packets_per_second": 4963.82591465516,
       "telemetry": {
         "processed": 93684,
         "late_events": 2,
@@ -258,7 +261,9 @@
         "active_sources": 83,
         "dga_detector": "conservative-lexical-guard",
         "dga_candidate_enabled": false,
-        "processing_p95_ms": 2.7619000029517338
+        "rate_window_resolution_ms": 1000,
+        "source_entropy_partial": false,
+        "processing_p95_ms": 1.132100005634129
       },
       "interpretation": "Benign-reference alerts are false-positive candidates; deduplicated counts are not FPR"
     },
@@ -296,12 +301,12 @@
         ]
       ],
       "alerts_by_class": {
-        "BOTNET_C2": 109,
-        "ENCRYPTED_MALWARE": 1327,
+        "BOTNET_C2": 78,
+        "ENCRYPTED_MALWARE": 1314,
         "DDOS": 1
       },
-      "elapsed_seconds": 11.053566499998851,
-      "parsed_packets_per_second": 4922.574085025467,
+      "elapsed_seconds": 8.179726099995605,
+      "parsed_packets_per_second": 6652.056479009638,
       "telemetry": {
         "processed": 54412,
         "late_events": 1,
@@ -309,7 +314,9 @@
         "active_sources": 89,
         "dga_detector": "conservative-lexical-guard",
         "dga_candidate_enabled": false,
-        "processing_p95_ms": 0.26670000079320744
+        "rate_window_resolution_ms": 1000,
+        "source_entropy_partial": false,
+        "processing_p95_ms": 0.17630000365898013
       },
       "interpretation": "Mixed capture: no per-flow labels; recall cannot be measured"
     },
@@ -347,12 +354,12 @@
         ]
       ],
       "alerts_by_class": {
-        "BOTNET_C2": 134,
-        "ENCRYPTED_MALWARE": 1388,
+        "BOTNET_C2": 91,
+        "ENCRYPTED_MALWARE": 1396,
         "RECONNAISSANCE": 3
       },
-      "elapsed_seconds": 9.707197800002177,
-      "parsed_packets_per_second": 5450.594609289627,
+      "elapsed_seconds": 7.424835899997561,
+      "parsed_packets_per_second": 7126.0834195699035,
       "telemetry": {
         "processed": 52910,
         "late_events": 2,
@@ -360,7 +367,9 @@
         "active_sources": 86,
         "dga_detector": "conservative-lexical-guard",
         "dga_candidate_enabled": false,
-        "processing_p95_ms": 0.2537000036682002
+        "rate_window_resolution_ms": 1000,
+        "source_entropy_partial": false,
+        "processing_p95_ms": 0.18679999629966915
       },
       "interpretation": "Mixed capture: no per-flow labels; recall cannot be measured"
     },
@@ -398,10 +407,10 @@
         ]
       ],
       "alerts_by_class": {
-        "BOTNET_C2": 42
+        "BOTNET_C2": 39
       },
-      "elapsed_seconds": 6.789901299998746,
-      "parsed_packets_per_second": 5206.26124565412,
+      "elapsed_seconds": 5.553275199999916,
+      "parsed_packets_per_second": 6365.612854914975,
       "telemetry": {
         "processed": 35350,
         "late_events": 1,
@@ -409,7 +418,9 @@
         "active_sources": 63,
         "dga_detector": "conservative-lexical-guard",
         "dga_candidate_enabled": false,
-        "processing_p95_ms": 0.25269999605370685
+        "rate_window_resolution_ms": 1000,
+        "source_entropy_partial": false,
+        "processing_p95_ms": 0.1965000046766363
       },
       "interpretation": "Mixed capture: no per-flow labels; recall cannot be measured"
     },
@@ -447,11 +458,11 @@
         ]
       ],
       "alerts_by_class": {
-        "BOTNET_C2": 104,
-        "ENCRYPTED_MALWARE": 1407
+        "BOTNET_C2": 82,
+        "ENCRYPTED_MALWARE": 1414
       },
-      "elapsed_seconds": 9.634036499999638,
-      "parsed_packets_per_second": 5570.666044290159,
+      "elapsed_seconds": 7.708941099997901,
+      "parsed_packets_per_second": 6961.786230279359,
       "telemetry": {
         "processed": 53668,
         "late_events": 0,
@@ -459,7 +470,9 @@
         "active_sources": 82,
         "dga_detector": "conservative-lexical-guard",
         "dga_candidate_enabled": false,
-        "processing_p95_ms": 0.24879999546101317
+        "rate_window_resolution_ms": 1000,
+        "source_entropy_partial": false,
+        "processing_p95_ms": 0.17590000061318278
       },
       "interpretation": "Mixed capture: no per-flow labels; recall cannot be measured"
     },
@@ -497,12 +510,12 @@
         ]
       ],
       "alerts_by_class": {
-        "BOTNET_C2": 218,
-        "ENCRYPTED_MALWARE": 2869,
+        "BOTNET_C2": 162,
+        "ENCRYPTED_MALWARE": 2879,
         "DDOS": 1
       },
-      "elapsed_seconds": 18.12769949999347,
-      "parsed_packets_per_second": 5793.950854052818,
+      "elapsed_seconds": 15.524653899999976,
+      "parsed_packets_per_second": 6765.432625844249,
       "telemetry": {
         "processed": 105031,
         "late_events": 0,
@@ -510,7 +523,9 @@
         "active_sources": 95,
         "dga_detector": "conservative-lexical-guard",
         "dga_candidate_enabled": false,
-        "processing_p95_ms": 0.2342000007047318
+        "rate_window_resolution_ms": 1000,
+        "source_entropy_partial": false,
+        "processing_p95_ms": 0.21430000197142363
       },
       "interpretation": "Mixed capture: no per-flow labels; recall cannot be measured"
     },
@@ -548,10 +563,10 @@
         ]
       ],
       "alerts_by_class": {
-        "BOTNET_C2": 52
+        "BOTNET_C2": 49
       },
-      "elapsed_seconds": 7.6839198999950895,
-      "parsed_packets_per_second": 5049.245763223637,
+      "elapsed_seconds": 7.113521100000071,
+      "parsed_packets_per_second": 5454.120323056273,
       "telemetry": {
         "processed": 38798,
         "late_events": 0,
@@ -559,7 +574,9 @@
         "active_sources": 62,
         "dga_detector": "conservative-lexical-guard",
         "dga_candidate_enabled": false,
-        "processing_p95_ms": 0.2814999970723875
+        "rate_window_resolution_ms": 1000,
+        "source_entropy_partial": false,
+        "processing_p95_ms": 0.21779999951831996
       },
       "interpretation": "Mixed capture: no per-flow labels; recall cannot be measured"
     },
@@ -597,10 +614,10 @@
         ]
       ],
       "alerts_by_class": {
-        "BOTNET_C2": 21
+        "BOTNET_C2": 20
       },
-      "elapsed_seconds": 3.5162541000026977,
-      "parsed_packets_per_second": 5109.983376908459,
+      "elapsed_seconds": 2.843138000003819,
+      "parsed_packets_per_second": 6319.777654118747,
       "telemetry": {
         "processed": 17968,
         "late_events": 0,
@@ -608,7 +625,9 @@
         "active_sources": 62,
         "dga_detector": "conservative-lexical-guard",
         "dga_candidate_enabled": false,
-        "processing_p95_ms": 0.25579999783076346
+        "rate_window_resolution_ms": 1000,
+        "source_entropy_partial": false,
+        "processing_p95_ms": 0.20570000197039917
       },
       "interpretation": "Mixed capture: no per-flow labels; recall cannot be measured"
     },
@@ -648,8 +667,8 @@
       "alerts_by_class": {
         "BOTNET_C2": 12
       },
-      "elapsed_seconds": 2.232313400003477,
-      "parsed_packets_per_second": 4684.826064289948,
+      "elapsed_seconds": 1.643988999996509,
+      "parsed_packets_per_second": 6361.356432447059,
       "telemetry": {
         "processed": 10458,
         "late_events": 0,
@@ -657,7 +676,9 @@
         "active_sources": 61,
         "dga_detector": "conservative-lexical-guard",
         "dga_candidate_enabled": false,
-        "processing_p95_ms": 0.28229999588802457
+        "rate_window_resolution_ms": 1000,
+        "source_entropy_partial": false,
+        "processing_p95_ms": 0.20119999680900946
       },
       "interpretation": "Mixed capture: no per-flow labels; recall cannot be measured"
     },
@@ -696,10 +717,10 @@
         ]
       ],
       "alerts_by_class": {
-        "BOTNET_C2": 7
+        "BOTNET_C2": 6
       },
-      "elapsed_seconds": 1.5011224000045331,
-      "parsed_packets_per_second": 4383.386724480381,
+      "elapsed_seconds": 1.0897514000025694,
+      "parsed_packets_per_second": 6038.074371810383,
       "telemetry": {
         "processed": 6580,
         "late_events": 0,
@@ -707,7 +728,9 @@
         "active_sources": 60,
         "dga_detector": "conservative-lexical-guard",
         "dga_candidate_enabled": false,
-        "processing_p95_ms": 0.31090000265976414
+        "rate_window_resolution_ms": 1000,
+        "source_entropy_partial": false,
+        "processing_p95_ms": 0.2184999975725077
       },
       "interpretation": "Mixed capture: no per-flow labels; recall cannot be measured"
     },
@@ -741,8 +764,8 @@
       "alerts_by_class": {
         "BOTNET_C2": 2
       },
-      "elapsed_seconds": 0.0961198000004515,
-      "parsed_packets_per_second": 5586.778166386921,
+      "elapsed_seconds": 0.07023750000371365,
+      "parsed_packets_per_second": 7645.488520684924,
       "telemetry": {
         "processed": 537,
         "late_events": 0,
@@ -750,7 +773,9 @@
         "active_sources": 14,
         "dga_detector": "conservative-lexical-guard",
         "dga_candidate_enabled": false,
-        "processing_p95_ms": 0.2266000010422431
+        "rate_window_resolution_ms": 1000,
+        "source_entropy_partial": false,
+        "processing_p95_ms": 0.13659999967785552
       },
       "interpretation": "Mixed capture: no per-flow labels; recall cannot be measured"
     },
@@ -790,8 +815,8 @@
       "alerts_by_class": {
         "BOTNET_C2": 5
       },
-      "elapsed_seconds": 0.6787775999982841,
-      "parsed_packets_per_second": 5232.936384478478,
+      "elapsed_seconds": 0.5577902999939397,
+      "parsed_packets_per_second": 6367.984527587862,
       "telemetry": {
         "processed": 3552,
         "late_events": 0,
@@ -799,7 +824,9 @@
         "active_sources": 37,
         "dga_detector": "conservative-lexical-guard",
         "dga_candidate_enabled": false,
-        "processing_p95_ms": 0.24990000383695588
+        "rate_window_resolution_ms": 1000,
+        "source_entropy_partial": false,
+        "processing_p95_ms": 0.21689999994123355
       },
       "interpretation": "Mixed capture: no per-flow labels; recall cannot be measured"
     },
@@ -837,10 +864,10 @@
         ]
       ],
       "alerts_by_class": {
-        "BOTNET_C2": 5
+        "BOTNET_C2": 4
       },
-      "elapsed_seconds": 0.9030207000032533,
-      "parsed_packets_per_second": 4933.441725072249,
+      "elapsed_seconds": 0.6383150999972713,
+      "parsed_packets_per_second": 6979.311628408986,
       "telemetry": {
         "processed": 4455,
         "late_events": 0,
@@ -848,7 +875,9 @@
         "active_sources": 42,
         "dga_detector": "conservative-lexical-guard",
         "dga_candidate_enabled": false,
-        "processing_p95_ms": 0.25610000011511147
+        "rate_window_resolution_ms": 1000,
+        "source_entropy_partial": false,
+        "processing_p95_ms": 0.16509999841218814
       },
       "interpretation": "Mixed capture: no per-flow labels; recall cannot be measured"
     }

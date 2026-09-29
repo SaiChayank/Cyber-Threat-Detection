@@ -13,6 +13,19 @@ Each nonnegative input is transformed with log(1+x). Conditional variance has a
 scores. The independence assumption and correlated inputs can produce overconfident
 posteriors. Scores are **not** advertised as real-world calibrated probabilities.
 
+The streaming rate fix preserves the 20-feature names and fitted artifact. Global
+packet/byte totals now use one-second aggregates over the ten-second window instead
+of dropping observations after 4,096 records. The partially overlapping oldest
+second is retained, with up to one second of extra history. Source identities are
+bounded; overflow is grouped and flagged as `source_entropy_partial`, making entropy
+a lower bound rather than pretending it is exact. Packet/byte totals remain complete.
+See [Streaming reliability](STREAM_RELIABILITY.md) for regressions and measurements.
+
+`python -m ml.train --evaluate-only` evaluates the current frozen artifact with the
+current extractor and writes `ml/runtime_evaluation.json`. It does not retrain or
+modify either fitted model. The report includes feature-source hashes and remains
+lab-only regression evidence. The regular command still fits and evaluates a model.
+
 The detection pipeline evaluates model output at a 0.8 posterior threshold, alongside
 seven rule detectors. A model and rule match is labelled HYBRID; a rule-only alert
 uses 0.8 as heuristic strength. Evidence explicitly records the score kind. Operational

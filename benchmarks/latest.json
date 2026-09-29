@@ -1,11 +1,21 @@
 {
+  "generated_at_utc": "2026-09-29T13:22:52.245585+00:00",
+  "runtime_source_sha256": {
+    "detection/pipeline.py": "5f8b6809a81c45374c1fb685aa53b6f5635be141278a1b86756a10aec5a3d7ee",
+    "features/extractor.py": "ae9e7361704b581a6ae63113447f1d984ee51970a1ee98b8e5fb70ff3f9acffc",
+    "features/rate_window.py": "718c07419c1103ad2b68400d49e330dea46cc667997244c01601e9d0ff3a9445",
+    "ml/model.py": "2721a53d667d1ea773154fdebf3d349c5ef221dfdb51e937d5afdba1ffa6f354",
+    "ml/dga.py": "0a03098bf4cc22d8f5b7ff5fe3bd75d82d735479730e1890a7f99bedb9d6c0b7",
+    "persistence/store.py": "56bdc7cbb9d25ec0ceedf0fb2fc9e2169ee53bb54fc2731d1e034f4156e1a490"
+  },
+  "model_sha256": "4d8e08323374535789e21f9f7cd1ee3f1c84b663ce555e67bb4ced57c95e8010",
   "events": 20000,
   "alerts": 4914,
-  "elapsed_seconds": 7.956320600002073,
-  "metadata_events_per_second": 2513.724748597334,
+  "elapsed_seconds": 6.606883899999957,
+  "metadata_events_per_second": 3027.1456715018303,
   "throughput_target": 2000,
   "throughput_pass": true,
-  "processing_and_persistence_p95_ms": 1.2787999949068762,
+  "processing_and_persistence_p95_ms": 1.0812999971676618,
   "latency_target_ms": 50,
   "latency_pass": true,
   "workload": "Repeated eight-class synthetic metadata sessions with SQLite alert commits",
@@ -19,6 +29,8 @@
     "active_sources": 33,
     "dga_detector": "conservative-lexical-guard",
     "dga_candidate_enabled": false,
-    "processing_p95_ms": 0.31490000401390716
+    "rate_window_resolution_ms": 1000,
+    "source_entropy_partial": false,
+    "processing_p95_ms": 0.20279999444028363
   }
 }

@@ -9,7 +9,8 @@ from schemas.enums import ThreatClass, Severity, DetectorType
 from schemas.flow_record import FlowRecord
 
 EVIDENCE = {
-    'DDOS': ['packet_rate', 'byte_rate', 'source_entropy', 'syn_fraction'],
+    'DDOS': ['packet_rate', 'byte_rate', 'source_entropy', 'syn_fraction',
+             'source_entropy_partial', 'rate_window_seconds', 'rate_window_resolution_ms'],
     'BOTNET_C2': ['iat_mean', 'iat_cv', 'history_count', 'destination_count'],
     'DGA_DOMAINS': ['domain_entropy', 'domain_length', 'domain_label_length', 'bigram_surprise'],
     'DNS_TUNNELLING': ['domain_length', 'domain_label_length', 'domain_entropy', 'txt_record'],
@@ -120,4 +121,6 @@ class Pipeline:
                     state_evictions=self.extractor.evictions, active_sources=len(self.extractor.sources),
                     dga_detector='public-lexical-model' if self.dga_model.enabled else 'conservative-lexical-guard',
                     dga_candidate_enabled=self.dga_model.enabled,
+                    rate_window_resolution_ms=self.extractor.global_rates.resolution_ms,
+                    source_entropy_partial=bool(self.extractor.global_rates.sources.get(None)),
                     processing_p95_ms=timings[min(len(timings)-1, int(len(timings)*.95))] if timings else 0)

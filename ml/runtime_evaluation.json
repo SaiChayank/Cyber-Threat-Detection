@@ -1,0 +1,271 @@
+{
+  "validation": {
+    "per_class": {
+      "BENIGN": {
+        "precision": 1.0,
+        "recall": 0.971875,
+        "f1": 0.9857369255150554
+      },
+      "DDOS": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "BOTNET_C2": {
+        "precision": 0.9406528189910979,
+        "recall": 0.990625,
+        "f1": 0.9649923896499238
+      },
+      "DGA_DOMAINS": {
+        "precision": 0.9937888198757764,
+        "recall": 1.0,
+        "f1": 0.9968847352024922
+      },
+      "DNS_TUNNELLING": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "ENCRYPTED_MALWARE": {
+        "precision": 1.0,
+        "recall": 0.953125,
+        "f1": 0.976
+      },
+      "RECONNAISSANCE": {
+        "precision": 0.9846153846153847,
+        "recall": 1.0,
+        "f1": 0.9922480620155039
+      },
+      "DATA_EXFILTRATION": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    "confusion": {
+      "BENIGN": {
+        "BENIGN": 311,
+        "DDOS": 0,
+        "BOTNET_C2": 5,
+        "DGA_DOMAINS": 2,
+        "DNS_TUNNELLING": 0,
+        "ENCRYPTED_MALWARE": 0,
+        "RECONNAISSANCE": 2,
+        "DATA_EXFILTRATION": 0
+      },
+      "DDOS": {
+        "BENIGN": 0,
+        "DDOS": 320,
+        "BOTNET_C2": 0,
+        "DGA_DOMAINS": 0,
+        "DNS_TUNNELLING": 0,
+        "ENCRYPTED_MALWARE": 0,
+        "RECONNAISSANCE": 0,
+        "DATA_EXFILTRATION": 0
+      },
+      "BOTNET_C2": {
+        "BENIGN": 0,
+        "DDOS": 0,
+        "BOTNET_C2": 317,
+        "DGA_DOMAINS": 0,
+        "DNS_TUNNELLING": 0,
+        "ENCRYPTED_MALWARE": 0,
+        "RECONNAISSANCE": 3,
+        "DATA_EXFILTRATION": 0
+      },
+      "DGA_DOMAINS": {
+        "BENIGN": 0,
+        "DDOS": 0,
+        "BOTNET_C2": 0,
+        "DGA_DOMAINS": 320,
+        "DNS_TUNNELLING": 0,
+        "ENCRYPTED_MALWARE": 0,
+        "RECONNAISSANCE": 0,
+        "DATA_EXFILTRATION": 0
+      },
+      "DNS_TUNNELLING": {
+        "BENIGN": 0,
+        "DDOS": 0,
+        "BOTNET_C2": 0,
+        "DGA_DOMAINS": 0,
+        "DNS_TUNNELLING": 320,
+        "ENCRYPTED_MALWARE": 0,
+        "RECONNAISSANCE": 0,
+        "DATA_EXFILTRATION": 0
+      },
+      "ENCRYPTED_MALWARE": {
+        "BENIGN": 0,
+        "DDOS": 0,
+        "BOTNET_C2": 15,
+        "DGA_DOMAINS": 0,
+        "DNS_TUNNELLING": 0,
+        "ENCRYPTED_MALWARE": 305,
+        "RECONNAISSANCE": 0,
+        "DATA_EXFILTRATION": 0
+      },
+      "RECONNAISSANCE": {
+        "BENIGN": 0,
+        "DDOS": 0,
+        "BOTNET_C2": 0,
+        "DGA_DOMAINS": 0,
+        "DNS_TUNNELLING": 0,
+        "ENCRYPTED_MALWARE": 0,
+        "RECONNAISSANCE": 320,
+        "DATA_EXFILTRATION": 0
+      },
+      "DATA_EXFILTRATION": {
+        "BENIGN": 0,
+        "DDOS": 0,
+        "BOTNET_C2": 0,
+        "DGA_DOMAINS": 0,
+        "DNS_TUNNELLING": 0,
+        "ENCRYPTED_MALWARE": 0,
+        "RECONNAISSANCE": 0,
+        "DATA_EXFILTRATION": 320
+      }
+    },
+    "macro_f1": 0.9894827640478719
+  },
+  "test": {
+    "per_class": {
+      "BENIGN": {
+        "precision": 1.0,
+        "recall": 0.98125,
+        "f1": 0.9905362776025236
+      },
+      "DDOS": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "BOTNET_C2": {
+        "precision": 0.9382352941176471,
+        "recall": 0.996875,
+        "f1": 0.9666666666666667
+      },
+      "DGA_DOMAINS": {
+        "precision": 0.9907120743034056,
+        "recall": 1.0,
+        "f1": 0.995334370139969
+      },
+      "DNS_TUNNELLING": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "ENCRYPTED_MALWARE": {
+        "precision": 1.0,
+        "recall": 0.94375,
+        "f1": 0.9710610932475884
+      },
+      "RECONNAISSANCE": {
+        "precision": 0.9968847352024922,
+        "recall": 1.0,
+        "f1": 0.9984399375975039
+      },
+      "DATA_EXFILTRATION": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    "confusion": {
+      "BENIGN": {
+        "BENIGN": 314,
+        "DDOS": 0,
+        "BOTNET_C2": 3,
+        "DGA_DOMAINS": 3,
+        "DNS_TUNNELLING": 0,
+        "ENCRYPTED_MALWARE": 0,
+        "RECONNAISSANCE": 0,
+        "DATA_EXFILTRATION": 0
+      },
+      "DDOS": {
+        "BENIGN": 0,
+        "DDOS": 320,
+        "BOTNET_C2": 0,
+        "DGA_DOMAINS": 0,
+        "DNS_TUNNELLING": 0,
+        "ENCRYPTED_MALWARE": 0,
+        "RECONNAISSANCE": 0,
+        "DATA_EXFILTRATION": 0
+      },
+      "BOTNET_C2": {
+        "BENIGN": 0,
+        "DDOS": 0,
+        "BOTNET_C2": 319,
+        "DGA_DOMAINS": 0,
+        "DNS_TUNNELLING": 0,
+        "ENCRYPTED_MALWARE": 0,
+        "RECONNAISSANCE": 1,
+        "DATA_EXFILTRATION": 0
+      },
+      "DGA_DOMAINS": {
+        "BENIGN": 0,
+        "DDOS": 0,
+        "BOTNET_C2": 0,
+        "DGA_DOMAINS": 320,
+        "DNS_TUNNELLING": 0,
+        "ENCRYPTED_MALWARE": 0,
+        "RECONNAISSANCE": 0,
+        "DATA_EXFILTRATION": 0
+      },
+      "DNS_TUNNELLING": {
+        "BENIGN": 0,
+        "DDOS": 0,
+        "BOTNET_C2": 0,
+        "DGA_DOMAINS": 0,
+        "DNS_TUNNELLING": 320,
+        "ENCRYPTED_MALWARE": 0,
+        "RECONNAISSANCE": 0,
+        "DATA_EXFILTRATION": 0
+      },
+      "ENCRYPTED_MALWARE": {
+        "BENIGN": 0,
+        "DDOS": 0,
+        "BOTNET_C2": 18,
+        "DGA_DOMAINS": 0,
+        "DNS_TUNNELLING": 0,
+        "ENCRYPTED_MALWARE": 302,
+        "RECONNAISSANCE": 0,
+        "DATA_EXFILTRATION": 0
+      },
+      "RECONNAISSANCE": {
+        "BENIGN": 0,
+        "DDOS": 0,
+        "BOTNET_C2": 0,
+        "DGA_DOMAINS": 0,
+        "DNS_TUNNELLING": 0,
+        "ENCRYPTED_MALWARE": 0,
+        "RECONNAISSANCE": 320,
+        "DATA_EXFILTRATION": 0
+      },
+      "DATA_EXFILTRATION": {
+        "BENIGN": 0,
+        "DDOS": 0,
+        "BOTNET_C2": 0,
+        "DGA_DOMAINS": 0,
+        "DNS_TUNNELLING": 0,
+        "ENCRYPTED_MALWARE": 0,
+        "RECONNAISSANCE": 0,
+        "DATA_EXFILTRATION": 320
+      }
+    },
+    "macro_f1": 0.9902547931567814
+  },
+  "metadata": {
+    "generated_at_utc": "2026-09-29T13:20:31.754978+00:00",
+    "model_sha256": "4d8e08323374535789e21f9f7cd1ee3f1c84b663ce555e67bb4ced57c95e8010",
+    "model_refitted": false,
+    "runtime_source_sha256": {
+      "features/extractor.py": "ae9e7361704b581a6ae63113447f1d984ee51970a1ee98b8e5fb70ff3f9acffc",
+      "features/rate_window.py": "718c07419c1103ad2b68400d49e330dea46cc667997244c01601e9d0ff3a9445",
+      "ml/model.py": "2721a53d667d1ea773154fdebf3d349c5ef221dfdb51e937d5afdba1ffa6f354"
+    },
+    "scope": "Frozen-model classifier on synthetic lab experiments, not hybrid alert accuracy or deployment validation",
+    "caveats": [
+      "Historical generator families and seeds, already inspected; regression inputs, not a fresh holdout",
+      "Synthetic fingerprint is a shortcut signal; scores remain uncalibrated"
+    ]
+  }
+}

@@ -3,6 +3,7 @@ import math
 import hashlib
 from collections import Counter, OrderedDict, deque
 from schemas.traffic_event import TrafficEvent
+from features.rate_window import RateWindow
 
 FEATURES = ['packet_rate', 'byte_rate', 'source_entropy', 'syn_fraction',
             'iat_mean', 'iat_cv', 'destination_count', 'port_count',
@@ -29,7 +30,7 @@ def cv(values):
 class FeatureExtractor:
     def __init__(self, max_sources=4096, max_events=512):
         self.sources = OrderedDict()
-        self.global_events = deque(maxlen=4096)
+        self.global_rates = RateWindow(max_sources=max_sources)
         self.max_sources = max_sources
         self.max_events = max_events
         self.watermark = -1.0
@@ -53,11 +54,7 @@ class FeatureExtractor:
         if len(self.sources) > self.max_sources:
             self.sources.popitem(last=False)
             self.evictions += 1
-        while self.global_events and self.global_events[0].timestamp < event.timestamp - 10000:
-            self.global_events.popleft()
-        if len(self.global_events) == self.global_events.maxlen:
-            self.evictions += 1
-        self.global_events.append(event)
+        rates = self.global_rates.update(event)
         recent = [e for e in history if e.timestamp >= event.timestamp - 10000]
         # Timing is per source/destination/service, not across unrelated browsing flows.
         peer = [e for e in history if e.dst_ip == event.dst_ip and e.dst_port == event.dst_port]
@@ -67,9 +64,7 @@ class FeatureExtractor:
         bigrams = [lexical[i:i+2] for i in range(max(0, len(lexical)-1))]
         ratio = event.bytes / max(1, event.reverse_bytes or 0) if event.reverse_observed else None
         sizes = [e.bytes / e.packets for e in peer]
-        values = [sum(e.packets for e in self.global_events) / 10,
-                  sum(e.bytes for e in self.global_events) / 10,
-                  entropy(str(e.src_ip) for e in self.global_events),
+        values = [rates['packet_rate'], rates['byte_rate'], rates['source_entropy'],
                   sum(e.syn for e in recent) / len(recent),
                   sum(intervals) / len(intervals) if intervals else 0, cv(intervals),
                   len(set(str(e.dst_ip) for e in recent)), len(set(e.dst_port for e in recent)),
@@ -80,5 +75,8 @@ class FeatureExtractor:
                   float(any(e.tls_fingerprint == DEMO_FINGERPRINT for e in peer)), len(peer)]
         return dict(zip(FEATURES, values)) | {'observed_byte_ratio': ratio,
                                              'domain_label_length': len(lexical),
+                                             'source_entropy_partial': rates['source_entropy_partial'],
+                                             'rate_window_seconds': rates['rate_window_seconds'],
+                                             'rate_window_resolution_ms': rates['rate_window_resolution_ms'],
                                              'window_partial': t - history[0].timestamp / 1000 < 60,
                                              'state_evictions': self.evictions}

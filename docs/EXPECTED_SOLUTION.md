@@ -47,6 +47,11 @@ Optional features must not replace the expected solution.
 9. **Model/features/training documentation.** See `MODEL_AND_VALIDATION.md`, the
    generated `ml/evaluation.json`, and the reproducible commands in the README.
 
+The [completion plan](COMPLETION_PLAN.md) tracks remaining validation work.
+[Streaming reliability](STREAM_RELIABILITY.md) records the packet-rate accounting
+fix and the separate loopback ingestion/persistence/SSE measurement. Those checks
+do not establish threat-classification accuracy or browser-delivery capacity.
+
 ## Constraints and honest limits
 
 - Passive observation means the monitoring input has no dependency on sending

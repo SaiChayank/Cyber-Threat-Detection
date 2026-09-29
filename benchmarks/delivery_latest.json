@@ -1,0 +1,42 @@
+{
+  "events": 100,
+  "accepted_alerts": 100,
+  "delivered_alerts": 100,
+  "api_acceptance_p95_ms": 6.214100001670886,
+  "api_to_sse_p95_ms": 250.09229999704985,
+  "api_to_sse_max_ms": 256.098199999542,
+  "delivery_target_ms": 1000,
+  "delivery_pass": true,
+  "persistence_verified": true,
+  "reconnect_resume_verified": true,
+  "telemetry": {
+    "processed": 100,
+    "late_events": 0,
+    "state_evictions": 0,
+    "active_sources": 100,
+    "dga_detector": "conservative-lexical-guard",
+    "dga_candidate_enabled": false,
+    "rate_window_resolution_ms": 1000,
+    "source_entropy_partial": false,
+    "processing_p95_ms": 0.2640000020619482,
+    "replay_status": "idle",
+    "replay_error": null,
+    "alerts_by_class": {
+      "DDOS": 100
+    },
+    "throughput_target": 2000,
+    "confidence_note": "Model score or heuristic strength; not real-world calibrated"
+  },
+  "generated_at_utc": "2026-09-29T13:19:42.026760+00:00",
+  "scope": "Loopback API ingestion, inference, SQLite and direct SSE reception; excludes Next.js proxy, browser rendering, raw capture and concurrent subscribers",
+  "workload": "100-or-configured-count simulated high-rate flow summaries in an isolated temporary database",
+  "python": "3.13.5",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "runtime_source_sha256": {
+    "backend/application.py": "83a755c96cb8a730beb5f2da943a4bb7336b39fbdb27377251c80df162a81015",
+    "detection/pipeline.py": "5f8b6809a81c45374c1fb685aa53b6f5635be141278a1b86756a10aec5a3d7ee",
+    "features/extractor.py": "ae9e7361704b581a6ae63113447f1d984ee51970a1ee98b8e5fb70ff3f9acffc",
+    "features/rate_window.py": "718c07419c1103ad2b68400d49e330dea46cc667997244c01601e9d0ff3a9445",
+    "persistence/store.py": "56bdc7cbb9d25ec0ceedf0fb2fc9e2169ee53bb54fc2731d1e034f4156e1a490"
+  }
+}

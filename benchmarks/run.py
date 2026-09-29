@@ -1,9 +1,11 @@
 """Repeatable core + SQLite benchmark. Excludes HTTP/browser/network overhead."""
 import argparse
+import hashlib
 import json
 import platform
 import tempfile
 import time
+from datetime import datetime, timezone
 from pathlib import Path
 from detection.pipeline import Pipeline
 from persistence.store import AlertStore
@@ -35,14 +37,21 @@ def main():
     durations.sort()
     rate = args.events/elapsed
     p95 = durations[int(len(durations)*.95)]
-    report = dict(events=args.events, alerts=alerts, elapsed_seconds=elapsed,
+    root = Path(__file__).resolve().parent.parent
+    report = dict(generated_at_utc=datetime.now(timezone.utc).isoformat(),
+                  runtime_source_sha256={file: hashlib.sha256((root / file).read_bytes()).hexdigest()
+                                         for file in ('detection/pipeline.py', 'features/extractor.py',
+                                                      'features/rate_window.py', 'ml/model.py', 'ml/dga.py',
+                                                      'persistence/store.py')},
+                  model_sha256=hashlib.sha256((root / 'ml/artifact.json').read_bytes()).hexdigest(),
+                  events=args.events, alerts=alerts, elapsed_seconds=elapsed,
                   metadata_events_per_second=rate, throughput_target=2000, throughput_pass=rate >= 2000,
                   processing_and_persistence_p95_ms=p95, latency_target_ms=50, latency_pass=p95 < 50,
                   workload='Repeated eight-class synthetic metadata sessions with SQLite alert commits',
                   scope='Core event processing + persistence; excludes capture, HTTP, SSE and rendering',
                   python=platform.python_version(), platform=platform.platform(),
                   telemetry=pipeline.telemetry())
-    Path('benchmarks/latest.json').write_text(json.dumps(report, indent=2))
+    Path(__file__).with_name('latest.json').write_text(json.dumps(report, indent=2))
     print(json.dumps(report, indent=2))
 
 

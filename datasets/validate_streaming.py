@@ -116,7 +116,8 @@ def main():
                   dga_candidate_sha256=sha256(DGA_ARTIFACT) if DGA_ARTIFACT.is_file() else None,
                   dga_candidate_enabled=DgaModel().enabled,
                   runtime_source_sha256={file: sha256(ROOT / file) for file in
-                                         ('detection/pipeline.py', 'features/extractor.py', 'ingest/protocol_parsers.py', 'ml/dga.py')},
+                                         ('detection/pipeline.py', 'features/extractor.py', 'features/rate_window.py',
+                                          'ingest/protocol_parsers.py', 'ml/dga.py')},
                   umudga=validate_domains(), captures=validate_captures(),
                   limitations=['PCAP throughput includes parsing, feature extraction and inference; excludes replay pacing, persistence and UI',
                                'No malware payloads were decrypted and no monitored host was contacted',

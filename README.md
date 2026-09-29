@@ -82,7 +82,9 @@ the expanded dataset, reproducible training and limitations.
 .venv/Scripts/python.exe -m pytest -q
 .venv/Scripts/python.exe -m datasets.validate_streaming
 .venv/Scripts/python.exe -m ml.train
+.venv/Scripts/python.exe -m ml.train --evaluate-only
 .venv/Scripts/python.exe -m benchmarks.run --events 20000
+.venv/Scripts/python.exe -m benchmarks.delivery --events 100
 .venv/Scripts/python.exe -m replay.export
 .venv/Scripts/python.exe -m replay.cli data/lab/dga_domains.jsonl
 ```
@@ -137,6 +139,8 @@ tunnelling; the available captures still need independently labelled attack flow
 - `benchmarks/` and `tests/`: measured performance and behavior verification.
 
 Current implementation and requirement traceability: [Expected solution](docs/EXPECTED_SOLUTION.md).
+Remaining work, acceptance checks and current progress: [Completion plan](docs/COMPLETION_PLAN.md).
+Stream-accounting fix and delivery verification: [Streaming reliability](docs/STREAM_RELIABILITY.md).
 Model, features and evaluation: [Model documentation](docs/MODEL_AND_VALIDATION.md).
 Downloaded public sources, replay presets and measured limitations: [Dataset integration](docs/DATASETS.md).
 Current runtime results and prioritized detection gaps: [Streaming validation](docs/STREAMING_VALIDATION.md).
