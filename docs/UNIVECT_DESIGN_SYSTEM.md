@@ -43,12 +43,34 @@ footer and ambient red background. The Monitor has no sidebar or reserved sideba
 gutter. Its section navigation, API reference, platform return and passive-sensor
 constraints are available from the responsive top navbar.
 
-Motion uses short opacity/position entrances, spring navigation indicators,
-subtle press interactions, scroll reveals, metric fades and 300ms chart updates.
+The Monitor now prioritizes the analyst workflow: a compact observation header,
+traffic replay, live metrics, activity, alert investigation, then coverage and
+benchmark context. Replay controls have visible scenario/speed labels and a pill
+showing the actual replay state. Metrics form four columns at the `lg` breakpoint.
+A wide telemetry chart sits beside `ObservationContext`, a narrower collection
+boundary panel with actual active-source, late-event and state-eviction counters.
+The alert table spans the full content width before the coverage section; coverage
+and the saved benchmark sit alongside each other at `xl`.
+
+Coverage bars show each module's share of recorded alerts, not detection accuracy.
+The dataset-readiness disclosure expands smoothly and retains every public-source
+preset and its preparation status. The metadata-flow accent runs only while replay
+is running; the connection pulse represents an established stream connection.
+
+Motion shares the deceleration curve in `lib/motion.ts` across entrances, scroll
+reveals and numeric transitions. Hero lines enter in a short stagger; buttons have
+a restrained hover/focus sheen, and the navbar carries a thin scroll-progress line.
+Cards lift subtly on hover, charts update over 500ms, and table pagination and
+class/severity filtering use a short opacity entrance rather than animating every
+incoming row. `AnimatedNumber` starts at the actual loaded value and interpolates
+later changes. An immediately updated screen-reader value stays separate from the
+decorative interpolated text; a cached number formatter avoids repeated formatter
+construction during animation.
+
 The dialog uses scale/vertical motion independently of CSS centering. Slow ambient
-motion stays decorative. `MotionConfig reducedMotion="user"`, CSS media queries,
-Recharts' animation flag and the Three.js media query all respect reduced motion.
-Three.js rendering also pauses offscreen and in background tabs.
+motion stays decorative. `MotionConfig reducedMotion="user"`, explicit reduced-motion
+guards, CSS media queries, Recharts' animation flag and the Three.js media query
+respect reduced motion. Three.js rendering also pauses offscreen and in background tabs.
 
 Keyboard users have a skip link, visible focus rings, labelled controls, Radix
 tabs/tooltips/dialogs, Escape dismissal and restored focus after evidence review.
@@ -77,5 +99,7 @@ existing detector limitations.
 
 - [Landing preview](verification/univect-landing.png)
 - [Monitor preview](verification/univect-monitor.png)
+- [Monitor activity and collection context](verification/univect-monitor-activity.png)
+- [Coverage and benchmark layout](verification/univect-monitor-coverage.png)
 - [Alert table preview](verification/univect-alerts.png)
 - [Footer preview](verification/univect-footer.png)

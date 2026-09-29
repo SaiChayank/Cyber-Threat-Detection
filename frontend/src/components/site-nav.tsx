@@ -1,7 +1,14 @@
 'use client'
 import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
-import { AnimatePresence, motion, useMotionValueEvent, useScroll } from 'motion/react'
+import {
+  AnimatePresence,
+  motion,
+  useMotionValueEvent,
+  useScroll,
+  useSpring,
+  useReducedMotion,
+} from 'motion/react'
 import { ArrowLeft, ArrowUpRight, Menu, X, MoveRight } from 'lucide-react'
 import { Brand } from './brand'
 import { Button, buttonClass } from './ui/button'
@@ -15,8 +22,8 @@ const landingLinks = [
 const monitorLinks = [
   { label: 'Overview', id: 'overview' },
   { label: 'Traffic replay', id: 'replay' },
-  { label: 'Detection coverage', id: 'coverage' },
   { label: 'Alert stream', id: 'alerts' },
+  { label: 'Detection coverage', id: 'coverage' },
 ]
 
 export function SiteNav({ monitor = false }: { monitor?: boolean }) {
@@ -27,7 +34,9 @@ export function SiteNav({ monitor = false }: { monitor?: boolean }) {
   const [scrolled, setScrolled] = useState(false)
   const toggle = useRef<HTMLButtonElement>(null)
   const header = useRef<HTMLElement>(null)
-  const { scrollY } = useScroll()
+  const reducedMotion = useReducedMotion()
+  const { scrollY, scrollYProgress } = useScroll()
+  const progress = useSpring(scrollYProgress, { stiffness: 160, damping: 32, restDelta: 0.001 })
   useMotionValueEvent(scrollY, 'change', (value) => setScrolled(value > 24))
   useEffect(() => {
     const sync = () => {
@@ -91,6 +100,11 @@ export function SiteNav({ monitor = false }: { monitor?: boolean }) {
         scrolled && 'shadow-[0_8px_30px_#00000040]',
       )}
     >
+      <motion.div
+        aria-hidden="true"
+        style={{ scaleX: reducedMotion ? scrollYProgress : progress }}
+        className="pointer-events-none absolute inset-x-0 bottom-0 h-px origin-left bg-brand/60"
+      />
       <div className="mx-auto flex h-20 max-w-[1440px] items-center justify-between gap-3 px-5 sm:px-8 lg:px-12">
         <Brand className="max-[360px]:gap-1.5 max-[360px]:text-[22px]" />
         <nav
@@ -166,7 +180,7 @@ export function SiteNav({ monitor = false }: { monitor?: boolean }) {
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: 'auto', opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.2 }}
+            transition={{ duration: 0.32 }}
             id="mobile-navigation"
             aria-label="Mobile navigation"
             className="absolute inset-x-0 top-full max-h-[calc(100dvh-145px)] overflow-y-auto border-y border-line bg-ink/98 shadow-2xl backdrop-blur-xl xl:hidden"

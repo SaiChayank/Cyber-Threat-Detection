@@ -4,7 +4,8 @@ import { twMerge } from 'tailwind-merge'
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
-export const formatNumber = (value: number) => new Intl.NumberFormat('en-US').format(value)
+const numberFormatter = new Intl.NumberFormat('en-US')
+export const formatNumber = (value: number) => numberFormatter.format(value)
 export const formatTime = (timestamp: number) => new Date(timestamp).toISOString().slice(11, 19)
 export function evidenceValue(value: unknown) {
   if (typeof value === 'number') return Number(value.toFixed(4)).toString()

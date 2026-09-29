@@ -1,9 +1,10 @@
 'use client'
-import { motion } from 'motion/react'
+import { motion, useReducedMotion } from 'motion/react'
 import { Activity, ShieldAlert, Timer, ArrowDownLeft, Info } from 'lucide-react'
 import { Panel, Skeleton, Eyebrow } from '@/components/ui/panel'
 import { Hint } from '@/components/ui/tooltip'
-import { formatNumber } from '@/lib/utils'
+import { AnimatedNumber } from '@/components/animated-number'
+import { easeOut } from '@/lib/motion'
 import type { Telemetry } from '@/schemas/api'
 
 export function Metrics({
@@ -15,12 +16,14 @@ export function Metrics({
   rate: number
   loading: boolean
 }) {
+  const reducedMotion = useReducedMotion()
   const total = telemetry ? Object.values(telemetry.alerts_by_class).reduce((a, b) => a + b, 0) : 0
   const cards = [
     {
       icon: Activity,
       title: 'EVENTS PROCESSED',
-      value: telemetry ? formatNumber(telemetry.processed) : '—',
+      value: telemetry?.processed,
+      decimals: undefined,
       unit: '',
       note: 'Current replay · incremental inference',
       hint: 'Processing counters reset when a new replay starts.',
@@ -28,7 +31,8 @@ export function Metrics({
     {
       icon: ShieldAlert,
       title: 'ALERTS RECORDED',
-      value: telemetry ? formatNumber(total) : '—',
+      value: telemetry ? total : undefined,
+      decimals: undefined,
       unit: '',
       note: 'Persistent history · all replay runs',
       hint: 'SQLite retains alerts across replays. The table shows the latest 200.',
@@ -36,7 +40,8 @@ export function Metrics({
     {
       icon: Timer,
       title: 'PROCESSING P95',
-      value: telemetry ? telemetry.processing_p95_ms.toFixed(2) : '—',
+      value: telemetry?.processing_p95_ms,
+      decimals: 2,
       unit: 'ms',
       note: 'Feature extraction + inference',
       hint: 'Core processing latency; excludes HTTP, capture parsing and browser delivery.',
@@ -44,7 +49,8 @@ export function Metrics({
     {
       icon: ArrowDownLeft,
       title: 'OBSERVED RATE',
-      value: telemetry ? formatNumber(Math.round(rate)) : '—',
+      value: telemetry ? Math.round(rate) : undefined,
+      decimals: undefined,
       unit: 'events/s',
       note: `${telemetry?.active_sources ?? 0} active sources · ${telemetry?.replay_status ?? 'connecting'}`,
       hint: 'Sampled from processed events every 1.5 seconds. A short replay may finish between samples.',
@@ -53,14 +59,20 @@ export function Metrics({
   return (
     <section
       aria-label="Live telemetry"
-      className="grid grid-cols-1 gap-3 min-[460px]:grid-cols-2 xl:grid-cols-4"
+      className="grid grid-cols-1 gap-3 min-[460px]:grid-cols-2 lg:grid-cols-4"
     >
-      {cards.map(({ icon: Icon, title, value, unit, note, hint }, index) => (
+      {cards.map(({ icon: Icon, title, value, decimals, unit, note, hint }, index) => (
         <motion.div
           key={title}
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4, delay: index * 0.05 }}
+          initial={reducedMotion ? false : { opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.1 }}
+          whileHover={reducedMotion ? undefined : { y: -3 }}
+          transition={{
+            duration: reducedMotion ? 0 : 0.6,
+            delay: reducedMotion ? 0 : index * 0.045,
+            ease: easeOut,
+          }}
         >
           <Panel className="relative h-full overflow-hidden p-5 sm:p-6">
             <div aria-hidden="true" className="absolute top-0 left-6 h-px w-12 bg-brand/60" />
@@ -79,15 +91,9 @@ export function Metrics({
               <Skeleton className="mt-4 h-9 w-28" />
             ) : (
               <div className="mt-3 flex items-baseline gap-2">
-                <motion.strong
-                  key={value}
-                  initial={{ opacity: 0.5 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 0.2 }}
-                  className="font-display text-4xl font-medium tracking-[-.04em] tabular-nums"
-                >
-                  {value}
-                </motion.strong>
+                <strong className="font-display text-4xl font-medium tracking-[-.04em] tabular-nums">
+                  {value === undefined ? '—' : <AnimatedNumber value={value} decimals={decimals} />}
+                </strong>
                 <span className="text-[11px] text-muted">{unit}</span>
               </div>
             )}

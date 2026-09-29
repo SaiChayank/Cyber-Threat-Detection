@@ -1,5 +1,6 @@
 'use client'
 import { useMemo, useState } from 'react'
+import { motion, useReducedMotion } from 'motion/react'
 import { ArrowRight, Download, Search, Radar, ChevronLeft, ChevronRight, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Panel, Eyebrow, Skeleton } from '@/components/ui/panel'
@@ -9,6 +10,7 @@ import { formatTime } from '@/lib/utils'
 import type { AlertRecord } from '@/schemas/api'
 import { Severity } from './severity'
 import { AlertDetail } from './alert-detail'
+import { AnimatedNumber } from '@/components/animated-number'
 
 export function AlertFeed({
   records,
@@ -27,6 +29,7 @@ export function AlertFeed({
   const [selected, setSelected] = useState<AlertRecord | null>(null)
   const [page, setPage] = useState(0)
   const [exported, setExported] = useState(false)
+  const reducedMotion = useReducedMotion()
   const filtered = useMemo(
     () =>
       records.filter(
@@ -73,18 +76,27 @@ export function AlertFeed({
                 Inspect a detection to follow its observed evidence.
               </p>
             </div>
-            <Hint text="Exports all matches within the latest 200 loaded records, across all table pages.">
-              <Button
-                onClick={exportJSON}
-                disabled={!filtered.length || loading}
-                className="text-xs"
-              >
-                <Download size={14} />
-                Export JSON
-              </Button>
-            </Hint>
+            <div className="flex items-center gap-4">
+              <span className="hidden border-r border-white/10 pr-4 text-right sm:block">
+                <AnimatedNumber
+                  value={records.length}
+                  className="font-display text-2xl tabular-nums"
+                />
+                <span className="mt-1 block text-[9px] text-muted">loaded signals</span>
+              </span>
+              <Hint text="Exports all matches within the latest 200 loaded records, across all table pages.">
+                <Button
+                  onClick={exportJSON}
+                  disabled={!filtered.length || loading}
+                  className="text-xs"
+                >
+                  <Download size={14} />
+                  Export JSON
+                </Button>
+              </Hint>
+            </div>
           </div>
-          <div className="grid gap-2 sm:grid-cols-[1fr_170px_145px]">
+          <div className="grid gap-2 rounded-xl border border-white/6 bg-ink/40 p-2 sm:grid-cols-[1fr_170px_145px]">
             <div className="relative">
               <Search size={14} className="absolute top-3.5 left-3 text-muted" />
               <input
@@ -162,7 +174,12 @@ export function AlertFeed({
                 ))}
               </tr>
             </thead>
-            <tbody>
+            <motion.tbody
+              key={`${current}-${threat}-${severity}`}
+              initial={reducedMotion ? false : { opacity: 0.55 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: reducedMotion ? 0 : 0.25 }}
+            >
               {loading ? (
                 Array.from({ length: 5 }, (_, index) => (
                   <tr key={index} className="border-b border-line/70">
@@ -259,7 +276,7 @@ export function AlertFeed({
                   </td>
                 </tr>
               )}
-            </tbody>
+            </motion.tbody>
           </table>
         </div>
         <div className="flex flex-wrap items-center justify-between gap-3 px-5 py-4 text-[9px] text-muted sm:px-6">

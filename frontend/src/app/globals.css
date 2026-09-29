@@ -94,6 +94,39 @@ section[id] {
 .glass-panel:hover {
   border-color: #ffffff25;
 }
+.action-control {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+.action-control::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(110deg, transparent 30%, #ffffff0a 50%, transparent 70%);
+  transform: translateX(-110%);
+  transition: transform 650ms cubic-bezier(0.22, 1, 0.36, 1);
+  pointer-events: none;
+}
+.action-control:hover::before,
+.action-control:focus-visible::before {
+  transform: translateX(110%);
+}
+.connection-ring {
+  animation: connection-pulse 5s ease-out infinite;
+}
+.flow-link-active::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 6px;
+  height: 3px;
+  border-radius: 10px;
+  background: #f07878;
+  animation: feed-flow 2.8s ease-in-out infinite;
+}
 .product-background {
   position: absolute;
   inset: 0;
@@ -154,6 +187,35 @@ section[id] {
   to {
     transform: translate3d(-5%, 35px, 0);
     opacity: 0.6;
+  }
+}
+@keyframes connection-pulse {
+  0%,
+  35%,
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+  8% {
+    opacity: 0.5;
+  }
+  30% {
+    transform: scale(1.7);
+    opacity: 0;
+  }
+}
+@keyframes feed-flow {
+  0% {
+    transform: translateX(0);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.8;
+  }
+  85%,
+  100% {
+    transform: translateX(30px);
+    opacity: 0;
   }
 }
 @keyframes signal-scan {

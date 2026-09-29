@@ -9,7 +9,8 @@ extractor, read-only capture parser, event-time replay and SQLite alert history.
 - Next.js 16 App Router, React 19 and strict TypeScript.
 - Tailwind CSS 4 for the shared dark palette, responsive layouts and UI styling.
 - Radix UI for accessible tabs, dialogs and tooltips; shared Button/Panel/Skeleton components.
-- Motion for entry, hover, tab and notification transitions; reduced-motion support.
+- Motion for staggered entrances, scroll reveals, hover, numeric, tab and notification
+  transitions; reduced-motion support.
 - Lucide React icons and Recharts for actual sampled telemetry.
 - React Hook Form + Zod for replay inputs and runtime API contract validation.
 - Three.js for original robots, curved wire conveyors, metallic signal tokens,
@@ -21,14 +22,14 @@ extractor, read-only capture parser, event-time replay and SQLite alert history.
 ```text
 frontend/src/
   app/                 Routes, metadata, layout, loading/error/404 boundaries
-  components/          Brand, providers, 3D lifecycle wrapper, reusable UI
+  components/          Brand, providers, AnimatedNumber, Reveal, 3D wrapper, reusable UI
   features/landing/    Hero, platform, threat tabs, architecture
-  features/monitor/    Metrics, chart, replay, dataset coverage, table, evidence
+  features/monitor/    Replay, metrics, chart, observation context, coverage, table, evidence
   hooks/               Health polling and monitor fetch/SSE lifecycle
   services/            Same-origin typed API access
   schemas/             Zod API contracts and replay validation
   constants/           Required categories and detector labels
-  lib/                 Formatting and Tailwind class utilities
+  lib/                 Cached formatting, shared motion easing, Tailwind class utilities
   assets/fonts/        Licensed local WOFF2 files
   scene.ts             Procedural Three.js geometry/materials/animation
 scripts/               Local service runner and Python setup
@@ -107,6 +108,19 @@ than shifting anchor positions, closes on selection, outside click or Escape,
 and highlights the visible section. See `UNIVECT_DESIGN_SYSTEM.md` for the palette,
 motion and accessibility conventions.
 
+The landing hero reveals its three heading lines in a short stagger, followed by
+the calls to action. Shared buttons use a restrained hover/focus sheen, while a
+thin navbar progress line tracks page scrolling. These effects reuse the existing
+Motion library and the shared `easeOut` curve rather than adding dependencies.
+
+The Monitor starts with a compact observation header and replay controls, including
+visible scenario/speed labels and the actual replay-state pill. Four metric cards
+share a row at `lg`; below them a wide chart sits beside `ObservationContext`, which
+shows the collection boundary and actual active-source, late-event and state-eviction
+counters. The full-width alert investigation table precedes coverage and dataset
+readiness. Coverage and the saved benchmark form adjacent panels at `xl`, and these
+layouts stack at smaller viewport sizes.
+
 The monitor fetches current telemetry, dataset readiness and the latest 200 alerts.
 SSE supplies new alerts and reconnects using sequence IDs. Telemetry polling is
 bounded to 24 recent chart samples. Replay controls select synthetic scenarios or
@@ -125,12 +139,34 @@ event timestamps and chart labels use UTC. `/api/benchmark` reads the saved benc
 with its workload and scope; that panel does not claim end-to-end capacity.
 `/docs` and `/openapi.json` proxy the real API documentation.
 
+`AnimatedNumber` initializes with the actual loaded value and animates subsequent
+changes. Screen readers receive the current API value immediately, while the
+interpolated visual text is hidden from accessibility APIs. Number formatting uses
+a cached `Intl.NumberFormat` instance. Coverage bars express each module's share of
+recorded alerts, with no implication of detection accuracy; `DatasetReadiness`
+provides an animated, labelled disclosure of the existing preset information.
+Chart updates, card entrances, replay-state changes and table page/class/severity
+changes use restrained transitions. A connection pulse appears only for an
+established stream, and the collection diagram's metadata flow moves only during
+a running replay. Motion configuration, component guards, CSS media queries and
+chart/3D settings honor `prefers-reduced-motion`.
+
 Next.js compression is disabled for the local app because gzip buffered SSE alerts
 during browser verification. The backend adds `no-transform` and `X-Accel-Buffering: no`.
 When deploying behind a proxy, exclude `/api/stream` from compression and buffering
 and allow long-lived connections. Ordinary assets may be compressed by that proxy.
 
 ## Verification and limits
+
+The Monitor layout and motion refinement was rechecked on 29 September 2026.
+The production build and TypeScript check passed, along with all 34 Python tests.
+Browser checks covered actual live counters/chart updates, replay-dependent flow
+motion, start/stop and a complete 256-event replay with alerts from all seven
+modules in a temporary database. Search, class filtering, pagination, export,
+evidence copying, dataset expansion, mobile-menu Escape/focus and 320/390/768px
+Monitor layouts passed. The original database was restored with all 130 alerts,
+and production landing/Monitor console error logs were empty. Reduced-motion
+guards were reviewed in source; OS preference switching was not automated.
 
 The Univect redesign was verified using a separate SQLite database rather than adding
 test alerts to the existing analyst history. Browser checks covered landing/monitor

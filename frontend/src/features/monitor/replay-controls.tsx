@@ -2,7 +2,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
-import { AnimatePresence, motion } from 'motion/react'
+import { AnimatePresence, motion, useReducedMotion } from 'motion/react'
 import {
   Play,
   Square,
@@ -46,6 +46,7 @@ export function ReplayControls({
   const [notice, setNotice] = useState<{ text: string; error: boolean } | null>(null)
   const abort = useRef<AbortController | null>(null)
   const running = state === 'running'
+  const reducedMotion = useReducedMotion()
   useEffect(
     () => () => {
       abort.current?.abort()
@@ -116,17 +117,36 @@ export function ReplayControls({
         <div className="flex flex-col justify-between gap-5 xl:flex-row xl:items-center">
           <div className="shrink-0">
             <Eyebrow>Controlled testing</Eyebrow>
-            <h2 className="mt-2 font-display text-xl">Traffic replay</h2>
+            <h2 className="mt-2 flex items-center gap-3 font-display text-xl">
+              Traffic replay
+              <AnimatePresence mode="wait" initial={false}>
+                <motion.span
+                  key={connected ? state : 'offline'}
+                  initial={{ opacity: 0, y: 3 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -3 }}
+                  transition={{ duration: reducedMotion ? 0 : 0.15 }}
+                  className={cn(
+                    'rounded-full border px-2.5 py-1 font-sans text-[9px] capitalize',
+                    running
+                      ? 'border-brand/30 bg-brand/10 text-accent'
+                      : 'border-white/10 text-muted',
+                  )}
+                >
+                  {connected ? state : 'offline'}
+                </motion.span>
+              </AnimatePresence>
+            </h2>
             <p className="mt-2 text-[11px] text-muted">
               Run a scenario or inspect a passive capture.
             </p>
           </div>
           <form
             onSubmit={start}
-            className="grid gap-2 sm:grid-cols-[minmax(160px,1fr)_100px_auto_auto_auto] xl:max-w-[800px] xl:flex-1"
+            className="grid grid-cols-2 gap-2 md:grid-cols-[minmax(160px,1fr)_110px_auto_auto_auto] xl:max-w-[840px] xl:flex-1"
           >
-            <div>
-              <label htmlFor="scenario" className="sr-only">
+            <div className="col-span-2 min-[460px]:col-span-1">
+              <label htmlFor="scenario" className="mb-2 block text-[9px] text-muted">
                 Scenario
               </label>
               <select
@@ -156,8 +176,8 @@ export function ReplayControls({
                 )}
               </select>
             </div>
-            <div>
-              <label htmlFor="speed" className="sr-only">
+            <div className="col-span-2 min-[460px]:col-span-1">
+              <label htmlFor="speed" className="mb-2 block text-[9px] text-muted">
                 Replay speed
               </label>
               <select
@@ -173,7 +193,12 @@ export function ReplayControls({
                 ))}
               </select>
             </div>
-            <Button variant="primary" type="submit" disabled={running || !!busy || !connected}>
+            <Button
+              variant="primary"
+              type="submit"
+              className="col-span-2 self-end text-xs md:col-span-1"
+              disabled={running || !!busy || !connected}
+            >
               {busy === 'start' ? (
                 <LoaderCircle size={14} className="animate-spin" />
               ) : (
@@ -183,6 +208,7 @@ export function ReplayControls({
             </Button>
             <Button
               type="button"
+              className="self-end text-xs"
               disabled={!running || !!busy || !connected}
               onClick={() =>
                 void execute(
@@ -201,7 +227,7 @@ export function ReplayControls({
             </Button>
             <label
               className={cn(
-                'relative flex min-h-11 items-center justify-center gap-2 overflow-hidden rounded-xl border border-line bg-panel px-4 text-xs font-medium focus-within:outline-2 focus-within:outline-accent',
+                'relative flex min-h-11 items-center justify-center gap-2 self-end overflow-hidden rounded-xl border border-line bg-panel px-4 text-xs font-medium transition duration-300 focus-within:outline-2 focus-within:outline-accent',
                 running || busy || !connected
                   ? 'opacity-40'
                   : 'cursor-pointer hover:border-accent/50',
@@ -244,6 +270,7 @@ export function ReplayControls({
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: reducedMotion ? 0 : 0.3 }}
             className="overflow-hidden"
           >
             <div

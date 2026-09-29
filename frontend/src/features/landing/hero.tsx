@@ -1,6 +1,6 @@
 'use client'
 import Link from 'next/link'
-import { motion } from 'motion/react'
+import { motion, useReducedMotion } from 'motion/react'
 import {
   ArrowRight,
   ArrowDown,
@@ -15,9 +15,11 @@ import { SceneView } from '@/components/scene-view'
 import { buttonClass } from '@/components/ui/button'
 import { useHealth } from '@/hooks/use-health'
 import { cn } from '@/lib/utils'
+import { easeOut } from '@/lib/motion'
 
 export function Hero() {
   const health = useHealth()
+  const reducedMotion = useReducedMotion()
   return (
     <>
       <section
@@ -25,9 +27,9 @@ export function Hero() {
         aria-labelledby="hero-heading"
       >
         <motion.div
-          initial={{ opacity: 0, y: 18 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.65 }}
+          initial={reducedMotion ? false : { opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: reducedMotion ? 0 : 0.65 }}
           className="relative z-10"
         >
           <div className="mb-7 inline-flex items-center gap-2.5 rounded-full border border-line bg-panel px-3 py-2 text-[9px] tracking-[.14em] text-muted uppercase">
@@ -38,11 +40,23 @@ export function Hero() {
             id="hero-heading"
             className="font-display text-[clamp(47px,7.1vw,103px)] leading-[.97] font-medium tracking-[-.065em]"
           >
-            Threats move.
-            <br />
-            See them
-            <br />
-            <span className="text-accent">clearly.</span>
+            {['Threats move.', 'See them', 'clearly.'].map((line, index) => (
+              <span key={line} className="block overflow-hidden pb-1">
+                <motion.span
+                  className={cn('block', index === 2 && 'text-accent')}
+                  initial={reducedMotion ? false : { y: '105%' }}
+                  animate={{ y: 0 }}
+                  transition={{
+                    duration: reducedMotion ? 0 : 0.85,
+                    delay: reducedMotion ? 0 : 0.12 + index * 0.08,
+                    ease: easeOut,
+                  }}
+                >
+                  {line}
+                  {index < 2 ? ' ' : ''}
+                </motion.span>
+              </span>
+            ))}
           </h1>
           <p className="mt-7 max-w-[355px] text-sm leading-7 text-muted lg:text-[15px]">
             One-way traffic. Deeper insight.
@@ -50,10 +64,15 @@ export function Hero() {
             Turn one-way traffic into streaming detections, meaningful evidence and a clearer
             picture.
           </p>
-          <div className="mt-8 flex flex-wrap items-center gap-5">
+          <motion.div
+            initial={reducedMotion ? false : { opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: reducedMotion ? 0 : 0.6, delay: reducedMotion ? 0 : 0.4 }}
+            className="mt-8 flex flex-wrap items-center gap-5"
+          >
             <Link
               href="/monitor"
-              className={cn(buttonClass('primary'), 'rounded-full px-6 py-3.5')}
+              className={cn(buttonClass('primary'), 'group rounded-full px-6 py-3.5')}
             >
               Enter the monitor <ArrowUpRightIcon />
             </Link>
@@ -63,7 +82,7 @@ export function Hero() {
             >
               Explore the pipeline <ArrowDown size={14} />
             </Link>
-          </div>
+          </motion.div>
           <div className="mt-7 flex flex-wrap gap-x-5 gap-y-2 text-[10px] text-muted">
             <span className="inline-flex items-center gap-1.5">
               <ShieldCheck size={12} className="text-accent" />
@@ -139,5 +158,10 @@ export function Hero() {
   )
 }
 function ArrowUpRightIcon() {
-  return <ArrowRight size={16} className="-rotate-45" />
+  return (
+    <ArrowRight
+      size={16}
+      className="-rotate-45 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+    />
+  )
 }

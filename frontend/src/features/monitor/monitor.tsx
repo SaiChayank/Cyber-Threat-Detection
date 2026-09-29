@@ -4,13 +4,13 @@ import { MoveRight, CircleAlert, RefreshCw, Radio } from 'lucide-react'
 import { useMonitor } from '@/hooks/use-monitor'
 import { Button } from '@/components/ui/button'
 import { Eyebrow } from '@/components/ui/panel'
-import { BrandMark } from '@/components/brand'
 import { SiteNav } from '@/components/site-nav'
 import { SiteFooter } from '@/components/site-footer'
 import { Reveal } from '@/components/reveal'
 import { cn } from '@/lib/utils'
 import { Metrics } from './metrics'
 import { TrafficChart } from './traffic-chart'
+import { ObservationContext } from './observation-context'
 import { ReplayControls } from './replay-controls'
 import { Coverage, Benchmark } from './coverage'
 import { AlertFeed } from './alert-feed'
@@ -28,32 +28,38 @@ export function Monitor() {
         transition={{ duration: 0.45 }}
         id="main-content"
       >
-        <div className="mx-auto max-w-[1440px] space-y-7 px-5 pt-10 pb-16 sm:px-8 lg:px-12">
+        <div className="mx-auto max-w-[1440px] space-y-6 px-5 pt-8 pb-16 sm:px-8 lg:px-12">
           <header
             id="overview"
-            className="relative flex flex-col justify-between gap-6 border-b border-white/8 pb-8 sm:flex-row sm:items-end"
+            className="relative flex flex-col justify-between gap-5 border-b border-white/8 pb-6 sm:flex-row sm:items-center"
           >
             <div>
               <Eyebrow className="flex items-center gap-2 text-accent">
-                <MoveRight size={14} /> One-way intelligence
+                <MoveRight size={14} /> Observation workspace
               </Eyebrow>
-              <h1 className="mt-4 font-display text-[clamp(38px,5vw,66px)] leading-[1.05] font-medium tracking-[-.055em]">
-                Every signal.
-                <br className="sm:hidden" /> A clearer view<span className="text-accent">.</span>
+              <h1 className="mt-3 font-display text-[clamp(32px,4vw,46px)] leading-[1.1] font-medium tracking-[-.05em]">
+                Your network, in view<span className="text-accent">.</span>
               </h1>
-              <p className="mt-4 max-w-xl text-sm leading-6 text-muted">
-                Your observation layer in motion. Replay traffic, inspect detections and follow the
-                evidence.
+              <p className="mt-3 max-w-xl text-xs leading-6 text-muted">
+                Set the stream. Follow the activity. Investigate the evidence.
               </p>
             </div>
             <div
               role="status"
               className="flex w-fit shrink-0 items-center gap-2.5 rounded-full border border-white/10 bg-panel/60 px-4 py-3 text-[10px] backdrop-blur-md"
             >
-              <Radio
-                size={14}
-                className={cn(connection === 'live' ? 'text-signal' : 'text-accent')}
-              />
+              <span className="relative flex h-5 w-5 items-center justify-center">
+                {connection === 'live' && (
+                  <span
+                    aria-hidden="true"
+                    className="connection-ring absolute inset-0 rounded-full border border-white/25"
+                  />
+                )}
+                <Radio
+                  size={14}
+                  className={cn(connection === 'live' ? 'text-signal' : 'text-accent')}
+                />
+              </span>
               {connection === 'live'
                 ? 'Stream connected'
                 : connection === 'connecting'
@@ -63,21 +69,6 @@ export function Monitor() {
               <span className="text-muted">LOCAL ENCLAVE</span>
             </div>
           </header>
-          <div className="glass-panel flex items-start gap-4 rounded-2xl px-5 py-4">
-            <BrandMark className="mt-0.5 h-7 w-7 text-white/80" />
-            <div className="flex-1">
-              <span className="text-[9px] font-semibold tracking-[.16em] text-accent">
-                PASSIVE BY DESIGN
-              </span>
-              <p className="mt-1.5 text-[11px] leading-5 text-muted">
-                One-way observation · Encrypted content stays opaque · Alerts never trigger network
-                actions
-              </p>
-            </div>
-            <span className="hidden rounded-full border border-white/10 px-3 py-2 text-[8px] tracking-[.1em] text-muted sm:block">
-              LAB PROTOTYPE
-            </span>
-          </div>
           {error && (
             <div
               role="alert"
@@ -98,11 +89,7 @@ export function Monitor() {
               Replay failed: {telemetry.replay_error}
             </div>
           )}
-          <Metrics telemetry={telemetry} rate={rate} loading={loading} />
-          <Reveal>
-            <TrafficChart samples={samples} loading={loading} rate={rate} />
-          </Reveal>
-          <Reveal>
+          <Reveal delay={0.04}>
             <ReplayControls
               datasets={datasets}
               state={telemetry?.replay_status ?? 'idle'}
@@ -110,13 +97,20 @@ export function Monitor() {
               connected={!!telemetry && !error}
             />
           </Reveal>
-          <Reveal>
-            <Coverage
-              counts={telemetry?.alerts_by_class ?? {}}
-              datasets={datasets}
-              loading={loading}
-            />
-          </Reveal>
+          <Metrics telemetry={telemetry} rate={rate} loading={loading} />
+          <div className="grid items-stretch gap-4 lg:grid-cols-[minmax(0,1fr)_310px] xl:grid-cols-[minmax(0,1fr)_340px]">
+            <Reveal className="min-w-0 h-full">
+              <TrafficChart
+                samples={samples}
+                loading={loading}
+                rate={rate}
+                state={telemetry?.replay_status ?? 'connecting'}
+              />
+            </Reveal>
+            <Reveal delay={0.08} className="min-w-0 h-full">
+              <ObservationContext telemetry={telemetry} loading={loading} />
+            </Reveal>
+          </div>
           <Reveal>
             <AlertFeed
               records={alerts}
@@ -125,9 +119,18 @@ export function Monitor() {
               live={connection === 'live'}
             />
           </Reveal>
-          <Reveal>
-            <Benchmark />
-          </Reveal>
+          <div className="grid items-start gap-6 xl:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)]">
+            <Reveal className="min-w-0">
+              <Coverage
+                counts={telemetry?.alerts_by_class ?? {}}
+                datasets={datasets}
+                loading={loading}
+              />
+            </Reveal>
+            <Reveal delay={0.08} className="min-w-0">
+              <Benchmark />
+            </Reveal>
+          </div>
           <p className="rounded-2xl border border-white/8 bg-panel/40 px-5 py-4 text-[10px] leading-6 text-muted">
             Model scores are synthetic-trained posteriors or heuristic strengths; they are not
             calibrated probabilities of compromise. Public-source validation remains limited,
