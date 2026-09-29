@@ -1,0 +1,3284 @@
+{
+  "scope": "Read-only metadata inventory; capture category is not per-packet truth",
+  "captures": [
+    {
+      "file": "C:\\Users\\Saich\\OneDrive\\Desktop\\PS26145\\data\\raw\\cicdns2021\\pcaps\\benign\\benign_1.pcap",
+      "bytes": 28958504,
+      "snaplen": 96,
+      "sha256": "2df7769f8e6b4db753ad968ce1da10427275d9456d38548e993eaaaf6484ae99",
+      "counts": {
+        "frames": 275855,
+        "capture_truncated_frames": 143675,
+        "udp_declared_length_exceeds_capture": 143675,
+        "port_5355_truncated_udp": 99469,
+        "transport_packets": 132180,
+        "port_5355_wire_parseable": 55072,
+        "llmnr_queries": 55072,
+        "port_5355_recoverable_first_question_only": 598,
+        "port_53_wire_parseable": 73937,
+        "dns_queries": 50594,
+        "dns_query_runtime_sidecars": 50594,
+        "dns_responses": 23343,
+        "port_53_truncated_udp": 26803,
+        "port_53_recoverable_first_question_only": 26781,
+        "truncated_dns_response_header": 26792,
+        "truncated_dns_response_question_complete": 26781,
+        "truncated_dns_query_header": 11
+      },
+      "port_packets": {
+        "udp/5355": 154541,
+        "udp/53": 100740
+      },
+      "dns_query_types": {
+        "1": 50594
+      },
+      "dns_answer_types": {
+        "1": 23064
+      },
+      "dns_unique_query_names": 35596,
+      "dns_top_names": [
+        [
+          "www.google.com",
+          42
+        ],
+        [
+          "google.com",
+          29
+        ],
+        [
+          "settings-win.data.microsoft.com",
+          25
+        ],
+        [
+          "v10.events.data.microsoft.com",
+          21
+        ],
+        [
+          "wordpress.com",
+          12
+        ],
+        [
+          "tile-service.weather.microsoft.com",
+          11
+        ]
+      ],
+      "dns_name_length": {
+        "count": 50594,
+        "min": 4,
+        "p50": 13,
+        "p95": 21,
+        "p99": 26,
+        "max": 36
+      },
+      "dns_first_label_length": {
+        "count": 50594,
+        "min": 1,
+        "p50": 6,
+        "p95": 14,
+        "p99": 18,
+        "max": 32
+      },
+      "dns_label_count": {
+        "count": 50594,
+        "min": 2,
+        "p50": 2,
+        "p95": 3,
+        "p99": 4,
+        "max": 5
+      },
+      "dns_name_entropy": {
+        "count": 50594,
+        "min": 1.459,
+        "p50": 3.181,
+        "p95": 3.664,
+        "p99": 3.825,
+        "max": 4.476
+      },
+      "dns_first_label_entropy": {
+        "count": 50594,
+        "min": -0.0,
+        "p50": 2.252,
+        "p95": 3.252,
+        "p99": 3.507,
+        "max": 4.418
+      },
+      "dns_queries_with_first_label_ge_50": 0,
+      "llmnr_question_types": {
+        "12": 53730,
+        "255": 1190,
+        "1": 144,
+        "28": 8
+      },
+      "llmnr_unique_question_names": 45,
+      "llmnr_top_names": [
+        [
+          "252.0.0.224.in-addr.arpa",
+          20582
+        ],
+        [
+          "150.20.168.192.in-addr.arpa",
+          6764
+        ],
+        [
+          "15.20.168.192.in-addr.arpa",
+          6370
+        ],
+        [
+          "200.20.168.192.in-addr.arpa",
+          6196
+        ],
+        [
+          "100.20.168.192.in-addr.arpa",
+          5278
+        ],
+        [
+          "2.20.168.192.in-addr.arpa",
+          4396
+        ]
+      ],
+      "llmnr_destinations": [
+        [
+          "224.0.0.252",
+          54700
+        ],
+        [
+          "ff02::1:3",
+          372
+        ]
+      ],
+      "llmnr_examples": [
+        "15.20.168.192.in-addr.arpa",
+        "150.20.168.192.in-addr.arpa",
+        "252.0.0.224.in-addr.arpa",
+        "100.20.168.192.in-addr.arpa",
+        "200.20.168.192.in-addr.arpa"
+      ],
+      "truncated_dns_first_label_lengths": {
+        "3": 12595,
+        "5": 1364,
+        "2": 323,
+        "6": 1639,
+        "4": 1057,
+        "7": 1660,
+        "9": 1522,
+        "1": 36,
+        "13": 463,
+        "15": 322,
+        "10": 1168,
+        "11": 921,
+        "8": 1585,
+        "16": 195,
+        "14": 362,
+        "12": 735,
+        "18": 170,
+        "17": 264,
+        "23": 24,
+        "19": 145,
+        "31": 7,
+        "20": 96,
+        "21": 59,
+        "24": 18,
+        "25": 7,
+        "28": 6,
+        "22": 33,
+        "27": 1,
+        "26": 13,
+        "32": 2,
+        "37": 6,
+        "30": 3,
+        "29": 2
+      },
+      "truncated_dns_first_second_label_lengths": {
+        "37,3": 3,
+        "24,8": 2,
+        "26,7": 1,
+        "3,26": 1,
+        "31,7": 1,
+        "3,31": 1,
+        "30,9": 1,
+        "28,7": 1
+      },
+      "truncated_dns_second_label_visible_prefix_entropy": {
+        "count": 11,
+        "min": 1.585,
+        "p50": 2.522,
+        "p95": 3.344,
+        "p99": 3.344,
+        "max": 3.536
+      },
+      "truncated_dns_payload_bytes": {
+        "54": 26803
+      },
+      "truncated_dns_top_sources": [
+        [
+          "8.8.8.8",
+          26792
+        ],
+        [
+          "192.168.20.38",
+          11
+        ]
+      ],
+      "truncated_dns_top_destinations": [
+        [
+          "192.168.20.38",
+          26792
+        ],
+        [
+          "8.8.8.8",
+          11
+        ]
+      ],
+      "truncated_dns_top_prefixes": [
+        [
+          "www",
+          11777
+        ],
+        [
+          "ca",
+          31
+        ],
+        [
+          "en",
+          26
+        ],
+        [
+          "settings-win",
+          25
+        ],
+        [
+          "egybest",
+          23
+        ],
+        [
+          "amazon",
+          21
+        ]
+      ]
+    },
+    {
+      "file": "C:\\Users\\Saich\\OneDrive\\Desktop\\PS26145\\data\\raw\\cicdns2021\\pcaps\\benign\\benign_2.pcap",
+      "bytes": 21216368,
+      "snaplen": 96,
+      "sha256": "5ace9b02ecc7539cb806bbfedb9e7467d1b0b8ad14921938a09e6d7e2d2d3f93",
+      "counts": {
+        "frames": 201425,
+        "capture_truncated_frames": 107741,
+        "udp_declared_length_exceeds_capture": 107741,
+        "port_5355_truncated_udp": 59087,
+        "transport_packets": 93684,
+        "port_5355_wire_parseable": 32695,
+        "llmnr_queries": 32695,
+        "port_53_wire_parseable": 53073,
+        "dns_queries": 33406,
+        "dns_query_runtime_sidecars": 33406,
+        "port_53_truncated_udp": 13777,
+        "port_53_recoverable_first_question_only": 13719,
+        "truncated_dns_response_header": 13748,
+        "truncated_dns_response_question_complete": 13719,
+        "dns_responses": 19667,
+        "port_5355_recoverable_first_question_only": 361,
+        "truncated_dns_query_header": 29,
+        "truncated_dns_second_label_incomplete": 2
+      },
+      "port_packets": {
+        "udp/5355": 91782,
+        "udp/53": 66850
+      },
+      "dns_query_types": {
+        "1": 33406
+      },
+      "dns_answer_types": {
+        "1": 19597
+      },
+      "dns_unique_query_names": 24319,
+      "dns_top_names": [
+        [
+          "www.google.com",
+          17
+        ],
+        [
+          "v10.events.data.microsoft.com",
+          16
+        ],
+        [
+          "settings-win.data.microsoft.com",
+          13
+        ],
+        [
+          "google.com",
+          13
+        ],
+        [
+          "tile-service.weather.microsoft.com",
+          11
+        ],
+        [
+          "ctldl.windowsupdate.com",
+          6
+        ]
+      ],
+      "dns_name_length": {
+        "count": 33406,
+        "min": 4,
+        "p50": 14,
+        "p95": 23,
+        "p99": 28,
+        "max": 36
+      },
+      "dns_first_label_length": {
+        "count": 33406,
+        "min": 1,
+        "p50": 7,
+        "p95": 16,
+        "p99": 20,
+        "max": 30
+      },
+      "dns_label_count": {
+        "count": 33406,
+        "min": 2,
+        "p50": 2,
+        "p95": 3,
+        "p99": 4,
+        "max": 7
+      },
+      "dns_name_entropy": {
+        "count": 33406,
+        "min": 1.371,
+        "p50": 3.252,
+        "p95": 3.725,
+        "p99": 3.88,
+        "max": 4.306
+      },
+      "dns_first_label_entropy": {
+        "count": 33406,
+        "min": -0.0,
+        "p50": 2.5,
+        "p95": 3.379,
+        "p99": 3.585,
+        "max": 4.085
+      },
+      "dns_queries_with_first_label_ge_50": 0,
+      "llmnr_question_types": {
+        "12": 31790,
+        "255": 729,
+        "1": 176
+      },
+      "llmnr_unique_question_names": 44,
+      "llmnr_top_names": [
+        [
+          "252.0.0.224.in-addr.arpa",
+          12237
+        ],
+        [
+          "150.20.168.192.in-addr.arpa",
+          3984
+        ],
+        [
+          "15.20.168.192.in-addr.arpa",
+          3858
+        ],
+        [
+          "200.20.168.192.in-addr.arpa",
+          3636
+        ],
+        [
+          "100.20.168.192.in-addr.arpa",
+          3154
+        ],
+        [
+          "2.20.168.192.in-addr.arpa",
+          2522
+        ]
+      ],
+      "llmnr_destinations": [
+        [
+          "224.0.0.252",
+          32423
+        ],
+        [
+          "ff02::1:3",
+          272
+        ]
+      ],
+      "llmnr_examples": [
+        "250.255.255.239.in-addr.arpa",
+        "252.0.0.224.in-addr.arpa",
+        "15.20.168.192.in-addr.arpa",
+        "150.20.168.192.in-addr.arpa",
+        "200.20.168.192.in-addr.arpa"
+      ],
+      "truncated_dns_first_label_lengths": {
+        "3": 6852,
+        "10": 487,
+        "6": 672,
+        "2": 90,
+        "5": 528,
+        "7": 707,
+        "9": 593,
+        "4": 383,
+        "12": 340,
+        "16": 145,
+        "8": 695,
+        "17": 247,
+        "21": 97,
+        "19": 199,
+        "18": 276,
+        "11": 423,
+        "13": 254,
+        "15": 184,
+        "20": 154,
+        "23": 49,
+        "14": 216,
+        "22": 67,
+        "27": 9,
+        "24": 32,
+        "30": 5,
+        "37": 4,
+        "25": 22,
+        "1": 5,
+        "29": 12,
+        "26": 10,
+        "28": 10,
+        "36": 4,
+        "35": 2,
+        "31": 2,
+        "48": 2
+      },
+      "truncated_dns_first_second_label_lengths": {
+        "3,30": 5,
+        "37,2": 2,
+        "23,9": 2,
+        "6,1": 2,
+        "25,8": 1,
+        "24,8": 2,
+        "29,8": 1,
+        "12,20": 2,
+        "36,2": 2,
+        "29,10": 2,
+        "35,2": 1,
+        "31,8": 1,
+        "3,48": 1,
+        "28,14": 1,
+        "22,12": 1,
+        "25,11": 2
+      },
+      "truncated_dns_second_label_visible_prefix_entropy": {
+        "count": 28,
+        "min": -0.0,
+        "p50": 2.948,
+        "p95": 3.784,
+        "p99": 3.784,
+        "max": 3.831
+      },
+      "truncated_dns_payload_bytes": {
+        "54": 13777
+      },
+      "truncated_dns_top_sources": [
+        [
+          "8.8.8.8",
+          13748
+        ],
+        [
+          "192.168.20.38",
+          29
+        ]
+      ],
+      "truncated_dns_top_destinations": [
+        [
+          "192.168.20.38",
+          13748
+        ],
+        [
+          "8.8.8.8",
+          29
+        ]
+      ],
+      "truncated_dns_top_prefixes": [
+        [
+          "www",
+          6528
+        ],
+        [
+          "v10",
+          16
+        ],
+        [
+          "login",
+          15
+        ],
+        [
+          "settings-win",
+          13
+        ],
+        [
+          "portal",
+          13
+        ],
+        [
+          "tile-service",
+          11
+        ]
+      ]
+    },
+    {
+      "file": "C:\\Users\\Saich\\OneDrive\\Desktop\\PS26145\\data\\raw\\cicdns2021\\pcaps\\heavy\\heavy_audio.pcap",
+      "bytes": 23346801,
+      "snaplen": 96,
+      "sha256": "d42812933acb1cbc377f4caeff676baa8b393548a0aae558531bc6b9d7351eaf",
+      "counts": {
+        "frames": 215488,
+        "capture_truncated_frames": 161076,
+        "udp_declared_length_exceeds_capture": 161076,
+        "port_5355_truncated_udp": 62388,
+        "transport_packets": 54412,
+        "port_5355_wire_parseable": 34450,
+        "llmnr_queries": 34450,
+        "port_5355_recoverable_first_question_only": 367,
+        "port_53_truncated_udp": 76243,
+        "truncated_dns_query_header": 38073,
+        "truncated_dns_response_header": 38170,
+        "truncated_dns_second_label_incomplete": 38067,
+        "port_53_wire_parseable": 99,
+        "dns_queries": 98,
+        "dns_query_runtime_sidecars": 98,
+        "port_53_recoverable_first_question_only": 97,
+        "truncated_dns_response_question_complete": 97,
+        "dns_responses": 1
+      },
+      "port_packets": {
+        "udp/5355": 96838,
+        "udp/53": 76342
+      },
+      "dns_query_types": {
+        "1": 98
+      },
+      "dns_answer_types": {
+        "1": 1
+      },
+      "dns_unique_query_names": 15,
+      "dns_top_names": [
+        [
+          "dns.google",
+          35
+        ],
+        [
+          "tile-service.weather.microsoft.com",
+          14
+        ],
+        [
+          "settings-win.data.microsoft.com",
+          13
+        ],
+        [
+          "v10.events.data.microsoft.com",
+          13
+        ],
+        [
+          "ctldl.windowsupdate.com",
+          8
+        ],
+        [
+          "login.live.com",
+          2
+        ]
+      ],
+      "dns_name_length": {
+        "count": 98,
+        "min": 10,
+        "p50": 23,
+        "p95": 34,
+        "p99": 34,
+        "max": 34
+      },
+      "dns_first_label_length": {
+        "count": 98,
+        "min": 1,
+        "p50": 3,
+        "p95": 12,
+        "p99": 12,
+        "max": 12
+      },
+      "dns_label_count": {
+        "count": 98,
+        "min": 2,
+        "p50": 3,
+        "p95": 5,
+        "p99": 5,
+        "max": 5
+      },
+      "dns_name_entropy": {
+        "count": 98,
+        "min": 2.922,
+        "p50": 3.69,
+        "p95": 3.84,
+        "p99": 3.84,
+        "max": 3.84
+      },
+      "dns_first_label_entropy": {
+        "count": 98,
+        "min": -0.0,
+        "p50": 1.585,
+        "p95": 3.022,
+        "p99": 3.022,
+        "max": 3.022
+      },
+      "dns_queries_with_first_label_ge_50": 0,
+      "llmnr_question_types": {
+        "12": 33595,
+        "255": 751,
+        "1": 104
+      },
+      "llmnr_unique_question_names": 38,
+      "llmnr_top_names": [
+        [
+          "252.0.0.224.in-addr.arpa",
+          13010
+        ],
+        [
+          "150.20.168.192.in-addr.arpa",
+          4170
+        ],
+        [
+          "15.20.168.192.in-addr.arpa",
+          4030
+        ],
+        [
+          "200.20.168.192.in-addr.arpa",
+          3792
+        ],
+        [
+          "100.20.168.192.in-addr.arpa",
+          3320
+        ],
+        [
+          "2.20.168.192.in-addr.arpa",
+          2798
+        ]
+      ],
+      "llmnr_destinations": [
+        [
+          "224.0.0.252",
+          34206
+        ],
+        [
+          "ff02::1:3",
+          244
+        ]
+      ],
+      "llmnr_examples": [
+        "2.20.168.192.in-addr.arpa",
+        "desktop-3jf04tc",
+        "252.0.0.224.in-addr.arpa",
+        "3.20.168.192.in-addr.arpa",
+        "15.20.168.192.in-addr.arpa"
+      ],
+      "truncated_dns_first_label_lengths": {
+        "4": 18012,
+        "1": 21,
+        "3": 1850,
+        "2": 181,
+        "12": 27,
+        "5": 56144,
+        "9": 4,
+        "6": 4
+      },
+      "truncated_dns_first_second_label_lengths": {
+        "4,36": 1,
+        "1,63": 10,
+        "2,63": 90,
+        "3,63": 900,
+        "4,63": 9000,
+        "4,14": 5,
+        "5,63": 28067
+      },
+      "truncated_dns_second_label_visible_prefix_entropy": {
+        "count": 38073,
+        "min": 3.379,
+        "p50": 4.343,
+        "p95": 4.572,
+        "p99": 4.651,
+        "max": 4.844
+      },
+      "truncated_dns_payload_bytes": {
+        "54": 76243
+      },
+      "truncated_dns_top_sources": [
+        [
+          "192.168.20.38",
+          38073
+        ],
+        [
+          "192.168.20.72",
+          38068
+        ],
+        [
+          "8.8.8.8",
+          102
+        ]
+      ],
+      "truncated_dns_top_destinations": [
+        [
+          "192.168.20.38",
+          38170
+        ],
+        [
+          "192.168.20.72",
+          38068
+        ],
+        [
+          "8.8.8.8",
+          5
+        ]
+      ],
+      "truncated_dns_top_prefixes": [
+        [
+          "dns",
+          35
+        ],
+        [
+          "tile-service",
+          14
+        ],
+        [
+          "settings-win",
+          13
+        ],
+        [
+          "v10",
+          13
+        ],
+        [
+          "tsfe",
+          10
+        ],
+        [
+          "ctldl",
+          8
+        ]
+      ]
+    },
+    {
+      "file": "C:\\Users\\Saich\\OneDrive\\Desktop\\PS26145\\data\\raw\\cicdns2021\\pcaps\\heavy\\heavy_compressed.pcap",
+      "bytes": 21541264,
+      "snaplen": 96,
+      "sha256": "3f2b5a84a4ab0a560907e6304ba94081ff5dbebe7a5fb53e76e95e3ab20c9b8f",
+      "counts": {
+        "frames": 199029,
+        "capture_truncated_frames": 146119,
+        "udp_declared_length_exceeds_capture": 146119,
+        "port_5355_truncated_udp": 62436,
+        "transport_packets": 52910,
+        "port_5355_wire_parseable": 34382,
+        "llmnr_queries": 34382,
+        "port_5355_recoverable_first_question_only": 353,
+        "port_53_truncated_udp": 61244,
+        "truncated_dns_query_header": 30572,
+        "truncated_dns_second_label_incomplete": 30567,
+        "truncated_dns_response_header": 30672,
+        "port_53_wire_parseable": 100,
+        "dns_queries": 100,
+        "dns_query_runtime_sidecars": 100,
+        "port_53_recoverable_first_question_only": 100,
+        "truncated_dns_response_question_complete": 100
+      },
+      "port_packets": {
+        "udp/5355": 96818,
+        "udp/53": 61344
+      },
+      "dns_query_types": {
+        "1": 100
+      },
+      "dns_answer_types": {},
+      "dns_unique_query_names": 21,
+      "dns_top_names": [
+        [
+          "dns.google",
+          30
+        ],
+        [
+          "v10.events.data.microsoft.com",
+          17
+        ],
+        [
+          "settings-win.data.microsoft.com",
+          14
+        ],
+        [
+          "tile-service.weather.microsoft.com",
+          11
+        ],
+        [
+          "ctldl.windowsupdate.com",
+          8
+        ],
+        [
+          "www.bing.com",
+          2
+        ]
+      ],
+      "dns_name_length": {
+        "count": 100,
+        "min": 10,
+        "p50": 26,
+        "p95": 34,
+        "p99": 34,
+        "max": 34
+      },
+      "dns_first_label_length": {
+        "count": 100,
+        "min": 2,
+        "p50": 3,
+        "p95": 12,
+        "p99": 12,
+        "max": 12
+      },
+      "dns_label_count": {
+        "count": 100,
+        "min": 2,
+        "p50": 4,
+        "p95": 5,
+        "p99": 7,
+        "max": 7
+      },
+      "dns_name_entropy": {
+        "count": 100,
+        "min": 2.657,
+        "p50": 3.789,
+        "p95": 3.84,
+        "p99": 3.84,
+        "max": 3.84
+      },
+      "dns_first_label_entropy": {
+        "count": 100,
+        "min": -0.0,
+        "p50": 1.585,
+        "p95": 3.022,
+        "p99": 3.022,
+        "max": 3.022
+      },
+      "dns_queries_with_first_label_ge_50": 0,
+      "llmnr_question_types": {
+        "12": 33561,
+        "255": 721,
+        "1": 100
+      },
+      "llmnr_unique_question_names": 40,
+      "llmnr_top_names": [
+        [
+          "252.0.0.224.in-addr.arpa",
+          13002
+        ],
+        [
+          "150.20.168.192.in-addr.arpa",
+          4181
+        ],
+        [
+          "15.20.168.192.in-addr.arpa",
+          3974
+        ],
+        [
+          "200.20.168.192.in-addr.arpa",
+          3800
+        ],
+        [
+          "100.20.168.192.in-addr.arpa",
+          3342
+        ],
+        [
+          "2.20.168.192.in-addr.arpa",
+          2790
+        ]
+      ],
+      "llmnr_destinations": [
+        [
+          "224.0.0.252",
+          34148
+        ],
+        [
+          "ff02::1:3",
+          234
+        ]
+      ],
+      "llmnr_examples": [
+        "150.20.168.192.in-addr.arpa",
+        "15.20.168.192.in-addr.arpa",
+        "200.20.168.192.in-addr.arpa",
+        "252.0.0.224.in-addr.arpa",
+        "100.20.168.192.in-addr.arpa"
+      ],
+      "truncated_dns_first_label_lengths": {
+        "4": 18012,
+        "1": 20,
+        "2": 181,
+        "3": 1851,
+        "12": 25,
+        "5": 41150,
+        "6": 3,
+        "7": 1,
+        "8": 1
+      },
+      "truncated_dns_first_second_label_lengths": {
+        "4,50": 1,
+        "1,63": 10,
+        "2,63": 90,
+        "3,63": 900,
+        "4,63": 9000,
+        "4,14": 4,
+        "5,63": 20566,
+        "5,33": 1
+      },
+      "truncated_dns_second_label_visible_prefix_entropy": {
+        "count": 30572,
+        "min": 3.379,
+        "p50": 4.343,
+        "p95": 4.572,
+        "p99": 4.651,
+        "max": 4.844
+      },
+      "truncated_dns_payload_bytes": {
+        "54": 61244
+      },
+      "truncated_dns_top_sources": [
+        [
+          "192.168.20.38",
+          30572
+        ],
+        [
+          "192.168.20.72",
+          30568
+        ],
+        [
+          "8.8.8.8",
+          104
+        ]
+      ],
+      "truncated_dns_top_destinations": [
+        [
+          "192.168.20.38",
+          30672
+        ],
+        [
+          "192.168.20.72",
+          30568
+        ],
+        [
+          "8.8.8.8",
+          4
+        ]
+      ],
+      "truncated_dns_top_prefixes": [
+        [
+          "dns",
+          30
+        ],
+        [
+          "v10",
+          17
+        ],
+        [
+          "settings-win",
+          14
+        ],
+        [
+          "tile-service",
+          11
+        ],
+        [
+          "ctldl",
+          8
+        ],
+        [
+          "tsfe",
+          8
+        ]
+      ]
+    },
+    {
+      "file": "C:\\Users\\Saich\\OneDrive\\Desktop\\PS26145\\data\\raw\\cicdns2021\\pcaps\\heavy\\heavy_exe.pcap",
+      "bytes": 20585397,
+      "snaplen": 96,
+      "sha256": "f36df2cc710fe35fd9567df44b77dd953a532d1f1ee737e99c1363c615604441",
+      "counts": {
+        "frames": 187151,
+        "capture_truncated_frames": 151801,
+        "udp_declared_length_exceeds_capture": 151801,
+        "port_5355_truncated_udp": 60488,
+        "transport_packets": 35350,
+        "port_5355_wire_parseable": 33318,
+        "llmnr_queries": 33318,
+        "port_53_truncated_udp": 81195,
+        "truncated_dns_query_header": 40545,
+        "truncated_dns_second_label_incomplete": 40539,
+        "truncated_dns_response_header": 40650,
+        "port_5355_recoverable_first_question_only": 370,
+        "port_53_wire_parseable": 114,
+        "dns_queries": 112,
+        "dns_query_runtime_sidecars": 112,
+        "port_53_recoverable_first_question_only": 110,
+        "truncated_dns_response_question_complete": 110,
+        "dns_responses": 2
+      },
+      "port_packets": {
+        "udp/5355": 93806,
+        "udp/53": 81309
+      },
+      "dns_query_types": {
+        "1": 112
+      },
+      "dns_answer_types": {
+        "1": 2
+      },
+      "dns_unique_query_names": 23,
+      "dns_top_names": [
+        [
+          "v10.events.data.microsoft.com",
+          23
+        ],
+        [
+          "tile-service.weather.microsoft.com",
+          22
+        ],
+        [
+          "settings-win.data.microsoft.com",
+          20
+        ],
+        [
+          "ctldl.windowsupdate.com",
+          8
+        ],
+        [
+          "www.bing.com",
+          4
+        ],
+        [
+          "login.live.com",
+          3
+        ]
+      ],
+      "dns_name_length": {
+        "count": 112,
+        "min": 12,
+        "p50": 29,
+        "p95": 34,
+        "p99": 34,
+        "max": 36
+      },
+      "dns_first_label_length": {
+        "count": 112,
+        "min": 2,
+        "p50": 5,
+        "p95": 12,
+        "p99": 12,
+        "max": 25
+      },
+      "dns_label_count": {
+        "count": 112,
+        "min": 3,
+        "p50": 4,
+        "p95": 5,
+        "p99": 7,
+        "max": 7
+      },
+      "dns_name_entropy": {
+        "count": 112,
+        "min": 2.657,
+        "p50": 3.789,
+        "p95": 3.84,
+        "p99": 3.84,
+        "max": 3.84
+      },
+      "dns_first_label_entropy": {
+        "count": 112,
+        "min": -0.0,
+        "p50": 2.322,
+        "p95": 3.022,
+        "p99": 3.022,
+        "max": 3.604
+      },
+      "dns_queries_with_first_label_ge_50": 0,
+      "llmnr_question_types": {
+        "12": 32496,
+        "255": 738,
+        "1": 84
+      },
+      "llmnr_unique_question_names": 39,
+      "llmnr_top_names": [
+        [
+          "252.0.0.224.in-addr.arpa",
+          12580
+        ],
+        [
+          "150.20.168.192.in-addr.arpa",
+          4076
+        ],
+        [
+          "15.20.168.192.in-addr.arpa",
+          3818
+        ],
+        [
+          "200.20.168.192.in-addr.arpa",
+          3714
+        ],
+        [
+          "100.20.168.192.in-addr.arpa",
+          3266
+        ],
+        [
+          "2.20.168.192.in-addr.arpa",
+          2652
+        ]
+      ],
+      "llmnr_destinations": [
+        [
+          "224.0.0.252",
+          33092
+        ],
+        [
+          "ff02::1:3",
+          226
+        ]
+      ],
+      "llmnr_examples": [
+        "200.20.168.192.in-addr.arpa",
+        "100.20.168.192.in-addr.arpa",
+        "252.0.0.224.in-addr.arpa",
+        "150.20.168.192.in-addr.arpa",
+        "2.20.168.192.in-addr.arpa"
+      ],
+      "truncated_dns_first_label_lengths": {
+        "4": 18018,
+        "1": 20,
+        "2": 182,
+        "3": 1830,
+        "12": 42,
+        "6": 8,
+        "5": 61091,
+        "8": 2,
+        "25": 2
+      },
+      "truncated_dns_first_second_label_lengths": {
+        "4,47": 1,
+        "1,63": 10,
+        "2,63": 90,
+        "3,63": 900,
+        "4,63": 9000,
+        "4,14": 6,
+        "5,63": 30538
+      },
+      "truncated_dns_second_label_visible_prefix_entropy": {
+        "count": 40545,
+        "min": 3.379,
+        "p50": 4.343,
+        "p95": 4.572,
+        "p99": 4.651,
+        "max": 4.892
+      },
+      "truncated_dns_payload_bytes": {
+        "54": 81195
+      },
+      "truncated_dns_top_sources": [
+        [
+          "192.168.20.38",
+          40545
+        ],
+        [
+          "192.168.20.72",
+          40534
+        ],
+        [
+          "8.8.8.8",
+          116
+        ]
+      ],
+      "truncated_dns_top_destinations": [
+        [
+          "192.168.20.38",
+          40650
+        ],
+        [
+          "192.168.20.72",
+          40539
+        ],
+        [
+          "8.8.8.8",
+          6
+        ]
+      ],
+      "truncated_dns_top_prefixes": [
+        [
+          "v10",
+          23
+        ],
+        [
+          "tile-service",
+          22
+        ],
+        [
+          "settings-win",
+          20
+        ],
+        [
+          "tsfe",
+          12
+        ],
+        [
+          "ctldl",
+          8
+        ],
+        [
+          "40533",
+          5
+        ]
+      ]
+    },
+    {
+      "file": "C:\\Users\\Saich\\OneDrive\\Desktop\\PS26145\\data\\raw\\cicdns2021\\pcaps\\heavy\\heavy_image.pcap",
+      "bytes": 24309417,
+      "snaplen": 96,
+      "sha256": "8030da093ea153bccdfd505f87034bd68eb4a0feda1317452fbbbc5da90b2f40",
+      "counts": {
+        "frames": 223820,
+        "capture_truncated_frames": 170152,
+        "udp_declared_length_exceeds_capture": 170152,
+        "port_5355_truncated_udp": 63581,
+        "transport_packets": 53668,
+        "port_5355_wire_parseable": 35017,
+        "llmnr_queries": 35017,
+        "port_53_truncated_udp": 84072,
+        "truncated_dns_query_header": 41991,
+        "truncated_dns_response_header": 42081,
+        "truncated_dns_second_label_incomplete": 41986,
+        "port_5355_recoverable_first_question_only": 364,
+        "port_53_wire_parseable": 90,
+        "dns_queries": 90,
+        "dns_query_runtime_sidecars": 90,
+        "port_53_recoverable_first_question_only": 90,
+        "truncated_dns_response_question_complete": 90
+      },
+      "port_packets": {
+        "udp/5355": 98598,
+        "udp/53": 84162
+      },
+      "dns_query_types": {
+        "1": 90
+      },
+      "dns_answer_types": {},
+      "dns_unique_query_names": 15,
+      "dns_top_names": [
+        [
+          "dns.google",
+          32
+        ],
+        [
+          "v10.events.data.microsoft.com",
+          15
+        ],
+        [
+          "tile-service.weather.microsoft.com",
+          12
+        ],
+        [
+          "settings-win.data.microsoft.com",
+          12
+        ],
+        [
+          "ctldl.windowsupdate.com",
+          7
+        ],
+        [
+          "login.live.com",
+          2
+        ]
+      ],
+      "dns_name_length": {
+        "count": 90,
+        "min": 10,
+        "p50": 23,
+        "p95": 34,
+        "p99": 34,
+        "max": 34
+      },
+      "dns_first_label_length": {
+        "count": 90,
+        "min": 2,
+        "p50": 3,
+        "p95": 12,
+        "p99": 12,
+        "max": 12
+      },
+      "dns_label_count": {
+        "count": 90,
+        "min": 2,
+        "p50": 3,
+        "p95": 5,
+        "p99": 5,
+        "max": 5
+      },
+      "dns_name_entropy": {
+        "count": 90,
+        "min": 2.922,
+        "p50": 3.789,
+        "p95": 3.84,
+        "p99": 3.84,
+        "max": 3.84
+      },
+      "dns_first_label_entropy": {
+        "count": 90,
+        "min": -0.0,
+        "p50": 1.585,
+        "p95": 3.022,
+        "p99": 3.022,
+        "max": 3.022
+      },
+      "dns_queries_with_first_label_ge_50": 0,
+      "llmnr_question_types": {
+        "12": 34157,
+        "255": 748,
+        "1": 112
+      },
+      "llmnr_unique_question_names": 37,
+      "llmnr_top_names": [
+        [
+          "252.0.0.224.in-addr.arpa",
+          13228
+        ],
+        [
+          "150.20.168.192.in-addr.arpa",
+          4238
+        ],
+        [
+          "15.20.168.192.in-addr.arpa",
+          4060
+        ],
+        [
+          "200.20.168.192.in-addr.arpa",
+          3860
+        ],
+        [
+          "100.20.168.192.in-addr.arpa",
+          3380
+        ],
+        [
+          "2.20.168.192.in-addr.arpa",
+          2832
+        ]
+      ],
+      "llmnr_destinations": [
+        [
+          "224.0.0.252",
+          34769
+        ],
+        [
+          "ff02::1:3",
+          248
+        ]
+      ],
+      "llmnr_examples": [
+        "252.0.0.224.in-addr.arpa",
+        "150.20.168.192.in-addr.arpa",
+        "200.20.168.192.in-addr.arpa",
+        "2.20.168.192.in-addr.arpa",
+        "3.20.168.192.in-addr.arpa"
+      ],
+      "truncated_dns_first_label_lengths": {
+        "4": 18010,
+        "1": 20,
+        "2": 181,
+        "3": 1849,
+        "12": 24,
+        "5": 63983,
+        "7": 1,
+        "6": 3,
+        "8": 1
+      },
+      "truncated_dns_first_second_label_lengths": {
+        "4,29": 1,
+        "1,63": 10,
+        "2,63": 90,
+        "3,63": 900,
+        "4,63": 9000,
+        "4,14": 4,
+        "5,63": 31986
+      },
+      "truncated_dns_second_label_visible_prefix_entropy": {
+        "count": 41991,
+        "min": 3.379,
+        "p50": 4.343,
+        "p95": 4.572,
+        "p99": 4.651,
+        "max": 4.892
+      },
+      "truncated_dns_payload_bytes": {
+        "54": 84072
+      },
+      "truncated_dns_top_sources": [
+        [
+          "192.168.20.38",
+          41991
+        ],
+        [
+          "192.168.20.72",
+          41987
+        ],
+        [
+          "8.8.8.8",
+          94
+        ]
+      ],
+      "truncated_dns_top_destinations": [
+        [
+          "192.168.20.38",
+          42081
+        ],
+        [
+          "192.168.20.72",
+          41987
+        ],
+        [
+          "8.8.8.8",
+          4
+        ]
+      ],
+      "truncated_dns_top_prefixes": [
+        [
+          "dns",
+          32
+        ],
+        [
+          "v10",
+          15
+        ],
+        [
+          "tile-service",
+          12
+        ],
+        [
+          "settings-win",
+          12
+        ],
+        [
+          "tsfe",
+          8
+        ],
+        [
+          "ctldl",
+          7
+        ]
+      ]
+    },
+    {
+      "file": "C:\\Users\\Saich\\OneDrive\\Desktop\\PS26145\\data\\raw\\cicdns2021\\pcaps\\heavy\\heavy_text.pcap",
+      "bytes": 35213221,
+      "snaplen": 96,
+      "sha256": "a57d13d2f0e9b8328bcb6f31742560963b2413238c89fd1ab61100cca5c4c2b9",
+      "counts": {
+        "frames": 327682,
+        "capture_truncated_frames": 222651,
+        "udp_declared_length_exceeds_capture": 222651,
+        "port_5355_truncated_udp": 124085,
+        "transport_packets": 105031,
+        "port_5355_wire_parseable": 68405,
+        "llmnr_queries": 68405,
+        "port_5355_recoverable_first_question_only": 772,
+        "port_53_truncated_udp": 54052,
+        "truncated_dns_query_header": 26919,
+        "truncated_dns_second_label_incomplete": 26907,
+        "truncated_dns_response_header": 27133,
+        "port_53_wire_parseable": 228,
+        "dns_queries": 223,
+        "dns_query_runtime_sidecars": 223,
+        "port_53_recoverable_first_question_only": 214,
+        "truncated_dns_response_question_complete": 214,
+        "dns_responses": 5
+      },
+      "port_packets": {
+        "udp/5355": 192490,
+        "udp/53": 54280
+      },
+      "dns_query_types": {
+        "1": 223
+      },
+      "dns_answer_types": {
+        "1": 5
+      },
+      "dns_unique_query_names": 38,
+      "dns_top_names": [
+        [
+          "dns.google",
+          68
+        ],
+        [
+          "v10.events.data.microsoft.com",
+          38
+        ],
+        [
+          "settings-win.data.microsoft.com",
+          30
+        ],
+        [
+          "ctldl.windowsupdate.com",
+          21
+        ],
+        [
+          "tile-service.weather.microsoft.com",
+          10
+        ],
+        [
+          "login.live.com",
+          5
+        ]
+      ],
+      "dns_name_length": {
+        "count": 223,
+        "min": 10,
+        "p50": 23,
+        "p95": 34,
+        "p99": 34,
+        "max": 36
+      },
+      "dns_first_label_length": {
+        "count": 223,
+        "min": 1,
+        "p50": 3,
+        "p95": 12,
+        "p99": 12,
+        "max": 25
+      },
+      "dns_label_count": {
+        "count": 223,
+        "min": 2,
+        "p50": 3,
+        "p95": 5,
+        "p99": 7,
+        "max": 7
+      },
+      "dns_name_entropy": {
+        "count": 223,
+        "min": 2.657,
+        "p50": 3.738,
+        "p95": 3.84,
+        "p99": 3.84,
+        "max": 3.859
+      },
+      "dns_first_label_entropy": {
+        "count": 223,
+        "min": -0.0,
+        "p50": 1.585,
+        "p95": 3.022,
+        "p99": 3.022,
+        "max": 3.604
+      },
+      "dns_queries_with_first_label_ge_50": 0,
+      "llmnr_question_types": {
+        "12": 66685,
+        "255": 1508,
+        "1": 212
+      },
+      "llmnr_unique_question_names": 43,
+      "llmnr_top_names": [
+        [
+          "252.0.0.224.in-addr.arpa",
+          25870
+        ],
+        [
+          "150.20.168.192.in-addr.arpa",
+          8302
+        ],
+        [
+          "15.20.168.192.in-addr.arpa",
+          7860
+        ],
+        [
+          "200.20.168.192.in-addr.arpa",
+          7572
+        ],
+        [
+          "100.20.168.192.in-addr.arpa",
+          6638
+        ],
+        [
+          "2.20.168.192.in-addr.arpa",
+          5526
+        ]
+      ],
+      "llmnr_destinations": [
+        [
+          "224.0.0.252",
+          67931
+        ],
+        [
+          "ff02::1:3",
+          474
+        ]
+      ],
+      "llmnr_examples": [
+        "2.20.168.192.in-addr.arpa",
+        "252.0.0.224.in-addr.arpa",
+        "150.20.168.192.in-addr.arpa",
+        "200.20.168.192.in-addr.arpa",
+        "3.20.168.192.in-addr.arpa"
+      ],
+      "truncated_dns_first_label_lengths": {
+        "4": 18029,
+        "1": 21,
+        "2": 184,
+        "3": 1913,
+        "12": 41,
+        "5": 33850,
+        "16": 2,
+        "8": 2,
+        "6": 6,
+        "22": 2,
+        "7": 1,
+        "25": 1
+      },
+      "truncated_dns_first_second_label_lengths": {
+        "4,50": 1,
+        "1,63": 10,
+        "2,63": 90,
+        "3,63": 900,
+        "4,14": 11,
+        "4,63": 9000,
+        "5,63": 16906,
+        "22,12": 1
+      },
+      "truncated_dns_second_label_visible_prefix_entropy": {
+        "count": 26919,
+        "min": 3.379,
+        "p50": 4.343,
+        "p95": 4.572,
+        "p99": 4.651,
+        "max": 4.837
+      },
+      "truncated_dns_payload_bytes": {
+        "54": 54052
+      },
+      "truncated_dns_top_sources": [
+        [
+          "192.168.20.38",
+          26919
+        ],
+        [
+          "192.168.20.72",
+          26907
+        ],
+        [
+          "8.8.8.8",
+          226
+        ]
+      ],
+      "truncated_dns_top_destinations": [
+        [
+          "192.168.20.38",
+          27133
+        ],
+        [
+          "192.168.20.72",
+          26907
+        ],
+        [
+          "8.8.8.8",
+          12
+        ]
+      ],
+      "truncated_dns_top_prefixes": [
+        [
+          "dns",
+          67
+        ],
+        [
+          "v10",
+          38
+        ],
+        [
+          "settings-win",
+          30
+        ],
+        [
+          "tsfe",
+          22
+        ],
+        [
+          "ctldl",
+          21
+        ],
+        [
+          "tile-service",
+          10
+        ]
+      ]
+    },
+    {
+      "file": "C:\\Users\\Saich\\OneDrive\\Desktop\\PS26145\\data\\raw\\cicdns2021\\pcaps\\heavy\\heavy_video.pcap",
+      "bytes": 22646564,
+      "snaplen": 96,
+      "sha256": "425c26e2317f73c2ebb4fe273b96cde634e48e3a858f882e3d9addfc864cccdc",
+      "counts": {
+        "frames": 205881,
+        "capture_truncated_frames": 167083,
+        "udp_declared_length_exceeds_capture": 167083,
+        "port_5355_truncated_udp": 66242,
+        "transport_packets": 38798,
+        "port_5355_wire_parseable": 36558,
+        "llmnr_queries": 36558,
+        "port_53_truncated_udp": 89642,
+        "truncated_dns_query_header": 44788,
+        "truncated_dns_second_label_incomplete": 44780,
+        "truncated_dns_response_header": 44854,
+        "port_5355_recoverable_first_question_only": 347,
+        "port_53_wire_parseable": 136,
+        "dns_queries": 136,
+        "dns_query_runtime_sidecars": 136,
+        "port_53_recoverable_first_question_only": 66,
+        "truncated_dns_response_question_complete": 66
+      },
+      "port_packets": {
+        "udp/5355": 102800,
+        "udp/53": 89778
+      },
+      "dns_query_types": {
+        "1": 136
+      },
+      "dns_answer_types": {},
+      "dns_unique_query_names": 17,
+      "dns_top_names": [
+        [
+          "update.googleapis.com",
+          22
+        ],
+        [
+          "settings-win.data.microsoft.com",
+          17
+        ],
+        [
+          "client.wns.windows.com",
+          17
+        ],
+        [
+          "msedge.api.cdp.microsoft.com",
+          16
+        ],
+        [
+          "ctldl.windowsupdate.com",
+          15
+        ],
+        [
+          "v10.events.data.microsoft.com",
+          11
+        ]
+      ],
+      "dns_name_length": {
+        "count": 136,
+        "min": 12,
+        "p50": 23,
+        "p95": 31,
+        "p99": 34,
+        "max": 34
+      },
+      "dns_first_label_length": {
+        "count": 136,
+        "min": 2,
+        "p50": 6,
+        "p95": 12,
+        "p99": 12,
+        "max": 12
+      },
+      "dns_label_count": {
+        "count": 136,
+        "min": 2,
+        "p50": 4,
+        "p95": 5,
+        "p99": 5,
+        "max": 5
+      },
+      "dns_name_entropy": {
+        "count": 136,
+        "min": 3.022,
+        "p50": 3.69,
+        "p95": 3.84,
+        "p99": 3.84,
+        "max": 3.84
+      },
+      "dns_first_label_entropy": {
+        "count": 136,
+        "min": -0.0,
+        "p50": 2.585,
+        "p95": 2.948,
+        "p99": 3.022,
+        "max": 3.022
+      },
+      "dns_queries_with_first_label_ge_50": 0,
+      "llmnr_question_types": {
+        "12": 35715,
+        "255": 747,
+        "1": 92,
+        "28": 4
+      },
+      "llmnr_unique_question_names": 39,
+      "llmnr_top_names": [
+        [
+          "252.0.0.224.in-addr.arpa",
+          13800
+        ],
+        [
+          "150.20.168.192.in-addr.arpa",
+          4458
+        ],
+        [
+          "15.20.168.192.in-addr.arpa",
+          4234
+        ],
+        [
+          "200.20.168.192.in-addr.arpa",
+          4044
+        ],
+        [
+          "100.20.168.192.in-addr.arpa",
+          3522
+        ],
+        [
+          "2.20.168.192.in-addr.arpa",
+          2982
+        ]
+      ],
+      "llmnr_destinations": [
+        [
+          "224.0.0.252",
+          36310
+        ],
+        [
+          "ff02::1:3",
+          248
+        ]
+      ],
+      "llmnr_examples": [
+        "15.20.168.192.in-addr.arpa",
+        "252.0.0.224.in-addr.arpa",
+        "100.20.168.192.in-addr.arpa",
+        "150.20.168.192.in-addr.arpa",
+        "200.20.168.192.in-addr.arpa"
+      ],
+      "truncated_dns_first_label_lengths": {
+        "4": 18021,
+        "1": 20,
+        "2": 184,
+        "3": 1816,
+        "12": 23,
+        "5": 69572,
+        "6": 6
+      },
+      "truncated_dns_first_second_label_lengths": {
+        "4,40": 1,
+        "1,63": 10,
+        "2,63": 90,
+        "3,63": 900,
+        "4,63": 9000,
+        "4,14": 8,
+        "5,63": 34779
+      },
+      "truncated_dns_second_label_visible_prefix_entropy": {
+        "count": 44788,
+        "min": 3.379,
+        "p50": 4.343,
+        "p95": 4.572,
+        "p99": 4.651,
+        "max": 4.871
+      },
+      "truncated_dns_payload_bytes": {
+        "54": 89642
+      },
+      "truncated_dns_top_sources": [
+        [
+          "192.168.20.38",
+          44788
+        ],
+        [
+          "192.168.20.72",
+          44780
+        ],
+        [
+          "8.8.8.8",
+          74
+        ]
+      ],
+      "truncated_dns_top_destinations": [
+        [
+          "192.168.20.38",
+          44854
+        ],
+        [
+          "192.168.20.72",
+          44780
+        ],
+        [
+          "8.8.8.8",
+          8
+        ]
+      ],
+      "truncated_dns_top_prefixes": [
+        [
+          "settings-win",
+          17
+        ],
+        [
+          "tsfe",
+          16
+        ],
+        [
+          "v10",
+          11
+        ],
+        [
+          "ctldl",
+          10
+        ],
+        [
+          "tile-service",
+          6
+        ],
+        [
+          "www",
+          4
+        ]
+      ]
+    },
+    {
+      "file": "C:\\Users\\Saich\\OneDrive\\Desktop\\PS26145\\data\\raw\\cicdns2021\\pcaps\\light\\light_audio.pcap",
+      "bytes": 6861582,
+      "snaplen": 96,
+      "sha256": "03d36e23f0ac9d2b05fce4a7cd8c0395c5ffec0edc42e988c5e9790e86675c5c",
+      "counts": {
+        "frames": 62964,
+        "capture_truncated_frames": 44996,
+        "udp_declared_length_exceeds_capture": 44996,
+        "port_5355_truncated_udp": 30849,
+        "transport_packets": 17968,
+        "port_5355_wire_parseable": 16977,
+        "llmnr_queries": 16977,
+        "port_53_truncated_udp": 8615,
+        "truncated_dns_query_header": 4294,
+        "truncated_dns_second_label_incomplete": 4291,
+        "truncated_dns_response_header": 4321,
+        "port_5355_recoverable_first_question_only": 164,
+        "port_53_wire_parseable": 29,
+        "dns_queries": 28,
+        "dns_query_runtime_sidecars": 28,
+        "port_53_recoverable_first_question_only": 27,
+        "truncated_dns_response_question_complete": 27,
+        "dns_responses": 1
+      },
+      "port_packets": {
+        "udp/5355": 47826,
+        "udp/53": 8644
+      },
+      "dns_query_types": {
+        "1": 28
+      },
+      "dns_answer_types": {
+        "1": 1
+      },
+      "dns_unique_query_names": 10,
+      "dns_top_names": [
+        [
+          "v10.events.data.microsoft.com",
+          8
+        ],
+        [
+          "settings-win.data.microsoft.com",
+          6
+        ],
+        [
+          "tile-service.weather.microsoft.com",
+          5
+        ],
+        [
+          "ocsp.digicert.com",
+          2
+        ],
+        [
+          "ctldl.windowsupdate.com",
+          2
+        ],
+        [
+          "login.live.com",
+          1
+        ]
+      ],
+      "dns_name_length": {
+        "count": 28,
+        "min": 12,
+        "p50": 29,
+        "p95": 34,
+        "p99": 34,
+        "max": 34
+      },
+      "dns_first_label_length": {
+        "count": 28,
+        "min": 3,
+        "p50": 5,
+        "p95": 12,
+        "p99": 12,
+        "max": 12
+      },
+      "dns_label_count": {
+        "count": 28,
+        "min": 3,
+        "p50": 4,
+        "p95": 5,
+        "p99": 5,
+        "max": 5
+      },
+      "dns_name_entropy": {
+        "count": 28,
+        "min": 3.022,
+        "p50": 3.825,
+        "p95": 3.84,
+        "p99": 3.84,
+        "max": 3.84
+      },
+      "dns_first_label_entropy": {
+        "count": 28,
+        "min": -0.0,
+        "p50": 2.0,
+        "p95": 3.022,
+        "p99": 3.022,
+        "max": 3.022
+      },
+      "dns_queries_with_first_label_ge_50": 0,
+      "llmnr_question_types": {
+        "12": 16593,
+        "255": 340,
+        "1": 44
+      },
+      "llmnr_unique_question_names": 29,
+      "llmnr_top_names": [
+        [
+          "252.0.0.224.in-addr.arpa",
+          6374
+        ],
+        [
+          "150.20.168.192.in-addr.arpa",
+          2094
+        ],
+        [
+          "15.20.168.192.in-addr.arpa",
+          1956
+        ],
+        [
+          "200.20.168.192.in-addr.arpa",
+          1934
+        ],
+        [
+          "100.20.168.192.in-addr.arpa",
+          1658
+        ],
+        [
+          "2.20.168.192.in-addr.arpa",
+          1370
+        ]
+      ],
+      "llmnr_destinations": [
+        [
+          "224.0.0.252",
+          16867
+        ],
+        [
+          "ff02::1:3",
+          110
+        ]
+      ],
+      "llmnr_examples": [
+        "200.20.168.192.in-addr.arpa",
+        "252.0.0.224.in-addr.arpa",
+        "2.20.168.192.in-addr.arpa",
+        "3.20.168.192.in-addr.arpa",
+        "150.20.168.192.in-addr.arpa"
+      ],
+      "truncated_dns_first_label_lengths": {
+        "4": 1580,
+        "1": 80,
+        "2": 720,
+        "3": 6219,
+        "5": 4,
+        "12": 11,
+        "6": 1
+      },
+      "truncated_dns_first_second_label_lengths": {
+        "4,53": 1,
+        "1,63": 40,
+        "2,63": 360,
+        "3,63": 3105,
+        "4,40": 2,
+        "4,63": 783,
+        "4,14": 2,
+        "4,23": 1
+      },
+      "truncated_dns_second_label_visible_prefix_entropy": {
+        "count": 4294,
+        "min": 3.379,
+        "p50": 4.378,
+        "p95": 4.594,
+        "p99": 4.682,
+        "max": 4.831
+      },
+      "truncated_dns_payload_bytes": {
+        "54": 8615
+      },
+      "truncated_dns_top_sources": [
+        [
+          "192.168.20.38",
+          4294
+        ],
+        [
+          "192.168.20.72",
+          4292
+        ],
+        [
+          "8.8.8.8",
+          29
+        ]
+      ],
+      "truncated_dns_top_destinations": [
+        [
+          "192.168.20.38",
+          4321
+        ],
+        [
+          "192.168.20.72",
+          4292
+        ],
+        [
+          "8.8.8.8",
+          2
+        ]
+      ],
+      "truncated_dns_top_prefixes": [
+        [
+          "init",
+          8
+        ],
+        [
+          "0",
+          8
+        ],
+        [
+          "1",
+          8
+        ],
+        [
+          "2",
+          8
+        ],
+        [
+          "3",
+          8
+        ],
+        [
+          "4",
+          8
+        ]
+      ]
+    },
+    {
+      "file": "C:\\Users\\Saich\\OneDrive\\Desktop\\PS26145\\data\\raw\\cicdns2021\\pcaps\\light\\light_compressed.pcap",
+      "bytes": 5673660,
+      "snaplen": 96,
+      "sha256": "1b757214d96a42339e5b5204eaaf9e385d483e4e6f60fd8f89debf97ff0c3110",
+      "counts": {
+        "frames": 51650,
+        "transport_packets": 10458,
+        "port_5355_wire_parseable": 9879,
+        "llmnr_queries": 9879,
+        "capture_truncated_frames": 41192,
+        "udp_declared_length_exceeds_capture": 41192,
+        "port_5355_truncated_udp": 17779,
+        "port_53_truncated_udp": 20150,
+        "truncated_dns_query_header": 10066,
+        "truncated_dns_response_header": 10084,
+        "truncated_dns_second_label_incomplete": 10062,
+        "port_53_wire_parseable": 20,
+        "dns_queries": 19,
+        "dns_query_runtime_sidecars": 19,
+        "port_53_recoverable_first_question_only": 18,
+        "truncated_dns_response_question_complete": 18,
+        "port_5355_recoverable_first_question_only": 117,
+        "dns_responses": 1
+      },
+      "port_packets": {
+        "udp/5355": 27658,
+        "udp/53": 20170
+      },
+      "dns_query_types": {
+        "1": 19
+      },
+      "dns_answer_types": {
+        "1": 1
+      },
+      "dns_unique_query_names": 10,
+      "dns_top_names": [
+        [
+          "tile-service.weather.microsoft.com",
+          4
+        ],
+        [
+          "settings-win.data.microsoft.com",
+          4
+        ],
+        [
+          "v10.events.data.microsoft.com",
+          3
+        ],
+        [
+          "ctldl.windowsupdate.com",
+          2
+        ],
+        [
+          "go.microsoft.com",
+          1
+        ],
+        [
+          "www.bing.com",
+          1
+        ]
+      ],
+      "dns_name_length": {
+        "count": 19,
+        "min": 12,
+        "p50": 29,
+        "p95": 34,
+        "p99": 34,
+        "max": 34
+      },
+      "dns_first_label_length": {
+        "count": 19,
+        "min": 2,
+        "p50": 5,
+        "p95": 12,
+        "p99": 12,
+        "max": 12
+      },
+      "dns_label_count": {
+        "count": 19,
+        "min": 3,
+        "p50": 4,
+        "p95": 5,
+        "p99": 5,
+        "max": 5
+      },
+      "dns_name_entropy": {
+        "count": 19,
+        "min": 3.022,
+        "p50": 3.789,
+        "p95": 3.84,
+        "p99": 3.84,
+        "max": 3.84
+      },
+      "dns_first_label_entropy": {
+        "count": 19,
+        "min": -0.0,
+        "p50": 2.322,
+        "p95": 3.022,
+        "p99": 3.022,
+        "max": 3.022
+      },
+      "dns_queries_with_first_label_ge_50": 0,
+      "llmnr_question_types": {
+        "12": 9618,
+        "255": 229,
+        "1": 32
+      },
+      "llmnr_unique_question_names": 27,
+      "llmnr_top_names": [
+        [
+          "252.0.0.224.in-addr.arpa",
+          3646
+        ],
+        [
+          "150.20.168.192.in-addr.arpa",
+          1218
+        ],
+        [
+          "15.20.168.192.in-addr.arpa",
+          1143
+        ],
+        [
+          "200.20.168.192.in-addr.arpa",
+          1122
+        ],
+        [
+          "100.20.168.192.in-addr.arpa",
+          990
+        ],
+        [
+          "2.20.168.192.in-addr.arpa",
+          787
+        ]
+      ],
+      "llmnr_destinations": [
+        [
+          "224.0.0.252",
+          9807
+        ],
+        [
+          "ff02::1:3",
+          72
+        ]
+      ],
+      "llmnr_examples": [
+        "2.20.168.192.in-addr.arpa",
+        "252.0.0.224.in-addr.arpa",
+        "250.255.255.239.in-addr.arpa",
+        "15.20.168.192.in-addr.arpa",
+        "150.20.168.192.in-addr.arpa"
+      ],
+      "truncated_dns_first_label_lengths": {
+        "4": 14681,
+        "1": 80,
+        "5": 3,
+        "2": 721,
+        "3": 4656,
+        "12": 8,
+        "6": 1
+      },
+      "truncated_dns_first_second_label_lengths": {
+        "4,28": 1,
+        "1,63": 40,
+        "2,63": 360,
+        "3,63": 2326,
+        "4,29": 1,
+        "4,63": 7335,
+        "4,14": 1,
+        "4,23": 1,
+        "4,40": 1
+      },
+      "truncated_dns_second_label_visible_prefix_entropy": {
+        "count": 10066,
+        "min": 3.379,
+        "p50": 4.364,
+        "p95": 4.593,
+        "p99": 4.67,
+        "max": 4.837
+      },
+      "truncated_dns_payload_bytes": {
+        "54": 20150
+      },
+      "truncated_dns_top_sources": [
+        [
+          "192.168.20.38",
+          10066
+        ],
+        [
+          "192.168.20.72",
+          10065
+        ],
+        [
+          "8.8.8.8",
+          19
+        ]
+      ],
+      "truncated_dns_top_destinations": [
+        [
+          "192.168.20.38",
+          10084
+        ],
+        [
+          "192.168.20.72",
+          10065
+        ],
+        [
+          "8.8.8.8",
+          1
+        ]
+      ],
+      "truncated_dns_top_prefixes": [
+        [
+          "init",
+          8
+        ],
+        [
+          "0",
+          8
+        ],
+        [
+          "1",
+          8
+        ],
+        [
+          "2",
+          8
+        ],
+        [
+          "3",
+          8
+        ],
+        [
+          "4",
+          8
+        ]
+      ]
+    },
+    {
+      "file": "C:\\Users\\Saich\\OneDrive\\Desktop\\PS26145\\data\\raw\\cicdns2021\\pcaps\\light\\light_exe.pcap",
+      "bytes": 3616979,
+      "snaplen": 96,
+      "sha256": "128b5aed4dda9e2d8004bcc881c1993c98a8b9b1ea69f438d76e8272fd201107",
+      "counts": {
+        "frames": 32917,
+        "capture_truncated_frames": 26337,
+        "udp_declared_length_exceeds_capture": 26337,
+        "port_5355_truncated_udp": 11219,
+        "transport_packets": 6580,
+        "port_5355_wire_parseable": 6215,
+        "llmnr_queries": 6215,
+        "port_53_truncated_udp": 13131,
+        "truncated_dns_query_header": 6559,
+        "truncated_dns_second_label_incomplete": 6554,
+        "truncated_dns_response_header": 6572,
+        "port_5355_recoverable_first_question_only": 67,
+        "port_53_wire_parseable": 13,
+        "dns_queries": 13,
+        "dns_query_runtime_sidecars": 13,
+        "port_53_recoverable_first_question_only": 13,
+        "truncated_dns_response_question_complete": 13
+      },
+      "port_packets": {
+        "udp/5355": 17434,
+        "udp/53": 13144
+      },
+      "dns_query_types": {
+        "1": 12,
+        "16": 1
+      },
+      "dns_answer_types": {},
+      "dns_unique_query_names": 9,
+      "dns_top_names": [
+        [
+          "settings-win.data.microsoft.com",
+          3
+        ],
+        [
+          "v10.events.data.microsoft.com",
+          2
+        ],
+        [
+          "tile-service.weather.microsoft.com",
+          2
+        ],
+        [
+          "officeclient.microsoft.com",
+          1
+        ],
+        [
+          "ecs.office.com",
+          1
+        ],
+        [
+          "settings.data.microsoft.com",
+          1
+        ]
+      ],
+      "dns_name_length": {
+        "count": 13,
+        "min": 14,
+        "p50": 29,
+        "p95": 34,
+        "p99": 34,
+        "max": 34
+      },
+      "dns_first_label_length": {
+        "count": 13,
+        "min": 3,
+        "p50": 8,
+        "p95": 12,
+        "p99": 12,
+        "max": 12
+      },
+      "dns_label_count": {
+        "count": 13,
+        "min": 3,
+        "p50": 4,
+        "p95": 5,
+        "p99": 5,
+        "max": 5
+      },
+      "dns_name_entropy": {
+        "count": 13,
+        "min": 2.896,
+        "p50": 3.795,
+        "p95": 3.84,
+        "p99": 3.84,
+        "max": 4.139
+      },
+      "dns_first_label_entropy": {
+        "count": 13,
+        "min": 1.585,
+        "p50": 2.5,
+        "p95": 3.022,
+        "p99": 3.022,
+        "max": 3.022
+      },
+      "dns_queries_with_first_label_ge_50": 0,
+      "llmnr_question_types": {
+        "12": 6072,
+        "255": 131,
+        "1": 12
+      },
+      "llmnr_unique_question_names": 26,
+      "llmnr_top_names": [
+        [
+          "252.0.0.224.in-addr.arpa",
+          2312
+        ],
+        [
+          "150.20.168.192.in-addr.arpa",
+          772
+        ],
+        [
+          "15.20.168.192.in-addr.arpa",
+          716
+        ],
+        [
+          "200.20.168.192.in-addr.arpa",
+          711
+        ],
+        [
+          "100.20.168.192.in-addr.arpa",
+          612
+        ],
+        [
+          "2.20.168.192.in-addr.arpa",
+          504
+        ]
+      ],
+      "llmnr_destinations": [
+        [
+          "224.0.0.252",
+          6177
+        ],
+        [
+          "ff02::1:3",
+          38
+        ]
+      ],
+      "llmnr_examples": [
+        "200.20.168.192.in-addr.arpa",
+        "252.0.0.224.in-addr.arpa",
+        "2.20.168.192.in-addr.arpa",
+        "100.20.168.192.in-addr.arpa",
+        "150.20.168.192.in-addr.arpa"
+      ],
+      "truncated_dns_first_label_lengths": {
+        "4": 9090,
+        "1": 80,
+        "2": 694,
+        "3": 3256,
+        "12": 6,
+        "27": 2,
+        "8": 1,
+        "7": 1,
+        "5": 1
+      },
+      "truncated_dns_first_second_label_lengths": {
+        "4,58": 1,
+        "1,63": 40,
+        "2,63": 347,
+        "4,21": 1,
+        "3,63": 1625,
+        "27,6": 1,
+        "4,14": 1,
+        "4,34": 1,
+        "4,63": 4540,
+        "4,18": 1,
+        "3,48": 1
+      },
+      "truncated_dns_second_label_visible_prefix_entropy": {
+        "count": 6559,
+        "min": 2.252,
+        "p50": 4.364,
+        "p95": 4.574,
+        "p99": 4.649,
+        "max": 4.837
+      },
+      "truncated_dns_payload_bytes": {
+        "54": 13131
+      },
+      "truncated_dns_top_sources": [
+        [
+          "192.168.20.38",
+          6559
+        ],
+        [
+          "192.168.20.72",
+          6558
+        ],
+        [
+          "8.8.8.8",
+          14
+        ]
+      ],
+      "truncated_dns_top_destinations": [
+        [
+          "192.168.20.38",
+          6572
+        ],
+        [
+          "192.168.20.72",
+          6557
+        ],
+        [
+          "8.8.8.8",
+          2
+        ]
+      ],
+      "truncated_dns_top_prefixes": [
+        [
+          "init",
+          8
+        ],
+        [
+          "0",
+          8
+        ],
+        [
+          "1",
+          8
+        ],
+        [
+          "2",
+          8
+        ],
+        [
+          "3",
+          8
+        ],
+        [
+          "4",
+          8
+        ]
+      ]
+    },
+    {
+      "file": "C:\\Users\\Saich\\OneDrive\\Desktop\\PS26145\\data\\raw\\cicdns2021\\pcaps\\light\\light_image.pcap",
+      "bytes": 276306,
+      "snaplen": 96,
+      "sha256": "74414eeb8e700debdd3548ba24a7156b608e1e6a2960f9157ca49f8f9fbec13a",
+      "counts": {
+        "frames": 2517,
+        "capture_truncated_frames": 1980,
+        "udp_declared_length_exceeds_capture": 1980,
+        "port_5355_truncated_udp": 887,
+        "transport_packets": 537,
+        "port_5355_wire_parseable": 495,
+        "llmnr_queries": 495,
+        "port_53_truncated_udp": 978,
+        "truncated_dns_query_header": 489,
+        "truncated_dns_second_label_incomplete": 487,
+        "truncated_dns_response_header": 489,
+        "port_5355_recoverable_first_question_only": 5
+      },
+      "port_packets": {
+        "udp/5355": 1382,
+        "udp/53": 978
+      },
+      "dns_query_types": {},
+      "dns_answer_types": {},
+      "dns_unique_query_names": 0,
+      "dns_top_names": [],
+      "dns_name_length": {
+        "count": 0
+      },
+      "dns_first_label_length": {
+        "count": 0
+      },
+      "dns_label_count": {
+        "count": 0
+      },
+      "dns_name_entropy": {
+        "count": 0
+      },
+      "dns_first_label_entropy": {
+        "count": 0
+      },
+      "dns_queries_with_first_label_ge_50": 0,
+      "llmnr_question_types": {
+        "12": 478,
+        "255": 5,
+        "1": 12
+      },
+      "llmnr_unique_question_names": 15,
+      "llmnr_top_names": [
+        [
+          "252.0.0.224.in-addr.arpa",
+          180
+        ],
+        [
+          "150.20.168.192.in-addr.arpa",
+          60
+        ],
+        [
+          "200.20.168.192.in-addr.arpa",
+          56
+        ],
+        [
+          "100.20.168.192.in-addr.arpa",
+          54
+        ],
+        [
+          "15.20.168.192.in-addr.arpa",
+          54
+        ],
+        [
+          "2.20.168.192.in-addr.arpa",
+          38
+        ]
+      ],
+      "llmnr_destinations": [
+        [
+          "224.0.0.252",
+          489
+        ],
+        [
+          "ff02::1:3",
+          6
+        ]
+      ],
+      "llmnr_examples": [
+        "252.0.0.224.in-addr.arpa",
+        "200.20.168.192.in-addr.arpa",
+        "100.20.168.192.in-addr.arpa",
+        "150.20.168.192.in-addr.arpa",
+        "2.20.168.192.in-addr.arpa"
+      ],
+      "truncated_dns_first_label_lengths": {
+        "4": 6,
+        "1": 60,
+        "2": 540,
+        "3": 372
+      },
+      "truncated_dns_first_second_label_lengths": {
+        "4,44": 1,
+        "1,63": 30,
+        "2,63": 270,
+        "3,63": 186,
+        "4,18": 1,
+        "4,26": 1
+      },
+      "truncated_dns_second_label_visible_prefix_entropy": {
+        "count": 489,
+        "min": 3.837,
+        "p50": 4.391,
+        "p95": 4.615,
+        "p99": 4.735,
+        "max": 4.774
+      },
+      "truncated_dns_payload_bytes": {
+        "54": 978
+      },
+      "truncated_dns_top_sources": [
+        [
+          "192.168.20.38",
+          489
+        ],
+        [
+          "192.168.20.72",
+          489
+        ]
+      ],
+      "truncated_dns_top_destinations": [
+        [
+          "192.168.20.72",
+          489
+        ],
+        [
+          "192.168.20.38",
+          489
+        ]
+      ],
+      "truncated_dns_top_prefixes": [
+        [
+          "init",
+          6
+        ],
+        [
+          "0",
+          6
+        ],
+        [
+          "1",
+          6
+        ],
+        [
+          "2",
+          6
+        ],
+        [
+          "3",
+          6
+        ],
+        [
+          "4",
+          6
+        ]
+      ]
+    },
+    {
+      "file": "C:\\Users\\Saich\\OneDrive\\Desktop\\PS26145\\data\\raw\\cicdns2021\\pcaps\\light\\light_text.pcap",
+      "bytes": 1707014,
+      "snaplen": 96,
+      "sha256": "83bd120fd3ab1ab50a952e51791a6a86fca0e1322c1a008d693636b6a57a54bb",
+      "counts": {
+        "frames": 15577,
+        "capture_truncated_frames": 12025,
+        "udp_declared_length_exceeds_capture": 12025,
+        "port_5355_truncated_udp": 6035,
+        "transport_packets": 3552,
+        "port_5355_wire_parseable": 3347,
+        "llmnr_queries": 3347,
+        "port_53_truncated_udp": 4986,
+        "truncated_dns_query_header": 2489,
+        "truncated_dns_response_header": 2497,
+        "truncated_dns_second_label_incomplete": 2486,
+        "port_5355_recoverable_first_question_only": 35,
+        "port_53_wire_parseable": 8,
+        "dns_queries": 8,
+        "dns_query_runtime_sidecars": 8,
+        "port_53_recoverable_first_question_only": 8,
+        "truncated_dns_response_question_complete": 8
+      },
+      "port_packets": {
+        "udp/5355": 9382,
+        "udp/53": 4994
+      },
+      "dns_query_types": {
+        "1": 8
+      },
+      "dns_answer_types": {},
+      "dns_unique_query_names": 6,
+      "dns_top_names": [
+        [
+          "settings-win.data.microsoft.com",
+          2
+        ],
+        [
+          "v10.events.data.microsoft.com",
+          2
+        ],
+        [
+          "tile-service.weather.microsoft.com",
+          1
+        ],
+        [
+          "ctldl.windowsupdate.com",
+          1
+        ],
+        [
+          "checkappexec.microsoft.com",
+          1
+        ],
+        [
+          "www.wireshark.org",
+          1
+        ]
+      ],
+      "dns_name_length": {
+        "count": 8,
+        "min": 17,
+        "p50": 29,
+        "p95": 31,
+        "p99": 31,
+        "max": 34
+      },
+      "dns_first_label_length": {
+        "count": 8,
+        "min": 3,
+        "p50": 12,
+        "p95": 12,
+        "p99": 12,
+        "max": 12
+      },
+      "dns_label_count": {
+        "count": 8,
+        "min": 3,
+        "p50": 4,
+        "p95": 5,
+        "p99": 5,
+        "max": 5
+      },
+      "dns_name_entropy": {
+        "count": 8,
+        "min": 3.22,
+        "p50": 3.825,
+        "p95": 3.84,
+        "p99": 3.84,
+        "max": 3.84
+      },
+      "dns_first_label_entropy": {
+        "count": 8,
+        "min": -0.0,
+        "p50": 2.626,
+        "p95": 2.918,
+        "p99": 2.918,
+        "max": 3.022
+      },
+      "dns_queries_with_first_label_ge_50": 0,
+      "llmnr_question_types": {
+        "12": 3264,
+        "255": 67,
+        "1": 16
+      },
+      "llmnr_unique_question_names": 27,
+      "llmnr_top_names": [
+        [
+          "252.0.0.224.in-addr.arpa",
+          1238
+        ],
+        [
+          "150.20.168.192.in-addr.arpa",
+          410
+        ],
+        [
+          "15.20.168.192.in-addr.arpa",
+          396
+        ],
+        [
+          "200.20.168.192.in-addr.arpa",
+          376
+        ],
+        [
+          "100.20.168.192.in-addr.arpa",
+          332
+        ],
+        [
+          "2.20.168.192.in-addr.arpa",
+          268
+        ]
+      ],
+      "llmnr_destinations": [
+        [
+          "224.0.0.252",
+          3323
+        ],
+        [
+          "ff02::1:3",
+          24
+        ]
+      ],
+      "llmnr_examples": [
+        "15.20.168.192.in-addr.arpa",
+        "252.0.0.224.in-addr.arpa",
+        "100.20.168.192.in-addr.arpa",
+        "150.20.168.192.in-addr.arpa",
+        "128.20.168.192.in-addr.arpa"
+      ],
+      "truncated_dns_first_label_lengths": {
+        "4": 2534,
+        "1": 60,
+        "2": 540,
+        "3": 1847,
+        "12": 4,
+        "5": 1
+      },
+      "truncated_dns_first_second_label_lengths": {
+        "4,28": 2,
+        "1,63": 30,
+        "2,63": 270,
+        "3,63": 921,
+        "4,63": 1264,
+        "4,32": 1,
+        "3,38": 1
+      },
+      "truncated_dns_second_label_visible_prefix_entropy": {
+        "count": 2489,
+        "min": 3.875,
+        "p50": 4.366,
+        "p95": 4.577,
+        "p99": 4.67,
+        "max": 4.856
+      },
+      "truncated_dns_payload_bytes": {
+        "54": 4986
+      },
+      "truncated_dns_top_sources": [
+        [
+          "192.168.20.38",
+          2489
+        ],
+        [
+          "192.168.20.72",
+          2489
+        ],
+        [
+          "8.8.8.8",
+          8
+        ]
+      ],
+      "truncated_dns_top_destinations": [
+        [
+          "192.168.20.38",
+          2497
+        ],
+        [
+          "192.168.20.72",
+          2489
+        ]
+      ],
+      "truncated_dns_top_prefixes": [
+        [
+          "init",
+          6
+        ],
+        [
+          "0",
+          6
+        ],
+        [
+          "1",
+          6
+        ],
+        [
+          "2",
+          6
+        ],
+        [
+          "3",
+          6
+        ],
+        [
+          "4",
+          6
+        ]
+      ]
+    },
+    {
+      "file": "C:\\Users\\Saich\\OneDrive\\Desktop\\PS26145\\data\\raw\\cicdns2021\\pcaps\\light\\light_video.pcap",
+      "bytes": 2533281,
+      "snaplen": 96,
+      "sha256": "b2303aa5d2a20b1396cc2f5129949cd794162f7a4e21e777d66cac76bbe100ec",
+      "counts": {
+        "frames": 23040,
+        "capture_truncated_frames": 18585,
+        "udp_declared_length_exceeds_capture": 18585,
+        "port_5355_truncated_udp": 7668,
+        "transport_packets": 4455,
+        "port_5355_wire_parseable": 4210,
+        "llmnr_queries": 4210,
+        "port_53_wire_parseable": 8,
+        "dns_queries": 8,
+        "dns_query_runtime_sidecars": 8,
+        "port_53_truncated_udp": 9662,
+        "port_53_recoverable_first_question_only": 8,
+        "truncated_dns_response_header": 4835,
+        "truncated_dns_response_question_complete": 8,
+        "truncated_dns_query_header": 4827,
+        "truncated_dns_second_label_incomplete": 4821,
+        "port_5355_recoverable_first_question_only": 41
+      },
+      "port_packets": {
+        "udp/5355": 11878,
+        "udp/53": 9670
+      },
+      "dns_query_types": {
+        "1": 8
+      },
+      "dns_answer_types": {},
+      "dns_unique_query_names": 5,
+      "dns_top_names": [
+        [
+          "v10.events.data.microsoft.com",
+          3
+        ],
+        [
+          "settings-win.data.microsoft.com",
+          2
+        ],
+        [
+          "ctldl.windowsupdate.com",
+          1
+        ],
+        [
+          "tile-service.weather.microsoft.com",
+          1
+        ],
+        [
+          "config.teams.microsoft.com",
+          1
+        ]
+      ],
+      "dns_name_length": {
+        "count": 8,
+        "min": 23,
+        "p50": 29,
+        "p95": 31,
+        "p99": 31,
+        "max": 34
+      },
+      "dns_first_label_length": {
+        "count": 8,
+        "min": 3,
+        "p50": 6,
+        "p95": 12,
+        "p99": 12,
+        "max": 12
+      },
+      "dns_label_count": {
+        "count": 8,
+        "min": 3,
+        "p50": 4,
+        "p95": 5,
+        "p99": 5,
+        "max": 5
+      },
+      "dns_name_entropy": {
+        "count": 8,
+        "min": 3.536,
+        "p50": 3.825,
+        "p95": 3.84,
+        "p99": 3.84,
+        "max": 3.84
+      },
+      "dns_first_label_entropy": {
+        "count": 8,
+        "min": 1.585,
+        "p50": 2.585,
+        "p95": 2.918,
+        "p99": 2.918,
+        "max": 3.022
+      },
+      "dns_queries_with_first_label_ge_50": 0,
+      "llmnr_question_types": {
+        "12": 4121,
+        "255": 89
+      },
+      "llmnr_unique_question_names": 25,
+      "llmnr_top_names": [
+        [
+          "252.0.0.224.in-addr.arpa",
+          1610
+        ],
+        [
+          "150.20.168.192.in-addr.arpa",
+          510
+        ],
+        [
+          "15.20.168.192.in-addr.arpa",
+          486
+        ],
+        [
+          "200.20.168.192.in-addr.arpa",
+          468
+        ],
+        [
+          "100.20.168.192.in-addr.arpa",
+          412
+        ],
+        [
+          "2.20.168.192.in-addr.arpa",
+          340
+        ]
+      ],
+      "llmnr_destinations": [
+        [
+          "224.0.0.252",
+          4186
+        ],
+        [
+          "ff02::1:3",
+          24
+        ]
+      ],
+      "llmnr_examples": [
+        "150.20.168.192.in-addr.arpa",
+        "252.0.0.224.in-addr.arpa",
+        "200.20.168.192.in-addr.arpa",
+        "3.20.168.192.in-addr.arpa",
+        "2.20.168.192.in-addr.arpa"
+      ],
+      "truncated_dns_first_label_lengths": {
+        "12": 3,
+        "4": 3670,
+        "1": 80,
+        "2": 720,
+        "3": 5187,
+        "5": 1,
+        "6": 1
+      },
+      "truncated_dns_first_second_label_lengths": {
+        "4,21": 1,
+        "1,63": 40,
+        "2,63": 360,
+        "3,63": 2592,
+        "4,63": 1829,
+        "4,14": 1,
+        "4,34": 1,
+        "4,24": 1,
+        "4,28": 2
+      },
+      "truncated_dns_second_label_visible_prefix_entropy": {
+        "count": 4827,
+        "min": 3.379,
+        "p50": 4.371,
+        "p95": 4.594,
+        "p99": 4.67,
+        "max": 4.831
+      },
+      "truncated_dns_payload_bytes": {
+        "54": 9662
+      },
+      "truncated_dns_top_sources": [
+        [
+          "192.168.20.38",
+          4827
+        ],
+        [
+          "192.168.20.72",
+          4826
+        ],
+        [
+          "8.8.8.8",
+          9
+        ]
+      ],
+      "truncated_dns_top_destinations": [
+        [
+          "192.168.20.38",
+          4835
+        ],
+        [
+          "192.168.20.72",
+          4826
+        ],
+        [
+          "8.8.8.8",
+          1
+        ]
+      ],
+      "truncated_dns_top_prefixes": [
+        [
+          "init",
+          8
+        ],
+        [
+          "0",
+          8
+        ],
+        [
+          "1",
+          8
+        ],
+        [
+          "2",
+          8
+        ],
+        [
+          "3",
+          8
+        ],
+        [
+          "4",
+          8
+        ]
+      ]
+    }
+  ]
+}

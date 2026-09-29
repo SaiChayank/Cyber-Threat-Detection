@@ -60,11 +60,19 @@ pacing, SQLite, HTTP and UI, and must not be compared directly with flow/event r
 
 There are still **zero DNS-tunnelling alerts** in the downloaded captures. The
 largest observed DNS/53 name is 36 characters; no long TXT/NULL first label reaches
-the rule. Separate packet inspection of `heavy_text.pcap` found 97,017 UDP/5355
-packets, including 68,703 parseable first questions: 66,685 PTR, 1,912 ANY and 106 A.
+the rule. The later full packet inventory of `heavy_text.pcap` found 192,490
+UDP/5355 port headers, of which 124,085 datagrams are clipped and 68,405 have
+complete readable questions: 66,685 PTR, 1,508 ANY and 212 A.
 Common names are reverse lookups such as `252.0.0.224.in-addr.arpa`. This is consistent
 with local name-resolution traffic, not evidence that the tunnel detector should
 flag port 5355. LLMNR traffic remains distinct from DNS attack inputs.
+
+The later [DNS visibility audit](DNS_TUNNELLING_VISIBILITY_AUDIT.md) resolves the
+larger visibility gap across all 14 captures: each has a 96-byte snap length,
+so almost all attack-category UDP/53 queries are clipped before their complete
+name and QTYPE. The 36-character maximum applies only to *complete parsed*
+questions, not to those clipped queries. The inventory's port-header count
+supersedes the earlier approximate single-capture count.
 
 Controlled UDP and complete-message TCP captures with a long TXT question do
 produce a DNS-tunnelling alert through the parser, metadata adapter, API upload,

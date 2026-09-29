@@ -9,6 +9,13 @@ The broader lexical classifier is implemented, fitted, exported and integrated
 behind a quality gate. **It is not active in the dashboard.** The final candidate
 fails the predeclared comparison-recall and benign-DNS false-positive gates, so the
 existing conservative guard remains active. DGA detection is not deployment-ready.
+The follow-up [DGA diagnostic](DGA_DIAGNOSTIC.md) breaks down those failures without
+retraining or changing the candidate.
+The [feature/rule validation](DGA_FEATURE_VALIDATION.md) compares one causal
+rule hypothesis on development data without activating it.
+One [weighted candidate](DGA_WEIGHTED_CANDIDATE.md) was subsequently fitted on
+training data and tuned on validation only. It remains disabled pending a truly
+reserved evaluation set.
 
 ## Data and provenance
 

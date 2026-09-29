@@ -1,0 +1,107 @@
+{
+  "protocol_id": "PS26145-DGA-family-holdout-v1",
+  "frozen_date": "2026-09-29",
+  "status": "design_frozen_reserved_sources_not_yet_available",
+  "measurement_unit": "unique canonical ASCII first DNS label",
+  "canonicalizer": "ml.dga.domain_label; lowercase first label of a valid observed FQDN; no suffix-only, IDNA repair, live lookup, or payload decryption",
+  "existing_source_manifests": [
+    {
+      "path": "data/umudga_manifest.json",
+      "sha256": "99d744c738983077e301ed7c0c9eea82c3558950952e671498efd25af61bd742",
+      "source": "UMUDGA v1, DOI 10.17632/y8ph45msv8.1",
+      "scope": "Seven smaller family/reference files; all previously inspected; per-file SHA256 and byte counts are in this manifest"
+    },
+    {
+      "path": "data/umudga_expanded_manifest.json",
+      "sha256": "4daf4448f4a3437ff085754c49d9c90520b569577c8c5ba80dd8e5795b828e76",
+      "source": "UMUDGA v1, DOI 10.17632/y8ph45msv8.1",
+      "scope": "50 DGA variant files plus one 100000-domain legitimate reference; all previously assigned to development; per-file SHA256 and byte counts are in this manifest"
+    },
+    {
+      "path": "data/dns_capture_catalog.json",
+      "sha256": "25af3fe7473091ae2fb6681f1f1b3825766d63561a56e0103a9247a0bae2bb7a",
+      "source": "CICBellEXFDNS2021",
+      "scope": "Both labelled benign captures already used; per-capture SHA256 is in this catalog; mixed captures lack per-query DGA truth"
+    },
+    {
+      "path": "data/lab/manifest.json",
+      "sha256": "15365a3cd738ac096d64d7d5ee13112f1181599a78aa5d0ed416cc445b83edb0",
+      "source": "Synthetic project lab",
+      "scope": "Feature-design and regression exposure only; never independent public DGA evaluation"
+    }
+  ],
+  "previous_result_reports": [
+    {"path": "ml/public_dga_evaluation.json", "sha256": "9f6bd6b0823c7ec869bb774d1783b32864208a7ba9409fe373b27662025f5cbe"},
+    {"path": "ml/dga_v2_initial_evaluation.json", "sha256": "32a81c373e57ad85ad597143883c7d1f78c819c0ff6d54c34413ad70588f7496"},
+    {"path": "ml/dga_v2_linear_evaluation.json", "sha256": "dd66ec335a2ba70843c50e3dc37a145bade2f164d0279d241fe2b15ebd75d778"},
+    {"path": "ml/dga_v2_evaluation.json", "sha256": "fb2f4218d43d77c6a310547ccd7aa48f2b343b8579b7975714ddb0ca530cbf70"},
+    {"path": "ml/dga_diagnostic.json", "sha256": "d3e6d78bf3b3febff69fd0c858534c9fb949d24f6cf38786ae306d5c399286af"}
+  ],
+  "exposure_inventory": {
+    "feature_design_and_runtime_regression": ["synthetic project lab", "UMUDGA smaller seven-list subset", "CICBellEXFDNS2021 benign captures", "UMUDGA expanded family and legitimate references", "all saved candidate error analyses"],
+    "legacy_nb_training": ["banjori", "corebot", "dircrypt", "legit first six full-FQDN hash buckets"],
+    "legacy_nb_validation": ["matsnu", "legit full-FQDN hash buckets 6-7"],
+    "legacy_nb_previous_evaluation": ["necurs", "ramnit", "legit full-FQDN hash buckets 8-9"],
+    "current_candidate_threshold_tuning": "expanded UMUDGA validation families and benign first-label hash buckets 6-7; fixed threshold grid selected 0.9",
+    "current_candidate_previous_evaluation": "expanded UMUDGA comparison families and benign first-label hash buckets 8-9; second benign DNS capture; initial, linear and boosted variants and diagnostic already inspected",
+    "reserved_evaluation_exposure": "none; no qualifying local source remains"
+  },
+  "development_partitions": {
+    "training": {
+      "source": "data/umudga_expanded_manifest.json and CICBellEXFDNS2021 benign-benign_1",
+      "dga_variant_families": ["alureon", "banjori", "corebot", "dircrypt", "dyre", "gozi_gpl", "gozi_luther", "gozi_nasa", "gozi_rfc4343", "matsnu", "necurs", "nymaim", "padcrypt", "pizd", "pushdo", "pykspa", "pykspa_noise", "qadars", "qakbot", "ramdo", "ramnit", "ranbyus_v1", "ranbyus_v2", "rovnix", "shiotob", "simda", "suppobox_1", "suppobox_2", "suppobox_3", "tempedreve", "tinba", "vawtrak_v1", "vawtrak_v2", "vawtrak_v3", "zeus-newgoz"],
+      "unique_positive_first_labels": 69993,
+      "unique_benign_first_labels": 67715,
+      "benign_source_notes": "expanded UMUDGA legit reference plus 22336 first-capture hard-negative labels before deduplication and conflicts",
+      "status": "used for current candidate fitting; retained as training for any next development experiment"
+    },
+    "validation_tuning": {
+      "source": "data/umudga_expanded_manifest.json",
+      "dga_variant_families": ["cryptolocker", "fobber_v1", "fobber_v2", "locky", "murofet_v1", "murofet_v2", "murofet_v3", "proslikefan"],
+      "unique_positive_first_labels": 80000,
+      "unique_benign_first_labels": 15236,
+      "status": "previously used for model selection and threshold choice; development only"
+    },
+    "inspected_development_comparison": {
+      "source": "data/umudga_expanded_manifest.json",
+      "dga_variant_families": ["bedep", "ccleaner", "chinad", "kraken_v1", "kraken_v2", "sisron", "symmi"],
+      "unique_positive_first_labels": 60577,
+      "unique_benign_first_labels": 14910,
+      "status": "formerly called test; inspected over multiple iterations and in diagnosis; not reserved"
+    },
+    "inspected_dns_reference": {
+      "source": "data/dns_capture_catalog.json:benign-benign_2",
+      "unique_benign_first_labels_after_excluding_training_and_first_capture": 11731,
+      "overlap_with_development_validation": 1278,
+      "overlap_with_development_comparison": 1260,
+      "status": "already inspected; development DNS reference, not reserved"
+    }
+  },
+  "reserved_evaluation_preregistration": {
+    "status": "pending_new_sources_and_hashes; promotion_prohibited_until_materialized_and_verified",
+    "materialization_manifest_path": "data/dga_reserved_materialization.json",
+    "positive_source": null,
+    "positive_raw_sha256": null,
+    "positive_algorithms": [],
+    "domain_benign_source": null,
+    "domain_benign_raw_sha256": null,
+    "dns_benign_source": null,
+    "dns_benign_raw_sha256": null,
+    "required_positive": "exactly 1000 distinct first labels from each of three documented DGA algorithms absent from all 50 UMUDGA development variants and their known aliases/derivatives; select by ascending SHA256 of protocol_id + ':' + label after exclusions",
+    "required_domain_benign": "exactly 600 distinct first labels from each of five documented benign strata: short, machine-generated legitimate, CDN/cloud-style, common popular, and long; source role must be supported by provenance, not inferred from detector output; select by ascending SHA256 of protocol_id + ':' + stratum + ':' + label after exclusions",
+    "benign_stratum_assignment": "apply source-documented categories in precedence common popular, machine-generated legitimate, CDN/cloud-style; assign remaining documented benign labels to short (<12 characters) or long (>=12 characters); one label belongs to one stratum only",
+    "required_dns_benign": "at least 2500 distinct first labels from a separately sourced benign DNS capture or query log; include every eligible label after exclusions, not a performance-based subset",
+    "exclusions": "remove identical scored first labels across all development data, across reserved positive/benign/DNS classes, and within conflicting reserved labels; never resplit individual rows of the same DGA family/algorithm into development and reserved sets",
+    "evaluation_once": "record all raw source identifiers, versions, licence, retrieval date, file bytes, SHA256, algorithm/stratum labels and post-exclusion counts in a materialization manifest before any candidate scores are computed; one final scoring pass; a failed candidate stays disabled; a subsequent tuned candidate needs a new independent reserved set"
+  },
+  "threshold_policy": "fit and select one threshold using training and development validation only, with the existing predeclared grid [0.5,0.6,0.7,0.8,0.85,0.9,0.95,0.975,0.99]; record candidate artifact SHA256 and selected threshold before reserved scoring; no reserved-threshold search",
+  "promotion_gates": {
+    "minimum_recall": 0.8,
+    "minimum_precision": 0.95,
+    "maximum_domain_false_positive_rate": 0.02,
+    "maximum_separate_benign_dns_false_positive_rate": 0.02,
+    "metric_denominator": "domain recall=TP/(TP+FN), precision=TP/(TP+FP), domain FPR=FP/(FP+TN) on the frozen balanced 3000-positive/3000-negative domain set; separate DNS FPR=FP/(FP+TN) on its distinct benign labels",
+    "rule": "all four gates must pass on the single frozen reserved evaluation; no threshold search, feature tuning, sample replacement, or gate adjustment after seeing it"
+  },
+  "tuning_exclusion": "The future materialized reserved DGA-algorithm domain set, its five-stratum legitimate-domain set, and its separate benign-DNS set must not be inspected or scored during training, validation, or threshold tuning. Previously inspected UMUDGA comparison and benign-benign_2 are development diagnostics only."
+}

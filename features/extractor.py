@@ -4,6 +4,8 @@ import hashlib
 from collections import Counter, OrderedDict, deque
 from schemas.traffic_event import TrafficEvent
 from features.rate_window import RateWindow
+from features.dns_tunnel import dns_tunnel_features
+from ml.dga import lexical_features
 
 FEATURES = ['packet_rate', 'byte_rate', 'source_entropy', 'syn_fraction',
             'iat_mean', 'iat_cv', 'destination_count', 'port_count',
@@ -12,6 +14,18 @@ FEATURES = ['packet_rate', 'byte_rate', 'source_entropy', 'syn_fraction',
             'reverse_available', 'fingerprint_risk', 'history_count']
 DEMO_FINGERPRINT = hashlib.md5(b'771,49195-49199,0-23-65281,29-23-24,0').hexdigest()
 COMMON_BIGRAMS = set('th he in er an re on at en nd ti es or te of ed is it al ar st to nt ng se ha as ou io le ve co me de hi ri ro ic ne ea ra ce li ch ll be ma si om ur'.split())
+
+
+def dga_lexical_features(name):
+    """Causal first-label features shared by runtime and DGA rule comparisons."""
+    label = (name or '').lower().rstrip('.').split('.')[0]
+    numeric = lexical_features(label)
+    bigrams = [label[i:i + 2] for i in range(max(0, len(label) - 1))]
+    return dict(domain_entropy=numeric['entropy'], domain_label_length=len(label),
+                domain_digit_ratio=numeric['digit_ratio'],
+                bigram_surprise=sum(pair not in COMMON_BIGRAMS for pair in bigrams) / max(1, len(bigrams)),
+                domain_vowel_ratio=numeric['vowel_ratio'],
+                domain_consonant_run=numeric['consonant_run'])
 
 
 def entropy(items):
@@ -60,21 +74,21 @@ class FeatureExtractor:
         peer = [e for e in history if e.dst_ip == event.dst_ip and e.dst_port == event.dst_port]
         intervals = [(b.timestamp - a.timestamp) / 1000 for a, b in zip(peer, peer[1:])]
         name = (event.dns_name or '').lower().rstrip('.')
-        lexical = name.split('.')[0]
-        bigrams = [lexical[i:i+2] for i in range(max(0, len(lexical)-1))]
+        dga = dga_lexical_features(name)
         ratio = event.bytes / max(1, event.reverse_bytes or 0) if event.reverse_observed else None
         sizes = [e.bytes / e.packets for e in peer]
         values = [rates['packet_rate'], rates['byte_rate'], rates['source_entropy'],
                   sum(e.syn for e in recent) / len(recent),
                   sum(intervals) / len(intervals) if intervals else 0, cv(intervals),
                   len(set(str(e.dst_ip) for e in recent)), len(set(e.dst_port for e in recent)),
-                  entropy(lexical), len(name), sum(c.isdigit() for c in lexical) / max(1, len(lexical)),
-                  sum(b not in COMMON_BIGRAMS for b in bigrams) / max(1, len(bigrams)),
+                  dga['domain_entropy'], len(name), dga['domain_digit_ratio'], dga['bigram_surprise'],
                   float(event.dns_type in (10, 16) and bool(name)), float(event.encrypted), cv(sizes),
                   sum(e.bytes for e in history), ratio or 0, float(event.reverse_observed),
                   float(any(e.tls_fingerprint == DEMO_FINGERPRINT for e in peer)), len(peer)]
-        return dict(zip(FEATURES, values)) | {'observed_byte_ratio': ratio,
-                                             'domain_label_length': len(lexical),
+        return dict(zip(FEATURES, values)) | dns_tunnel_features(event, history) | {'observed_byte_ratio': ratio,
+                                             'domain_label_length': dga['domain_label_length'],
+                                             'domain_vowel_ratio': dga['domain_vowel_ratio'],
+                                             'domain_consonant_run': dga['domain_consonant_run'],
                                              'source_entropy_partial': rates['source_entropy_partial'],
                                              'rate_window_seconds': rates['rate_window_seconds'],
                                              'rate_window_resolution_ms': rates['rate_window_resolution_ms'],

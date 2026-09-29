@@ -4,6 +4,9 @@ from collections import deque, OrderedDict
 from features.extractor import FeatureExtractor
 from ml.model import Model
 from ml.dga import DgaModel, domain_label, FEATURE_VERSION
+from detection.dga_rules import conservative_rule
+from detection.dns_tunnel_candidate import candidate_reason
+from features.dns_tunnel import FEATURE_NAMES as DNS_TUNNEL_FEATURES
 from schemas.alert import AlertEvent
 from schemas.enums import ThreatClass, Severity, DetectorType
 from schemas.flow_record import FlowRecord
@@ -21,7 +24,7 @@ EVIDENCE = {
 
 
 class Pipeline:
-    def __init__(self):
+    def __init__(self, dns_tunnel_candidate=False):
         self.extractor = FeatureExtractor()
         self.model = Model()
         self.dga_model = DgaModel()
@@ -29,6 +32,7 @@ class Pipeline:
         self.latencies = deque(maxlen=10000)
         self.dedup = {}
         self.sessions = OrderedDict()
+        self.dns_tunnel_candidate = dns_tunnel_candidate
 
     def flow_id(self, event):
         if event.flow_id:
@@ -53,8 +57,11 @@ class Pipeline:
         # The synthetic model's DNS posterior alone does not generalize to real
         # domains. Require the existing lexical rule for DGA alerts, measuring
         # length on the same first label as entropy and bigram surprise.
-        dga_evidence = (f['domain_entropy'] >= 3.5 and f['bigram_surprise'] >= .8
-                        and f['domain_label_length'] >= 20)
+        dga_evidence = conservative_rule(f)
+        tunnel_reason = candidate_reason(f) if self.dns_tunnel_candidate else None
+        if self.dns_tunnel_candidate:
+            # Keep synthetic-model DNS hits out of development comparisons.
+            hits.pop('DNS_TUNNELLING', None)
         if self.dga_model.enabled:
             # DGA uses its independent lexical classifier after quality gates.
             # Synthetic model hits and the old length rule cannot override it.
@@ -65,7 +72,7 @@ class Pipeline:
         rules = {
             'DDOS': f['packet_rate'] >= 1000,
             'RECONNAISSANCE': max(f['destination_count'], f['port_count']) >= 20,
-            'DNS_TUNNELLING': f['domain_label_length'] >= 50 and f['txt_record'] == 1,
+            'DNS_TUNNELLING': bool(tunnel_reason) if self.dns_tunnel_candidate else f['domain_label_length'] >= 50 and f['txt_record'] == 1,
             'DGA_DOMAINS': dga_evidence and not self.dga_model.enabled,
             'BOTNET_C2': f['history_count'] >= 8 and f['iat_mean'] >= 1 and f['iat_cv'] < .05,
             'ENCRYPTED_MALWARE': f['encrypted'] and f['fingerprint_risk'],
@@ -93,7 +100,10 @@ class Pipeline:
             if len(self.dedup) >= 4096:
                 self.dedup.pop(next(iter(self.dedup)))
             self.dedup[key] = event.timestamp
-            evidence = {k: f[k] for k in EVIDENCE[threat]}
+            evidence_keys = DNS_TUNNEL_FEATURES if threat == 'DNS_TUNNELLING' and self.dns_tunnel_candidate else EVIDENCE[threat]
+            evidence = {k: f[k] for k in evidence_keys}
+            if threat == 'DNS_TUNNELLING' and self.dns_tunnel_candidate:
+                evidence['dns_candidate_pattern'] = tunnel_reason
             evidence['confidence_kind'] = 'heuristic strength' if source == DetectorType.RULE else 'synthetic-trained model posterior'
             if threat == 'DGA_DOMAINS':
                 evidence['observed_dns_name'] = event.dns_name
@@ -121,6 +131,7 @@ class Pipeline:
                     state_evictions=self.extractor.evictions, active_sources=len(self.extractor.sources),
                     dga_detector='public-lexical-model' if self.dga_model.enabled else 'conservative-lexical-guard',
                     dga_candidate_enabled=self.dga_model.enabled,
+                    dns_tunnel_candidate_enabled=self.dns_tunnel_candidate,
                     rate_window_resolution_ms=self.extractor.global_rates.resolution_ms,
                     source_entropy_partial=bool(self.extractor.global_rates.sources.get(None)),
                     processing_p95_ms=timings[min(len(timings)-1, int(len(timings)*.95))] if timings else 0)

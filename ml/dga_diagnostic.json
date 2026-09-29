@@ -1,0 +1,6292 @@
+{
+  "generated_at_utc": "2026-09-29T18:09:20.312586+00:00",
+  "scope": "Diagnostic of existing inspected data; not a new final evaluation",
+  "fixed_gate": {
+    "min_recall": 0.8,
+    "min_precision": 0.95,
+    "max_false_positive_rate": 0.02
+  },
+  "fixed_threshold": 0.9,
+  "candidate_enabled": false,
+  "frozen_hashes_before": {
+    "ml/artifact.json": "4d8e08323374535789e21f9f7cd1ee3f1c84b663ce555e67bb4ced57c95e8010",
+    "ml/artifact.sha256": "81e4ef2dc7bdff28a82225e803c3e5ab675f3a3979b273a0ac3bef34241c284b",
+    "ml/dga_v2.json": "c0314dd5f1fe360db11e2494326fd6e99f267d6e920fa091f6c9fcebc796996e",
+    "ml/dga_v2.sha256": "fb134985e6fd255935bb80fa4f77a73fc490957c0b669afd6bf290f9271ae080",
+    "ml/public_dga.json": "a5766baa18463d25a5329596a8373849d4a41093c8625d694cd8dfe79e8ce7ad",
+    "ml/public_dga.sha256": "2448b494f1681add97587debacbbc0f2ecd089e054c695ebf085b2cdcb126c06",
+    "ml/dga_v2_evaluation.json": "fb2f4218d43d77c6a310547ccd7aa48f2b343b8579b7975714ddb0ca530cbf70",
+    "data/umudga_expanded_manifest.json": "4daf4448f4a3437ff085754c49d9c90520b569577c8c5ba80dd8e5795b828e76"
+  },
+  "frozen_hashes_after": {
+    "ml/artifact.json": "4d8e08323374535789e21f9f7cd1ee3f1c84b663ce555e67bb4ced57c95e8010",
+    "ml/artifact.sha256": "81e4ef2dc7bdff28a82225e803c3e5ab675f3a3979b273a0ac3bef34241c284b",
+    "ml/dga_v2.json": "c0314dd5f1fe360db11e2494326fd6e99f267d6e920fa091f6c9fcebc796996e",
+    "ml/dga_v2.sha256": "fb134985e6fd255935bb80fa4f77a73fc490957c0b669afd6bf290f9271ae080",
+    "ml/public_dga.json": "a5766baa18463d25a5329596a8373849d4a41093c8625d694cd8dfe79e8ce7ad",
+    "ml/public_dga.sha256": "2448b494f1681add97587debacbbc0f2ecd089e054c695ebf085b2cdcb126c06",
+    "ml/dga_v2_evaluation.json": "fb2f4218d43d77c6a310547ccd7aa48f2b343b8579b7975714ddb0ca530cbf70",
+    "data/umudga_expanded_manifest.json": "4daf4448f4a3437ff085754c49d9c90520b569577c8c5ba80dd8e5795b828e76"
+  },
+  "source_sha256": {
+    "datasets/diagnose_dga.py": "145a7dae6c8a3ed10b0c76f81b88b427df89434dc2d664e311f201f2caa97066",
+    "datasets/train_dga_v2.py": "15b26610f82969729c0fa1d69f147dd964858f37a5fa03b7b247591395446009",
+    "ml/dga.py": "0a03098bf4cc22d8f5b7ff5fe3bd75d82d735479730e1890a7f99bedb9d6c0b7",
+    "features/extractor.py": "ae9e7361704b581a6ae63113447f1d984ee51970a1ee98b8e5fb70ff3f9acffc",
+    "detection/pipeline.py": "5f8b6809a81c45374c1fb685aa53b6f5635be141278a1b86756a10aec5a3d7ee"
+  },
+  "provenance": {
+    "manifest_sha256": "4daf4448f4a3437ff085754c49d9c90520b569577c8c5ba80dd8e5795b828e76",
+    "excluded_conflicting_labels": 20,
+    "excluded_cross_split_labels": 0,
+    "dns_hard_negative_labels": 22336,
+    "family_splits": {
+      "train": [
+        "alureon",
+        "banjori",
+        "corebot",
+        "dircrypt",
+        "dyre",
+        "gozi_gpl",
+        "gozi_luther",
+        "gozi_nasa",
+        "gozi_rfc4343",
+        "matsnu",
+        "necurs",
+        "nymaim",
+        "padcrypt",
+        "pizd",
+        "pushdo",
+        "pykspa",
+        "pykspa_noise",
+        "qadars",
+        "qakbot",
+        "ramdo",
+        "ramnit",
+        "ranbyus_v1",
+        "ranbyus_v2",
+        "rovnix",
+        "shiotob",
+        "simda",
+        "suppobox_1",
+        "suppobox_2",
+        "suppobox_3",
+        "tempedreve",
+        "tinba",
+        "vawtrak_v1",
+        "vawtrak_v2",
+        "vawtrak_v3",
+        "zeus-newgoz"
+      ],
+      "validation": [
+        "cryptolocker",
+        "fobber_v1",
+        "fobber_v2",
+        "locky",
+        "murofet_v1",
+        "murofet_v2",
+        "murofet_v3",
+        "proslikefan"
+      ],
+      "test": [
+        "bedep",
+        "ccleaner",
+        "chinad",
+        "kraken_v1",
+        "kraken_v2",
+        "sisron",
+        "symmi"
+      ]
+    },
+    "split_counts": {
+      "train": {
+        "BENIGN": 67715,
+        "DGA": 69993
+      },
+      "validation": {
+        "BENIGN": 15236,
+        "DGA": 80000
+      },
+      "test": {
+        "BENIGN": 14910,
+        "DGA": 60577
+      }
+    }
+  },
+  "errors": {
+    "validation": {
+      "metrics": {
+        "tp": 73577,
+        "fn": 6423,
+        "fp": 268,
+        "tn": 14968,
+        "precision": 0.9963707766267181,
+        "recall": 0.9197125,
+        "false_positive_rate": 0.0175899186138094,
+        "per_family": {
+          "cryptolocker": {
+            "tp": 9787,
+            "fn": 213,
+            "fp": 0,
+            "tn": 0,
+            "precision": 1.0,
+            "recall": 0.9787,
+            "false_positive_rate": null
+          },
+          "fobber_v1": {
+            "tp": 9989,
+            "fn": 11,
+            "fp": 0,
+            "tn": 0,
+            "precision": 1.0,
+            "recall": 0.9989,
+            "false_positive_rate": null
+          },
+          "fobber_v2": {
+            "tp": 8744,
+            "fn": 1256,
+            "fp": 0,
+            "tn": 0,
+            "precision": 1.0,
+            "recall": 0.8744,
+            "false_positive_rate": null
+          },
+          "legit": {
+            "tp": 0,
+            "fn": 0,
+            "fp": 268,
+            "tn": 14968,
+            "precision": 0.0,
+            "recall": null,
+            "false_positive_rate": 0.0175899186138094
+          },
+          "locky": {
+            "tp": 8804,
+            "fn": 1196,
+            "fp": 0,
+            "tn": 0,
+            "precision": 1.0,
+            "recall": 0.8804,
+            "false_positive_rate": null
+          },
+          "murofet_v1": {
+            "tp": 10000,
+            "fn": 0,
+            "fp": 0,
+            "tn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "false_positive_rate": null
+          },
+          "murofet_v2": {
+            "tp": 9958,
+            "fn": 42,
+            "fp": 0,
+            "tn": 0,
+            "precision": 1.0,
+            "recall": 0.9958,
+            "false_positive_rate": null
+          },
+          "murofet_v3": {
+            "tp": 10000,
+            "fn": 0,
+            "fp": 0,
+            "tn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "false_positive_rate": null
+          },
+          "proslikefan": {
+            "tp": 6295,
+            "fn": 3705,
+            "fp": 0,
+            "tn": 0,
+            "precision": 1.0,
+            "recall": 0.6295,
+            "false_positive_rate": null
+          }
+        }
+      },
+      "patterns": {
+        "digits_only": {
+          "tn": 77
+        },
+        "hexadecimal_shaped": {
+          "fp": 2,
+          "tn": 2
+        },
+        "hyphenated": {
+          "tn": 1495,
+          "fp": 22
+        },
+        "letters_only_long": {
+          "tn": 2585,
+          "fp": 153,
+          "tp": 45104,
+          "fn": 338
+        },
+        "letters_only_short": {
+          "tn": 9423,
+          "fp": 77,
+          "tp": 18479,
+          "fn": 6085
+        },
+        "mixed_alphanumeric": {
+          "tn": 1386,
+          "fp": 14,
+          "tp": 9994
+        }
+      },
+      "feature_bins": {
+        "length": {
+          "[0, 8)": {
+            "tn": 5654,
+            "fp": 18,
+            "tp": 2110,
+            "fn": 2736
+          },
+          "[12, 16)": {
+            "tn": 2563,
+            "fp": 74,
+            "tp": 19543,
+            "fn": 312
+          },
+          "[16, 20)": {
+            "tn": 691,
+            "fp": 61,
+            "tp": 15699,
+            "fn": 26
+          },
+          "[20, 32)": {
+            "tn": 180,
+            "fp": 45,
+            "tp": 9850
+          },
+          "[32, +inf)": {
+            "fp": 3,
+            "tp": 10006
+          },
+          "[8, 12)": {
+            "tn": 5880,
+            "fp": 67,
+            "tp": 16369,
+            "fn": 3349
+          }
+        },
+        "entropy": {
+          "[0, 2)": {
+            "tn": 1440,
+            "fp": 1,
+            "tp": 52,
+            "fn": 140
+          },
+          "[2, 3)": {
+            "tn": 8913,
+            "fp": 81,
+            "tp": 12862,
+            "fn": 4905
+          },
+          "[3, 3.5)": {
+            "tn": 4163,
+            "fp": 146,
+            "fn": 1352,
+            "tp": 28749
+          },
+          "[3.5, 4)": {
+            "tn": 450,
+            "fp": 39,
+            "tp": 19137,
+            "fn": 26
+          },
+          "[4, +inf)": {
+            "tn": 2,
+            "fp": 1,
+            "tp": 12777
+          }
+        },
+        "digit_ratio": {
+          "[0, 1e-09)": {
+            "tn": 13385,
+            "fp": 249,
+            "tp": 63583,
+            "fn": 6423
+          },
+          "[0.25, 0.5)": {
+            "tn": 541,
+            "fp": 8,
+            "tp": 7664
+          },
+          "[0.5, 1)": {
+            "tn": 285,
+            "fp": 3,
+            "tp": 111
+          },
+          "[1, +inf)": {
+            "tn": 77
+          },
+          "[1e-09, 0.25)": {
+            "tn": 680,
+            "fp": 8,
+            "tp": 2219
+          }
+        },
+        "bigram_surprise": {
+          "[0, 0.5)": {
+            "tn": 2240,
+            "fp": 35,
+            "fn": 41,
+            "tp": 3
+          },
+          "[0.5, 0.8)": {
+            "tn": 7818,
+            "fp": 165,
+            "tp": 3974,
+            "fn": 1407
+          },
+          "[0.8, +inf)": {
+            "tn": 4910,
+            "fp": 68,
+            "tp": 69600,
+            "fn": 4975
+          }
+        },
+        "vowel_ratio": {
+          "[0, 0.2)": {
+            "tn": 1448,
+            "fp": 33,
+            "tp": 43663,
+            "fn": 1927
+          },
+          "[0.2, 0.4)": {
+            "tn": 7266,
+            "fp": 148,
+            "tp": 27526,
+            "fn": 3160
+          },
+          "[0.4, 0.6)": {
+            "tn": 5826,
+            "fp": 86,
+            "tp": 2330,
+            "fn": 1223
+          },
+          "[0.6, +inf)": {
+            "tn": 428,
+            "fp": 1,
+            "tp": 58,
+            "fn": 113
+          }
+        }
+      },
+      "outcome_profiles": {
+        "tp": {
+          "count": 73577,
+          "means": {
+            "log_length": 2.848511522772228,
+            "entropy": 3.470845867096148,
+            "digit_ratio": 0.042264941977511385,
+            "vowel_ratio": 0.17595551633735337,
+            "hyphen_ratio": 0.0,
+            "unique_ratio": 0.7496440250229816,
+            "consonant_run": 0.47943567452952507,
+            "digit_run": 0.00716862621986178,
+            "digit_transitions": 0.04091585345668015,
+            "repeat_ratio": 0.03162128164873329,
+            "length": 18.13850795764981,
+            "bigram_surprise": 0.9347675492300561
+          },
+          "score_median": 0.9948991786392728,
+          "length_median": 15
+        },
+        "fn": {
+          "count": 6423,
+          "means": {
+            "log_length": 2.2072852562902363,
+            "entropy": 2.7175610031484108,
+            "digit_ratio": 0.0,
+            "vowel_ratio": 0.2686766986578784,
+            "hyphen_ratio": 0.0,
+            "unique_ratio": 0.8585000107639336,
+            "consonant_run": 0.49793082350504664,
+            "digit_run": 0.0,
+            "digit_transitions": 0.0,
+            "repeat_ratio": 0.03605209891373586,
+            "length": 8.276194924490113,
+            "bigram_surprise": 0.876737248946497
+          },
+          "score_median": 0.6721507619914711,
+          "length_median": 8
+        },
+        "fp": {
+          "count": 268,
+          "means": {
+            "log_length": 2.6982716122914012,
+            "entropy": 3.131529849470613,
+            "digit_ratio": 0.02089296482291148,
+            "vowel_ratio": 0.3347814230304601,
+            "hyphen_ratio": 0.0061687917061625025,
+            "unique_ratio": 0.7067569893527331,
+            "consonant_run": 0.2594746674163075,
+            "digit_run": 0.008786321605298969,
+            "digit_transitions": 0.02646156768211536,
+            "repeat_ratio": 0.03669986954036079,
+            "length": 14.76865671641791,
+            "bigram_surprise": 0.6819401424383462
+          },
+          "score_median": 0.9551429653481334,
+          "length_median": 14.0
+        },
+        "tn": {
+          "count": 14968,
+          "means": {
+            "log_length": 2.2411395331544965,
+            "entropy": 2.6858549290811333,
+            "digit_ratio": 0.0348630244291183,
+            "vowel_ratio": 0.3525220588500666,
+            "hyphen_ratio": 0.010381589710037017,
+            "unique_ratio": 0.8256309454695808,
+            "consonant_run": 0.2983715735516409,
+            "digit_run": 0.03382025864435597,
+            "digit_transitions": 0.01971213519712023,
+            "repeat_ratio": 0.02891613578057682,
+            "length": 9.061598075895244,
+            "bigram_surprise": 0.6876878622188095
+          },
+          "score_median": 0.0180301223401823,
+          "length_median": 9.0
+        }
+      },
+      "guard_failures_on_positives": {
+        "length+bigram_surprise": 632,
+        "length": 11692,
+        "length+entropy": 43281,
+        "length+entropy+bigram_surprise": 4539,
+        "passes": 19374,
+        "bigram_surprise": 242,
+        "entropy": 228,
+        "entropy+bigram_surprise": 12
+      },
+      "false_negatives": {
+        "cryptolocker": {
+          "missed": {
+            "count": 213,
+            "means": {
+              "log_length": 2.6307613705183512,
+              "entropy": 3.1576470415439513,
+              "digit_ratio": 0.0,
+              "vowel_ratio": 0.33332989389327417,
+              "hyphen_ratio": 0.0,
+              "unique_ratio": 0.7543999036956783,
+              "consonant_run": 0.3134086570706289,
+              "digit_run": 0.0,
+              "digit_transitions": 0.0,
+              "repeat_ratio": 0.03422414830865535,
+              "length": 12.92018779342723,
+              "bigram_surprise": 0.8288835577567972
+            },
+            "score_median": 0.8190827540630194,
+            "length_median": 13
+          },
+          "detected": {
+            "count": 9787,
+            "means": {
+              "log_length": 2.671625832311053,
+              "entropy": 3.2946732262186877,
+              "digit_ratio": 0.0,
+              "vowel_ratio": 0.19675337434609938,
+              "hyphen_ratio": 0.0,
+              "unique_ratio": 0.7848169864262641,
+              "consonant_run": 0.5156729735303354,
+              "digit_run": 0.0,
+              "digit_transitions": 0.0,
+              "repeat_ratio": 0.03719399023373684,
+              "length": 13.50679472770001,
+              "bigram_surprise": 0.922553052342569
+            },
+            "score_median": 0.9953707583437019,
+            "length_median": 14
+          },
+          "examples": [
+            {
+              "label": "ondbabaosaio",
+              "score": 0.10390322212763371,
+              "features": {
+                "log_length": 2.5649493574615367,
+                "entropy": 2.6258145836939115,
+                "digit_ratio": 0.0,
+                "vowel_ratio": 0.5833333333333334,
+                "hyphen_ratio": 0.0,
+                "unique_ratio": 0.5833333333333334,
+                "consonant_run": 0.25,
+                "digit_run": 0.0,
+                "digit_transitions": 0.0,
+                "repeat_ratio": 0.0,
+                "length": 12,
+                "bigram_surprise": 0.7272727272727273
+              },
+              "family": "cryptolocker"
+            },
+            {
+              "label": "kinskhomspfs",
+              "score": 0.12238627274496597,
+              "features": {
+                "log_length": 2.5649493574615367,
+                "entropy": 3.0220552088742005,
+                "digit_ratio": 0.0,
+                "vowel_ratio": 0.16666666666666666,
+                "hyphen_ratio": 0.0,
+                "unique_ratio": 0.75,
+                "consonant_run": 0.4166666666666667,
+                "digit_run": 0.0,
+                "digit_transitions": 0.0,
+                "repeat_ratio": 0.0,
+                "length": 12,
+                "bigram_surprise": 0.8181818181818182
+              },
+              "family": "cryptolocker"
+            },
+            {
+              "label": "aduanshtffie",
+              "score": 0.12606640646541836,
+              "features": {
+                "log_length": 2.5649493574615367,
+                "entropy": 3.2516291673878226,
+                "digit_ratio": 0.0,
+                "vowel_ratio": 0.4166666666666667,
+                "hyphen_ratio": 0.0,
+                "unique_ratio": 0.8333333333333334,
+                "consonant_run": 0.5,
+                "digit_run": 0.0,
+                "digit_transitions": 0.0,
+                "repeat_ratio": 0.08333333333333333,
+                "length": 12,
+                "bigram_surprise": 0.9090909090909091
+              },
+              "family": "cryptolocker"
+            }
+          ]
+        },
+        "fobber_v1": {
+          "missed": {
+            "count": 11,
+            "means": {
+              "log_length": 2.8903717578961645,
+              "entropy": 3.3519073598512232,
+              "digit_ratio": 0.0,
+              "vowel_ratio": 0.37433155080213903,
+              "hyphen_ratio": 0.0,
+              "unique_ratio": 0.6684491978609626,
+              "consonant_run": 0.22459893048128343,
+              "digit_run": 0.0,
+              "digit_transitions": 0.0,
+              "repeat_ratio": 0.0427807486631016,
+              "length": 17,
+              "bigram_surprise": 0.8068181818181818
+            },
+            "score_median": 0.8300680248096484,
+            "length_median": 17
+          },
+          "detected": {
+            "count": 9989,
+            "means": {
+              "log_length": 2.8903717578961645,
+              "entropy": 3.537762356483113,
+              "digit_ratio": 0.0,
+              "vowel_ratio": 0.1932007561258561,
+              "hyphen_ratio": 0.0,
+              "unique_ratio": 0.7440831973994924,
+              "consonant_run": 0.4714362269084228,
+              "digit_run": 0.0,
+              "digit_transitions": 0.0,
+              "repeat_ratio": 0.03685819106899943,
+              "length": 17,
+              "bigram_surprise": 0.9246358494343778
+            },
+            "score_median": 0.99568443823446,
+            "length_median": 17
+          },
+          "examples": [
+            {
+              "label": "espubloticcefmobz",
+              "score": 0.5935369828019943,
+              "features": {
+                "log_length": 2.8903717578961645,
+                "entropy": 3.616874605956222,
+                "digit_ratio": 0.0,
+                "vowel_ratio": 0.35294117647058826,
+                "hyphen_ratio": 0.0,
+                "unique_ratio": 0.7647058823529411,
+                "consonant_run": 0.11764705882352941,
+                "digit_run": 0.0,
+                "digit_transitions": 0.0,
+                "repeat_ratio": 0.058823529411764705,
+                "length": 17,
+                "bigram_surprise": 0.75
+              },
+              "family": "fobber_v1"
+            },
+            {
+              "label": "mircfurooxdoimzes",
+              "score": 0.6529039751413914,
+              "features": {
+                "log_length": 2.8903717578961645,
+                "entropy": 3.4548223999466057,
+                "digit_ratio": 0.0,
+                "vowel_ratio": 0.4117647058823529,
+                "hyphen_ratio": 0.0,
+                "unique_ratio": 0.7058823529411765,
+                "consonant_run": 0.17647058823529413,
+                "digit_run": 0.0,
+                "digit_transitions": 0.0,
+                "repeat_ratio": 0.058823529411764705,
+                "length": 17,
+                "bigram_surprise": 0.8125
+              },
+              "family": "fobber_v1"
+            },
+            {
+              "label": "cnfviaonairrigent",
+              "score": 0.7392882758618304,
+              "features": {
+                "log_length": 2.8903717578961645,
+                "entropy": 3.29277019393699,
+                "digit_ratio": 0.0,
+                "vowel_ratio": 0.4117647058823529,
+                "hyphen_ratio": 0.0,
+                "unique_ratio": 0.6470588235294118,
+                "consonant_run": 0.23529411764705882,
+                "digit_run": 0.0,
+                "digit_transitions": 0.0,
+                "repeat_ratio": 0.058823529411764705,
+                "length": 17,
+                "bigram_surprise": 0.75
+              },
+              "family": "fobber_v1"
+            }
+          ]
+        },
+        "fobber_v2": {
+          "missed": {
+            "count": 1256,
+            "means": {
+              "log_length": 2.3978952727983707,
+              "entropy": 2.9556151248689764,
+              "digit_ratio": 0.0,
+              "vowel_ratio": 0.3062898089171975,
+              "hyphen_ratio": 0.0,
+              "unique_ratio": 0.8247611464968153,
+              "consonant_run": 0.3955414012738854,
+              "digit_run": 0.0,
+              "digit_transitions": 0.0,
+              "repeat_ratio": 0.03423566878980892,
+              "length": 10,
+              "bigram_surprise": 0.8560686482661005
+            },
+            "score_median": 0.7711745642280169,
+            "length_median": 10.0
+          },
+          "detected": {
+            "count": 8744,
+            "means": {
+              "log_length": 2.3978952727983707,
+              "entropy": 3.0033434134729045,
+              "digit_ratio": 0.0,
+              "vowel_ratio": 0.1763266239707228,
+              "hyphen_ratio": 0.0,
+              "unique_ratio": 0.8463746569075938,
+              "consonant_run": 0.6123856358645928,
+              "digit_run": 0.0,
+              "digit_transitions": 0.0,
+              "repeat_ratio": 0.03395471180237877,
+              "length": 10,
+              "bigram_surprise": 0.9365660262275084
+            },
+            "score_median": 0.9933373257002989,
+            "length_median": 10.0
+          },
+          "examples": [
+            {
+              "label": "coshdealme",
+              "score": 0.009784036239378489,
+              "features": {
+                "log_length": 2.3978952727983707,
+                "entropy": 3.1219280948873624,
+                "digit_ratio": 0.0,
+                "vowel_ratio": 0.4,
+                "hyphen_ratio": 0.0,
+                "unique_ratio": 0.9,
+                "consonant_run": 0.3,
+                "digit_run": 0.0,
+                "digit_transitions": 0.0,
+                "repeat_ratio": 0.0,
+                "length": 10,
+                "bigram_surprise": 0.4444444444444444
+              },
+              "family": "fobber_v2"
+            },
+            {
+              "label": "iteletjasm",
+              "score": 0.01076185164147655,
+              "features": {
+                "log_length": 2.3978952727983707,
+                "entropy": 2.9219280948873623,
+                "digit_ratio": 0.0,
+                "vowel_ratio": 0.4,
+                "hyphen_ratio": 0.0,
+                "unique_ratio": 0.8,
+                "consonant_run": 0.2,
+                "digit_run": 0.0,
+                "digit_transitions": 0.0,
+                "repeat_ratio": 0.0,
+                "length": 10,
+                "bigram_surprise": 0.5555555555555556
+              },
+              "family": "fobber_v2"
+            },
+            {
+              "label": "bobiesocou",
+              "score": 0.011106545332189915,
+              "features": {
+                "log_length": 2.3978952727983707,
+                "entropy": 2.6464393446710157,
+                "digit_ratio": 0.0,
+                "vowel_ratio": 0.6,
+                "hyphen_ratio": 0.0,
+                "unique_ratio": 0.7,
+                "consonant_run": 0.1,
+                "digit_run": 0.0,
+                "digit_transitions": 0.0,
+                "repeat_ratio": 0.0,
+                "length": 10,
+                "bigram_surprise": 0.6666666666666666
+              },
+              "family": "fobber_v2"
+            }
+          ]
+        },
+        "locky": {
+          "missed": {
+            "count": 1196,
+            "means": {
+              "log_length": 2.2460523135432737,
+              "entropy": 2.7730814872308356,
+              "digit_ratio": 0.0,
+              "vowel_ratio": 0.2874093152650353,
+              "hyphen_ratio": 0.0,
+              "unique_ratio": 0.8545057620560522,
+              "consonant_run": 0.46196922128028267,
+              "digit_run": 0.0,
+              "digit_transitions": 0.0,
+              "repeat_ratio": 0.035584763497044626,
+              "length": 8.584448160535118,
+              "bigram_surprise": 0.8600032887031215
+            },
+            "score_median": 0.6755175928762144,
+            "length_median": 8.0
+          },
+          "detected": {
+            "count": 8804,
+            "means": {
+              "log_length": 2.5691248588349698,
+              "entropy": 3.1754247117308156,
+              "digit_ratio": 0.0,
+              "vowel_ratio": 0.18735142736599295,
+              "hyphen_ratio": 0.0,
+              "unique_ratio": 0.8050626215193791,
+              "consonant_run": 0.558738566403782,
+              "digit_run": 0.0,
+              "digit_transitions": 0.0,
+              "repeat_ratio": 0.03650488598506879,
+              "length": 12.42548841435711,
+              "bigram_surprise": 0.9280502334696451
+            },
+            "score_median": 0.9950093083714895,
+            "length_median": 13.0
+          },
+          "examples": [
+            {
+              "label": "ralavibia",
+              "score": 0.006983934855882016,
+              "features": {
+                "log_length": 2.302585092994046,
+                "entropy": 2.4193819456463714,
+                "digit_ratio": 0.0,
+                "vowel_ratio": 0.5555555555555556,
+                "hyphen_ratio": 0.0,
+                "unique_ratio": 0.6666666666666666,
+                "consonant_run": 0.1111111111111111,
+                "digit_run": 0.0,
+                "digit_transitions": 0.0,
+                "repeat_ratio": 0.0,
+                "length": 9,
+                "bigram_surprise": 0.75
+              },
+              "family": "locky"
+            },
+            {
+              "label": "tvoecheb",
+              "score": 0.00799484928891887,
+              "features": {
+                "log_length": 2.1972245773362196,
+                "entropy": 2.75,
+                "digit_ratio": 0.0,
+                "vowel_ratio": 0.375,
+                "hyphen_ratio": 0.0,
+                "unique_ratio": 0.875,
+                "consonant_run": 0.25,
+                "digit_run": 0.0,
+                "digit_transitions": 0.0,
+                "repeat_ratio": 0.0,
+                "length": 8,
+                "bigram_surprise": 0.7142857142857143
+              },
+              "family": "locky"
+            },
+            {
+              "label": "vviesans",
+              "score": 0.008287652137780606,
+              "features": {
+                "log_length": 2.1972245773362196,
+                "entropy": 2.5,
+                "digit_ratio": 0.0,
+                "vowel_ratio": 0.375,
+                "hyphen_ratio": 0.0,
+                "unique_ratio": 0.75,
+                "consonant_run": 0.25,
+                "digit_run": 0.0,
+                "digit_transitions": 0.0,
+                "repeat_ratio": 0.125,
+                "length": 8,
+                "bigram_surprise": 0.7142857142857143
+              },
+              "family": "locky"
+            }
+          ]
+        },
+        "murofet_v1": {
+          "missed": {
+            "count": 0,
+            "means": {},
+            "score_median": null,
+            "length_median": null
+          },
+          "detected": {
+            "count": 10000,
+            "means": {
+              "log_length": 3.2637001903767664,
+              "entropy": 3.883797903780544,
+              "digit_ratio": 0.0,
+              "vowel_ratio": 0.18736720033235482,
+              "hyphen_ratio": 0.0,
+              "unique_ratio": 0.6531476697538906,
+              "consonant_run": 0.3945486949364887,
+              "digit_run": 0.0,
+              "digit_transitions": 0.0,
+              "repeat_ratio": 0.0213093741497874,
+              "length": 25.2638,
+              "bigram_surprise": 0.9267790132537252
+            },
+            "score_median": 0.99568443823446,
+            "length_median": 25.0
+          },
+          "examples": []
+        },
+        "murofet_v2": {
+          "missed": {
+            "count": 42,
+            "means": {
+              "log_length": 2.7453014026829696,
+              "entropy": 3.139619239651194,
+              "digit_ratio": 0.0,
+              "vowel_ratio": 0.3153086001300287,
+              "hyphen_ratio": 0.0,
+              "unique_ratio": 0.6769935421721136,
+              "consonant_run": 0.2935743819672391,
+              "digit_run": 0.0,
+              "digit_transitions": 0.0,
+              "repeat_ratio": 0.05575723879295308,
+              "length": 14.619047619047619,
+              "bigram_surprise": 0.8265068265068265
+            },
+            "score_median": 0.8381592136202283,
+            "length_median": 15.0
+          },
+          "detected": {
+            "count": 9958,
+            "means": {
+              "log_length": 2.7738326045770823,
+              "entropy": 3.3397888390193264,
+              "digit_ratio": 0.0,
+              "vowel_ratio": 0.17075808973780454,
+              "hyphen_ratio": 0.0,
+              "unique_ratio": 0.7375976505307195,
+              "consonant_run": 0.5332439360532351,
+              "digit_run": 0.0,
+              "digit_transitions": 0.0,
+              "repeat_ratio": 0.04284534129256965,
+              "length": 15.049106246234183,
+              "bigram_surprise": 0.9298422081812321
+            },
+            "score_median": 0.9955746910535623,
+            "length_median": 15.0
+          },
+          "examples": [
+            {
+              "label": "rmunxizinou",
+              "score": 0.09032719807230712,
+              "features": {
+                "log_length": 2.4849066497880004,
+                "entropy": 2.913977073182752,
+                "digit_ratio": 0.0,
+                "vowel_ratio": 0.45454545454545453,
+                "hyphen_ratio": 0.0,
+                "unique_ratio": 0.7272727272727273,
+                "consonant_run": 0.18181818181818182,
+                "digit_run": 0.0,
+                "digit_transitions": 0.0,
+                "repeat_ratio": 0.0,
+                "length": 11,
+                "bigram_surprise": 0.8
+              },
+              "family": "murofet_v2"
+            },
+            {
+              "label": "dlluskltokuntu",
+              "score": 0.35743481500531243,
+              "features": {
+                "log_length": 2.70805020110221,
+                "entropy": 2.8423709931771084,
+                "digit_ratio": 0.0,
+                "vowel_ratio": 0.2857142857142857,
+                "hyphen_ratio": 0.0,
+                "unique_ratio": 0.5714285714285714,
+                "consonant_run": 0.2857142857142857,
+                "digit_run": 0.0,
+                "digit_transitions": 0.0,
+                "repeat_ratio": 0.07142857142857142,
+                "length": 14,
+                "bigram_surprise": 0.7692307692307693
+              },
+              "family": "murofet_v2"
+            },
+            {
+              "label": "orlteuepokisvgm",
+              "score": 0.37388982311078583,
+              "features": {
+                "log_length": 2.772588722239781,
+                "entropy": 3.640223928941852,
+                "digit_ratio": 0.0,
+                "vowel_ratio": 0.4,
+                "hyphen_ratio": 0.0,
+                "unique_ratio": 0.8666666666666667,
+                "consonant_run": 0.26666666666666666,
+                "digit_run": 0.0,
+                "digit_transitions": 0.0,
+                "repeat_ratio": 0.0,
+                "length": 15,
+                "bigram_surprise": 0.7857142857142857
+              },
+              "family": "murofet_v2"
+            }
+          ]
+        },
+        "murofet_v3": {
+          "missed": {
+            "count": 0,
+            "means": {},
+            "score_median": null,
+            "length_median": null
+          },
+          "detected": {
+            "count": 10000,
+            "means": {
+              "log_length": 3.6620631191702664,
+              "entropy": 4.385546517796489,
+              "digit_ratio": 0.3109727635879355,
+              "vowel_ratio": 0.13150804772062963,
+              "hyphen_ratio": 0.0,
+              "unique_ratio": 0.6200877001748013,
+              "consonant_run": 0.17406957530667322,
+              "digit_run": 0.05274460113787702,
+              "digit_transitions": 0.3010465749782155,
+              "repeat_ratio": 0.012994732489020788,
+              "length": 37.9891,
+              "bigram_surprise": 0.9660928141413894
+            },
+            "score_median": 0.992653074735826,
+            "length_median": 38.0
+          },
+          "examples": []
+        },
+        "proslikefan": {
+          "missed": {
+            "count": 3705,
+            "means": {
+              "log_length": 2.0976813094061346,
+              "entropy": 2.5869696245036855,
+              "digit_ratio": 0.0,
+              "vowel_ratio": 0.24531957321431005,
+              "hyphen_ratio": 0.0,
+              "unique_ratio": 0.8798334219386851,
+              "consonant_run": 0.5579858932490511,
+              "digit_run": 0.0,
+              "digit_transitions": 0.0,
+              "repeat_ratio": 0.036680463785726945,
+              "length": 7.22753036437247,
+              "bigram_surprise": 0.8926738758317706
+            },
+            "score_median": 0.6052742572329777,
+            "length_median": 7
+          },
+          "detected": {
+            "count": 6295,
+            "means": {
+              "log_length": 2.2399645919266438,
+              "entropy": 2.7993670969358564,
+              "digit_ratio": 0.0,
+              "vowel_ratio": 0.16050323958981624,
+              "hyphen_ratio": 0.0,
+              "unique_ratio": 0.870069118508356,
+              "consonant_run": 0.6750294846800009,
+              "digit_run": 0.0,
+              "digit_transitions": 0.0,
+              "repeat_ratio": 0.03279126221937977,
+              "length": 8.475138999205718,
+              "bigram_surprise": 0.9474508617320373
+            },
+            "score_median": 0.9841315362260811,
+            "length_median": 8
+          },
+          "examples": [
+            {
+              "label": "kozvia",
+              "score": 0.005091132225931326,
+              "features": {
+                "log_length": 1.9459101490553132,
+                "entropy": 2.584962500721156,
+                "digit_ratio": 0.0,
+                "vowel_ratio": 0.5,
+                "hyphen_ratio": 0.0,
+                "unique_ratio": 1.0,
+                "consonant_run": 0.3333333333333333,
+                "digit_run": 0.0,
+                "digit_transitions": 0.0,
+                "repeat_ratio": 0.0,
+                "length": 6,
+                "bigram_surprise": 1.0
+              },
+              "family": "proslikefan"
+            },
+            {
+              "label": "tirdro",
+              "score": 0.005193772984038698,
+              "features": {
+                "log_length": 1.9459101490553132,
+                "entropy": 2.2516291673878226,
+                "digit_ratio": 0.0,
+                "vowel_ratio": 0.3333333333333333,
+                "hyphen_ratio": 0.0,
+                "unique_ratio": 0.8333333333333334,
+                "consonant_run": 0.5,
+                "digit_run": 0.0,
+                "digit_transitions": 0.0,
+                "repeat_ratio": 0.0,
+                "length": 6,
+                "bigram_surprise": 0.6
+              },
+              "family": "proslikefan"
+            },
+            {
+              "label": "futess",
+              "score": 0.005622465137164039,
+              "features": {
+                "log_length": 1.9459101490553132,
+                "entropy": 2.2516291673878226,
+                "digit_ratio": 0.0,
+                "vowel_ratio": 0.3333333333333333,
+                "hyphen_ratio": 0.0,
+                "unique_ratio": 0.8333333333333334,
+                "consonant_run": 0.3333333333333333,
+                "digit_run": 0.0,
+                "digit_transitions": 0.0,
+                "repeat_ratio": 0.16666666666666666,
+                "length": 6,
+                "bigram_surprise": 0.6
+              },
+              "family": "proslikefan"
+            }
+          ]
+        }
+      },
+      "error_examples": {
+        "fp": [
+          {
+            "label": "voyage-prive",
+            "score": 0.9010920181160706,
+            "features": {
+              "log_length": 2.5649493574615367,
+              "entropy": 3.2516291673878226,
+              "digit_ratio": 0.0,
+              "vowel_ratio": 0.4166666666666667,
+              "hyphen_ratio": 0.08333333333333333,
+              "unique_ratio": 0.8333333333333334,
+              "consonant_run": 0.16666666666666666,
+              "digit_run": 0.0,
+              "digit_transitions": 0.0,
+              "repeat_ratio": 0.0,
+              "length": 12,
+              "bigram_surprise": 0.8181818181818182
+            },
+            "family": "legit"
+          },
+          {
+            "label": "riseofagon",
+            "score": 0.9011542440594965,
+            "features": {
+              "log_length": 2.3978952727983707,
+              "entropy": 3.1219280948873624,
+              "digit_ratio": 0.0,
+              "vowel_ratio": 0.5,
+              "hyphen_ratio": 0.0,
+              "unique_ratio": 0.9,
+              "consonant_run": 0.1,
+              "digit_run": 0.0,
+              "digit_transitions": 0.0,
+              "repeat_ratio": 0.0,
+              "length": 10,
+              "bigram_surprise": 0.4444444444444444
+            },
+            "family": "legit"
+          },
+          {
+            "label": "statxyz",
+            "score": 0.9012610279732232,
+            "features": {
+              "log_length": 2.0794415416798357,
+              "entropy": 2.521640636343318,
+              "digit_ratio": 0.0,
+              "vowel_ratio": 0.14285714285714285,
+              "hyphen_ratio": 0.0,
+              "unique_ratio": 0.8571428571428571,
+              "consonant_run": 0.5714285714285714,
+              "digit_run": 0.0,
+              "digit_transitions": 0.0,
+              "repeat_ratio": 0.0,
+              "length": 7,
+              "bigram_surprise": 0.6666666666666666
+            },
+            "family": "legit"
+          },
+          {
+            "label": "twoeggz",
+            "score": 0.9012610279732232,
+            "features": {
+              "log_length": 2.0794415416798357,
+              "entropy": 2.521640636343318,
+              "digit_ratio": 0.0,
+              "vowel_ratio": 0.2857142857142857,
+              "hyphen_ratio": 0.0,
+              "unique_ratio": 0.8571428571428571,
+              "consonant_run": 0.42857142857142855,
+              "digit_run": 0.0,
+              "digit_transitions": 0.0,
+              "repeat_ratio": 0.14285714285714285,
+              "length": 7,
+              "bigram_surprise": 1.0
+            },
+            "family": "legit"
+          },
+          {
+            "label": "secretsantaorganizer",
+            "score": 0.9018295105261787,
+            "features": {
+              "log_length": 3.044522437723423,
+              "entropy": 3.308694969562842,
+              "digit_ratio": 0.0,
+              "vowel_ratio": 0.4,
+              "hyphen_ratio": 0.0,
+              "unique_ratio": 0.55,
+              "consonant_run": 0.1,
+              "digit_run": 0.0,
+              "digit_transitions": 0.0,
+              "repeat_ratio": 0.0,
+              "length": 20,
+              "bigram_surprise": 0.631578947368421
+            },
+            "family": "legit"
+          },
+          {
+            "label": "rgvqcsxqge",
+            "score": 0.995025594749813,
+            "features": {
+              "log_length": 2.3978952727983707,
+              "entropy": 2.9219280948873623,
+              "digit_ratio": 0.0,
+              "vowel_ratio": 0.1,
+              "hyphen_ratio": 0.0,
+              "unique_ratio": 0.8,
+              "consonant_run": 0.9,
+              "digit_run": 0.0,
+              "digit_transitions": 0.0,
+              "repeat_ratio": 0.0,
+              "length": 10,
+              "bigram_surprise": 1.0
+            },
+            "family": "legit"
+          },
+          {
+            "label": "5b6f22d57a052badc5aba601e4679ece",
+            "score": 0.9951069482620585,
+            "features": {
+              "log_length": 3.4965075614664802,
+              "entropy": 3.6556390622295662,
+              "digit_ratio": 0.53125,
+              "vowel_ratio": 0.21875,
+              "hyphen_ratio": 0.0,
+              "unique_ratio": 0.4375,
+              "consonant_run": 0.0625,
+              "digit_run": 0.125,
+              "digit_transitions": 0.46875,
+              "repeat_ratio": 0.03125,
+              "length": 32,
+              "bigram_surprise": 0.967741935483871
+            },
+            "family": "legit"
+          },
+          {
+            "label": "twopeasandtheirpod",
+            "score": 0.9953707583437019,
+            "features": {
+              "log_length": 2.9444389791664403,
+              "entropy": 3.5032583347756456,
+              "digit_ratio": 0.0,
+              "vowel_ratio": 0.3888888888888889,
+              "hyphen_ratio": 0.0,
+              "unique_ratio": 0.6666666666666666,
+              "consonant_run": 0.2222222222222222,
+              "digit_run": 0.0,
+              "digit_transitions": 0.0,
+              "repeat_ratio": 0.0,
+              "length": 18,
+              "bigram_surprise": 0.6470588235294118
+            },
+            "family": "legit"
+          },
+          {
+            "label": "xwb2uooia5o59avwxb",
+            "score": 0.9953707583437019,
+            "features": {
+              "log_length": 2.9444389791664403,
+              "entropy": 3.350209029099897,
+              "digit_ratio": 0.2222222222222222,
+              "vowel_ratio": 0.3888888888888889,
+              "hyphen_ratio": 0.0,
+              "unique_ratio": 0.6111111111111112,
+              "consonant_run": 0.2222222222222222,
+              "digit_run": 0.1111111111111111,
+              "digit_transitions": 0.3333333333333333,
+              "repeat_ratio": 0.05555555555555555,
+              "length": 18,
+              "bigram_surprise": 1.0
+            },
+            "family": "legit"
+          },
+          {
+            "label": "3prby6gy5cwzwj7",
+            "score": 0.9955746910535623,
+            "features": {
+              "log_length": 2.772588722239781,
+              "entropy": 3.640223928941852,
+              "digit_ratio": 0.26666666666666666,
+              "vowel_ratio": 0.0,
+              "hyphen_ratio": 0.0,
+              "unique_ratio": 0.8666666666666667,
+              "consonant_run": 0.3333333333333333,
+              "digit_run": 0.06666666666666667,
+              "digit_transitions": 0.4,
+              "repeat_ratio": 0.0,
+              "length": 15,
+              "bigram_surprise": 1.0
+            },
+            "family": "legit"
+          }
+        ],
+        "fn": [
+          {
+            "label": "kozvia",
+            "score": 0.005091132225931326,
+            "features": {
+              "log_length": 1.9459101490553132,
+              "entropy": 2.584962500721156,
+              "digit_ratio": 0.0,
+              "vowel_ratio": 0.5,
+              "hyphen_ratio": 0.0,
+              "unique_ratio": 1.0,
+              "consonant_run": 0.3333333333333333,
+              "digit_run": 0.0,
+              "digit_transitions": 0.0,
+              "repeat_ratio": 0.0,
+              "length": 6,
+              "bigram_surprise": 1.0
+            },
+            "family": "proslikefan"
+          },
+          {
+            "label": "tirdro",
+            "score": 0.005193772984038698,
+            "features": {
+              "log_length": 1.9459101490553132,
+              "entropy": 2.2516291673878226,
+              "digit_ratio": 0.0,
+              "vowel_ratio": 0.3333333333333333,
+              "hyphen_ratio": 0.0,
+              "unique_ratio": 0.8333333333333334,
+              "consonant_run": 0.5,
+              "digit_run": 0.0,
+              "digit_transitions": 0.0,
+              "repeat_ratio": 0.0,
+              "length": 6,
+              "bigram_surprise": 0.6
+            },
+            "family": "proslikefan"
+          },
+          {
+            "label": "futess",
+            "score": 0.005622465137164039,
+            "features": {
+              "log_length": 1.9459101490553132,
+              "entropy": 2.2516291673878226,
+              "digit_ratio": 0.0,
+              "vowel_ratio": 0.3333333333333333,
+              "hyphen_ratio": 0.0,
+              "unique_ratio": 0.8333333333333334,
+              "consonant_run": 0.3333333333333333,
+              "digit_run": 0.0,
+              "digit_transitions": 0.0,
+              "repeat_ratio": 0.16666666666666666,
+              "length": 6,
+              "bigram_surprise": 0.6
+            },
+            "family": "proslikefan"
+          },
+          {
+            "label": "aleset",
+            "score": 0.0059720317203712904,
+            "features": {
+              "log_length": 1.9459101490553132,
+              "entropy": 2.2516291673878226,
+              "digit_ratio": 0.0,
+              "vowel_ratio": 0.5,
+              "hyphen_ratio": 0.0,
+              "unique_ratio": 0.8333333333333334,
+              "consonant_run": 0.16666666666666666,
+              "digit_run": 0.0,
+              "digit_transitions": 0.0,
+              "repeat_ratio": 0.0,
+              "length": 6,
+              "bigram_surprise": 0.2
+            },
+            "family": "proslikefan"
+          },
+          {
+            "label": "faisap",
+            "score": 0.0059720317203712904,
+            "features": {
+              "log_length": 1.9459101490553132,
+              "entropy": 2.2516291673878226,
+              "digit_ratio": 0.0,
+              "vowel_ratio": 0.5,
+              "hyphen_ratio": 0.0,
+              "unique_ratio": 0.8333333333333334,
+              "consonant_run": 0.16666666666666666,
+              "digit_run": 0.0,
+              "digit_transitions": 0.0,
+              "repeat_ratio": 0.0,
+              "length": 6,
+              "bigram_surprise": 0.8
+            },
+            "family": "proslikefan"
+          },
+          {
+            "label": "zelbicvvui",
+            "score": 0.8997338437198319,
+            "features": {
+              "log_length": 2.3978952727983707,
+              "entropy": 2.9219280948873623,
+              "digit_ratio": 0.0,
+              "vowel_ratio": 0.4,
+              "hyphen_ratio": 0.0,
+              "unique_ratio": 0.8,
+              "consonant_run": 0.3,
+              "digit_run": 0.0,
+              "digit_transitions": 0.0,
+              "repeat_ratio": 0.1,
+              "length": 10,
+              "bigram_surprise": 0.8888888888888888
+            },
+            "family": "fobber_v2"
+          },
+          {
+            "label": "zeugqaiyby",
+            "score": 0.8997338437198319,
+            "features": {
+              "log_length": 2.3978952727983707,
+              "entropy": 3.1219280948873624,
+              "digit_ratio": 0.0,
+              "vowel_ratio": 0.4,
+              "hyphen_ratio": 0.0,
+              "unique_ratio": 0.9,
+              "consonant_run": 0.3,
+              "digit_run": 0.0,
+              "digit_transitions": 0.0,
+              "repeat_ratio": 0.0,
+              "length": 10,
+              "bigram_surprise": 1.0
+            },
+            "family": "fobber_v2"
+          },
+          {
+            "label": "haeamxriii",
+            "score": 0.8998113581216631,
+            "features": {
+              "log_length": 2.3978952727983707,
+              "entropy": 2.6464393446710157,
+              "digit_ratio": 0.0,
+              "vowel_ratio": 0.6,
+              "hyphen_ratio": 0.0,
+              "unique_ratio": 0.7,
+              "consonant_run": 0.3,
+              "digit_run": 0.0,
+              "digit_transitions": 0.0,
+              "repeat_ratio": 0.2,
+              "length": 10,
+              "bigram_surprise": 0.6666666666666666
+            },
+            "family": "fobber_v2"
+          },
+          {
+            "label": "jkuvgrpru",
+            "score": 0.8998448360410177,
+            "features": {
+              "log_length": 2.302585092994046,
+              "entropy": 2.725480556997868,
+              "digit_ratio": 0.0,
+              "vowel_ratio": 0.2222222222222222,
+              "hyphen_ratio": 0.0,
+              "unique_ratio": 0.7777777777777778,
+              "consonant_run": 0.5555555555555556,
+              "digit_run": 0.0,
+              "digit_transitions": 0.0,
+              "repeat_ratio": 0.0,
+              "length": 9,
+              "bigram_surprise": 1.0
+            },
+            "family": "locky"
+          },
+          {
+            "label": "fgfuiuo",
+            "score": 0.8998455029598936,
+            "features": {
+              "log_length": 2.0794415416798357,
+              "entropy": 2.2359263506290326,
+              "digit_ratio": 0.0,
+              "vowel_ratio": 0.5714285714285714,
+              "hyphen_ratio": 0.0,
+              "unique_ratio": 0.7142857142857143,
+              "consonant_run": 0.42857142857142855,
+              "digit_run": 0.0,
+              "digit_transitions": 0.0,
+              "repeat_ratio": 0.0,
+              "length": 7,
+              "bigram_surprise": 1.0
+            },
+            "family": "proslikefan"
+          }
+        ]
+      }
+    },
+    "test": {
+      "metrics": {
+        "tp": 46503,
+        "fn": 14074,
+        "fp": 251,
+        "tn": 14659,
+        "precision": 0.9946314753817855,
+        "recall": 0.7676675966125758,
+        "false_positive_rate": 0.016834339369550637,
+        "per_family": {
+          "bedep": {
+            "tp": 9686,
+            "fn": 314,
+            "fp": 0,
+            "tn": 0,
+            "precision": 1.0,
+            "recall": 0.9686,
+            "false_positive_rate": null
+          },
+          "ccleaner": {
+            "tp": 5867,
+            "fn": 4133,
+            "fp": 0,
+            "tn": 0,
+            "precision": 1.0,
+            "recall": 0.5867,
+            "false_positive_rate": null
+          },
+          "chinad": {
+            "tp": 9948,
+            "fn": 52,
+            "fp": 0,
+            "tn": 0,
+            "precision": 1.0,
+            "recall": 0.9948,
+            "false_positive_rate": null
+          },
+          "kraken_v1": {
+            "tp": 6639,
+            "fn": 3355,
+            "fp": 0,
+            "tn": 0,
+            "precision": 1.0,
+            "recall": 0.6642985791474885,
+            "false_positive_rate": null
+          },
+          "kraken_v2": {
+            "tp": 6404,
+            "fn": 1676,
+            "fp": 0,
+            "tn": 0,
+            "precision": 1.0,
+            "recall": 0.7925742574257426,
+            "false_positive_rate": null
+          },
+          "legit": {
+            "tp": 0,
+            "fn": 0,
+            "fp": 251,
+            "tn": 14659,
+            "precision": 0.0,
+            "recall": null,
+            "false_positive_rate": 0.016834339369550637
+          },
+          "sisron": {
+            "tp": 2234,
+            "fn": 269,
+            "fp": 0,
+            "tn": 0,
+            "precision": 1.0,
+            "recall": 0.89252896524171,
+            "false_positive_rate": null
+          },
+          "symmi": {
+            "tp": 5725,
+            "fn": 4275,
+            "fp": 0,
+            "tn": 0,
+            "precision": 1.0,
+            "recall": 0.5725,
+            "false_positive_rate": null
+          }
+        }
+      },
+      "patterns": {
+        "digits_only": {
+          "tn": 77
+        },
+        "hexadecimal_shaped": {
+          "fp": 3,
+          "tn": 1,
+          "tp": 5867,
+          "fn": 4133
+        },
+        "hyphenated": {
+          "tn": 1405,
+          "fp": 33
+        },
+        "letters_only_long": {
+          "tn": 2512,
+          "fp": 142,
+          "tp": 11297,
+          "fn": 1470
+        },
+        "letters_only_short": {
+          "tn": 9340,
+          "fp": 67,
+          "tp": 13784,
+          "fn": 7957
+        },
+        "mixed_alphanumeric": {
+          "tn": 1324,
+          "fp": 6,
+          "fn": 514,
+          "tp": 15555
+        }
+      },
+      "feature_bins": {
+        "length": {
+          "[0, 8)": {
+            "tn": 5639,
+            "fp": 12,
+            "fn": 2787,
+            "tp": 1935
+          },
+          "[12, 16)": {
+            "tn": 2436,
+            "fp": 79,
+            "fn": 5884,
+            "tp": 18462
+          },
+          "[16, 20)": {
+            "tn": 690,
+            "fp": 50,
+            "tp": 14194,
+            "fn": 68
+          },
+          "[20, 32)": {
+            "tn": 178,
+            "fp": 43
+          },
+          "[32, +inf)": {
+            "fp": 6,
+            "tn": 1
+          },
+          "[8, 12)": {
+            "tn": 5715,
+            "fp": 61,
+            "fn": 5335,
+            "tp": 11912
+          }
+        },
+        "entropy": {
+          "[0, 2)": {
+            "tn": 1437,
+            "fn": 191,
+            "tp": 50
+          },
+          "[2, 3)": {
+            "tn": 8771,
+            "fp": 65,
+            "tp": 12112,
+            "fn": 8402
+          },
+          "[3, 3.5)": {
+            "tn": 4042,
+            "fp": 140,
+            "fn": 5268,
+            "tp": 21748
+          },
+          "[3.5, 4)": {
+            "tn": 407,
+            "fp": 39,
+            "tp": 12378,
+            "fn": 213
+          },
+          "[4, +inf)": {
+            "fp": 7,
+            "tn": 2,
+            "tp": 215
+          }
+        },
+        "digit_ratio": {
+          "[0, 1e-09)": {
+            "fp": 234,
+            "tn": 13146,
+            "tp": 25081,
+            "fn": 9427
+          },
+          "[0.25, 0.5)": {
+            "tn": 515,
+            "fp": 10,
+            "tp": 7854,
+            "fn": 486
+          },
+          "[0.5, 1)": {
+            "tn": 274,
+            "fp": 3,
+            "tp": 4691,
+            "fn": 3677
+          },
+          "[1, +inf)": {
+            "tn": 77
+          },
+          "[1e-09, 0.25)": {
+            "tn": 647,
+            "fp": 4,
+            "fn": 484,
+            "tp": 8877
+          }
+        },
+        "bigram_surprise": {
+          "[0, 0.5)": {
+            "tn": 2120,
+            "fp": 38,
+            "fn": 154,
+            "tp": 19
+          },
+          "[0.5, 0.8)": {
+            "tn": 7806,
+            "fp": 146,
+            "tp": 3323,
+            "fn": 3063
+          },
+          "[0.8, +inf)": {
+            "tn": 4733,
+            "fp": 67,
+            "fn": 10857,
+            "tp": 43161
+          }
+        },
+        "vowel_ratio": {
+          "[0, 0.2)": {
+            "tn": 1422,
+            "fp": 27,
+            "fn": 4873,
+            "tp": 25989
+          },
+          "[0.2, 0.4)": {
+            "tn": 7136,
+            "fp": 139,
+            "tp": 13726,
+            "fn": 3827
+          },
+          "[0.4, 0.6)": {
+            "tn": 5695,
+            "fp": 84,
+            "tp": 6771,
+            "fn": 5283
+          },
+          "[0.6, +inf)": {
+            "tn": 406,
+            "fp": 1,
+            "fn": 91,
+            "tp": 17
+          }
+        }
+      },
+      "outcome_profiles": {
+        "tp": {
+          "count": 46503,
+          "means": {
+            "log_length": 2.6122827652377243,
+            "entropy": 3.2215468951950537,
+            "digit_ratio": 0.13623348385218587,
+            "vowel_ratio": 0.21025019040559784,
+            "hyphen_ratio": 0.0,
+            "unique_ratio": 0.7958560854612153,
+            "consonant_run": 0.39375726386991317,
+            "digit_run": 0.06632076632721752,
+            "digit_transitions": 0.15154870082977187,
+            "repeat_ratio": 0.03173879946891745,
+            "length": 12.967593488592135,
+            "bigram_surprise": 0.9354096415842906
+          },
+          "score_median": 0.9942368070219042,
+          "length_median": 13
+        },
+        "fn": {
+          "count": 14074,
+          "means": {
+            "log_length": 2.393927561084098,
+            "entropy": 2.859389697365798,
+            "digit_ratio": 0.18877608673916427,
+            "vowel_ratio": 0.3053983818644248,
+            "hyphen_ratio": 0.0,
+            "unique_ratio": 0.7895481677254387,
+            "consonant_run": 0.29012061453677823,
+            "digit_run": 0.14247985616696382,
+            "digit_transitions": 0.09519344822380667,
+            "repeat_ratio": 0.04037026366614092,
+            "length": 10.30460423475913,
+            "bigram_surprise": 0.8811041969505323
+          },
+          "score_median": 0.5418433079907873,
+          "length_median": 10.0
+        },
+        "fp": {
+          "count": 251,
+          "means": {
+            "log_length": 2.720112410884004,
+            "entropy": 3.2010602247719264,
+            "digit_ratio": 0.022877266249447338,
+            "vowel_ratio": 0.3378773591412377,
+            "hyphen_ratio": 0.009751870585935794,
+            "unique_ratio": 0.7216771101588124,
+            "consonant_run": 0.25252017390729,
+            "digit_run": 0.008107499389311905,
+            "digit_transitions": 0.029302620136625154,
+            "repeat_ratio": 0.03469750316896133,
+            "length": 15.183266932270916,
+            "bigram_surprise": 0.6848555733844294
+          },
+          "score_median": 0.9540859487311967,
+          "length_median": 14
+        },
+        "tn": {
+          "count": 14659,
+          "means": {
+            "log_length": 2.2365265993375285,
+            "entropy": 2.6821462389153767,
+            "digit_ratio": 0.034079931262757365,
+            "vowel_ratio": 0.3530778606085535,
+            "hyphen_ratio": 0.009842316067311677,
+            "unique_ratio": 0.8271133184281565,
+            "consonant_run": 0.29918106876588196,
+            "digit_run": 0.03337424456359932,
+            "digit_transitions": 0.018912533761974167,
+            "repeat_ratio": 0.028333643702248314,
+            "length": 9.02333037724265,
+            "bigram_surprise": 0.6886358207078791
+          },
+          "score_median": 0.017632073664240386,
+          "length_median": 9
+        }
+      },
+      "guard_failures_on_positives": {
+        "length+entropy": 41531,
+        "length+entropy+bigram_surprise": 6240,
+        "length": 12487,
+        "length+bigram_surprise": 319
+      },
+      "false_negatives": {
+        "bedep": {
+          "missed": {
+            "count": 314,
+            "means": {
+              "log_length": 2.6384032827643904,
+              "entropy": 3.2777127831086954,
+              "digit_ratio": 0.08248813366600927,
+              "vowel_ratio": 0.2813507188764776,
+              "hyphen_ratio": 0.0,
+              "unique_ratio": 0.8033766556598142,
+              "consonant_run": 0.32717525439050354,
+              "digit_run": 0.08248813366600927,
+              "digit_transitions": 0.07723704498948036,
+              "repeat_ratio": 0.041223190239675814,
+              "length": 13.04140127388535,
+              "bigram_surprise": 0.8615422193330586
+            },
+            "score_median": 0.8029482319016703,
+            "length_median": 13.0
+          },
+          "detected": {
+            "count": 9686,
+            "means": {
+              "log_length": 2.767917014343492,
+              "entropy": 3.444191751690319,
+              "digit_ratio": 0.03639317298206417,
+              "vowel_ratio": 0.1802228527067895,
+              "hyphen_ratio": 0.0,
+              "unique_ratio": 0.7862833816240643,
+              "consonant_run": 0.49803355223663187,
+              "digit_run": 0.03639317298206417,
+              "digit_transitions": 0.04539532708205504,
+              "repeat_ratio": 0.03444298285343882,
+              "length": 15.049143093124096,
+              "bigram_surprise": 0.9326011572387481
+            },
+            "score_median": 0.9955464994445049,
+            "length_median": 15.0
+          },
+          "examples": [
+            {
+              "label": "ifasbikree3s",
+              "score": 0.07253613424733803,
+              "features": {
+                "log_length": 2.5649493574615367,
+                "entropy": 3.084962500721156,
+                "digit_ratio": 0.08333333333333333,
+                "vowel_ratio": 0.4166666666666667,
+                "hyphen_ratio": 0.0,
+                "unique_ratio": 0.75,
+                "consonant_run": 0.16666666666666666,
+                "digit_run": 0.08333333333333333,
+                "digit_transitions": 0.16666666666666666,
+                "repeat_ratio": 0.08333333333333333,
+                "length": 12,
+                "bigram_surprise": 0.8181818181818182
+              },
+              "family": "bedep"
+            },
+            {
+              "label": "rantvsbrlaid12",
+              "score": 0.07812657987239188,
+              "features": {
+                "log_length": 2.70805020110221,
+                "entropy": 3.521640636343318,
+                "digit_ratio": 0.14285714285714285,
+                "vowel_ratio": 0.21428571428571427,
+                "hyphen_ratio": 0.0,
+                "unique_ratio": 0.8571428571428571,
+                "consonant_run": 0.5,
+                "digit_run": 0.14285714285714285,
+                "digit_transitions": 0.07142857142857142,
+                "repeat_ratio": 0.0,
+                "length": 14,
+                "bigram_surprise": 0.7692307692307693
+              },
+              "family": "bedep"
+            },
+            {
+              "label": "cglrenskonr2",
+              "score": 0.08213378319684174,
+              "features": {
+                "log_length": 2.5649493574615367,
+                "entropy": 3.2516291673878226,
+                "digit_ratio": 0.08333333333333333,
+                "vowel_ratio": 0.16666666666666666,
+                "hyphen_ratio": 0.0,
+                "unique_ratio": 0.8333333333333334,
+                "consonant_run": 0.3333333333333333,
+                "digit_run": 0.08333333333333333,
+                "digit_transitions": 0.08333333333333333,
+                "repeat_ratio": 0.0,
+                "length": 12,
+                "bigram_surprise": 0.7272727272727273
+              },
+              "family": "bedep"
+            }
+          ]
+        },
+        "ccleaner": {
+          "missed": {
+            "count": 4133,
+            "means": {
+              "log_length": 2.639269941144507,
+              "entropy": 3.057861266622255,
+              "digit_ratio": 0.6284367781585299,
+              "vowel_ratio": 0.1575431195682829,
+              "hyphen_ratio": 0.0,
+              "unique_ratio": 0.7040242052218825,
+              "consonant_run": 0.11122328084583105,
+              "digit_run": 0.47139028673023353,
+              "digit_transitions": 0.30705101012383856,
+              "repeat_ratio": 0.06176086193023043,
+              "length": 13.025647229615291,
+              "bigram_surprise": 0.9855568565101592
+            },
+            "score_median": 0.3651283451581829,
+            "length_median": 13
+          },
+          "detected": {
+            "count": 5867,
+            "means": {
+              "log_length": 2.656079008526471,
+              "entropy": 3.0944972246668234,
+              "digit_ratio": 0.5409477744572342,
+              "vowel_ratio": 0.17492302879212715,
+              "hyphen_ratio": 0.0,
+              "unique_ratio": 0.7070404681960843,
+              "consonant_run": 0.11818658019442066,
+              "digit_run": 0.2513681591404448,
+              "digit_transitions": 0.46119881198285834,
+              "repeat_ratio": 0.04315868212237737,
+              "length": 13.257883074825294,
+              "bigram_surprise": 0.9842369692122547
+            },
+            "score_median": 0.9865189932047862,
+            "length_median": 13
+          },
+          "examples": [
+            {
+              "label": "abcf695074281",
+              "score": 0.004629501818017753,
+              "features": {
+                "log_length": 2.6390573296152584,
+                "entropy": 3.7004397181410926,
+                "digit_ratio": 0.6923076923076923,
+                "vowel_ratio": 0.07692307692307693,
+                "hyphen_ratio": 0.0,
+                "unique_ratio": 1.0,
+                "consonant_run": 0.23076923076923078,
+                "digit_run": 0.6923076923076923,
+                "digit_transitions": 0.07692307692307693,
+                "repeat_ratio": 0.0,
+                "length": 13,
+                "bigram_surprise": 1.0
+              },
+              "family": "ccleaner"
+            },
+            {
+              "label": "abcb32843795",
+              "score": 0.005569776342544996,
+              "features": {
+                "log_length": 2.5649493574615367,
+                "entropy": 3.2516291673878226,
+                "digit_ratio": 0.6666666666666666,
+                "vowel_ratio": 0.08333333333333333,
+                "hyphen_ratio": 0.0,
+                "unique_ratio": 0.8333333333333334,
+                "consonant_run": 0.25,
+                "digit_run": 0.6666666666666666,
+                "digit_transitions": 0.08333333333333333,
+                "repeat_ratio": 0.0,
+                "length": 12,
+                "bigram_surprise": 1.0
+              },
+              "family": "ccleaner"
+            },
+            {
+              "label": "abdb37682985",
+              "score": 0.005569776342544996,
+              "features": {
+                "log_length": 2.5649493574615367,
+                "entropy": 3.2516291673878226,
+                "digit_ratio": 0.6666666666666666,
+                "vowel_ratio": 0.08333333333333333,
+                "hyphen_ratio": 0.0,
+                "unique_ratio": 0.8333333333333334,
+                "consonant_run": 0.25,
+                "digit_run": 0.6666666666666666,
+                "digit_transitions": 0.08333333333333333,
+                "repeat_ratio": 0.0,
+                "length": 12,
+                "bigram_surprise": 1.0
+              },
+              "family": "ccleaner"
+            }
+          ]
+        },
+        "chinad": {
+          "missed": {
+            "count": 52,
+            "means": {
+              "log_length": 2.833213344056216,
+              "entropy": 3.5849479416677257,
+              "digit_ratio": 0.296875,
+              "vowel_ratio": 0.23076923076923078,
+              "hyphen_ratio": 0.0,
+              "unique_ratio": 0.8004807692307693,
+              "consonant_run": 0.21033653846153846,
+              "digit_run": 0.24879807692307693,
+              "digit_transitions": 0.19471153846153846,
+              "repeat_ratio": 0.04807692307692308,
+              "length": 16,
+              "bigram_surprise": 0.9038461538461539
+            },
+            "score_median": 0.7938242534721229,
+            "length_median": 16.0
+          },
+          "detected": {
+            "count": 9948,
+            "means": {
+              "log_length": 2.833213344056216,
+              "entropy": 3.6120143275133736,
+              "digit_ratio": 0.2731390731805388,
+              "vowel_ratio": 0.1405244772818657,
+              "hyphen_ratio": 0.0,
+              "unique_ratio": 0.8151324386811419,
+              "consonant_run": 0.2647831222356253,
+              "digit_run": 0.11710896662645758,
+              "digit_transitions": 0.37376859670285484,
+              "repeat_ratio": 0.02572125050261359,
+              "length": 16,
+              "bigram_surprise": 0.9607894384130814
+            },
+            "score_median": 0.9955464994445049,
+            "length_median": 16.0
+          },
+          "examples": [
+            {
+              "label": "my50671tiulhaoix",
+              "score": 0.05360196826692507,
+              "features": {
+                "log_length": 2.833213344056216,
+                "entropy": 3.875,
+                "digit_ratio": 0.3125,
+                "vowel_ratio": 0.3125,
+                "hyphen_ratio": 0.0,
+                "unique_ratio": 0.9375,
+                "consonant_run": 0.125,
+                "digit_run": 0.3125,
+                "digit_transitions": 0.125,
+                "repeat_ratio": 0.0,
+                "length": 16,
+                "bigram_surprise": 0.8666666666666667
+              },
+              "family": "chinad"
+            },
+            {
+              "label": "cycelpmed900611z",
+              "score": 0.10572820848489646,
+              "features": {
+                "log_length": 2.833213344056216,
+                "entropy": 3.5,
+                "digit_ratio": 0.375,
+                "vowel_ratio": 0.125,
+                "hyphen_ratio": 0.0,
+                "unique_ratio": 0.75,
+                "consonant_run": 0.1875,
+                "digit_run": 0.375,
+                "digit_transitions": 0.125,
+                "repeat_ratio": 0.125,
+                "length": 16,
+                "bigram_surprise": 0.8
+              },
+              "family": "chinad"
+            },
+            {
+              "label": "auckr32250bdhueq",
+              "score": 0.20473314366015,
+              "features": {
+                "log_length": 2.833213344056216,
+                "entropy": 3.75,
+                "digit_ratio": 0.3125,
+                "vowel_ratio": 0.25,
+                "hyphen_ratio": 0.0,
+                "unique_ratio": 0.875,
+                "consonant_run": 0.1875,
+                "digit_run": 0.3125,
+                "digit_transitions": 0.125,
+                "repeat_ratio": 0.0625,
+                "length": 16,
+                "bigram_surprise": 1.0
+              },
+              "family": "chinad"
+            }
+          ]
+        },
+        "kraken_v1": {
+          "missed": {
+            "count": 3355,
+            "means": {
+              "log_length": 2.0951884428546292,
+              "entropy": 2.579949871918458,
+              "digit_ratio": 0.0,
+              "vowel_ratio": 0.24777587456425013,
+              "hyphen_ratio": 0.0,
+              "unique_ratio": 0.8788677814981839,
+              "consonant_run": 0.5617744831753774,
+              "digit_run": 0.0,
+              "digit_transitions": 0.0,
+              "repeat_ratio": 0.037449027210577135,
+              "length": 7.240238450074516,
+              "bigram_surprise": 0.8884432143448537
+            },
+            "score_median": 0.570116426132431,
+            "length_median": 7
+          },
+          "detected": {
+            "count": 6639,
+            "means": {
+              "log_length": 2.306145692677593,
+              "entropy": 2.8778147044504423,
+              "digit_ratio": 0.0,
+              "vowel_ratio": 0.16144850154113596,
+              "hyphen_ratio": 0.0,
+              "unique_ratio": 0.8570089790378991,
+              "consonant_run": 0.6581125741089591,
+              "digit_run": 0.0,
+              "digit_transitions": 0.0,
+              "repeat_ratio": 0.03350527524725446,
+              "length": 9.14987196866998,
+              "bigram_surprise": 0.9435608369973485
+            },
+            "score_median": 0.9883557494292744,
+            "length_median": 9
+          },
+          "examples": [
+            {
+              "label": "esboin",
+              "score": 0.0049156631269171285,
+              "features": {
+                "log_length": 1.9459101490553132,
+                "entropy": 2.584962500721156,
+                "digit_ratio": 0.0,
+                "vowel_ratio": 0.5,
+                "hyphen_ratio": 0.0,
+                "unique_ratio": 1.0,
+                "consonant_run": 0.3333333333333333,
+                "digit_run": 0.0,
+                "digit_transitions": 0.0,
+                "repeat_ratio": 0.0,
+                "length": 6,
+                "bigram_surprise": 0.6
+              },
+              "family": "kraken_v1"
+            },
+            {
+              "label": "mchika",
+              "score": 0.005488139605659247,
+              "features": {
+                "log_length": 1.9459101490553132,
+                "entropy": 2.584962500721156,
+                "digit_ratio": 0.0,
+                "vowel_ratio": 0.3333333333333333,
+                "hyphen_ratio": 0.0,
+                "unique_ratio": 1.0,
+                "consonant_run": 0.5,
+                "digit_run": 0.0,
+                "digit_transitions": 0.0,
+                "repeat_ratio": 0.0,
+                "length": 6,
+                "bigram_surprise": 0.6
+              },
+              "family": "kraken_v1"
+            },
+            {
+              "label": "jetrou",
+              "score": 0.005717729387956705,
+              "features": {
+                "log_length": 1.9459101490553132,
+                "entropy": 2.584962500721156,
+                "digit_ratio": 0.0,
+                "vowel_ratio": 0.5,
+                "hyphen_ratio": 0.0,
+                "unique_ratio": 1.0,
+                "consonant_run": 0.3333333333333333,
+                "digit_run": 0.0,
+                "digit_transitions": 0.0,
+                "repeat_ratio": 0.0,
+                "length": 6,
+                "bigram_surprise": 0.6
+              },
+              "family": "kraken_v1"
+            }
+          ]
+        },
+        "kraken_v2": {
+          "missed": {
+            "count": 1676,
+            "means": {
+              "log_length": 2.2263074576044493,
+              "entropy": 2.7468411712224308,
+              "digit_ratio": 0.0,
+              "vowel_ratio": 0.28497649095799454,
+              "hyphen_ratio": 0.0,
+              "unique_ratio": 0.856775111324634,
+              "consonant_run": 0.46859244077322837,
+              "digit_run": 0.0,
+              "digit_transitions": 0.0,
+              "repeat_ratio": 0.03803925291097129,
+              "length": 8.363961813842483,
+              "bigram_surprise": 0.8709799796464475
+            },
+            "score_median": 0.688464907622472,
+            "length_median": 8.0
+          },
+          "detected": {
+            "count": 6404,
+            "means": {
+              "log_length": 2.3664356945359244,
+              "entropy": 2.95801186352751,
+              "digit_ratio": 0.0,
+              "vowel_ratio": 0.1726241287687259,
+              "hyphen_ratio": 0.0,
+              "unique_ratio": 0.8499471661831125,
+              "consonant_run": 0.6233647316837511,
+              "digit_run": 0.0,
+              "digit_transitions": 0.0,
+              "repeat_ratio": 0.03360596912283358,
+              "length": 9.789818863210494,
+              "bigram_surprise": 0.9398426409630345
+            },
+            "score_median": 0.9908173015268212,
+            "length_median": 10.0
+          },
+          "examples": [
+            {
+              "label": "acieerp",
+              "score": 0.006758683334661242,
+              "features": {
+                "log_length": 2.0794415416798357,
+                "entropy": 2.521640636343318,
+                "digit_ratio": 0.0,
+                "vowel_ratio": 0.5714285714285714,
+                "hyphen_ratio": 0.0,
+                "unique_ratio": 0.8571428571428571,
+                "consonant_run": 0.2857142857142857,
+                "digit_run": 0.0,
+                "digit_transitions": 0.0,
+                "repeat_ratio": 0.14285714285714285,
+                "length": 7,
+                "bigram_surprise": 0.8333333333333334
+              },
+              "family": "kraken_v2"
+            },
+            {
+              "label": "googiat",
+              "score": 0.0068364340670380944,
+              "features": {
+                "log_length": 2.0794415416798357,
+                "entropy": 2.2359263506290326,
+                "digit_ratio": 0.0,
+                "vowel_ratio": 0.5714285714285714,
+                "hyphen_ratio": 0.0,
+                "unique_ratio": 0.7142857142857143,
+                "consonant_run": 0.14285714285714285,
+                "digit_run": 0.0,
+                "digit_transitions": 0.0,
+                "repeat_ratio": 0.14285714285714285,
+                "length": 7,
+                "bigram_surprise": 0.8333333333333334
+              },
+              "family": "kraken_v2"
+            },
+            {
+              "label": "echtvru",
+              "score": 0.007027011976751817,
+              "features": {
+                "log_length": 2.0794415416798357,
+                "entropy": 2.8073549220576037,
+                "digit_ratio": 0.0,
+                "vowel_ratio": 0.2857142857142857,
+                "hyphen_ratio": 0.0,
+                "unique_ratio": 1.0,
+                "consonant_run": 0.7142857142857143,
+                "digit_run": 0.0,
+                "digit_transitions": 0.0,
+                "repeat_ratio": 0.0,
+                "length": 7,
+                "bigram_surprise": 0.8333333333333334
+              },
+              "family": "kraken_v2"
+            }
+          ]
+        },
+        "sisron": {
+          "missed": {
+            "count": 269,
+            "means": {
+              "log_length": 2.5649493574615367,
+              "entropy": 3.141317135897959,
+              "digit_ratio": 0.06753407682775713,
+              "vowel_ratio": 0.3330235439900867,
+              "hyphen_ratio": 0.0,
+              "unique_ratio": 0.7871747211895911,
+              "consonant_run": 0.2843866171003717,
+              "digit_run": 0.06753407682775713,
+              "digit_transitions": 0.13506815365551425,
+              "repeat_ratio": 0.005266418835192069,
+              "length": 12,
+              "bigram_surprise": 0.8685366677931734
+            },
+            "score_median": 0.8317380856402357,
+            "length_median": 12
+          },
+          "detected": {
+            "count": 2234,
+            "means": {
+              "log_length": 2.5649493574615367,
+              "entropy": 3.116678150149316,
+              "digit_ratio": 0.04110713219934348,
+              "vowel_ratio": 0.26070575947478364,
+              "hyphen_ratio": 0.0,
+              "unique_ratio": 0.7796553267681289,
+              "consonant_run": 0.39432259027156075,
+              "digit_run": 0.04110713219934348,
+              "digit_transitions": 0.08221426439868695,
+              "repeat_ratio": 0.012645478961504027,
+              "length": 12,
+              "bigram_surprise": 0.9122243021079189
+            },
+            "score_median": 0.9905939329647948,
+            "length_median": 12.0
+          },
+          "examples": [
+            {
+              "label": "mtywodi0ndia",
+              "score": 0.20470494077409196,
+              "features": {
+                "log_length": 2.5649493574615367,
+                "entropy": 3.2516291673878226,
+                "digit_ratio": 0.08333333333333333,
+                "vowel_ratio": 0.3333333333333333,
+                "hyphen_ratio": 0.0,
+                "unique_ratio": 0.8333333333333334,
+                "consonant_run": 0.3333333333333333,
+                "digit_run": 0.08333333333333333,
+                "digit_transitions": 0.16666666666666666,
+                "repeat_ratio": 0.0,
+                "length": 12,
+                "bigram_surprise": 0.9090909090909091
+              },
+              "family": "sisron"
+            },
+            {
+              "label": "mtexmti1mdia",
+              "score": 0.20734835840528587,
+              "features": {
+                "log_length": 2.5649493574615367,
+                "entropy": 2.8553885422075336,
+                "digit_ratio": 0.08333333333333333,
+                "vowel_ratio": 0.3333333333333333,
+                "hyphen_ratio": 0.0,
+                "unique_ratio": 0.6666666666666666,
+                "consonant_run": 0.25,
+                "digit_run": 0.08333333333333333,
+                "digit_transitions": 0.16666666666666666,
+                "repeat_ratio": 0.0,
+                "length": 12,
+                "bigram_surprise": 0.8181818181818182
+              },
+              "family": "sisron"
+            },
+            {
+              "label": "mtewode5otca",
+              "score": 0.20780625446383522,
+              "features": {
+                "log_length": 2.5649493574615367,
+                "entropy": 3.084962500721156,
+                "digit_ratio": 0.08333333333333333,
+                "vowel_ratio": 0.4166666666666667,
+                "hyphen_ratio": 0.0,
+                "unique_ratio": 0.75,
+                "consonant_run": 0.16666666666666666,
+                "digit_run": 0.08333333333333333,
+                "digit_transitions": 0.16666666666666666,
+                "repeat_ratio": 0.0,
+                "length": 12,
+                "bigram_surprise": 0.8181818181818182
+              },
+              "family": "sisron"
+            }
+          ]
+        },
+        "symmi": {
+          "missed": {
+            "count": 4275,
+            "means": {
+              "log_length": 2.4228370061728457,
+              "entropy": 2.8736465370998463,
+              "digit_ratio": 0.0,
+              "vowel_ratio": 0.5025064318397652,
+              "hyphen_ratio": 0.0,
+              "unique_ratio": 0.7747782711116045,
+              "consonant_run": 0.1785232415407854,
+              "digit_run": 0.0,
+              "digit_transitions": 0.0,
+              "repeat_ratio": 0.024949105475421264,
+              "length": 10.462690058479533,
+              "bigram_surprise": 0.7802816209131999
+            },
+            "score_median": 0.5425752255941079,
+            "length_median": 10
+          },
+          "detected": {
+            "count": 5725,
+            "means": {
+              "log_length": 2.5686754646566143,
+              "entropy": 3.030889332550154,
+              "digit_ratio": 0.0,
+              "vowel_ratio": 0.49740732823702255,
+              "hyphen_ratio": 0.0,
+              "unique_ratio": 0.7444745007539767,
+              "consonant_run": 0.16023128399984296,
+              "digit_run": 0.0,
+              "digit_transitions": 0.0,
+              "repeat_ratio": 0.029230309719392687,
+              "length": 12.238602620087336,
+              "bigram_surprise": 0.8406578797233819
+            },
+            "score_median": 0.984490706975323,
+            "length_median": 13
+          },
+          "examples": [
+            {
+              "label": "atadigbira",
+              "score": 0.005832310918415491,
+              "features": {
+                "log_length": 2.3978952727983707,
+                "entropy": 2.6464393446710157,
+                "digit_ratio": 0.0,
+                "vowel_ratio": 0.5,
+                "hyphen_ratio": 0.0,
+                "unique_ratio": 0.7,
+                "consonant_run": 0.2,
+                "digit_run": 0.0,
+                "digit_transitions": 0.0,
+                "repeat_ratio": 0.0,
+                "length": 10,
+                "bigram_surprise": 0.7777777777777778
+              },
+              "family": "symmi"
+            },
+            {
+              "label": "movoitex",
+              "score": 0.006009007376473744,
+              "features": {
+                "log_length": 2.1972245773362196,
+                "entropy": 2.75,
+                "digit_ratio": 0.0,
+                "vowel_ratio": 0.5,
+                "hyphen_ratio": 0.0,
+                "unique_ratio": 0.875,
+                "consonant_run": 0.125,
+                "digit_run": 0.0,
+                "digit_transitions": 0.0,
+                "repeat_ratio": 0.0,
+                "length": 8,
+                "bigram_surprise": 0.7142857142857143
+              },
+              "family": "symmi"
+            },
+            {
+              "label": "diamedex",
+              "score": 0.006034916753478097,
+              "features": {
+                "log_length": 2.1972245773362196,
+                "entropy": 2.5,
+                "digit_ratio": 0.0,
+                "vowel_ratio": 0.5,
+                "hyphen_ratio": 0.0,
+                "unique_ratio": 0.75,
+                "consonant_run": 0.125,
+                "digit_run": 0.0,
+                "digit_transitions": 0.0,
+                "repeat_ratio": 0.0,
+                "length": 8,
+                "bigram_surprise": 0.5714285714285714
+              },
+              "family": "symmi"
+            }
+          ]
+        }
+      },
+      "error_examples": {
+        "fp": [
+          {
+            "label": "vaxvacationaccess",
+            "score": 0.9018295105261787,
+            "features": {
+              "log_length": 2.8903717578961645,
+              "entropy": 3.101881223476018,
+              "digit_ratio": 0.0,
+              "vowel_ratio": 0.4117647058823529,
+              "hyphen_ratio": 0.0,
+              "unique_ratio": 0.5882352941176471,
+              "consonant_run": 0.11764705882352941,
+              "digit_run": 0.0,
+              "digit_transitions": 0.0,
+              "repeat_ratio": 0.11764705882352941,
+              "length": 17,
+              "bigram_surprise": 0.625
+            },
+            "family": "legit"
+          },
+          {
+            "label": "centr-hirurgii",
+            "score": 0.902667696339693,
+            "features": {
+              "log_length": 2.70805020110221,
+              "entropy": 3.1280852788913944,
+              "digit_ratio": 0.0,
+              "vowel_ratio": 0.35714285714285715,
+              "hyphen_ratio": 0.07142857142857142,
+              "unique_ratio": 0.7142857142857143,
+              "consonant_run": 0.21428571428571427,
+              "digit_run": 0.0,
+              "digit_transitions": 0.0,
+              "repeat_ratio": 0.07142857142857142,
+              "length": 14,
+              "bigram_surprise": 0.6153846153846154
+            },
+            "family": "legit"
+          },
+          {
+            "label": "incredibleegg",
+            "score": 0.9026913969883675,
+            "features": {
+              "log_length": 2.6390573296152584,
+              "entropy": 3.0269868333592873,
+              "digit_ratio": 0.0,
+              "vowel_ratio": 0.38461538461538464,
+              "hyphen_ratio": 0.0,
+              "unique_ratio": 0.6923076923076923,
+              "consonant_run": 0.23076923076923078,
+              "digit_run": 0.0,
+              "digit_transitions": 0.0,
+              "repeat_ratio": 0.15384615384615385,
+              "length": 13,
+              "bigram_surprise": 0.6666666666666666
+            },
+            "family": "legit"
+          },
+          {
+            "label": "mohawkcollege",
+            "score": 0.9026913969883675,
+            "features": {
+              "log_length": 2.6390573296152584,
+              "entropy": 3.238901256602631,
+              "digit_ratio": 0.0,
+              "vowel_ratio": 0.38461538461538464,
+              "hyphen_ratio": 0.0,
+              "unique_ratio": 0.7692307692307693,
+              "consonant_run": 0.23076923076923078,
+              "digit_run": 0.0,
+              "digit_transitions": 0.0,
+              "repeat_ratio": 0.07692307692307693,
+              "length": 13,
+              "bigram_surprise": 0.6666666666666666
+            },
+            "family": "legit"
+          },
+          {
+            "label": "bjyqxxhs",
+            "score": 0.9034967640246098,
+            "features": {
+              "log_length": 2.1972245773362196,
+              "entropy": 2.75,
+              "digit_ratio": 0.0,
+              "vowel_ratio": 0.0,
+              "hyphen_ratio": 0.0,
+              "unique_ratio": 0.875,
+              "consonant_run": 1.0,
+              "digit_run": 0.0,
+              "digit_transitions": 0.0,
+              "repeat_ratio": 0.125,
+              "length": 8,
+              "bigram_surprise": 1.0
+            },
+            "family": "legit"
+          },
+          {
+            "label": "anotherangryvoice",
+            "score": 0.9946200045944064,
+            "features": {
+              "log_length": 2.8903717578961645,
+              "entropy": 3.4992275471326924,
+              "digit_ratio": 0.0,
+              "vowel_ratio": 0.4117647058823529,
+              "hyphen_ratio": 0.0,
+              "unique_ratio": 0.7058823529411765,
+              "consonant_run": 0.29411764705882354,
+              "digit_run": 0.0,
+              "digit_transitions": 0.0,
+              "repeat_ratio": 0.0,
+              "length": 17,
+              "bigram_surprise": 0.4375
+            },
+            "family": "legit"
+          },
+          {
+            "label": "cloxhrdcfvq",
+            "score": 0.994800838214626,
+            "features": {
+              "log_length": 2.4849066497880004,
+              "entropy": 3.2776134368191157,
+              "digit_ratio": 0.0,
+              "vowel_ratio": 0.09090909090909091,
+              "hyphen_ratio": 0.0,
+              "unique_ratio": 0.9090909090909091,
+              "consonant_run": 0.7272727272727273,
+              "digit_run": 0.0,
+              "digit_transitions": 0.0,
+              "repeat_ratio": 0.0,
+              "length": 11,
+              "bigram_surprise": 1.0
+            },
+            "family": "legit"
+          },
+          {
+            "label": "29ae58661b9c7178",
+            "score": 0.994811213233715,
+            "features": {
+              "log_length": 2.833213344056216,
+              "entropy": 3.375,
+              "digit_ratio": 0.75,
+              "vowel_ratio": 0.125,
+              "hyphen_ratio": 0.0,
+              "unique_ratio": 0.6875,
+              "consonant_run": 0.0625,
+              "digit_run": 0.3125,
+              "digit_transitions": 0.375,
+              "repeat_ratio": 0.0625,
+              "length": 16,
+              "bigram_surprise": 1.0
+            },
+            "family": "legit"
+          },
+          {
+            "label": "823bc1a6cd3f1657",
+            "score": 0.9952061615396214,
+            "features": {
+              "log_length": 2.833213344056216,
+              "entropy": 3.5,
+              "digit_ratio": 0.625,
+              "vowel_ratio": 0.0625,
+              "hyphen_ratio": 0.0,
+              "unique_ratio": 0.75,
+              "consonant_run": 0.125,
+              "digit_run": 0.25,
+              "digit_transitions": 0.5,
+              "repeat_ratio": 0.0,
+              "length": 16,
+              "bigram_surprise": 1.0
+            },
+            "family": "legit"
+          },
+          {
+            "label": "rhvgmritmziwcm",
+            "score": 0.9954618773731135,
+            "features": {
+              "log_length": 2.70805020110221,
+              "entropy": 3.1820058147602133,
+              "digit_ratio": 0.0,
+              "vowel_ratio": 0.14285714285714285,
+              "hyphen_ratio": 0.0,
+              "unique_ratio": 0.7142857142857143,
+              "consonant_run": 0.42857142857142855,
+              "digit_run": 0.0,
+              "digit_transitions": 0.0,
+              "repeat_ratio": 0.0,
+              "length": 14,
+              "bigram_surprise": 0.8461538461538461
+            },
+            "family": "legit"
+          }
+        ],
+        "fn": [
+          {
+            "label": "abcf695074281",
+            "score": 0.004629501818017753,
+            "features": {
+              "log_length": 2.6390573296152584,
+              "entropy": 3.7004397181410926,
+              "digit_ratio": 0.6923076923076923,
+              "vowel_ratio": 0.07692307692307693,
+              "hyphen_ratio": 0.0,
+              "unique_ratio": 1.0,
+              "consonant_run": 0.23076923076923078,
+              "digit_run": 0.6923076923076923,
+              "digit_transitions": 0.07692307692307693,
+              "repeat_ratio": 0.0,
+              "length": 13,
+              "bigram_surprise": 1.0
+            },
+            "family": "ccleaner"
+          },
+          {
+            "label": "esboin",
+            "score": 0.0049156631269171285,
+            "features": {
+              "log_length": 1.9459101490553132,
+              "entropy": 2.584962500721156,
+              "digit_ratio": 0.0,
+              "vowel_ratio": 0.5,
+              "hyphen_ratio": 0.0,
+              "unique_ratio": 1.0,
+              "consonant_run": 0.3333333333333333,
+              "digit_run": 0.0,
+              "digit_transitions": 0.0,
+              "repeat_ratio": 0.0,
+              "length": 6,
+              "bigram_surprise": 0.6
+            },
+            "family": "kraken_v1"
+          },
+          {
+            "label": "mchika",
+            "score": 0.005488139605659247,
+            "features": {
+              "log_length": 1.9459101490553132,
+              "entropy": 2.584962500721156,
+              "digit_ratio": 0.0,
+              "vowel_ratio": 0.3333333333333333,
+              "hyphen_ratio": 0.0,
+              "unique_ratio": 1.0,
+              "consonant_run": 0.5,
+              "digit_run": 0.0,
+              "digit_transitions": 0.0,
+              "repeat_ratio": 0.0,
+              "length": 6,
+              "bigram_surprise": 0.6
+            },
+            "family": "kraken_v1"
+          },
+          {
+            "label": "abcb32843795",
+            "score": 0.005569776342544996,
+            "features": {
+              "log_length": 2.5649493574615367,
+              "entropy": 3.2516291673878226,
+              "digit_ratio": 0.6666666666666666,
+              "vowel_ratio": 0.08333333333333333,
+              "hyphen_ratio": 0.0,
+              "unique_ratio": 0.8333333333333334,
+              "consonant_run": 0.25,
+              "digit_run": 0.6666666666666666,
+              "digit_transitions": 0.08333333333333333,
+              "repeat_ratio": 0.0,
+              "length": 12,
+              "bigram_surprise": 1.0
+            },
+            "family": "ccleaner"
+          },
+          {
+            "label": "abdb37682985",
+            "score": 0.005569776342544996,
+            "features": {
+              "log_length": 2.5649493574615367,
+              "entropy": 3.2516291673878226,
+              "digit_ratio": 0.6666666666666666,
+              "vowel_ratio": 0.08333333333333333,
+              "hyphen_ratio": 0.0,
+              "unique_ratio": 0.8333333333333334,
+              "consonant_run": 0.25,
+              "digit_run": 0.6666666666666666,
+              "digit_transitions": 0.08333333333333333,
+              "repeat_ratio": 0.0,
+              "length": 12,
+              "bigram_surprise": 1.0
+            },
+            "family": "ccleaner"
+          },
+          {
+            "label": "dsrddtebtdj",
+            "score": 0.8998456684387274,
+            "features": {
+              "log_length": 2.4849066497880004,
+              "entropy": 2.550340709546388,
+              "digit_ratio": 0.0,
+              "vowel_ratio": 0.09090909090909091,
+              "hyphen_ratio": 0.0,
+              "unique_ratio": 0.6363636363636364,
+              "consonant_run": 0.5454545454545454,
+              "digit_run": 0.0,
+              "digit_transitions": 0.0,
+              "repeat_ratio": 0.09090909090909091,
+              "length": 11,
+              "bigram_surprise": 0.9
+            },
+            "family": "kraken_v1"
+          },
+          {
+            "label": "ab350ffc4532",
+            "score": 0.8998737782945196,
+            "features": {
+              "log_length": 2.5649493574615367,
+              "entropy": 3.084962500721156,
+              "digit_ratio": 0.5833333333333334,
+              "vowel_ratio": 0.08333333333333333,
+              "hyphen_ratio": 0.0,
+              "unique_ratio": 0.75,
+              "consonant_run": 0.25,
+              "digit_run": 0.3333333333333333,
+              "digit_transitions": 0.25,
+              "repeat_ratio": 0.08333333333333333,
+              "length": 12,
+              "bigram_surprise": 1.0
+            },
+            "family": "ccleaner"
+          },
+          {
+            "label": "ab4f1cfc158",
+            "score": 0.8998737782945196,
+            "features": {
+              "log_length": 2.4849066497880004,
+              "entropy": 2.913977073182752,
+              "digit_ratio": 0.45454545454545453,
+              "vowel_ratio": 0.09090909090909091,
+              "hyphen_ratio": 0.0,
+              "unique_ratio": 0.7272727272727273,
+              "consonant_run": 0.2727272727272727,
+              "digit_run": 0.2727272727272727,
+              "digit_transitions": 0.45454545454545453,
+              "repeat_ratio": 0.0,
+              "length": 11,
+              "bigram_surprise": 1.0
+            },
+            "family": "ccleaner"
+          },
+          {
+            "label": "abdbb6dc289e",
+            "score": 0.8998737782945196,
+            "features": {
+              "log_length": 2.5649493574615367,
+              "entropy": 3.0220552088742005,
+              "digit_ratio": 0.3333333333333333,
+              "vowel_ratio": 0.16666666666666666,
+              "hyphen_ratio": 0.0,
+              "unique_ratio": 0.75,
+              "consonant_run": 0.3333333333333333,
+              "digit_run": 0.25,
+              "digit_transitions": 0.3333333333333333,
+              "repeat_ratio": 0.08333333333333333,
+              "length": 12,
+              "bigram_surprise": 1.0
+            },
+            "family": "ccleaner"
+          },
+          {
+            "label": "abfd6159bd14",
+            "score": 0.8998737782945196,
+            "features": {
+              "log_length": 2.5649493574615367,
+              "entropy": 3.084962500721156,
+              "digit_ratio": 0.5,
+              "vowel_ratio": 0.08333333333333333,
+              "hyphen_ratio": 0.0,
+              "unique_ratio": 0.75,
+              "consonant_run": 0.25,
+              "digit_run": 0.3333333333333333,
+              "digit_transitions": 0.25,
+              "repeat_ratio": 0.0,
+              "length": 12,
+              "bigram_surprise": 1.0
+            },
+            "family": "ccleaner"
+          }
+        ]
+      }
+    },
+    "second_dns": {
+      "metrics": {
+        "tp": 0,
+        "fn": 0,
+        "fp": 275,
+        "tn": 11456,
+        "precision": 0.0,
+        "recall": null,
+        "false_positive_rate": 0.023442161793538488,
+        "per_family": {
+          "dns_reference": {
+            "tp": 0,
+            "fn": 0,
+            "fp": 275,
+            "tn": 11456,
+            "precision": 0.0,
+            "recall": null,
+            "false_positive_rate": 0.023442161793538488
+          }
+        }
+      },
+      "patterns": {
+        "digits_only": {
+          "tn": 19
+        },
+        "hexadecimal_shaped": {
+          "fp": 2
+        },
+        "hyphenated": {
+          "tn": 1399,
+          "fp": 41
+        },
+        "letters_only_long": {
+          "tn": 2279,
+          "fp": 165
+        },
+        "letters_only_short": {
+          "tn": 6975,
+          "fp": 59
+        },
+        "mixed_alphanumeric": {
+          "tn": 784,
+          "fp": 8
+        }
+      },
+      "feature_bins": {
+        "length": {
+          "[0, 8)": {
+            "tn": 3814,
+            "fp": 7
+          },
+          "[12, 16)": {
+            "tn": 2166,
+            "fp": 81
+          },
+          "[16, 20)": {
+            "tn": 736,
+            "fp": 66
+          },
+          "[20, 32)": {
+            "tn": 208,
+            "fp": 67
+          },
+          "[8, 12)": {
+            "tn": 4532,
+            "fp": 54
+          }
+        },
+        "entropy": {
+          "[0, 2)": {
+            "tn": 901
+          },
+          "[2, 3)": {
+            "tn": 6546,
+            "fp": 54
+          },
+          "[3, 3.5)": {
+            "tn": 3578,
+            "fp": 158
+          },
+          "[3.5, 4)": {
+            "tn": 431,
+            "fp": 62
+          },
+          "[4, +inf)": {
+            "fp": 1
+          }
+        },
+        "digit_ratio": {
+          "[0, 1e-09)": {
+            "tn": 10583,
+            "fp": 261
+          },
+          "[0.25, 0.5)": {
+            "tn": 299,
+            "fp": 8
+          },
+          "[0.5, 1)": {
+            "tn": 111
+          },
+          "[1, +inf)": {
+            "tn": 19
+          },
+          "[1e-09, 0.25)": {
+            "tn": 444,
+            "fp": 6
+          }
+        },
+        "bigram_surprise": {
+          "[0, 0.5)": {
+            "tn": 1884,
+            "fp": 41
+          },
+          "[0.5, 0.8)": {
+            "tn": 6376,
+            "fp": 179
+          },
+          "[0.8, +inf)": {
+            "tn": 3196,
+            "fp": 55
+          }
+        },
+        "vowel_ratio": {
+          "[0, 0.2)": {
+            "tn": 848,
+            "fp": 16
+          },
+          "[0.2, 0.4)": {
+            "tn": 5783,
+            "fp": 173
+          },
+          "[0.4, 0.6)": {
+            "tn": 4547,
+            "fp": 85
+          },
+          "[0.6, +inf)": {
+            "tn": 278,
+            "fp": 1
+          }
+        }
+      },
+      "outcome_profiles": {
+        "tp": {
+          "count": 0,
+          "means": {},
+          "score_median": null,
+          "length_median": null
+        },
+        "fn": {
+          "count": 0,
+          "means": {},
+          "score_median": null,
+          "length_median": null
+        },
+        "fp": {
+          "count": 275,
+          "means": {
+            "log_length": 2.7620288544293023,
+            "entropy": 3.2381727964999083,
+            "digit_ratio": 0.01386875245966155,
+            "vowel_ratio": 0.3465771732362012,
+            "hyphen_ratio": 0.01079557905941801,
+            "unique_ratio": 0.7091459855948294,
+            "consonant_run": 0.23026975997711668,
+            "digit_run": 0.006571494162403253,
+            "digit_transitions": 0.017422865013774106,
+            "repeat_ratio": 0.03275207022301945,
+            "length": 15.625454545454545,
+            "bigram_surprise": 0.6521895922918013
+          },
+          "score_median": 0.9589639598922409,
+          "length_median": 15
+        },
+        "tn": {
+          "count": 11456,
+          "means": {
+            "log_length": 2.285792461313928,
+            "entropy": 2.740551115209781,
+            "digit_ratio": 0.021000560796574648,
+            "vowel_ratio": 0.3598941309391307,
+            "hyphen_ratio": 0.012456980714868811,
+            "unique_ratio": 0.8181219135961899,
+            "consonant_run": 0.2880563220373089,
+            "digit_run": 0.02057773442548087,
+            "digit_transitions": 0.013653946789813512,
+            "repeat_ratio": 0.02638469443923224,
+            "length": 9.555167597765363,
+            "bigram_surprise": 0.6657902011570507
+          },
+          "score_median": 0.0237218029843526,
+          "length_median": 9.0
+        }
+      },
+      "guard_failures_on_positives": {},
+      "false_negatives": {},
+      "error_examples": {
+        "fp": [
+          {
+            "label": "liceocuneo",
+            "score": 0.9001624432687932,
+            "features": {
+              "log_length": 2.3978952727983707,
+              "entropy": 2.721928094887362,
+              "digit_ratio": 0.0,
+              "vowel_ratio": 0.6,
+              "hyphen_ratio": 0.0,
+              "unique_ratio": 0.7,
+              "consonant_run": 0.1,
+              "digit_run": 0.0,
+              "digit_transitions": 0.0,
+              "repeat_ratio": 0.0,
+              "length": 10,
+              "bigram_surprise": 0.5555555555555556
+            },
+            "family": "dns_reference"
+          },
+          {
+            "label": "galiciaconfidencial",
+            "score": 0.9016224449755966,
+            "features": {
+              "log_length": 2.995732273553991,
+              "entropy": 3.11583409216322,
+              "digit_ratio": 0.0,
+              "vowel_ratio": 0.47368421052631576,
+              "hyphen_ratio": 0.0,
+              "unique_ratio": 0.5263157894736842,
+              "consonant_run": 0.10526315789473684,
+              "digit_run": 0.0,
+              "digit_transitions": 0.0,
+              "repeat_ratio": 0.0,
+              "length": 19,
+              "bigram_surprise": 0.5555555555555556
+            },
+            "family": "dns_reference"
+          },
+          {
+            "label": "installation-frigorifique-eure",
+            "score": 0.9017596819511065,
+            "features": {
+              "log_length": 3.4339872044851463,
+              "entropy": 3.6695767463163937,
+              "digit_ratio": 0.0,
+              "vowel_ratio": 0.4666666666666667,
+              "hyphen_ratio": 0.06666666666666667,
+              "unique_ratio": 0.4666666666666667,
+              "consonant_run": 0.1,
+              "digit_run": 0.0,
+              "digit_transitions": 0.0,
+              "repeat_ratio": 0.03333333333333333,
+              "length": 30,
+              "bigram_surprise": 0.5517241379310345
+            },
+            "family": "dns_reference"
+          },
+          {
+            "label": "ukinternetdirectory",
+            "score": 0.9018295105261787,
+            "features": {
+              "log_length": 2.995732273553991,
+              "entropy": 3.2866294867861954,
+              "digit_ratio": 0.0,
+              "vowel_ratio": 0.3684210526315789,
+              "hyphen_ratio": 0.0,
+              "unique_ratio": 0.5789473684210527,
+              "consonant_run": 0.10526315789473684,
+              "digit_run": 0.0,
+              "digit_transitions": 0.0,
+              "repeat_ratio": 0.0,
+              "length": 19,
+              "bigram_surprise": 0.5555555555555556
+            },
+            "family": "dns_reference"
+          },
+          {
+            "label": "swelsonenewsmm",
+            "score": 0.9026336794999035,
+            "features": {
+              "log_length": 2.70805020110221,
+              "entropy": 2.6995138503199656,
+              "digit_ratio": 0.0,
+              "vowel_ratio": 0.2857142857142857,
+              "hyphen_ratio": 0.0,
+              "unique_ratio": 0.5,
+              "consonant_run": 0.2857142857142857,
+              "digit_run": 0.0,
+              "digit_transitions": 0.0,
+              "repeat_ratio": 0.07142857142857142,
+              "length": 14,
+              "bigram_surprise": 0.6923076923076923
+            },
+            "family": "dns_reference"
+          },
+          {
+            "label": "johnbellcroyden",
+            "score": 0.9946200045944064,
+            "features": {
+              "log_length": 2.772588722239781,
+              "entropy": 3.3735572622751855,
+              "digit_ratio": 0.0,
+              "vowel_ratio": 0.26666666666666666,
+              "hyphen_ratio": 0.0,
+              "unique_ratio": 0.7333333333333333,
+              "consonant_run": 0.26666666666666666,
+              "digit_run": 0.0,
+              "digit_transitions": 0.0,
+              "repeat_ratio": 0.06666666666666667,
+              "length": 15,
+              "bigram_surprise": 0.6428571428571429
+            },
+            "family": "dns_reference"
+          },
+          {
+            "label": "seventhqueen",
+            "score": 0.9946897185536632,
+            "features": {
+              "log_length": 2.5649493574615367,
+              "entropy": 2.7516291673878226,
+              "digit_ratio": 0.0,
+              "vowel_ratio": 0.4166666666666667,
+              "hyphen_ratio": 0.0,
+              "unique_ratio": 0.6666666666666666,
+              "consonant_run": 0.3333333333333333,
+              "digit_run": 0.0,
+              "digit_transitions": 0.0,
+              "repeat_ratio": 0.08333333333333333,
+              "length": 12,
+              "bigram_surprise": 0.45454545454545453
+            },
+            "family": "dns_reference"
+          },
+          {
+            "label": "examcelltheemcoe",
+            "score": 0.9947386962527698,
+            "features": {
+              "log_length": 2.833213344056216,
+              "entropy": 2.899397470347699,
+              "digit_ratio": 0.0,
+              "vowel_ratio": 0.4375,
+              "hyphen_ratio": 0.0,
+              "unique_ratio": 0.5625,
+              "consonant_run": 0.25,
+              "digit_run": 0.0,
+              "digit_transitions": 0.0,
+              "repeat_ratio": 0.125,
+              "length": 16,
+              "bigram_surprise": 0.6666666666666666
+            },
+            "family": "dns_reference"
+          },
+          {
+            "label": "feuerwehrbadsalzuflen",
+            "score": 0.9949782062984822,
+            "features": {
+              "log_length": 3.091042453358316,
+              "entropy": 3.535174565635903,
+              "digit_ratio": 0.0,
+              "vowel_ratio": 0.38095238095238093,
+              "hyphen_ratio": 0.0,
+              "unique_ratio": 0.6190476190476191,
+              "consonant_run": 0.14285714285714285,
+              "digit_run": 0.0,
+              "digit_transitions": 0.0,
+              "repeat_ratio": 0.0,
+              "length": 21,
+              "bigram_surprise": 0.8
+            },
+            "family": "dns_reference"
+          },
+          {
+            "label": "tolyafbnjt9dedjj10",
+            "score": 0.9955464994445049,
+            "features": {
+              "log_length": 2.9444389791664403,
+              "entropy": 3.6835423624332306,
+              "digit_ratio": 0.16666666666666666,
+              "vowel_ratio": 0.16666666666666666,
+              "hyphen_ratio": 0.0,
+              "unique_ratio": 0.7777777777777778,
+              "consonant_run": 0.2777777777777778,
+              "digit_run": 0.1111111111111111,
+              "digit_transitions": 0.16666666666666666,
+              "repeat_ratio": 0.05555555555555555,
+              "length": 18,
+              "bigram_surprise": 0.8235294117647058
+            },
+            "family": "dns_reference"
+          }
+        ],
+        "fn": []
+      }
+    }
+  },
+  "partition_audit": {
+    "exact_label_overlap": {
+      "train_validation": {
+        "count": 0,
+        "examples": []
+      },
+      "train_test": {
+        "count": 0,
+        "examples": []
+      },
+      "validation_test": {
+        "count": 0,
+        "examples": []
+      }
+    },
+    "family_group_overlap": {
+      "train_validation": {
+        "count": 0,
+        "examples": []
+      },
+      "train_test": {
+        "count": 0,
+        "examples": []
+      },
+      "validation_test": {
+        "count": 0,
+        "examples": []
+      }
+    },
+    "second_dns_overlap": {
+      "train": {
+        "count": 0,
+        "examples": []
+      },
+      "validation": {
+        "count": 1278,
+        "examples": [
+          "100x100banco",
+          "100xyev",
+          "11degrees",
+          "11klasov",
+          "123greetings",
+          "1aauto",
+          "1gai",
+          "1stwebdesigner",
+          "20govt",
+          "24horas"
+        ]
+      },
+      "test": {
+        "count": 1260,
+        "examples": [
+          "0101",
+          "10bis",
+          "10minutemail",
+          "1800petmeds",
+          "18qt",
+          "1c-bitrix",
+          "1clickforward",
+          "24news",
+          "2sao",
+          "3dmark"
+        ]
+      }
+    },
+    "second_dns_overlap_positive": {
+      "train": {
+        "count": 0,
+        "examples": []
+      },
+      "validation": {
+        "count": 0,
+        "examples": []
+      },
+      "test": {
+        "count": 0,
+        "examples": []
+      }
+    },
+    "first_second_capture_overlap": {
+      "count": 922,
+      "examples": [
+        "104",
+        "112",
+        "1337x",
+        "1377x",
+        "1tv",
+        "22bet",
+        "22bet1",
+        "360doc",
+        "3dsecure",
+        "7learn"
+      ]
+    },
+    "second_dns_total": 11731
+  },
+  "dns_overlap_diagnostic": {
+    "comparison_overlap": {
+      "tp": 0,
+      "fn": 0,
+      "fp": 17,
+      "tn": 1243,
+      "precision": 0.0,
+      "recall": null,
+      "false_positive_rate": 0.013492063492063493,
+      "per_family": {
+        "dns": {
+          "tp": 0,
+          "fn": 0,
+          "fp": 17,
+          "tn": 1243,
+          "precision": 0.0,
+          "recall": null,
+          "false_positive_rate": 0.013492063492063493
+        }
+      }
+    },
+    "disjoint_from_domain_splits": {
+      "tp": 0,
+      "fn": 0,
+      "fp": 239,
+      "tn": 8954,
+      "precision": 0.0,
+      "recall": null,
+      "false_positive_rate": 0.025998041988469486,
+      "per_family": {
+        "dns": {
+          "tp": 0,
+          "fn": 0,
+          "fp": 239,
+          "tn": 8954,
+          "precision": 0.0,
+          "recall": null,
+          "false_positive_rate": 0.025998041988469486
+        }
+      }
+    },
+    "validation_overlap": {
+      "tp": 0,
+      "fn": 0,
+      "fp": 19,
+      "tn": 1259,
+      "precision": 0.0,
+      "recall": null,
+      "false_positive_rate": 0.01486697965571205,
+      "per_family": {
+        "dns": {
+          "tp": 0,
+          "fn": 0,
+          "fp": 19,
+          "tn": 1259,
+          "precision": 0.0,
+          "recall": null,
+          "false_positive_rate": 0.01486697965571205
+        }
+      }
+    }
+  },
+  "legacy_partition_audit": {
+    "fqdn_overlap": {
+      "train_validation": {
+        "count": 0,
+        "examples": []
+      },
+      "train_test": {
+        "count": 0,
+        "examples": []
+      },
+      "validation_test": {
+        "count": 0,
+        "examples": []
+      }
+    },
+    "scored_label_overlap": {
+      "train_validation": {
+        "count": 6,
+        "examples": [
+          "amazon",
+          "bbc",
+          "google",
+          "ouo",
+          "yahoo",
+          "yandex"
+        ]
+      },
+      "train_test": {
+        "count": 5,
+        "examples": [
+          "google",
+          "kinogo",
+          "mercadolibre",
+          "naver",
+          "olx"
+        ]
+      },
+      "validation_test": {
+        "count": 2,
+        "examples": [
+          "google",
+          "wordpress"
+        ]
+      }
+    }
+  },
+  "raw_conflicting_labels": [
+    "administrator",
+    "afterfive",
+    "authentication",
+    "darkhorse",
+    "directindustry",
+    "facemark",
+    "facenews",
+    "freshdirect",
+    "freshservice",
+    "imaibo",
+    "lifedaily",
+    "lifetouch",
+    "limango",
+    "longform",
+    "sellgreat",
+    "stickpage",
+    "talarnet",
+    "viewfruit",
+    "weekdone",
+    "westword"
+  ],
+  "second_dns_raw_positive_overlap": {
+    "count": 3,
+    "examples": [
+      "balance-style",
+      "stickpage",
+      "sweetpleasure"
+    ]
+  },
+  "training_distribution": {
+    "counts": {
+      "BENIGN": 67715,
+      "DGA": 69993
+    },
+    "family_counts": {
+      "alureon": 2000,
+      "banjori": 2000,
+      "corebot": 2000,
+      "dircrypt": 2000,
+      "dyre": 2000,
+      "gozi_gpl": 1998,
+      "matsnu": 1997,
+      "gozi_rfc4343": 2000,
+      "gozi_luther": 2000,
+      "gozi_nasa": 2000,
+      "suppobox_1": 2000,
+      "pizd": 2000,
+      "necurs": 2000,
+      "nymaim": 1998,
+      "suppobox_2": 2000,
+      "padcrypt": 2000,
+      "pushdo": 2000,
+      "pykspa": 2000,
+      "pykspa_noise": 2000,
+      "qadars": 2000,
+      "qakbot": 2000,
+      "ramdo": 2000,
+      "ramnit": 2000,
+      "ranbyus_v1": 2000,
+      "ranbyus_v2": 2000,
+      "rovnix": 2000,
+      "shiotob": 2000,
+      "simda": 2000,
+      "suppobox_3": 2000,
+      "tempedreve": 2000,
+      "tinba": 2000,
+      "vawtrak_v1": 2000,
+      "vawtrak_v2": 2000,
+      "vawtrak_v3": 2000,
+      "zeus-newgoz": 2000
+    },
+    "benign_patterns": {
+      "hyphenated": 5882,
+      "digits_only": 353,
+      "mixed_alphanumeric": 5658,
+      "hexadecimal_shaped": 15,
+      "letters_only_short": 44700,
+      "letters_only_long": 11107
+    },
+    "positive_patterns": {
+      "letters_only_short": 21680,
+      "letters_only_long": 35770,
+      "mixed_alphanumeric": 9356,
+      "hexadecimal_shaped": 462,
+      "hyphenated": 2725
+    }
+  },
+  "source_normalization": {
+    "alureon": {
+      "parsed_names": 10000,
+      "valid_first_labels": 10000,
+      "unsupported_names": 0,
+      "split": "train"
+    },
+    "banjori": {
+      "parsed_names": 10000,
+      "valid_first_labels": 10000,
+      "unsupported_names": 0,
+      "split": "train"
+    },
+    "bedep": {
+      "parsed_names": 10000,
+      "valid_first_labels": 10000,
+      "unsupported_names": 0,
+      "split": "test"
+    },
+    "ccleaner": {
+      "parsed_names": 10000,
+      "valid_first_labels": 10000,
+      "unsupported_names": 0,
+      "split": "test"
+    },
+    "chinad": {
+      "parsed_names": 10000,
+      "valid_first_labels": 10000,
+      "unsupported_names": 0,
+      "split": "test"
+    },
+    "corebot": {
+      "parsed_names": 10000,
+      "valid_first_labels": 10000,
+      "unsupported_names": 0,
+      "split": "train"
+    },
+    "cryptolocker": {
+      "parsed_names": 10000,
+      "valid_first_labels": 10000,
+      "unsupported_names": 0,
+      "split": "validation"
+    },
+    "dircrypt": {
+      "parsed_names": 10000,
+      "valid_first_labels": 10000,
+      "unsupported_names": 0,
+      "split": "train"
+    },
+    "dyre": {
+      "parsed_names": 10000,
+      "valid_first_labels": 10000,
+      "unsupported_names": 0,
+      "split": "train"
+    },
+    "fobber_v1": {
+      "parsed_names": 10000,
+      "valid_first_labels": 10000,
+      "unsupported_names": 0,
+      "split": "validation"
+    },
+    "fobber_v2": {
+      "parsed_names": 10000,
+      "valid_first_labels": 10000,
+      "unsupported_names": 0,
+      "split": "validation"
+    },
+    "gozi_gpl": {
+      "parsed_names": 10000,
+      "valid_first_labels": 10000,
+      "unsupported_names": 0,
+      "split": "train"
+    },
+    "gozi_luther": {
+      "parsed_names": 10000,
+      "valid_first_labels": 10000,
+      "unsupported_names": 0,
+      "split": "train"
+    },
+    "gozi_nasa": {
+      "parsed_names": 9931,
+      "valid_first_labels": 9931,
+      "unsupported_names": 0,
+      "split": "train"
+    },
+    "gozi_rfc4343": {
+      "parsed_names": 9972,
+      "valid_first_labels": 9972,
+      "unsupported_names": 0,
+      "split": "train"
+    },
+    "kraken_v1": {
+      "parsed_names": 10000,
+      "valid_first_labels": 9994,
+      "unsupported_names": 0,
+      "split": "test"
+    },
+    "kraken_v2": {
+      "parsed_names": 10000,
+      "valid_first_labels": 8080,
+      "unsupported_names": 0,
+      "split": "test"
+    },
+    "legit": {
+      "parsed_names": 100000,
+      "valid_first_labels": 91744,
+      "unsupported_names": 0,
+      "split": "benign_hash"
+    },
+    "locky": {
+      "parsed_names": 10000,
+      "valid_first_labels": 10000,
+      "unsupported_names": 0,
+      "split": "validation"
+    },
+    "matsnu": {
+      "parsed_names": 9991,
+      "valid_first_labels": 9991,
+      "unsupported_names": 0,
+      "split": "train"
+    },
+    "murofet_v1": {
+      "parsed_names": 10000,
+      "valid_first_labels": 10000,
+      "unsupported_names": 0,
+      "split": "validation"
+    },
+    "murofet_v2": {
+      "parsed_names": 10000,
+      "valid_first_labels": 10000,
+      "unsupported_names": 0,
+      "split": "validation"
+    },
+    "murofet_v3": {
+      "parsed_names": 10000,
+      "valid_first_labels": 10000,
+      "unsupported_names": 0,
+      "split": "validation"
+    },
+    "necurs": {
+      "parsed_names": 10000,
+      "valid_first_labels": 10000,
+      "unsupported_names": 0,
+      "split": "train"
+    },
+    "nymaim": {
+      "parsed_names": 9999,
+      "valid_first_labels": 9997,
+      "unsupported_names": 0,
+      "split": "train"
+    },
+    "padcrypt": {
+      "parsed_names": 10000,
+      "valid_first_labels": 10000,
+      "unsupported_names": 0,
+      "split": "train"
+    },
+    "pizd": {
+      "parsed_names": 9559,
+      "valid_first_labels": 9559,
+      "unsupported_names": 0,
+      "split": "train"
+    },
+    "proslikefan": {
+      "parsed_names": 10000,
+      "valid_first_labels": 10000,
+      "unsupported_names": 0,
+      "split": "validation"
+    },
+    "pushdo": {
+      "parsed_names": 10000,
+      "valid_first_labels": 10000,
+      "unsupported_names": 0,
+      "split": "train"
+    },
+    "pykspa": {
+      "parsed_names": 10000,
+      "valid_first_labels": 10000,
+      "unsupported_names": 0,
+      "split": "train"
+    },
+    "pykspa_noise": {
+      "parsed_names": 9998,
+      "valid_first_labels": 9998,
+      "unsupported_names": 0,
+      "split": "train"
+    },
+    "qadars": {
+      "parsed_names": 10000,
+      "valid_first_labels": 10000,
+      "unsupported_names": 0,
+      "split": "train"
+    },
+    "qakbot": {
+      "parsed_names": 10000,
+      "valid_first_labels": 10000,
+      "unsupported_names": 0,
+      "split": "train"
+    },
+    "ramdo": {
+      "parsed_names": 10000,
+      "valid_first_labels": 10000,
+      "unsupported_names": 0,
+      "split": "train"
+    },
+    "ramnit": {
+      "parsed_names": 10000,
+      "valid_first_labels": 10000,
+      "unsupported_names": 0,
+      "split": "train"
+    },
+    "ranbyus_v1": {
+      "parsed_names": 10000,
+      "valid_first_labels": 10000,
+      "unsupported_names": 0,
+      "split": "train"
+    },
+    "ranbyus_v2": {
+      "parsed_names": 10000,
+      "valid_first_labels": 10000,
+      "unsupported_names": 0,
+      "split": "train"
+    },
+    "rovnix": {
+      "parsed_names": 10000,
+      "valid_first_labels": 9998,
+      "unsupported_names": 0,
+      "split": "train"
+    },
+    "shiotob": {
+      "parsed_names": 10000,
+      "valid_first_labels": 10000,
+      "unsupported_names": 0,
+      "split": "train"
+    },
+    "simda": {
+      "parsed_names": 10000,
+      "valid_first_labels": 9982,
+      "unsupported_names": 0,
+      "split": "train"
+    },
+    "sisron": {
+      "parsed_names": 10000,
+      "valid_first_labels": 2503,
+      "unsupported_names": 0,
+      "split": "test"
+    },
+    "suppobox_1": {
+      "parsed_names": 9556,
+      "valid_first_labels": 9556,
+      "unsupported_names": 0,
+      "split": "train"
+    },
+    "suppobox_2": {
+      "parsed_names": 9995,
+      "valid_first_labels": 9995,
+      "unsupported_names": 0,
+      "split": "train"
+    },
+    "suppobox_3": {
+      "parsed_names": 10000,
+      "valid_first_labels": 10000,
+      "unsupported_names": 0,
+      "split": "train"
+    },
+    "symmi": {
+      "parsed_names": 10000,
+      "valid_first_labels": 10000,
+      "unsupported_names": 0,
+      "split": "test"
+    },
+    "tempedreve": {
+      "parsed_names": 10000,
+      "valid_first_labels": 9999,
+      "unsupported_names": 0,
+      "split": "train"
+    },
+    "tinba": {
+      "parsed_names": 10000,
+      "valid_first_labels": 10000,
+      "unsupported_names": 0,
+      "split": "train"
+    },
+    "vawtrak_v1": {
+      "parsed_names": 10000,
+      "valid_first_labels": 10000,
+      "unsupported_names": 0,
+      "split": "train"
+    },
+    "vawtrak_v2": {
+      "parsed_names": 10000,
+      "valid_first_labels": 10000,
+      "unsupported_names": 0,
+      "split": "train"
+    },
+    "vawtrak_v3": {
+      "parsed_names": 10000,
+      "valid_first_labels": 10000,
+      "unsupported_names": 0,
+      "split": "train"
+    },
+    "zeus-newgoz": {
+      "parsed_names": 10000,
+      "valid_first_labels": 10000,
+      "unsupported_names": 0,
+      "split": "train"
+    }
+  },
+  "tree_split_counts": {
+    "linear_logit": 330,
+    "log_length": 130,
+    "hyphen_ratio": 49,
+    "entropy": 41,
+    "vowel_ratio": 47,
+    "consonant_run": 61,
+    "unique_ratio": 6,
+    "digit_ratio": 2,
+    "digit_run": 5,
+    "repeat_ratio": 1,
+    "digit_transitions": 1
+  },
+  "standardized_linear_coefficients": {
+    "consonant_run": 0.23341442517627936,
+    "digit_ratio": 1.1055320932068062,
+    "digit_run": -1.8845353862164103,
+    "digit_transitions": 0.050782699309977794,
+    "entropy": 0.80103723322778,
+    "hyphen_ratio": -0.5770691262234685,
+    "log_length": 1.9571838062526334,
+    "repeat_ratio": -0.07562662986088231,
+    "unique_ratio": -0.34706063618947536,
+    "vowel_ratio": -0.47008138932736826
+  },
+  "dns_false_positive_context": {
+    "5a0e7acb57da": {
+      "names": [
+        "5a0e7acb57da.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "aeondelight-security-job": {
+      "names": [
+        "aeondelight-security-job.net"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "afewhandpickedthings": {
+      "names": [
+        "afewhandpickedthings.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "africaewgrhdtb": {
+      "names": [
+        "africaewgrhdtb.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "allthatsinteresting": {
+      "names": [
+        "allthatsinteresting.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "alrugaibfurniture": {
+      "names": [
+        "alrugaibfurniture.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "although-soft-sharp-nothing": {
+      "names": [
+        "although-soft-sharp-nothing.xyz"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "ancienthistorybulletin": {
+      "names": [
+        "ancienthistorybulletin.org"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "andrewlloydwebber": {
+      "names": [
+        "andrewlloydwebber.net"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "anuradhaartjewellery": {
+      "names": [
+        "anuradhaartjewellery.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "aucomptoirdelaquincaillerie": {
+      "names": [
+        "aucomptoirdelaquincaillerie.fr"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "augsburger-allgemeine": {
+      "names": [
+        "augsburger-allgemeine.de"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "awacgfsd": {
+      "names": [
+        "awacgfsd.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "awecrptjmp": {
+      "names": [
+        "awecrptjmp.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "b81oidrmy82w": {
+      "names": [
+        "b81oidrmy82w.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "b8pfulzbyj7h": {
+      "names": [
+        "b8pfulzbyj7h.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "baggageforward": {
+      "names": [
+        "baggageforward.co.jp"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "baixejoguedetone": {
+      "names": [
+        "baixejoguedetone.blogspot.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "bakecaincontrii": {
+      "names": [
+        "bakecaincontrii.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "barringtondieselclub": {
+      "names": [
+        "barringtondieselclub.co.za"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "bdbdqbxkdb": {
+      "names": [
+        "bdbdqbxkdb.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "becauseofthemwecan": {
+      "names": [
+        "becauseofthemwecan.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "bestprize-places-here1": {
+      "names": [
+        "bestprize-places-here1.life"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "bestsellrz": {
+      "names": [
+        "bestsellrz.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "bpjsketenagakerjaan": {
+      "names": [
+        "bpjsketenagakerjaan.go.id"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "buergerhilfe-sachsen": {
+      "names": [
+        "buergerhilfe-sachsen.de"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "burningwheel": {
+      "names": [
+        "burningwheel.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "carlosdefoucauld": {
+      "names": [
+        "carlosdefoucauld.org"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "ceiivetespeziaschmitt": {
+      "names": [
+        "ceiivetespeziaschmitt.blogspot.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "christmaslightsetc": {
+      "names": [
+        "christmaslightsetc.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "circuitpython": {
+      "names": [
+        "circuitpython.org"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "cityofglasgowcollege": {
+      "names": [
+        "cityofglasgowcollege.ac.uk"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "codewithharry": {
+      "names": [
+        "codewithharry.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "coffeewithmilk": {
+      "names": [
+        "coffeewithmilk.com.ua"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "commissionfactory": {
+      "names": [
+        "commissionfactory.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "commissiongorilla": {
+      "names": [
+        "commissiongorilla.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "connectedwomen": {
+      "names": [
+        "connectedwomen.co"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "conseil-constitutionnel": {
+      "names": [
+        "conseil-constitutionnel.fr"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "conselldeivissa": {
+      "names": [
+        "conselldeivissa.es"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "containerandpackaging": {
+      "names": [
+        "containerandpackaging.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "cpabuild": {
+      "names": [
+        "cpabuild.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "cpmprofitablecontent": {
+      "names": [
+        "cpmprofitablecontent.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "crowdedbarrelwhiskey": {
+      "names": [
+        "crowdedbarrelwhiskey.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "crowdstrike": {
+      "names": [
+        "crowdstrike.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "dannyswesternwear": {
+      "names": [
+        "dannyswesternwear.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "deliziosetentazionidivale": {
+      "names": [
+        "deliziosetentazionidivale.it"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "depannage-chambre-froide": {
+      "names": [
+        "depannage-chambre-froide.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "diepkhuc": {
+      "names": [
+        "diepkhuc.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "diffsense": {
+      "names": [
+        "diffsense.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "difuzed": {
+      "names": [
+        "difuzed.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "dimemtl": {
+      "names": [
+        "dimemtl.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "diocesejoinville": {
+      "names": [
+        "diocesejoinville.com.br"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "dlserverjlhhhd": {
+      "names": [
+        "dlserverjlhhhd.info"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "domainnameapi": {
+      "names": [
+        "domainnameapi.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "domainrightnow": {
+      "names": [
+        "domainrightnow.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "doubleadvertise": {
+      "names": [
+        "doubleadvertise.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "drako2sha8de09": {
+      "names": [
+        "drako2sha8de09.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "dreschflegel-saatgut": {
+      "names": [
+        "dreschflegel-saatgut.de"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "driverfixersoftware": {
+      "names": [
+        "driverfixersoftware.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "drmtlgy": {
+      "names": [
+        "drmtlgy.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "enchantedlearning": {
+      "names": [
+        "enchantedlearning.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "eniyibahissiteleritr": {
+      "names": [
+        "eniyibahissiteleritr.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "entwicklerheld": {
+      "names": [
+        "entwicklerheld.de"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "equipementsapartager": {
+      "names": [
+        "equipementsapartager.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "espurchasevicodinrss": {
+      "names": [
+        "espurchasevicodinrss.blogspot.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "examcelltheemcoe": {
+      "names": [
+        "examcelltheemcoe.wordpress.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "ezbatteryreconditioning": {
+      "names": [
+        "ezbatteryreconditioning.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "faceiraq": {
+      "names": [
+        "faceiraq.org"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "falkirkfc": {
+      "names": [
+        "falkirkfc.tv"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "fearsteve": {
+      "names": [
+        "fearsteve.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "feastingathome": {
+      "names": [
+        "feastingathome.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "fermimonticelli": {
+      "names": [
+        "fermimonticelli.edu.it"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "fertilitywithinreach": {
+      "names": [
+        "fertilitywithinreach.org"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "feuerwehr-niederdorfelden": {
+      "names": [
+        "feuerwehr-niederdorfelden.de"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "feuerwehrbadsalzuflen": {
+      "names": [
+        "feuerwehrbadsalzuflen.de"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "ffb4ff5a1d91": {
+      "names": [
+        "ffb4ff5a1d91.ngrok.io"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "fgfgnbmeieorr910": {
+      "names": [
+        "fgfgnbmeieorr910.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "firstleaf": {
+      "names": [
+        "firstleaf.club"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "foetusconductfold": {
+      "names": [
+        "foetusconductfold.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "fondazioneachillecastiglioni": {
+      "names": [
+        "fondazioneachillecastiglioni.it"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "foodsafetykorea": {
+      "names": [
+        "foodsafetykorea.go.kr"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "fornellifuorisede": {
+      "names": [
+        "fornellifuorisede.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "freie-wandergruppe-duesseldorf": {
+      "names": [
+        "freie-wandergruppe-duesseldorf.de"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "freshly-baked-shoppe": {
+      "names": [
+        "freshly-baked-shoppe.myshopify.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "frontierdough": {
+      "names": [
+        "frontierdough.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "fullgezginlerindir": {
+      "names": [
+        "fullgezginlerindir.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "gabriellawilde": {
+      "names": [
+        "gabriellawilde.net"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "gadgetheory": {
+      "names": [
+        "gadgetheory.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "galaxycove": {
+      "names": [
+        "galaxycove.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "galiciaconfidencial": {
+      "names": [
+        "galiciaconfidencial.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "garyjwolff": {
+      "names": [
+        "garyjwolff.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "garynorth": {
+      "names": [
+        "garynorth.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "gold-curry-honten": {
+      "names": [
+        "gold-curry-honten.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "gratisrijbewijsonline": {
+      "names": [
+        "gratisrijbewijsonline.be"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "gumbolersgthb": {
+      "names": [
+        "gumbolersgthb.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "gymnasium-ganderkesee": {
+      "names": [
+        "gymnasium-ganderkesee.de",
+        "gymnasium-ganderkesee.eu"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "hauntinghillhouse": {
+      "names": [
+        "hauntinghillhouse.ru"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "hearthpwn": {
+      "names": [
+        "hearthpwn.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "hellokittyisland": {
+      "names": [
+        "hellokittyisland.co.kr"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "hilkoschmidt-bauunternehmen": {
+      "names": [
+        "hilkoschmidt-bauunternehmen.de"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "holymountaincn": {
+      "names": [
+        "holymountaincn.org"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "hudforeclosed": {
+      "names": [
+        "hudforeclosed.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "igw-gestalttherapie": {
+      "names": [
+        "igw-gestalttherapie.de"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "iio5tja01w3w": {
+      "names": [
+        "iio5tja01w3w.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "ilcvperfetto": {
+      "names": [
+        "ilcvperfetto.it"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "infrarotheizungen": {
+      "names": [
+        "infrarotheizungen.info"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "installation-frigorifique-eure": {
+      "names": [
+        "installation-frigorifique-eure.fr"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "internetpasoapaso": {
+      "names": [
+        "internetpasoapaso.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "inwerk-bueromoebel": {
+      "names": [
+        "inwerk-bueromoebel.de"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "iwslabor": {
+      "names": [
+        "iwslabor.de"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "jackseven-ratbike-customs": {
+      "names": [
+        "jackseven-ratbike-customs.de"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "jeanropke": {
+      "names": [
+        "jeanropke.github.io"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "jedeclaremonmeuble": {
+      "names": [
+        "jedeclaremonmeuble.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "jenniferbehr": {
+      "names": [
+        "jenniferbehr.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "jenniferlawrence": {
+      "names": [
+        "jenniferlawrence.us"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "jesus-christus-evangelium": {
+      "names": [
+        "jesus-christus-evangelium.de"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "jh-moehringen": {
+      "names": [
+        "jh-moehringen.de"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "johnbellcroyden": {
+      "names": [
+        "johnbellcroyden.co.uk"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "kassideturvakodu": {
+      "names": [
+        "kassideturvakodu.ee"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "katzeausdemsack": {
+      "names": [
+        "katzeausdemsack.de"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "keepsakethelabel": {
+      "names": [
+        "keepsakethelabel.com.au"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "keyword-suggest-tool": {
+      "names": [
+        "keyword-suggest-tool.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "kilworthhousetheatre": {
+      "names": [
+        "kilworthhousetheatre.co.uk"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "kleinunternehmer": {
+      "names": [
+        "kleinunternehmer.de"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "knockfordesign": {
+      "names": [
+        "knockfordesign.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "knowledgehut": {
+      "names": [
+        "knowledgehut.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "kriittisetmateriaalit": {
+      "names": [
+        "kriittisetmateriaalit.fi"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "languagelearningwithnetflix": {
+      "names": [
+        "languagelearningwithnetflix.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "learning-collection": {
+      "names": [
+        "learning-collection.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "lebenshilfewerk-weimar-apolda": {
+      "names": [
+        "lebenshilfewerk-weimar-apolda.de"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "ledlightinghut": {
+      "names": [
+        "ledlightinghut.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "legacyresult": {
+      "names": [
+        "legacyresult.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "lesfruitsetlegumesfrais": {
+      "names": [
+        "lesfruitsetlegumesfrais.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "libertyvf-land-fr": {
+      "names": [
+        "libertyvf-land-fr.fr"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "liceocuneo": {
+      "names": [
+        "liceocuneo.it"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "lifewithmypenguin": {
+      "names": [
+        "lifewithmypenguin.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "lookslikesummer": {
+      "names": [
+        "lookslikesummer.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "loremsaz": {
+      "names": [
+        "loremsaz.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "lotusesoterismo": {
+      "names": [
+        "lotusesoterismo.com.br"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "luxuryestate": {
+      "names": [
+        "luxuryestate.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "luxurygaragesale": {
+      "names": [
+        "luxurygaragesale.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "lynxoptics": {
+      "names": [
+        "lynxoptics.com.au"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "lyrical-nonsense": {
+      "names": [
+        "lyrical-nonsense.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "macmillaneducationeverywhere": {
+      "names": [
+        "macmillaneducationeverywhere.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "marshallfridge": {
+      "names": [
+        "marshallfridge.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "mesannoncesfrance": {
+      "names": [
+        "mesannoncesfrance.fr"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "mohawkcollege": {
+      "names": [
+        "mohawkcollege.ca"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "momlearningwithbaby": {
+      "names": [
+        "momlearningwithbaby.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "moosejaw": {
+      "names": [
+        "moosejaw.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "mooseknucklescanada": {
+      "names": [
+        "mooseknucklescanada.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "moriahelizabethmerch": {
+      "names": [
+        "moriahelizabethmerch.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "mtvkrefeld-volleyball": {
+      "names": [
+        "mtvkrefeld-volleyball.de"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "naire-insatsucenter": {
+      "names": [
+        "naire-insatsucenter.jp"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "naturealsacebossue": {
+      "names": [
+        "naturealsacebossue.over-blog.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "nederlandwereldwijd": {
+      "names": [
+        "nederlandwereldwijd.nl"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "nevillejohnson": {
+      "names": [
+        "nevillejohnson.co.uk"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "nishinokensetsukogyo": {
+      "names": [
+        "nishinokensetsukogyo.co.jp"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "northwesternmutual": {
+      "names": [
+        "northwesternmutual.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "notalwaysright": {
+      "names": [
+        "notalwaysright.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "nriitexamcell": {
+      "names": [
+        "nriitexamcell.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "o3a02gfdt5": {
+      "names": [
+        "o3a02gfdt5.top"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "octobersveryown": {
+      "names": [
+        "octobersveryown.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "omgwtfnzbs": {
+      "names": [
+        "omgwtfnzbs.me"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "omnisecu": {
+      "names": [
+        "omnisecu.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "openweathermap": {
+      "names": [
+        "openweathermap.org"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "outdoorgearlab": {
+      "names": [
+        "outdoorgearlab.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "outsideprint": {
+      "names": [
+        "outsideprint.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "overstockgarden": {
+      "names": [
+        "overstockgarden.be"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "oxygenclothing": {
+      "names": [
+        "oxygenclothing.co.uk"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "pantherainteractive": {
+      "names": [
+        "pantherainteractive.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "patissonsdesdouceurs": {
+      "names": [
+        "patissonsdesdouceurs.over-blog.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "piggyvest": {
+      "names": [
+        "piggyvest.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "pouncewhineheadquarter": {
+      "names": [
+        "pouncewhineheadquarter.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "prismaroundgurjeet": {
+      "names": [
+        "prismaroundgurjeet.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "privatednsorg": {
+      "names": [
+        "privatednsorg.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "professoresdepvh": {
+      "names": [
+        "professoresdepvh.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "pumpendiscounter": {
+      "names": [
+        "pumpendiscounter.de"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "puolenkuunpelit": {
+      "names": [
+        "puolenkuunpelit.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "puregemcofitnessapparel": {
+      "names": [
+        "puregemcofitnessapparel.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "qstheory": {
+      "names": [
+        "qstheory.cn"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "radiusbycampusmgmt": {
+      "names": [
+        "radiusbycampusmgmt.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "rbmsalute": {
+      "names": [
+        "rbmsalute.it"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "readyrefresh": {
+      "names": [
+        "readyrefresh.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "realizesolucoesfinanceiras": {
+      "names": [
+        "realizesolucoesfinanceiras.com.br"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "resell-rights-weekly": {
+      "names": [
+        "resell-rights-weekly.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "revenuquebec": {
+      "names": [
+        "revenuquebec.ca"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "rikcotterill": {
+      "names": [
+        "rikcotterill.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "rlightcq": {
+      "names": [
+        "rlightcq.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "saludcastillayleon": {
+      "names": [
+        "saludcastillayleon.es"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "satlyk": {
+      "names": [
+        "satlyk.org"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "schwarzbeerschaenke": {
+      "names": [
+        "schwarzbeerschaenke.de"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "scissored": {
+      "names": [
+        "scissored.net"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "sdqlyz": {
+      "names": [
+        "sdqlyz.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "secretemailsystem": {
+      "names": [
+        "secretemailsystem.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "seoulnonghyup": {
+      "names": [
+        "seoulnonghyup.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "seventhqueen": {
+      "names": [
+        "seventhqueen.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "sharethrough": {
+      "names": [
+        "sharethrough.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "simple-membership-plugin": {
+      "names": [
+        "simple-membership-plugin.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "simplyshredded": {
+      "names": [
+        "simplyshredded.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "singles-leipzig": {
+      "names": [
+        "singles-leipzig.de"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "southernukulelestore": {
+      "names": [
+        "southernukulelestore.co.uk"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "soycopywriter": {
+      "names": [
+        "soycopywriter.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "stadt-bremerhaven": {
+      "names": [
+        "stadt-bremerhaven.de"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "startupbridgeva": {
+      "names": [
+        "startupbridgeva.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "stiffafeakdn": {
+      "names": [
+        "stiffafeakdn.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "structured-data-for-wp": {
+      "names": [
+        "structured-data-for-wp.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "submissionwebdirectory": {
+      "names": [
+        "submissionwebdirectory.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "sullygnome": {
+      "names": [
+        "sullygnome.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "sunrisewholesalemerchandise": {
+      "names": [
+        "sunrisewholesalemerchandise.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "suntisfypopfun": {
+      "names": [
+        "suntisfypopfun.myshopify.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "suzukimethod": {
+      "names": [
+        "suzukimethod.or.jp"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "sweetandsavorymeals": {
+      "names": [
+        "sweetandsavorymeals.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "sweetannu": {
+      "names": [
+        "sweetannu.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "sweetpleasure": {
+      "names": [
+        "sweetpleasure.ro"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "swelsonenewsmm": {
+      "names": [
+        "swelsonenewsmm.net"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "swh6gavemb": {
+      "names": [
+        "swh6gavemb.top"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "swjozef-krzyzanowice": {
+      "names": [
+        "swjozef-krzyzanowice.pl"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "szeretlekmagyarorszag": {
+      "names": [
+        "szeretlekmagyarorszag.hu"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "tafsirweb": {
+      "names": [
+        "tafsirweb.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "takeitoutside": {
+      "names": [
+        "takeitoutside.ca"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "talkingupscotlandtwo": {
+      "names": [
+        "talkingupscotlandtwo.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "talkwithstranger": {
+      "names": [
+        "talkwithstranger.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "thaieduforall": {
+      "names": [
+        "thaieduforall.org"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "thansettakij": {
+      "names": [
+        "thansettakij.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "thegreat-divide": {
+      "names": [
+        "thegreat-divide.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "thehappypigcountry": {
+      "names": [
+        "thehappypigcountry.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "thehungryjpeg": {
+      "names": [
+        "thehungryjpeg.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "thelittlegreenbag": {
+      "names": [
+        "thelittlegreenbag.nl"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "theresezrihendvir": {
+      "names": [
+        "theresezrihendvir.wordpress.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "theshopyohjiyamamoto": {
+      "names": [
+        "theshopyohjiyamamoto.com",
+        "theshopyohjiyamamoto.jp"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "thisorthatedition": {
+      "names": [
+        "thisorthatedition.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "tolyafbnjt9dedjj10": {
+      "names": [
+        "tolyafbnjt9dedjj10.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "toscanafilmcommission": {
+      "names": [
+        "toscanafilmcommission.it"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "ukinternetdirectory": {
+      "names": [
+        "ukinternetdirectory.net"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "ulduzumsan": {
+      "names": [
+        "ulduzumsan.az"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "uscustomerservicephonenumber": {
+      "names": [
+        "uscustomerservicephonenumber.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "uzdevumi": {
+      "names": [
+        "uzdevumi.lv"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "ville-gannat": {
+      "names": [
+        "ville-gannat.fr"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "visualsbyimpulse": {
+      "names": [
+        "visualsbyimpulse.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "vogacloset": {
+      "names": [
+        "vogacloset.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "voicethread": {
+      "names": [
+        "voicethread.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "volkovysk": {
+      "names": [
+        "volkovysk.by"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "volksbank-goeppingen": {
+      "names": [
+        "volksbank-goeppingen.de"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "vormgegeven": {
+      "names": [
+        "vormgegeven.nl"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "vprognoze": {
+      "names": [
+        "vprognoze.ru"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "vrbank-oldenburgland": {
+      "names": [
+        "vrbank-oldenburgland.de"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "vseseriipodriad": {
+      "names": [
+        "vseseriipodriad.ru"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "vssvalzbety": {
+      "names": [
+        "vssvalzbety.sk"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "vynesimozg": {
+      "names": [
+        "vynesimozg.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "vzagryzke": {
+      "names": [
+        "vzagryzke.ru"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "walkthroughindia": {
+      "names": [
+        "walkthroughindia.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "warwick": {
+      "names": [
+        "warwick.ac.uk"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "wejehni": {
+      "names": [
+        "wejehni.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "wellplated": {
+      "names": [
+        "wellplated.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "wholecelium": {
+      "names": [
+        "wholecelium.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "wholesaleaccessorymarket": {
+      "names": [
+        "wholesaleaccessorymarket.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "wholesalecbdinc": {
+      "names": [
+        "wholesalecbdinc.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "wickedwhimsmod": {
+      "names": [
+        "wickedwhimsmod.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "willemsefrance": {
+      "names": [
+        "willemsefrance.fr"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "withairbnb": {
+      "names": [
+        "withairbnb.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "withknown": {
+      "names": [
+        "withknown.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "wowitloveithaveit": {
+      "names": [
+        "wowitloveithaveit.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "wpmailsmtp": {
+      "names": [
+        "wpmailsmtp.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "wrhaeoreum": {
+      "names": [
+        "wrhaeoreum.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "wrison-subustall": {
+      "names": [
+        "wrison-subustall.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "wrongweather": {
+      "names": [
+        "wrongweather.net"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "wwopenclick": {
+      "names": [
+        "wwopenclick.vip"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "wyndhamdestinations": {
+      "names": [
+        "wyndhamdestinations.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "xn--c79as89aj0e29b77z": {
+      "names": [
+        "xn--c79as89aj0e29b77z.xn--3e0b707e"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "xn--jj0bj8t1qfpqh7mv": {
+      "names": [
+        "xn--jj0bj8t1qfpqh7mv.kr"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "xn--tor417cilcnri406a44c": {
+      "names": [
+        "xn--tor417cilcnri406a44c.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "ygorganization": {
+      "names": [
+        "ygorganization.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "ysufamily": {
+      "names": [
+        "ysufamily.com"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "zapateriaxtep": {
+      "names": [
+        "zapateriaxtep.es"
+      ],
+      "query_types": [
+        1
+      ]
+    },
+    "zasobygwp": {
+      "names": [
+        "zasobygwp.pl"
+      ],
+      "query_types": [
+        1
+      ]
+    }
+  },
+  "dns_false_positive_context_counts": {
+    "other_dns": {
+      "hexadecimal_shaped": 2,
+      "hyphenated": 41,
+      "letters_only_long": 165,
+      "letters_only_short": 59,
+      "mixed_alphanumeric": 8
+    }
+  },
+  "selected_public_names": {
+    "29ae58661b9c7178": [
+      "29ae58661b9c7178.com"
+    ],
+    "3prby6gy5cwzwj7": [
+      "3prby6gy5cwzwj7.com"
+    ],
+    "5b6f22d57a052badc5aba601e4679ece": [
+      "5b6f22d57a052badc5aba601e4679ece.top"
+    ],
+    "823bc1a6cd3f1657": [
+      "823bc1a6cd3f1657.com"
+    ],
+    "ab350ffc4532": [
+      "ab350ffc4532.com"
+    ],
+    "ab4f1cfc158": [
+      "ab4f1cfc158.com"
+    ],
+    "abcb32843795": [
+      "abcb32843795.com"
+    ],
+    "abcf695074281": [
+      "abcf695074281.com"
+    ],
+    "abdb37682985": [
+      "abdb37682985.com"
+    ],
+    "abdbb6dc289e": [
+      "abdbb6dc289e.com"
+    ],
+    "abfd6159bd14": [
+      "abfd6159bd14.com"
+    ],
+    "aleset": [
+      "aleset.ru"
+    ],
+    "anotherangryvoice": [
+      "anotherangryvoice.blogspot.com"
+    ],
+    "bjyqxxhs": [
+      "bjyqxxhs.com"
+    ],
+    "centr-hirurgii": [
+      "centr-hirurgii.ru"
+    ],
+    "cloxhrdcfvq": [
+      "cloxhrdcfvq.webcam"
+    ],
+    "dsrddtebtdj": [
+      "dsrddtebtdj.yi.org"
+    ],
+    "esboin": [
+      "esboin.dynserv.com"
+    ],
+    "faisap": [
+      "faisap.net"
+    ],
+    "fgfuiuo": [
+      "fgfuiuo.ru"
+    ],
+    "futess": [
+      "futess.name"
+    ],
+    "haeamxriii": [
+      "haeamxriii.com"
+    ],
+    "incredibleegg": [
+      "incredibleegg.org"
+    ],
+    "jkuvgrpru": [
+      "jkuvgrpru.work"
+    ],
+    "kozvia": [
+      "kozvia.net"
+    ],
+    "mchika": [
+      "mchika.dyndns.org"
+    ],
+    "mohawkcollege": [
+      "mohawkcollege.ca"
+    ],
+    "rgvqcsxqge": [
+      "rgvqcsxqge.com"
+    ],
+    "rhvgmritmziwcm": [
+      "rhvgmritmziwcm.net"
+    ],
+    "riseofagon": [
+      "riseofagon.com"
+    ],
+    "secretsantaorganizer": [
+      "secretsantaorganizer.com"
+    ],
+    "statxyz": [
+      "statxyz.com"
+    ],
+    "tirdro": [
+      "tirdro.eu"
+    ],
+    "twoeggz": [
+      "twoeggz.com"
+    ],
+    "twopeasandtheirpod": [
+      "twopeasandtheirpod.com"
+    ],
+    "vaxvacationaccess": [
+      "vaxvacationaccess.com"
+    ],
+    "voyage-prive": [
+      "voyage-prive.be",
+      "voyage-prive.com"
+    ],
+    "xwb2uooia5o59avwxb": [
+      "xwb2uooia5o59avwxb.com"
+    ],
+    "zelbicvvui": [
+      "zelbicvvui.com"
+    ],
+    "zeugqaiyby": [
+      "zeugqaiyby.com"
+    ]
+  },
+  "caveats": [
+    "Labels are publisher/reference assertions, not current network attack truth",
+    "Shape groups describe syntax; names do not establish service roles or maliciousness",
+    "Feature profiles and split counts are associations, not causal feature importance",
+    "Comparison test was inspected during earlier iterations; it is not untouched",
+    "DNS overlap strata are post-hoc diagnostics; they do not replace the original FPR gate",
+    "No training, threshold sweep, artifact replacement, activation or runtime changes performed"
+  ]
+}

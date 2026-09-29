@@ -1,0 +1,20 @@
+{
+  "id": "PS26145-DGA-weighted-long-benign-v1",
+  "frozen_on": "2026-09-30",
+  "scope": "One offline DGA training/validation candidate; no reserved scoring or runtime promotion",
+  "evaluation_protocol_sha256": "2bcf5534437fb55045d40be8f0558734184ea4d687abd97f9a5d10e8df79c763",
+  "training_source_manifest_sha256": "4daf4448f4a3437ff085754c49d9c90520b569577c8c5ba80dd8e5795b828e76",
+  "existing_candidate_sha256": "c0314dd5f1fe360db11e2494326fd6e99f267d6e920fa091f6c9fcebc796996e",
+  "training_partition": "data/dga_evaluation_protocol.json:development_partitions.training; 69993 positive and 67715 benign scored first labels",
+  "validation_partition": "data/dga_evaluation_protocol.json:development_partitions.validation_tuning; 80000 positive and 15236 benign scored first labels",
+  "predictive_features": "ml.dga.tokens first-label character 2/3-grams with training-only TF-IDF and ml.dga.lexical_features ten numeric fields, in ml.dga.NUMERIC_FEATURES order",
+  "forbidden_predictors": ["dataset name", "family label", "source IP/address", "file name", "scenario ID", "suffix", "future DNS observations"],
+  "single_hypothesis": "Upweight training-only benign labels that are alphabetic and at least 12 characters, because long alphabetic legitimate domains dominate false positives",
+  "additional_training_sample_weight": "3.0 for benign first labels with label.isalpha() and len(label) >= 12; 1.0 otherwise; multiply sklearn's balanced class weight in logistic fit; use same row weights for boosted fit",
+  "base_encoder": "DictVectorizer + TfidfTransformer(sublinear_tf=True) + StandardScaler ten numeric fields + LogisticRegression(C=1.0,solver=liblinear,class_weight=balanced,max_iter=300,random_state=26145)",
+  "stacked_classifier": "GradientBoostingClassifier(n_estimators=100,learning_rate=0.08,max_depth=3,min_samples_leaf=1000,random_state=26145); same architecture as current candidate",
+  "validation_threshold_grid": [0.5, 0.6, 0.7, 0.8, 0.85, 0.9, 0.95, 0.975, 0.99],
+  "threshold_selection": "among validation thresholds satisfying recall>=0.8, precision>=0.95, FPR<=0.02, choose highest recall then lowest FPR; if none pass, retain 0.99 and report failure; no second training configuration",
+  "candidate_output": "ml/dga_weighted_candidate.json; always runtime_enabled=false with matching .sha256; never replace ml/dga_v2.json",
+  "reserved_evaluation": "not materialized; no evaluation until a separate source manifest with integrity and overlap checks is frozen; leave candidate disabled if unavailable"
+}

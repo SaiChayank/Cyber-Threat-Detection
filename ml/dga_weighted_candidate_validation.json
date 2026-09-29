@@ -1,0 +1,232 @@
+{
+  "generated_at_utc": "2026-09-29T19:12:25.711485+00:00",
+  "scope": "One frozen training/validation experiment only; no reserved or inspected comparison scoring",
+  "plan_sha256": "395d4213ef1d204728143050d4a6153ff5707af3cb6c7ecf6af36e5ad7ccbfe1",
+  "evaluation_protocol_sha256": "2bcf5534437fb55045d40be8f0558734184ea4d687abd97f9a5d10e8df79c763",
+  "source_manifest_sha256": "4daf4448f4a3437ff085754c49d9c90520b569577c8c5ba80dd8e5795b828e76",
+  "candidate_artifact": "ml/dga_weighted_candidate.json",
+  "candidate_sha256": "e81821f753d1e1b71fb5a08ff446467165941db996929767edec008c01c130ca",
+  "candidate_bytes": 2349090,
+  "candidate_enabled": false,
+  "threshold": 0.85,
+  "validation": {
+    "tp": 74242,
+    "tn": 14958,
+    "fp": 278,
+    "fn": 5758,
+    "precision": 0.9962694578636607,
+    "recall": 0.928025,
+    "false_positive_rate": 0.01824625886059333,
+    "f1": 0.9609370955216153,
+    "per_family_recall": {
+      "cryptolocker": 0.9723,
+      "fobber_v1": 0.9973,
+      "fobber_v2": 0.8917,
+      "locky": 0.8948,
+      "murofet_v1": 1.0,
+      "murofet_v2": 0.9935,
+      "murofet_v3": 1.0,
+      "proslikefan": 0.6746
+    }
+  },
+  "validation_thresholds": [
+    {
+      "threshold": 0.5,
+      "tp": 77477,
+      "tn": 14246,
+      "fp": 990,
+      "fn": 2523,
+      "precision": 0.9873832311672422,
+      "recall": 0.9684625,
+      "false_positive_rate": 0.06497768443160934,
+      "f1": 0.9778313465895108
+    },
+    {
+      "threshold": 0.6,
+      "tp": 76900,
+      "tn": 14476,
+      "fp": 760,
+      "fn": 3100,
+      "precision": 0.9902137522534123,
+      "recall": 0.96125,
+      "false_positive_rate": 0.04988185875557889,
+      "f1": 0.9755169351769631
+    },
+    {
+      "threshold": 0.7,
+      "tp": 76249,
+      "tn": 14672,
+      "fp": 564,
+      "fn": 3751,
+      "precision": 0.9926574928723002,
+      "recall": 0.9531125,
+      "false_positive_rate": 0.03701758991861381,
+      "f1": 0.9724831487185374
+    },
+    {
+      "threshold": 0.8,
+      "tp": 75202,
+      "tn": 14847,
+      "fp": 389,
+      "fn": 4798,
+      "precision": 0.9948538847217261,
+      "recall": 0.940025,
+      "false_positive_rate": 0.025531635599894985,
+      "f1": 0.966662596165588
+    },
+    {
+      "threshold": 0.85,
+      "tp": 74242,
+      "tn": 14958,
+      "fp": 278,
+      "fn": 5758,
+      "precision": 0.9962694578636607,
+      "recall": 0.928025,
+      "false_positive_rate": 0.01824625886059333,
+      "f1": 0.9609370955216153
+    },
+    {
+      "threshold": 0.9,
+      "tp": 72878,
+      "tn": 15056,
+      "fp": 180,
+      "fn": 7122,
+      "precision": 0.9975362041118015,
+      "recall": 0.910975,
+      "false_positive_rate": 0.01181412444211079,
+      "f1": 0.9522925949640005
+    },
+    {
+      "threshold": 0.95,
+      "tp": 69640,
+      "tn": 15143,
+      "fp": 93,
+      "fn": 10360,
+      "precision": 0.9986663416173117,
+      "recall": 0.8705,
+      "false_positive_rate": 0.006103964295090575,
+      "f1": 0.9301890698777157
+    },
+    {
+      "threshold": 0.975,
+      "tp": 65435,
+      "tn": 15198,
+      "fp": 38,
+      "fn": 14565,
+      "precision": 0.9994196080827211,
+      "recall": 0.8179375,
+      "false_positive_rate": 0.0024940929377789446,
+      "f1": 0.8996171110790319
+    },
+    {
+      "threshold": 0.99,
+      "tp": 59719,
+      "tn": 15221,
+      "fp": 15,
+      "fn": 20281,
+      "precision": 0.9997488867311749,
+      "recall": 0.7464875,
+      "false_positive_rate": 0.0009845103701758991,
+      "f1": 0.8547526013711767
+    }
+  ],
+  "baselines": {
+    "old_rule": {
+      "tp": 19374,
+      "tn": 15212,
+      "fp": 24,
+      "fn": 60626,
+      "precision": 0.9987627590473245,
+      "recall": 0.242175,
+      "false_positive_rate": 0.0015752165922814387,
+      "f1": 0.3898267570776072,
+      "per_family_recall": {
+        "cryptolocker": 0.0,
+        "fobber_v1": 0.0,
+        "fobber_v2": 0.0,
+        "locky": 0.0,
+        "murofet_v1": 0.9375,
+        "murofet_v2": 0.0,
+        "murofet_v3": 0.9999,
+        "proslikefan": 0.0
+      }
+    },
+    "validation_rule": {
+      "tp": 45255,
+      "tn": 15168,
+      "fp": 68,
+      "fn": 34745,
+      "precision": 0.9984996580102817,
+      "recall": 0.5656875,
+      "false_positive_rate": 0.004463113678130743,
+      "f1": 0.7222137995419835,
+      "per_family_recall": {
+        "cryptolocker": 0.4257,
+        "fobber_v1": 0.6945,
+        "fobber_v2": 0.4021,
+        "locky": 0.3991,
+        "murofet_v1": 0.8964,
+        "murofet_v2": 0.4927,
+        "murofet_v3": 0.9972,
+        "proslikefan": 0.2178
+      }
+    },
+    "current_candidate_features": {
+      "tp": 73577,
+      "tn": 14968,
+      "fp": 268,
+      "fn": 6423,
+      "precision": 0.9963707766267181,
+      "recall": 0.9197125,
+      "false_positive_rate": 0.0175899186138094,
+      "f1": 0.9565081738113036,
+      "per_family_recall": {
+        "cryptolocker": 0.9787,
+        "fobber_v1": 0.9989,
+        "fobber_v2": 0.8744,
+        "locky": 0.8804,
+        "murofet_v1": 1.0,
+        "murofet_v2": 0.9958,
+        "murofet_v3": 1.0,
+        "proslikefan": 0.6295
+      }
+    },
+    "deployed_synthetic_dga_effective": {
+      "tp": 19374,
+      "tn": 15212,
+      "fp": 24,
+      "fn": 60626,
+      "precision": 0.9987627590473245,
+      "recall": 0.242175,
+      "false_positive_rate": 0.0015752165922814387,
+      "f1": 0.3898267570776072,
+      "per_family_recall": {
+        "cryptolocker": 0.0,
+        "fobber_v1": 0.0,
+        "fobber_v2": 0.0,
+        "locky": 0.0,
+        "murofet_v1": 0.9375,
+        "murofet_v2": 0.0,
+        "murofet_v3": 0.9999,
+        "proslikefan": 0.0
+      }
+    }
+  },
+  "validation_gate_passed": true,
+  "separate_benign_dns_fpr": null,
+  "reserved_evaluation": null,
+  "promotion_decision": "blocked_missing_reserved_evaluation",
+  "reasons": [
+    "No reserved DGA algorithm/domain/DNS materialization is present; all four final gates cannot be assessed"
+  ],
+  "portable_export_verification": {
+    "samples": 201,
+    "maximum_absolute_error": 2.220446049250313e-16
+  },
+  "caveats": [
+    "Candidate artifact is disabled and is not the deployed DGA model",
+    "The synthetic deployed DGA alert path is the conservative lexical guard on these public strings",
+    "Source labels and validation prevalence are not production threat truth or production precision",
+    "No family name, filename, address, dataset ID or scenario ID is a predictive feature"
+  ]
+}
