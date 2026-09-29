@@ -25,6 +25,7 @@ dev = [
 ]
 research = ["numpy>=1.26.0", "pandas>=2.2.0", "scikit-learn>=1.4.0", "xgboost>=2.0.0", "scapy>=2.5.0", "pyarrow>=25.0.1,<26"]
 datasets = ["pyarrow>=25.0.1,<26", "stream-unzip>=0.0.101,<0.1"]
+dga-training = ["scikit-learn>=1.4,<2"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
@@ -36,4 +37,4 @@ python_functions = ["test_*"]
 include = ["alerts*", "backend*", "benchmarks*", "datasets*", "detection*", "features*", "ingest*", "ml*", "persistence*", "replay*", "schemas*", "streaming*"]
 
 [tool.setuptools.package-data]
-ml = ["artifact.json", "artifact.sha256", "evaluation.json"]
+ml = ["artifact.json", "artifact.sha256", "evaluation.json", "dga_v2.json", "dga_v2.sha256"]

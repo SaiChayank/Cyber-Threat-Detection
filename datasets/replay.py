@@ -28,4 +28,4 @@ def records(preset):
 
 
 def available():
-    return [dict(id=k, name=v[0], ready=(ROOT/v[1]).is_file(), event_limit=2000, model='Existing synthetic-trained pipeline; external replay, not public-trained production model') for k,v in PRESETS.items()]
+    return [dict(id=k, name=v[0], ready=(ROOT/v[1]).is_file(), event_limit=2000, model='Current streaming detector; public replay does not establish attack truth') for k,v in PRESETS.items()]

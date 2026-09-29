@@ -1,6 +1,8 @@
 """Official UMUDGA raw-list subset, with file and family provenance."""
 import hashlib
 import json
+import argparse
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 import httpx
 from datasets.download import ROOT
@@ -9,7 +11,65 @@ FAMILIES = ['legit', 'banjori', 'corebot', 'dircrypt', 'matsnu', 'necurs', 'ramn
 BASE = 'https://data.mendeley.com/public-api/datasets/y8ph45msv8'
 
 
+def expanded():
+    """Bounded raw-text subset; never download or execute DGA program sources."""
+    dest = ROOT / 'data/raw/umudga-expanded'
+    dest.mkdir(parents=True, exist_ok=True)
+    with httpx.Client(follow_redirects=True, timeout=120,
+                      headers={'Accept': 'application/vnd.mendeley-public-dataset.1+json'}) as client:
+        response = client.get(BASE + '/folders/1')
+        response.raise_for_status()
+        folders = response.json()
+        parent = next(x['id'] for x in folders if x['name'] == 'Fully Qualified Domain Names')
+        groups = sorted((x for x in folders if x.get('parent_id') == parent), key=lambda x: x['name'])
+
+        def download(group):
+            family = group['name']
+            if not family or any(c not in 'abcdefghijklmnopqrstuvwxyz0123456789_-' for c in family):
+                raise ValueError('Unexpected family identifier')
+            listing = next(x for x in folders if x['name'] == 'list' and x.get('parent_id') == group['id'])
+            response = client.get(BASE + '/files', params={'folder_id': listing['id'], 'version': 1,
+                                                          '$start': 0, '$limit': 1000})
+            response.raise_for_status()
+            size_tier = '100000.txt' if family == 'legit' else '10000.txt'
+            file = next(x for x in response.json() if x['filename'] == size_tier)
+            details = file['content_details']
+            if not 0 < details['size'] <= 5_000_000:
+                raise ValueError('Selected raw text file exceeds 5 MB limit')
+            path = dest / (family + '.txt')
+            if not path.is_file() or hashlib.sha256(path.read_bytes()).hexdigest() != details['sha256_hash']:
+                body = bytearray()
+                with client.stream('GET', details['download_url'], headers={'Accept': '*/*'}) as stream:
+                    stream.raise_for_status()
+                    for chunk in stream.iter_bytes():
+                        body.extend(chunk)
+                        if len(body) > details['size']:
+                            raise ValueError('Download exceeds declared size')
+                if len(body) != details['size'] or hashlib.sha256(body).hexdigest() != details['sha256_hash']:
+                    raise ValueError('Publisher size/hash mismatch')
+                temporary = path.with_suffix('.part')
+                temporary.write_bytes(body)
+                temporary.replace(path)
+            print(f'Verified {family}: {path.stat().st_size:,} bytes', flush=True)
+            return dict(family=family, file=path.relative_to(ROOT).as_posix(),
+                        publisher_file_id=file['id'], publisher_filename=file['filename'],
+                        url=details['download_url'], sha256=details['sha256_hash'], bytes=path.stat().st_size)
+
+        with ThreadPoolExecutor(max_workers=4) as pool:
+            entries = list(pool.map(download, groups))
+    manifest = dict(source='https://data.mendeley.com/datasets/y8ph45msv8/1',
+                    doi='10.17632/y8ph45msv8.1', licence='MIT',
+                    authors=['Mattia Zago', 'Manuel Gil Perez', 'Gregorio Martinez Perez'],
+                    subset='Complete 10,000-domain raw lists per variant; 100,000-domain legitimate reference',
+                    files=entries)
+    (ROOT / 'data/umudga_expanded_manifest.json').write_text(json.dumps(manifest, indent=2), encoding='utf-8')
+
+
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--expanded', action='store_true', help='Download broader raw-text DGA training/evaluation subset')
+    if parser.parse_args().expanded:
+        return expanded()
     dest = ROOT / 'data/raw/umudga'
     dest.mkdir(parents=True, exist_ok=True)
     with httpx.Client(follow_redirects=True, timeout=120, headers={'Accept': 'application/vnd.mendeley-public-dataset.1+json'}) as client:

@@ -28,12 +28,17 @@ evaluation reports retain provenance, version, attribution and hashes.
   were read to completion, verifying their CRC; local file SHA256 hashes are saved.
   Manifests: `data/cicdns2021_manifest.json`, `data/dns_capture_catalog.json`.
   Source: https://www.unb.ca/cic/datasets/dns-exf-2021.html
-- **UMUDGA v1:** seven complete 1,000-domain lists: legitimate reference, banjori,
+- **UMUDGA v1 original subset:** seven complete 1,000-domain lists: legitimate reference, banjori,
   corebot, dircrypt, matsnu, necurs and ramnit. Raw strings, not precomputed features.
   All seven files match publisher SHA256 values. MIT-licensed release by Mattia Zago,
   Manuel Gil Perez and Gregorio Martinez Perez, DOI 10.17632/y8ph45msv8.1.
   Manifest: `data/umudga_manifest.json`.
   Source: https://data.mendeley.com/datasets/y8ph45msv8/1
+- **UMUDGA expanded subset (29 September):** 50 complete 10,000-domain variant
+  lists plus a 100,000-domain legitimate reference, **11,451,100 additional bytes**.
+  Publisher size/SHA256 verified for all 51 text files. Stored separately under
+  `data/raw/umudga-expanded/`; manifest `data/umudga_expanded_manifest.json`.
+  Same MIT-licensed release and authors. No executable generator code is included.
 - **Annotated Encrypted Network Traffic Dataset v1.0.0:** all three public Parquet
   archives (`malware`, `winapps`, `soho`) and schema/README, 74.4 MB. Publisher MD5
   values verified. Author Ondrej Rysavy; CC BY 4.0 confirmed in the release API;
@@ -87,9 +92,10 @@ transfers named `*_exe.pcap`; these are traffic captures, not executable downloa
 
 ## Model results and limits
 
-The current runtime pipeline has also been evaluated directly on all seven domain
-lists and all 14 PCAPs. The report records 91.2% false positives on the isolated
-legitimate-domain list and confirms the earlier benign-PCAP alert counts. See
+The original runtime pipeline was evaluated on all seven domain lists and 14 PCAPs,
+exposing 91.2% false positives on the isolated legitimate-domain reference. The
+current conservative guard reduces that sample's FPR to zero while reducing DGA
+recall to 7.97%. See
 [Streaming validation](STREAMING_VALIDATION.md) and `ml/streaming_validation.json`
 for reproduction, packet-rate measurements, visibility gaps and next actions.
 
@@ -136,6 +142,14 @@ results establishes deployment accuracy. Public-data next work should focus on
 benign DNS diversity, realistic tunnelling formats, capture-aware supervised models,
 and causal features shared between training and runtime, followed by calibration and
 throughput checks. TLS record lengths must remain distinct from IP packet sizes.
+
+The expanded DGA experiment fits a portable lexical classifier with family-grouped
+splits and benign-capture hard negatives. Development comparison recall improves
+to 76.77% with 1.68% FPR, but the 80% recall gate and separate DNS-reference FPR
+gate fail, so it remains disabled. See [DGA development](DGA_DETECTION.md) and
+`ml/dga_v2_evaluation.json`. Test-family results were inspected during development;
+these comparisons are not an untouched final holdout. The original streaming guard
+continues serving the dashboard.
 
 ## Source still unavailable for integration
 

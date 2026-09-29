@@ -1,5 +1,10 @@
 # External streaming validation
 
+The expanded DGA candidate is documented in [DGA development](DGA_DETECTION.md).
+It remains disabled after failing its gates. This streaming report checks the
+active conservative guard and records the inactive candidate's hash/status; it
+must not be confused with the candidate's development comparison metrics.
+
 ## Follow-up — 29 September 2026
 
 Focused changes preserve the existing pipeline, model weights, API and frontend:

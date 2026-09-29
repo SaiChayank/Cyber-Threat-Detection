@@ -3,6 +3,7 @@ import time
 from collections import deque, OrderedDict
 from features.extractor import FeatureExtractor
 from ml.model import Model
+from ml.dga import DgaModel, domain_label, FEATURE_VERSION
 from schemas.alert import AlertEvent
 from schemas.enums import ThreatClass, Severity, DetectorType
 from schemas.flow_record import FlowRecord
@@ -22,6 +23,7 @@ class Pipeline:
     def __init__(self):
         self.extractor = FeatureExtractor()
         self.model = Model()
+        self.dga_model = DgaModel()
         self.processed = 0
         self.latencies = deque(maxlen=10000)
         self.dedup = {}
@@ -52,11 +54,18 @@ class Pipeline:
         # length on the same first label as entropy and bigram surprise.
         dga_evidence = (f['domain_entropy'] >= 3.5 and f['bigram_surprise'] >= .8
                         and f['domain_label_length'] >= 20)
+        if self.dga_model.enabled:
+            # DGA uses its independent lexical classifier after quality gates.
+            # Synthetic model hits and the old length rule cannot override it.
+            hits.pop('DGA_DOMAINS', None)
+            dga_score = self.dga_model.predict(event.dns_name)
+            if dga_score is not None and dga_score >= self.dga_model.threshold:
+                hits['DGA_DOMAINS'] = (dga_score, DetectorType.ML)
         rules = {
             'DDOS': f['packet_rate'] >= 1000,
             'RECONNAISSANCE': max(f['destination_count'], f['port_count']) >= 20,
             'DNS_TUNNELLING': f['domain_label_length'] >= 50 and f['txt_record'] == 1,
-            'DGA_DOMAINS': dga_evidence,
+            'DGA_DOMAINS': dga_evidence and not self.dga_model.enabled,
             'BOTNET_C2': f['history_count'] >= 8 and f['iat_mean'] >= 1 and f['iat_cv'] < .05,
             'ENCRYPTED_MALWARE': f['encrypted'] and f['fingerprint_risk'],
             'DATA_EXFILTRATION': f['egress_bytes'] > 20000000,
@@ -75,7 +84,7 @@ class Pipeline:
                 continue
             if threat in ('DGA_DOMAINS', 'DNS_TUNNELLING') and not event.dns_name:
                 continue
-            if threat == 'DGA_DOMAINS' and not dga_evidence:
+            if threat == 'DGA_DOMAINS' and not self.dga_model.enabled and not dga_evidence:
                 continue
             key = (str(event.src_ip), str(event.dst_ip), threat)
             if key in self.dedup:
@@ -85,6 +94,13 @@ class Pipeline:
             self.dedup[key] = event.timestamp
             evidence = {k: f[k] for k in EVIDENCE[threat]}
             evidence['confidence_kind'] = 'heuristic strength' if source == DetectorType.RULE else 'synthetic-trained model posterior'
+            if threat == 'DGA_DOMAINS':
+                evidence['observed_dns_name'] = event.dns_name
+                if self.dga_model.enabled:
+                    evidence['confidence_kind'] = self.dga_model.data['confidence_kind']
+                    evidence['dga_label'] = domain_label(event.dns_name)
+                    evidence['dga_threshold'] = self.dga_model.threshold
+                    evidence['dga_feature_version'] = FEATURE_VERSION
             evidence['window_partial'] = f['window_partial']
             narrative = '; '.join(f'{k}={round(v, 4) if isinstance(v, float) else v}' for k, v in evidence.items())
             if threat == 'DATA_EXFILTRATION' and not event.reverse_observed:
@@ -102,4 +118,6 @@ class Pipeline:
         timings = sorted(self.latencies)
         return dict(processed=self.processed, late_events=self.extractor.late_events,
                     state_evictions=self.extractor.evictions, active_sources=len(self.extractor.sources),
+                    dga_detector='public-lexical-model' if self.dga_model.enabled else 'conservative-lexical-guard',
+                    dga_candidate_enabled=self.dga_model.enabled,
                     processing_p95_ms=timings[min(len(timings)-1, int(len(timings)*.95))] if timings else 0)

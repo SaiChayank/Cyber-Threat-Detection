@@ -15,6 +15,7 @@ from detection.pipeline import Pipeline
 from ingest.metadata import from_packet
 from ingest.pcap_reader import PcapReader
 from ml.model import ARTIFACT
+from ml.dga import ARTIFACT as DGA_ARTIFACT, DgaModel
 
 
 def sha256(path):
@@ -112,8 +113,10 @@ def validate_captures():
 def main():
     report = dict(generated_at_utc=datetime.now(timezone.utc).isoformat(),
                   model_sha256=sha256(ARTIFACT), model='Current synthetic-trained hybrid streaming pipeline',
+                  dga_candidate_sha256=sha256(DGA_ARTIFACT) if DGA_ARTIFACT.is_file() else None,
+                  dga_candidate_enabled=DgaModel().enabled,
                   runtime_source_sha256={file: sha256(ROOT / file) for file in
-                                         ('detection/pipeline.py', 'features/extractor.py', 'ingest/protocol_parsers.py')},
+                                         ('detection/pipeline.py', 'features/extractor.py', 'ingest/protocol_parsers.py', 'ml/dga.py')},
                   umudga=validate_domains(), captures=validate_captures(),
                   limitations=['PCAP throughput includes parsing, feature extraction and inference; excludes replay pacing, persistence and UI',
                                'No malware payloads were decrypted and no monitored host was contacted',

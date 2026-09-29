@@ -141,8 +141,8 @@ export function AlertDetail({
               </section>
               <div className="flex flex-wrap items-center justify-between gap-3 border-t border-line pt-5">
                 <p className="max-w-[360px] text-[10px] leading-5 text-muted">
-                  Encrypted content stays opaque. Scores are synthetic-trained posteriors or
-                  heuristic strengths, without deployment calibration.
+                  Encrypted content stays opaque. Scores are model estimates or heuristic strengths,
+                  without deployment calibration.
                 </p>
                 <Button onClick={copy} className="text-xs">
                   {copied ? <Check size={13} /> : <Copy size={13} />}{' '}

@@ -1,0 +1,472 @@
+{
+  "source": "https://data.mendeley.com/datasets/y8ph45msv8/1",
+  "doi": "10.17632/y8ph45msv8.1",
+  "licence": "MIT",
+  "authors": [
+    "Mattia Zago",
+    "Manuel Gil Perez",
+    "Gregorio Martinez Perez"
+  ],
+  "subset": "Complete 10,000-domain raw lists per variant; 100,000-domain legitimate reference",
+  "files": [
+    {
+      "family": "alureon",
+      "file": "data/raw/umudga-expanded/alureon.txt",
+      "publisher_file_id": "6980405f-cd54-48f3-888f-b8e9c22817d7",
+      "publisher_filename": "10000.txt",
+      "url": "https://data.mendeley.com/public-files/datasets/y8ph45msv8/files/6980405f-cd54-48f3-888f-b8e9c22817d7/file_downloaded",
+      "sha256": "59212a00719f24c2adf7a0b6c4802c94d1686ceb3c5e0a34923622ee8deab342",
+      "bytes": 150000
+    },
+    {
+      "family": "banjori",
+      "file": "data/raw/umudga-expanded/banjori.txt",
+      "publisher_file_id": "32ef1595-2cb9-4619-bac8-28fbcedafd77",
+      "publisher_filename": "10000.txt",
+      "url": "https://data.mendeley.com/public-files/datasets/y8ph45msv8/files/32ef1595-2cb9-4619-bac8-28fbcedafd77/file_downloaded",
+      "sha256": "0f1a7048067c0d030d02d658e3b6f35152597495c47539e0fa6e4423d916a7ff",
+      "bytes": 255608
+    },
+    {
+      "family": "bedep",
+      "file": "data/raw/umudga-expanded/bedep.txt",
+      "publisher_file_id": "0b1da563-27cb-45d5-b49b-fc630717ac94",
+      "publisher_filename": "10000.txt",
+      "url": "https://data.mendeley.com/public-files/datasets/y8ph45msv8/files/0b1da563-27cb-45d5-b49b-fc630717ac94/file_downloaded",
+      "sha256": "cb23b12a16c48e69fbec01ae850076bf7bd20aaedce9f79f5e47ac2acac729ce",
+      "bytes": 199861
+    },
+    {
+      "family": "ccleaner",
+      "file": "data/raw/umudga-expanded/ccleaner.txt",
+      "publisher_file_id": "d32030a3-1a03-43e7-9f8d-5371c556229b",
+      "publisher_filename": "10000.txt",
+      "url": "https://data.mendeley.com/public-files/datasets/y8ph45msv8/files/d32030a3-1a03-43e7-9f8d-5371c556229b/file_downloaded",
+      "sha256": "bfba45646455098d9d6f4ffcf3f8207d3079d40692e13b62eff2b9b9c54fc491",
+      "bytes": 181619
+    },
+    {
+      "family": "chinad",
+      "file": "data/raw/umudga-expanded/chinad.txt",
+      "publisher_file_id": "34d2221b-18fa-4261-8a3b-afd3f8f7930e",
+      "publisher_filename": "10000.txt",
+      "url": "https://data.mendeley.com/public-files/datasets/y8ph45msv8/files/34d2221b-18fa-4261-8a3b-afd3f8f7930e/file_downloaded",
+      "sha256": "77398394c641deab953a126d6df4ccf77dea5a99c0dd79a5285ae4371ec3b41a",
+      "bytes": 208554
+    },
+    {
+      "family": "corebot",
+      "file": "data/raw/umudga-expanded/corebot.txt",
+      "publisher_file_id": "d2335b23-5bbf-4921-987e-5c7a9fd6d891",
+      "publisher_filename": "10000.txt",
+      "url": "https://data.mendeley.com/public-files/datasets/y8ph45msv8/files/d2335b23-5bbf-4921-987e-5c7a9fd6d891/file_downloaded",
+      "sha256": "d30ab70c63af086ab6a02e59ca58bff23dc1eb4a529b39b9520e72030d98f3dd",
+      "bytes": 275155
+    },
+    {
+      "family": "cryptolocker",
+      "file": "data/raw/umudga-expanded/cryptolocker.txt",
+      "publisher_file_id": "6738f69d-4a02-42f1-9da1-8b6d3827e2f4",
+      "publisher_filename": "10000.txt",
+      "url": "https://data.mendeley.com/public-files/datasets/y8ph45msv8/files/6738f69d-4a02-42f1-9da1-8b6d3827e2f4/file_downloaded",
+      "sha256": "9102e995370df3fb8ffa37a9762ec639bc6977ab27e0a0552c65ac6d6e580379",
+      "bytes": 187793
+    },
+    {
+      "family": "dircrypt",
+      "file": "data/raw/umudga-expanded/dircrypt.txt",
+      "publisher_file_id": "2a057d14-355d-4aa6-bedd-2d83560d559a",
+      "publisher_filename": "10000.txt",
+      "url": "https://data.mendeley.com/public-files/datasets/y8ph45msv8/files/2a057d14-355d-4aa6-bedd-2d83560d559a/file_downloaded",
+      "sha256": "76359a72af450e523090c2292938ca3ebe351ea9a9d7b0bd262ac91052b67803",
+      "bytes": 190172
+    },
+    {
+      "family": "dyre",
+      "file": "data/raw/umudga-expanded/dyre.txt",
+      "publisher_file_id": "45edc396-1099-42c0-b71d-3341255a1426",
+      "publisher_filename": "10000.txt",
+      "url": "https://data.mendeley.com/public-files/datasets/y8ph45msv8/files/45edc396-1099-42c0-b71d-3341255a1426/file_downloaded",
+      "sha256": "f6d998765b6e38a82971eec7906ebd66282b1fb7b964b15a7e0ac82bbd108a41",
+      "bytes": 380000
+    },
+    {
+      "family": "fobber_v1",
+      "file": "data/raw/umudga-expanded/fobber_v1.txt",
+      "publisher_file_id": "5ba16370-a578-428f-bf8d-7958d6acde2b",
+      "publisher_filename": "10000.txt",
+      "url": "https://data.mendeley.com/public-files/datasets/y8ph45msv8/files/5ba16370-a578-428f-bf8d-7958d6acde2b/file_downloaded",
+      "sha256": "e59576d13465479ee268aaee8a0d8ad93d22aa7c2698f3cee9c241db5d13e79c",
+      "bytes": 220000
+    },
+    {
+      "family": "fobber_v2",
+      "file": "data/raw/umudga-expanded/fobber_v2.txt",
+      "publisher_file_id": "a17b97fe-20a8-48b8-a977-1343e56852bf",
+      "publisher_filename": "10000.txt",
+      "url": "https://data.mendeley.com/public-files/datasets/y8ph45msv8/files/a17b97fe-20a8-48b8-a977-1343e56852bf/file_downloaded",
+      "sha256": "0e92c30d95a66cf4a754a091e3faec36be676093b053c38f8a8b9280da864aaf",
+      "bytes": 150000
+    },
+    {
+      "family": "gozi_gpl",
+      "file": "data/raw/umudga-expanded/gozi_gpl.txt",
+      "publisher_file_id": "2ab591c0-a9bf-4aac-bd53-a38b7a56f04b",
+      "publisher_filename": "10000.txt",
+      "url": "https://data.mendeley.com/public-files/datasets/y8ph45msv8/files/2ab591c0-a9bf-4aac-bd53-a38b7a56f04b/file_downloaded",
+      "sha256": "5df353443154e7546137a4178baf5b6c044cb2d10017b56f22942323d94183f6",
+      "bytes": 234798
+    },
+    {
+      "family": "gozi_luther",
+      "file": "data/raw/umudga-expanded/gozi_luther.txt",
+      "publisher_file_id": "c6c296c5-f8f1-425a-8985-75ef979ee382",
+      "publisher_filename": "10000.txt",
+      "url": "https://data.mendeley.com/public-files/datasets/y8ph45msv8/files/c6c296c5-f8f1-425a-8985-75ef979ee382/file_downloaded",
+      "sha256": "2e38dd79a13c09a9b1b893d51493889b2d2be8e34293021618b60808bf8e8c6c",
+      "bytes": 246593
+    },
+    {
+      "family": "gozi_nasa",
+      "file": "data/raw/umudga-expanded/gozi_nasa.txt",
+      "publisher_file_id": "19b10fbb-030f-4f96-adb2-7ba254f6da90",
+      "publisher_filename": "10000.txt",
+      "url": "https://data.mendeley.com/public-files/datasets/y8ph45msv8/files/19b10fbb-030f-4f96-adb2-7ba254f6da90/file_downloaded",
+      "sha256": "b3fadc6130b90d992fa606145c67bc98ae2525d659007ded6b69e075e252ad83",
+      "bytes": 243211
+    },
+    {
+      "family": "gozi_rfc4343",
+      "file": "data/raw/umudga-expanded/gozi_rfc4343.txt",
+      "publisher_file_id": "ef02ee26-e475-4a7a-ace1-099d3ca29497",
+      "publisher_filename": "10000.txt",
+      "url": "https://data.mendeley.com/public-files/datasets/y8ph45msv8/files/ef02ee26-e475-4a7a-ace1-099d3ca29497/file_downloaded",
+      "sha256": "d7936f49c632b03de7493a25bdc9d30b9c4e9999cee5549aeaf1ffc3b0fcdb7e",
+      "bytes": 244160
+    },
+    {
+      "family": "kraken_v1",
+      "file": "data/raw/umudga-expanded/kraken_v1.txt",
+      "publisher_file_id": "39a39f0f-35f1-4c34-b01b-c40278d32408",
+      "publisher_filename": "10000.txt",
+      "url": "https://data.mendeley.com/public-files/datasets/y8ph45msv8/files/39a39f0f-35f1-4c34-b01b-c40278d32408/file_downloaded",
+      "sha256": "995d1d64308eefa1f48b883de7fe6034b66aea560e5a61fbb13af581086000f3",
+      "bytes": 192585
+    },
+    {
+      "family": "kraken_v2",
+      "file": "data/raw/umudga-expanded/kraken_v2.txt",
+      "publisher_file_id": "4787ea53-b156-4a7d-ab29-410ae7bbaa87",
+      "publisher_filename": "10000.txt",
+      "url": "https://data.mendeley.com/public-files/datasets/y8ph45msv8/files/4787ea53-b156-4a7d-ab29-410ae7bbaa87/file_downloaded",
+      "sha256": "5178352935730b22b9be2307fe81f01e87df58bfe777237138e297d1fc2bfa39",
+      "bytes": 162250
+    },
+    {
+      "family": "legit",
+      "file": "data/raw/umudga-expanded/legit.txt",
+      "publisher_file_id": "7ab7a9d2-4ac6-4a42-ae90-603152d45bc8",
+      "publisher_filename": "100000.txt",
+      "url": "https://data.mendeley.com/public-files/datasets/y8ph45msv8/files/7ab7a9d2-4ac6-4a42-ae90-603152d45bc8/file_downloaded",
+      "sha256": "d82bfef4bfd3a6c7f20762c0bdecf748cbb80e58a83eb6b4e70085b810ba0ffa",
+      "bytes": 1391900
+    },
+    {
+      "family": "locky",
+      "file": "data/raw/umudga-expanded/locky.txt",
+      "publisher_file_id": "d78201a7-587b-465e-9510-252d56f1551f",
+      "publisher_filename": "10000.txt",
+      "url": "https://data.mendeley.com/public-files/datasets/y8ph45msv8/files/d78201a7-587b-465e-9510-252d56f1551f/file_downloaded",
+      "sha256": "9276e6e88b35f050351eefce1d01d883c6ea87ca78e66eeb569b86d52cc0a93f",
+      "bytes": 169540
+    },
+    {
+      "family": "matsnu",
+      "file": "data/raw/umudga-expanded/matsnu.txt",
+      "publisher_file_id": "0616de9e-f9f5-4a59-8b38-3fa6c4963e3f",
+      "publisher_filename": "10000.txt",
+      "url": "https://data.mendeley.com/public-files/datasets/y8ph45msv8/files/0616de9e-f9f5-4a59-8b38-3fa6c4963e3f/file_downloaded",
+      "sha256": "bfa5392fee115134d727ba95d69ee21c56a406a6fbec6ba0118c0ec13a6c76d5",
+      "bytes": 202845
+    },
+    {
+      "family": "murofet_v1",
+      "file": "data/raw/umudga-expanded/murofet_v1.txt",
+      "publisher_file_id": "4b72b198-cd83-4e54-b9b4-3343c996b0da",
+      "publisher_filename": "10000.txt",
+      "url": "https://data.mendeley.com/public-files/datasets/y8ph45msv8/files/4b72b198-cd83-4e54-b9b4-3343c996b0da/file_downloaded",
+      "sha256": "9cb25e713f3af944042aad562eff8eea185770a897a45adf718ee5e384470ea9",
+      "bytes": 292638
+    },
+    {
+      "family": "murofet_v2",
+      "file": "data/raw/umudga-expanded/murofet_v2.txt",
+      "publisher_file_id": "66728429-3995-4e58-881b-7098bd85d61c",
+      "publisher_filename": "10000.txt",
+      "url": "https://data.mendeley.com/public-files/datasets/y8ph45msv8/files/66728429-3995-4e58-881b-7098bd85d61c/file_downloaded",
+      "sha256": "182b578f48ff00232cfe7f9320e5ca714123d30cbe737c48bfb8c3d6d427e64d",
+      "bytes": 200473
+    },
+    {
+      "family": "murofet_v3",
+      "file": "data/raw/umudga-expanded/murofet_v3.txt",
+      "publisher_file_id": "a6858a04-d3e3-4a60-a7ce-f92a3e40bb27",
+      "publisher_filename": "10000.txt",
+      "url": "https://data.mendeley.com/public-files/datasets/y8ph45msv8/files/a6858a04-d3e3-4a60-a7ce-f92a3e40bb27/file_downloaded",
+      "sha256": "a6086f4bb4a30d61a95e0d1751efee39a0c690d12a9f5a4f9c8bf0e59a8867f0",
+      "bytes": 419891
+    },
+    {
+      "family": "necurs",
+      "file": "data/raw/umudga-expanded/necurs.txt",
+      "publisher_file_id": "3052c3c9-8be5-4d81-ba35-e85f2567dbe1",
+      "publisher_filename": "10000.txt",
+      "url": "https://data.mendeley.com/public-files/datasets/y8ph45msv8/files/3052c3c9-8be5-4d81-ba35-e85f2567dbe1/file_downloaded",
+      "sha256": "c4cdd6404742579ef377863f52c68c85bcbc1eb56e18e228f7c78e297a5972b5",
+      "bytes": 181995
+    },
+    {
+      "family": "nymaim",
+      "file": "data/raw/umudga-expanded/nymaim.txt",
+      "publisher_file_id": "d5007de8-8b23-40df-b502-272018373942",
+      "publisher_filename": "10000.txt",
+      "url": "https://data.mendeley.com/public-files/datasets/y8ph45msv8/files/d5007de8-8b23-40df-b502-272018373942/file_downloaded",
+      "sha256": "ed3cc6fe5fcf37bfbc223d70eaca0bd1fdaa06e791225800255c0f810e6583b2",
+      "bytes": 187039
+    },
+    {
+      "family": "padcrypt",
+      "file": "data/raw/umudga-expanded/padcrypt.txt",
+      "publisher_file_id": "7092c451-1907-494a-8aac-6fdbf90b3533",
+      "publisher_filename": "10000.txt",
+      "url": "https://data.mendeley.com/public-files/datasets/y8ph45msv8/files/7092c451-1907-494a-8aac-6fdbf90b3533/file_downloaded",
+      "sha256": "2714ad96481231b5a847443a51f559344f807b7af19e07988dcdc6a1bf73c00f",
+      "bytes": 213980
+    },
+    {
+      "family": "pizd",
+      "file": "data/raw/umudga-expanded/pizd.txt",
+      "publisher_file_id": "66081df9-42fa-4635-8435-dcc30c0d1b45",
+      "publisher_filename": "10000.txt",
+      "url": "https://data.mendeley.com/public-files/datasets/y8ph45msv8/files/66081df9-42fa-4635-8435-dcc30c0d1b45/file_downloaded",
+      "sha256": "531559d9f53f8327a78cb26689b1969e31faff6e52a3fafd9ec33322d8859975",
+      "bytes": 169454
+    },
+    {
+      "family": "proslikefan",
+      "file": "data/raw/umudga-expanded/proslikefan.txt",
+      "publisher_file_id": "6624570b-15e7-4fdd-b233-80701cd7851d",
+      "publisher_filename": "10000.txt",
+      "url": "https://data.mendeley.com/public-files/datasets/y8ph45msv8/files/6624570b-15e7-4fdd-b233-80701cd7851d/file_downloaded",
+      "sha256": "90a123e49fe591b1d1fb23c13a15251c205858232508ea2ee56b7ffb37d300fe",
+      "bytes": 128166
+    },
+    {
+      "family": "pushdo",
+      "file": "data/raw/umudga-expanded/pushdo.txt",
+      "publisher_file_id": "cca6c171-4071-4183-842e-98aae7074ec2",
+      "publisher_filename": "10000.txt",
+      "url": "https://data.mendeley.com/public-files/datasets/y8ph45msv8/files/cca6c171-4071-4183-842e-98aae7074ec2/file_downloaded",
+      "sha256": "357b308a201d249dcc8c1324296d6dea4da4f98482b4d960e17791375bd23990",
+      "bytes": 162928
+    },
+    {
+      "family": "pykspa",
+      "file": "data/raw/umudga-expanded/pykspa.txt",
+      "publisher_file_id": "8da4209c-a383-490f-b709-e0d991df47aa",
+      "publisher_filename": "10000.txt",
+      "url": "https://data.mendeley.com/public-files/datasets/y8ph45msv8/files/8da4209c-a383-490f-b709-e0d991df47aa/file_downloaded",
+      "sha256": "00e9ba2af7f265a7268dfbc5d42f1d2e5a9a8d5813062dee79365fab3507c6ce",
+      "bytes": 143996
+    },
+    {
+      "family": "pykspa_noise",
+      "file": "data/raw/umudga-expanded/pykspa_noise.txt",
+      "publisher_file_id": "dbaf56f7-ed91-419c-8734-0756029eadce",
+      "publisher_filename": "10000.txt",
+      "url": "https://data.mendeley.com/public-files/datasets/y8ph45msv8/files/dbaf56f7-ed91-419c-8734-0756029eadce/file_downloaded",
+      "sha256": "4160d02d5734d38b4a6aa7fa577ffc7771ebe78282ee02e4371c3c04e2767839",
+      "bytes": 143935
+    },
+    {
+      "family": "qadars",
+      "file": "data/raw/umudga-expanded/qadars.txt",
+      "publisher_file_id": "5a135bfd-e039-4969-bce8-c5f0a64992f5",
+      "publisher_filename": "10000.txt",
+      "url": "https://data.mendeley.com/public-files/datasets/y8ph45msv8/files/5a135bfd-e039-4969-bce8-c5f0a64992f5/file_downloaded",
+      "sha256": "581e3bf33f76287d8b2f1bd680cf98da685ff0a959f876e4ebff99a3fb38e9e5",
+      "bytes": 170000
+    },
+    {
+      "family": "qakbot",
+      "file": "data/raw/umudga-expanded/qakbot.txt",
+      "publisher_file_id": "8e37af34-59e1-4032-81dc-29664d713776",
+      "publisher_filename": "10000.txt",
+      "url": "https://data.mendeley.com/public-files/datasets/y8ph45msv8/files/8e37af34-59e1-4032-81dc-29664d713776/file_downloaded",
+      "sha256": "3b57df7ed63359ee43fef8f06160dc46fa04978195a951e98b4af5010e4c71cd",
+      "bytes": 216063
+    },
+    {
+      "family": "ramdo",
+      "file": "data/raw/umudga-expanded/ramdo.txt",
+      "publisher_file_id": "3aaa82c8-259b-4bc2-805a-e7624c6c0b09",
+      "publisher_filename": "10000.txt",
+      "url": "https://data.mendeley.com/public-files/datasets/y8ph45msv8/files/3aaa82c8-259b-4bc2-805a-e7624c6c0b09/file_downloaded",
+      "sha256": "66abd553ba1fd3b6a41f58becbe4aa2f9465dbec6a7036b3159410c9b36ac2e5",
+      "bytes": 210000
+    },
+    {
+      "family": "ramnit",
+      "file": "data/raw/umudga-expanded/ramnit.txt",
+      "publisher_file_id": "39a6d990-e7e3-4fe8-a455-0783d7cfcfc3",
+      "publisher_filename": "10000.txt",
+      "url": "https://data.mendeley.com/public-files/datasets/y8ph45msv8/files/39a6d990-e7e3-4fe8-a455-0783d7cfcfc3/file_downloaded",
+      "sha256": "f1ddd8cd067b9cc8daa23192ec17c47ea978ccf0cbc17790d663a285fb127520",
+      "bytes": 184509
+    },
+    {
+      "family": "ranbyus_v1",
+      "file": "data/raw/umudga-expanded/ranbyus_v1.txt",
+      "publisher_file_id": "d0f2162b-4dd1-4bb9-a1ce-f273635825e7",
+      "publisher_filename": "10000.txt",
+      "url": "https://data.mendeley.com/public-files/datasets/y8ph45msv8/files/d0f2162b-4dd1-4bb9-a1ce-f273635825e7/file_downloaded",
+      "sha256": "cea30f47c67af718a17d4016c7e1ff3cab3f7bde78aa302e66f135183f233632",
+      "bytes": 182987
+    },
+    {
+      "family": "ranbyus_v2",
+      "file": "data/raw/umudga-expanded/ranbyus_v2.txt",
+      "publisher_file_id": "ac57d260-befa-4d4c-9cc8-854d09785d0b",
+      "publisher_filename": "10000.txt",
+      "url": "https://data.mendeley.com/public-files/datasets/y8ph45msv8/files/ac57d260-befa-4d4c-9cc8-854d09785d0b/file_downloaded",
+      "sha256": "69a9b54968fd9570293b2f8ade940f8d024f614314bc56cc9652c1c6fdfd6e67",
+      "bytes": 212500
+    },
+    {
+      "family": "rovnix",
+      "file": "data/raw/umudga-expanded/rovnix.txt",
+      "publisher_file_id": "85b74732-5ada-4058-a7a5-3221b4468775",
+      "publisher_filename": "10000.txt",
+      "url": "https://data.mendeley.com/public-files/datasets/y8ph45msv8/files/85b74732-5ada-4058-a7a5-3221b4468775/file_downloaded",
+      "sha256": "3b9c0e8a36b4b3d418bac475e5c040e4224bee974da0f074e1bade2d3565434d",
+      "bytes": 274362
+    },
+    {
+      "family": "shiotob",
+      "file": "data/raw/umudga-expanded/shiotob.txt",
+      "publisher_file_id": "bf44aa2b-82ac-49f1-8e2b-105909e54b8a",
+      "publisher_filename": "10000.txt",
+      "url": "https://data.mendeley.com/public-files/datasets/y8ph45msv8/files/bf44aa2b-82ac-49f1-8e2b-105909e54b8a/file_downloaded",
+      "sha256": "643b88d586bcf4f9c3fe171dcc40351850af238661b32dbcb873e68485a2516f",
+      "bytes": 174728
+    },
+    {
+      "family": "simda",
+      "file": "data/raw/umudga-expanded/simda.txt",
+      "publisher_file_id": "7fe8fe34-9405-4bc4-9d94-0b9031abc1ff",
+      "publisher_filename": "10000.txt",
+      "url": "https://data.mendeley.com/public-files/datasets/y8ph45msv8/files/7fe8fe34-9405-4bc4-9d94-0b9031abc1ff/file_downloaded",
+      "sha256": "24af347cee5a85a7d3f6c7989f642e7f0b34e6488d68d8d79ec164ead924faf0",
+      "bytes": 125785
+    },
+    {
+      "family": "sisron",
+      "file": "data/raw/umudga-expanded/sisron.txt",
+      "publisher_file_id": "67a477ab-2735-4e9b-bad0-94c0ba44a489",
+      "publisher_filename": "10000.txt",
+      "url": "https://data.mendeley.com/public-files/datasets/y8ph45msv8/files/67a477ab-2735-4e9b-bad0-94c0ba44a489/file_downloaded",
+      "sha256": "14ade91f1dbd36de17e4be6365507f4b50ec3885db71d2683ff33f6e74ec9c68",
+      "bytes": 172499
+    },
+    {
+      "family": "suppobox_1",
+      "file": "data/raw/umudga-expanded/suppobox_1.txt",
+      "publisher_file_id": "6bbef325-a08e-46af-9f99-796502c51b47",
+      "publisher_filename": "10000.txt",
+      "url": "https://data.mendeley.com/public-files/datasets/y8ph45msv8/files/6bbef325-a08e-46af-9f99-796502c51b47/file_downloaded",
+      "sha256": "41999ff336385fb27e413f7d593b62a26dca8e1ae5ce75d14ca49ece3f8d8fbf",
+      "bytes": 169449
+    },
+    {
+      "family": "suppobox_2",
+      "file": "data/raw/umudga-expanded/suppobox_2.txt",
+      "publisher_file_id": "b3c6ed0e-024b-4b08-a888-ff29518e0aac",
+      "publisher_filename": "10000.txt",
+      "url": "https://data.mendeley.com/public-files/datasets/y8ph45msv8/files/b3c6ed0e-024b-4b08-a888-ff29518e0aac/file_downloaded",
+      "sha256": "669d4d9cfa37f8333efc088e59dd80d02740619eca64ece2d011a001dc600c2c",
+      "bytes": 142204
+    },
+    {
+      "family": "suppobox_3",
+      "file": "data/raw/umudga-expanded/suppobox_3.txt",
+      "publisher_file_id": "f3900f13-ec7e-44c3-b1f0-709cf84def10",
+      "publisher_filename": "10000.txt",
+      "url": "https://data.mendeley.com/public-files/datasets/y8ph45msv8/files/f3900f13-ec7e-44c3-b1f0-709cf84def10/file_downloaded",
+      "sha256": "5daa5bacf37c87ef395df31c92b143d7e2233373456bb9cdeff53476bea4d7e9",
+      "bytes": 231438
+    },
+    {
+      "family": "symmi",
+      "file": "data/raw/umudga-expanded/symmi.txt",
+      "publisher_file_id": "6e1ae339-9ba3-4399-9f3e-416b390bc978",
+      "publisher_filename": "10000.txt",
+      "url": "https://data.mendeley.com/public-files/datasets/y8ph45msv8/files/6e1ae339-9ba3-4399-9f3e-416b390bc978/file_downloaded",
+      "sha256": "9a0387cdf1ddbdd7e0b1b7ccc0fb9920ac429d9c4f809880991e21fd697b0f78",
+      "bytes": 214794
+    },
+    {
+      "family": "tempedreve",
+      "file": "data/raw/umudga-expanded/tempedreve.txt",
+      "publisher_file_id": "fb44e32a-5c09-4f63-b2d1-5b7ae384e4f2",
+      "publisher_filename": "10000.txt",
+      "url": "https://data.mendeley.com/public-files/datasets/y8ph45msv8/files/fb44e32a-5c09-4f63-b2d1-5b7ae384e4f2/file_downloaded",
+      "sha256": "99a5f4d23ab553194638110a2d5ad182c850519c18486e01ac6b7bbca87c789d",
+      "bytes": 141138
+    },
+    {
+      "family": "tinba",
+      "file": "data/raw/umudga-expanded/tinba.txt",
+      "publisher_file_id": "82ddbf36-8692-443b-adea-2e22ca607f82",
+      "publisher_filename": "10000.txt",
+      "url": "https://data.mendeley.com/public-files/datasets/y8ph45msv8/files/82ddbf36-8692-443b-adea-2e22ca607f82/file_downloaded",
+      "sha256": "ac69eba6a3892715c822d4c326e8013454ed3c51f4340a41fb203c3f23c274ff",
+      "bytes": 168142
+    },
+    {
+      "family": "vawtrak_v1",
+      "file": "data/raw/umudga-expanded/vawtrak_v1.txt",
+      "publisher_file_id": "e205d9eb-55e5-425a-9aee-52f0dc7bce35",
+      "publisher_filename": "10000.txt",
+      "url": "https://data.mendeley.com/public-files/datasets/y8ph45msv8/files/e205d9eb-55e5-425a-9aee-52f0dc7bce35/file_downloaded",
+      "sha256": "9d04aa5ffe93082dee403f202dbd5a29f9f815950f998a568e6fa5077e4d4b95",
+      "bytes": 139857
+    },
+    {
+      "family": "vawtrak_v2",
+      "file": "data/raw/umudga-expanded/vawtrak_v2.txt",
+      "publisher_file_id": "079c40c7-cd6b-46fc-98ba-ea67656ab692",
+      "publisher_filename": "10000.txt",
+      "url": "https://data.mendeley.com/public-files/datasets/y8ph45msv8/files/079c40c7-cd6b-46fc-98ba-ea67656ab692/file_downloaded",
+      "sha256": "0ae4f11db718d23bf10f79f092f3ca99d8fdad2e54783c239a454f5d096f1514",
+      "bytes": 140202
+    },
+    {
+      "family": "vawtrak_v3",
+      "file": "data/raw/umudga-expanded/vawtrak_v3.txt",
+      "publisher_file_id": "43872c72-18d6-438b-9052-82d81a53fea0",
+      "publisher_filename": "10000.txt",
+      "url": "https://data.mendeley.com/public-files/datasets/y8ph45msv8/files/43872c72-18d6-438b-9052-82d81a53fea0/file_downloaded",
+      "sha256": "33b3c56fc45b57e3ea577e032b5ae16237aab227671104d12611612a5ee06f9f",
+      "bytes": 140030
+    },
+    {
+      "family": "zeus-newgoz",
+      "file": "data/raw/umudga-expanded/zeus-newgoz.txt",
+      "publisher_file_id": "2617800d-bdb4-4be5-82a6-7ee8e383a0ce",
+      "publisher_filename": "10000.txt",
+      "url": "https://data.mendeley.com/public-files/datasets/y8ph45msv8/files/2617800d-bdb4-4be5-82a6-7ee8e383a0ce/file_downloaded",
+      "sha256": "4cc53cf5cbc174df3979d12bf19538d49d6194b09cc3987e9a9afbd86c307f39",
+      "bytes": 309274
+    }
+  ]
+}

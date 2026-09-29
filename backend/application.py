@@ -54,7 +54,7 @@ async def benchmark():
 
 @app.get('/api/telemetry')
 async def telemetry():
-    return app.state.pipeline.telemetry() | dict(replay_status=app.state.replay_status, replay_error=app.state.replay_error, alerts_by_class=app.state.store.summary(), throughput_target=2000, confidence_note='Synthetic model posterior or heuristic strength; not real-world calibrated')
+    return app.state.pipeline.telemetry() | dict(replay_status=app.state.replay_status, replay_error=app.state.replay_error, alerts_by_class=app.state.store.summary(), throughput_target=2000, confidence_note='Model score or heuristic strength; not real-world calibrated')
 
 @app.get('/api/alerts')
 async def alerts(after: int = Query(0, ge=0), limit: int = Query(200, ge=1, le=1000), threat: str | None = None, newest: bool = False):

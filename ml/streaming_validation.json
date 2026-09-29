@@ -1,11 +1,14 @@
 {
-  "generated_at_utc": "2026-09-29T04:22:34.642536+00:00",
+  "generated_at_utc": "2026-09-29T12:53:57.998355+00:00",
   "model_sha256": "4d8e08323374535789e21f9f7cd1ee3f1c84b663ce555e67bb4ced57c95e8010",
   "model": "Current synthetic-trained hybrid streaming pipeline",
+  "dga_candidate_sha256": "c0314dd5f1fe360db11e2494326fd6e99f267d6e920fa091f6c9fcebc796996e",
+  "dga_candidate_enabled": false,
   "runtime_source_sha256": {
-    "detection/pipeline.py": "84e27c0d947f134fcfef2fbd520d7ba3db4136813902d17faca282bf28af6a19",
+    "detection/pipeline.py": "9b469d13d68d1ac7cc7f8532d8bfeb43e12da632495259911532daf9c003b0ba",
     "features/extractor.py": "f707a198a80ed6073ec5d2bb30561ebb49e2190f0f8c8bd65b8b73e4f39af797",
-    "ingest/protocol_parsers.py": "cf8cda0df2a543e85f1ad822d0634a2e417c049d2df2b56fd23a23890c56a6cd"
+    "ingest/protocol_parsers.py": "cf8cda0df2a543e85f1ad822d0634a2e417c049d2df2b56fd23a23890c56a6cd",
+    "ml/dga.py": "0a03098bf4cc22d8f5b7ff5fe3bd75d82d735479730e1890a7f99bedb9d6c0b7"
   },
   "umudga": {
     "scope": "Runtime DGA alert decisions on public strings in isolated simulated DNS events",
@@ -194,14 +197,16 @@
         "DGA_DOMAINS": 12,
         "RECONNAISSANCE": 1
       },
-      "elapsed_seconds": 25.969890100000157,
-      "parsed_packets_per_second": 5089.740445224264,
+      "elapsed_seconds": 30.996251100004883,
+      "parsed_packets_per_second": 4264.386669650485,
       "telemetry": {
         "processed": 132180,
         "late_events": 2,
         "state_evictions": 0,
         "active_sources": 67,
-        "processing_p95_ms": 0.2675000005183392
+        "dga_detector": "conservative-lexical-guard",
+        "dga_candidate_enabled": false,
+        "processing_p95_ms": 0.2885000067180954
       },
       "interpretation": "Benign-reference alerts are false-positive candidates; deduplicated counts are not FPR"
     },
@@ -244,14 +249,16 @@
         "DDOS": 55,
         "RECONNAISSANCE": 3
       },
-      "elapsed_seconds": 24.49843039999996,
-      "parsed_packets_per_second": 3824.0817256602754,
+      "elapsed_seconds": 31.333826399997633,
+      "parsed_packets_per_second": 2989.867844547932,
       "telemetry": {
         "processed": 93684,
         "late_events": 2,
         "state_evictions": 4233,
         "active_sources": 83,
-        "processing_p95_ms": 1.703799999631883
+        "dga_detector": "conservative-lexical-guard",
+        "dga_candidate_enabled": false,
+        "processing_p95_ms": 2.7619000029517338
       },
       "interpretation": "Benign-reference alerts are false-positive candidates; deduplicated counts are not FPR"
     },
@@ -293,14 +300,16 @@
         "ENCRYPTED_MALWARE": 1327,
         "DDOS": 1
       },
-      "elapsed_seconds": 9.840469100000519,
-      "parsed_packets_per_second": 5529.411194431486,
+      "elapsed_seconds": 11.053566499998851,
+      "parsed_packets_per_second": 4922.574085025467,
       "telemetry": {
         "processed": 54412,
         "late_events": 1,
         "state_evictions": 0,
         "active_sources": 89,
-        "processing_p95_ms": 0.22199999966687756
+        "dga_detector": "conservative-lexical-guard",
+        "dga_candidate_enabled": false,
+        "processing_p95_ms": 0.26670000079320744
       },
       "interpretation": "Mixed capture: no per-flow labels; recall cannot be measured"
     },
@@ -342,14 +351,16 @@
         "ENCRYPTED_MALWARE": 1388,
         "RECONNAISSANCE": 3
       },
-      "elapsed_seconds": 9.313974099999541,
-      "parsed_packets_per_second": 5680.711523559273,
+      "elapsed_seconds": 9.707197800002177,
+      "parsed_packets_per_second": 5450.594609289627,
       "telemetry": {
         "processed": 52910,
         "late_events": 2,
         "state_evictions": 0,
         "active_sources": 86,
-        "processing_p95_ms": 0.24160000066331122
+        "dga_detector": "conservative-lexical-guard",
+        "dga_candidate_enabled": false,
+        "processing_p95_ms": 0.2537000036682002
       },
       "interpretation": "Mixed capture: no per-flow labels; recall cannot be measured"
     },
@@ -389,14 +400,16 @@
       "alerts_by_class": {
         "BOTNET_C2": 42
       },
-      "elapsed_seconds": 6.166211400000066,
-      "parsed_packets_per_second": 5732.855672123019,
+      "elapsed_seconds": 6.789901299998746,
+      "parsed_packets_per_second": 5206.26124565412,
       "telemetry": {
         "processed": 35350,
         "late_events": 1,
         "state_evictions": 0,
         "active_sources": 63,
-        "processing_p95_ms": 0.23209999926621094
+        "dga_detector": "conservative-lexical-guard",
+        "dga_candidate_enabled": false,
+        "processing_p95_ms": 0.25269999605370685
       },
       "interpretation": "Mixed capture: no per-flow labels; recall cannot be measured"
     },
@@ -437,14 +450,16 @@
         "BOTNET_C2": 104,
         "ENCRYPTED_MALWARE": 1407
       },
-      "elapsed_seconds": 8.803611399999681,
-      "parsed_packets_per_second": 6096.134593128672,
+      "elapsed_seconds": 9.634036499999638,
+      "parsed_packets_per_second": 5570.666044290159,
       "telemetry": {
         "processed": 53668,
         "late_events": 0,
         "state_evictions": 0,
         "active_sources": 82,
-        "processing_p95_ms": 0.22780000017519342
+        "dga_detector": "conservative-lexical-guard",
+        "dga_candidate_enabled": false,
+        "processing_p95_ms": 0.24879999546101317
       },
       "interpretation": "Mixed capture: no per-flow labels; recall cannot be measured"
     },
@@ -486,14 +501,16 @@
         "ENCRYPTED_MALWARE": 2869,
         "DDOS": 1
       },
-      "elapsed_seconds": 18.404185999999754,
-      "parsed_packets_per_second": 5706.908200123678,
+      "elapsed_seconds": 18.12769949999347,
+      "parsed_packets_per_second": 5793.950854052818,
       "telemetry": {
         "processed": 105031,
         "late_events": 0,
         "state_evictions": 0,
         "active_sources": 95,
-        "processing_p95_ms": 0.3133999998681247
+        "dga_detector": "conservative-lexical-guard",
+        "dga_candidate_enabled": false,
+        "processing_p95_ms": 0.2342000007047318
       },
       "interpretation": "Mixed capture: no per-flow labels; recall cannot be measured"
     },
@@ -533,14 +550,16 @@
       "alerts_by_class": {
         "BOTNET_C2": 52
       },
-      "elapsed_seconds": 10.174290999999357,
-      "parsed_packets_per_second": 3813.3369686401197,
+      "elapsed_seconds": 7.6839198999950895,
+      "parsed_packets_per_second": 5049.245763223637,
       "telemetry": {
         "processed": 38798,
         "late_events": 0,
         "state_evictions": 0,
         "active_sources": 62,
-        "processing_p95_ms": 0.30590000005759066
+        "dga_detector": "conservative-lexical-guard",
+        "dga_candidate_enabled": false,
+        "processing_p95_ms": 0.2814999970723875
       },
       "interpretation": "Mixed capture: no per-flow labels; recall cannot be measured"
     },
@@ -580,14 +599,16 @@
       "alerts_by_class": {
         "BOTNET_C2": 21
       },
-      "elapsed_seconds": 3.1640581999999995,
-      "parsed_packets_per_second": 5678.783026178217,
+      "elapsed_seconds": 3.5162541000026977,
+      "parsed_packets_per_second": 5109.983376908459,
       "telemetry": {
         "processed": 17968,
         "late_events": 0,
         "state_evictions": 0,
         "active_sources": 62,
-        "processing_p95_ms": 0.22989999979472486
+        "dga_detector": "conservative-lexical-guard",
+        "dga_candidate_enabled": false,
+        "processing_p95_ms": 0.25579999783076346
       },
       "interpretation": "Mixed capture: no per-flow labels; recall cannot be measured"
     },
@@ -627,14 +648,16 @@
       "alerts_by_class": {
         "BOTNET_C2": 12
       },
-      "elapsed_seconds": 1.834410499999649,
-      "parsed_packets_per_second": 5701.01403148423,
+      "elapsed_seconds": 2.232313400003477,
+      "parsed_packets_per_second": 4684.826064289948,
       "telemetry": {
         "processed": 10458,
         "late_events": 0,
         "state_evictions": 0,
         "active_sources": 61,
-        "processing_p95_ms": 0.22730000000592554
+        "dga_detector": "conservative-lexical-guard",
+        "dga_candidate_enabled": false,
+        "processing_p95_ms": 0.28229999588802457
       },
       "interpretation": "Mixed capture: no per-flow labels; recall cannot be measured"
     },
@@ -675,14 +698,16 @@
       "alerts_by_class": {
         "BOTNET_C2": 7
       },
-      "elapsed_seconds": 1.1617175999999745,
-      "parsed_packets_per_second": 5664.027126730407,
+      "elapsed_seconds": 1.5011224000045331,
+      "parsed_packets_per_second": 4383.386724480381,
       "telemetry": {
         "processed": 6580,
         "late_events": 0,
         "state_evictions": 0,
         "active_sources": 60,
-        "processing_p95_ms": 0.22790000002714805
+        "dga_detector": "conservative-lexical-guard",
+        "dga_candidate_enabled": false,
+        "processing_p95_ms": 0.31090000265976414
       },
       "interpretation": "Mixed capture: no per-flow labels; recall cannot be measured"
     },
@@ -716,14 +741,16 @@
       "alerts_by_class": {
         "BOTNET_C2": 2
       },
-      "elapsed_seconds": 0.09173190000001341,
-      "parsed_packets_per_second": 5854.015887602039,
+      "elapsed_seconds": 0.0961198000004515,
+      "parsed_packets_per_second": 5586.778166386921,
       "telemetry": {
         "processed": 537,
         "late_events": 0,
         "state_evictions": 0,
         "active_sources": 14,
-        "processing_p95_ms": 0.22730000000592554
+        "dga_detector": "conservative-lexical-guard",
+        "dga_candidate_enabled": false,
+        "processing_p95_ms": 0.2266000010422431
       },
       "interpretation": "Mixed capture: no per-flow labels; recall cannot be measured"
     },
@@ -763,14 +790,16 @@
       "alerts_by_class": {
         "BOTNET_C2": 5
       },
-      "elapsed_seconds": 0.5957912000003489,
-      "parsed_packets_per_second": 5961.820181294923,
+      "elapsed_seconds": 0.6787775999982841,
+      "parsed_packets_per_second": 5232.936384478478,
       "telemetry": {
         "processed": 3552,
         "late_events": 0,
         "state_evictions": 0,
         "active_sources": 37,
-        "processing_p95_ms": 0.206100000468723
+        "dga_detector": "conservative-lexical-guard",
+        "dga_candidate_enabled": false,
+        "processing_p95_ms": 0.24990000383695588
       },
       "interpretation": "Mixed capture: no per-flow labels; recall cannot be measured"
     },
@@ -810,14 +839,16 @@
       "alerts_by_class": {
         "BOTNET_C2": 5
       },
-      "elapsed_seconds": 0.7816767000003892,
-      "parsed_packets_per_second": 5699.287186118995,
+      "elapsed_seconds": 0.9030207000032533,
+      "parsed_packets_per_second": 4933.441725072249,
       "telemetry": {
         "processed": 4455,
         "late_events": 0,
         "state_evictions": 0,
         "active_sources": 42,
-        "processing_p95_ms": 0.22309999985736795
+        "dga_detector": "conservative-lexical-guard",
+        "dga_candidate_enabled": false,
+        "processing_p95_ms": 0.25610000011511147
       },
       "interpretation": "Mixed capture: no per-flow labels; recall cannot be measured"
     }

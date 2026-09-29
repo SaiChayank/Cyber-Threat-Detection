@@ -132,10 +132,9 @@ export function Monitor() {
             </Reveal>
           </div>
           <p className="rounded-2xl border border-white/8 bg-panel/40 px-5 py-4 text-[10px] leading-6 text-muted">
-            Model scores are synthetic-trained posteriors or heuristic strengths; they are not
-            calibrated probabilities of compromise. Public-source validation remains limited,
-            including significant DGA false positives and unvalidated encrypted-malware detection.
-            Evidence and analyst review are essential.
+            Model scores and heuristic strengths are not calibrated probabilities of compromise.
+            Public-source validation remains limited, including incomplete DGA coverage and
+            unvalidated encrypted-malware detection. Evidence and analyst review are essential.
           </p>
         </div>
       </motion.main>

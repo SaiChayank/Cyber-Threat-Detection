@@ -70,6 +70,12 @@ is confident. This reduces false alarms but misses short and word-based families
 The [before/after validation](docs/STREAMING_VALIDATION.md) reports both noise and
 recall; detection quality remains a prototype limitation.
 
+A broader lexical DGA classifier is now trained and integrated behind quality
+gates. It reaches 76.77% recall / 1.68% FPR in development comparisons, but remains
+disabled because recall and a separate benign-DNS check miss their targets.
+The existing guard stays active. See [DGA development](docs/DGA_DETECTION.md) for
+the expanded dataset, reproducible training and limitations.
+
 ## Reproduce validation
 
 ```powershell

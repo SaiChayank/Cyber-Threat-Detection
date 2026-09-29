@@ -1,0 +1,1204 @@
+{
+  "generated_at_utc": "2026-09-29T12:45:50.879520+00:00",
+  "model_sha256": "10d432df6612fca50d40a0bafd30da91412a60a4b0ec5d670b359a9b36a7cf9b",
+  "gate": {
+    "min_recall": 0.8,
+    "min_precision": 0.95,
+    "max_false_positive_rate": 0.02
+  },
+  "threshold": 0.8,
+  "runtime_enabled": false,
+  "development_iteration": 2,
+  "manifest_sha256": "4daf4448f4a3437ff085754c49d9c90520b569577c8c5ba80dd8e5795b828e76",
+  "excluded_conflicting_labels": 20,
+  "excluded_cross_split_labels": 0,
+  "dns_hard_negative_labels": 22336,
+  "family_splits": {
+    "train": [
+      "alureon",
+      "banjori",
+      "corebot",
+      "dircrypt",
+      "dyre",
+      "gozi_gpl",
+      "gozi_luther",
+      "gozi_nasa",
+      "gozi_rfc4343",
+      "matsnu",
+      "necurs",
+      "nymaim",
+      "padcrypt",
+      "pizd",
+      "pushdo",
+      "pykspa",
+      "pykspa_noise",
+      "qadars",
+      "qakbot",
+      "ramdo",
+      "ramnit",
+      "ranbyus_v1",
+      "ranbyus_v2",
+      "rovnix",
+      "shiotob",
+      "simda",
+      "suppobox_1",
+      "suppobox_2",
+      "suppobox_3",
+      "tempedreve",
+      "tinba",
+      "vawtrak_v1",
+      "vawtrak_v2",
+      "vawtrak_v3",
+      "zeus-newgoz"
+    ],
+    "validation": [
+      "cryptolocker",
+      "fobber_v1",
+      "fobber_v2",
+      "locky",
+      "murofet_v1",
+      "murofet_v2",
+      "murofet_v3",
+      "proslikefan"
+    ],
+    "test": [
+      "bedep",
+      "ccleaner",
+      "chinad",
+      "kraken_v1",
+      "kraken_v2",
+      "sisron",
+      "symmi"
+    ]
+  },
+  "split_counts": {
+    "train": {
+      "BENIGN": 67715,
+      "DGA": 69993
+    },
+    "validation": {
+      "BENIGN": 15236,
+      "DGA": 80000
+    },
+    "test": {
+      "BENIGN": 14910,
+      "DGA": 60577
+    }
+  },
+  "validation": {
+    "tp": 71948,
+    "fn": 8052,
+    "fp": 287,
+    "tn": 14949,
+    "precision": 0.9960268567868762,
+    "recall": 0.89935,
+    "false_positive_rate": 0.018836965082698873,
+    "per_family": {
+      "cryptolocker": {
+        "tp": 9801,
+        "fn": 199,
+        "fp": 0,
+        "tn": 0,
+        "precision": 1.0,
+        "recall": 0.9801,
+        "false_positive_rate": null
+      },
+      "fobber_v1": {
+        "tp": 9991,
+        "fn": 9,
+        "fp": 0,
+        "tn": 0,
+        "precision": 1.0,
+        "recall": 0.9991,
+        "false_positive_rate": null
+      },
+      "fobber_v2": {
+        "tp": 8466,
+        "fn": 1534,
+        "fp": 0,
+        "tn": 0,
+        "precision": 1.0,
+        "recall": 0.8466,
+        "false_positive_rate": null
+      },
+      "legit": {
+        "tp": 0,
+        "fn": 0,
+        "fp": 287,
+        "tn": 14949,
+        "precision": 0.0,
+        "recall": null,
+        "false_positive_rate": 0.018836965082698873
+      },
+      "locky": {
+        "tp": 8403,
+        "fn": 1597,
+        "fp": 0,
+        "tn": 0,
+        "precision": 1.0,
+        "recall": 0.8403,
+        "false_positive_rate": null
+      },
+      "murofet_v1": {
+        "tp": 10000,
+        "fn": 0,
+        "fp": 0,
+        "tn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "false_positive_rate": null
+      },
+      "murofet_v2": {
+        "tp": 9970,
+        "fn": 30,
+        "fp": 0,
+        "tn": 0,
+        "precision": 1.0,
+        "recall": 0.997,
+        "false_positive_rate": null
+      },
+      "murofet_v3": {
+        "tp": 10000,
+        "fn": 0,
+        "fp": 0,
+        "tn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "false_positive_rate": null
+      },
+      "proslikefan": {
+        "tp": 5317,
+        "fn": 4683,
+        "fp": 0,
+        "tn": 0,
+        "precision": 1.0,
+        "recall": 0.5317,
+        "false_positive_rate": null
+      }
+    }
+  },
+  "test": {
+    "tp": 44838,
+    "fn": 15739,
+    "fp": 269,
+    "tn": 14641,
+    "precision": 0.9940364023322322,
+    "recall": 0.7401819172293115,
+    "false_positive_rate": 0.018041582830315223,
+    "per_family": {
+      "bedep": {
+        "tp": 9715,
+        "fn": 285,
+        "fp": 0,
+        "tn": 0,
+        "precision": 1.0,
+        "recall": 0.9715,
+        "false_positive_rate": null
+      },
+      "ccleaner": {
+        "tp": 5812,
+        "fn": 4188,
+        "fp": 0,
+        "tn": 0,
+        "precision": 1.0,
+        "recall": 0.5812,
+        "false_positive_rate": null
+      },
+      "chinad": {
+        "tp": 9964,
+        "fn": 36,
+        "fp": 0,
+        "tn": 0,
+        "precision": 1.0,
+        "recall": 0.9964,
+        "false_positive_rate": null
+      },
+      "kraken_v1": {
+        "tp": 6029,
+        "fn": 3965,
+        "fp": 0,
+        "tn": 0,
+        "precision": 1.0,
+        "recall": 0.6032619571743045,
+        "false_positive_rate": null
+      },
+      "kraken_v2": {
+        "tp": 5835,
+        "fn": 2245,
+        "fp": 0,
+        "tn": 0,
+        "precision": 1.0,
+        "recall": 0.7221534653465347,
+        "false_positive_rate": null
+      },
+      "legit": {
+        "tp": 0,
+        "fn": 0,
+        "fp": 269,
+        "tn": 14641,
+        "precision": 0.0,
+        "recall": null,
+        "false_positive_rate": 0.018041582830315223
+      },
+      "sisron": {
+        "tp": 2213,
+        "fn": 290,
+        "fp": 0,
+        "tn": 0,
+        "precision": 1.0,
+        "recall": 0.8841390331602077,
+        "false_positive_rate": null
+      },
+      "symmi": {
+        "tp": 5270,
+        "fn": 4730,
+        "fp": 0,
+        "tn": 0,
+        "precision": 1.0,
+        "recall": 0.527,
+        "false_positive_rate": null
+      }
+    }
+  },
+  "validation_thresholds": [
+    {
+      "threshold": 0.5,
+      "tp": 77055,
+      "fn": 2945,
+      "fp": 1320,
+      "tn": 13916,
+      "precision": 0.9831578947368421,
+      "recall": 0.9631875,
+      "false_positive_rate": 0.08663691257547913,
+      "per_family": {
+        "cryptolocker": {
+          "tp": 9971,
+          "fn": 29,
+          "fp": 0,
+          "tn": 0,
+          "precision": 1.0,
+          "recall": 0.9971,
+          "false_positive_rate": null
+        },
+        "fobber_v1": {
+          "tp": 10000,
+          "fn": 0,
+          "fp": 0,
+          "tn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "false_positive_rate": null
+        },
+        "fobber_v2": {
+          "tp": 9713,
+          "fn": 287,
+          "fp": 0,
+          "tn": 0,
+          "precision": 1.0,
+          "recall": 0.9713,
+          "false_positive_rate": null
+        },
+        "legit": {
+          "tp": 0,
+          "fn": 0,
+          "fp": 1320,
+          "tn": 13916,
+          "precision": 0.0,
+          "recall": null,
+          "false_positive_rate": 0.08663691257547913
+        },
+        "locky": {
+          "tp": 9406,
+          "fn": 594,
+          "fp": 0,
+          "tn": 0,
+          "precision": 1.0,
+          "recall": 0.9406,
+          "false_positive_rate": null
+        },
+        "murofet_v1": {
+          "tp": 10000,
+          "fn": 0,
+          "fp": 0,
+          "tn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "false_positive_rate": null
+        },
+        "murofet_v2": {
+          "tp": 9997,
+          "fn": 3,
+          "fp": 0,
+          "tn": 0,
+          "precision": 1.0,
+          "recall": 0.9997,
+          "false_positive_rate": null
+        },
+        "murofet_v3": {
+          "tp": 10000,
+          "fn": 0,
+          "fp": 0,
+          "tn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "false_positive_rate": null
+        },
+        "proslikefan": {
+          "tp": 7968,
+          "fn": 2032,
+          "fp": 0,
+          "tn": 0,
+          "precision": 1.0,
+          "recall": 0.7968,
+          "false_positive_rate": null
+        }
+      }
+    },
+    {
+      "threshold": 0.6,
+      "tp": 76001,
+      "fn": 3999,
+      "fp": 865,
+      "tn": 14371,
+      "precision": 0.9887466500143106,
+      "recall": 0.9500125,
+      "false_positive_rate": 0.056773431346810184,
+      "per_family": {
+        "cryptolocker": {
+          "tp": 9960,
+          "fn": 40,
+          "fp": 0,
+          "tn": 0,
+          "precision": 1.0,
+          "recall": 0.996,
+          "false_positive_rate": null
+        },
+        "fobber_v1": {
+          "tp": 10000,
+          "fn": 0,
+          "fp": 0,
+          "tn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "false_positive_rate": null
+        },
+        "fobber_v2": {
+          "tp": 9514,
+          "fn": 486,
+          "fp": 0,
+          "tn": 0,
+          "precision": 1.0,
+          "recall": 0.9514,
+          "false_positive_rate": null
+        },
+        "legit": {
+          "tp": 0,
+          "fn": 0,
+          "fp": 865,
+          "tn": 14371,
+          "precision": 0.0,
+          "recall": null,
+          "false_positive_rate": 0.056773431346810184
+        },
+        "locky": {
+          "tp": 9198,
+          "fn": 802,
+          "fp": 0,
+          "tn": 0,
+          "precision": 1.0,
+          "recall": 0.9198,
+          "false_positive_rate": null
+        },
+        "murofet_v1": {
+          "tp": 10000,
+          "fn": 0,
+          "fp": 0,
+          "tn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "false_positive_rate": null
+        },
+        "murofet_v2": {
+          "tp": 9997,
+          "fn": 3,
+          "fp": 0,
+          "tn": 0,
+          "precision": 1.0,
+          "recall": 0.9997,
+          "false_positive_rate": null
+        },
+        "murofet_v3": {
+          "tp": 10000,
+          "fn": 0,
+          "fp": 0,
+          "tn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "false_positive_rate": null
+        },
+        "proslikefan": {
+          "tp": 7332,
+          "fn": 2668,
+          "fp": 0,
+          "tn": 0,
+          "precision": 1.0,
+          "recall": 0.7332,
+          "false_positive_rate": null
+        }
+      }
+    },
+    {
+      "threshold": 0.7,
+      "tp": 74450,
+      "fn": 5550,
+      "fp": 534,
+      "tn": 14702,
+      "precision": 0.9928784807425585,
+      "recall": 0.930625,
+      "false_positive_rate": 0.03504856917826201,
+      "per_family": {
+        "cryptolocker": {
+          "tp": 9921,
+          "fn": 79,
+          "fp": 0,
+          "tn": 0,
+          "precision": 1.0,
+          "recall": 0.9921,
+          "false_positive_rate": null
+        },
+        "fobber_v1": {
+          "tp": 9998,
+          "fn": 2,
+          "fp": 0,
+          "tn": 0,
+          "precision": 1.0,
+          "recall": 0.9998,
+          "false_positive_rate": null
+        },
+        "fobber_v2": {
+          "tp": 9149,
+          "fn": 851,
+          "fp": 0,
+          "tn": 0,
+          "precision": 1.0,
+          "recall": 0.9149,
+          "false_positive_rate": null
+        },
+        "legit": {
+          "tp": 0,
+          "fn": 0,
+          "fp": 534,
+          "tn": 14702,
+          "precision": 0.0,
+          "recall": null,
+          "false_positive_rate": 0.03504856917826201
+        },
+        "locky": {
+          "tp": 8868,
+          "fn": 1132,
+          "fp": 0,
+          "tn": 0,
+          "precision": 1.0,
+          "recall": 0.8868,
+          "false_positive_rate": null
+        },
+        "murofet_v1": {
+          "tp": 10000,
+          "fn": 0,
+          "fp": 0,
+          "tn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "false_positive_rate": null
+        },
+        "murofet_v2": {
+          "tp": 9991,
+          "fn": 9,
+          "fp": 0,
+          "tn": 0,
+          "precision": 1.0,
+          "recall": 0.9991,
+          "false_positive_rate": null
+        },
+        "murofet_v3": {
+          "tp": 10000,
+          "fn": 0,
+          "fp": 0,
+          "tn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "false_positive_rate": null
+        },
+        "proslikefan": {
+          "tp": 6523,
+          "fn": 3477,
+          "fp": 0,
+          "tn": 0,
+          "precision": 1.0,
+          "recall": 0.6523,
+          "false_positive_rate": null
+        }
+      }
+    },
+    {
+      "threshold": 0.8,
+      "tp": 71948,
+      "fn": 8052,
+      "fp": 287,
+      "tn": 14949,
+      "precision": 0.9960268567868762,
+      "recall": 0.89935,
+      "false_positive_rate": 0.018836965082698873,
+      "per_family": {
+        "cryptolocker": {
+          "tp": 9801,
+          "fn": 199,
+          "fp": 0,
+          "tn": 0,
+          "precision": 1.0,
+          "recall": 0.9801,
+          "false_positive_rate": null
+        },
+        "fobber_v1": {
+          "tp": 9991,
+          "fn": 9,
+          "fp": 0,
+          "tn": 0,
+          "precision": 1.0,
+          "recall": 0.9991,
+          "false_positive_rate": null
+        },
+        "fobber_v2": {
+          "tp": 8466,
+          "fn": 1534,
+          "fp": 0,
+          "tn": 0,
+          "precision": 1.0,
+          "recall": 0.8466,
+          "false_positive_rate": null
+        },
+        "legit": {
+          "tp": 0,
+          "fn": 0,
+          "fp": 287,
+          "tn": 14949,
+          "precision": 0.0,
+          "recall": null,
+          "false_positive_rate": 0.018836965082698873
+        },
+        "locky": {
+          "tp": 8403,
+          "fn": 1597,
+          "fp": 0,
+          "tn": 0,
+          "precision": 1.0,
+          "recall": 0.8403,
+          "false_positive_rate": null
+        },
+        "murofet_v1": {
+          "tp": 10000,
+          "fn": 0,
+          "fp": 0,
+          "tn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "false_positive_rate": null
+        },
+        "murofet_v2": {
+          "tp": 9970,
+          "fn": 30,
+          "fp": 0,
+          "tn": 0,
+          "precision": 1.0,
+          "recall": 0.997,
+          "false_positive_rate": null
+        },
+        "murofet_v3": {
+          "tp": 10000,
+          "fn": 0,
+          "fp": 0,
+          "tn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "false_positive_rate": null
+        },
+        "proslikefan": {
+          "tp": 5317,
+          "fn": 4683,
+          "fp": 0,
+          "tn": 0,
+          "precision": 1.0,
+          "recall": 0.5317,
+          "false_positive_rate": null
+        }
+      }
+    },
+    {
+      "threshold": 0.85,
+      "tp": 69947,
+      "fn": 10053,
+      "fp": 178,
+      "tn": 15058,
+      "precision": 0.9974616755793226,
+      "recall": 0.8743375,
+      "false_positive_rate": 0.011682856392754003,
+      "per_family": {
+        "cryptolocker": {
+          "tp": 9648,
+          "fn": 352,
+          "fp": 0,
+          "tn": 0,
+          "precision": 1.0,
+          "recall": 0.9648,
+          "false_positive_rate": null
+        },
+        "fobber_v1": {
+          "tp": 9985,
+          "fn": 15,
+          "fp": 0,
+          "tn": 0,
+          "precision": 1.0,
+          "recall": 0.9985,
+          "false_positive_rate": null
+        },
+        "fobber_v2": {
+          "tp": 7862,
+          "fn": 2138,
+          "fp": 0,
+          "tn": 0,
+          "precision": 1.0,
+          "recall": 0.7862,
+          "false_positive_rate": null
+        },
+        "legit": {
+          "tp": 0,
+          "fn": 0,
+          "fp": 178,
+          "tn": 15058,
+          "precision": 0.0,
+          "recall": null,
+          "false_positive_rate": 0.011682856392754003
+        },
+        "locky": {
+          "tp": 8039,
+          "fn": 1961,
+          "fp": 0,
+          "tn": 0,
+          "precision": 1.0,
+          "recall": 0.8039,
+          "false_positive_rate": null
+        },
+        "murofet_v1": {
+          "tp": 10000,
+          "fn": 0,
+          "fp": 0,
+          "tn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "false_positive_rate": null
+        },
+        "murofet_v2": {
+          "tp": 9930,
+          "fn": 70,
+          "fp": 0,
+          "tn": 0,
+          "precision": 1.0,
+          "recall": 0.993,
+          "false_positive_rate": null
+        },
+        "murofet_v3": {
+          "tp": 10000,
+          "fn": 0,
+          "fp": 0,
+          "tn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "false_positive_rate": null
+        },
+        "proslikefan": {
+          "tp": 4483,
+          "fn": 5517,
+          "fp": 0,
+          "tn": 0,
+          "precision": 1.0,
+          "recall": 0.4483,
+          "false_positive_rate": null
+        }
+      }
+    },
+    {
+      "threshold": 0.9,
+      "tp": 67006,
+      "fn": 12994,
+      "fp": 106,
+      "tn": 15130,
+      "precision": 0.9984205507211825,
+      "recall": 0.837575,
+      "false_positive_rate": 0.0069572066159096875,
+      "per_family": {
+        "cryptolocker": {
+          "tp": 9392,
+          "fn": 608,
+          "fp": 0,
+          "tn": 0,
+          "precision": 1.0,
+          "recall": 0.9392,
+          "false_positive_rate": null
+        },
+        "fobber_v1": {
+          "tp": 9947,
+          "fn": 53,
+          "fp": 0,
+          "tn": 0,
+          "precision": 1.0,
+          "recall": 0.9947,
+          "false_positive_rate": null
+        },
+        "fobber_v2": {
+          "tp": 6880,
+          "fn": 3120,
+          "fp": 0,
+          "tn": 0,
+          "precision": 1.0,
+          "recall": 0.688,
+          "false_positive_rate": null
+        },
+        "legit": {
+          "tp": 0,
+          "fn": 0,
+          "fp": 106,
+          "tn": 15130,
+          "precision": 0.0,
+          "recall": null,
+          "false_positive_rate": 0.0069572066159096875
+        },
+        "locky": {
+          "tp": 7487,
+          "fn": 2513,
+          "fp": 0,
+          "tn": 0,
+          "precision": 1.0,
+          "recall": 0.7487,
+          "false_positive_rate": null
+        },
+        "murofet_v1": {
+          "tp": 10000,
+          "fn": 0,
+          "fp": 0,
+          "tn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "false_positive_rate": null
+        },
+        "murofet_v2": {
+          "tp": 9832,
+          "fn": 168,
+          "fp": 0,
+          "tn": 0,
+          "precision": 1.0,
+          "recall": 0.9832,
+          "false_positive_rate": null
+        },
+        "murofet_v3": {
+          "tp": 10000,
+          "fn": 0,
+          "fp": 0,
+          "tn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "false_positive_rate": null
+        },
+        "proslikefan": {
+          "tp": 3468,
+          "fn": 6532,
+          "fp": 0,
+          "tn": 0,
+          "precision": 1.0,
+          "recall": 0.3468,
+          "false_positive_rate": null
+        }
+      }
+    },
+    {
+      "threshold": 0.95,
+      "tp": 61277,
+      "fn": 18723,
+      "fp": 37,
+      "tn": 15199,
+      "precision": 0.9993965489121571,
+      "recall": 0.7659625,
+      "false_positive_rate": 0.0024284589131005514,
+      "per_family": {
+        "cryptolocker": {
+          "tp": 8605,
+          "fn": 1395,
+          "fp": 0,
+          "tn": 0,
+          "precision": 1.0,
+          "recall": 0.8605,
+          "false_positive_rate": null
+        },
+        "fobber_v1": {
+          "tp": 9833,
+          "fn": 167,
+          "fp": 0,
+          "tn": 0,
+          "precision": 1.0,
+          "recall": 0.9833,
+          "false_positive_rate": null
+        },
+        "fobber_v2": {
+          "tp": 4915,
+          "fn": 5085,
+          "fp": 0,
+          "tn": 0,
+          "precision": 1.0,
+          "recall": 0.4915,
+          "false_positive_rate": null
+        },
+        "legit": {
+          "tp": 0,
+          "fn": 0,
+          "fp": 37,
+          "tn": 15199,
+          "precision": 0.0,
+          "recall": null,
+          "false_positive_rate": 0.0024284589131005514
+        },
+        "locky": {
+          "tp": 6403,
+          "fn": 3597,
+          "fp": 0,
+          "tn": 0,
+          "precision": 1.0,
+          "recall": 0.6403,
+          "false_positive_rate": null
+        },
+        "murofet_v1": {
+          "tp": 9999,
+          "fn": 1,
+          "fp": 0,
+          "tn": 0,
+          "precision": 1.0,
+          "recall": 0.9999,
+          "false_positive_rate": null
+        },
+        "murofet_v2": {
+          "tp": 9544,
+          "fn": 456,
+          "fp": 0,
+          "tn": 0,
+          "precision": 1.0,
+          "recall": 0.9544,
+          "false_positive_rate": null
+        },
+        "murofet_v3": {
+          "tp": 10000,
+          "fn": 0,
+          "fp": 0,
+          "tn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "false_positive_rate": null
+        },
+        "proslikefan": {
+          "tp": 1978,
+          "fn": 8022,
+          "fp": 0,
+          "tn": 0,
+          "precision": 1.0,
+          "recall": 0.1978,
+          "false_positive_rate": null
+        }
+      }
+    },
+    {
+      "threshold": 0.975,
+      "tp": 55016,
+      "fn": 24984,
+      "fp": 15,
+      "tn": 15221,
+      "precision": 0.9997274263596881,
+      "recall": 0.6877,
+      "false_positive_rate": 0.0009845103701758991,
+      "per_family": {
+        "cryptolocker": {
+          "tp": 7401,
+          "fn": 2599,
+          "fp": 0,
+          "tn": 0,
+          "precision": 1.0,
+          "recall": 0.7401,
+          "false_positive_rate": null
+        },
+        "fobber_v1": {
+          "tp": 9532,
+          "fn": 468,
+          "fp": 0,
+          "tn": 0,
+          "precision": 1.0,
+          "recall": 0.9532,
+          "false_positive_rate": null
+        },
+        "fobber_v2": {
+          "tp": 2975,
+          "fn": 7025,
+          "fp": 0,
+          "tn": 0,
+          "precision": 1.0,
+          "recall": 0.2975,
+          "false_positive_rate": null
+        },
+        "legit": {
+          "tp": 0,
+          "fn": 0,
+          "fp": 15,
+          "tn": 15221,
+          "precision": 0.0,
+          "recall": null,
+          "false_positive_rate": 0.0009845103701758991
+        },
+        "locky": {
+          "tp": 5229,
+          "fn": 4771,
+          "fp": 0,
+          "tn": 0,
+          "precision": 1.0,
+          "recall": 0.5229,
+          "false_positive_rate": null
+        },
+        "murofet_v1": {
+          "tp": 9995,
+          "fn": 5,
+          "fp": 0,
+          "tn": 0,
+          "precision": 1.0,
+          "recall": 0.9995,
+          "false_positive_rate": null
+        },
+        "murofet_v2": {
+          "tp": 8932,
+          "fn": 1068,
+          "fp": 0,
+          "tn": 0,
+          "precision": 1.0,
+          "recall": 0.8932,
+          "false_positive_rate": null
+        },
+        "murofet_v3": {
+          "tp": 10000,
+          "fn": 0,
+          "fp": 0,
+          "tn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "false_positive_rate": null
+        },
+        "proslikefan": {
+          "tp": 952,
+          "fn": 9048,
+          "fp": 0,
+          "tn": 0,
+          "precision": 1.0,
+          "recall": 0.0952,
+          "false_positive_rate": null
+        }
+      }
+    },
+    {
+      "threshold": 0.99,
+      "tp": 45942,
+      "fn": 34058,
+      "fp": 6,
+      "tn": 15230,
+      "precision": 0.9998694176025071,
+      "recall": 0.574275,
+      "false_positive_rate": 0.00039380414807035967,
+      "per_family": {
+        "cryptolocker": {
+          "tp": 5117,
+          "fn": 4883,
+          "fp": 0,
+          "tn": 0,
+          "precision": 1.0,
+          "recall": 0.5117,
+          "false_positive_rate": null
+        },
+        "fobber_v1": {
+          "tp": 8504,
+          "fn": 1496,
+          "fp": 0,
+          "tn": 0,
+          "precision": 1.0,
+          "recall": 0.8504,
+          "false_positive_rate": null
+        },
+        "fobber_v2": {
+          "tp": 1005,
+          "fn": 8995,
+          "fp": 0,
+          "tn": 0,
+          "precision": 1.0,
+          "recall": 0.1005,
+          "false_positive_rate": null
+        },
+        "legit": {
+          "tp": 0,
+          "fn": 0,
+          "fp": 6,
+          "tn": 15230,
+          "precision": 0.0,
+          "recall": null,
+          "false_positive_rate": 0.00039380414807035967
+        },
+        "locky": {
+          "tp": 3656,
+          "fn": 6344,
+          "fp": 0,
+          "tn": 0,
+          "precision": 1.0,
+          "recall": 0.3656,
+          "false_positive_rate": null
+        },
+        "murofet_v1": {
+          "tp": 9965,
+          "fn": 35,
+          "fp": 0,
+          "tn": 0,
+          "precision": 1.0,
+          "recall": 0.9965,
+          "false_positive_rate": null
+        },
+        "murofet_v2": {
+          "tp": 7416,
+          "fn": 2584,
+          "fp": 0,
+          "tn": 0,
+          "precision": 1.0,
+          "recall": 0.7416,
+          "false_positive_rate": null
+        },
+        "murofet_v3": {
+          "tp": 10000,
+          "fn": 0,
+          "fp": 0,
+          "tn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "false_positive_rate": null
+        },
+        "proslikefan": {
+          "tp": 279,
+          "fn": 9721,
+          "fp": 0,
+          "tn": 0,
+          "precision": 1.0,
+          "recall": 0.0279,
+          "false_positive_rate": null
+        }
+      }
+    }
+  ],
+  "conservative_guard_on_same_test": {
+    "tp": 0,
+    "fn": 60577,
+    "fp": 26,
+    "tn": 14884,
+    "precision": 0.0,
+    "recall": 0.0,
+    "false_positive_rate": 0.001743796109993293,
+    "per_family": {
+      "bedep": {
+        "tp": 0,
+        "fn": 10000,
+        "fp": 0,
+        "tn": 0,
+        "precision": null,
+        "recall": 0.0,
+        "false_positive_rate": null
+      },
+      "ccleaner": {
+        "tp": 0,
+        "fn": 10000,
+        "fp": 0,
+        "tn": 0,
+        "precision": null,
+        "recall": 0.0,
+        "false_positive_rate": null
+      },
+      "chinad": {
+        "tp": 0,
+        "fn": 10000,
+        "fp": 0,
+        "tn": 0,
+        "precision": null,
+        "recall": 0.0,
+        "false_positive_rate": null
+      },
+      "kraken_v1": {
+        "tp": 0,
+        "fn": 9994,
+        "fp": 0,
+        "tn": 0,
+        "precision": null,
+        "recall": 0.0,
+        "false_positive_rate": null
+      },
+      "kraken_v2": {
+        "tp": 0,
+        "fn": 8080,
+        "fp": 0,
+        "tn": 0,
+        "precision": null,
+        "recall": 0.0,
+        "false_positive_rate": null
+      },
+      "legit": {
+        "tp": 0,
+        "fn": 0,
+        "fp": 26,
+        "tn": 14884,
+        "precision": 0.0,
+        "recall": null,
+        "false_positive_rate": 0.001743796109993293
+      },
+      "sisron": {
+        "tp": 0,
+        "fn": 2503,
+        "fp": 0,
+        "tn": 0,
+        "precision": null,
+        "recall": 0.0,
+        "false_positive_rate": null
+      },
+      "symmi": {
+        "tp": 0,
+        "fn": 10000,
+        "fp": 0,
+        "tn": 0,
+        "precision": null,
+        "recall": 0.0,
+        "false_positive_rate": null
+      }
+    }
+  },
+  "benign_dns_second_capture_unseen_labels": {
+    "total": 11731,
+    "fp": 311,
+    "false_positive_rate": 0.026510953882874434
+  },
+  "training_versions": {
+    "sklearn": "1.9.1",
+    "numpy": "2.5.3"
+  },
+  "caveats": [
+    "Previously inspected six DGA families and 1,000 legitimate references are kept in training",
+    "Related variants are grouped; exact first-label vectors cannot cross splits",
+    "Fresh file subsets, same historical publisher: not independent contemporary traffic",
+    "First DNS label only; suffix and public-suffix lookup are deliberately absent",
+    "Source list labels and benign capture reference are not per-flow attack truth",
+    "No unseen word-based family group appears in the selected test split",
+    "Test-family results were inspected during the first model iteration; subsequent comparisons are development validation, not untouched final tests",
+    "Scores are uncalibrated; precision depends on test class prevalence"
+  ]
+}

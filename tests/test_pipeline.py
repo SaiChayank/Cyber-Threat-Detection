@@ -43,6 +43,7 @@ def test_normal_domains_do_not_emit_dga_even_with_overconfident_model(name):
 
 def test_domain_length_rule_does_not_count_suffix_as_suspicious_label():
     pipeline = Pipeline()
+    pipeline.dga_model.enabled = False  # Exercise the fallback rule independently.
     pipeline.model.predict = lambda _: ('BENIGN', 1.0)
     event = TrafficEvent(timestamp=1700000000000, src_ip='192.0.2.1',
                          dst_ip='192.0.2.53', dst_port=53, protocol=17,
@@ -59,6 +60,7 @@ def test_domain_length_rule_does_not_count_suffix_as_suspicious_label():
 
 def test_long_random_txt_query_keeps_both_lexical_alerts_and_evidence():
     pipeline = Pipeline()
+    pipeline.dga_model.enabled = False
     pipeline.model.predict = lambda _: ('BENIGN', 1.0)
     name = 'q7x9k2z4m6b8v1j3p5d0r2s4w6y8a1c3e5f7g9h0i2l4n6o8u1t3' + '.example.org'
     event = TrafficEvent(timestamp=1700000000000, src_ip='192.0.2.1',

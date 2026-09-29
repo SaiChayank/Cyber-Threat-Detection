@@ -36,6 +36,15 @@ promotion gate. See the before/after false-positive **and recall** measurements 
 [Streaming validation](STREAMING_VALIDATION.md); do not interpret reduced alert
 volume as complete attack coverage.
 
+The expanded lexical candidate in `ml/dga_v2.json` has a separate model/feature
+contract and SHA256. Its optional runtime integration can replace synthetic DGA
+predictions after quality gates, without changing the other six modules. The
+candidate currently fails those gates and is disabled. First-label TF-IDF/logistic
+encoding, lexical statistics and bounded boosted trees use public domain strings
+and benign-reference hard negatives. Read [DGA development](DGA_DETECTION.md) for
+splits, failed baselines, measured recall/FPR and score-export verification. The
+synthetic model evaluation JSON remains a separate lab-only classifier report.
+
 Training consists of 30 independently seeded experiments per class, 32 incremental
 observations per experiment: 7,680 rows. Validation uses seeds 31–40 (2,560 rows),
 and the untouched test set uses seeds 41–50 (2,560 rows). Whole experiments remain
