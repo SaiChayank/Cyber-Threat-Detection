@@ -41,9 +41,35 @@ def cv(values):
     return math.sqrt(sum((v - mean) ** 2 for v in values) / len(values)) / max(mean, 1e-9)
 
 
+class ForwardByteWindow:
+    """Bounded one-second buckets for source-forward volume and rate."""
+
+    def __init__(self):
+        self.buckets = deque()
+        self.bytes_60s = 0
+
+    def update(self, timestamp, byte_count):
+        second = int(timestamp // 1000)
+        while self.buckets and self.buckets[0][0] < second - 60:
+            _, expired_bytes = self.buckets.popleft()
+            self.bytes_60s -= expired_bytes
+        if self.buckets and self.buckets[-1][0] == second:
+            self.buckets[-1][1] += byte_count
+        else:
+            self.buckets.append([second, byte_count])
+        self.bytes_60s += byte_count
+        bytes_10s = 0
+        for bucket_second, bucket_bytes in reversed(self.buckets):
+            if bucket_second < second - 10:
+                break
+            bytes_10s += bucket_bytes
+        return self.bytes_60s, bytes_10s / 10
+
+
 class FeatureExtractor:
     def __init__(self, max_sources=4096, max_events=512):
         self.sources = OrderedDict()
+        self.source_byte_windows = OrderedDict()
         self.global_rates = RateWindow(max_sources=max_sources)
         self.syn_targets = OrderedDict()
         self.udp_targets = OrderedDict()
@@ -68,8 +94,14 @@ class FeatureExtractor:
         history.append(event)
         self.sources[src] = history
         if len(self.sources) > self.max_sources:
-            self.sources.popitem(last=False)
+            evicted_source, _ = self.sources.popitem(last=False)
+            self.source_byte_windows.pop(evicted_source, None)
             self.evictions += 1
+        byte_window = self.source_byte_windows.pop(src, None)
+        if byte_window is None:
+            byte_window = ForwardByteWindow()
+        source_forward_bytes_60s, source_forward_byte_rate_10s = byte_window.update(event.timestamp, event.bytes)
+        self.source_byte_windows[src] = byte_window
         rates = self.global_rates.update(event)
         syn_target = None
         if event.protocol == 6:
@@ -99,7 +131,11 @@ class FeatureExtractor:
         intervals = [(b.timestamp - a.timestamp) / 1000 for a, b in zip(peer, peer[1:])]
         name = (event.dns_name or '').lower().rstrip('.')
         dga = dga_lexical_features(name)
-        ratio = event.bytes / max(1, event.reverse_bytes or 0) if event.reverse_observed else None
+        ratio = (event.bytes / event.reverse_bytes
+                 if event.reverse_observed and event.reverse_bytes else None)
+        ratio_status = ('reverse_unavailable' if not event.reverse_observed else
+                        'zero_observed_reverse_bytes' if event.reverse_bytes == 0 else
+                        'finite_observed_ratio')
         sizes = [e.bytes / e.packets for e in peer]
         values = [rates['packet_rate'], rates['byte_rate'], rates['source_entropy'],
                   sum(e.syn for e in recent) / len(recent),
@@ -110,6 +146,10 @@ class FeatureExtractor:
                   sum(e.bytes for e in history), ratio or 0, float(event.reverse_observed),
                   float(any(e.tls_fingerprint == DEMO_FINGERPRINT for e in peer)), len(peer)]
         return dict(zip(FEATURES, values)) | dns_tunnel_features(event, history) | {'observed_byte_ratio': ratio,
+                                             'observed_byte_ratio_status': ratio_status,
+                                             'source_forward_bytes_60s': source_forward_bytes_60s,
+                                             'source_forward_byte_rate_10s': source_forward_byte_rate_10s,
+                                             'source_byte_window_resolution_ms': 1000,
                                              'domain_label_length': dga['domain_label_length'],
                                              'domain_vowel_ratio': dga['domain_vowel_ratio'],
                                              'domain_consonant_run': dga['domain_consonant_run'],

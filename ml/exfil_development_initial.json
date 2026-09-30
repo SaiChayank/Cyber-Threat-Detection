@@ -1,0 +1,356 @@
+{
+  "scope": "Controlled synthetic development only; no reserved or production evaluation",
+  "source_sha256": {
+    "datasets/validate_exfil.py": "455fd31445b059e3e893070c273c95014d3743336d88e3b32f5761f1719b21be",
+    "detection/pipeline.py": "b3b115a4e88efbecc415aa1afcdb87e7751fa3471da3bcc8d41d75f75a9fd400",
+    "features/extractor.py": "8d438bcfa97ddcfbcd8c305b60e018b8f41416d36bdf3d2a7ff5b966f642dbde",
+    "ml/artifact.json": "4d8e08323374535789e21f9f7cd1ee3f1c84b663ce555e67bb4ced57c95e8010"
+  },
+  "counts": {
+    "TP": 4,
+    "TN": 2,
+    "FP": 4,
+    "FN": 1
+  },
+  "scenarios": [
+    {
+      "scenario": "large_one_way",
+      "ground_truth_exfil_like": true,
+      "events": 1,
+      "observed_stream_sha256": "e460ec326c074793018be3a843aeafd57297de12e716d302b5ea5debfec907b4",
+      "verdict": "TP",
+      "first_alert": {
+        "event": 1,
+        "timestamp": 1700000000000.0,
+        "elapsed_seconds": 0.0,
+        "detection_source": "RULE",
+        "evidence": {
+          "egress_bytes": 25000000,
+          "observed_byte_ratio": null,
+          "reverse_available": 0.0,
+          "confidence_kind": "heuristic strength",
+          "window_partial": true
+        },
+        "supporting_evidence": "egress_bytes=25000000; observed_byte_ratio=None; reverse_available=0.0; confidence_kind=heuristic strength; window_partial=True; reverse traffic unavailable: volume-only suspicion",
+        "independent_reference": {
+          "observed_forward_bytes_60s": 25000000,
+          "observed_forward_byte_rate_10s": 2500000.0,
+          "reverse_available": 0,
+          "observed_byte_ratio": null,
+          "ratio_status": "reverse_unavailable"
+        },
+        "runtime_byte_rate": 2500000.0
+      },
+      "final_reference": {
+        "observed_forward_bytes_60s": 25000000,
+        "observed_forward_byte_rate_10s": 2500000.0,
+        "reverse_available": 0,
+        "observed_byte_ratio": null,
+        "ratio_status": "reverse_unavailable"
+      }
+    },
+    {
+      "scenario": "sustained_one_way",
+      "ground_truth_exfil_like": true,
+      "events": 8,
+      "observed_stream_sha256": "c45f8df2cbe5990f0432d793cccd169cc37d7100a53976d5b3227562881b4217",
+      "verdict": "TP",
+      "first_alert": {
+        "event": 6,
+        "timestamp": 1700000025000.0,
+        "elapsed_seconds": 25.0,
+        "detection_source": "RULE",
+        "evidence": {
+          "egress_bytes": 24000000,
+          "observed_byte_ratio": null,
+          "reverse_available": 0.0,
+          "confidence_kind": "heuristic strength",
+          "window_partial": true
+        },
+        "supporting_evidence": "egress_bytes=24000000; observed_byte_ratio=None; reverse_available=0.0; confidence_kind=heuristic strength; window_partial=True; reverse traffic unavailable: volume-only suspicion",
+        "independent_reference": {
+          "observed_forward_bytes_60s": 24000000,
+          "observed_forward_byte_rate_10s": 1200000.0,
+          "reverse_available": 0,
+          "observed_byte_ratio": null,
+          "ratio_status": "reverse_unavailable"
+        },
+        "runtime_byte_rate": 1200000.0
+      },
+      "final_reference": {
+        "observed_forward_bytes_60s": 32000000,
+        "observed_forward_byte_rate_10s": 1200000.0,
+        "reverse_available": 0,
+        "observed_byte_ratio": null,
+        "ratio_status": "reverse_unavailable"
+      }
+    },
+    {
+      "scenario": "sustained_observed_bidir",
+      "ground_truth_exfil_like": true,
+      "events": 8,
+      "observed_stream_sha256": "b515231d5b7eecc3724332a3e7fa183fde53e3abe3dcc1b1c7f2736b2c029aaa",
+      "verdict": "TP",
+      "first_alert": {
+        "event": 1,
+        "timestamp": 1700000000000.0,
+        "elapsed_seconds": 0.0,
+        "detection_source": "ML",
+        "evidence": {
+          "egress_bytes": 4000000,
+          "observed_byte_ratio": 40.0,
+          "reverse_available": 1.0,
+          "confidence_kind": "synthetic-trained model posterior",
+          "window_partial": true
+        },
+        "supporting_evidence": "egress_bytes=4000000; observed_byte_ratio=40.0; reverse_available=1.0; confidence_kind=synthetic-trained model posterior; window_partial=True",
+        "independent_reference": {
+          "observed_forward_bytes_60s": 4000000,
+          "observed_forward_byte_rate_10s": 400000.0,
+          "reverse_available": 1,
+          "observed_byte_ratio": 40.0,
+          "ratio_status": "finite_observed_ratio"
+        },
+        "runtime_byte_rate": 400000.0
+      },
+      "final_reference": {
+        "observed_forward_bytes_60s": 32000000,
+        "observed_forward_byte_rate_10s": 1200000.0,
+        "reverse_available": 1,
+        "observed_byte_ratio": 40.0,
+        "ratio_status": "finite_observed_ratio"
+      }
+    },
+    {
+      "scenario": "volume_only_one_way",
+      "ground_truth_exfil_like": true,
+      "events": 6,
+      "observed_stream_sha256": "e3874ecafaafa832b0699965b0d96efa77a4e2e8c9b21c288c39c443f18a551a",
+      "verdict": "TP",
+      "first_alert": {
+        "event": 5,
+        "timestamp": 1700000016000.0,
+        "elapsed_seconds": 16.0,
+        "detection_source": "RULE",
+        "evidence": {
+          "egress_bytes": 25000000,
+          "observed_byte_ratio": null,
+          "reverse_available": 0.0,
+          "confidence_kind": "heuristic strength",
+          "window_partial": true
+        },
+        "supporting_evidence": "egress_bytes=25000000; observed_byte_ratio=None; reverse_available=0.0; confidence_kind=heuristic strength; window_partial=True; reverse traffic unavailable: volume-only suspicion",
+        "independent_reference": {
+          "observed_forward_bytes_60s": 25000000,
+          "observed_forward_byte_rate_10s": 1500000.0,
+          "reverse_available": 0,
+          "observed_byte_ratio": null,
+          "ratio_status": "reverse_unavailable"
+        },
+        "runtime_byte_rate": 1500000.0
+      },
+      "final_reference": {
+        "observed_forward_bytes_60s": 30000000,
+        "observed_forward_byte_rate_10s": 1500000.0,
+        "reverse_available": 0,
+        "observed_byte_ratio": null,
+        "ratio_status": "reverse_unavailable"
+      }
+    },
+    {
+      "scenario": "slow_sustained",
+      "ground_truth_exfil_like": true,
+      "events": 8,
+      "observed_stream_sha256": "b004ebf7f50b3fab9517ffee7a01e423f89d804adc8de1d0e8afcbcad990e0a5",
+      "verdict": "FN",
+      "first_alert": null,
+      "final_reference": {
+        "observed_forward_bytes_60s": 20000000,
+        "observed_forward_byte_rate_10s": 400000.0,
+        "reverse_available": 0,
+        "observed_byte_ratio": null,
+        "ratio_status": "reverse_unavailable"
+      }
+    },
+    {
+      "scenario": "cloud_backup",
+      "ground_truth_exfil_like": false,
+      "events": 8,
+      "observed_stream_sha256": "c45f8df2cbe5990f0432d793cccd169cc37d7100a53976d5b3227562881b4217",
+      "verdict": "FP",
+      "first_alert": {
+        "event": 6,
+        "timestamp": 1700000025000.0,
+        "elapsed_seconds": 25.0,
+        "detection_source": "RULE",
+        "evidence": {
+          "egress_bytes": 24000000,
+          "observed_byte_ratio": null,
+          "reverse_available": 0.0,
+          "confidence_kind": "heuristic strength",
+          "window_partial": true
+        },
+        "supporting_evidence": "egress_bytes=24000000; observed_byte_ratio=None; reverse_available=0.0; confidence_kind=heuristic strength; window_partial=True; reverse traffic unavailable: volume-only suspicion",
+        "independent_reference": {
+          "observed_forward_bytes_60s": 24000000,
+          "observed_forward_byte_rate_10s": 1200000.0,
+          "reverse_available": 0,
+          "observed_byte_ratio": null,
+          "ratio_status": "reverse_unavailable"
+        },
+        "runtime_byte_rate": 1200000.0
+      },
+      "final_reference": {
+        "observed_forward_bytes_60s": 32000000,
+        "observed_forward_byte_rate_10s": 1200000.0,
+        "reverse_available": 0,
+        "observed_byte_ratio": null,
+        "ratio_status": "reverse_unavailable"
+      }
+    },
+    {
+      "scenario": "legitimate_large_upload",
+      "ground_truth_exfil_like": false,
+      "events": 1,
+      "observed_stream_sha256": "e460ec326c074793018be3a843aeafd57297de12e716d302b5ea5debfec907b4",
+      "verdict": "FP",
+      "first_alert": {
+        "event": 1,
+        "timestamp": 1700000000000.0,
+        "elapsed_seconds": 0.0,
+        "detection_source": "RULE",
+        "evidence": {
+          "egress_bytes": 25000000,
+          "observed_byte_ratio": null,
+          "reverse_available": 0.0,
+          "confidence_kind": "heuristic strength",
+          "window_partial": true
+        },
+        "supporting_evidence": "egress_bytes=25000000; observed_byte_ratio=None; reverse_available=0.0; confidence_kind=heuristic strength; window_partial=True; reverse traffic unavailable: volume-only suspicion",
+        "independent_reference": {
+          "observed_forward_bytes_60s": 25000000,
+          "observed_forward_byte_rate_10s": 2500000.0,
+          "reverse_available": 0,
+          "observed_byte_ratio": null,
+          "ratio_status": "reverse_unavailable"
+        },
+        "runtime_byte_rate": 2500000.0
+      },
+      "final_reference": {
+        "observed_forward_bytes_60s": 25000000,
+        "observed_forward_byte_rate_10s": 2500000.0,
+        "reverse_available": 0,
+        "observed_byte_ratio": null,
+        "ratio_status": "reverse_unavailable"
+      }
+    },
+    {
+      "scenario": "synchronization",
+      "ground_truth_exfil_like": false,
+      "events": 8,
+      "observed_stream_sha256": "b515231d5b7eecc3724332a3e7fa183fde53e3abe3dcc1b1c7f2736b2c029aaa",
+      "verdict": "FP",
+      "first_alert": {
+        "event": 1,
+        "timestamp": 1700000000000.0,
+        "elapsed_seconds": 0.0,
+        "detection_source": "ML",
+        "evidence": {
+          "egress_bytes": 4000000,
+          "observed_byte_ratio": 40.0,
+          "reverse_available": 1.0,
+          "confidence_kind": "synthetic-trained model posterior",
+          "window_partial": true
+        },
+        "supporting_evidence": "egress_bytes=4000000; observed_byte_ratio=40.0; reverse_available=1.0; confidence_kind=synthetic-trained model posterior; window_partial=True",
+        "independent_reference": {
+          "observed_forward_bytes_60s": 4000000,
+          "observed_forward_byte_rate_10s": 400000.0,
+          "reverse_available": 1,
+          "observed_byte_ratio": 40.0,
+          "ratio_status": "finite_observed_ratio"
+        },
+        "runtime_byte_rate": 400000.0
+      },
+      "final_reference": {
+        "observed_forward_bytes_60s": 32000000,
+        "observed_forward_byte_rate_10s": 1200000.0,
+        "reverse_available": 1,
+        "observed_byte_ratio": 40.0,
+        "ratio_status": "finite_observed_ratio"
+      }
+    },
+    {
+      "scenario": "replication_deployment",
+      "ground_truth_exfil_like": false,
+      "events": 6,
+      "observed_stream_sha256": "e3874ecafaafa832b0699965b0d96efa77a4e2e8c9b21c288c39c443f18a551a",
+      "verdict": "FP",
+      "first_alert": {
+        "event": 5,
+        "timestamp": 1700000016000.0,
+        "elapsed_seconds": 16.0,
+        "detection_source": "RULE",
+        "evidence": {
+          "egress_bytes": 25000000,
+          "observed_byte_ratio": null,
+          "reverse_available": 0.0,
+          "confidence_kind": "heuristic strength",
+          "window_partial": true
+        },
+        "supporting_evidence": "egress_bytes=25000000; observed_byte_ratio=None; reverse_available=0.0; confidence_kind=heuristic strength; window_partial=True; reverse traffic unavailable: volume-only suspicion",
+        "independent_reference": {
+          "observed_forward_bytes_60s": 25000000,
+          "observed_forward_byte_rate_10s": 1500000.0,
+          "reverse_available": 0,
+          "observed_byte_ratio": null,
+          "ratio_status": "reverse_unavailable"
+        },
+        "runtime_byte_rate": 1500000.0
+      },
+      "final_reference": {
+        "observed_forward_bytes_60s": 30000000,
+        "observed_forward_byte_rate_10s": 1500000.0,
+        "reverse_available": 0,
+        "observed_byte_ratio": null,
+        "ratio_status": "reverse_unavailable"
+      }
+    },
+    {
+      "scenario": "ordinary_small_transfer",
+      "ground_truth_exfil_like": false,
+      "events": 8,
+      "observed_stream_sha256": "1b7ed735729d7c084388e988b15e55eedc0eabb06f851f7c77a4e744ffb7d545",
+      "verdict": "TN",
+      "first_alert": null,
+      "final_reference": {
+        "observed_forward_bytes_60s": 8000000,
+        "observed_forward_byte_rate_10s": 300000.0,
+        "reverse_available": 0,
+        "observed_byte_ratio": null,
+        "ratio_status": "reverse_unavailable"
+      }
+    },
+    {
+      "scenario": "inbound_heavy_transfer",
+      "ground_truth_exfil_like": false,
+      "events": 8,
+      "observed_stream_sha256": "bf2b47552b7a1a71ec2d98568184ade83db31225a61d263c188b2ce915dc708b",
+      "verdict": "TN",
+      "first_alert": null,
+      "final_reference": {
+        "observed_forward_bytes_60s": 16000000,
+        "observed_forward_byte_rate_10s": 600000.0,
+        "reverse_available": 1,
+        "observed_byte_ratio": 0.25,
+        "ratio_status": "finite_observed_ratio"
+      }
+    }
+  ],
+  "high_flow_count_stress": {
+    "events": 1000,
+    "observed_forward_bytes": 25000000,
+    "bounded_source_history_bytes": 12800000,
+    "first_alert": null
+  }
+}

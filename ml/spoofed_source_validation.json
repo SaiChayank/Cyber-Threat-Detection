@@ -1,0 +1,543 @@
+{
+  "scope": "One-shot controlled synthetic flow-summary audit; no source verification or production claim",
+  "source_sha256": {
+    "datasets/validate_spoofed_source.py": "4f17ea2bf8585fcc35e122e1c24183809313427b75146fdb062b44af79bc0b8d",
+    "detection/pipeline.py": "e29beac44c35378f1162a356f93644b59c91d7f139360a0627e3aa0ae9869f9d",
+    "features/extractor.py": "8d438bcfa97ddcfbcd8c305b60e018b8f41416d36bdf3d2a7ff5b966f642dbde",
+    "features/rate_window.py": "8fde1be3af18ee1ad6f3d8911afb214432676669406010a01f0603995ff62a11"
+  },
+  "scenarios": [
+    {
+      "scenario": "forged_32_once",
+      "ground_truth_forged": true,
+      "generator_provenance": "one simulated emitter assigns the visible source addresses",
+      "observed_stream_sha256": "0d82ddb9da56a654c4db36c7999c0aee1fd44d7a6d2742fcb2e5c5a95929e180",
+      "events": 32,
+      "final_visible_features": {
+        "target_packet_rate": 1280.0,
+        "target_flow_summary_rate": 3.2,
+        "source_entropy": 5.0,
+        "unique_source_count_lower_bound": 32,
+        "source_entropy_partial": false,
+        "singleton_source_fraction": 1.0,
+        "destination_concentration": 1.0
+      },
+      "existing_ddos": {
+        "verdict": "TP",
+        "first": {
+          "event": 25,
+          "timestamp": 1700000002400.0,
+          "evidence": {
+            "packet_rate": 1000.0,
+            "byte_rate": 1200000.0,
+            "source_entropy": 4.64385618977472,
+            "syn_fraction": 0.0,
+            "source_entropy_partial": false,
+            "rate_window_seconds": 10,
+            "rate_window_resolution_ms": 1000,
+            "global_packet_rate": 1000.0,
+            "source_count_lower_bound": 25,
+            "destination_concentration": 1.0,
+            "mean_packet_bytes": 1200.0,
+            "packet_size_cv": 0.0,
+            "packet_size_basis": "summary_mean_proxy",
+            "udp_target": "destination_udp",
+            "confidence_kind": "synthetic-trained model posterior",
+            "window_partial": true
+          },
+          "wording": "packet_rate=1000.0; byte_rate=1200000.0; source_entropy=4.6439; syn_fraction=0.0; source_entropy_partial=False; rate_window_seconds=10; rate_window_resolution_ms=1000; global_packet_rate=1000.0; source_count_lower_bound=25; destination_concentration=1.0; mean_packet_bytes=1200.0; packet_size_cv=0.0; packet_size_basis=summary_mean_proxy; udp_target=destination_udp; confidence_kind=synthetic-trained model posterior; window_partial=True; consistent with UDP reflection/amplification behavior; passive metadata cannot verify reflection or amplification factor"
+        }
+      },
+      "diagnostic_only_indicator": {
+        "verdict": "TP",
+        "first": {
+          "event": 25,
+          "timestamp": 1700000002400.0,
+          "features": {
+            "target_packet_rate": 1000.0,
+            "target_flow_summary_rate": 2.5,
+            "source_entropy": 4.643856189774724,
+            "unique_source_count_lower_bound": 25,
+            "source_entropy_partial": false,
+            "singleton_source_fraction": 1.0,
+            "destination_concentration": 1.0
+          },
+          "wording": "consistent with suspected spoofed-source flood"
+        }
+      }
+    },
+    {
+      "scenario": "forged_64_once",
+      "ground_truth_forged": true,
+      "generator_provenance": "one simulated emitter assigns the visible source addresses",
+      "observed_stream_sha256": "8c9e9a2d3987d08da43355f82ef694176b07b4ae0ff6c26d20a1de973cab3a56",
+      "events": 64,
+      "final_visible_features": {
+        "target_packet_rate": 1280.0,
+        "target_flow_summary_rate": 6.4,
+        "source_entropy": 6.0,
+        "unique_source_count_lower_bound": 64,
+        "source_entropy_partial": false,
+        "singleton_source_fraction": 1.0,
+        "destination_concentration": 1.0
+      },
+      "existing_ddos": {
+        "verdict": "TP",
+        "first": {
+          "event": 50,
+          "timestamp": 1700000004900.0,
+          "evidence": {
+            "packet_rate": 1000.0,
+            "byte_rate": 1200000.0,
+            "source_entropy": 5.6438561897747155,
+            "syn_fraction": 0.0,
+            "source_entropy_partial": false,
+            "rate_window_seconds": 10,
+            "rate_window_resolution_ms": 1000,
+            "global_packet_rate": 1000.0,
+            "source_count_lower_bound": 50,
+            "destination_concentration": 1.0,
+            "mean_packet_bytes": 1200.0,
+            "packet_size_cv": 0.0,
+            "packet_size_basis": "summary_mean_proxy",
+            "udp_target": "destination_udp",
+            "confidence_kind": "synthetic-trained model posterior",
+            "window_partial": true
+          },
+          "wording": "packet_rate=1000.0; byte_rate=1200000.0; source_entropy=5.6439; syn_fraction=0.0; source_entropy_partial=False; rate_window_seconds=10; rate_window_resolution_ms=1000; global_packet_rate=1000.0; source_count_lower_bound=50; destination_concentration=1.0; mean_packet_bytes=1200.0; packet_size_cv=0.0; packet_size_basis=summary_mean_proxy; udp_target=destination_udp; confidence_kind=synthetic-trained model posterior; window_partial=True; consistent with UDP reflection/amplification behavior; passive metadata cannot verify reflection or amplification factor"
+        }
+      },
+      "diagnostic_only_indicator": {
+        "verdict": "TP",
+        "first": {
+          "event": 50,
+          "timestamp": 1700000004900.0,
+          "features": {
+            "target_packet_rate": 1000.0,
+            "target_flow_summary_rate": 5.0,
+            "source_entropy": 5.643856189774724,
+            "unique_source_count_lower_bound": 50,
+            "source_entropy_partial": false,
+            "singleton_source_fraction": 1.0,
+            "destination_concentration": 1.0
+          },
+          "wording": "consistent with suspected spoofed-source flood"
+        }
+      }
+    },
+    {
+      "scenario": "forged_32_repeat",
+      "ground_truth_forged": true,
+      "generator_provenance": "one simulated emitter assigns the visible source addresses",
+      "observed_stream_sha256": "ca9706c4b92b13bdbb3c0f04de7aff137c808ee9132c4fed72ebe3e3e3904a0a",
+      "events": 128,
+      "final_visible_features": {
+        "target_packet_rate": 4320.0,
+        "target_flow_summary_rate": 10.8,
+        "source_entropy": 4.985463890651714,
+        "unique_source_count_lower_bound": 32,
+        "source_entropy_partial": false,
+        "singleton_source_fraction": 0.0,
+        "destination_concentration": 1.0
+      },
+      "existing_ddos": {
+        "verdict": "TP",
+        "first": {
+          "event": 25,
+          "timestamp": 1700000002400.0,
+          "evidence": {
+            "packet_rate": 1000.0,
+            "byte_rate": 1200000.0,
+            "source_entropy": 4.64385618977472,
+            "syn_fraction": 0.0,
+            "source_entropy_partial": false,
+            "rate_window_seconds": 10,
+            "rate_window_resolution_ms": 1000,
+            "global_packet_rate": 1000.0,
+            "source_count_lower_bound": 25,
+            "destination_concentration": 1.0,
+            "mean_packet_bytes": 1200.0,
+            "packet_size_cv": 0.0,
+            "packet_size_basis": "summary_mean_proxy",
+            "udp_target": "destination_udp",
+            "confidence_kind": "synthetic-trained model posterior",
+            "window_partial": true
+          },
+          "wording": "packet_rate=1000.0; byte_rate=1200000.0; source_entropy=4.6439; syn_fraction=0.0; source_entropy_partial=False; rate_window_seconds=10; rate_window_resolution_ms=1000; global_packet_rate=1000.0; source_count_lower_bound=25; destination_concentration=1.0; mean_packet_bytes=1200.0; packet_size_cv=0.0; packet_size_basis=summary_mean_proxy; udp_target=destination_udp; confidence_kind=synthetic-trained model posterior; window_partial=True; consistent with UDP reflection/amplification behavior; passive metadata cannot verify reflection or amplification factor"
+        }
+      },
+      "diagnostic_only_indicator": {
+        "verdict": "TP",
+        "first": {
+          "event": 25,
+          "timestamp": 1700000002400.0,
+          "features": {
+            "target_packet_rate": 1000.0,
+            "target_flow_summary_rate": 2.5,
+            "source_entropy": 4.643856189774724,
+            "unique_source_count_lower_bound": 25,
+            "source_entropy_partial": false,
+            "singleton_source_fraction": 1.0,
+            "destination_concentration": 1.0
+          },
+          "wording": "consistent with suspected spoofed-source flood"
+        }
+      }
+    },
+    {
+      "scenario": "forged_32_mixed",
+      "ground_truth_forged": true,
+      "generator_provenance": "one simulated emitter assigns the visible source addresses",
+      "observed_stream_sha256": "2e1ddfb500ba11d0e02c69f8ad914a7008f56fc5cf7742b1c3b35c3e37f3c8ee",
+      "events": 40,
+      "final_visible_features": {
+        "target_packet_rate": 1280.0,
+        "target_flow_summary_rate": 3.2,
+        "source_entropy": 5.0,
+        "unique_source_count_lower_bound": 32,
+        "source_entropy_partial": false,
+        "singleton_source_fraction": 1.0,
+        "destination_concentration": 0.8
+      },
+      "existing_ddos": {
+        "verdict": "TP",
+        "first": {
+          "event": 31,
+          "timestamp": 1700000002400.0,
+          "evidence": {
+            "packet_rate": 1000.0,
+            "byte_rate": 1200000.0,
+            "source_entropy": 4.64385618977472,
+            "syn_fraction": 0.0,
+            "source_entropy_partial": false,
+            "rate_window_seconds": 10,
+            "rate_window_resolution_ms": 1000,
+            "global_packet_rate": 1240.0,
+            "source_count_lower_bound": 25,
+            "destination_concentration": 0.8064516129032258,
+            "mean_packet_bytes": 1200.0,
+            "packet_size_cv": 0.0,
+            "packet_size_basis": "summary_mean_proxy",
+            "udp_target": "destination_udp",
+            "confidence_kind": "synthetic-trained model posterior",
+            "window_partial": true
+          },
+          "wording": "packet_rate=1000.0; byte_rate=1200000.0; source_entropy=4.6439; syn_fraction=0.0; source_entropy_partial=False; rate_window_seconds=10; rate_window_resolution_ms=1000; global_packet_rate=1240.0; source_count_lower_bound=25; destination_concentration=0.8065; mean_packet_bytes=1200.0; packet_size_cv=0.0; packet_size_basis=summary_mean_proxy; udp_target=destination_udp; confidence_kind=synthetic-trained model posterior; window_partial=True; consistent with UDP reflection/amplification behavior; passive metadata cannot verify reflection or amplification factor"
+        }
+      },
+      "diagnostic_only_indicator": {
+        "verdict": "TP",
+        "first": {
+          "event": 31,
+          "timestamp": 1700000002400.0,
+          "features": {
+            "target_packet_rate": 1000.0,
+            "target_flow_summary_rate": 2.5,
+            "source_entropy": 4.643856189774724,
+            "unique_source_count_lower_bound": 25,
+            "source_entropy_partial": false,
+            "singleton_source_fraction": 1.0,
+            "destination_concentration": 0.8064516129032258
+          },
+          "wording": "consistent with suspected spoofed-source flood"
+        }
+      }
+    },
+    {
+      "scenario": "genuine_distributed_32",
+      "ground_truth_forged": false,
+      "generator_provenance": "authorised actors own the visible source addresses",
+      "observed_stream_sha256": "0d82ddb9da56a654c4db36c7999c0aee1fd44d7a6d2742fcb2e5c5a95929e180",
+      "events": 32,
+      "final_visible_features": {
+        "target_packet_rate": 1280.0,
+        "target_flow_summary_rate": 3.2,
+        "source_entropy": 5.0,
+        "unique_source_count_lower_bound": 32,
+        "source_entropy_partial": false,
+        "singleton_source_fraction": 1.0,
+        "destination_concentration": 1.0
+      },
+      "existing_ddos": {
+        "verdict": "FP",
+        "first": {
+          "event": 25,
+          "timestamp": 1700000002400.0,
+          "evidence": {
+            "packet_rate": 1000.0,
+            "byte_rate": 1200000.0,
+            "source_entropy": 4.64385618977472,
+            "syn_fraction": 0.0,
+            "source_entropy_partial": false,
+            "rate_window_seconds": 10,
+            "rate_window_resolution_ms": 1000,
+            "global_packet_rate": 1000.0,
+            "source_count_lower_bound": 25,
+            "destination_concentration": 1.0,
+            "mean_packet_bytes": 1200.0,
+            "packet_size_cv": 0.0,
+            "packet_size_basis": "summary_mean_proxy",
+            "udp_target": "destination_udp",
+            "confidence_kind": "synthetic-trained model posterior",
+            "window_partial": true
+          },
+          "wording": "packet_rate=1000.0; byte_rate=1200000.0; source_entropy=4.6439; syn_fraction=0.0; source_entropy_partial=False; rate_window_seconds=10; rate_window_resolution_ms=1000; global_packet_rate=1000.0; source_count_lower_bound=25; destination_concentration=1.0; mean_packet_bytes=1200.0; packet_size_cv=0.0; packet_size_basis=summary_mean_proxy; udp_target=destination_udp; confidence_kind=synthetic-trained model posterior; window_partial=True; consistent with UDP reflection/amplification behavior; passive metadata cannot verify reflection or amplification factor"
+        }
+      },
+      "diagnostic_only_indicator": {
+        "verdict": "FP",
+        "first": {
+          "event": 25,
+          "timestamp": 1700000002400.0,
+          "features": {
+            "target_packet_rate": 1000.0,
+            "target_flow_summary_rate": 2.5,
+            "source_entropy": 4.643856189774724,
+            "unique_source_count_lower_bound": 25,
+            "source_entropy_partial": false,
+            "singleton_source_fraction": 1.0,
+            "destination_concentration": 1.0
+          },
+          "wording": "consistent with suspected spoofed-source flood"
+        }
+      }
+    },
+    {
+      "scenario": "flash_crowd_64",
+      "ground_truth_forged": false,
+      "generator_provenance": "authorised actors own the visible source addresses",
+      "observed_stream_sha256": "8c9e9a2d3987d08da43355f82ef694176b07b4ae0ff6c26d20a1de973cab3a56",
+      "events": 64,
+      "final_visible_features": {
+        "target_packet_rate": 1280.0,
+        "target_flow_summary_rate": 6.4,
+        "source_entropy": 6.0,
+        "unique_source_count_lower_bound": 64,
+        "source_entropy_partial": false,
+        "singleton_source_fraction": 1.0,
+        "destination_concentration": 1.0
+      },
+      "existing_ddos": {
+        "verdict": "FP",
+        "first": {
+          "event": 50,
+          "timestamp": 1700000004900.0,
+          "evidence": {
+            "packet_rate": 1000.0,
+            "byte_rate": 1200000.0,
+            "source_entropy": 5.6438561897747155,
+            "syn_fraction": 0.0,
+            "source_entropy_partial": false,
+            "rate_window_seconds": 10,
+            "rate_window_resolution_ms": 1000,
+            "global_packet_rate": 1000.0,
+            "source_count_lower_bound": 50,
+            "destination_concentration": 1.0,
+            "mean_packet_bytes": 1200.0,
+            "packet_size_cv": 0.0,
+            "packet_size_basis": "summary_mean_proxy",
+            "udp_target": "destination_udp",
+            "confidence_kind": "synthetic-trained model posterior",
+            "window_partial": true
+          },
+          "wording": "packet_rate=1000.0; byte_rate=1200000.0; source_entropy=5.6439; syn_fraction=0.0; source_entropy_partial=False; rate_window_seconds=10; rate_window_resolution_ms=1000; global_packet_rate=1000.0; source_count_lower_bound=50; destination_concentration=1.0; mean_packet_bytes=1200.0; packet_size_cv=0.0; packet_size_basis=summary_mean_proxy; udp_target=destination_udp; confidence_kind=synthetic-trained model posterior; window_partial=True; consistent with UDP reflection/amplification behavior; passive metadata cannot verify reflection or amplification factor"
+        }
+      },
+      "diagnostic_only_indicator": {
+        "verdict": "FP",
+        "first": {
+          "event": 50,
+          "timestamp": 1700000004900.0,
+          "features": {
+            "target_packet_rate": 1000.0,
+            "target_flow_summary_rate": 5.0,
+            "source_entropy": 5.643856189774724,
+            "unique_source_count_lower_bound": 50,
+            "source_entropy_partial": false,
+            "singleton_source_fraction": 1.0,
+            "destination_concentration": 1.0
+          },
+          "wording": "consistent with suspected spoofed-source flood"
+        }
+      }
+    },
+    {
+      "scenario": "genuine_repeat_32",
+      "ground_truth_forged": false,
+      "generator_provenance": "authorised actors own the visible source addresses",
+      "observed_stream_sha256": "ca9706c4b92b13bdbb3c0f04de7aff137c808ee9132c4fed72ebe3e3e3904a0a",
+      "events": 128,
+      "final_visible_features": {
+        "target_packet_rate": 4320.0,
+        "target_flow_summary_rate": 10.8,
+        "source_entropy": 4.985463890651714,
+        "unique_source_count_lower_bound": 32,
+        "source_entropy_partial": false,
+        "singleton_source_fraction": 0.0,
+        "destination_concentration": 1.0
+      },
+      "existing_ddos": {
+        "verdict": "FP",
+        "first": {
+          "event": 25,
+          "timestamp": 1700000002400.0,
+          "evidence": {
+            "packet_rate": 1000.0,
+            "byte_rate": 1200000.0,
+            "source_entropy": 4.64385618977472,
+            "syn_fraction": 0.0,
+            "source_entropy_partial": false,
+            "rate_window_seconds": 10,
+            "rate_window_resolution_ms": 1000,
+            "global_packet_rate": 1000.0,
+            "source_count_lower_bound": 25,
+            "destination_concentration": 1.0,
+            "mean_packet_bytes": 1200.0,
+            "packet_size_cv": 0.0,
+            "packet_size_basis": "summary_mean_proxy",
+            "udp_target": "destination_udp",
+            "confidence_kind": "synthetic-trained model posterior",
+            "window_partial": true
+          },
+          "wording": "packet_rate=1000.0; byte_rate=1200000.0; source_entropy=4.6439; syn_fraction=0.0; source_entropy_partial=False; rate_window_seconds=10; rate_window_resolution_ms=1000; global_packet_rate=1000.0; source_count_lower_bound=25; destination_concentration=1.0; mean_packet_bytes=1200.0; packet_size_cv=0.0; packet_size_basis=summary_mean_proxy; udp_target=destination_udp; confidence_kind=synthetic-trained model posterior; window_partial=True; consistent with UDP reflection/amplification behavior; passive metadata cannot verify reflection or amplification factor"
+        }
+      },
+      "diagnostic_only_indicator": {
+        "verdict": "FP",
+        "first": {
+          "event": 25,
+          "timestamp": 1700000002400.0,
+          "features": {
+            "target_packet_rate": 1000.0,
+            "target_flow_summary_rate": 2.5,
+            "source_entropy": 4.643856189774724,
+            "unique_source_count_lower_bound": 25,
+            "source_entropy_partial": false,
+            "singleton_source_fraction": 1.0,
+            "destination_concentration": 1.0
+          },
+          "wording": "consistent with suspected spoofed-source flood"
+        }
+      }
+    },
+    {
+      "scenario": "authorised_telemetry_32",
+      "ground_truth_forged": false,
+      "generator_provenance": "authorised actors own the visible source addresses",
+      "observed_stream_sha256": "b79de1dbd8aaef06984619e4a91801f8fc7f38f737d0ca065de5f1e4499d229f",
+      "events": 32,
+      "final_visible_features": {
+        "target_packet_rate": 1280.0,
+        "target_flow_summary_rate": 3.2,
+        "source_entropy": 5.0,
+        "unique_source_count_lower_bound": 32,
+        "source_entropy_partial": false,
+        "singleton_source_fraction": 1.0,
+        "destination_concentration": 1.0
+      },
+      "existing_ddos": {
+        "verdict": "FP",
+        "first": {
+          "event": 25,
+          "timestamp": 1700000002400.0,
+          "evidence": {
+            "packet_rate": 1000.0,
+            "byte_rate": 256000.0,
+            "source_entropy": 4.64385618977472,
+            "syn_fraction": 0.0,
+            "source_entropy_partial": false,
+            "rate_window_seconds": 10,
+            "rate_window_resolution_ms": 1000,
+            "global_packet_rate": 1000.0,
+            "source_count_lower_bound": 25,
+            "destination_concentration": 1.0,
+            "mean_packet_bytes": 256.0,
+            "packet_size_cv": 0.0,
+            "packet_size_basis": "summary_mean_proxy",
+            "udp_target": "destination_udp",
+            "confidence_kind": "synthetic-trained model posterior",
+            "window_partial": true
+          },
+          "wording": "packet_rate=1000.0; byte_rate=256000.0; source_entropy=4.6439; syn_fraction=0.0; source_entropy_partial=False; rate_window_seconds=10; rate_window_resolution_ms=1000; global_packet_rate=1000.0; source_count_lower_bound=25; destination_concentration=1.0; mean_packet_bytes=256.0; packet_size_cv=0.0; packet_size_basis=summary_mean_proxy; udp_target=destination_udp; confidence_kind=synthetic-trained model posterior; window_partial=True; high-rate UDP pattern; passive metadata cannot verify reflection or amplification"
+        }
+      },
+      "diagnostic_only_indicator": {
+        "verdict": "FP",
+        "first": {
+          "event": 25,
+          "timestamp": 1700000002400.0,
+          "features": {
+            "target_packet_rate": 1000.0,
+            "target_flow_summary_rate": 2.5,
+            "source_entropy": 4.643856189774724,
+            "unique_source_count_lower_bound": 25,
+            "source_entropy_partial": false,
+            "singleton_source_fraction": 1.0,
+            "destination_concentration": 1.0
+          },
+          "wording": "consistent with suspected spoofed-source flood"
+        }
+      }
+    },
+    {
+      "scenario": "authorised_spread",
+      "ground_truth_forged": false,
+      "generator_provenance": "authorised actors own the visible source addresses",
+      "observed_stream_sha256": "e17e8029b3103dbc88534f8f05fc1acd19bd2c8efb726cde0d5782fd0e29b884",
+      "events": 32,
+      "final_visible_features": {
+        "target_packet_rate": 40.0,
+        "target_flow_summary_rate": 0.1,
+        "source_entropy": 0.0,
+        "unique_source_count_lower_bound": 1,
+        "source_entropy_partial": false,
+        "singleton_source_fraction": 1.0,
+        "destination_concentration": 0.03125
+      },
+      "existing_ddos": {
+        "verdict": "TN",
+        "first": null
+      },
+      "diagnostic_only_indicator": {
+        "verdict": "TN",
+        "first": null
+      }
+    },
+    {
+      "scenario": "genuine_low_rate_32",
+      "ground_truth_forged": false,
+      "generator_provenance": "authorised actors own the visible source addresses",
+      "observed_stream_sha256": "2c70dc00cb8c353083c5c62cf1ec441f1252ee3fa4bd7b967c5ebec30c721648",
+      "events": 32,
+      "final_visible_features": {
+        "target_packet_rate": 320.0,
+        "target_flow_summary_rate": 3.2,
+        "source_entropy": 5.0,
+        "unique_source_count_lower_bound": 32,
+        "source_entropy_partial": false,
+        "singleton_source_fraction": 1.0,
+        "destination_concentration": 1.0
+      },
+      "existing_ddos": {
+        "verdict": "TN",
+        "first": null
+      },
+      "diagnostic_only_indicator": {
+        "verdict": "TN",
+        "first": null
+      }
+    }
+  ],
+  "existing_ddos_counts": {
+    "TP": 4,
+    "TN": 2,
+    "FP": 4,
+    "FN": 0
+  },
+  "diagnostic_only_indicator_counts": {
+    "TP": 4,
+    "TN": 2,
+    "FP": 4,
+    "FN": 0
+  }
+}

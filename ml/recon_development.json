@@ -1,0 +1,348 @@
+{
+  "scope": "Controlled synthetic development only; no reserved or production evaluation",
+  "source_sha256": {
+    "datasets/validate_recon.py": "3bb5a51fe06d4831661f6700bd26c2b0473e9ffdd92d1e5f7854286f136810b0",
+    "detection/pipeline.py": "b3b115a4e88efbecc415aa1afcdb87e7751fa3471da3bcc8d41d75f75a9fd400",
+    "features/extractor.py": "8d438bcfa97ddcfbcd8c305b60e018b8f41416d36bdf3d2a7ff5b966f642dbde",
+    "ml/artifact.json": "4d8e08323374535789e21f9f7cd1ee3f1c84b663ce555e67bb4ced57c95e8010"
+  },
+  "counts": {
+    "TP": 4,
+    "TN": 3,
+    "FP": 3,
+    "FN": 1
+  },
+  "scenarios": [
+    {
+      "scenario": "vertical_scan",
+      "ground_truth_unauthorised_scan": true,
+      "events": 32,
+      "observed_stream_sha256": "eb061f4b7353d4b6b868ed06899b5103a273e9a3fe9bb45ce0cc19ac4700cd11",
+      "verdict": "TP",
+      "first_alert": {
+        "event": 10,
+        "timestamp": 1700000000900.0,
+        "elapsed_seconds": 0.9,
+        "detection_source": "ML",
+        "evidence": {
+          "destination_count": 1,
+          "port_count": 10,
+          "syn_fraction": 1.0,
+          "confidence_kind": "synthetic-trained model posterior",
+          "window_partial": true
+        },
+        "independent_reference": {
+          "destination_count": 1,
+          "port_count": 10,
+          "syn_fraction": 1.0,
+          "observed_event_rate": 1.0,
+          "events_in_ten_seconds": 10
+        }
+      },
+      "alert_count": 1,
+      "max_destination_hosts_ten_seconds": 1,
+      "max_destination_ports_ten_seconds": 32,
+      "final_reference": {
+        "destination_count": 1,
+        "port_count": 32,
+        "syn_fraction": 1.0,
+        "observed_event_rate": 3.2,
+        "events_in_ten_seconds": 32
+      }
+    },
+    {
+      "scenario": "horizontal_scan",
+      "ground_truth_unauthorised_scan": true,
+      "events": 32,
+      "observed_stream_sha256": "4c5d59c73081c56b08470280700c408d4a1e470d039280cfd3aaf76f7dd60472",
+      "verdict": "TP",
+      "first_alert": {
+        "event": 10,
+        "timestamp": 1700000000900.0,
+        "elapsed_seconds": 0.9,
+        "detection_source": "ML",
+        "evidence": {
+          "destination_count": 10,
+          "port_count": 1,
+          "syn_fraction": 1.0,
+          "confidence_kind": "synthetic-trained model posterior",
+          "window_partial": true
+        },
+        "independent_reference": {
+          "destination_count": 10,
+          "port_count": 1,
+          "syn_fraction": 1.0,
+          "observed_event_rate": 1.0,
+          "events_in_ten_seconds": 10
+        }
+      },
+      "alert_count": 1,
+      "max_destination_hosts_ten_seconds": 32,
+      "max_destination_ports_ten_seconds": 1,
+      "final_reference": {
+        "destination_count": 32,
+        "port_count": 1,
+        "syn_fraction": 1.0,
+        "observed_event_rate": 3.2,
+        "events_in_ten_seconds": 32
+      }
+    },
+    {
+      "scenario": "mixed_scan",
+      "ground_truth_unauthorised_scan": true,
+      "events": 32,
+      "observed_stream_sha256": "d50b6039505ee8ec627dc33ca289605bba3b05e983b2da180cd14f851ccdf9aa",
+      "verdict": "TP",
+      "first_alert": {
+        "event": 10,
+        "timestamp": 1700000000900.0,
+        "elapsed_seconds": 0.9,
+        "detection_source": "ML",
+        "evidence": {
+          "destination_count": 10,
+          "port_count": 10,
+          "syn_fraction": 1.0,
+          "confidence_kind": "synthetic-trained model posterior",
+          "window_partial": true
+        },
+        "independent_reference": {
+          "destination_count": 10,
+          "port_count": 10,
+          "syn_fraction": 1.0,
+          "observed_event_rate": 1.0,
+          "events_in_ten_seconds": 10
+        }
+      },
+      "alert_count": 1,
+      "max_destination_hosts_ten_seconds": 16,
+      "max_destination_ports_ten_seconds": 32,
+      "final_reference": {
+        "destination_count": 16,
+        "port_count": 32,
+        "syn_fraction": 1.0,
+        "observed_event_rate": 3.2,
+        "events_in_ten_seconds": 32
+      }
+    },
+    {
+      "scenario": "slower_vertical_scan",
+      "ground_truth_unauthorised_scan": true,
+      "events": 32,
+      "observed_stream_sha256": "76b37bd1652664cdb6f212727c8141e710583a9916fc8738166dc65c1873c488",
+      "verdict": "TP",
+      "first_alert": {
+        "event": 10,
+        "timestamp": 1700000004500.0,
+        "elapsed_seconds": 4.5,
+        "detection_source": "ML",
+        "evidence": {
+          "destination_count": 1,
+          "port_count": 10,
+          "syn_fraction": 1.0,
+          "confidence_kind": "synthetic-trained model posterior",
+          "window_partial": true
+        },
+        "independent_reference": {
+          "destination_count": 1,
+          "port_count": 10,
+          "syn_fraction": 1.0,
+          "observed_event_rate": 1.0,
+          "events_in_ten_seconds": 10
+        }
+      },
+      "alert_count": 1,
+      "max_destination_hosts_ten_seconds": 1,
+      "max_destination_ports_ten_seconds": 21,
+      "final_reference": {
+        "destination_count": 1,
+        "port_count": 21,
+        "syn_fraction": 1.0,
+        "observed_event_rate": 2.1,
+        "events_in_ten_seconds": 21
+      }
+    },
+    {
+      "scenario": "slow_horizontal_scan",
+      "ground_truth_unauthorised_scan": true,
+      "events": 32,
+      "observed_stream_sha256": "2f479e37a237b414ebaef16ea04f78847d51bf85c7edb9aceff818279ea4561c",
+      "verdict": "FN",
+      "first_alert": null,
+      "alert_count": 0,
+      "max_destination_hosts_ten_seconds": 6,
+      "max_destination_ports_ten_seconds": 1,
+      "final_reference": {
+        "destination_count": 6,
+        "port_count": 1,
+        "syn_fraction": 1.0,
+        "observed_event_rate": 0.6,
+        "events_in_ten_seconds": 6
+      }
+    },
+    {
+      "scenario": "authorised_vulnerability_scanner",
+      "ground_truth_unauthorised_scan": false,
+      "events": 32,
+      "observed_stream_sha256": "eb061f4b7353d4b6b868ed06899b5103a273e9a3fe9bb45ce0cc19ac4700cd11",
+      "verdict": "FP",
+      "first_alert": {
+        "event": 10,
+        "timestamp": 1700000000900.0,
+        "elapsed_seconds": 0.9,
+        "detection_source": "ML",
+        "evidence": {
+          "destination_count": 1,
+          "port_count": 10,
+          "syn_fraction": 1.0,
+          "confidence_kind": "synthetic-trained model posterior",
+          "window_partial": true
+        },
+        "independent_reference": {
+          "destination_count": 1,
+          "port_count": 10,
+          "syn_fraction": 1.0,
+          "observed_event_rate": 1.0,
+          "events_in_ten_seconds": 10
+        }
+      },
+      "alert_count": 1,
+      "max_destination_hosts_ten_seconds": 1,
+      "max_destination_ports_ten_seconds": 32,
+      "final_reference": {
+        "destination_count": 1,
+        "port_count": 32,
+        "syn_fraction": 1.0,
+        "observed_event_rate": 3.2,
+        "events_in_ten_seconds": 32
+      }
+    },
+    {
+      "scenario": "authorised_asset_inventory",
+      "ground_truth_unauthorised_scan": false,
+      "events": 32,
+      "observed_stream_sha256": "4c5d59c73081c56b08470280700c408d4a1e470d039280cfd3aaf76f7dd60472",
+      "verdict": "FP",
+      "first_alert": {
+        "event": 10,
+        "timestamp": 1700000000900.0,
+        "elapsed_seconds": 0.9,
+        "detection_source": "ML",
+        "evidence": {
+          "destination_count": 10,
+          "port_count": 1,
+          "syn_fraction": 1.0,
+          "confidence_kind": "synthetic-trained model posterior",
+          "window_partial": true
+        },
+        "independent_reference": {
+          "destination_count": 10,
+          "port_count": 1,
+          "syn_fraction": 1.0,
+          "observed_event_rate": 1.0,
+          "events_in_ten_seconds": 10
+        }
+      },
+      "alert_count": 1,
+      "max_destination_hosts_ten_seconds": 32,
+      "max_destination_ports_ten_seconds": 1,
+      "final_reference": {
+        "destination_count": 32,
+        "port_count": 1,
+        "syn_fraction": 1.0,
+        "observed_event_rate": 3.2,
+        "events_in_ten_seconds": 32
+      }
+    },
+    {
+      "scenario": "service_discovery",
+      "ground_truth_unauthorised_scan": false,
+      "events": 24,
+      "observed_stream_sha256": "62a2372de6d3451b8bc667185680fd1f3395e4780cb34878b40d6bbc50c9f476",
+      "verdict": "FP",
+      "first_alert": {
+        "event": 10,
+        "timestamp": 1700000000900.0,
+        "elapsed_seconds": 0.9,
+        "detection_source": "ML",
+        "evidence": {
+          "destination_count": 10,
+          "port_count": 1,
+          "syn_fraction": 1.0,
+          "confidence_kind": "synthetic-trained model posterior",
+          "window_partial": true
+        },
+        "independent_reference": {
+          "destination_count": 10,
+          "port_count": 1,
+          "syn_fraction": 1.0,
+          "observed_event_rate": 1.0,
+          "events_in_ten_seconds": 10
+        }
+      },
+      "alert_count": 1,
+      "max_destination_hosts_ten_seconds": 24,
+      "max_destination_ports_ten_seconds": 1,
+      "final_reference": {
+        "destination_count": 24,
+        "port_count": 1,
+        "syn_fraction": 1.0,
+        "observed_event_rate": 2.4,
+        "events_in_ten_seconds": 24
+      }
+    },
+    {
+      "scenario": "scheduled_monitoring",
+      "ground_truth_unauthorised_scan": false,
+      "events": 32,
+      "observed_stream_sha256": "1238bce05b0003646ad32c58f93c82d5af185c17af37a732853a72435ad3e908",
+      "verdict": "TN",
+      "first_alert": null,
+      "alert_count": 0,
+      "max_destination_hosts_ten_seconds": 6,
+      "max_destination_ports_ten_seconds": 1,
+      "final_reference": {
+        "destination_count": 6,
+        "port_count": 1,
+        "syn_fraction": 0.0,
+        "observed_event_rate": 0.6,
+        "events_in_ten_seconds": 6
+      }
+    },
+    {
+      "scenario": "administrative_port_check",
+      "ground_truth_unauthorised_scan": false,
+      "events": 9,
+      "observed_stream_sha256": "a3acd51188abe5c766369c1c490a6bc64ffef647b36108657dca117575cd5f1c",
+      "verdict": "TN",
+      "first_alert": null,
+      "alert_count": 0,
+      "max_destination_hosts_ten_seconds": 1,
+      "max_destination_ports_ten_seconds": 9,
+      "final_reference": {
+        "destination_count": 1,
+        "port_count": 9,
+        "syn_fraction": 1.0,
+        "observed_event_rate": 0.9,
+        "events_in_ten_seconds": 9
+      }
+    },
+    {
+      "scenario": "ordinary_browsing",
+      "ground_truth_unauthorised_scan": false,
+      "events": 32,
+      "observed_stream_sha256": "54628426d08cef6cc15d47a0bfc694ad898d333481c3f36ce7eabf22997cc770",
+      "verdict": "TN",
+      "first_alert": null,
+      "alert_count": 0,
+      "max_destination_hosts_ten_seconds": 3,
+      "max_destination_ports_ten_seconds": 2,
+      "final_reference": {
+        "destination_count": 3,
+        "port_count": 2,
+        "syn_fraction": 0.0,
+        "observed_event_rate": 1.1,
+        "events_in_ten_seconds": 11
+      }
+    }
+  ]
+}

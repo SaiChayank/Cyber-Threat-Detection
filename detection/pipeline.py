@@ -88,7 +88,7 @@ class Pipeline:
             'DGA_DOMAINS': dga_evidence and not self.dga_model.enabled,
             'BOTNET_C2': f['history_count'] >= 8 and f['iat_mean'] >= 1 and f['iat_cv'] < .05,
             'ENCRYPTED_MALWARE': f['encrypted'] and f['fingerprint_risk'],
-            'DATA_EXFILTRATION': f['egress_bytes'] > 20000000,
+            'DATA_EXFILTRATION': f['source_forward_bytes_60s'] > 20000000,
         }
         for threat, matched in rules.items():
             if matched:
@@ -106,7 +106,8 @@ class Pipeline:
                 continue
             if threat == 'DGA_DOMAINS' and not self.dga_model.enabled and not dga_evidence:
                 continue
-            key = ((str(event.dst_ip), threat) if threat == 'DDOS' and (syn_flood or udp_flood)
+            key = ((str(event.src_ip), threat) if threat == 'RECONNAISSANCE'
+                   else (str(event.dst_ip), threat) if threat == 'DDOS' and (syn_flood or udp_flood)
                    else (str(event.src_ip), str(event.dst_ip), threat))
             if key in self.dedup:
                 continue
@@ -138,6 +139,12 @@ class Pipeline:
                                 udp_target='destination_udp')
             if threat == 'DNS_TUNNELLING' and self.dns_tunnel_candidate:
                 evidence['dns_candidate_pattern'] = tunnel_reason
+            if threat == 'DATA_EXFILTRATION':
+                evidence.update(egress_bytes=f['source_forward_bytes_60s'],
+                                source_forward_byte_rate_10s=f['source_forward_byte_rate_10s'],
+                                source_byte_window_resolution_ms=f['source_byte_window_resolution_ms'],
+                                egress_basis='observed_source_forward_bytes_60s',
+                                observed_byte_ratio_status=f['observed_byte_ratio_status'])
             evidence['confidence_kind'] = 'heuristic strength' if source == DetectorType.RULE else 'synthetic-trained model posterior'
             if threat == 'DGA_DOMAINS':
                 evidence['observed_dns_name'] = event.dns_name
@@ -153,8 +160,12 @@ class Pipeline:
                               'passive metadata cannot verify reflection or amplification factor'
                               if f['udp_target_source_count_lower_bound'] >= 16 and f['udp_packet_size_mean'] >= 512
                               else '; high-rate UDP pattern; passive metadata cannot verify reflection or amplification')
-            if threat == 'DATA_EXFILTRATION' and not event.reverse_observed:
-                narrative += '; reverse traffic unavailable: volume-only suspicion'
+            if threat == 'DATA_EXFILTRATION':
+                narrative += '; behavior consistent with possible exfiltration; content and intent unverified'
+                if not event.reverse_observed:
+                    narrative += '; reverse traffic unavailable: volume-only suspicion'
+                elif event.reverse_bytes == 0:
+                    narrative += '; reverse observed as zero: finite byte ratio undefined'
             if threat == 'ENCRYPTED_MALWARE':
                 narrative += '; metadata-only suspicion; lab fingerprint, not proof of malware'
             severity = Severity.CRITICAL if threat == 'DDOS' else Severity.HIGH if threat in ('ENCRYPTED_MALWARE', 'DATA_EXFILTRATION', 'BOTNET_C2') else Severity.MEDIUM
