@@ -45,6 +45,7 @@ class FeatureExtractor:
     def __init__(self, max_sources=4096, max_events=512):
         self.sources = OrderedDict()
         self.global_rates = RateWindow(max_sources=max_sources)
+        self.syn_targets = OrderedDict()
         self.max_sources = max_sources
         self.max_events = max_events
         self.watermark = -1.0
@@ -69,6 +70,16 @@ class FeatureExtractor:
             self.sources.popitem(last=False)
             self.evictions += 1
         rates = self.global_rates.update(event)
+        syn_target = None
+        if event.protocol == 6:
+            target = str(event.dst_ip)
+            target_window = self.syn_targets.pop(target, None)
+            if target_window is None:
+                target_window = RateWindow(max_sources=min(self.max_sources, 256), source_weight_packets=True)
+            syn_target = target_window.update(event)
+            self.syn_targets[target] = target_window
+            if len(self.syn_targets) > 512:
+                self.syn_targets.popitem(last=False)
         recent = [e for e in history if e.timestamp >= event.timestamp - 10000]
         # Timing is per source/destination/service, not across unrelated browsing flows.
         peer = [e for e in history if e.dst_ip == event.dst_ip and e.dst_port == event.dst_port]
@@ -90,6 +101,12 @@ class FeatureExtractor:
                                              'domain_vowel_ratio': dga['domain_vowel_ratio'],
                                              'domain_consonant_run': dga['domain_consonant_run'],
                                              'source_entropy_partial': rates['source_entropy_partial'],
+                                             'syn_target_packet_rate': syn_target['packet_rate'] if syn_target else 0.0,
+                                             'syn_target_fraction': syn_target['syn_fraction'] if syn_target else 0.0,
+                                             'syn_target_source_entropy': syn_target['source_entropy'] if syn_target else 0.0,
+                                             'syn_target_source_count_lower_bound': syn_target['source_count_lower_bound'] if syn_target else 0,
+                                             'syn_target_entropy_partial': syn_target['source_entropy_partial'] if syn_target else False,
+                                             'syn_target_fraction_basis': syn_target['syn_fraction_basis'] if syn_target else 'not_tcp',
                                              'rate_window_seconds': rates['rate_window_seconds'],
                                              'rate_window_resolution_ms': rates['rate_window_resolution_ms'],
                                              'window_partial': t - history[0].timestamp / 1000 < 60,

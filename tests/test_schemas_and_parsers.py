@@ -224,6 +224,27 @@ def test_llmnr_is_not_mislabelled_as_dns_attack_input():
     assert flow is not None and dns is None
 
 
+@pytest.mark.parametrize('qtype', [1, 28, 16, 10])
+def test_complete_multi_label_dns_questions_preserve_record_type(qtype):
+    encoded = b'j' * 63
+    payload = (struct.pack('!HHHHHH', 7, 0x0100, 1, 0, 0, 0)
+               + b'\x011' + bytes([len(encoded)]) + encoded
+               + b'\x04demo\x04test\x00' + struct.pack('!HH', qtype, 1))
+    flow, dns, _ = ProtocolParser().parse_packet(dns_packet(payload), 1700000000)
+    assert flow is not None
+    assert dns.query_name == '1.' + encoded.decode() + '.demo.test'
+    assert dns.query_type == qtype
+
+
+def test_snaplen_clipped_question_cannot_be_scored_as_complete_dns():
+    encoded = b'j' * 63
+    payload = (struct.pack('!HHHHHH', 7, 0x0100, 1, 0, 0, 0)
+               + b'\x011' + bytes([len(encoded)]) + encoded
+               + b'\x04demo\x04test\x00' + struct.pack('!HH', 1, 1))
+    flow, dns, _ = ProtocolParser().parse_packet(dns_packet(payload)[:96], 1700000000)
+    assert flow is None and dns is None
+
+
 @pytest.mark.parametrize('protocol', [6, 17])
 def test_long_txt_capture_metadata_reaches_streaming_detector(protocol, tmp_path, monkeypatch):
     from detection.pipeline import Pipeline

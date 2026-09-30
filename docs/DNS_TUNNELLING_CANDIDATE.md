@@ -53,5 +53,47 @@ subdomains can resemble an encoded tunnel, while slow or short encoded
 channels may evade the candidate. The validation comparison will expose only
 the controlled scenarios above; it cannot resolve these open-world limits.
 
-Results and any final configuration decision are appended after the one
-validation comparison.
+## One validation comparison and decision
+
+The frozen comparison was run once with
+`python -m datasets.evaluate_dns_tunnel_candidate`. The machine-readable
+per-scenario results and feature/rule source hashes are in
+`ml/dns_tunnel_candidate_validation.json`. Both arms use the real pipeline's
+`FeatureExtractor`; synthetic-model DNS predictions are removed from the
+comparison. Scenario labels and source/domain literals are never predictors.
+
+| Scenario split / rule | TP | TN | FP | FN |
+| --- | ---: | ---: | ---: | ---: |
+| Configuration/training, deployed long-first-label TXT rule | 0 | 4 | 1 | 5 |
+| Configuration/training, candidate | 5 | 5 | 0 | 0 |
+| Validation, deployed long-first-label TXT rule | 0 | 4 | 1 | 5 |
+| Validation, candidate | 5 | 5 | 0 | 0 |
+
+Every controlled validation attack (A, AAAA, TXT and NULL, including a
+multi-label shape) first alerts on query **5 of 12**, before completion. The
+five validation benign cases do not alert. The old rule misses the short-first,
+long-second and multi-label cases and flags the repeated legitimate long-TXT
+selector. The predeclared **development stability criterion passed**, so the
+small candidate rule and feature configuration is stable for formal testing.
+These are scenario-level synthetic counts, **not** estimates of field recall,
+precision, FPR or generalization. No public mixed/unlabelled PCAP was scored
+as malicious, and no frozen/reserved evaluation data was inspected.
+
+On one local unpaced 5,000-event *complete-DNS* processing run, default mode
+handled 8,254 events/sec (p95 0.159 ms) and opt-in candidate mode 7,926
+events/sec (p95 0.164 ms). The same comparison on mixed metadata handled
+63,258 and 62,310 events/sec, respectively. These are **core-only** figures;
+they exclude capture, persistence, HTTP, SSE and browser rendering. The
+20,000-event mixed synthetic **core + SQLite** check measured 3,070 events/sec
+and p95 1.078 ms with 4,914 alerts, versus the previously saved 3,027
+events/sec and p95 1.081 ms. These separate runs are not evidence of a speed
+improvement, but show no observed throughput regression below the declared
+2,000-event/sec core + SQLite target. Neither measurement is end-to-end.
+
+The candidate is **not deployed**: `Pipeline()` still uses the existing rule,
+while `Pipeline(dns_tunnel_candidate=True)` is for controlled development
+replay only. The frozen formal gate and no-promotion decision are recorded in
+`DNS_TUNNELLING_FORMAL_VALIDATION.md`. High-rate legitimate unique encoded subdomains may be
+indistinguishable from tunnels using this metadata alone; slower, shorter,
+or cross-suffix tunnels may be missed. Truncated 96-byte public captures
+still lack complete QNAME/QTYPE and cannot validate this candidate.

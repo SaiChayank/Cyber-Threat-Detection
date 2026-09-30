@@ -5,6 +5,7 @@ from datasets.dns_tunnel_development import SCENARIOS, events
 from detection.dns_tunnel_candidate import candidate_reason
 from detection.pipeline import Pipeline
 from features.extractor import FeatureExtractor
+from replay.scenarios import scenario
 
 
 def _spec(name):
@@ -69,8 +70,8 @@ def test_training_benign_counterexamples_do_not_alert(name):
 
 
 def test_deployed_rule_unchanged_and_candidate_opt_in_suppresses_one_off_txt():
-    long_txt = list(events(_spec('train_long_txt')))
-    assert _tunnel_alerts(Pipeline(), long_txt)[0][0] == 1
+    legacy_txt = list(scenario('DNS_TUNNELLING'))
+    assert _tunnel_alerts(Pipeline(), legacy_txt)[0][0] == 1
     benign_txt = list(events(_spec('train_txt')))
     assert _tunnel_alerts(Pipeline(), benign_txt)[0][0] == 1
     assert not _tunnel_alerts(Pipeline(dns_tunnel_candidate=True), benign_txt)
@@ -83,3 +84,16 @@ def test_non_dns_and_llmnr_metadata_never_enter_candidate_history():
     for port in (5355, 443):
         assert extractor.update(event.model_copy(update={'dst_port': port}))['dns_query_visible'] == 0
     assert extractor.update(event.model_copy(update={'timestamp': event.timestamp + 1000}))['dns_base_queries_10s'] == 1
+
+
+def test_candidate_history_is_bounded_and_never_uses_network(monkeypatch):
+    import socket
+    monkeypatch.setattr(socket, 'socket', lambda *args, **kwargs: (_ for _ in ()).throw(
+        AssertionError('candidate attempted network access')))
+    original = next(events(_spec('train_long_a')))
+    extractor = FeatureExtractor()
+    for index in range(140):
+        event = original.model_copy(update={'timestamp': original.timestamp + index * 10,
+                                            'dns_name': str(index) + '.' + original.dns_name})
+        features = extractor.update(event)
+    assert features['dns_base_queries_10s'] == 128

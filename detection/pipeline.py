@@ -54,6 +54,13 @@ class Pipeline:
         label, confidence = self.model.predict(f)
         fid = self.flow_id(event)
         hits = {label: (confidence, DetectorType.ML)} if label != 'BENIGN' and confidence >= .8 else {}
+        syn_flood = (event.protocol == 6 and f['syn_target_packet_rate'] >= 1000
+                     and f['syn_target_fraction'] is not None
+                     and f['syn_target_fraction'] >= .70)
+        if event.protocol == 6 and not syn_flood:
+            # A frozen synthetic-model posterior or high TCP rate alone is not
+            # evidence of a SYN flood in established, high-rate TCP traffic.
+            hits.pop('DDOS', None)
         # The synthetic model's DNS posterior alone does not generalize to real
         # domains. Require the existing lexical rule for DGA alerts, measuring
         # length on the same first label as entropy and bigram surprise.
@@ -70,7 +77,7 @@ class Pipeline:
             if dga_score is not None and dga_score >= self.dga_model.threshold:
                 hits['DGA_DOMAINS'] = (dga_score, DetectorType.ML)
         rules = {
-            'DDOS': f['packet_rate'] >= 1000,
+            'DDOS': syn_flood if event.protocol == 6 else f['packet_rate'] >= 1000,
             'RECONNAISSANCE': max(f['destination_count'], f['port_count']) >= 20,
             'DNS_TUNNELLING': bool(tunnel_reason) if self.dns_tunnel_candidate else f['domain_label_length'] >= 50 and f['txt_record'] == 1,
             'DGA_DOMAINS': dga_evidence and not self.dga_model.enabled,
@@ -94,7 +101,7 @@ class Pipeline:
                 continue
             if threat == 'DGA_DOMAINS' and not self.dga_model.enabled and not dga_evidence:
                 continue
-            key = (str(event.src_ip), str(event.dst_ip), threat)
+            key = (str(event.dst_ip), threat) if threat == 'DDOS' and syn_flood else (str(event.src_ip), str(event.dst_ip), threat)
             if key in self.dedup:
                 continue
             if len(self.dedup) >= 4096:
@@ -102,6 +109,15 @@ class Pipeline:
             self.dedup[key] = event.timestamp
             evidence_keys = DNS_TUNNEL_FEATURES if threat == 'DNS_TUNNELLING' and self.dns_tunnel_candidate else EVIDENCE[threat]
             evidence = {k: f[k] for k in evidence_keys}
+            if threat == 'DDOS' and syn_flood:
+                evidence.update(packet_rate=f['syn_target_packet_rate'],
+                                global_packet_rate=f['packet_rate'],
+                                syn_fraction=f['syn_target_fraction'],
+                                syn_fraction_basis=f['syn_target_fraction_basis'],
+                                source_entropy=f['syn_target_source_entropy'],
+                                source_count_lower_bound=f['syn_target_source_count_lower_bound'],
+                                source_entropy_partial=f['syn_target_entropy_partial'],
+                                syn_target='destination_tcp')
             if threat == 'DNS_TUNNELLING' and self.dns_tunnel_candidate:
                 evidence['dns_candidate_pattern'] = tunnel_reason
             evidence['confidence_kind'] = 'heuristic strength' if source == DetectorType.RULE else 'synthetic-trained model posterior'

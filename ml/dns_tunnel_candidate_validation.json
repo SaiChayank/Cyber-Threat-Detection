@@ -1,0 +1,481 @@
+{
+  "scope": "Controlled synthetic training/configuration and validation scenarios only; no public mixed PCAP truth",
+  "candidate_runtime_default_enabled": false,
+  "source_sha256": {
+    "datasets/dns_tunnel_development.py": "3156b012b2a0c9c71321c36ec3d036e1c2510529c9bfc71918c7abc4088520f6",
+    "features/dns_tunnel.py": "8ded37ba73c2d605f22baf4571f80842791f7b2b1584ce0230ddc365466605eb",
+    "detection/dns_tunnel_candidate.py": "c1713f2a8bbc59753bbad586054e5b103082f4d67bf5c9cfa617383965540a9a"
+  },
+  "baseline": {
+    "training": {
+      "TP": 0,
+      "TN": 4,
+      "FP": 1,
+      "FN": 5
+    },
+    "validation": {
+      "TP": 0,
+      "TN": 4,
+      "FP": 1,
+      "FN": 5
+    },
+    "scenarios": [
+      {
+        "scenario": "train_long_a",
+        "split": "training",
+        "positive": true,
+        "pattern": "long",
+        "qtype": 1,
+        "interval_ms": 450,
+        "queries": 12,
+        "first_alert_query": null,
+        "detected_before_end": false
+      },
+      {
+        "scenario": "train_long_aaaa",
+        "split": "training",
+        "positive": true,
+        "pattern": "long",
+        "qtype": 28,
+        "interval_ms": 700,
+        "queries": 12,
+        "first_alert_query": null,
+        "detected_before_end": false
+      },
+      {
+        "scenario": "train_long_txt",
+        "split": "training",
+        "positive": true,
+        "pattern": "long",
+        "qtype": 16,
+        "interval_ms": 550,
+        "queries": 12,
+        "first_alert_query": null,
+        "detected_before_end": false
+      },
+      {
+        "scenario": "train_long_null",
+        "split": "training",
+        "positive": true,
+        "pattern": "long",
+        "qtype": 10,
+        "interval_ms": 650,
+        "queries": 12,
+        "first_alert_query": null,
+        "detected_before_end": false
+      },
+      {
+        "scenario": "train_multi_a",
+        "split": "training",
+        "positive": true,
+        "pattern": "multi",
+        "qtype": 1,
+        "interval_ms": 800,
+        "queries": 12,
+        "first_alert_query": null,
+        "detected_before_end": false
+      },
+      {
+        "scenario": "train_cdn",
+        "split": "training",
+        "positive": false,
+        "pattern": "cdn",
+        "qtype": 1,
+        "interval_ms": 450,
+        "queries": 12,
+        "first_alert_query": null,
+        "detected_before_end": false
+      },
+      {
+        "scenario": "train_telemetry",
+        "split": "training",
+        "positive": false,
+        "pattern": "telemetry",
+        "qtype": 1,
+        "interval_ms": 900,
+        "queries": 12,
+        "first_alert_query": null,
+        "detected_before_end": false
+      },
+      {
+        "scenario": "train_discovery",
+        "split": "training",
+        "positive": false,
+        "pattern": "discovery",
+        "qtype": 33,
+        "interval_ms": 500,
+        "queries": 12,
+        "first_alert_query": null,
+        "detected_before_end": false
+      },
+      {
+        "scenario": "train_txt",
+        "split": "training",
+        "positive": false,
+        "pattern": "txt",
+        "qtype": 16,
+        "interval_ms": 500,
+        "queries": 12,
+        "first_alert_query": 1,
+        "detected_before_end": true
+      },
+      {
+        "scenario": "train_machine",
+        "split": "training",
+        "positive": false,
+        "pattern": "machine",
+        "qtype": 28,
+        "interval_ms": 600,
+        "queries": 12,
+        "first_alert_query": null,
+        "detected_before_end": false
+      },
+      {
+        "scenario": "val_long_a",
+        "split": "validation",
+        "positive": true,
+        "pattern": "long",
+        "qtype": 1,
+        "interval_ms": 1800,
+        "queries": 12,
+        "first_alert_query": null,
+        "detected_before_end": false
+      },
+      {
+        "scenario": "val_long_aaaa",
+        "split": "validation",
+        "positive": true,
+        "pattern": "long",
+        "qtype": 28,
+        "interval_ms": 1100,
+        "queries": 12,
+        "first_alert_query": null,
+        "detected_before_end": false
+      },
+      {
+        "scenario": "val_multi_txt",
+        "split": "validation",
+        "positive": true,
+        "pattern": "multi",
+        "qtype": 16,
+        "interval_ms": 1200,
+        "queries": 12,
+        "first_alert_query": null,
+        "detected_before_end": false
+      },
+      {
+        "scenario": "val_multi_null",
+        "split": "validation",
+        "positive": true,
+        "pattern": "multi",
+        "qtype": 10,
+        "interval_ms": 950,
+        "queries": 12,
+        "first_alert_query": null,
+        "detected_before_end": false
+      },
+      {
+        "scenario": "val_long_txt",
+        "split": "validation",
+        "positive": true,
+        "pattern": "long",
+        "qtype": 16,
+        "interval_ms": 1500,
+        "queries": 12,
+        "first_alert_query": null,
+        "detected_before_end": false
+      },
+      {
+        "scenario": "val_cdn",
+        "split": "validation",
+        "positive": false,
+        "pattern": "cdn",
+        "qtype": 28,
+        "interval_ms": 350,
+        "queries": 12,
+        "first_alert_query": null,
+        "detected_before_end": false
+      },
+      {
+        "scenario": "val_telemetry",
+        "split": "validation",
+        "positive": false,
+        "pattern": "telemetry",
+        "qtype": 16,
+        "interval_ms": 700,
+        "queries": 12,
+        "first_alert_query": null,
+        "detected_before_end": false
+      },
+      {
+        "scenario": "val_discovery",
+        "split": "validation",
+        "positive": false,
+        "pattern": "discovery",
+        "qtype": 33,
+        "interval_ms": 650,
+        "queries": 12,
+        "first_alert_query": null,
+        "detected_before_end": false
+      },
+      {
+        "scenario": "val_txt",
+        "split": "validation",
+        "positive": false,
+        "pattern": "txt",
+        "qtype": 16,
+        "interval_ms": 800,
+        "queries": 12,
+        "first_alert_query": 1,
+        "detected_before_end": true
+      },
+      {
+        "scenario": "val_machine",
+        "split": "validation",
+        "positive": false,
+        "pattern": "machine",
+        "qtype": 1,
+        "interval_ms": 400,
+        "queries": 12,
+        "first_alert_query": null,
+        "detected_before_end": false
+      }
+    ]
+  },
+  "candidate": {
+    "training": {
+      "TP": 5,
+      "TN": 5,
+      "FP": 0,
+      "FN": 0
+    },
+    "validation": {
+      "TP": 5,
+      "TN": 5,
+      "FP": 0,
+      "FN": 0
+    },
+    "scenarios": [
+      {
+        "scenario": "train_long_a",
+        "split": "training",
+        "positive": true,
+        "pattern": "long",
+        "qtype": 1,
+        "interval_ms": 450,
+        "queries": 12,
+        "first_alert_query": 5,
+        "detected_before_end": true
+      },
+      {
+        "scenario": "train_long_aaaa",
+        "split": "training",
+        "positive": true,
+        "pattern": "long",
+        "qtype": 28,
+        "interval_ms": 700,
+        "queries": 12,
+        "first_alert_query": 5,
+        "detected_before_end": true
+      },
+      {
+        "scenario": "train_long_txt",
+        "split": "training",
+        "positive": true,
+        "pattern": "long",
+        "qtype": 16,
+        "interval_ms": 550,
+        "queries": 12,
+        "first_alert_query": 5,
+        "detected_before_end": true
+      },
+      {
+        "scenario": "train_long_null",
+        "split": "training",
+        "positive": true,
+        "pattern": "long",
+        "qtype": 10,
+        "interval_ms": 650,
+        "queries": 12,
+        "first_alert_query": 5,
+        "detected_before_end": true
+      },
+      {
+        "scenario": "train_multi_a",
+        "split": "training",
+        "positive": true,
+        "pattern": "multi",
+        "qtype": 1,
+        "interval_ms": 800,
+        "queries": 12,
+        "first_alert_query": 5,
+        "detected_before_end": true
+      },
+      {
+        "scenario": "train_cdn",
+        "split": "training",
+        "positive": false,
+        "pattern": "cdn",
+        "qtype": 1,
+        "interval_ms": 450,
+        "queries": 12,
+        "first_alert_query": null,
+        "detected_before_end": false
+      },
+      {
+        "scenario": "train_telemetry",
+        "split": "training",
+        "positive": false,
+        "pattern": "telemetry",
+        "qtype": 1,
+        "interval_ms": 900,
+        "queries": 12,
+        "first_alert_query": null,
+        "detected_before_end": false
+      },
+      {
+        "scenario": "train_discovery",
+        "split": "training",
+        "positive": false,
+        "pattern": "discovery",
+        "qtype": 33,
+        "interval_ms": 500,
+        "queries": 12,
+        "first_alert_query": null,
+        "detected_before_end": false
+      },
+      {
+        "scenario": "train_txt",
+        "split": "training",
+        "positive": false,
+        "pattern": "txt",
+        "qtype": 16,
+        "interval_ms": 500,
+        "queries": 12,
+        "first_alert_query": null,
+        "detected_before_end": false
+      },
+      {
+        "scenario": "train_machine",
+        "split": "training",
+        "positive": false,
+        "pattern": "machine",
+        "qtype": 28,
+        "interval_ms": 600,
+        "queries": 12,
+        "first_alert_query": null,
+        "detected_before_end": false
+      },
+      {
+        "scenario": "val_long_a",
+        "split": "validation",
+        "positive": true,
+        "pattern": "long",
+        "qtype": 1,
+        "interval_ms": 1800,
+        "queries": 12,
+        "first_alert_query": 5,
+        "detected_before_end": true
+      },
+      {
+        "scenario": "val_long_aaaa",
+        "split": "validation",
+        "positive": true,
+        "pattern": "long",
+        "qtype": 28,
+        "interval_ms": 1100,
+        "queries": 12,
+        "first_alert_query": 5,
+        "detected_before_end": true
+      },
+      {
+        "scenario": "val_multi_txt",
+        "split": "validation",
+        "positive": true,
+        "pattern": "multi",
+        "qtype": 16,
+        "interval_ms": 1200,
+        "queries": 12,
+        "first_alert_query": 5,
+        "detected_before_end": true
+      },
+      {
+        "scenario": "val_multi_null",
+        "split": "validation",
+        "positive": true,
+        "pattern": "multi",
+        "qtype": 10,
+        "interval_ms": 950,
+        "queries": 12,
+        "first_alert_query": 5,
+        "detected_before_end": true
+      },
+      {
+        "scenario": "val_long_txt",
+        "split": "validation",
+        "positive": true,
+        "pattern": "long",
+        "qtype": 16,
+        "interval_ms": 1500,
+        "queries": 12,
+        "first_alert_query": 5,
+        "detected_before_end": true
+      },
+      {
+        "scenario": "val_cdn",
+        "split": "validation",
+        "positive": false,
+        "pattern": "cdn",
+        "qtype": 28,
+        "interval_ms": 350,
+        "queries": 12,
+        "first_alert_query": null,
+        "detected_before_end": false
+      },
+      {
+        "scenario": "val_telemetry",
+        "split": "validation",
+        "positive": false,
+        "pattern": "telemetry",
+        "qtype": 16,
+        "interval_ms": 700,
+        "queries": 12,
+        "first_alert_query": null,
+        "detected_before_end": false
+      },
+      {
+        "scenario": "val_discovery",
+        "split": "validation",
+        "positive": false,
+        "pattern": "discovery",
+        "qtype": 33,
+        "interval_ms": 650,
+        "queries": 12,
+        "first_alert_query": null,
+        "detected_before_end": false
+      },
+      {
+        "scenario": "val_txt",
+        "split": "validation",
+        "positive": false,
+        "pattern": "txt",
+        "qtype": 16,
+        "interval_ms": 800,
+        "queries": 12,
+        "first_alert_query": null,
+        "detected_before_end": false
+      },
+      {
+        "scenario": "val_machine",
+        "split": "validation",
+        "positive": false,
+        "pattern": "machine",
+        "qtype": 1,
+        "interval_ms": 400,
+        "queries": 12,
+        "first_alert_query": null,
+        "detected_before_end": false
+      }
+    ]
+  }
+}

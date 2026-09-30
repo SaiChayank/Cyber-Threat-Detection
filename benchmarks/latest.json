@@ -1,21 +1,21 @@
 {
-  "generated_at_utc": "2026-09-29T13:22:52.245585+00:00",
+  "generated_at_utc": "2026-09-30T03:00:27.491834+00:00",
   "runtime_source_sha256": {
-    "detection/pipeline.py": "5f8b6809a81c45374c1fb685aa53b6f5635be141278a1b86756a10aec5a3d7ee",
-    "features/extractor.py": "ae9e7361704b581a6ae63113447f1d984ee51970a1ee98b8e5fb70ff3f9acffc",
-    "features/rate_window.py": "718c07419c1103ad2b68400d49e330dea46cc667997244c01601e9d0ff3a9445",
+    "detection/pipeline.py": "29cf1c294cbdf7f6b921f0648bba540b2d5504dbf39d3ceb8a3d498f850e2ae1",
+    "features/extractor.py": "6f4df286fbb82f99ed2dcc7e983fd73180d7cb1a7a7bfdd36fde22a80e6031b0",
+    "features/rate_window.py": "0b67198ea303d364903c0439e2dba98a0c26ccdc9e717536ac5ede63dec044b8",
     "ml/model.py": "2721a53d667d1ea773154fdebf3d349c5ef221dfdb51e937d5afdba1ffa6f354",
     "ml/dga.py": "0a03098bf4cc22d8f5b7ff5fe3bd75d82d735479730e1890a7f99bedb9d6c0b7",
     "persistence/store.py": "56bdc7cbb9d25ec0ceedf0fb2fc9e2169ee53bb54fc2731d1e034f4156e1a490"
   },
   "model_sha256": "4d8e08323374535789e21f9f7cd1ee3f1c84b663ce555e67bb4ced57c95e8010",
   "events": 20000,
-  "alerts": 4914,
-  "elapsed_seconds": 6.606883899999957,
-  "metadata_events_per_second": 3027.1456715018303,
+  "alerts": 2574,
+  "elapsed_seconds": 4.147786899993662,
+  "metadata_events_per_second": 4821.848489861078,
   "throughput_target": 2000,
   "throughput_pass": true,
-  "processing_and_persistence_p95_ms": 1.0812999971676618,
+  "processing_and_persistence_p95_ms": 0.8741000056033954,
   "latency_target_ms": 50,
   "latency_pass": true,
   "workload": "Repeated eight-class synthetic metadata sessions with SQLite alert commits",
@@ -29,8 +29,9 @@
     "active_sources": 33,
     "dga_detector": "conservative-lexical-guard",
     "dga_candidate_enabled": false,
+    "dns_tunnel_candidate_enabled": false,
     "rate_window_resolution_ms": 1000,
     "source_entropy_partial": false,
-    "processing_p95_ms": 0.20279999444028363
+    "processing_p95_ms": 0.16870000399649143
   }
 }

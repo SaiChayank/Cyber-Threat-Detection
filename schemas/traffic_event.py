@@ -13,6 +13,8 @@ class TrafficEvent(BaseModel):
     packets: int = Field(default=1, ge=1, le=1000000)
     bytes: int = Field(default=100, ge=0, le=1000000000)
     syn: bool = False
+    # Exact initial-SYN packet count; absent when an aggregate has only flags.
+    syn_packets: int | None = Field(default=None, ge=0, le=1000000)
     dns_name: str | None = Field(default=None, max_length=253)
     dns_type: int = Field(default=1, ge=0, le=65535)
     tls_fingerprint: str | None = Field(default=None, max_length=256)
@@ -24,6 +26,8 @@ class TrafficEvent(BaseModel):
 
     @model_validator(mode='after')
     def check_reverse(self):
+        if self.syn_packets is not None and self.syn_packets > self.packets:
+            raise ValueError('syn_packets cannot exceed packets')
         if self.reverse_bytes is not None and not self.reverse_observed:
             raise ValueError('reverse_bytes requires explicitly observed reverse metadata')
         if self.reverse_observed and self.reverse_bytes is None:

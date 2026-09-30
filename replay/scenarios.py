@@ -18,8 +18,12 @@ def scenario(label, seed=1, start=1700000000000.0, count=32):
             d.update(dst_port=rng.choice([80, 443, 53]), encrypted=rng.random() < .5,
                      dns_name=rng.choice(['www.example.org', 'mail.company.test', None]))
         elif label == 'DDOS':
-            d.update(packets=rng.randint(2000, 6000), bytes=rng.randint(100000, 300000),
-                     syn=rng.random() < .8, src_ip=f'10.1.{i % 4}.{i+1}')
+            packets = rng.randint(2000, 6000)
+            size = rng.randint(100000, 300000)
+            syn = rng.random() < .8
+            d.update(packets=packets, bytes=size, syn=syn,
+                     syn_packets=packets if syn else 0,
+                     src_ip=f'10.1.{i % 4}.{i+1}')
         elif label == 'BOTNET_C2':
             t = start + (i + 1) * 2500 + rng.uniform(-30, 30)
             d.update(timestamp=t, bytes=rng.randint(120, 140), encrypted=True)
