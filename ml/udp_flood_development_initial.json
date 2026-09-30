@@ -1,0 +1,349 @@
+{
+  "scope": "Inspected synthetic development cases only; not reserved or production quality",
+  "source_sha256": {
+    "datasets/validate_udp_flood.py": "4b69d9c1a73b0e34527d20ed5e24ba5fa2024a7faaff1edeb0dbe74f838f76e2",
+    "detection/pipeline.py": "29cf1c294cbdf7f6b921f0648bba540b2d5504dbf39d3ceb8a3d498f850e2ae1",
+    "features/extractor.py": "6f4df286fbb82f99ed2dcc7e983fd73180d7cb1a7a7bfdd36fde22a80e6031b0",
+    "features/rate_window.py": "0b67198ea303d364903c0439e2dba98a0c26ccdc9e717536ac5ede63dec044b8",
+    "ingest/protocol_parsers.py": "cf8cda0df2a543e85f1ad822d0634a2e417c049d2df2b56fd23a23890c56a6cd",
+    "ingest/metadata.py": "e0f26334b4102928f9ac98a76de44e3ca204f53ed0104e17b1ca51031213eed6"
+  },
+  "counts": {
+    "TP": 4,
+    "TN": 0,
+    "FP": 6,
+    "FN": 0
+  },
+  "scenarios": [
+    {
+      "scenario": "flood_single_small",
+      "positive": true,
+      "format": "raw",
+      "events": 12000,
+      "verdict": "TP",
+      "first_alert": {
+        "event": 5952,
+        "timestamp": 1700000002975.5,
+        "evidence": {
+          "packet_rate": 595.2,
+          "byte_rate": 38092.8,
+          "source_entropy": 0.0,
+          "syn_fraction": 0.0,
+          "source_entropy_partial": false,
+          "rate_window_seconds": 10,
+          "rate_window_resolution_ms": 1000,
+          "confidence_kind": "synthetic-trained model posterior",
+          "window_partial": true
+        },
+        "supporting_evidence": "packet_rate=595.2; byte_rate=38092.8; source_entropy=0.0; syn_fraction=0.0; source_entropy_partial=False; rate_window_seconds=10; rate_window_resolution_ms=1000; confidence_kind=synthetic-trained model posterior; window_partial=True"
+      },
+      "observed": {
+        "target_packet_rate": 1200.0,
+        "target_byte_rate": 76800.0,
+        "source_count": 1,
+        "source_entropy": -0.0,
+        "destination_concentration": 1.0,
+        "packet_size_mean": 64.0,
+        "packet_size_cv": 0.0,
+        "packet_size_basis": "packet_exact"
+      }
+    },
+    {
+      "scenario": "flood_many_large",
+      "positive": true,
+      "format": "raw",
+      "events": 12000,
+      "verdict": "TP",
+      "first_alert": {
+        "event": 124,
+        "timestamp": 1700000000061.5,
+        "evidence": {
+          "packet_rate": 12.4,
+          "byte_rate": 14880.0,
+          "source_entropy": 4.994361229671922,
+          "syn_fraction": 0.0,
+          "source_entropy_partial": false,
+          "rate_window_seconds": 10,
+          "rate_window_resolution_ms": 1000,
+          "confidence_kind": "synthetic-trained model posterior",
+          "window_partial": true
+        },
+        "supporting_evidence": "packet_rate=12.4; byte_rate=14880.0; source_entropy=4.9944; syn_fraction=0.0; source_entropy_partial=False; rate_window_seconds=10; rate_window_resolution_ms=1000; confidence_kind=synthetic-trained model posterior; window_partial=True"
+      },
+      "observed": {
+        "target_packet_rate": 1200.0,
+        "target_byte_rate": 1440000.0,
+        "source_count": 32,
+        "source_entropy": 5.0,
+        "destination_concentration": 1.0,
+        "packet_size_mean": 1200.0,
+        "packet_size_cv": 0.0,
+        "packet_size_basis": "packet_exact"
+      }
+    },
+    {
+      "scenario": "flood_single_large",
+      "positive": true,
+      "format": "aggregate",
+      "events": 4,
+      "verdict": "TP",
+      "first_alert": {
+        "event": 1,
+        "timestamp": 1700000000000.0,
+        "evidence": {
+          "packet_rate": 400.0,
+          "byte_rate": 480000.0,
+          "source_entropy": 0.0,
+          "syn_fraction": 0.0,
+          "source_entropy_partial": false,
+          "rate_window_seconds": 10,
+          "rate_window_resolution_ms": 1000,
+          "confidence_kind": "synthetic-trained model posterior",
+          "window_partial": true
+        },
+        "supporting_evidence": "packet_rate=400.0; byte_rate=480000.0; source_entropy=0.0; syn_fraction=0.0; source_entropy_partial=False; rate_window_seconds=10; rate_window_resolution_ms=1000; confidence_kind=synthetic-trained model posterior; window_partial=True"
+      },
+      "observed": {
+        "target_packet_rate": 1600.0,
+        "target_byte_rate": 1920000.0,
+        "source_count": 1,
+        "source_entropy": -0.0,
+        "destination_concentration": 1.0,
+        "packet_size_mean": 1200.0,
+        "packet_size_cv": 0.0,
+        "packet_size_basis": "summary_mean_proxy"
+      }
+    },
+    {
+      "scenario": "flood_many_mixed",
+      "positive": true,
+      "format": "aggregate",
+      "events": 32,
+      "verdict": "TP",
+      "first_alert": {
+        "event": 1,
+        "timestamp": 1700000000000.0,
+        "evidence": {
+          "packet_rate": 40.0,
+          "byte_rate": 2560.0,
+          "source_entropy": 0.0,
+          "syn_fraction": 0.0,
+          "source_entropy_partial": false,
+          "rate_window_seconds": 10,
+          "rate_window_resolution_ms": 1000,
+          "confidence_kind": "synthetic-trained model posterior",
+          "window_partial": true
+        },
+        "supporting_evidence": "packet_rate=40.0; byte_rate=2560.0; source_entropy=0.0; syn_fraction=0.0; source_entropy_partial=False; rate_window_seconds=10; rate_window_resolution_ms=1000; confidence_kind=synthetic-trained model posterior; window_partial=True"
+      },
+      "observed": {
+        "target_packet_rate": 1280.0,
+        "target_byte_rate": 733440.0,
+        "source_count": 32,
+        "source_entropy": 5.0,
+        "destination_concentration": 1.0,
+        "packet_size_mean": 573.0,
+        "packet_size_cv": 0.8058047282546461,
+        "packet_size_basis": "summary_mean_proxy"
+      }
+    },
+    {
+      "scenario": "benign_quic_bulk",
+      "positive": false,
+      "format": "raw",
+      "events": 12000,
+      "verdict": "FP",
+      "first_alert": {
+        "event": 4554,
+        "timestamp": 1700000002276.5,
+        "evidence": {
+          "packet_rate": 455.4,
+          "byte_rate": 546480.0,
+          "source_entropy": 0.0,
+          "syn_fraction": 0.0,
+          "source_entropy_partial": false,
+          "rate_window_seconds": 10,
+          "rate_window_resolution_ms": 1000,
+          "confidence_kind": "synthetic-trained model posterior",
+          "window_partial": true
+        },
+        "supporting_evidence": "packet_rate=455.4; byte_rate=546480.0; source_entropy=0.0; syn_fraction=0.0; source_entropy_partial=False; rate_window_seconds=10; rate_window_resolution_ms=1000; confidence_kind=synthetic-trained model posterior; window_partial=True"
+      },
+      "observed": {
+        "target_packet_rate": 1200.0,
+        "target_byte_rate": 1440000.0,
+        "source_count": 1,
+        "source_entropy": -0.0,
+        "destination_concentration": 1.0,
+        "packet_size_mean": 1200.0,
+        "packet_size_cv": 0.0,
+        "packet_size_basis": "packet_exact"
+      }
+    },
+    {
+      "scenario": "benign_dns_queries",
+      "positive": false,
+      "format": "raw",
+      "events": 12000,
+      "verdict": "FP",
+      "first_alert": {
+        "event": 2652,
+        "timestamp": 1700000001325.5,
+        "evidence": {
+          "packet_rate": 265.2,
+          "byte_rate": 21216.0,
+          "source_entropy": 4.9999884779236705,
+          "syn_fraction": 0.0,
+          "source_entropy_partial": false,
+          "rate_window_seconds": 10,
+          "rate_window_resolution_ms": 1000,
+          "confidence_kind": "synthetic-trained model posterior",
+          "window_partial": true
+        },
+        "supporting_evidence": "packet_rate=265.2; byte_rate=21216.0; source_entropy=5.0; syn_fraction=0.0; source_entropy_partial=False; rate_window_seconds=10; rate_window_resolution_ms=1000; confidence_kind=synthetic-trained model posterior; window_partial=True"
+      },
+      "observed": {
+        "target_packet_rate": 1200.0,
+        "target_byte_rate": 96000.0,
+        "source_count": 32,
+        "source_entropy": 5.0,
+        "destination_concentration": 1.0,
+        "packet_size_mean": 80.0,
+        "packet_size_cv": 0.0,
+        "packet_size_basis": "packet_exact"
+      }
+    },
+    {
+      "scenario": "benign_video_bulk",
+      "positive": false,
+      "format": "aggregate",
+      "events": 4,
+      "verdict": "FP",
+      "first_alert": {
+        "event": 1,
+        "timestamp": 1700000000000.0,
+        "evidence": {
+          "packet_rate": 400.0,
+          "byte_rate": 480000.0,
+          "source_entropy": 0.0,
+          "syn_fraction": 0.0,
+          "source_entropy_partial": false,
+          "rate_window_seconds": 10,
+          "rate_window_resolution_ms": 1000,
+          "confidence_kind": "synthetic-trained model posterior",
+          "window_partial": true
+        },
+        "supporting_evidence": "packet_rate=400.0; byte_rate=480000.0; source_entropy=0.0; syn_fraction=0.0; source_entropy_partial=False; rate_window_seconds=10; rate_window_resolution_ms=1000; confidence_kind=synthetic-trained model posterior; window_partial=True"
+      },
+      "observed": {
+        "target_packet_rate": 1600.0,
+        "target_byte_rate": 1920000.0,
+        "source_count": 1,
+        "source_entropy": -0.0,
+        "destination_concentration": 1.0,
+        "packet_size_mean": 1200.0,
+        "packet_size_cv": 0.0,
+        "packet_size_basis": "summary_mean_proxy"
+      }
+    },
+    {
+      "scenario": "benign_spread",
+      "positive": false,
+      "format": "aggregate",
+      "events": 20,
+      "verdict": "FP",
+      "first_alert": {
+        "event": 1,
+        "timestamp": 1700000000000.0,
+        "evidence": {
+          "packet_rate": 80.0,
+          "byte_rate": 96000.0,
+          "source_entropy": 0.0,
+          "syn_fraction": 0.0,
+          "source_entropy_partial": false,
+          "rate_window_seconds": 10,
+          "rate_window_resolution_ms": 1000,
+          "confidence_kind": "synthetic-trained model posterior",
+          "window_partial": true
+        },
+        "supporting_evidence": "packet_rate=80.0; byte_rate=96000.0; source_entropy=0.0; syn_fraction=0.0; source_entropy_partial=False; rate_window_seconds=10; rate_window_resolution_ms=1000; confidence_kind=synthetic-trained model posterior; window_partial=True"
+      },
+      "observed": {
+        "target_packet_rate": 80.0,
+        "target_byte_rate": 96000.0,
+        "source_count": 1,
+        "source_entropy": -0.0,
+        "destination_concentration": 0.05,
+        "packet_size_mean": 1200.0,
+        "packet_size_cv": 0.0,
+        "packet_size_basis": "summary_mean_proxy"
+      }
+    },
+    {
+      "scenario": "benign_dns_low",
+      "positive": false,
+      "format": "aggregate",
+      "events": 10,
+      "verdict": "FP",
+      "first_alert": {
+        "event": 3,
+        "timestamp": 1700000002000.0,
+        "evidence": {
+          "packet_rate": 30.0,
+          "byte_rate": 2400.0,
+          "source_entropy": 0.0,
+          "syn_fraction": 0.0,
+          "source_entropy_partial": false,
+          "rate_window_seconds": 10,
+          "rate_window_resolution_ms": 1000,
+          "confidence_kind": "synthetic-trained model posterior",
+          "window_partial": true
+        },
+        "supporting_evidence": "packet_rate=30.0; byte_rate=2400.0; source_entropy=0.0; syn_fraction=0.0; source_entropy_partial=False; rate_window_seconds=10; rate_window_resolution_ms=1000; confidence_kind=synthetic-trained model posterior; window_partial=True"
+      },
+      "observed": {
+        "target_packet_rate": 100.0,
+        "target_byte_rate": 8000.0,
+        "source_count": 1,
+        "source_entropy": -0.0,
+        "destination_concentration": 1.0,
+        "packet_size_mean": 80.0,
+        "packet_size_cv": 0.0,
+        "packet_size_basis": "summary_mean_proxy"
+      }
+    },
+    {
+      "scenario": "benign_telemetry_many",
+      "positive": false,
+      "format": "aggregate",
+      "events": 32,
+      "verdict": "FP",
+      "first_alert": {
+        "event": 1,
+        "timestamp": 1700000000000.0,
+        "evidence": {
+          "packet_rate": 40.0,
+          "byte_rate": 10240.0,
+          "source_entropy": 0.0,
+          "syn_fraction": 0.0,
+          "source_entropy_partial": false,
+          "rate_window_seconds": 10,
+          "rate_window_resolution_ms": 1000,
+          "confidence_kind": "synthetic-trained model posterior",
+          "window_partial": true
+        },
+        "supporting_evidence": "packet_rate=40.0; byte_rate=10240.0; source_entropy=0.0; syn_fraction=0.0; source_entropy_partial=False; rate_window_seconds=10; rate_window_resolution_ms=1000; confidence_kind=synthetic-trained model posterior; window_partial=True"
+      },
+      "observed": {
+        "target_packet_rate": 1280.0,
+        "target_byte_rate": 327680.0,
+        "source_count": 32,
+        "source_entropy": 5.0,
+        "destination_concentration": 1.0,
+        "packet_size_mean": 256.0,
+        "packet_size_cv": 0.0,
+        "packet_size_basis": "summary_mean_proxy"
+      }
+    }
+  ]
+}

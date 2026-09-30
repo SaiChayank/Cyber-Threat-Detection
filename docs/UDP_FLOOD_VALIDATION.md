@@ -62,4 +62,66 @@ no threshold is lowered or evaluation set reused for tuning.
 
 ## Results and decision
 
-Pending the development comparison and one reserved replay.
+**Unresolved; the reserved eight-positive/twelve-negative matrix was not
+constructed, inspected, or replayed.** The development cases already fail
+two frozen quality gates, so a reserved score would not justify promotion.
+`ml/udp_flood_development_initial.json` preserves the pre-fix result and
+`ml/udp_flood_development.json` records the same ten development scenarios
+after the narrow attribution/evidence fix, including source-file SHA256s.
+
+| Development-only result | TP | TN | FP | FN | Precision | Recall | F1 | Benign FPR |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| Previous global-rate / synthetic-model path | 4 | 0 | 6 | 0 | 40.0% | 100% | 57.1% | 100% |
+| Destination-scoped UDP rate and model guard | 4 | 2 | 4 | 0 | 50.0% | 100% | 66.7% | 66.7% |
+
+Previously the frozen synthetic classifier emitted `DDOS` on UDP flows as
+early as 12.4 observed packets/sec and on a sparse target when unrelated
+destinations raised the global rate. The existing rate rule also used that
+global rate. The fix requires at least 1,000 **destination-scoped UDP
+packets/sec** for either rule or model-backed UDP `DDOS` alerts. The rolling
+window retains full packet/byte totals beyond the 512-event source-history
+bound. Alert evidence now includes destination packet and byte rates, global
+rate for context, source count and entropy, destination concentration, and
+observed mean packet size/CV. For flow summaries, the latter CV is marked a
+`summary_mean_proxy`: within-summary size variance is not visible.
+
+All four controlled floods now alert before completion: raw single-source
+small and 32-source large cases at packet **10,000 of 12,000**; aggregate
+single-source large at event **3 of 4** (12,000 packets); aggregate 32-source
+mixed sizes at event **25 of 32** (10,000 packets). The corresponding target
+rates at first alert are 1,000, 1,000, 1,200 and 1,000 packets/sec. The
+spread-across-20-targets workload and the low-rate DNS-like workload no
+longer alert. Packet size is not a safe separator: the single-source
+1,200-byte flood and authorised video-like bulk have identical passive
+rate, size, entropy and concentration features. A 32-source large flood and
+high-rate DNS-like queries have the same rate, source entropy and target
+concentration; size differs but other authorised bulk traffic uses large
+packets. The remaining FPs are high-volume QUIC-like bulk (packet 10,000),
+DNS-like queries (packet 10,000), video-like bulk (event 3), and multi-source
+telemetry (event 25). These are labelled controlled workloads, not public
+capture ground truth. The classifier artifact was not modified, no port/size
+exemption was fitted to this tiny development set, and no gate was weakened.
+
+The output says “consistent with UDP reflection/amplification behavior” only
+for a high-rate, diverse-source, larger-packet pattern, and explicitly says
+passive metadata cannot verify reflection or amplification. It makes no
+claim to prove forged addresses or a measured amplification factor. Even
+this qualified pattern overlaps legitimate traffic; no UDP-specific rule is
+accepted as validated. The existing heuristic remains active with this
+narrower attribution, but its development false-positive rate makes it
+unsuitable as an independently verified UDP flood detector. No production
+FPR or generalisation estimate is available from these synthetic cases.
+
+Shared feature-cost check: the 20,000-event **core processing + SQLite**
+benchmark measured 3,888 metadata events/sec and 1.07 ms p95 processing plus
+persistence, versus the preceding report's 4,822 events/sec and 0.87 ms p95
+on the same declared workload. Both clear the existing 2,000 events/sec and
+50 ms targets. This benchmark excludes capture, HTTP, SSE and browser stages
+and is not an end-to-end throughput claim.
+
+The smallest next experiment is to obtain **independently labelled,
+time-stamped UDP flood and authorised high-volume UDP streams** with packet
+and destination provenance, then test a separability hypothesis on a new
+training/validation partition. Freeze any new acceptance design before
+opening a reserved partition. Do not treat the mixed public captures or
+completed flow CSV as causal ground truth.

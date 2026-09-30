@@ -12,6 +12,7 @@ class Bucket:
     syn_packets: int = 0
     unknown_syn_packets: int = 0
     summary_events: int = 0
+    size_squared_packet_sum: float = 0.0
     sources: Counter = field(default_factory=Counter)
 
 
@@ -36,6 +37,7 @@ class RateWindow:
         self.sources = Counter()
         self.packets = self.bytes = self.observations = 0
         self.syn_packets = self.unknown_syn_packets = self.summary_events = 0
+        self.size_squared_packet_sum = 0.0
         self.count_log_sum = 0.0
 
     def _count(self, source, change):
@@ -59,6 +61,7 @@ class RateWindow:
             self.syn_packets -= expired.syn_packets
             self.unknown_syn_packets -= expired.unknown_syn_packets
             self.summary_events -= expired.summary_events
+            self.size_squared_packet_sum -= expired.size_squared_packet_sum
             for source, count in expired.sources.items():
                 self._count(source, -count)
         if not self.buckets or self.buckets[-1].second != second:
@@ -73,21 +76,29 @@ class RateWindow:
                        int(event.syn) if event.packets == 1 else 0) if event.protocol == 6 else 0
         unknown_syn_packets = event.packets if event.protocol == 6 and event.packets > 1 and event.syn_packets is None else 0
         summary_event = int(event.packets > 1)
+        size_squared_packet_sum = event.bytes * event.bytes / event.packets
         bucket.packets += event.packets
         bucket.bytes += event.bytes
         bucket.syn_packets += syn_packets
         bucket.unknown_syn_packets += unknown_syn_packets
         bucket.summary_events += summary_event
+        bucket.size_squared_packet_sum += size_squared_packet_sum
         bucket.sources[source] += weight
         self.packets += event.packets
         self.bytes += event.bytes
         self.syn_packets += syn_packets
         self.unknown_syn_packets += unknown_syn_packets
         self.summary_events += summary_event
+        self.size_squared_packet_sum += size_squared_packet_sum
         self._count(source, weight)
         entropy = max(0.0, math.log2(self.observations) - self.count_log_sum / self.observations)
+        mean_packet_bytes = self.bytes / self.packets
+        packet_size_variance = max(0.0, self.size_squared_packet_sum / self.packets - mean_packet_bytes ** 2)
         return dict(packet_rate=self.packets / self.seconds,
                     byte_rate=self.bytes / self.seconds, source_entropy=entropy,
+                    mean_packet_bytes=mean_packet_bytes,
+                    packet_size_cv=math.sqrt(packet_size_variance) / mean_packet_bytes if mean_packet_bytes else 0.0,
+                    packet_size_basis='summary_mean_proxy' if self.summary_events else 'packet_exact',
                     source_count_lower_bound=len(self.sources),
                     syn_fraction=(self.syn_packets / self.packets
                                   if self.packets and not self.unknown_syn_packets else None),

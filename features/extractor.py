@@ -46,6 +46,7 @@ class FeatureExtractor:
         self.sources = OrderedDict()
         self.global_rates = RateWindow(max_sources=max_sources)
         self.syn_targets = OrderedDict()
+        self.udp_targets = OrderedDict()
         self.max_sources = max_sources
         self.max_events = max_events
         self.watermark = -1.0
@@ -80,6 +81,18 @@ class FeatureExtractor:
             self.syn_targets[target] = target_window
             if len(self.syn_targets) > 512:
                 self.syn_targets.popitem(last=False)
+        udp_target = None
+        udp_concentration = 0.0
+        if event.protocol == 17:
+            target = str(event.dst_ip)
+            target_window = self.udp_targets.pop(target, None)
+            if target_window is None:
+                target_window = RateWindow(max_sources=min(self.max_sources, 256), source_weight_packets=True)
+            udp_target = target_window.update(event)
+            udp_concentration = target_window.packets / self.global_rates.packets
+            self.udp_targets[target] = target_window
+            if len(self.udp_targets) > 512:
+                self.udp_targets.popitem(last=False)
         recent = [e for e in history if e.timestamp >= event.timestamp - 10000]
         # Timing is per source/destination/service, not across unrelated browsing flows.
         peer = [e for e in history if e.dst_ip == event.dst_ip and e.dst_port == event.dst_port]
@@ -107,6 +120,15 @@ class FeatureExtractor:
                                              'syn_target_source_count_lower_bound': syn_target['source_count_lower_bound'] if syn_target else 0,
                                              'syn_target_entropy_partial': syn_target['source_entropy_partial'] if syn_target else False,
                                              'syn_target_fraction_basis': syn_target['syn_fraction_basis'] if syn_target else 'not_tcp',
+                                             'udp_target_packet_rate': udp_target['packet_rate'] if udp_target else 0.0,
+                                             'udp_target_byte_rate': udp_target['byte_rate'] if udp_target else 0.0,
+                                             'udp_target_source_entropy': udp_target['source_entropy'] if udp_target else 0.0,
+                                             'udp_target_source_count_lower_bound': udp_target['source_count_lower_bound'] if udp_target else 0,
+                                             'udp_target_entropy_partial': udp_target['source_entropy_partial'] if udp_target else False,
+                                             'udp_destination_concentration': udp_concentration,
+                                             'udp_packet_size_mean': udp_target['mean_packet_bytes'] if udp_target else 0.0,
+                                             'udp_packet_size_cv': udp_target['packet_size_cv'] if udp_target else 0.0,
+                                             'udp_packet_size_basis': udp_target['packet_size_basis'] if udp_target else 'not_udp',
                                              'rate_window_seconds': rates['rate_window_seconds'],
                                              'rate_window_resolution_ms': rates['rate_window_resolution_ms'],
                                              'window_partial': t - history[0].timestamp / 1000 < 60,

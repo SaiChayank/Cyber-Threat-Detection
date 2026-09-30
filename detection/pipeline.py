@@ -57,9 +57,14 @@ class Pipeline:
         syn_flood = (event.protocol == 6 and f['syn_target_packet_rate'] >= 1000
                      and f['syn_target_fraction'] is not None
                      and f['syn_target_fraction'] >= .70)
+        udp_flood = event.protocol == 17 and f['udp_target_packet_rate'] >= 1000
         if event.protocol == 6 and not syn_flood:
             # A frozen synthetic-model posterior or high TCP rate alone is not
             # evidence of a SYN flood in established, high-rate TCP traffic.
+            hits.pop('DDOS', None)
+        if event.protocol == 17 and not udp_flood:
+            # The frozen synthetic model must not infer a UDP flood from volume
+            # elsewhere in the enclave or from a low-rate flow summary.
             hits.pop('DDOS', None)
         # The synthetic model's DNS posterior alone does not generalize to real
         # domains. Require the existing lexical rule for DGA alerts, measuring
@@ -77,7 +82,7 @@ class Pipeline:
             if dga_score is not None and dga_score >= self.dga_model.threshold:
                 hits['DGA_DOMAINS'] = (dga_score, DetectorType.ML)
         rules = {
-            'DDOS': syn_flood if event.protocol == 6 else f['packet_rate'] >= 1000,
+            'DDOS': syn_flood if event.protocol == 6 else udp_flood if event.protocol == 17 else f['packet_rate'] >= 1000,
             'RECONNAISSANCE': max(f['destination_count'], f['port_count']) >= 20,
             'DNS_TUNNELLING': bool(tunnel_reason) if self.dns_tunnel_candidate else f['domain_label_length'] >= 50 and f['txt_record'] == 1,
             'DGA_DOMAINS': dga_evidence and not self.dga_model.enabled,
@@ -101,7 +106,8 @@ class Pipeline:
                 continue
             if threat == 'DGA_DOMAINS' and not self.dga_model.enabled and not dga_evidence:
                 continue
-            key = (str(event.dst_ip), threat) if threat == 'DDOS' and syn_flood else (str(event.src_ip), str(event.dst_ip), threat)
+            key = ((str(event.dst_ip), threat) if threat == 'DDOS' and (syn_flood or udp_flood)
+                   else (str(event.src_ip), str(event.dst_ip), threat))
             if key in self.dedup:
                 continue
             if len(self.dedup) >= 4096:
@@ -118,6 +124,18 @@ class Pipeline:
                                 source_count_lower_bound=f['syn_target_source_count_lower_bound'],
                                 source_entropy_partial=f['syn_target_entropy_partial'],
                                 syn_target='destination_tcp')
+            if threat == 'DDOS' and udp_flood:
+                evidence.update(packet_rate=f['udp_target_packet_rate'],
+                                byte_rate=f['udp_target_byte_rate'],
+                                global_packet_rate=f['packet_rate'],
+                                source_entropy=f['udp_target_source_entropy'],
+                                source_count_lower_bound=f['udp_target_source_count_lower_bound'],
+                                source_entropy_partial=f['udp_target_entropy_partial'],
+                                destination_concentration=f['udp_destination_concentration'],
+                                mean_packet_bytes=f['udp_packet_size_mean'],
+                                packet_size_cv=f['udp_packet_size_cv'],
+                                packet_size_basis=f['udp_packet_size_basis'],
+                                udp_target='destination_udp')
             if threat == 'DNS_TUNNELLING' and self.dns_tunnel_candidate:
                 evidence['dns_candidate_pattern'] = tunnel_reason
             evidence['confidence_kind'] = 'heuristic strength' if source == DetectorType.RULE else 'synthetic-trained model posterior'
@@ -130,6 +148,11 @@ class Pipeline:
                     evidence['dga_feature_version'] = FEATURE_VERSION
             evidence['window_partial'] = f['window_partial']
             narrative = '; '.join(f'{k}={round(v, 4) if isinstance(v, float) else v}' for k, v in evidence.items())
+            if threat == 'DDOS' and udp_flood:
+                narrative += ('; consistent with UDP reflection/amplification behavior; '
+                              'passive metadata cannot verify reflection or amplification factor'
+                              if f['udp_target_source_count_lower_bound'] >= 16 and f['udp_packet_size_mean'] >= 512
+                              else '; high-rate UDP pattern; passive metadata cannot verify reflection or amplification')
             if threat == 'DATA_EXFILTRATION' and not event.reverse_observed:
                 narrative += '; reverse traffic unavailable: volume-only suspicion'
             if threat == 'ENCRYPTED_MALWARE':

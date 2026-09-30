@@ -1,9 +1,9 @@
 {
-  "generated_at_utc": "2026-09-30T03:00:27.491834+00:00",
+  "generated_at_utc": "2026-09-30T12:59:04.403376+00:00",
   "runtime_source_sha256": {
-    "detection/pipeline.py": "29cf1c294cbdf7f6b921f0648bba540b2d5504dbf39d3ceb8a3d498f850e2ae1",
-    "features/extractor.py": "6f4df286fbb82f99ed2dcc7e983fd73180d7cb1a7a7bfdd36fde22a80e6031b0",
-    "features/rate_window.py": "0b67198ea303d364903c0439e2dba98a0c26ccdc9e717536ac5ede63dec044b8",
+    "detection/pipeline.py": "e29beac44c35378f1162a356f93644b59c91d7f139360a0627e3aa0ae9869f9d",
+    "features/extractor.py": "8d438bcfa97ddcfbcd8c305b60e018b8f41416d36bdf3d2a7ff5b966f642dbde",
+    "features/rate_window.py": "8fde1be3af18ee1ad6f3d8911afb214432676669406010a01f0603995ff62a11",
     "ml/model.py": "2721a53d667d1ea773154fdebf3d349c5ef221dfdb51e937d5afdba1ffa6f354",
     "ml/dga.py": "0a03098bf4cc22d8f5b7ff5fe3bd75d82d735479730e1890a7f99bedb9d6c0b7",
     "persistence/store.py": "56bdc7cbb9d25ec0ceedf0fb2fc9e2169ee53bb54fc2731d1e034f4156e1a490"
@@ -11,11 +11,11 @@
   "model_sha256": "4d8e08323374535789e21f9f7cd1ee3f1c84b663ce555e67bb4ced57c95e8010",
   "events": 20000,
   "alerts": 2574,
-  "elapsed_seconds": 4.147786899993662,
-  "metadata_events_per_second": 4821.848489861078,
+  "elapsed_seconds": 5.143929700003355,
+  "metadata_events_per_second": 3888.0780194151866,
   "throughput_target": 2000,
   "throughput_pass": true,
-  "processing_and_persistence_p95_ms": 0.8741000056033954,
+  "processing_and_persistence_p95_ms": 1.0671000054571778,
   "latency_target_ms": 50,
   "latency_pass": true,
   "workload": "Repeated eight-class synthetic metadata sessions with SQLite alert commits",
@@ -32,6 +32,6 @@
     "dns_tunnel_candidate_enabled": false,
     "rate_window_resolution_ms": 1000,
     "source_entropy_partial": false,
-    "processing_p95_ms": 0.16870000399649143
+    "processing_p95_ms": 0.25499999173916876
   }
 }
