@@ -1,10 +1,15 @@
 {
   "events": 100,
   "accepted_alerts": 100,
+  "persisted_alerts": 100,
   "delivered_alerts": 100,
-  "api_acceptance_p95_ms": 6.214100001670886,
-  "api_to_sse_p95_ms": 250.09229999704985,
-  "api_to_sse_max_ms": 256.098199999542,
+  "success_count": 100,
+  "persisted_records_sha256": "66523bfec3251de34635c7ba2d36b87800c7660e644ba8c37b185053550b0c5d",
+  "api_acceptance_p95_ms": 2.8359999996609986,
+  "api_to_sse_p50_ms": 140.63090001582168,
+  "api_to_sse_p95_ms": 241.5669999900274,
+  "api_to_sse_p99_ms": 251.26449999515899,
+  "api_to_sse_max_ms": 254.49650001246482,
   "delivery_target_ms": 1000,
   "delivery_pass": true,
   "persistence_verified": true,
@@ -16,9 +21,10 @@
     "active_sources": 100,
     "dga_detector": "conservative-lexical-guard",
     "dga_candidate_enabled": false,
+    "dns_tunnel_candidate_enabled": false,
     "rate_window_resolution_ms": 1000,
     "source_entropy_partial": false,
-    "processing_p95_ms": 0.2640000020619482,
+    "processing_p95_ms": 0.2631999959703535,
     "replay_status": "idle",
     "replay_error": null,
     "alerts_by_class": {
@@ -27,16 +33,17 @@
     "throughput_target": 2000,
     "confidence_note": "Model score or heuristic strength; not real-world calibrated"
   },
-  "generated_at_utc": "2026-09-29T13:19:42.026760+00:00",
+  "durable_persistence_verified": true,
+  "generated_at_utc": "2026-10-01T02:03:43.990996+00:00",
   "scope": "Loopback API ingestion, inference, SQLite and direct SSE reception; excludes Next.js proxy, browser rendering, raw capture and concurrent subscribers",
   "workload": "100-or-configured-count simulated high-rate flow summaries in an isolated temporary database",
   "python": "3.13.5",
   "platform": "Windows-11-10.0.26300-SP0",
   "runtime_source_sha256": {
     "backend/application.py": "83a755c96cb8a730beb5f2da943a4bb7336b39fbdb27377251c80df162a81015",
-    "detection/pipeline.py": "5f8b6809a81c45374c1fb685aa53b6f5635be141278a1b86756a10aec5a3d7ee",
-    "features/extractor.py": "ae9e7361704b581a6ae63113447f1d984ee51970a1ee98b8e5fb70ff3f9acffc",
-    "features/rate_window.py": "718c07419c1103ad2b68400d49e330dea46cc667997244c01601e9d0ff3a9445",
+    "detection/pipeline.py": "d5c9623e63ab7d143fe2e5f041b23a3ccbf5d114e1c0f0b349962f861a014d5b",
+    "features/extractor.py": "27a5155f8f9bc4a0c6b4d7828c1960d4954705d37d1b67e5e5eca5fa36d8c88d",
+    "features/rate_window.py": "8fde1be3af18ee1ad6f3d8911afb214432676669406010a01f0603995ff62a11",
     "persistence/store.py": "56bdc7cbb9d25ec0ceedf0fb2fc9e2169ee53bb54fc2731d1e034f4156e1a490"
   }
 }

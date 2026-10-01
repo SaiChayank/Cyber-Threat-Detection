@@ -22,6 +22,7 @@ async def lifespan(app):
     app.state.pipeline = Pipeline()
     app.state.store = AlertStore(os.getenv('ALERT_DB', 'data/alerts.sqlite3'))
     app.state.replay_task = None
+    app.state.pending_replay_source = None
     app.state.replay_status = 'idle'
     app.state.replay_error = None
     yield
@@ -88,7 +89,26 @@ class ReplayConfig(BaseModel):
     scenario: str = 'ALL'
     speed: float = Field(default=20, ge=.1, le=10000)
 
+
+def cleanup_replay_source(records, cleanup):
+    try:
+        if hasattr(records, 'close'):
+            records.close()
+    finally:
+        if cleanup:
+            cleanup()
+
+
+def report_replay_cleanup_error(exc):
+    app.state.replay_status = 'failed'
+    detail = f'Replay cleanup failed: {exc}'
+    app.state.replay_error = f'{app.state.replay_error}; {detail}' if app.state.replay_error else detail
+
+
 async def run_replay(records, speed, cleanup=None):
+    # Stop can cancel a newly scheduled task before this coroutine ever runs.
+    # Once entered, this coroutine owns source cleanup in its finally block.
+    app.state.pending_replay_source = None
     previous = None
     try:
         for event in records:
@@ -104,10 +124,10 @@ async def run_replay(records, speed, cleanup=None):
         app.state.replay_status = 'failed'
         app.state.replay_error = str(exc)
     finally:
-        if hasattr(records, 'close'):
-            records.close()
-        if cleanup:
-            cleanup()
+        try:
+            cleanup_replay_source(records, cleanup)
+        except Exception as exc:
+            report_replay_cleanup_error(exc)
 
 def start_replay(records, speed, cleanup=None):
     if app.state.replay_status == 'running':
@@ -115,6 +135,7 @@ def start_replay(records, speed, cleanup=None):
     app.state.pipeline = Pipeline()
     app.state.replay_status = 'running'
     app.state.replay_error = None
+    app.state.pending_replay_source = (records, cleanup)
     app.state.replay_task = asyncio.create_task(run_replay(records, speed, cleanup))
     return {'status': 'running'}
 
@@ -138,6 +159,18 @@ async def stop():
             await task
         except asyncio.CancelledError:
             pass
+        if app.state.replay_status == 'running':
+            # Cancellation before the task's first instruction skips its
+            # CancelledError handler and finally block entirely.
+            app.state.replay_status = 'stopped'
+            pending = app.state.pending_replay_source
+            app.state.pending_replay_source = None
+            if pending is not None:
+                records, cleanup = pending
+                try:
+                    cleanup_replay_source(records, cleanup)
+                except Exception as exc:
+                    report_replay_cleanup_error(exc)
     return {'status': app.state.replay_status}
 
 @app.post('/api/replay/pcap')
@@ -159,9 +192,12 @@ async def pcap(request: Request, speed: float = Query(20, ge=.1, le=10000)):
             raise
     def records():
         try:
-            for batch in PcapReader().read_packets(path):
+            reader = PcapReader()
+            for batch in reader.read_packets(path):
                 for flow, dns, tls in batch:
                     yield from_packet(flow, dns, tls)
+            if reader.parser.dlq.truncated_packet_count:
+                raise ValueError('Uploaded capture contains a truncated packet')
         finally:
             path.unlink(missing_ok=True)
     try:

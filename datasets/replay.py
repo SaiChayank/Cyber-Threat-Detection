@@ -21,9 +21,12 @@ def records(preset):
         yield from islice(replay_domains(path), 2000)
     else:
         def packets():
-            for batch in PcapReader().read_packets(path):
+            reader = PcapReader()
+            for batch in reader.read_packets(path):
                 for flow, dns, tls in batch:
                     yield from_packet(flow, dns, tls)
+            if reader.parser.dlq.truncated_packet_count:
+                raise ValueError('Public capture contains a truncated packet')
         yield from islice(packets(), 2000)
 
 
