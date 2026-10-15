@@ -1,0 +1,129 @@
+[
+  {
+    "name": "npm-install",
+    "command": [
+      "cmd.exe",
+      "/d",
+      "/c",
+      "npm.cmd",
+      "install"
+    ],
+    "exit_code": 0,
+    "seconds": 28.17728360000001
+  },
+  {
+    "name": "configured-dev-start",
+    "health": {
+      "status": "online",
+      "architecture": "unidirectional-passive-monitoring",
+      "threat_classes": [
+        "DDOS",
+        "BOTNET_C2",
+        "DGA_DOMAINS",
+        "DNS_TUNNELLING",
+        "ENCRYPTED_MALWARE",
+        "RECONNAISSANCE",
+        "DATA_EXFILTRATION"
+      ]
+    },
+    "monitor_status": 200,
+    "venv_config": "home = C:\\Users\\Saich\\AppData\\Local\\Programs\\Python\\Python313\ninclude-system-site-packages = false\nversion = 3.13.5\nexecutable = C:\\Users\\Saich\\AppData\\Local\\Programs\\Python\\Python313\\python.exe\ncommand = C:\\Users\\Saich\\AppData\\Local\\Programs\\Python\\Python313\\python.exe -m venv C:\\Users\\Saich\\AppData\\Local\\Temp\\univect-clean-4cbc187dd401465fbf098a14efb9b37a\\corrected\\.venv\n",
+    "raw_data_present": false,
+    "configuration": "README .env overrides: API 18000, WEB 13000"
+  },
+  {
+    "name": "python-packages",
+    "command": [
+      "C:\\Users\\Saich\\AppData\\Local\\Temp\\univect-clean-4cbc187dd401465fbf098a14efb9b37a\\corrected\\.venv\\Scripts\\python.exe",
+      "-m",
+      "pip",
+      "freeze"
+    ],
+    "exit_code": 0,
+    "seconds": 0.5162943000000269
+  },
+  {
+    "name": "backend-tests",
+    "command": [
+      "C:\\Users\\Saich\\AppData\\Local\\Temp\\univect-clean-4cbc187dd401465fbf098a14efb9b37a\\corrected\\.venv\\Scripts\\python.exe",
+      "-m",
+      "pytest",
+      "-q"
+    ],
+    "exit_code": 0,
+    "seconds": 153.39826040000003
+  },
+  {
+    "name": "demo-preflight",
+    "command": [
+      "C:\\Users\\Saich\\AppData\\Local\\Temp\\univect-clean-4cbc187dd401465fbf098a14efb9b37a\\corrected\\.venv\\Scripts\\python.exe",
+      "-m",
+      "replay.demo_pack"
+    ],
+    "exit_code": 0,
+    "seconds": 0.8748213000001215
+  },
+  {
+    "name": "typecheck",
+    "command": [
+      "cmd.exe",
+      "/d",
+      "/c",
+      "npm.cmd",
+      "run",
+      "typecheck"
+    ],
+    "exit_code": 0,
+    "seconds": 7.5919986999999765
+  },
+  {
+    "name": "production-build",
+    "command": [
+      "cmd.exe",
+      "/d",
+      "/c",
+      "npm.cmd",
+      "run",
+      "build"
+    ],
+    "exit_code": 0,
+    "seconds": 19.045445999999856
+  },
+  {
+    "name": "core-benchmark",
+    "command": [
+      "C:\\Users\\Saich\\AppData\\Local\\Temp\\univect-clean-4cbc187dd401465fbf098a14efb9b37a\\corrected\\.venv\\Scripts\\python.exe",
+      "-m",
+      "benchmarks.run",
+      "--events",
+      "20000"
+    ],
+    "exit_code": 0,
+    "seconds": 5.280251500000077
+  },
+  {
+    "name": "delivery-benchmark",
+    "command": [
+      "C:\\Users\\Saich\\AppData\\Local\\Temp\\univect-clean-4cbc187dd401465fbf098a14efb9b37a\\corrected\\.venv\\Scripts\\python.exe",
+      "-m",
+      "benchmarks.delivery",
+      "--events",
+      "100"
+    ],
+    "exit_code": 0,
+    "seconds": 2.3995451000000685
+  },
+  {
+    "name": "offline-demo",
+    "command": [
+      "C:\\Users\\Saich\\AppData\\Local\\Temp\\univect-clean-4cbc187dd401465fbf098a14efb9b37a\\corrected\\.venv\\Scripts\\python.exe",
+      "-m",
+      "replay.cli",
+      "data/demo/all.jsonl",
+      "--speed",
+      "20"
+    ],
+    "exit_code": 0,
+    "seconds": 44.2996521
+  }
+]

@@ -9,6 +9,15 @@ black/red/white interface includes an original U/vector symbol, responsive top
 navigation, glass panels, a redesigned Monitor and a project footer. See
 [the design system](docs/UNIVECT_DESIGN_SYSTEM.md) for branding and motion conventions.
 
+**Clean-checkout follow-up, 15 October 2026:** local commit `a12eb48` passes isolated
+installation, 443 backend tests (two optional PyArrow tests skipped), TypeScript,
+production build/start, incremental Monitor replay and restart persistence.
+The TypeScript lockfile mismatch is corrected. Two high-severity npm dependency
+advisories remain; this is not a security clearance or detector-quality promotion.
+These local commits have not been pushed. See the
+[current reproduction report](docs/CLEAN_CHECKOUT_20261015.md). Older dated results
+below describe their historical snapshots, not the current test count.
+
 **Status audited 2 October 2026:** the deployed classifier is synthetic-trained.
 Public/weighted DGA candidates and the DNS-tunnelling candidate remain disabled.
 Controlled replay works; most threat-quality gates are unresolved or failed.
@@ -60,11 +69,16 @@ The frozen fitted model is included; do not retrain it during setup or a demo.
 No Redis server, paid service, network attack generator or model download is required.
 Use one API worker so streaming state and replay controls stay consistent.
 
+If another application occupies API port 8000, copy `.env.example` to `.env` and
+set both `API_PORT` and the port in `API_PROXY_URL` to the same free port before
+starting. `WEB_PORT` can select a free website port. Do not stop unrelated services;
+the automatic website-port fallback does not change the API port.
+
 Select **All threat scenarios** and **20× speed**, then start replay. The bundled
 256-event demo completes in approximately 44 seconds plus delivery overhead and
 produces 15 alerts across seven classes; its benign segment emits no alerts.
-The initial UI speed is 1×, which takes approximately 15 minutes for this same
-recorded stream. Alerts appear while
+The initial UI speed is 100×. Select 20× explicitly for the demonstration timing
+above; acceleration changes presentation pace, not detector features. Alerts appear while
 processing continues. Click an alert for its connection details and numeric evidence.
 Replay each class individually or upload a classic Ethernet `.pcap` file (up to 16 MiB).
 Filters and JSON export operate on the latest 200 displayed alerts. SQLite retains the

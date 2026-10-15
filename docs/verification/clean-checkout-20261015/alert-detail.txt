@@ -1,0 +1,448 @@
+- link:
+  - /url: "#main-content"
+  - text: Skip to content
+- alert: Threat monitor · Univect
+- banner:
+  - link:
+    - /url: /
+    - generic: univect.
+  - navigation:
+    - link:
+      - /url: /monitor#overview
+      - text: Overview
+    - link:
+      - /url: /monitor#replay
+      - text: Traffic replay
+    - link:
+      - /url: /monitor#alerts
+      - text: Alert stream
+    - link:
+      - /url: /monitor#coverage
+      - text: Detection coverage
+  - link:
+    - /url: /docs
+    - text: API reference
+  - link:
+    - /url: /
+    - text: Back to platform
+  - generic: UNIVECT / MONITOR
+  - generic: Passive sensor
+  - generic: Read-only · Metadata only · No response path
+- main:
+  - paragraph:
+    - text: Observation workspace
+  - heading [level=1]: Your network, in view.
+  - paragraph: Set the stream. Follow the activity. Investigate the evidence.
+  - status:
+    - text: Stream connected
+    - generic: /
+    - generic: LOCAL ENCLAVE
+  - paragraph: Controlled testing
+  - heading [level=2]:
+    - text: Traffic replay
+    - generic: complete
+  - paragraph: Run a scenario or inspect a passive capture.
+  - generic: Scenario
+  - combobox
+  - generic: Replay speed
+  - combobox
+  - button:
+    - text: Start replay
+  - button [disabled]:
+    - text: Stop
+  - button
+  - text: PCAP
+  - text: 0 public-source presets ready
+  - generic: Classic Ethernet PCAP · 16 MiB maximum
+  - generic: Replay speed scales recorded event intervals
+  - status:
+    - generic: Replay started. Alerts appear as events are processed.
+    - button:
+  - region:
+    - paragraph: EVENTS PROCESSED
+    - button:
+    - strong:
+      - generic: "256"
+      - text: "256"
+    - text: Current replay · incremental inference
+    - paragraph: ALERTS RECORDED
+    - button:
+    - strong:
+      - generic: "15"
+      - text: "15"
+    - text: Persistent history · all replay runs
+    - paragraph: PROCESSING P95
+    - button:
+    - strong:
+      - generic: "0.72"
+      - text: "0.72"
+    - generic: ms
+    - text: Feature extraction + inference
+    - paragraph: OBSERVED RATE
+    - button:
+    - strong:
+      - generic: "0"
+      - text: "0"
+    - generic: events/s
+    - text: 33 active sources · complete
+  - paragraph:
+    - text: Ingest telemetry
+  - heading [level=2]: Observed event rate
+  - paragraph: 24 recent samples · local UTC clock
+  - generic: "0"
+  - text: "0"
+  - generic: events / sec
+  - application:
+    - generic: 14:32:58
+    - generic: 14:33:03
+    - generic: 14:33:07
+    - generic: 14:33:12
+    - generic: 14:33:16
+    - generic: 14:33:21
+    - generic: 14:33:25
+    - generic: 14:33:31
+    - generic: "0"
+    - generic: "5"
+    - generic: "10"
+    - generic: "15"
+    - generic: "20"
+  - generic: "Replay state: complete"
+  - generic: Packet records and flow summaries are different units.
+  - paragraph: Collection boundary
+  - generic: LAB PROTOTYPE
+  - heading [level=2]: Passive by design.
+  - paragraph: Mirror feed
+  - paragraph: Read-only input
+  - generic: Enclave
+  - term:
+    - text: Active sources
+  - definition:
+    - generic: "33"
+    - text: "33"
+  - term:
+    - text: Late events dropped
+  - definition:
+    - generic: "0"
+    - text: "0"
+  - term:
+    - text: State evictions
+  - definition:
+    - generic: "0"
+    - text: "0"
+  - paragraph: Metadata only. No payload decryption, path to the source or network actions.
+  - paragraph: Investigation queue
+  - heading [level=2]:
+    - text: Alert stream
+    - generic: LIVE
+  - paragraph: Inspect a detection to follow its observed evidence.
+  - generic: "15"
+  - text: "15"
+  - generic: loaded signals
+  - button:
+    - text: Hold queue
+  - button:
+    - text: Export JSON
+  - searchbox
+  - combobox
+  - combobox
+  - combobox
+  - region:
+    - table:
+      - caption: Newest recorded detections with observed event time, threat, connection, severity, confidence and detection engine. Use Inspect to view evidence.
+      - rowgroup:
+        - row:
+          - columnheader: OBSERVED TIME (UTC)
+          - columnheader: THREAT
+          - columnheader: SOURCE → DESTINATION
+          - columnheader: SEVERITY
+          - columnheader: CONFIDENCE
+          - columnheader: ENGINE
+          - columnheader:
+            - generic: Investigation
+      - rowgroup:
+        - row:
+          - cell:
+            - text: 22:27:50
+            - generic: 2023-11-14
+          - cell: Data exfiltration
+          - cell:
+            - text: 10.0.0.10
+            - text: 198.51.100.20
+          - cell:
+            - generic: HIGH
+          - cell:
+            - generic: 100.0%
+          - cell: HYBRID
+          - cell:
+            - button:
+              - text: Inspect
+        - row:
+          - cell:
+            - text: 22:27:20
+            - generic: 2023-11-14
+          - cell: Data exfiltration
+          - cell:
+            - text: 10.0.0.10
+            - text: 198.51.100.20
+          - cell:
+            - generic: HIGH
+          - cell:
+            - generic: 100.0%
+          - cell: ML
+          - cell:
+            - button:
+              - text: Inspect
+        - row:
+          - cell:
+            - text: 22:25:36
+            - generic: 2023-11-14
+          - cell: Reconnaissance
+          - cell:
+            - text: 10.0.0.10
+            - text: 198.51.100.14
+          - cell:
+            - generic: MEDIUM
+          - cell:
+            - generic: 100.0%
+          - cell: ML
+          - cell:
+            - button:
+              - text: Inspect
+        - row:
+          - cell:
+            - text: 22:23:53
+            - generic: 2023-11-14
+          - cell: Encrypted sessions
+          - cell:
+            - text: 10.0.0.10
+            - text: 198.51.100.20
+          - cell:
+            - generic: HIGH
+          - cell:
+            - generic: 100.0%
+          - cell: HYBRID
+          - cell:
+            - button:
+              - text: Inspect
+        - row:
+          - cell:
+            - text: 22:23:22
+            - generic: 2023-11-14
+          - cell: Encrypted sessions
+          - cell:
+            - text: 10.0.0.10
+            - text: 198.51.100.20
+          - cell:
+            - generic: HIGH
+          - cell:
+            - generic: 89.4%
+          - cell: HYBRID
+          - cell:
+            - button:
+              - text: Inspect
+        - row:
+          - cell:
+            - text: 22:21:52
+            - generic: 2023-11-14
+          - cell: DGA domains
+          - cell:
+            - text: 10.0.0.10
+            - text: 198.51.100.20
+          - cell:
+            - generic: MEDIUM
+          - cell:
+            - generic: 80.0%
+          - cell: RULE
+          - cell:
+            - button:
+              - text: Inspect
+        - row:
+          - cell:
+            - text: 22:21:52
+            - generic: 2023-11-14
+          - cell: DNS tunnelling
+          - cell:
+            - text: 10.0.0.10
+            - text: 198.51.100.20
+          - cell:
+            - generic: MEDIUM
+          - cell:
+            - generic: 100.0%
+          - cell: HYBRID
+          - cell:
+            - button:
+              - text: Inspect
+        - row:
+          - cell:
+            - text: 22:21:21
+            - generic: 2023-11-14
+          - cell: DGA domains
+          - cell:
+            - text: 10.0.0.10
+            - text: 198.51.100.20
+          - cell:
+            - generic: MEDIUM
+          - cell:
+            - generic: 80.0%
+          - cell: RULE
+          - cell:
+            - button:
+              - text: Inspect
+        - row:
+          - cell:
+            - text: 22:21:21
+            - generic: 2023-11-14
+          - cell: DNS tunnelling
+          - cell:
+            - text: 10.0.0.10
+            - text: 198.51.100.20
+          - cell:
+            - generic: MEDIUM
+          - cell:
+            - generic: 100.0%
+          - cell: HYBRID
+          - cell:
+            - button:
+              - text: Inspect
+        - row:
+          - cell:
+            - text: 22:19:52
+            - generic: 2023-11-14
+          - cell: DGA domains
+          - cell:
+            - text: 10.0.0.10
+            - text: 198.51.100.20
+          - cell:
+            - generic: MEDIUM
+          - cell:
+            - generic: 100.0%
+          - cell: HYBRID
+          - cell:
+            - button:
+              - text: Inspect
+  - generic: 15 matching / 15 loaded · Latest 200 · Newest first
+  - generic: 0 late events dropped
+  - button [disabled]:
+  - generic: 1 / 2
+  - button:
+  - paragraph: Detection engines
+  - heading [level=2]: Threat coverage
+  - generic: 7 detection modules
+  - generic: DDoS & floods
+  - strong:
+    - generic: "2"
+    - text: "2"
+  - generic: Botnet beaconing
+  - strong:
+    - generic: "2"
+    - text: "2"
+  - generic: DGA domains
+  - strong:
+    - generic: "4"
+    - text: "4"
+  - generic: DNS tunnelling
+  - strong:
+    - generic: "2"
+    - text: "2"
+  - generic: Encrypted sessions
+  - strong:
+    - generic: "2"
+    - text: "2"
+  - generic: Reconnaissance
+  - strong:
+    - generic: "1"
+    - text: "1"
+  - generic: Data exfiltration
+  - strong:
+    - generic: "2"
+    - text: "2"
+  - paragraph: Six required categories. Bars show each module’s share of recorded alerts, not accuracy. Coverage describes implementation, without implying validated real-world performance.
+  - button:
+    - generic: Public-source dataset readiness
+    - generic: 0/4 ready
+  - paragraph: Saved benchmark · synthetic workload
+  - heading [level=2]: Performance, with context.
+  - paragraph: Measured processing + persistence
+  - paragraph: 4,168events/s
+  - paragraph: Processing + persistence p95
+  - paragraph: 0.96ms
+  - paragraph: Stated test target
+  - paragraph: 2,000events/s
+  - paragraph: Throughput and latency targets met
+  - paragraph: 20,000 events · 4.80 seconds · Python 3.13.5 Repeated eight-class synthetic metadata sessions with SQLite alert commits. Core event processing + persistence; excludes capture, HTTP, SSE and rendering. This saved result does not measure browser delivery or real deployment capacity.
+  - paragraph: Model scores and heuristic strengths are not calibrated probabilities of compromise. Public-source validation remains limited, including incomplete DGA coverage and unvalidated encrypted-malware detection. Evidence and analyst review are essential.
+- contentinfo:
+  - link:
+    - /url: /
+    - generic: univect.
+  - paragraph: One-way traffic. Deeper insight. Passive threat intelligence with evidence at its core.
+  - text: PS26145 · Research prototype
+  - navigation:
+    - paragraph: Explore
+    - link:
+      - /url: /#platform
+      - text: Platform
+    - link:
+      - /url: /#detection
+      - text: Detection
+    - link:
+      - /url: /#architecture
+      - text: How it works
+    - link:
+      - /url: /monitor
+      - text: Threat monitor
+  - paragraph: Project & resources
+  - link:
+    - /url: https://github.com/SaiChayank/Cyber-Threat-Detection
+    - text: Source repository
+  - link:
+    - /url: /docs
+    - text: API reference
+  - link:
+    - /url: https://github.com/SaiChayank/Cyber-Threat-Detection/issues
+    - text: Report an issue
+  - generic: © 2026 Univect · Project by SaiChayank
+  - generic: Read-only observation · No inline blocking · No payload decryption
+- generic: 14:33:31
+- dialog "Data exfiltration":
+  - paragraph: Alert investigation
+  - heading "Data exfiltration" [level=2]
+  - button "Close alert detail" [active]:
+  - paragraph: Review the observed connection and supporting metadata. A detection indicates suspicion and requires analyst interpretation.
+  - generic: HIGH
+  - strong: 100.0% confidence score
+  - generic: HYBRID
+  - paragraph: "Score basis: synthetic-trained model posterior"
+  - heading "Observed connection" [level=3]
+  - generic: 10.0.0.10:49152
+  - generic: 198.51.100.20:443
+  - paragraph: 2023-11-14T22:27:50.958Z · captured event time
+  - heading "Supporting evidence" [level=3]
+  - paragraph: egress_bytes=64225303; observed_byte_ratio=4944.7494; reverse_available=1.0; source_forward_byte_rate_10s=1762289.2; source_byte_window_resolution_ms=1000; egress_basis=observed_source_forward_bytes_60s; observed_byte_ratio_status=finite_observed_ratio; confidence_kind=synthetic-trained model posterior; window_partial=True; behavior consistent with possible exfiltration; content and intent unverified
+  - term: egress bytes
+  - definition: "64225303"
+  - term: observed byte ratio
+  - definition: "4944.7494"
+  - term: reverse available
+  - definition: "1"
+  - term: source forward byte rate 10s
+  - definition: "1762289.2"
+  - term: source byte window resolution ms
+  - definition: "1000"
+  - term: egress basis
+  - definition: observed_source_forward_bytes_60s
+  - term: observed byte ratio status
+  - definition: finite_observed_ratio
+  - term: confidence kind
+  - definition: synthetic-trained model posterior
+  - term: window partial
+  - definition: "true"
+  - heading "Identifiers" [level=3]:
+    - text: Identifiers
+  - term: "Flow:"
+  - definition: a82678326ad595f204b795978a8ba900
+  - term: "Alert:"
+  - definition: 1fc2954b-147a-47cd-9488-7a65563f15e0
+  - paragraph: Encrypted content stays opaque. Scores are model estimates or heuristic strengths, without deployment calibration.
+  - button "Copy JSON":
+    - text: Copy JSON

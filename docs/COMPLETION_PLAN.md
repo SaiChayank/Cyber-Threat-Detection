@@ -1,5 +1,15 @@
 # Univect completion plan
 
+**T02 completed, 15 October 2026:** [clean-checkout reproduction](CLEAN_CHECKOUT_20261015.md)
+verifies local commit `a12eb48` with fresh Python/npm installations: 443 tests
+pass, two optional research tests skip, TypeScript/build pass, 256-event Monitor
+replay emits 15 incremental alerts and restart preserves all records. Compiler
+lockfile corrected with a failing-before/passing-after packaging regression.
+Core and direct API-to-SSE benchmark gates pass in this scoped run. Two high npm
+dependency advisories remain. No detector/model/gate changes or reserved scoring.
+Next eligible independent package is T20, one subtype's observability/experiment
+decision; no further implementation is authorized by this completion entry.
+
 **T01 completed, 15 October 2026:** [formal DNS scorer](DNS_TUNNELLING_SCORER.md)
 implements session/final-query/timing/undefined-metric semantics, source/manifest
 checks and exclusive reserved-pass handling using the existing candidate pipeline.
@@ -17,11 +27,11 @@ commit `8f2cf30` is local; remote publication is not established. Historical ent
 below retain their dates and superseded states. No official requirement, frozen
 quality gate or completed behavior is changed by the roadmap.
 
-**T01 scorer tooling is now complete; next ready package: T02 — committed-baseline
-clean-checkout reproduction.** Independent source tracks remain blocked;
+**T01 scorer tooling and T02 clean-checkout reproduction are complete; next ready
+package: T20 — one subtype's observability/experiment decision.** Independent source tracks remain blocked;
 no new reserved scoring, training or promotion is permitted. Other eligible work
-while waiting is current clean-checkout verification (T02) or one scoped baseline
-observability/experiment decision (T20). A source/intent impossibility remains a
+while waiting is one scoped baseline observability/experiment decision (T20).
+A source/intent impossibility remains a
 blocker, not permission to tune thresholds or label a failed detector complete.
 
 **DNS evaluation-contract reconciliation, 15 October 2026:**

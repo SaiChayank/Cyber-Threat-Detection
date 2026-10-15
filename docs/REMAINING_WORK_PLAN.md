@@ -82,7 +82,14 @@ access/receipt creation. Final data qualification/scoring still depends on T30.
 - DoD: deterministic tested scorer, pinned source and invocation contract, no
   reserved reads and no runtime/threshold change. Record its evidence separately.
 
-**T02 — Clean checkout of the committed snapshot. P1; READY TO START.**
+**T02 — Clean checkout of the committed snapshot. P1; COMPLETE (15 October 2026).**
+
+Outcome: [current reproduction](CLEAN_CHECKOUT_20261015.md), corrected local commit
+`a12eb48`, 443 backend tests passed/two optional PyArrow skips, typecheck/build,
+incremental production demo and unchanged restart history. Declared TypeScript
+range now matches the lockfile; regression reproduces the old failure. Remaining
+dependency advisories and unpublished remote state are disclosed. Freeze this
+verification; the final release still requires its separate post-integration run.
 
 - Problem: older clean-checkout evidence predates the current committed additions.
 - Affected: README, lockfiles/packaging, `.gitattributes`, setup scripts and tests.
@@ -281,7 +288,7 @@ expansion are future scope; none substitutes for unresolved mandatory quality.
 
 ## Start here
 
-**Next eligible package: T02, clean-checkout reproduction of the committed
-baseline.** T01 tooling is complete/frozen. T20 is another independent scoped
-decision if reproduction is blocked. Do not automatically train candidates or
+**Next eligible package: T20, one subtype's observability/experiment decision.**
+T01 tooling and T02 clean-checkout reproduction are complete/frozen. T20 is a scoped
+decision, not authorization to implement its experiment. Do not automatically train candidates or
 manufacture a completion deadline while external data qualification is unresolved.

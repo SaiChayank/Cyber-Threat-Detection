@@ -1,0 +1,838 @@
+{
+  "passed": true,
+  "trace": [
+    {
+      "elapsed_seconds": 0.03283680000004097,
+      "processed": 0,
+      "replay_status": "idle",
+      "alert_count": 0
+    },
+    {
+      "elapsed_seconds": 1.0395063999999365,
+      "processed": 0,
+      "replay_status": "idle",
+      "alert_count": 0
+    },
+    {
+      "elapsed_seconds": 2.0470459000000574,
+      "processed": 0,
+      "replay_status": "idle",
+      "alert_count": 0
+    },
+    {
+      "elapsed_seconds": 3.0651436999999078,
+      "processed": 0,
+      "replay_status": "idle",
+      "alert_count": 0
+    },
+    {
+      "elapsed_seconds": 4.071515800000043,
+      "processed": 0,
+      "replay_status": "idle",
+      "alert_count": 0
+    },
+    {
+      "elapsed_seconds": 5.093206099999861,
+      "processed": 0,
+      "replay_status": "idle",
+      "alert_count": 0
+    },
+    {
+      "elapsed_seconds": 6.100424499999917,
+      "processed": 0,
+      "replay_status": "idle",
+      "alert_count": 0
+    },
+    {
+      "elapsed_seconds": 7.130060199999889,
+      "processed": 0,
+      "replay_status": "idle",
+      "alert_count": 0
+    },
+    {
+      "elapsed_seconds": 8.159747299999935,
+      "processed": 0,
+      "replay_status": "idle",
+      "alert_count": 0
+    },
+    {
+      "elapsed_seconds": 9.165419400000019,
+      "processed": 0,
+      "replay_status": "idle",
+      "alert_count": 0
+    },
+    {
+      "elapsed_seconds": 10.187132499999962,
+      "processed": 0,
+      "replay_status": "idle",
+      "alert_count": 0
+    },
+    {
+      "elapsed_seconds": 11.194399400000066,
+      "processed": 0,
+      "replay_status": "idle",
+      "alert_count": 0
+    },
+    {
+      "elapsed_seconds": 12.21727379999993,
+      "processed": 0,
+      "replay_status": "idle",
+      "alert_count": 0
+    },
+    {
+      "elapsed_seconds": 13.247993199999883,
+      "processed": 0,
+      "replay_status": "idle",
+      "alert_count": 0
+    },
+    {
+      "elapsed_seconds": 14.276886800000057,
+      "processed": 0,
+      "replay_status": "idle",
+      "alert_count": 0
+    },
+    {
+      "elapsed_seconds": 15.283741499999905,
+      "processed": 0,
+      "replay_status": "idle",
+      "alert_count": 0
+    },
+    {
+      "elapsed_seconds": 16.292704100000037,
+      "processed": 0,
+      "replay_status": "idle",
+      "alert_count": 0
+    },
+    {
+      "elapsed_seconds": 17.29960499999993,
+      "processed": 0,
+      "replay_status": "idle",
+      "alert_count": 0
+    },
+    {
+      "elapsed_seconds": 18.331163999999944,
+      "processed": 0,
+      "replay_status": "idle",
+      "alert_count": 0
+    },
+    {
+      "elapsed_seconds": 19.35852890000001,
+      "processed": 10,
+      "replay_status": "running",
+      "alert_count": 0
+    },
+    {
+      "elapsed_seconds": 20.366077299999915,
+      "processed": 28,
+      "replay_status": "running",
+      "alert_count": 0
+    },
+    {
+      "elapsed_seconds": 21.399120999999923,
+      "processed": 32,
+      "replay_status": "running",
+      "alert_count": 0
+    },
+    {
+      "elapsed_seconds": 22.404587199999924,
+      "processed": 32,
+      "replay_status": "running",
+      "alert_count": 0
+    },
+    {
+      "elapsed_seconds": 23.410812599999872,
+      "processed": 32,
+      "replay_status": "running",
+      "alert_count": 0
+    },
+    {
+      "elapsed_seconds": 24.41821559999994,
+      "processed": 32,
+      "replay_status": "running",
+      "alert_count": 0
+    },
+    {
+      "elapsed_seconds": 25.425338699999884,
+      "processed": 39,
+      "replay_status": "running",
+      "alert_count": 1
+    },
+    {
+      "elapsed_seconds": 26.445359599999847,
+      "processed": 54,
+      "replay_status": "running",
+      "alert_count": 1
+    },
+    {
+      "elapsed_seconds": 27.453797699999996,
+      "processed": 64,
+      "replay_status": "running",
+      "alert_count": 2
+    },
+    {
+      "elapsed_seconds": 28.461409900000035,
+      "processed": 64,
+      "replay_status": "running",
+      "alert_count": 2
+    },
+    {
+      "elapsed_seconds": 29.485755100000006,
+      "processed": 64,
+      "replay_status": "running",
+      "alert_count": 2
+    },
+    {
+      "elapsed_seconds": 30.492664599999898,
+      "processed": 64,
+      "replay_status": "running",
+      "alert_count": 2
+    },
+    {
+      "elapsed_seconds": 31.49999620000017,
+      "processed": 66,
+      "replay_status": "running",
+      "alert_count": 2
+    },
+    {
+      "elapsed_seconds": 32.50612199999978,
+      "processed": 73,
+      "replay_status": "running",
+      "alert_count": 3
+    },
+    {
+      "elapsed_seconds": 33.51360799999975,
+      "processed": 80,
+      "replay_status": "running",
+      "alert_count": 3
+    },
+    {
+      "elapsed_seconds": 34.521455799999785,
+      "processed": 88,
+      "replay_status": "running",
+      "alert_count": 4
+    },
+    {
+      "elapsed_seconds": 35.52946609999981,
+      "processed": 95,
+      "replay_status": "running",
+      "alert_count": 4
+    },
+    {
+      "elapsed_seconds": 36.54216589999987,
+      "processed": 96,
+      "replay_status": "running",
+      "alert_count": 4
+    },
+    {
+      "elapsed_seconds": 37.567545099999734,
+      "processed": 96,
+      "replay_status": "running",
+      "alert_count": 4
+    },
+    {
+      "elapsed_seconds": 38.575367500000084,
+      "processed": 110,
+      "replay_status": "running",
+      "alert_count": 5
+    },
+    {
+      "elapsed_seconds": 39.605615399999806,
+      "processed": 123,
+      "replay_status": "running",
+      "alert_count": 6
+    },
+    {
+      "elapsed_seconds": 40.612637899999754,
+      "processed": 128,
+      "replay_status": "running",
+      "alert_count": 6
+    },
+    {
+      "elapsed_seconds": 41.62018649999982,
+      "processed": 128,
+      "replay_status": "running",
+      "alert_count": 6
+    },
+    {
+      "elapsed_seconds": 42.62761210000008,
+      "processed": 128,
+      "replay_status": "running",
+      "alert_count": 6
+    },
+    {
+      "elapsed_seconds": 43.65105369999992,
+      "processed": 128,
+      "replay_status": "running",
+      "alert_count": 6
+    },
+    {
+      "elapsed_seconds": 44.66129039999987,
+      "processed": 139,
+      "replay_status": "running",
+      "alert_count": 8
+    },
+    {
+      "elapsed_seconds": 45.670146699999805,
+      "processed": 155,
+      "replay_status": "running",
+      "alert_count": 8
+    },
+    {
+      "elapsed_seconds": 46.69422929999973,
+      "processed": 160,
+      "replay_status": "running",
+      "alert_count": 10
+    },
+    {
+      "elapsed_seconds": 47.72385750000012,
+      "processed": 160,
+      "replay_status": "running",
+      "alert_count": 10
+    },
+    {
+      "elapsed_seconds": 48.73722469999984,
+      "processed": 160,
+      "replay_status": "running",
+      "alert_count": 10
+    },
+    {
+      "elapsed_seconds": 49.74542220000012,
+      "processed": 160,
+      "replay_status": "running",
+      "alert_count": 10
+    },
+    {
+      "elapsed_seconds": 50.75243180000007,
+      "processed": 167,
+      "replay_status": "running",
+      "alert_count": 11
+    },
+    {
+      "elapsed_seconds": 51.76010039999983,
+      "processed": 183,
+      "replay_status": "running",
+      "alert_count": 11
+    },
+    {
+      "elapsed_seconds": 52.76754219999975,
+      "processed": 192,
+      "replay_status": "running",
+      "alert_count": 12
+    },
+    {
+      "elapsed_seconds": 53.775780999999824,
+      "processed": 192,
+      "replay_status": "running",
+      "alert_count": 12
+    },
+    {
+      "elapsed_seconds": 54.78417869999976,
+      "processed": 192,
+      "replay_status": "running",
+      "alert_count": 12
+    },
+    {
+      "elapsed_seconds": 55.79260179999983,
+      "processed": 192,
+      "replay_status": "running",
+      "alert_count": 12
+    },
+    {
+      "elapsed_seconds": 56.81357620000017,
+      "processed": 196,
+      "replay_status": "running",
+      "alert_count": 12
+    },
+    {
+      "elapsed_seconds": 57.82176819999995,
+      "processed": 214,
+      "replay_status": "running",
+      "alert_count": 13
+    },
+    {
+      "elapsed_seconds": 58.85754769999994,
+      "processed": 224,
+      "replay_status": "running",
+      "alert_count": 13
+    },
+    {
+      "elapsed_seconds": 59.896452399999816,
+      "processed": 224,
+      "replay_status": "running",
+      "alert_count": 13
+    },
+    {
+      "elapsed_seconds": 60.90421479999986,
+      "processed": 224,
+      "replay_status": "running",
+      "alert_count": 13
+    },
+    {
+      "elapsed_seconds": 61.912646100000075,
+      "processed": 224,
+      "replay_status": "running",
+      "alert_count": 13
+    },
+    {
+      "elapsed_seconds": 62.91999110000006,
+      "processed": 226,
+      "replay_status": "running",
+      "alert_count": 14
+    },
+    {
+      "elapsed_seconds": 63.92821049999975,
+      "processed": 245,
+      "replay_status": "running",
+      "alert_count": 14
+    },
+    {
+      "elapsed_seconds": 64.93596269999989,
+      "processed": 256,
+      "replay_status": "complete",
+      "alert_count": 15
+    }
+  ],
+  "telemetry": {
+    "processed": 256,
+    "late_events": 0,
+    "state_evictions": 0,
+    "active_sources": 33,
+    "dga_detector": "conservative-lexical-guard",
+    "dga_candidate_enabled": false,
+    "dns_tunnel_candidate_enabled": false,
+    "rate_window_resolution_ms": 1000,
+    "source_entropy_partial": false,
+    "processing_p95_ms": 0.7175999999162741,
+    "replay_status": "complete",
+    "replay_error": null,
+    "alerts_by_class": {
+      "BOTNET_C2": 2,
+      "DATA_EXFILTRATION": 2,
+      "DDOS": 2,
+      "DGA_DOMAINS": 4,
+      "DNS_TUNNELLING": 2,
+      "ENCRYPTED_MALWARE": 2,
+      "RECONNAISSANCE": 1
+    },
+    "throughput_target": 2000,
+    "confidence_note": "Model score or heuristic strength; not real-world calibrated"
+  },
+  "alerts": [
+    {
+      "timestamp": 1700000126530.026,
+      "flow_id": "f391a8e471f890e1ef39b3b96a0fffdb",
+      "threat_class": "DDOS",
+      "confidence_score": 1.0,
+      "severity": "CRITICAL",
+      "supporting_evidence": "packet_rate=2019.3; byte_rate=91913.3; source_entropy=2.2634; syn_fraction=0.7167; source_entropy_partial=False; rate_window_seconds=10; rate_window_resolution_ms=1000; global_packet_rate=2019.3; syn_fraction_basis=declared_summary_counts; source_count_lower_bound=5; syn_target=destination_tcp; confidence_kind=synthetic-trained model posterior; window_partial=True",
+      "alert_id": "757b256c-a808-42b0-b776-83d4978e8699",
+      "src_ip": "10.1.0.5",
+      "dst_ip": "198.51.100.20",
+      "src_port": 49152,
+      "dst_port": 443,
+      "protocol": 6,
+      "detection_source": "HYBRID",
+      "occurrence_count": 1,
+      "created_at_ms": 1792074762324.0454,
+      "raw_evidence_metrics": {
+        "packet_rate": 2019.3,
+        "byte_rate": 91913.3,
+        "source_entropy": 2.2634224781673495,
+        "syn_fraction": 0.7167335215173575,
+        "source_entropy_partial": false,
+        "rate_window_seconds": 10,
+        "rate_window_resolution_ms": 1000,
+        "global_packet_rate": 2019.3,
+        "syn_fraction_basis": "declared_summary_counts",
+        "source_count_lower_bound": 5,
+        "syn_target": "destination_tcp",
+        "confidence_kind": "synthetic-trained model posterior",
+        "window_partial": true
+      },
+      "sequence": 1
+    },
+    {
+      "timestamp": 1700000156766.8416,
+      "flow_id": "8652f1fa4f4326b1bec21fd534f76a69",
+      "threat_class": "DDOS",
+      "confidence_score": 1.0,
+      "severity": "CRITICAL",
+      "supporting_evidence": "packet_rate=3681.5; byte_rate=190416.3; source_entropy=3.4134; syn_fraction=0.9085; source_entropy_partial=False; rate_window_seconds=10; rate_window_resolution_ms=1000; global_packet_rate=3681.5; syn_fraction_basis=declared_summary_counts; source_count_lower_bound=11; syn_target=destination_tcp; confidence_kind=synthetic-trained model posterior; window_partial=True",
+      "alert_id": "8de0e4c4-158a-4bb6-aa6d-416f0d6028b3",
+      "src_ip": "10.1.3.32",
+      "dst_ip": "198.51.100.20",
+      "src_port": 49152,
+      "dst_port": 443,
+      "protocol": 6,
+      "detection_source": "HYBRID",
+      "occurrence_count": 1,
+      "created_at_ms": 1792074764057.594,
+      "raw_evidence_metrics": {
+        "packet_rate": 3681.5,
+        "byte_rate": 190416.3,
+        "source_entropy": 3.4134196077105567,
+        "syn_fraction": 0.9084883878853728,
+        "source_entropy_partial": false,
+        "rate_window_seconds": 10,
+        "rate_window_resolution_ms": 1000,
+        "global_packet_rate": 3681.5,
+        "syn_fraction_basis": "declared_summary_counts",
+        "source_count_lower_bound": 11,
+        "syn_target": "destination_tcp",
+        "confidence_kind": "synthetic-trained model posterior",
+        "window_partial": true
+      },
+      "sequence": 2
+    },
+    {
+      "timestamp": 1700000260007.266,
+      "flow_id": "71d366ce822238cd3adf5587b9d54f86",
+      "threat_class": "BOTNET_C2",
+      "confidence_score": 1.0,
+      "severity": "HIGH",
+      "supporting_evidence": "iat_mean=2.5023; iat_cv=0.007; history_count=8; destination_count=1; confidence_kind=synthetic-trained model posterior; window_partial=True",
+      "alert_id": "548b3a67-e167-41f7-b2ac-a96978f7352b",
+      "src_ip": "10.0.0.10",
+      "dst_ip": "198.51.100.20",
+      "src_port": 49152,
+      "dst_port": 443,
+      "protocol": 6,
+      "detection_source": "HYBRID",
+      "occurrence_count": 1,
+      "created_at_ms": 1792074769340.554,
+      "raw_evidence_metrics": {
+        "iat_mean": 2.5022531040736604,
+        "iat_cv": 0.007015435659248617,
+        "history_count": 8,
+        "destination_count": 1,
+        "confidence_kind": "synthetic-trained model posterior",
+        "window_partial": true
+      },
+      "sequence": 3
+    },
+    {
+      "timestamp": 1700000290026.6443,
+      "flow_id": "71d366ce822238cd3adf5587b9d54f86",
+      "threat_class": "BOTNET_C2",
+      "confidence_score": 1.0,
+      "severity": "HIGH",
+      "supporting_evidence": "iat_mean=2.5018; iat_cv=0.0082; history_count=20; destination_count=1; confidence_kind=synthetic-trained model posterior; window_partial=True",
+      "alert_id": "bf7663f1-13cc-4719-b0b6-513defb7d98c",
+      "src_ip": "10.0.0.10",
+      "dst_ip": "198.51.100.20",
+      "src_port": 49152,
+      "dst_port": 443,
+      "protocol": 6,
+      "detection_source": "HYBRID",
+      "occurrence_count": 1,
+      "created_at_ms": 1792074770987.1697,
+      "raw_evidence_metrics": {
+        "iat_mean": 2.5018499948601973,
+        "iat_cv": 0.00822944492000567,
+        "history_count": 20,
+        "destination_count": 1,
+        "confidence_kind": "synthetic-trained model posterior",
+        "window_partial": true
+      },
+      "sequence": 4
+    },
+    {
+      "timestamp": 1700000361960.1953,
+      "flow_id": "681b46e77ac7cf0072ac02c94978cd67",
+      "threat_class": "DGA_DOMAINS",
+      "confidence_score": 1.0,
+      "severity": "MEDIUM",
+      "supporting_evidence": "domain_entropy=4.2084; domain_length=32; domain_label_length=27; bigram_surprise=0.8846; confidence_kind=synthetic-trained model posterior; observed_dns_name=nehy3vh5fiobcogi7sl00opfxmn.test; window_partial=True",
+      "alert_id": "74fdb948-fc8e-496b-a8f0-baf62774d08b",
+      "src_ip": "10.0.0.10",
+      "dst_ip": "198.51.100.20",
+      "src_port": 49152,
+      "dst_port": 53,
+      "protocol": 17,
+      "detection_source": "HYBRID",
+      "occurrence_count": 1,
+      "created_at_ms": 1792074774737.7507,
+      "raw_evidence_metrics": {
+        "domain_entropy": 4.208410187268525,
+        "domain_length": 32,
+        "domain_label_length": 27,
+        "bigram_surprise": 0.8846153846153846,
+        "confidence_kind": "synthetic-trained model posterior",
+        "observed_dns_name": "nehy3vh5fiobcogi7sl00opfxmn.test",
+        "window_partial": true
+      },
+      "sequence": 5
+    },
+    {
+      "timestamp": 1700000392020.969,
+      "flow_id": "681b46e77ac7cf0072ac02c94978cd67",
+      "threat_class": "DGA_DOMAINS",
+      "confidence_score": 1.0,
+      "severity": "MEDIUM",
+      "supporting_evidence": "domain_entropy=3.8492; domain_length=28; domain_label_length=23; bigram_surprise=0.8182; confidence_kind=synthetic-trained model posterior; observed_dns_name=bcvze3esisscfuajf9eaolk.test; window_partial=True",
+      "alert_id": "b8ac6f2d-f717-4825-bda6-71b9031e3ff8",
+      "src_ip": "10.0.0.10",
+      "dst_ip": "198.51.100.20",
+      "src_port": 49152,
+      "dst_port": 53,
+      "protocol": 17,
+      "detection_source": "HYBRID",
+      "occurrence_count": 1,
+      "created_at_ms": 1792074776452.5483,
+      "raw_evidence_metrics": {
+        "domain_entropy": 3.8492239123906247,
+        "domain_length": 28,
+        "domain_label_length": 23,
+        "bigram_surprise": 0.8181818181818182,
+        "confidence_kind": "synthetic-trained model posterior",
+        "observed_dns_name": "bcvze3esisscfuajf9eaolk.test",
+        "window_partial": true
+      },
+      "sequence": 6
+    },
+    {
+      "timestamp": 1700000481923.9258,
+      "flow_id": "2c13dbc296b5d132aa2d06bcf146e345",
+      "threat_class": "DNS_TUNNELLING",
+      "confidence_score": 1.0,
+      "severity": "MEDIUM",
+      "supporting_evidence": "domain_length=64; domain_label_length=52; domain_entropy=3.7767; txt_record=1.0; confidence_kind=synthetic-trained model posterior; window_partial=True",
+      "alert_id": "ac5ae3dd-9175-4d82-a06d-0c3101e86203",
+      "src_ip": "10.0.0.10",
+      "dst_ip": "198.51.100.20",
+      "src_port": 49152,
+      "dst_port": 53,
+      "protocol": 17,
+      "detection_source": "HYBRID",
+      "occurrence_count": 1,
+      "created_at_ms": 1792074781010.614,
+      "raw_evidence_metrics": {
+        "domain_length": 64,
+        "domain_label_length": 52,
+        "domain_entropy": 3.776746932333265,
+        "txt_record": 1.0,
+        "confidence_kind": "synthetic-trained model posterior",
+        "window_partial": true
+      },
+      "sequence": 7
+    },
+    {
+      "timestamp": 1700000481923.9258,
+      "flow_id": "2c13dbc296b5d132aa2d06bcf146e345",
+      "threat_class": "DGA_DOMAINS",
+      "confidence_score": 0.8,
+      "severity": "MEDIUM",
+      "supporting_evidence": "domain_entropy=3.7767; domain_length=64; domain_label_length=52; bigram_surprise=0.9216; confidence_kind=heuristic strength; observed_dns_name=64aeafdedc45b0264f37b8812fbdbdf274c50db89e1effb6be8f.tunnel.test; window_partial=True",
+      "alert_id": "9b11aea5-b4a7-4a61-a2dd-0279d6835ab8",
+      "src_ip": "10.0.0.10",
+      "dst_ip": "198.51.100.20",
+      "src_port": 49152,
+      "dst_port": 53,
+      "protocol": 17,
+      "detection_source": "RULE",
+      "occurrence_count": 1,
+      "created_at_ms": 1792074781010.6348,
+      "raw_evidence_metrics": {
+        "domain_entropy": 3.776746932333265,
+        "domain_length": 64,
+        "domain_label_length": 52,
+        "bigram_surprise": 0.9215686274509803,
+        "confidence_kind": "heuristic strength",
+        "observed_dns_name": "64aeafdedc45b0264f37b8812fbdbdf274c50db89e1effb6be8f.tunnel.test",
+        "window_partial": true
+      },
+      "sequence": 8
+    },
+    {
+      "timestamp": 1700000512032.6365,
+      "flow_id": "2c13dbc296b5d132aa2d06bcf146e345",
+      "threat_class": "DNS_TUNNELLING",
+      "confidence_score": 1.0,
+      "severity": "MEDIUM",
+      "supporting_evidence": "domain_length=64; domain_label_length=52; domain_entropy=3.7803; txt_record=1.0; confidence_kind=synthetic-trained model posterior; window_partial=True",
+      "alert_id": "a3e79455-ecc7-47c1-87cf-25ee27042720",
+      "src_ip": "10.0.0.10",
+      "dst_ip": "198.51.100.20",
+      "src_port": 49152,
+      "dst_port": 53,
+      "protocol": 17,
+      "detection_source": "HYBRID",
+      "occurrence_count": 1,
+      "created_at_ms": 1792074782755.5022,
+      "raw_evidence_metrics": {
+        "domain_length": 64,
+        "domain_label_length": 52,
+        "domain_entropy": 3.7802768059879326,
+        "txt_record": 1.0,
+        "confidence_kind": "synthetic-trained model posterior",
+        "window_partial": true
+      },
+      "sequence": 9
+    },
+    {
+      "timestamp": 1700000512032.6365,
+      "flow_id": "2c13dbc296b5d132aa2d06bcf146e345",
+      "threat_class": "DGA_DOMAINS",
+      "confidence_score": 0.8,
+      "severity": "MEDIUM",
+      "supporting_evidence": "domain_entropy=3.7803; domain_length=64; domain_label_length=52; bigram_surprise=0.9804; confidence_kind=heuristic strength; observed_dns_name=ecce88fc8d9eff2781f3a74a6e7a1d85331b15bb3b6321717c69.tunnel.test; window_partial=True",
+      "alert_id": "9f33fc7c-06cd-453c-b82f-1ee6c6cc970f",
+      "src_ip": "10.0.0.10",
+      "dst_ip": "198.51.100.20",
+      "src_port": 49152,
+      "dst_port": 53,
+      "protocol": 17,
+      "detection_source": "RULE",
+      "occurrence_count": 1,
+      "created_at_ms": 1792074782755.5325,
+      "raw_evidence_metrics": {
+        "domain_entropy": 3.7802768059879326,
+        "domain_length": 64,
+        "domain_label_length": 52,
+        "bigram_surprise": 0.9803921568627451,
+        "confidence_kind": "heuristic strength",
+        "observed_dns_name": "ecce88fc8d9eff2781f3a74a6e7a1d85331b15bb3b6321717c69.tunnel.test",
+        "window_partial": true
+      },
+      "sequence": 10
+    },
+    {
+      "timestamp": 1700000602864.0586,
+      "flow_id": "1b7e584df3b6d80a735b707a9c0a8167",
+      "threat_class": "ENCRYPTED_MALWARE",
+      "confidence_score": 0.894,
+      "severity": "HIGH",
+      "supporting_evidence": "encrypted=1.0; fingerprint_risk=1.0; size_cv=0.0019; iat_cv=0.0; confidence_kind=synthetic-trained model posterior; window_partial=True; metadata-only suspicion; lab fingerprint, not proof of malware",
+      "alert_id": "09c8085b-4e79-4806-ad7e-e783c41828f3",
+      "src_ip": "10.0.0.10",
+      "dst_ip": "198.51.100.20",
+      "src_port": 49152,
+      "dst_port": 443,
+      "protocol": 6,
+      "detection_source": "HYBRID",
+      "occurrence_count": 1,
+      "created_at_ms": 1792074787356.8127,
+      "raw_evidence_metrics": {
+        "encrypted": 1.0,
+        "fingerprint_risk": 1.0,
+        "size_cv": 0.0019230769230769232,
+        "iat_cv": 0.0,
+        "confidence_kind": "synthetic-trained model posterior",
+        "window_partial": true
+      },
+      "sequence": 11
+    },
+    {
+      "timestamp": 1700000633888.1648,
+      "flow_id": "1b7e584df3b6d80a735b707a9c0a8167",
+      "threat_class": "ENCRYPTED_MALWARE",
+      "confidence_score": 1.0,
+      "severity": "HIGH",
+      "supporting_evidence": "encrypted=1.0; fingerprint_risk=1.0; size_cv=0.0124; iat_cv=0.4653; confidence_kind=synthetic-trained model posterior; window_partial=True; metadata-only suspicion; lab fingerprint, not proof of malware",
+      "alert_id": "d437556d-ec4f-4130-a9aa-242fbf560f2a",
+      "src_ip": "10.0.0.10",
+      "dst_ip": "198.51.100.20",
+      "src_port": 49152,
+      "dst_port": 443,
+      "protocol": 6,
+      "detection_source": "HYBRID",
+      "occurrence_count": 1,
+      "created_at_ms": 1792074789143.0564,
+      "raw_evidence_metrics": {
+        "encrypted": 1.0,
+        "fingerprint_risk": 1.0,
+        "size_cv": 0.012429880740533151,
+        "iat_cv": 0.4653164245711866,
+        "confidence_kind": "synthetic-trained model posterior",
+        "window_partial": true
+      },
+      "sequence": 12
+    },
+    {
+      "timestamp": 1700000736243.0278,
+      "flow_id": "2a820cefcc5451caf90d39d4d7283f68",
+      "threat_class": "RECONNAISSANCE",
+      "confidence_score": 1.0,
+      "severity": "MEDIUM",
+      "supporting_evidence": "destination_count=10; port_count=10; syn_fraction=1.0; confidence_kind=synthetic-trained model posterior; window_partial=True",
+      "alert_id": "0d314312-1c6a-4fcc-ad56-15452bd8e531",
+      "src_ip": "10.0.0.10",
+      "dst_ip": "198.51.100.14",
+      "src_port": 49152,
+      "dst_port": 1013,
+      "protocol": 6,
+      "detection_source": "ML",
+      "occurrence_count": 1,
+      "created_at_ms": 1792074794436.805,
+      "raw_evidence_metrics": {
+        "destination_count": 10,
+        "port_count": 10,
+        "syn_fraction": 1.0,
+        "confidence_kind": "synthetic-trained model posterior",
+        "window_partial": true
+      },
+      "sequence": 13
+    },
+    {
+      "timestamp": 1700000840568.3157,
+      "flow_id": "a82678326ad595f204b795978a8ba900",
+      "threat_class": "DATA_EXFILTRATION",
+      "confidence_score": 1.0,
+      "severity": "HIGH",
+      "supporting_evidence": "egress_bytes=2607107; observed_byte_ratio=5523.5318; reverse_available=1.0; source_forward_byte_rate_10s=260710.7; source_byte_window_resolution_ms=1000; egress_basis=observed_source_forward_bytes_60s; observed_byte_ratio_status=finite_observed_ratio; confidence_kind=synthetic-trained model posterior; window_partial=True; behavior consistent with possible exfiltration; content and intent unverified",
+      "alert_id": "609523a0-b99f-47eb-9908-2d8fd8501b86",
+      "src_ip": "10.0.0.10",
+      "dst_ip": "198.51.100.20",
+      "src_port": 49152,
+      "dst_port": 443,
+      "protocol": 6,
+      "detection_source": "ML",
+      "occurrence_count": 1,
+      "created_at_ms": 1792074799818.6272,
+      "raw_evidence_metrics": {
+        "egress_bytes": 2607107,
+        "observed_byte_ratio": 5523.531779661017,
+        "reverse_available": 1.0,
+        "source_forward_byte_rate_10s": 260710.7,
+        "source_byte_window_resolution_ms": 1000,
+        "egress_basis": "observed_source_forward_bytes_60s",
+        "observed_byte_ratio_status": "finite_observed_ratio",
+        "confidence_kind": "synthetic-trained model posterior",
+        "window_partial": true
+      },
+      "sequence": 14
+    },
+    {
+      "timestamp": 1700000870958.7927,
+      "flow_id": "a82678326ad595f204b795978a8ba900",
+      "threat_class": "DATA_EXFILTRATION",
+      "confidence_score": 1.0,
+      "severity": "HIGH",
+      "supporting_evidence": "egress_bytes=64225303; observed_byte_ratio=4944.7494; reverse_available=1.0; source_forward_byte_rate_10s=1762289.2; source_byte_window_resolution_ms=1000; egress_basis=observed_source_forward_bytes_60s; observed_byte_ratio_status=finite_observed_ratio; confidence_kind=synthetic-trained model posterior; window_partial=True; behavior consistent with possible exfiltration; content and intent unverified",
+      "alert_id": "1fc2954b-147a-47cd-9488-7a65563f15e0",
+      "src_ip": "10.0.0.10",
+      "dst_ip": "198.51.100.20",
+      "src_port": 49152,
+      "dst_port": 443,
+      "protocol": 6,
+      "detection_source": "HYBRID",
+      "occurrence_count": 1,
+      "created_at_ms": 1792074801597.927,
+      "raw_evidence_metrics": {
+        "egress_bytes": 64225303,
+        "observed_byte_ratio": 4944.7494356659145,
+        "reverse_available": 1.0,
+        "source_forward_byte_rate_10s": 1762289.2,
+        "source_byte_window_resolution_ms": 1000,
+        "egress_basis": "observed_source_forward_bytes_60s",
+        "observed_byte_ratio_status": "finite_observed_ratio",
+        "confidence_kind": "synthetic-trained model posterior",
+        "window_partial": true
+      },
+      "sequence": 15
+    }
+  ],
+  "sqlite_matches_api": true,
+  "unique_alert_ids": true,
+  "incremental_alerts_before_completion": true
+}

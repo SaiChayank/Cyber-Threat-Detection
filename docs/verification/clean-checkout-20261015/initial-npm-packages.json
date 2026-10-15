@@ -1,0 +1,157 @@
+{
+  "version": "1.0.0",
+  "name": "univect-ps26145",
+  "problems": [
+    "extraneous: @emnapi/runtime@1.11.3 C:\\Users\\Saich\\AppData\\Local\\Temp\\univect-clean-4cbc187dd401465fbf098a14efb9b37a\\repository\\node_modules\\@emnapi\\runtime",
+    "extraneous: @img/sharp-wasm32@0.35.5 C:\\Users\\Saich\\AppData\\Local\\Temp\\univect-clean-4cbc187dd401465fbf098a14efb9b37a\\repository\\node_modules\\@img\\sharp-wasm32",
+    "invalid: typescript@6.0.3 C:\\Users\\Saich\\AppData\\Local\\Temp\\univect-clean-4cbc187dd401465fbf098a14efb9b37a\\repository\\frontend\\node_modules\\typescript"
+  ],
+  "dependencies": {
+    "@emnapi/runtime": {
+      "version": "1.11.3",
+      "resolved": "https://registry.npmjs.org/@emnapi/runtime/-/runtime-1.11.3.tgz",
+      "overridden": false,
+      "extraneous": true,
+      "problems": [
+        "extraneous: @emnapi/runtime@1.11.3 C:\\Users\\Saich\\AppData\\Local\\Temp\\univect-clean-4cbc187dd401465fbf098a14efb9b37a\\repository\\node_modules\\@emnapi\\runtime"
+      ]
+    },
+    "@img/sharp-wasm32": {
+      "version": "0.35.5",
+      "resolved": "https://registry.npmjs.org/@img/sharp-wasm32/-/sharp-wasm32-0.35.5.tgz",
+      "overridden": false,
+      "extraneous": true,
+      "problems": [
+        "extraneous: @img/sharp-wasm32@0.35.5 C:\\Users\\Saich\\AppData\\Local\\Temp\\univect-clean-4cbc187dd401465fbf098a14efb9b37a\\repository\\node_modules\\@img\\sharp-wasm32"
+      ]
+    },
+    "frontend": {
+      "version": "0.0.0",
+      "resolved": "file:../frontend",
+      "overridden": false,
+      "dependencies": {
+        "@hookform/resolvers": {
+          "version": "5.9.1",
+          "resolved": "https://registry.npmjs.org/@hookform/resolvers/-/resolvers-5.9.1.tgz",
+          "overridden": false
+        },
+        "@radix-ui/react-dialog": {
+          "version": "1.1.23",
+          "resolved": "https://registry.npmjs.org/@radix-ui/react-dialog/-/react-dialog-1.1.23.tgz",
+          "overridden": false
+        },
+        "@radix-ui/react-tabs": {
+          "version": "1.1.21",
+          "resolved": "https://registry.npmjs.org/@radix-ui/react-tabs/-/react-tabs-1.1.21.tgz",
+          "overridden": false
+        },
+        "@radix-ui/react-tooltip": {
+          "version": "1.2.16",
+          "resolved": "https://registry.npmjs.org/@radix-ui/react-tooltip/-/react-tooltip-1.2.16.tgz",
+          "overridden": false
+        },
+        "@tailwindcss/postcss": {
+          "version": "4.3.3",
+          "resolved": "https://registry.npmjs.org/@tailwindcss/postcss/-/postcss-4.3.3.tgz",
+          "overridden": false
+        },
+        "@types/node": {
+          "version": "22.20.4",
+          "resolved": "https://registry.npmjs.org/@types/node/-/node-22.20.4.tgz",
+          "overridden": false
+        },
+        "@types/react-dom": {
+          "version": "19.3.0",
+          "resolved": "https://registry.npmjs.org/@types/react-dom/-/react-dom-19.3.0.tgz",
+          "overridden": false
+        },
+        "@types/react": {
+          "version": "19.3.0",
+          "resolved": "https://registry.npmjs.org/@types/react/-/react-19.3.0.tgz",
+          "overridden": false
+        },
+        "@types/three": {
+          "version": "0.186.0",
+          "overridden": false
+        },
+        "clsx": {
+          "version": "2.1.1",
+          "resolved": "https://registry.npmjs.org/clsx/-/clsx-2.1.1.tgz",
+          "overridden": false
+        },
+        "lucide-react": {
+          "version": "0.577.0",
+          "resolved": "https://registry.npmjs.org/lucide-react/-/lucide-react-0.577.0.tgz",
+          "overridden": false
+        },
+        "motion": {
+          "version": "12.43.0",
+          "resolved": "https://registry.npmjs.org/motion/-/motion-12.43.0.tgz",
+          "overridden": false
+        },
+        "next": {
+          "version": "16.3.6",
+          "resolved": "https://registry.npmjs.org/next/-/next-16.3.6.tgz",
+          "overridden": false
+        },
+        "react-dom": {
+          "version": "19.3.0",
+          "resolved": "https://registry.npmjs.org/react-dom/-/react-dom-19.3.0.tgz",
+          "overridden": false
+        },
+        "react-hook-form": {
+          "version": "7.89.0",
+          "resolved": "https://registry.npmjs.org/react-hook-form/-/react-hook-form-7.89.0.tgz",
+          "overridden": false
+        },
+        "react": {
+          "version": "19.3.0",
+          "resolved": "https://registry.npmjs.org/react/-/react-19.3.0.tgz",
+          "overridden": false
+        },
+        "recharts": {
+          "version": "3.10.1",
+          "resolved": "https://registry.npmjs.org/recharts/-/recharts-3.10.1.tgz",
+          "overridden": false
+        },
+        "tailwind-merge": {
+          "version": "3.7.0",
+          "resolved": "https://registry.npmjs.org/tailwind-merge/-/tailwind-merge-3.7.0.tgz",
+          "overridden": false
+        },
+        "tailwindcss": {
+          "version": "4.3.3",
+          "resolved": "https://registry.npmjs.org/tailwindcss/-/tailwindcss-4.3.3.tgz",
+          "overridden": false
+        },
+        "three": {
+          "version": "0.186.1",
+          "overridden": false
+        },
+        "typescript": {
+          "version": "6.0.3",
+          "overridden": false,
+          "invalid": "\"~5.9.3\" from frontend",
+          "problems": [
+            "invalid: typescript@6.0.3 C:\\Users\\Saich\\AppData\\Local\\Temp\\univect-clean-4cbc187dd401465fbf098a14efb9b37a\\repository\\frontend\\node_modules\\typescript"
+          ]
+        },
+        "zod": {
+          "version": "4.6.5",
+          "resolved": "https://registry.npmjs.org/zod/-/zod-4.6.5.tgz",
+          "overridden": false
+        }
+      }
+    },
+    "prettier": {
+      "version": "3.9.9",
+      "resolved": "https://registry.npmjs.org/prettier/-/prettier-3.9.9.tgz",
+      "overridden": false
+    }
+  },
+  "error": {
+    "code": "ELSPROBLEMS",
+    "summary": "extraneous: @emnapi/runtime@1.11.3 C:\\Users\\Saich\\AppData\\Local\\Temp\\univect-clean-4cbc187dd401465fbf098a14efb9b37a\\repository\\node_modules\\@emnapi\\runtime\nextraneous: @img/sharp-wasm32@0.35.5 C:\\Users\\Saich\\AppData\\Local\\Temp\\univect-clean-4cbc187dd401465fbf098a14efb9b37a\\repository\\node_modules\\@img\\sharp-wasm32\ninvalid: typescript@6.0.3 C:\\Users\\Saich\\AppData\\Local\\Temp\\univect-clean-4cbc187dd401465fbf098a14efb9b37a\\repository\\frontend\\node_modules\\typescript",
+    "detail": ""
+  }
+}

@@ -1,0 +1,437 @@
+- link "Skip to content":
+  - /url: "#main-content"
+- alert: Threat monitor · Univect
+- banner:
+  - link "Univect home":
+    - /url: /
+    - generic: univect.
+  - navigation "Monitor navigation":
+    - link "Overview":
+      - /url: /monitor#overview
+      - text: Overview
+    - link "Traffic replay":
+      - /url: /monitor#replay
+    - link "Alert stream":
+      - /url: /monitor#alerts
+    - link "Detection coverage":
+      - /url: /monitor#coverage
+  - link "API reference":
+    - /url: /docs
+    - text: API reference
+  - link "Back to platform":
+    - /url: /
+    - text: Back to platform
+  - generic: UNIVECT / MONITOR
+  - generic: Passive sensor
+  - generic: Read-only · Metadata only · No response path
+- main:
+  - paragraph:
+    - text: Observation workspace
+  - heading "Your network, in view." [level=1]
+  - paragraph: Set the stream. Follow the activity. Investigate the evidence.
+  - status:
+    - text: Stream connected
+    - generic: /
+    - generic: LOCAL ENCLAVE
+  - paragraph: Controlled testing
+  - heading "Traffic replay complete" [level=2]:
+    - text: Traffic replay
+    - generic: complete
+  - paragraph: Run a scenario or inspect a passive capture.
+  - generic: Scenario
+  - combobox "Scenario":
+    - option "All threat scenarios" [selected]
+    - option "Benign baseline"
+    - option "DDoS & floods"
+    - option "Botnet beaconing"
+    - option "DGA domains"
+    - option "DNS tunnelling"
+    - option "Encrypted sessions"
+    - option "Reconnaissance"
+    - option "Data exfiltration"
+    - 'option "CIC DNS: benign capture (not downloaded)" [disabled]'
+    - 'option "CIC DNS: light exfiltration capture (not downloaded)" [disabled]'
+    - 'option "CIC DNS: heavy exfiltration capture (not downloaded)" [disabled]'
+    - 'option "UMUDGA: real domain strings, simulated DNS stream (not downloaded)" [disabled]'
+  - generic: Replay speed
+  - combobox "Replay speed":
+    - option "1× speed"
+    - option "20× speed" [selected]
+    - option "100× speed"
+    - option "1000× speed"
+  - button "Start replay":
+    - text: Start replay
+  - button "Stop" [disabled]:
+    - text: Stop
+  - button "Replay a PCAP capture"
+  - text: PCAP
+  - text: 0 public-source presets ready
+  - generic: Classic Ethernet PCAP · 16 MiB maximum
+  - generic: Replay speed scales recorded event intervals
+  - status:
+    - generic: Replay started. Alerts appear as events are processed.
+    - button "Dismiss replay notification":
+  - region "Live telemetry":
+    - paragraph: EVENTS PROCESSED
+    - button "About events processed":
+    - strong:
+      - generic: "256"
+      - text: "256"
+    - text: Current replay · incremental inference
+    - paragraph: ALERTS RECORDED
+    - button "About alerts recorded":
+    - strong:
+      - generic: "15"
+      - text: "15"
+    - text: Persistent history · all replay runs
+    - paragraph: PROCESSING P95
+    - button "About processing p95":
+    - strong:
+      - generic: "0.72"
+      - text: "0.72"
+    - generic: ms
+    - text: Feature extraction + inference
+    - paragraph: OBSERVED RATE
+    - button "About observed rate":
+    - strong:
+      - generic: "0"
+      - text: "0"
+    - generic: events/s
+    - text: 33 active sources · complete
+  - paragraph:
+    - text: Ingest telemetry
+  - heading "Observed event rate" [level=2]
+  - paragraph: 24 recent samples · local UTC clock
+  - generic: "0"
+  - text: "0"
+  - generic: events / sec
+  - generic "Observed event rate chart":
+    - application:
+      - generic: 14:32:52
+      - generic: 14:32:57
+      - generic: 14:33:01
+      - generic: 14:33:06
+      - generic: 14:33:10
+      - generic: 14:33:15
+      - generic: 14:33:19
+      - generic: 14:33:25
+      - generic: "0"
+      - generic: "5"
+      - generic: "10"
+      - generic: "15"
+      - generic: "20"
+  - generic: "Replay state: complete"
+  - generic: Packet records and flow summaries are different units.
+  - paragraph: Collection boundary
+  - generic: LAB PROTOTYPE
+  - heading "Passive by design." [level=2]
+  - paragraph: Mirror feed
+  - paragraph: Read-only input
+  - generic: Enclave
+  - term:
+    - text: Active sources
+  - definition:
+    - generic: "33"
+    - text: "33"
+  - term:
+    - text: Late events dropped
+  - definition:
+    - generic: "0"
+    - text: "0"
+  - term:
+    - text: State evictions
+  - definition:
+    - generic: "0"
+    - text: "0"
+  - paragraph: Metadata only. No payload decryption, path to the source or network actions.
+  - paragraph: Investigation queue
+  - heading "Alert stream LIVE" [level=2]:
+    - text: Alert stream
+    - generic: LIVE
+  - paragraph: Inspect a detection to follow its observed evidence.
+  - generic: "15"
+  - text: "15"
+  - generic: loaded signals
+  - button "Hold queue":
+    - text: Hold queue
+  - button "Export JSON":
+    - text: Export JSON
+  - searchbox "Search alerts"
+  - combobox "Filter threat class":
+    - option "All threats" [selected]
+    - option "DDoS & floods"
+    - option "Botnet beaconing"
+    - option "DGA domains"
+    - option "DNS tunnelling"
+    - option "Encrypted sessions"
+    - option "Reconnaissance"
+    - option "Data exfiltration"
+  - combobox "Filter severity":
+    - option "All severities" [selected]
+    - option "CRITICAL"
+    - option "HIGH"
+    - option "MEDIUM"
+    - option "LOW"
+  - combobox "Filter detection engine":
+    - option "All engines" [selected]
+    - option "HYBRID"
+    - option "ML"
+    - option "RULE"
+  - region "Alert results":
+    - table "Newest recorded detections with observed event time, threat, connection, severity, confidence and detection engine. Use Inspect to view evidence.":
+      - caption: Newest recorded detections with observed event time, threat, connection, severity, confidence and detection engine. Use Inspect to view evidence.
+      - rowgroup:
+        - row "OBSERVED TIME (UTC) THREAT SOURCE → DESTINATION SEVERITY CONFIDENCE ENGINE Investigation":
+          - columnheader "OBSERVED TIME (UTC)"
+          - columnheader "THREAT"
+          - columnheader "SOURCE → DESTINATION"
+          - columnheader "SEVERITY"
+          - columnheader "CONFIDENCE"
+          - columnheader "ENGINE"
+          - columnheader "Investigation":
+            - generic: Investigation
+      - rowgroup:
+        - row "22:27:50 2023-11-14 Data exfiltration 10.0.0.10 198.51.100.20 HIGH 100.0% HYBRID Inspect Data exfiltration alert 15":
+          - cell "22:27:50 2023-11-14":
+            - text: 22:27:50
+            - generic: 2023-11-14
+          - cell "Data exfiltration"
+          - cell "10.0.0.10 198.51.100.20":
+            - text: 10.0.0.10
+            - text: 198.51.100.20
+          - cell "HIGH":
+            - generic: HIGH
+          - cell "100.0%":
+            - generic: 100.0%
+          - cell "HYBRID"
+          - cell "Inspect Data exfiltration alert 15":
+            - button "Inspect Data exfiltration alert 15":
+              - text: Inspect
+        - row "22:27:20 2023-11-14 Data exfiltration 10.0.0.10 198.51.100.20 HIGH 100.0% ML Inspect Data exfiltration alert 14":
+          - cell "22:27:20 2023-11-14":
+            - text: 22:27:20
+            - generic: 2023-11-14
+          - cell "Data exfiltration"
+          - cell "10.0.0.10 198.51.100.20":
+            - text: 10.0.0.10
+            - text: 198.51.100.20
+          - cell "HIGH":
+            - generic: HIGH
+          - cell "100.0%":
+            - generic: 100.0%
+          - cell "ML"
+          - cell "Inspect Data exfiltration alert 14":
+            - button "Inspect Data exfiltration alert 14":
+              - text: Inspect
+        - row "22:25:36 2023-11-14 Reconnaissance 10.0.0.10 198.51.100.14 MEDIUM 100.0% ML Inspect Reconnaissance alert 13":
+          - cell "22:25:36 2023-11-14":
+            - text: 22:25:36
+            - generic: 2023-11-14
+          - cell "Reconnaissance"
+          - cell "10.0.0.10 198.51.100.14":
+            - text: 10.0.0.10
+            - text: 198.51.100.14
+          - cell "MEDIUM":
+            - generic: MEDIUM
+          - cell "100.0%":
+            - generic: 100.0%
+          - cell "ML"
+          - cell "Inspect Reconnaissance alert 13":
+            - button "Inspect Reconnaissance alert 13":
+              - text: Inspect
+        - row "22:23:53 2023-11-14 Encrypted sessions 10.0.0.10 198.51.100.20 HIGH 100.0% HYBRID Inspect Encrypted sessions alert 12":
+          - cell "22:23:53 2023-11-14":
+            - text: 22:23:53
+            - generic: 2023-11-14
+          - cell "Encrypted sessions"
+          - cell "10.0.0.10 198.51.100.20":
+            - text: 10.0.0.10
+            - text: 198.51.100.20
+          - cell "HIGH":
+            - generic: HIGH
+          - cell "100.0%":
+            - generic: 100.0%
+          - cell "HYBRID"
+          - cell "Inspect Encrypted sessions alert 12":
+            - button "Inspect Encrypted sessions alert 12":
+              - text: Inspect
+        - row "22:23:22 2023-11-14 Encrypted sessions 10.0.0.10 198.51.100.20 HIGH 89.4% HYBRID Inspect Encrypted sessions alert 11":
+          - cell "22:23:22 2023-11-14":
+            - text: 22:23:22
+            - generic: 2023-11-14
+          - cell "Encrypted sessions"
+          - cell "10.0.0.10 198.51.100.20":
+            - text: 10.0.0.10
+            - text: 198.51.100.20
+          - cell "HIGH":
+            - generic: HIGH
+          - cell "89.4%":
+            - generic: 89.4%
+          - cell "HYBRID"
+          - cell "Inspect Encrypted sessions alert 11":
+            - button "Inspect Encrypted sessions alert 11":
+              - text: Inspect
+        - row "22:21:52 2023-11-14 DGA domains 10.0.0.10 198.51.100.20 MEDIUM 80.0% RULE Inspect DGA domains alert 10":
+          - cell "22:21:52 2023-11-14":
+            - text: 22:21:52
+            - generic: 2023-11-14
+          - cell "DGA domains"
+          - cell "10.0.0.10 198.51.100.20":
+            - text: 10.0.0.10
+            - text: 198.51.100.20
+          - cell "MEDIUM":
+            - generic: MEDIUM
+          - cell "80.0%":
+            - generic: 80.0%
+          - cell "RULE"
+          - cell "Inspect DGA domains alert 10":
+            - button "Inspect DGA domains alert 10":
+              - text: Inspect
+        - row "22:21:52 2023-11-14 DNS tunnelling 10.0.0.10 198.51.100.20 MEDIUM 100.0% HYBRID Inspect DNS tunnelling alert 9":
+          - cell "22:21:52 2023-11-14":
+            - text: 22:21:52
+            - generic: 2023-11-14
+          - cell "DNS tunnelling"
+          - cell "10.0.0.10 198.51.100.20":
+            - text: 10.0.0.10
+            - text: 198.51.100.20
+          - cell "MEDIUM":
+            - generic: MEDIUM
+          - cell "100.0%":
+            - generic: 100.0%
+          - cell "HYBRID"
+          - cell "Inspect DNS tunnelling alert 9":
+            - button "Inspect DNS tunnelling alert 9":
+              - text: Inspect
+        - row "22:21:21 2023-11-14 DGA domains 10.0.0.10 198.51.100.20 MEDIUM 80.0% RULE Inspect DGA domains alert 8":
+          - cell "22:21:21 2023-11-14":
+            - text: 22:21:21
+            - generic: 2023-11-14
+          - cell "DGA domains"
+          - cell "10.0.0.10 198.51.100.20":
+            - text: 10.0.0.10
+            - text: 198.51.100.20
+          - cell "MEDIUM":
+            - generic: MEDIUM
+          - cell "80.0%":
+            - generic: 80.0%
+          - cell "RULE"
+          - cell "Inspect DGA domains alert 8":
+            - button "Inspect DGA domains alert 8":
+              - text: Inspect
+        - row "22:21:21 2023-11-14 DNS tunnelling 10.0.0.10 198.51.100.20 MEDIUM 100.0% HYBRID Inspect DNS tunnelling alert 7":
+          - cell "22:21:21 2023-11-14":
+            - text: 22:21:21
+            - generic: 2023-11-14
+          - cell "DNS tunnelling"
+          - cell "10.0.0.10 198.51.100.20":
+            - text: 10.0.0.10
+            - text: 198.51.100.20
+          - cell "MEDIUM":
+            - generic: MEDIUM
+          - cell "100.0%":
+            - generic: 100.0%
+          - cell "HYBRID"
+          - cell "Inspect DNS tunnelling alert 7":
+            - button "Inspect DNS tunnelling alert 7":
+              - text: Inspect
+        - row "22:19:52 2023-11-14 DGA domains 10.0.0.10 198.51.100.20 MEDIUM 100.0% HYBRID Inspect DGA domains alert 6":
+          - cell "22:19:52 2023-11-14":
+            - text: 22:19:52
+            - generic: 2023-11-14
+          - cell "DGA domains"
+          - cell "10.0.0.10 198.51.100.20":
+            - text: 10.0.0.10
+            - text: 198.51.100.20
+          - cell "MEDIUM":
+            - generic: MEDIUM
+          - cell "100.0%":
+            - generic: 100.0%
+          - cell "HYBRID"
+          - cell "Inspect DGA domains alert 6":
+            - button "Inspect DGA domains alert 6":
+              - text: Inspect
+  - generic: 15 matching / 15 loaded · Latest 200 · Newest first
+  - generic: 0 late events dropped
+  - button "Previous alert page" [disabled]:
+  - generic: 1 / 2
+  - button "Next alert page":
+  - paragraph: Detection engines
+  - heading "Threat coverage" [level=2]
+  - generic: 7 detection modules
+  - generic: DDoS & floods
+  - strong:
+    - generic: "2"
+    - text: "2"
+  - generic: Botnet beaconing
+  - strong:
+    - generic: "2"
+    - text: "2"
+  - generic: DGA domains
+  - strong:
+    - generic: "4"
+    - text: "4"
+  - generic: DNS tunnelling
+  - strong:
+    - generic: "2"
+    - text: "2"
+  - generic: Encrypted sessions
+  - strong:
+    - generic: "2"
+    - text: "2"
+  - generic: Reconnaissance
+  - strong:
+    - generic: "1"
+    - text: "1"
+  - generic: Data exfiltration
+  - strong:
+    - generic: "2"
+    - text: "2"
+  - paragraph: Six required categories. Bars show each module’s share of recorded alerts, not accuracy. Coverage describes implementation, without implying validated real-world performance.
+  - button "Public-source dataset readiness 0/4 ready":
+    - generic: Public-source dataset readiness
+    - generic: 0/4 ready
+  - paragraph: Saved benchmark · synthetic workload
+  - heading "Performance, with context." [level=2]
+  - paragraph: Measured processing + persistence
+  - paragraph: 4,168events/s
+  - paragraph: Processing + persistence p95
+  - paragraph: 0.96ms
+  - paragraph: Stated test target
+  - paragraph: 2,000events/s
+  - paragraph: Throughput and latency targets met
+  - paragraph:
+    - text: 20,000 events · 4.80 seconds · Python 3.13.5
+    - text: Repeated eight-class synthetic metadata sessions with SQLite alert commits. Core event processing + persistence; excludes capture, HTTP, SSE and rendering. This saved result does not measure browser delivery or real deployment capacity.
+  - paragraph: Model scores and heuristic strengths are not calibrated probabilities of compromise. Public-source validation remains limited, including incomplete DGA coverage and unvalidated encrypted-malware detection. Evidence and analyst review are essential.
+- contentinfo:
+  - link "Univect home":
+    - /url: /
+    - generic: univect.
+  - paragraph:
+    - text: One-way traffic. Deeper insight.
+    - text: Passive threat intelligence with evidence at its core.
+  - text: PS26145 · Research prototype
+  - navigation "Footer navigation":
+    - paragraph: Explore
+    - link "Platform":
+      - /url: /#platform
+    - link "Detection":
+      - /url: /#detection
+    - link "How it works":
+      - /url: /#architecture
+    - link "Threat monitor":
+      - /url: /monitor
+  - paragraph: Project & resources
+  - link "Source repository":
+    - /url: https://github.com/SaiChayank/Cyber-Threat-Detection
+    - text: Source repository
+  - link "API reference":
+    - /url: /docs
+    - text: API reference
+  - link "Report an issue":
+    - /url: https://github.com/SaiChayank/Cyber-Threat-Detection/issues
+    - text: Report an issue
+  - generic: © 2026 Univect · Project by SaiChayank
+  - generic: Read-only observation · No inline blocking · No payload decryption
+- generic: 14:33:25
