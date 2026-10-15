@@ -1,0 +1,152 @@
+[
+  {
+    "path": "PCAPs/DoHBenign-NonDoH",
+    "url": "https://cicresearch.ca/CICDataset/DoHBrw-2020/browse.php?p=PCAPs%2FDoHBenign-NonDoH",
+    "entries": [
+      {
+        "href": "https://cicresearch.ca/CICDataset/DoHBrw-2020/browse.php?p=PCAPs",
+        "text": "\u2b05 Up"
+      },
+      {
+        "href": "https://cicresearch.ca/CICDataset/DoHBrw-2020/download.php?file=PCAPs%2FDoHBenign-NonDoH%2FBenignDoH-NonDoH-CSVs.zip",
+        "text": "Download"
+      },
+      {
+        "href": "https://cicresearch.ca/CICDataset/DoHBrw-2020/download.php?file=PCAPs%2FDoHBenign-NonDoH%2FBenignDoH_NonDoH-Chrome-AdGuard.zip",
+        "text": "Download"
+      },
+      {
+        "href": "https://cicresearch.ca/CICDataset/DoHBrw-2020/download.php?file=PCAPs%2FDoHBenign-NonDoH%2FBenignDoH_NonDoH-Chrome-Cloudflare.zip",
+        "text": "Download"
+      },
+      {
+        "href": "https://cicresearch.ca/CICDataset/DoHBrw-2020/download.php?file=PCAPs%2FDoHBenign-NonDoH%2FBenignDoH_NonDoH-Chrome-Google.zip",
+        "text": "Download"
+      },
+      {
+        "href": "https://cicresearch.ca/CICDataset/DoHBrw-2020/download.php?file=PCAPs%2FDoHBenign-NonDoH%2FBenignDoH_NonDoH-Chrome-Quad9.zip",
+        "text": "Download"
+      },
+      {
+        "href": "https://cicresearch.ca/CICDataset/DoHBrw-2020/download.php?file=PCAPs%2FDoHBenign-NonDoH%2FBenignDoH_NonDoH-Firefox-AdGuard.zip",
+        "text": "Download"
+      },
+      {
+        "href": "https://cicresearch.ca/CICDataset/DoHBrw-2020/download.php?file=PCAPs%2FDoHBenign-NonDoH%2FBenignDoH_NonDoH-Firefox-CloudFlare.zip",
+        "text": "Download"
+      },
+      {
+        "href": "https://cicresearch.ca/CICDataset/DoHBrw-2020/download.php?file=PCAPs%2FDoHBenign-NonDoH%2FBenignDoH_NonDoH-Firefox-Google.zip",
+        "text": "Download"
+      },
+      {
+        "href": "https://cicresearch.ca/CICDataset/DoHBrw-2020/download.php?file=PCAPs%2FDoHBenign-NonDoH%2FBenignDoH_NonDoH-Firefox-Quad9.zip",
+        "text": "Download"
+      }
+    ],
+    "text": " \n \n \n   \n   Browse DoHBrw-2020 \n \n \n Browse dataset: DoHBrw-2020 \n\n \n  Folder:  /PCAPs/DoHBenign-NonDoH \n \n\n \n  \u2b05 Up    \ud83d\udcc4 BenignDoH-NonDoH-CSVs.zip \u2014  Download   \ud83d\udcc4 BenignDoH_NonDoH-Chrome-AdGuard.zip \u2014  Download   \ud83d\udcc4 BenignDoH_NonDoH-Chrome-Cloudflare.zip \u2014  Download   \ud83d\udcc4 BenignDoH_NonDoH-Chrome-Google.zip \u2014  Download   \ud83d\udcc4 BenignDoH_NonDoH-Chrome-Quad9.zip \u2014  Download   \ud83d\udcc4 BenignDoH_NonDoH-Firefox-AdGuard.zip \u2014  Download   \ud83d\udcc4 BenignDoH_NonDoH-Firefox-CloudFlare.zip \u2014  Download   \ud83d\udcc4 BenignDoH_NonDoH-Firefox-Google.zip \u2014  Download   \ud83d\udcc4 BenignDoH_NonDoH-Firefox-Quad9.zip \u2014  Download    \n \n \n\n"
+  },
+  {
+    "path": "PCAPs/DoHMalicious",
+    "url": "https://cicresearch.ca/CICDataset/DoHBrw-2020/browse.php?p=PCAPs%2FDoHMalicious",
+    "entries": [
+      {
+        "href": "https://cicresearch.ca/CICDataset/DoHBrw-2020/browse.php?p=PCAPs",
+        "text": "\u2b05 Up"
+      },
+      {
+        "href": "https://cicresearch.ca/CICDataset/DoHBrw-2020/download.php?file=PCAPs%2FDoHMalicious%2FMaliciousDoH-dns2tcp-Pcap-001_600.zip",
+        "text": "Download"
+      },
+      {
+        "href": "https://cicresearch.ca/CICDataset/DoHBrw-2020/download.php?file=PCAPs%2FDoHMalicious%2FMaliciousDoH-dns2tcp-Pcap-1202_1802.zip",
+        "text": "Download"
+      },
+      {
+        "href": "https://cicresearch.ca/CICDataset/DoHBrw-2020/download.php?file=PCAPs%2FDoHMalicious%2FMaliciousDoH-dns2tcp-Pcap-1802_2402.zip",
+        "text": "Download"
+      },
+      {
+        "href": "https://cicresearch.ca/CICDataset/DoHBrw-2020/download.php?file=PCAPs%2FDoHMalicious%2FMaliciousDoH-dns2tcp-Pcap-2403-2803.zip",
+        "text": "Download"
+      },
+      {
+        "href": "https://cicresearch.ca/CICDataset/DoHBrw-2020/download.php?file=PCAPs%2FDoHMalicious%2FMaliciousDoH-dns2tcp-Pcap-601_1201.zip",
+        "text": "Download"
+      },
+      {
+        "href": "https://cicresearch.ca/CICDataset/DoHBrw-2020/download.php?file=PCAPs%2FDoHMalicious%2FMaliciousDoH-dnscat2-Pcap-001-600.zip",
+        "text": "Download"
+      },
+      {
+        "href": "https://cicresearch.ca/CICDataset/DoHBrw-2020/download.php?file=PCAPs%2FDoHMalicious%2FMaliciousDoH-dnscat2-Pcap-1202_1802.zip",
+        "text": "Download"
+      },
+      {
+        "href": "https://cicresearch.ca/CICDataset/DoHBrw-2020/download.php?file=PCAPs%2FDoHMalicious%2FMaliciousDoH-dnscat2-Pcap-1803_2403.zip",
+        "text": "Download"
+      },
+      {
+        "href": "https://cicresearch.ca/CICDataset/DoHBrw-2020/download.php?file=PCAPs%2FDoHMalicious%2FMaliciousDoH-dnscat2-Pcap-2404_3004.zip",
+        "text": "Download"
+      },
+      {
+        "href": "https://cicresearch.ca/CICDataset/DoHBrw-2020/download.php?file=PCAPs%2FDoHMalicious%2FMaliciousDoH-dnscat2-Pcap-3005_3605.zip",
+        "text": "Download"
+      },
+      {
+        "href": "https://cicresearch.ca/CICDataset/DoHBrw-2020/download.php?file=PCAPs%2FDoHMalicious%2FMaliciousDoH-dnscat2-Pcap-3606_4206.zip",
+        "text": "Download"
+      },
+      {
+        "href": "https://cicresearch.ca/CICDataset/DoHBrw-2020/download.php?file=PCAPs%2FDoHMalicious%2FMaliciousDoH-dnscat2-Pcap-4207_4807.zip",
+        "text": "Download"
+      },
+      {
+        "href": "https://cicresearch.ca/CICDataset/DoHBrw-2020/download.php?file=PCAPs%2FDoHMalicious%2FMaliciousDoH-dnscat2-Pcap-601_1201.zip",
+        "text": "Download"
+      },
+      {
+        "href": "https://cicresearch.ca/CICDataset/DoHBrw-2020/download.php?file=PCAPs%2FDoHMalicious%2FMaliciousDoH-iodine-pcap-001_600.zip",
+        "text": "Download"
+      },
+      {
+        "href": "https://cicresearch.ca/CICDataset/DoHBrw-2020/download.php?file=PCAPs%2FDoHMalicious%2FMaliciousDoH-iodine-pcap-1202_1802.zip",
+        "text": "Download"
+      },
+      {
+        "href": "https://cicresearch.ca/CICDataset/DoHBrw-2020/download.php?file=PCAPs%2FDoHMalicious%2FMaliciousDoH-iodine-pcap-1803_2403.zip",
+        "text": "Download"
+      },
+      {
+        "href": "https://cicresearch.ca/CICDataset/DoHBrw-2020/download.php?file=PCAPs%2FDoHMalicious%2FMaliciousDoH-iodine-pcap-2404_3004.zip",
+        "text": "Download"
+      },
+      {
+        "href": "https://cicresearch.ca/CICDataset/DoHBrw-2020/download.php?file=PCAPs%2FDoHMalicious%2FMaliciousDoH-iodine-pcap-3005_3605.zip",
+        "text": "Download"
+      },
+      {
+        "href": "https://cicresearch.ca/CICDataset/DoHBrw-2020/download.php?file=PCAPs%2FDoHMalicious%2FMaliciousDoH-iodine-pcap-3606_4206.zip",
+        "text": "Download"
+      },
+      {
+        "href": "https://cicresearch.ca/CICDataset/DoHBrw-2020/download.php?file=PCAPs%2FDoHMalicious%2FMaliciousDoH-iodine-pcap-4207_4807.zip",
+        "text": "Download"
+      },
+      {
+        "href": "https://cicresearch.ca/CICDataset/DoHBrw-2020/download.php?file=PCAPs%2FDoHMalicious%2FMaliciousDoH-iodine-pcap-4808_5408.zip",
+        "text": "Download"
+      },
+      {
+        "href": "https://cicresearch.ca/CICDataset/DoHBrw-2020/download.php?file=PCAPs%2FDoHMalicious%2FMaliciousDoH-iodine-pcap-5409_5521.zip",
+        "text": "Download"
+      },
+      {
+        "href": "https://cicresearch.ca/CICDataset/DoHBrw-2020/download.php?file=PCAPs%2FDoHMalicious%2FMaliciousDoH-iodine-pcap-601_1201.zip",
+        "text": "Download"
+      }
+    ],
+    "text": " \n \n \n   \n   Browse DoHBrw-2020 \n \n \n Browse dataset: DoHBrw-2020 \n\n \n  Folder:  /PCAPs/DoHMalicious \n \n\n \n  \u2b05 Up    \ud83d\udcc4 MaliciousDoH-dns2tcp-Pcap-001_600.zip \u2014  Download   \ud83d\udcc4 MaliciousDoH-dns2tcp-Pcap-1202_1802.zip \u2014  Download   \ud83d\udcc4 MaliciousDoH-dns2tcp-Pcap-1802_2402.zip \u2014  Download   \ud83d\udcc4 MaliciousDoH-dns2tcp-Pcap-2403-2803.zip \u2014  Download   \ud83d\udcc4 MaliciousDoH-dns2tcp-Pcap-601_1201.zip \u2014  Download   \ud83d\udcc4 MaliciousDoH-dnscat2-Pcap-001-600.zip \u2014  Download   \ud83d\udcc4 MaliciousDoH-dnscat2-Pcap-1202_1802.zip \u2014  Download   \ud83d\udcc4 MaliciousDoH-dnscat2-Pcap-1803_2403.zip \u2014  Download   \ud83d\udcc4 MaliciousDoH-dnscat2-Pcap-2404_3004.zip \u2014  Download   \ud83d\udcc4 MaliciousDoH-dnscat2-Pcap-3005_3605.zip \u2014  Download   \ud83d\udcc4 MaliciousDoH-dnscat2-Pcap-3606_4206.zip \u2014  Download   \ud83d\udcc4 MaliciousDoH-dnscat2-Pcap-4207_4807.zip \u2014  Download   \ud83d\udcc4 MaliciousDoH-dnscat2-Pcap-601_1201.zip \u2014  Download   \ud83d\udcc4 MaliciousDoH-iodine-pcap-001_600.zip \u2014  Download   \ud83d\udcc4 MaliciousDoH-iodine-pcap-1202_1802.zip \u2014  Download   \ud83d\udcc4 MaliciousDoH-iodine-pcap-1803_2403.zip \u2014  Download   \ud83d\udcc4 MaliciousDoH-iodine-pcap-2404_3004.zip \u2014  Download   \ud83d\udcc4 MaliciousDoH-iodine-pcap-3005_3605.zip \u2014  Download   \ud83d\udcc4 MaliciousDoH-iodine-pcap-3606_4206.zip \u2014  Download   \ud83d\udcc4 MaliciousDoH-iodine-pcap-4207_4807.zip \u2014  Download   \ud83d\udcc4 MaliciousDoH-iodine-pcap-4808_5408.zip \u2014  Download   \ud83d\udcc4 MaliciousDoH-iodine-pcap-5409_5521.zip \u2014  Download   \ud83d\udcc4 MaliciousDoH-iodine-pcap-601_1201.zip \u2014  Download    \n \n \n\n"
+  }
+]

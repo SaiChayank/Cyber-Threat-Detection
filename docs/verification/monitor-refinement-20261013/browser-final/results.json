@@ -1,0 +1,110 @@
+{
+  "base": "http://127.0.0.1:3013",
+  "browser": "154.0.8037.98",
+  "checked_at": "2026-10-13T08:13:23.816Z",
+  "passed": 25,
+  "total": 25,
+  "results": [
+    {
+      "name": "Initial live connection and empty state",
+      "passed": true
+    },
+    {
+      "name": "1440px empty state and section navigation",
+      "passed": true
+    },
+    {
+      "name": "768px empty state and section navigation",
+      "passed": true
+    },
+    {
+      "name": "390px empty state and section navigation",
+      "passed": true
+    },
+    {
+      "name": "320px empty state and section navigation",
+      "passed": true
+    },
+    {
+      "name": "Scenario selection, incremental start/stop and metric updates",
+      "passed": true
+    },
+    {
+      "name": "Replay restart, completion, SSE alerts and metric counts",
+      "passed": true
+    },
+    {
+      "name": "Threat/severity/search filters, pagination, no-match recovery and JSON export",
+      "passed": true
+    },
+    {
+      "name": "1440px populated table, alert detail and focus return",
+      "passed": true
+    },
+    {
+      "name": "768px populated table, alert detail and focus return",
+      "passed": true
+    },
+    {
+      "name": "390px populated table, alert detail and focus return",
+      "passed": true
+    },
+    {
+      "name": "320px populated table, alert detail and focus return",
+      "passed": true
+    },
+    {
+      "name": "IPv6 addresses and long identifiers fit mobile alert detail",
+      "passed": true
+    },
+    {
+      "name": "PCAP file input: invalid extension/empty/invalid/oversized and valid upload",
+      "passed": true
+    },
+    {
+      "name": "Telemetry unavailable/retry recovers the live status",
+      "passed": true
+    },
+    {
+      "name": "SSE-only disconnect/resume receives persisted alerts without duplicate records",
+      "passed": true
+    },
+    {
+      "name": "Stream schema errors survive telemetry polling and recover on a valid event",
+      "passed": true
+    },
+    {
+      "name": "Initial backend unavailable state and subsequent recovery",
+      "passed": true
+    },
+    {
+      "name": "Held queue stays stable while real alerts persist and SSE/metrics continue",
+      "passed": true
+    },
+    {
+      "name": "Engine filter combines with search/class/severity, reset and JSON export",
+      "passed": true
+    },
+    {
+      "name": "Held queue and resume stay bounded at 200 while persistence retains overflow",
+      "passed": true
+    },
+    {
+      "name": "Investigation controls fit desktop, tablet and phone; reduced motion stays usable",
+      "passed": true
+    },
+    {
+      "name": "Landing/Monitor routing and reduced-motion UI",
+      "passed": true
+    },
+    {
+      "name": "Reduced motion applies on initial load and animations can be re-enabled",
+      "passed": true
+    },
+    {
+      "name": "Browser runtime and console",
+      "passed": true
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,58 @@
+{
+  "scope": "Fresh production API via Next.js proxy, documented ALL replay at 20x; existing disposable history retained",
+  "events": 256,
+  "alerts": 15,
+  "classes": [
+    "BOTNET_C2",
+    "DATA_EXFILTRATION",
+    "DDOS",
+    "DGA_DOMAINS",
+    "DNS_TUNNELLING",
+    "ENCRYPTED_MALWARE",
+    "RECONNAISSANCE"
+  ],
+  "first_incremental_observation": {
+    "processed": 39,
+    "replay_status": "running"
+  },
+  "class_sightings": {
+    "DDOS": {
+      "processed_when_observed": 39,
+      "elapsed_seconds": 7.2698848,
+      "sequence": 20
+    },
+    "BOTNET_C2": {
+      "processed_when_observed": 73,
+      "elapsed_seconds": 14.28107490000184,
+      "sequence": 22
+    },
+    "DGA_DOMAINS": {
+      "processed_when_observed": 97,
+      "elapsed_seconds": 19.55024830000184,
+      "sequence": 24
+    },
+    "DNS_TUNNELLING": {
+      "processed_when_observed": 131,
+      "elapsed_seconds": 25.892536800001835,
+      "sequence": 26
+    },
+    "ENCRYPTED_MALWARE": {
+      "processed_when_observed": 164,
+      "elapsed_seconds": 32.315984200002276,
+      "sequence": 30
+    },
+    "RECONNAISSANCE": {
+      "processed_when_observed": 206,
+      "elapsed_seconds": 39.21455100000094,
+      "sequence": 32
+    },
+    "DATA_EXFILTRATION": {
+      "processed_when_observed": 226,
+      "elapsed_seconds": 44.76222250000137,
+      "sequence": 33
+    }
+  },
+  "elapsed_seconds": 46.60823160000291,
+  "starting_sequence": 19,
+  "completed": true
+}

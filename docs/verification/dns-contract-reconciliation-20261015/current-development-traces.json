@@ -1,0 +1,3792 @@
+[
+  {
+    "scenario": "train_long_a",
+    "first_alert_query": 5,
+    "first_alert_delay_ms": 1800.0,
+    "traces": [
+      {
+        "query": 1,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 58,
+          "dns_encoded_total_length": 64,
+          "dns_encoded_entropy": 4.593542680182112,
+          "dns_base_queries_10s": 1,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 1
+        },
+        "alerts": []
+      },
+      {
+        "query": 2,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 58,
+          "dns_encoded_total_length": 64,
+          "dns_encoded_entropy": 4.60493417945087,
+          "dns_base_queries_10s": 2,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 2
+        },
+        "alerts": []
+      },
+      {
+        "query": 3,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 58,
+          "dns_encoded_total_length": 64,
+          "dns_encoded_entropy": 4.646418898701708,
+          "dns_base_queries_10s": 3,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 3
+        },
+        "alerts": []
+      },
+      {
+        "query": 4,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 58,
+          "dns_encoded_total_length": 64,
+          "dns_encoded_entropy": 4.579783547037795,
+          "dns_base_queries_10s": 4,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 4
+        },
+        "alerts": []
+      },
+      {
+        "query": 5,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 58,
+          "dns_encoded_total_length": 64,
+          "dns_encoded_entropy": 4.624389062229566,
+          "dns_base_queries_10s": 5,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 5
+        },
+        "alerts": [
+          {
+            "timestamp": 1700000001800.0,
+            "flow_id": "ec07f0ef415422732075f6f0a2042315",
+            "threat_class": "DNS_TUNNELLING",
+            "confidence_score": 0.8,
+            "severity": "MEDIUM",
+            "supporting_evidence": "dns_query_visible=1; dns_label_count=5; dns_encoded_max_label_length=58; dns_encoded_total_length=64; dns_encoded_entropy=4.6244; dns_base_queries_10s=5; dns_base_unique_ratio_10s=1.0; dns_base_encoded_queries_10s=5; dns_candidate_pattern=repeated_long_encoded_label; confidence_kind=heuristic strength; window_partial=True",
+            "src_ip": "192.0.2.10",
+            "dst_ip": "192.0.2.53",
+            "src_port": 40004,
+            "dst_port": 53,
+            "protocol": 17,
+            "detection_source": "RULE",
+            "occurrence_count": 1,
+            "raw_evidence_metrics": {
+              "dns_query_visible": 1,
+              "dns_label_count": 5,
+              "dns_encoded_max_label_length": 58,
+              "dns_encoded_total_length": 64,
+              "dns_encoded_entropy": 4.624389062229566,
+              "dns_base_queries_10s": 5,
+              "dns_base_unique_ratio_10s": 1.0,
+              "dns_base_encoded_queries_10s": 5,
+              "dns_candidate_pattern": "repeated_long_encoded_label",
+              "confidence_kind": "heuristic strength",
+              "window_partial": true
+            }
+          }
+        ]
+      },
+      {
+        "query": 6,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 58,
+          "dns_encoded_total_length": 64,
+          "dns_encoded_entropy": 4.740168898701708,
+          "dns_base_queries_10s": 6,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 6
+        },
+        "alerts": []
+      },
+      {
+        "query": 7,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 58,
+          "dns_encoded_total_length": 64,
+          "dns_encoded_entropy": 4.654078664259099,
+          "dns_base_queries_10s": 7,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 7
+        },
+        "alerts": []
+      },
+      {
+        "query": 8,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 58,
+          "dns_encoded_total_length": 64,
+          "dns_encoded_entropy": 4.6186933125951875,
+          "dns_base_queries_10s": 8,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 8
+        },
+        "alerts": []
+      },
+      {
+        "query": 9,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 58,
+          "dns_encoded_total_length": 64,
+          "dns_encoded_entropy": 4.6811933125951875,
+          "dns_base_queries_10s": 9,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 9
+        },
+        "alerts": []
+      },
+      {
+        "query": 10,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 58,
+          "dns_encoded_total_length": 64,
+          "dns_encoded_entropy": 4.657603078152579,
+          "dns_base_queries_10s": 10,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 10
+        },
+        "alerts": []
+      },
+      {
+        "query": 11,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 58,
+          "dns_encoded_total_length": 64,
+          "dns_encoded_entropy": 4.725798827786958,
+          "dns_base_queries_10s": 11,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 11
+        },
+        "alerts": []
+      },
+      {
+        "query": 12,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 58,
+          "dns_encoded_total_length": 64,
+          "dns_encoded_entropy": 4.465924852072124,
+          "dns_base_queries_10s": 12,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 12
+        },
+        "alerts": []
+      }
+    ]
+  },
+  {
+    "scenario": "train_long_aaaa",
+    "first_alert_query": 5,
+    "first_alert_delay_ms": 2800.0,
+    "traces": [
+      {
+        "query": 1,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 58,
+          "dns_encoded_total_length": 64,
+          "dns_encoded_entropy": 4.697123781480403,
+          "dns_base_queries_10s": 1,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 1
+        },
+        "alerts": []
+      },
+      {
+        "query": 2,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 58,
+          "dns_encoded_total_length": 64,
+          "dns_encoded_entropy": 4.6304884298164914,
+          "dns_base_queries_10s": 2,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 2
+        },
+        "alerts": []
+      },
+      {
+        "query": 3,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 58,
+          "dns_encoded_total_length": 64,
+          "dns_encoded_entropy": 4.728373781480403,
+          "dns_base_queries_10s": 3,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 3
+        },
+        "alerts": []
+      },
+      {
+        "query": 4,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 58,
+          "dns_encoded_total_length": 64,
+          "dns_encoded_entropy": 4.706954882778696,
+          "dns_base_queries_10s": 4,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 4
+        },
+        "alerts": []
+      },
+      {
+        "query": 5,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 58,
+          "dns_encoded_total_length": 64,
+          "dns_encoded_entropy": 4.642283547037795,
+          "dns_base_queries_10s": 5,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 5
+        },
+        "alerts": [
+          {
+            "timestamp": 1700000002800.0,
+            "flow_id": "799e148989f46732a18ab879d161923a",
+            "threat_class": "DNS_TUNNELLING",
+            "confidence_score": 0.8,
+            "severity": "MEDIUM",
+            "supporting_evidence": "dns_query_visible=1; dns_label_count=5; dns_encoded_max_label_length=58; dns_encoded_total_length=64; dns_encoded_entropy=4.6423; dns_base_queries_10s=5; dns_base_unique_ratio_10s=1.0; dns_base_encoded_queries_10s=5; dns_candidate_pattern=repeated_long_encoded_label; confidence_kind=heuristic strength; window_partial=True",
+            "src_ip": "192.0.2.10",
+            "dst_ip": "192.0.2.53",
+            "src_port": 40004,
+            "dst_port": 53,
+            "protocol": 17,
+            "detection_source": "RULE",
+            "occurrence_count": 1,
+            "raw_evidence_metrics": {
+              "dns_query_visible": 1,
+              "dns_label_count": 5,
+              "dns_encoded_max_label_length": 58,
+              "dns_encoded_total_length": 64,
+              "dns_encoded_entropy": 4.642283547037795,
+              "dns_base_queries_10s": 5,
+              "dns_base_unique_ratio_10s": 1.0,
+              "dns_base_encoded_queries_10s": 5,
+              "dns_candidate_pattern": "repeated_long_encoded_label",
+              "confidence_kind": "heuristic strength",
+              "window_partial": true
+            }
+          }
+        ]
+      },
+      {
+        "query": 6,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 58,
+          "dns_encoded_total_length": 64,
+          "dns_encoded_entropy": 4.6186933125951875,
+          "dns_base_queries_10s": 6,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 6
+        },
+        "alerts": []
+      },
+      {
+        "query": 7,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 58,
+          "dns_encoded_total_length": 64,
+          "dns_encoded_entropy": 4.564213821688583,
+          "dns_base_queries_10s": 7,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 7
+        },
+        "alerts": []
+      },
+      {
+        "query": 8,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 58,
+          "dns_encoded_total_length": 64,
+          "dns_encoded_entropy": 4.798533547037795,
+          "dns_base_queries_10s": 8,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 8
+        },
+        "alerts": []
+      },
+      {
+        "query": 9,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 58,
+          "dns_encoded_total_length": 64,
+          "dns_encoded_entropy": 4.737593945008262,
+          "dns_base_queries_10s": 9,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 9
+        },
+        "alerts": []
+      },
+      {
+        "query": 10,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 58,
+          "dns_encoded_total_length": 64,
+          "dns_encoded_entropy": 4.759623781480403,
+          "dns_base_queries_10s": 10,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 10
+        },
+        "alerts": []
+      },
+      {
+        "query": 11,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 58,
+          "dns_encoded_total_length": 64,
+          "dns_encoded_entropy": 4.585882914624721,
+          "dns_base_queries_10s": 11,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 11
+        },
+        "alerts": []
+      },
+      {
+        "query": 12,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 58,
+          "dns_encoded_total_length": 64,
+          "dns_encoded_entropy": 4.520262118683787,
+          "dns_base_queries_10s": 12,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 12
+        },
+        "alerts": []
+      }
+    ]
+  },
+  {
+    "scenario": "train_long_txt",
+    "first_alert_query": 5,
+    "first_alert_delay_ms": 2200.0,
+    "traces": [
+      {
+        "query": 1,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 58,
+          "dns_encoded_total_length": 64,
+          "dns_encoded_entropy": 4.394247562960808,
+          "dns_base_queries_10s": 1,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 1
+        },
+        "alerts": []
+      },
+      {
+        "query": 2,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 58,
+          "dns_encoded_total_length": 64,
+          "dns_encoded_entropy": 4.686889062229566,
+          "dns_base_queries_10s": 2,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 2
+        },
+        "alerts": []
+      },
+      {
+        "query": 3,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 58,
+          "dns_encoded_total_length": 64,
+          "dns_encoded_entropy": 4.686889062229566,
+          "dns_base_queries_10s": 3,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 3
+        },
+        "alerts": []
+      },
+      {
+        "query": 4,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 58,
+          "dns_encoded_total_length": 64,
+          "dns_encoded_entropy": 4.616729296672175,
+          "dns_base_queries_10s": 4,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 4
+        },
+        "alerts": []
+      },
+      {
+        "query": 5,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 58,
+          "dns_encoded_total_length": 64,
+          "dns_encoded_entropy": 4.718139062229566,
+          "dns_base_queries_10s": 5,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 5
+        },
+        "alerts": [
+          {
+            "timestamp": 1700000002200.0,
+            "flow_id": "102d7ebfcb6709aab405738812d9bc57",
+            "threat_class": "DNS_TUNNELLING",
+            "confidence_score": 0.8,
+            "severity": "MEDIUM",
+            "supporting_evidence": "dns_query_visible=1; dns_label_count=5; dns_encoded_max_label_length=58; dns_encoded_total_length=64; dns_encoded_entropy=4.7181; dns_base_queries_10s=5; dns_base_unique_ratio_10s=1.0; dns_base_encoded_queries_10s=5; dns_candidate_pattern=repeated_long_encoded_label; confidence_kind=heuristic strength; window_partial=True",
+            "src_ip": "192.0.2.10",
+            "dst_ip": "192.0.2.53",
+            "src_port": 40004,
+            "dst_port": 53,
+            "protocol": 17,
+            "detection_source": "RULE",
+            "occurrence_count": 1,
+            "raw_evidence_metrics": {
+              "dns_query_visible": 1,
+              "dns_label_count": 5,
+              "dns_encoded_max_label_length": 58,
+              "dns_encoded_total_length": 64,
+              "dns_encoded_entropy": 4.718139062229566,
+              "dns_base_queries_10s": 5,
+              "dns_base_unique_ratio_10s": 1.0,
+              "dns_base_encoded_queries_10s": 5,
+              "dns_candidate_pattern": "repeated_long_encoded_label",
+              "confidence_kind": "heuristic strength",
+              "window_partial": true
+            }
+          }
+        ]
+      },
+      {
+        "query": 6,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 58,
+          "dns_encoded_total_length": 64,
+          "dns_encoded_entropy": 4.5874433125951875,
+          "dns_base_queries_10s": 6,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 6
+        },
+        "alerts": []
+      },
+      {
+        "query": 7,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 58,
+          "dns_encoded_total_length": 64,
+          "dns_encoded_entropy": 4.548937164990341,
+          "dns_base_queries_10s": 7,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 7
+        },
+        "alerts": []
+      },
+      {
+        "query": 8,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 58,
+          "dns_encoded_total_length": 64,
+          "dns_encoded_entropy": 4.515069336880353,
+          "dns_base_queries_10s": 8,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 8
+        },
+        "alerts": []
+      },
+      {
+        "query": 9,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 58,
+          "dns_encoded_total_length": 64,
+          "dns_encoded_entropy": 4.542837797403416,
+          "dns_base_queries_10s": 9,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 9
+        },
+        "alerts": []
+      },
+      {
+        "query": 10,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 58,
+          "dns_encoded_total_length": 64,
+          "dns_encoded_entropy": 4.574087797403416,
+          "dns_base_queries_10s": 10,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 10
+        },
+        "alerts": []
+      },
+      {
+        "query": 11,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 58,
+          "dns_encoded_total_length": 64,
+          "dns_encoded_entropy": 4.673533547037795,
+          "dns_base_queries_10s": 11,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 11
+        },
+        "alerts": []
+      },
+      {
+        "query": 12,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 58,
+          "dns_encoded_total_length": 64,
+          "dns_encoded_entropy": 4.716578664259099,
+          "dns_base_queries_10s": 12,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 12
+        },
+        "alerts": []
+      }
+    ]
+  },
+  {
+    "scenario": "train_long_null",
+    "first_alert_query": 5,
+    "first_alert_delay_ms": 2600.0,
+    "traces": [
+      {
+        "query": 1,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 58,
+          "dns_encoded_total_length": 64,
+          "dns_encoded_entropy": 4.57912973485082,
+          "dns_base_queries_10s": 1,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 1
+        },
+        "alerts": []
+      },
+      {
+        "query": 2,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 58,
+          "dns_encoded_total_length": 64,
+          "dns_encoded_entropy": 4.682753710565654,
+          "dns_base_queries_10s": 2,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 2
+        },
+        "alerts": []
+      },
+      {
+        "query": 3,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 58,
+          "dns_encoded_total_length": 64,
+          "dns_encoded_entropy": 4.725798827786958,
+          "dns_base_queries_10s": 3,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 3
+        },
+        "alerts": []
+      },
+      {
+        "query": 4,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 58,
+          "dns_encoded_total_length": 64,
+          "dns_encoded_entropy": 4.583918898701708,
+          "dns_base_queries_10s": 4,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 4
+        },
+        "alerts": []
+      },
+      {
+        "query": 5,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 58,
+          "dns_encoded_total_length": 64,
+          "dns_encoded_entropy": 4.508063383509937,
+          "dns_base_queries_10s": 5,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 5
+        },
+        "alerts": [
+          {
+            "timestamp": 1700000002600.0,
+            "flow_id": "dbf60cfc76437d709be1f78754ea51bb",
+            "threat_class": "DNS_TUNNELLING",
+            "confidence_score": 0.8,
+            "severity": "MEDIUM",
+            "supporting_evidence": "dns_query_visible=1; dns_label_count=5; dns_encoded_max_label_length=58; dns_encoded_total_length=64; dns_encoded_entropy=4.5081; dns_base_queries_10s=5; dns_base_unique_ratio_10s=1.0; dns_base_encoded_queries_10s=5; dns_candidate_pattern=repeated_long_encoded_label; confidence_kind=heuristic strength; window_partial=True",
+            "src_ip": "192.0.2.10",
+            "dst_ip": "192.0.2.53",
+            "src_port": 40004,
+            "dst_port": 53,
+            "protocol": 17,
+            "detection_source": "RULE",
+            "occurrence_count": 1,
+            "raw_evidence_metrics": {
+              "dns_query_visible": 1,
+              "dns_label_count": 5,
+              "dns_encoded_max_label_length": 58,
+              "dns_encoded_total_length": 64,
+              "dns_encoded_entropy": 4.508063383509937,
+              "dns_base_queries_10s": 5,
+              "dns_base_unique_ratio_10s": 1.0,
+              "dns_base_encoded_queries_10s": 5,
+              "dns_candidate_pattern": "repeated_long_encoded_label",
+              "confidence_kind": "heuristic strength",
+              "window_partial": true
+            }
+          }
+        ]
+      },
+      {
+        "query": 6,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 58,
+          "dns_encoded_total_length": 64,
+          "dns_encoded_entropy": 4.507048827786958,
+          "dns_base_queries_10s": 6,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 6
+        },
+        "alerts": []
+      },
+      {
+        "query": 7,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 58,
+          "dns_encoded_total_length": 64,
+          "dns_encoded_entropy": 4.622828664259099,
+          "dns_base_queries_10s": 7,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 7
+        },
+        "alerts": []
+      },
+      {
+        "query": 8,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 58,
+          "dns_encoded_total_length": 64,
+          "dns_encoded_entropy": 4.640723149067329,
+          "dns_base_queries_10s": 8,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 8
+        },
+        "alerts": []
+      },
+      {
+        "query": 9,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 58,
+          "dns_encoded_total_length": 64,
+          "dns_encoded_entropy": 4.591578664259099,
+          "dns_base_queries_10s": 9,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 9
+        },
+        "alerts": []
+      },
+      {
+        "query": 10,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 58,
+          "dns_encoded_total_length": 64,
+          "dns_encoded_entropy": 4.433114454101657,
+          "dns_base_queries_10s": 10,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 10
+        },
+        "alerts": []
+      },
+      {
+        "query": 11,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 58,
+          "dns_encoded_total_length": 64,
+          "dns_encoded_entropy": 4.626310203736037,
+          "dns_base_queries_10s": 11,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 11
+        },
+        "alerts": []
+      },
+      {
+        "query": 12,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 58,
+          "dns_encoded_total_length": 64,
+          "dns_encoded_entropy": 4.7124433125951875,
+          "dns_base_queries_10s": 12,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 12
+        },
+        "alerts": []
+      }
+    ]
+  },
+  {
+    "scenario": "train_multi_a",
+    "first_alert_query": 5,
+    "first_alert_delay_ms": 3200.0,
+    "traces": [
+      {
+        "query": 1,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 6,
+          "dns_encoded_max_label_length": 24,
+          "dns_encoded_total_length": 77,
+          "dns_encoded_entropy": 4.844073878076269,
+          "dns_base_queries_10s": 1,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 1
+        },
+        "alerts": []
+      },
+      {
+        "query": 2,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 6,
+          "dns_encoded_max_label_length": 24,
+          "dns_encoded_total_length": 77,
+          "dns_encoded_entropy": 4.556854684555316,
+          "dns_base_queries_10s": 2,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 2
+        },
+        "alerts": []
+      },
+      {
+        "query": 3,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 6,
+          "dns_encoded_max_label_length": 24,
+          "dns_encoded_total_length": 77,
+          "dns_encoded_entropy": 4.523670833101502,
+          "dns_base_queries_10s": 3,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 3
+        },
+        "alerts": []
+      },
+      {
+        "query": 4,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 6,
+          "dns_encoded_max_label_length": 24,
+          "dns_encoded_total_length": 77,
+          "dns_encoded_entropy": 4.618814423947095,
+          "dns_base_queries_10s": 4,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 4
+        },
+        "alerts": []
+      },
+      {
+        "query": 5,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 6,
+          "dns_encoded_max_label_length": 24,
+          "dns_encoded_total_length": 77,
+          "dns_encoded_entropy": 4.724342956662326,
+          "dns_base_queries_10s": 5,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 5
+        },
+        "alerts": [
+          {
+            "timestamp": 1700000003200.0,
+            "flow_id": "d0d7ae5c157a5b8f744e9b10723ac9ba",
+            "threat_class": "DNS_TUNNELLING",
+            "confidence_score": 0.8,
+            "severity": "MEDIUM",
+            "supporting_evidence": "dns_query_visible=1; dns_label_count=6; dns_encoded_max_label_length=24; dns_encoded_total_length=77; dns_encoded_entropy=4.7243; dns_base_queries_10s=5; dns_base_unique_ratio_10s=1.0; dns_base_encoded_queries_10s=5; dns_candidate_pattern=repeated_multi_label_encoding; confidence_kind=heuristic strength; window_partial=True",
+            "src_ip": "192.0.2.10",
+            "dst_ip": "192.0.2.53",
+            "src_port": 40004,
+            "dst_port": 53,
+            "protocol": 17,
+            "detection_source": "RULE",
+            "occurrence_count": 1,
+            "raw_evidence_metrics": {
+              "dns_query_visible": 1,
+              "dns_label_count": 6,
+              "dns_encoded_max_label_length": 24,
+              "dns_encoded_total_length": 77,
+              "dns_encoded_entropy": 4.724342956662326,
+              "dns_base_queries_10s": 5,
+              "dns_base_unique_ratio_10s": 1.0,
+              "dns_base_encoded_queries_10s": 5,
+              "dns_candidate_pattern": "repeated_multi_label_encoding",
+              "confidence_kind": "heuristic strength",
+              "window_partial": true
+            }
+          }
+        ]
+      },
+      {
+        "query": 6,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 6,
+          "dns_encoded_max_label_length": 24,
+          "dns_encoded_total_length": 77,
+          "dns_encoded_entropy": 4.790828871970946,
+          "dns_base_queries_10s": 6,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 6
+        },
+        "alerts": []
+      },
+      {
+        "query": 7,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 6,
+          "dns_encoded_max_label_length": 24,
+          "dns_encoded_total_length": 77,
+          "dns_encoded_entropy": 4.666028346328909,
+          "dns_base_queries_10s": 7,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 7
+        },
+        "alerts": []
+      },
+      {
+        "query": 8,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 6,
+          "dns_encoded_max_label_length": 24,
+          "dns_encoded_total_length": 77,
+          "dns_encoded_entropy": 4.74231799543186,
+          "dns_base_queries_10s": 8,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 8
+        },
+        "alerts": []
+      },
+      {
+        "query": 9,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 6,
+          "dns_encoded_max_label_length": 24,
+          "dns_encoded_total_length": 77,
+          "dns_encoded_entropy": 4.669465521737876,
+          "dns_base_queries_10s": 9,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 9
+        },
+        "alerts": []
+      },
+      {
+        "query": 10,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 6,
+          "dns_encoded_max_label_length": 24,
+          "dns_encoded_total_length": 77,
+          "dns_encoded_entropy": 4.731217307480259,
+          "dns_base_queries_10s": 10,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 10
+        },
+        "alerts": []
+      },
+      {
+        "query": 11,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 6,
+          "dns_encoded_max_label_length": 24,
+          "dns_encoded_total_length": 77,
+          "dns_encoded_entropy": 4.67583208012324,
+          "dns_base_queries_10s": 11,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 11
+        },
+        "alerts": []
+      },
+      {
+        "query": 12,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 6,
+          "dns_encoded_max_label_length": 24,
+          "dns_encoded_total_length": 77,
+          "dns_encoded_entropy": 4.6085028977201965,
+          "dns_base_queries_10s": 12,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 12
+        },
+        "alerts": []
+      }
+    ]
+  },
+  {
+    "scenario": "train_cdn",
+    "first_alert_query": null,
+    "first_alert_delay_ms": null,
+    "traces": [
+      {
+        "query": 1,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 28,
+          "dns_encoded_total_length": 32,
+          "dns_encoded_entropy": 3.840018266288633,
+          "dns_base_queries_10s": 1,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 1
+        },
+        "alerts": []
+      },
+      {
+        "query": 2,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 28,
+          "dns_encoded_total_length": 32,
+          "dns_encoded_entropy": 3.8789280318460246,
+          "dns_base_queries_10s": 2,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 2
+        },
+        "alerts": []
+      },
+      {
+        "query": 3,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 28,
+          "dns_encoded_total_length": 32,
+          "dns_encoded_entropy": 3.952819531114783,
+          "dns_base_queries_10s": 3,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 3
+        },
+        "alerts": []
+      },
+      {
+        "query": 4,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 28,
+          "dns_encoded_total_length": 32,
+          "dns_encoded_entropy": 3.67095859334435,
+          "dns_base_queries_10s": 4,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 4
+        },
+        "alerts": []
+      },
+      {
+        "query": 5,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 28,
+          "dns_encoded_total_length": 32,
+          "dns_encoded_entropy": 4.054229296672175,
+          "dns_base_queries_10s": 5,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 5
+        },
+        "alerts": []
+      },
+      {
+        "query": 6,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 28,
+          "dns_encoded_total_length": 32,
+          "dns_encoded_entropy": 3.5223683589017414,
+          "dns_base_queries_10s": 6,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 6
+        },
+        "alerts": []
+      },
+      {
+        "query": 7,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 28,
+          "dns_encoded_total_length": 32,
+          "dns_encoded_entropy": 3.5223683589017414,
+          "dns_base_queries_10s": 7,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 7
+        },
+        "alerts": []
+      },
+      {
+        "query": 8,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 28,
+          "dns_encoded_total_length": 32,
+          "dns_encoded_entropy": 3.952819531114783,
+          "dns_base_queries_10s": 8,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 8
+        },
+        "alerts": []
+      },
+      {
+        "query": 9,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 28,
+          "dns_encoded_total_length": 32,
+          "dns_encoded_entropy": 3.827819531114783,
+          "dns_base_queries_10s": 9,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 9
+        },
+        "alerts": []
+      },
+      {
+        "query": 10,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 28,
+          "dns_encoded_total_length": 32,
+          "dns_encoded_entropy": 3.792837797403416,
+          "dns_base_queries_10s": 10,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 10
+        },
+        "alerts": []
+      },
+      {
+        "query": 11,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 28,
+          "dns_encoded_total_length": 32,
+          "dns_encoded_entropy": 4.077819531114783,
+          "dns_base_queries_10s": 11,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 11
+        },
+        "alerts": []
+      },
+      {
+        "query": 12,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 28,
+          "dns_encoded_total_length": 32,
+          "dns_encoded_entropy": 3.965018266288633,
+          "dns_base_queries_10s": 12,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 12
+        },
+        "alerts": []
+      }
+    ]
+  },
+  {
+    "scenario": "train_telemetry",
+    "first_alert_query": null,
+    "first_alert_delay_ms": null,
+    "traces": [
+      {
+        "query": 1,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 25,
+          "dns_encoded_total_length": 32,
+          "dns_encoded_entropy": 4.241729296672175,
+          "dns_base_queries_10s": 1,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 1
+        },
+        "alerts": []
+      },
+      {
+        "query": 2,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 25,
+          "dns_encoded_total_length": 32,
+          "dns_encoded_entropy": 4.077819531114783,
+          "dns_base_queries_10s": 2,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 2
+        },
+        "alerts": []
+      },
+      {
+        "query": 3,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 25,
+          "dns_encoded_total_length": 32,
+          "dns_encoded_entropy": 4.101409765557392,
+          "dns_base_queries_10s": 3,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 3
+        },
+        "alerts": []
+      },
+      {
+        "query": 4,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 25,
+          "dns_encoded_total_length": 32,
+          "dns_encoded_entropy": 4.351409765557392,
+          "dns_base_queries_10s": 4,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 4
+        },
+        "alerts": []
+      },
+      {
+        "query": 5,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 25,
+          "dns_encoded_total_length": 32,
+          "dns_encoded_entropy": 3.9139097655573916,
+          "dns_base_queries_10s": 5,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 5
+        },
+        "alerts": []
+      },
+      {
+        "query": 6,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 25,
+          "dns_encoded_total_length": 32,
+          "dns_encoded_entropy": 4.077819531114783,
+          "dns_base_queries_10s": 6,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 6
+        },
+        "alerts": []
+      },
+      {
+        "query": 7,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 25,
+          "dns_encoded_total_length": 32,
+          "dns_encoded_entropy": 4.015319531114783,
+          "dns_base_queries_10s": 7,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 7
+        },
+        "alerts": []
+      },
+      {
+        "query": 8,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 25,
+          "dns_encoded_total_length": 32,
+          "dns_encoded_entropy": 4.140319531114783,
+          "dns_base_queries_10s": 8,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 8
+        },
+        "alerts": []
+      },
+      {
+        "query": 9,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 25,
+          "dns_encoded_total_length": 32,
+          "dns_encoded_entropy": 4.116729296672175,
+          "dns_base_queries_10s": 9,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 9
+        },
+        "alerts": []
+      },
+      {
+        "query": 10,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 25,
+          "dns_encoded_total_length": 32,
+          "dns_encoded_entropy": 4.116729296672175,
+          "dns_base_queries_10s": 10,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 10
+        },
+        "alerts": []
+      },
+      {
+        "query": 11,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 25,
+          "dns_encoded_total_length": 32,
+          "dns_encoded_entropy": 4.226409765557392,
+          "dns_base_queries_10s": 11,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 11
+        },
+        "alerts": []
+      },
+      {
+        "query": 12,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 25,
+          "dns_encoded_total_length": 32,
+          "dns_encoded_entropy": 4.038909765557392,
+          "dns_base_queries_10s": 12,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 12
+        },
+        "alerts": []
+      }
+    ]
+  },
+  {
+    "scenario": "train_discovery",
+    "first_alert_query": null,
+    "first_alert_delay_ms": null,
+    "traces": [
+      {
+        "query": 1,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 5,
+          "dns_encoded_total_length": 9,
+          "dns_encoded_entropy": 2.725480556997868,
+          "dns_base_queries_10s": 1,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 0
+        },
+        "alerts": []
+      },
+      {
+        "query": 2,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 9,
+          "dns_encoded_total_length": 13,
+          "dns_encoded_entropy": 3.238901256602631,
+          "dns_base_queries_10s": 2,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 0
+        },
+        "alerts": []
+      },
+      {
+        "query": 3,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 4,
+          "dns_encoded_total_length": 8,
+          "dns_encoded_entropy": 2.5,
+          "dns_base_queries_10s": 3,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 0
+        },
+        "alerts": []
+      },
+      {
+        "query": 4,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 5,
+          "dns_encoded_total_length": 9,
+          "dns_encoded_entropy": 2.725480556997868,
+          "dns_base_queries_10s": 4,
+          "dns_base_unique_ratio_10s": 0.75,
+          "dns_base_encoded_queries_10s": 0
+        },
+        "alerts": []
+      },
+      {
+        "query": 5,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 9,
+          "dns_encoded_total_length": 13,
+          "dns_encoded_entropy": 3.238901256602631,
+          "dns_base_queries_10s": 5,
+          "dns_base_unique_ratio_10s": 0.6,
+          "dns_base_encoded_queries_10s": 0
+        },
+        "alerts": []
+      },
+      {
+        "query": 6,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 4,
+          "dns_encoded_total_length": 8,
+          "dns_encoded_entropy": 2.5,
+          "dns_base_queries_10s": 6,
+          "dns_base_unique_ratio_10s": 0.5,
+          "dns_base_encoded_queries_10s": 0
+        },
+        "alerts": []
+      },
+      {
+        "query": 7,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 5,
+          "dns_encoded_total_length": 9,
+          "dns_encoded_entropy": 2.725480556997868,
+          "dns_base_queries_10s": 7,
+          "dns_base_unique_ratio_10s": 0.42857142857142855,
+          "dns_base_encoded_queries_10s": 0
+        },
+        "alerts": []
+      },
+      {
+        "query": 8,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 9,
+          "dns_encoded_total_length": 13,
+          "dns_encoded_entropy": 3.238901256602631,
+          "dns_base_queries_10s": 8,
+          "dns_base_unique_ratio_10s": 0.375,
+          "dns_base_encoded_queries_10s": 0
+        },
+        "alerts": []
+      },
+      {
+        "query": 9,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 4,
+          "dns_encoded_total_length": 8,
+          "dns_encoded_entropy": 2.5,
+          "dns_base_queries_10s": 9,
+          "dns_base_unique_ratio_10s": 0.3333333333333333,
+          "dns_base_encoded_queries_10s": 0
+        },
+        "alerts": []
+      },
+      {
+        "query": 10,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 5,
+          "dns_encoded_total_length": 9,
+          "dns_encoded_entropy": 2.725480556997868,
+          "dns_base_queries_10s": 10,
+          "dns_base_unique_ratio_10s": 0.3,
+          "dns_base_encoded_queries_10s": 0
+        },
+        "alerts": []
+      },
+      {
+        "query": 11,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 9,
+          "dns_encoded_total_length": 13,
+          "dns_encoded_entropy": 3.238901256602631,
+          "dns_base_queries_10s": 11,
+          "dns_base_unique_ratio_10s": 0.2727272727272727,
+          "dns_base_encoded_queries_10s": 0
+        },
+        "alerts": []
+      },
+      {
+        "query": 12,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 4,
+          "dns_encoded_total_length": 8,
+          "dns_encoded_entropy": 2.5,
+          "dns_base_queries_10s": 12,
+          "dns_base_unique_ratio_10s": 0.25,
+          "dns_base_encoded_queries_10s": 0
+        },
+        "alerts": []
+      }
+    ]
+  },
+  {
+    "scenario": "train_txt",
+    "first_alert_query": null,
+    "first_alert_delay_ms": null,
+    "traces": [
+      {
+        "query": 1,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 54,
+          "dns_encoded_total_length": 64,
+          "dns_encoded_entropy": 1.9243947268627177,
+          "dns_base_queries_10s": 1,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 0
+        },
+        "alerts": []
+      },
+      {
+        "query": 2,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 54,
+          "dns_encoded_total_length": 64,
+          "dns_encoded_entropy": 1.9243947268627177,
+          "dns_base_queries_10s": 2,
+          "dns_base_unique_ratio_10s": 0.5,
+          "dns_base_encoded_queries_10s": 0
+        },
+        "alerts": []
+      },
+      {
+        "query": 3,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 54,
+          "dns_encoded_total_length": 64,
+          "dns_encoded_entropy": 1.9243947268627177,
+          "dns_base_queries_10s": 3,
+          "dns_base_unique_ratio_10s": 0.3333333333333333,
+          "dns_base_encoded_queries_10s": 0
+        },
+        "alerts": []
+      },
+      {
+        "query": 4,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 54,
+          "dns_encoded_total_length": 64,
+          "dns_encoded_entropy": 1.9243947268627177,
+          "dns_base_queries_10s": 4,
+          "dns_base_unique_ratio_10s": 0.25,
+          "dns_base_encoded_queries_10s": 0
+        },
+        "alerts": []
+      },
+      {
+        "query": 5,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 54,
+          "dns_encoded_total_length": 64,
+          "dns_encoded_entropy": 1.9243947268627177,
+          "dns_base_queries_10s": 5,
+          "dns_base_unique_ratio_10s": 0.2,
+          "dns_base_encoded_queries_10s": 0
+        },
+        "alerts": []
+      },
+      {
+        "query": 6,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 54,
+          "dns_encoded_total_length": 64,
+          "dns_encoded_entropy": 1.9243947268627177,
+          "dns_base_queries_10s": 6,
+          "dns_base_unique_ratio_10s": 0.16666666666666666,
+          "dns_base_encoded_queries_10s": 0
+        },
+        "alerts": []
+      },
+      {
+        "query": 7,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 54,
+          "dns_encoded_total_length": 64,
+          "dns_encoded_entropy": 1.9243947268627177,
+          "dns_base_queries_10s": 7,
+          "dns_base_unique_ratio_10s": 0.14285714285714285,
+          "dns_base_encoded_queries_10s": 0
+        },
+        "alerts": []
+      },
+      {
+        "query": 8,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 54,
+          "dns_encoded_total_length": 64,
+          "dns_encoded_entropy": 1.9243947268627177,
+          "dns_base_queries_10s": 8,
+          "dns_base_unique_ratio_10s": 0.125,
+          "dns_base_encoded_queries_10s": 0
+        },
+        "alerts": []
+      },
+      {
+        "query": 9,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 54,
+          "dns_encoded_total_length": 64,
+          "dns_encoded_entropy": 1.9243947268627177,
+          "dns_base_queries_10s": 9,
+          "dns_base_unique_ratio_10s": 0.1111111111111111,
+          "dns_base_encoded_queries_10s": 0
+        },
+        "alerts": []
+      },
+      {
+        "query": 10,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 54,
+          "dns_encoded_total_length": 64,
+          "dns_encoded_entropy": 1.9243947268627177,
+          "dns_base_queries_10s": 10,
+          "dns_base_unique_ratio_10s": 0.1,
+          "dns_base_encoded_queries_10s": 0
+        },
+        "alerts": []
+      },
+      {
+        "query": 11,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 54,
+          "dns_encoded_total_length": 64,
+          "dns_encoded_entropy": 1.9243947268627177,
+          "dns_base_queries_10s": 11,
+          "dns_base_unique_ratio_10s": 0.09090909090909091,
+          "dns_base_encoded_queries_10s": 0
+        },
+        "alerts": []
+      },
+      {
+        "query": 12,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 54,
+          "dns_encoded_total_length": 64,
+          "dns_encoded_entropy": 1.9243947268627177,
+          "dns_base_queries_10s": 12,
+          "dns_base_unique_ratio_10s": 0.08333333333333333,
+          "dns_base_encoded_queries_10s": 0
+        },
+        "alerts": []
+      }
+    ]
+  },
+  {
+    "scenario": "train_machine",
+    "first_alert_query": null,
+    "first_alert_delay_ms": null,
+    "traces": [
+      {
+        "query": 1,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 10,
+          "dns_encoded_total_length": 25,
+          "dns_encoded_entropy": 3.893660689688186,
+          "dns_base_queries_10s": 1,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 0
+        },
+        "alerts": []
+      },
+      {
+        "query": 2,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 10,
+          "dns_encoded_total_length": 25,
+          "dns_encoded_entropy": 3.943465189601647,
+          "dns_base_queries_10s": 2,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 0
+        },
+        "alerts": []
+      },
+      {
+        "query": 3,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 10,
+          "dns_encoded_total_length": 25,
+          "dns_encoded_entropy": 3.943465189601647,
+          "dns_base_queries_10s": 3,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 0
+        },
+        "alerts": []
+      },
+      {
+        "query": 4,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 10,
+          "dns_encoded_total_length": 25,
+          "dns_encoded_entropy": 4.023465189601647,
+          "dns_base_queries_10s": 4,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 0
+        },
+        "alerts": []
+      },
+      {
+        "query": 5,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 10,
+          "dns_encoded_total_length": 25,
+          "dns_encoded_entropy": 4.023465189601647,
+          "dns_base_queries_10s": 5,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 0
+        },
+        "alerts": []
+      },
+      {
+        "query": 6,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 10,
+          "dns_encoded_total_length": 25,
+          "dns_encoded_entropy": 3.943465189601647,
+          "dns_base_queries_10s": 6,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 0
+        },
+        "alerts": []
+      },
+      {
+        "query": 7,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 10,
+          "dns_encoded_total_length": 25,
+          "dns_encoded_entropy": 4.023465189601647,
+          "dns_base_queries_10s": 7,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 0
+        },
+        "alerts": []
+      },
+      {
+        "query": 8,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 10,
+          "dns_encoded_total_length": 25,
+          "dns_encoded_entropy": 4.023465189601647,
+          "dns_base_queries_10s": 8,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 0
+        },
+        "alerts": []
+      },
+      {
+        "query": 9,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 10,
+          "dns_encoded_total_length": 25,
+          "dns_encoded_entropy": 4.023465189601647,
+          "dns_base_queries_10s": 9,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 0
+        },
+        "alerts": []
+      },
+      {
+        "query": 10,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 10,
+          "dns_encoded_total_length": 25,
+          "dns_encoded_entropy": 4.023465189601647,
+          "dns_base_queries_10s": 10,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 0
+        },
+        "alerts": []
+      },
+      {
+        "query": 11,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 10,
+          "dns_encoded_total_length": 25,
+          "dns_encoded_entropy": 3.943465189601647,
+          "dns_base_queries_10s": 11,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 0
+        },
+        "alerts": []
+      },
+      {
+        "query": 12,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 10,
+          "dns_encoded_total_length": 25,
+          "dns_encoded_entropy": 3.943465189601647,
+          "dns_base_queries_10s": 12,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 0
+        },
+        "alerts": []
+      }
+    ]
+  },
+  {
+    "scenario": "val_long_a",
+    "first_alert_query": 5,
+    "first_alert_delay_ms": 7200.0,
+    "traces": [
+      {
+        "query": 1,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 58,
+          "dns_encoded_total_length": 66,
+          "dns_encoded_entropy": 4.737111165760061,
+          "dns_base_queries_10s": 1,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 1
+        },
+        "alerts": []
+      },
+      {
+        "query": 2,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 58,
+          "dns_encoded_total_length": 66,
+          "dns_encoded_entropy": 4.740771391823488,
+          "dns_base_queries_10s": 2,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 2
+        },
+        "alerts": []
+      },
+      {
+        "query": 3,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 58,
+          "dns_encoded_total_length": 66,
+          "dns_encoded_entropy": 4.559344597110805,
+          "dns_base_queries_10s": 3,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 3
+        },
+        "alerts": []
+      },
+      {
+        "query": 4,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 58,
+          "dns_encoded_total_length": 66,
+          "dns_encoded_entropy": 4.587743127124853,
+          "dns_base_queries_10s": 4,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 4
+        },
+        "alerts": []
+      },
+      {
+        "query": 5,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 58,
+          "dns_encoded_total_length": 66,
+          "dns_encoded_entropy": 4.62889142234994,
+          "dns_base_queries_10s": 5,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 5
+        },
+        "alerts": [
+          {
+            "timestamp": 1700000007200.0,
+            "flow_id": "488cc6855ddb1172b81aae4c9dc27b00",
+            "threat_class": "DNS_TUNNELLING",
+            "confidence_score": 0.8,
+            "severity": "MEDIUM",
+            "supporting_evidence": "dns_query_visible=1; dns_label_count=5; dns_encoded_max_label_length=58; dns_encoded_total_length=66; dns_encoded_entropy=4.6289; dns_base_queries_10s=5; dns_base_unique_ratio_10s=1.0; dns_base_encoded_queries_10s=5; dns_candidate_pattern=repeated_long_encoded_label; confidence_kind=heuristic strength; window_partial=True",
+            "src_ip": "192.0.2.10",
+            "dst_ip": "192.0.2.53",
+            "src_port": 40004,
+            "dst_port": 53,
+            "protocol": 17,
+            "detection_source": "RULE",
+            "occurrence_count": 1,
+            "raw_evidence_metrics": {
+              "dns_query_visible": 1,
+              "dns_label_count": 5,
+              "dns_encoded_max_label_length": 58,
+              "dns_encoded_total_length": 66,
+              "dns_encoded_entropy": 4.62889142234994,
+              "dns_base_queries_10s": 5,
+              "dns_base_unique_ratio_10s": 1.0,
+              "dns_base_encoded_queries_10s": 5,
+              "dns_candidate_pattern": "repeated_long_encoded_label",
+              "confidence_kind": "heuristic strength",
+              "window_partial": true
+            }
+          }
+        ]
+      },
+      {
+        "query": 6,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 58,
+          "dns_encoded_total_length": 66,
+          "dns_encoded_entropy": 4.592144552207479,
+          "dns_base_queries_10s": 6,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 6
+        },
+        "alerts": []
+      },
+      {
+        "query": 7,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 58,
+          "dns_encoded_total_length": 66,
+          "dns_encoded_entropy": 4.686079869483536,
+          "dns_base_queries_10s": 6,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 6
+        },
+        "alerts": []
+      },
+      {
+        "query": 8,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 58,
+          "dns_encoded_total_length": 66,
+          "dns_encoded_entropy": 4.710468361520458,
+          "dns_base_queries_10s": 6,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 6
+        },
+        "alerts": []
+      },
+      {
+        "query": 9,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 58,
+          "dns_encoded_total_length": 66,
+          "dns_encoded_entropy": 4.654263725997023,
+          "dns_base_queries_10s": 6,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 6
+        },
+        "alerts": []
+      },
+      {
+        "query": 10,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 58,
+          "dns_encoded_total_length": 66,
+          "dns_encoded_entropy": 4.746685930089597,
+          "dns_base_queries_10s": 6,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 6
+        },
+        "alerts": []
+      },
+      {
+        "query": 11,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 58,
+          "dns_encoded_total_length": 66,
+          "dns_encoded_entropy": 4.618437544533382,
+          "dns_base_queries_10s": 6,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 6
+        },
+        "alerts": []
+      },
+      {
+        "query": 12,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 58,
+          "dns_encoded_total_length": 66,
+          "dns_encoded_entropy": 4.619950657716865,
+          "dns_base_queries_10s": 6,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 6
+        },
+        "alerts": []
+      }
+    ]
+  },
+  {
+    "scenario": "val_long_aaaa",
+    "first_alert_query": 5,
+    "first_alert_delay_ms": 4400.0,
+    "traces": [
+      {
+        "query": 1,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 58,
+          "dns_encoded_total_length": 66,
+          "dns_encoded_entropy": 4.654263725997023,
+          "dns_base_queries_10s": 1,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 1
+        },
+        "alerts": []
+      },
+      {
+        "query": 2,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 58,
+          "dns_encoded_total_length": 66,
+          "dns_encoded_entropy": 4.515699377092074,
+          "dns_base_queries_10s": 2,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 2
+        },
+        "alerts": []
+      },
+      {
+        "query": 3,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 58,
+          "dns_encoded_total_length": 66,
+          "dns_encoded_entropy": 4.455093316486013,
+          "dns_base_queries_10s": 3,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 3
+        },
+        "alerts": []
+      },
+      {
+        "query": 4,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 58,
+          "dns_encoded_total_length": 66,
+          "dns_encoded_entropy": 4.568243786552081,
+          "dns_base_queries_10s": 4,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 4
+        },
+        "alerts": []
+      },
+      {
+        "query": 5,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 58,
+          "dns_encoded_total_length": 66,
+          "dns_encoded_entropy": 4.587743127124853,
+          "dns_base_queries_10s": 5,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 5
+        },
+        "alerts": [
+          {
+            "timestamp": 1700000004400.0,
+            "flow_id": "a2f6f03c90c982427a377479c3827f57",
+            "threat_class": "DNS_TUNNELLING",
+            "confidence_score": 0.8,
+            "severity": "MEDIUM",
+            "supporting_evidence": "dns_query_visible=1; dns_label_count=5; dns_encoded_max_label_length=58; dns_encoded_total_length=66; dns_encoded_entropy=4.5877; dns_base_queries_10s=5; dns_base_unique_ratio_10s=1.0; dns_base_encoded_queries_10s=5; dns_candidate_pattern=repeated_long_encoded_label; confidence_kind=heuristic strength; window_partial=True",
+            "src_ip": "192.0.2.10",
+            "dst_ip": "192.0.2.53",
+            "src_port": 40004,
+            "dst_port": 53,
+            "protocol": 17,
+            "detection_source": "RULE",
+            "occurrence_count": 1,
+            "raw_evidence_metrics": {
+              "dns_query_visible": 1,
+              "dns_label_count": 5,
+              "dns_encoded_max_label_length": 58,
+              "dns_encoded_total_length": 66,
+              "dns_encoded_entropy": 4.587743127124853,
+              "dns_base_queries_10s": 5,
+              "dns_base_unique_ratio_10s": 1.0,
+              "dns_base_encoded_queries_10s": 5,
+              "dns_candidate_pattern": "repeated_long_encoded_label",
+              "confidence_kind": "heuristic strength",
+              "window_partial": true
+            }
+          }
+        ]
+      },
+      {
+        "query": 6,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 58,
+          "dns_encoded_total_length": 66,
+          "dns_encoded_entropy": 4.529041566807774,
+          "dns_base_queries_10s": 6,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 6
+        },
+        "alerts": []
+      },
+      {
+        "query": 7,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 58,
+          "dns_encoded_total_length": 66,
+          "dns_encoded_entropy": 4.615940619739738,
+          "dns_base_queries_10s": 7,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 7
+        },
+        "alerts": []
+      },
+      {
+        "query": 8,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 58,
+          "dns_encoded_total_length": 66,
+          "dns_encoded_entropy": 4.402306294435043,
+          "dns_base_queries_10s": 8,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 8
+        },
+        "alerts": []
+      },
+      {
+        "query": 9,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 58,
+          "dns_encoded_total_length": 66,
+          "dns_encoded_entropy": 4.725916088924304,
+          "dns_base_queries_10s": 9,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 9
+        },
+        "alerts": []
+      },
+      {
+        "query": 10,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 58,
+          "dns_encoded_total_length": 66,
+          "dns_encoded_entropy": 4.545368407698643,
+          "dns_base_queries_10s": 10,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 10
+        },
+        "alerts": []
+      },
+      {
+        "query": 11,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 58,
+          "dns_encoded_total_length": 66,
+          "dns_encoded_entropy": 4.697517558910255,
+          "dns_base_queries_10s": 10,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 10
+        },
+        "alerts": []
+      },
+      {
+        "query": 12,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 58,
+          "dns_encoded_total_length": 66,
+          "dns_encoded_entropy": 4.437498476202222,
+          "dns_base_queries_10s": 10,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 10
+        },
+        "alerts": []
+      }
+    ]
+  },
+  {
+    "scenario": "val_multi_txt",
+    "first_alert_query": 5,
+    "first_alert_delay_ms": 4800.0,
+    "traces": [
+      {
+        "query": 1,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 6,
+          "dns_encoded_max_label_length": 24,
+          "dns_encoded_total_length": 79,
+          "dns_encoded_entropy": 4.636403856874678,
+          "dns_base_queries_10s": 1,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 1
+        },
+        "alerts": []
+      },
+      {
+        "query": 2,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 6,
+          "dns_encoded_max_label_length": 24,
+          "dns_encoded_total_length": 79,
+          "dns_encoded_entropy": 4.885564292261815,
+          "dns_base_queries_10s": 2,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 2
+        },
+        "alerts": []
+      },
+      {
+        "query": 3,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 6,
+          "dns_encoded_max_label_length": 24,
+          "dns_encoded_total_length": 79,
+          "dns_encoded_entropy": 4.783034349602197,
+          "dns_base_queries_10s": 3,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 3
+        },
+        "alerts": []
+      },
+      {
+        "query": 4,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 6,
+          "dns_encoded_max_label_length": 24,
+          "dns_encoded_total_length": 79,
+          "dns_encoded_entropy": 4.842727862068725,
+          "dns_base_queries_10s": 4,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 4
+        },
+        "alerts": []
+      },
+      {
+        "query": 5,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 6,
+          "dns_encoded_max_label_length": 24,
+          "dns_encoded_total_length": 79,
+          "dns_encoded_entropy": 4.712353223963286,
+          "dns_base_queries_10s": 5,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 5
+        },
+        "alerts": [
+          {
+            "timestamp": 1700000004800.0,
+            "flow_id": "1da3da715a1e87f1bc9b31f93330c586",
+            "threat_class": "DNS_TUNNELLING",
+            "confidence_score": 0.8,
+            "severity": "MEDIUM",
+            "supporting_evidence": "dns_query_visible=1; dns_label_count=6; dns_encoded_max_label_length=24; dns_encoded_total_length=79; dns_encoded_entropy=4.7124; dns_base_queries_10s=5; dns_base_unique_ratio_10s=1.0; dns_base_encoded_queries_10s=5; dns_candidate_pattern=repeated_multi_label_encoding; confidence_kind=heuristic strength; window_partial=True",
+            "src_ip": "192.0.2.10",
+            "dst_ip": "192.0.2.53",
+            "src_port": 40004,
+            "dst_port": 53,
+            "protocol": 17,
+            "detection_source": "RULE",
+            "occurrence_count": 1,
+            "raw_evidence_metrics": {
+              "dns_query_visible": 1,
+              "dns_label_count": 6,
+              "dns_encoded_max_label_length": 24,
+              "dns_encoded_total_length": 79,
+              "dns_encoded_entropy": 4.712353223963286,
+              "dns_base_queries_10s": 5,
+              "dns_base_unique_ratio_10s": 1.0,
+              "dns_base_encoded_queries_10s": 5,
+              "dns_candidate_pattern": "repeated_multi_label_encoding",
+              "confidence_kind": "heuristic strength",
+              "window_partial": true
+            }
+          }
+        ]
+      },
+      {
+        "query": 6,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 6,
+          "dns_encoded_max_label_length": 24,
+          "dns_encoded_total_length": 79,
+          "dns_encoded_entropy": 4.612351521053284,
+          "dns_base_queries_10s": 6,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 6
+        },
+        "alerts": []
+      },
+      {
+        "query": 7,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 6,
+          "dns_encoded_max_label_length": 24,
+          "dns_encoded_total_length": 79,
+          "dns_encoded_entropy": 4.681565837817342,
+          "dns_base_queries_10s": 7,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 7
+        },
+        "alerts": []
+      },
+      {
+        "query": 8,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 6,
+          "dns_encoded_max_label_length": 24,
+          "dns_encoded_total_length": 79,
+          "dns_encoded_entropy": 4.687444235876964,
+          "dns_base_queries_10s": 8,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 8
+        },
+        "alerts": []
+      },
+      {
+        "query": 9,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 6,
+          "dns_encoded_max_label_length": 24,
+          "dns_encoded_total_length": 79,
+          "dns_encoded_entropy": 4.592913463416704,
+          "dns_base_queries_10s": 9,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 9
+        },
+        "alerts": []
+      },
+      {
+        "query": 10,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 6,
+          "dns_encoded_max_label_length": 24,
+          "dns_encoded_total_length": 79,
+          "dns_encoded_entropy": 4.696265324636711,
+          "dns_base_queries_10s": 9,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 9
+        },
+        "alerts": []
+      },
+      {
+        "query": 11,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 6,
+          "dns_encoded_max_label_length": 24,
+          "dns_encoded_total_length": 79,
+          "dns_encoded_entropy": 4.761395033848441,
+          "dns_base_queries_10s": 9,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 9
+        },
+        "alerts": []
+      },
+      {
+        "query": 12,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 6,
+          "dns_encoded_max_label_length": 24,
+          "dns_encoded_total_length": 79,
+          "dns_encoded_entropy": 4.722845900207722,
+          "dns_base_queries_10s": 9,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 9
+        },
+        "alerts": []
+      }
+    ]
+  },
+  {
+    "scenario": "val_multi_null",
+    "first_alert_query": 5,
+    "first_alert_delay_ms": 3800.0,
+    "traces": [
+      {
+        "query": 1,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 6,
+          "dns_encoded_max_label_length": 24,
+          "dns_encoded_total_length": 79,
+          "dns_encoded_entropy": 4.68282995769215,
+          "dns_base_queries_10s": 1,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 1
+        },
+        "alerts": []
+      },
+      {
+        "query": 2,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 6,
+          "dns_encoded_max_label_length": 24,
+          "dns_encoded_total_length": 79,
+          "dns_encoded_entropy": 4.630198477182614,
+          "dns_base_queries_10s": 2,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 2
+        },
+        "alerts": []
+      },
+      {
+        "query": 3,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 6,
+          "dns_encoded_max_label_length": 24,
+          "dns_encoded_total_length": 79,
+          "dns_encoded_entropy": 4.591649343541896,
+          "dns_base_queries_10s": 3,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 3
+        },
+        "alerts": []
+      },
+      {
+        "query": 4,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 6,
+          "dns_encoded_max_label_length": 24,
+          "dns_encoded_total_length": 79,
+          "dns_encoded_entropy": 4.707209275145987,
+          "dns_base_queries_10s": 4,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 4
+        },
+        "alerts": []
+      },
+      {
+        "query": 5,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 6,
+          "dns_encoded_max_label_length": 24,
+          "dns_encoded_total_length": 79,
+          "dns_encoded_entropy": 4.739870937776664,
+          "dns_base_queries_10s": 5,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 5
+        },
+        "alerts": [
+          {
+            "timestamp": 1700000003800.0,
+            "flow_id": "6c5c02457ac2ee3d30cf66204cea17d7",
+            "threat_class": "DNS_TUNNELLING",
+            "confidence_score": 0.8,
+            "severity": "MEDIUM",
+            "supporting_evidence": "dns_query_visible=1; dns_label_count=6; dns_encoded_max_label_length=24; dns_encoded_total_length=79; dns_encoded_entropy=4.7399; dns_base_queries_10s=5; dns_base_unique_ratio_10s=1.0; dns_base_encoded_queries_10s=5; dns_candidate_pattern=repeated_multi_label_encoding; confidence_kind=heuristic strength; window_partial=True",
+            "src_ip": "192.0.2.10",
+            "dst_ip": "192.0.2.53",
+            "src_port": 40004,
+            "dst_port": 53,
+            "protocol": 17,
+            "detection_source": "RULE",
+            "occurrence_count": 1,
+            "raw_evidence_metrics": {
+              "dns_query_visible": 1,
+              "dns_label_count": 6,
+              "dns_encoded_max_label_length": 24,
+              "dns_encoded_total_length": 79,
+              "dns_encoded_entropy": 4.739870937776664,
+              "dns_base_queries_10s": 5,
+              "dns_base_unique_ratio_10s": 1.0,
+              "dns_base_encoded_queries_10s": 5,
+              "dns_candidate_pattern": "repeated_multi_label_encoding",
+              "confidence_kind": "heuristic strength",
+              "window_partial": true
+            }
+          }
+        ]
+      },
+      {
+        "query": 6,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 6,
+          "dns_encoded_max_label_length": 24,
+          "dns_encoded_total_length": 79,
+          "dns_encoded_entropy": 4.593735381977092,
+          "dns_base_queries_10s": 6,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 6
+        },
+        "alerts": []
+      },
+      {
+        "query": 7,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 6,
+          "dns_encoded_max_label_length": 24,
+          "dns_encoded_total_length": 79,
+          "dns_encoded_entropy": 4.700384665893579,
+          "dns_base_queries_10s": 7,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 7
+        },
+        "alerts": []
+      },
+      {
+        "query": 8,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 6,
+          "dns_encoded_max_label_length": 24,
+          "dns_encoded_total_length": 79,
+          "dns_encoded_entropy": 4.751839495846371,
+          "dns_base_queries_10s": 8,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 8
+        },
+        "alerts": []
+      },
+      {
+        "query": 9,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 6,
+          "dns_encoded_max_label_length": 24,
+          "dns_encoded_total_length": 79,
+          "dns_encoded_entropy": 4.639224344552198,
+          "dns_base_queries_10s": 9,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 9
+        },
+        "alerts": []
+      },
+      {
+        "query": 10,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 6,
+          "dns_encoded_max_label_length": 24,
+          "dns_encoded_total_length": 79,
+          "dns_encoded_entropy": 4.770455634922564,
+          "dns_base_queries_10s": 10,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 10
+        },
+        "alerts": []
+      },
+      {
+        "query": 11,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 6,
+          "dns_encoded_max_label_length": 24,
+          "dns_encoded_total_length": 79,
+          "dns_encoded_entropy": 4.639666545866618,
+          "dns_base_queries_10s": 11,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 11
+        },
+        "alerts": []
+      },
+      {
+        "query": 12,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 6,
+          "dns_encoded_max_label_length": 24,
+          "dns_encoded_total_length": 79,
+          "dns_encoded_entropy": 4.616028660995732,
+          "dns_base_queries_10s": 11,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 11
+        },
+        "alerts": []
+      }
+    ]
+  },
+  {
+    "scenario": "val_long_txt",
+    "first_alert_query": 5,
+    "first_alert_delay_ms": 6000.0,
+    "traces": [
+      {
+        "query": 1,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 58,
+          "dns_encoded_total_length": 66,
+          "dns_encoded_entropy": 4.708321248640513,
+          "dns_base_queries_10s": 1,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 1
+        },
+        "alerts": []
+      },
+      {
+        "query": 2,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 58,
+          "dns_encoded_total_length": 66,
+          "dns_encoded_entropy": 4.625473808877476,
+          "dns_base_queries_10s": 2,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 2
+        },
+        "alerts": []
+      },
+      {
+        "query": 3,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 58,
+          "dns_encoded_total_length": 66,
+          "dns_encoded_entropy": 4.572295399721007,
+          "dns_base_queries_10s": 3,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 3
+        },
+        "alerts": []
+      },
+      {
+        "query": 4,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 58,
+          "dns_encoded_total_length": 66,
+          "dns_encoded_entropy": 4.462520967935605,
+          "dns_base_queries_10s": 4,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 4
+        },
+        "alerts": []
+      },
+      {
+        "query": 5,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 58,
+          "dns_encoded_total_length": 66,
+          "dns_encoded_entropy": 4.516090764197572,
+          "dns_base_queries_10s": 5,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 5
+        },
+        "alerts": [
+          {
+            "timestamp": 1700000006000.0,
+            "flow_id": "b8fd310c3e40758c6a62845b4b0d3597",
+            "threat_class": "DNS_TUNNELLING",
+            "confidence_score": 0.8,
+            "severity": "MEDIUM",
+            "supporting_evidence": "dns_query_visible=1; dns_label_count=5; dns_encoded_max_label_length=58; dns_encoded_total_length=66; dns_encoded_entropy=4.5161; dns_base_queries_10s=5; dns_base_unique_ratio_10s=1.0; dns_base_encoded_queries_10s=5; dns_candidate_pattern=repeated_long_encoded_label; confidence_kind=heuristic strength; window_partial=True",
+            "src_ip": "192.0.2.10",
+            "dst_ip": "192.0.2.53",
+            "src_port": 40004,
+            "dst_port": 53,
+            "protocol": 17,
+            "detection_source": "RULE",
+            "occurrence_count": 1,
+            "raw_evidence_metrics": {
+              "dns_query_visible": 1,
+              "dns_label_count": 5,
+              "dns_encoded_max_label_length": 58,
+              "dns_encoded_total_length": 66,
+              "dns_encoded_entropy": 4.516090764197572,
+              "dns_base_queries_10s": 5,
+              "dns_base_unique_ratio_10s": 1.0,
+              "dns_base_encoded_queries_10s": 5,
+              "dns_candidate_pattern": "repeated_long_encoded_label",
+              "confidence_kind": "heuristic strength",
+              "window_partial": true
+            }
+          }
+        ]
+      },
+      {
+        "query": 6,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 58,
+          "dns_encoded_total_length": 66,
+          "dns_encoded_entropy": 4.684566756300053,
+          "dns_base_queries_10s": 6,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 6
+        },
+        "alerts": []
+      },
+      {
+        "query": 7,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 58,
+          "dns_encoded_total_length": 66,
+          "dns_encoded_entropy": 4.614036119450756,
+          "dns_base_queries_10s": 7,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 7
+        },
+        "alerts": []
+      },
+      {
+        "query": 8,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 58,
+          "dns_encoded_total_length": 66,
+          "dns_encoded_entropy": 4.668727641790708,
+          "dns_base_queries_10s": 7,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 7
+        },
+        "alerts": []
+      },
+      {
+        "query": 9,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 58,
+          "dns_encoded_total_length": 66,
+          "dns_encoded_entropy": 4.627336733974659,
+          "dns_base_queries_10s": 7,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 7
+        },
+        "alerts": []
+      },
+      {
+        "query": 10,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 58,
+          "dns_encoded_total_length": 66,
+          "dns_encoded_entropy": 4.743268316617132,
+          "dns_base_queries_10s": 7,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 7
+        },
+        "alerts": []
+      },
+      {
+        "query": 11,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 58,
+          "dns_encoded_total_length": 66,
+          "dns_encoded_entropy": 4.691994407749645,
+          "dns_base_queries_10s": 7,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 7
+        },
+        "alerts": []
+      },
+      {
+        "query": 12,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 58,
+          "dns_encoded_total_length": 66,
+          "dns_encoded_entropy": 4.554943172028179,
+          "dns_base_queries_10s": 7,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 7
+        },
+        "alerts": []
+      }
+    ]
+  },
+  {
+    "scenario": "val_cdn",
+    "first_alert_query": null,
+    "first_alert_delay_ms": null,
+    "traces": [
+      {
+        "query": 1,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 28,
+          "dns_encoded_total_length": 34,
+          "dns_encoded_entropy": 3.8336631211594367,
+          "dns_base_queries_10s": 1,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 1
+        },
+        "alerts": []
+      },
+      {
+        "query": 2,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 28,
+          "dns_encoded_total_length": 34,
+          "dns_encoded_entropy": 3.6098501660289424,
+          "dns_base_queries_10s": 2,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 2
+        },
+        "alerts": []
+      },
+      {
+        "query": 3,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 28,
+          "dns_encoded_total_length": 34,
+          "dns_encoded_entropy": 3.5395454741006134,
+          "dns_base_queries_10s": 3,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 3
+        },
+        "alerts": []
+      },
+      {
+        "query": 4,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 28,
+          "dns_encoded_total_length": 34,
+          "dns_encoded_entropy": 3.797042165340715,
+          "dns_base_queries_10s": 4,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 4
+        },
+        "alerts": []
+      },
+      {
+        "query": 5,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 28,
+          "dns_encoded_total_length": 34,
+          "dns_encoded_entropy": 3.774839591747672,
+          "dns_base_queries_10s": 5,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 5
+        },
+        "alerts": []
+      },
+      {
+        "query": 6,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 28,
+          "dns_encoded_total_length": 34,
+          "dns_encoded_entropy": 3.9002708419385663,
+          "dns_base_queries_10s": 6,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 6
+        },
+        "alerts": []
+      },
+      {
+        "query": 7,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 28,
+          "dns_encoded_total_length": 34,
+          "dns_encoded_entropy": 3.693813488742864,
+          "dns_base_queries_10s": 7,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 7
+        },
+        "alerts": []
+      },
+      {
+        "query": 8,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 28,
+          "dns_encoded_total_length": 34,
+          "dns_encoded_entropy": 3.617634357396307,
+          "dns_base_queries_10s": 8,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 8
+        },
+        "alerts": []
+      },
+      {
+        "query": 9,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 28,
+          "dns_encoded_total_length": 34,
+          "dns_encoded_entropy": 3.5617480476936567,
+          "dns_base_queries_10s": 9,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 9
+        },
+        "alerts": []
+      },
+      {
+        "query": 10,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 28,
+          "dns_encoded_total_length": 34,
+          "dns_encoded_entropy": 3.7304344445615856,
+          "dns_base_queries_10s": 10,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 10
+        },
+        "alerts": []
+      },
+      {
+        "query": 11,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 28,
+          "dns_encoded_total_length": 34,
+          "dns_encoded_entropy": 3.7160160623359073,
+          "dns_base_queries_10s": 11,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 11
+        },
+        "alerts": []
+      },
+      {
+        "query": 12,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 28,
+          "dns_encoded_total_length": 34,
+          "dns_encoded_entropy": 3.536608254391499,
+          "dns_base_queries_10s": 12,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 12
+        },
+        "alerts": []
+      }
+    ]
+  },
+  {
+    "scenario": "val_telemetry",
+    "first_alert_query": null,
+    "first_alert_delay_ms": null,
+    "traces": [
+      {
+        "query": 1,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 25,
+          "dns_encoded_total_length": 32,
+          "dns_encoded_entropy": 4.3125,
+          "dns_base_queries_10s": 1,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 1
+        },
+        "alerts": []
+      },
+      {
+        "query": 2,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 25,
+          "dns_encoded_total_length": 32,
+          "dns_encoded_entropy": 4.163909765557392,
+          "dns_base_queries_10s": 2,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 2
+        },
+        "alerts": []
+      },
+      {
+        "query": 3,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 25,
+          "dns_encoded_total_length": 32,
+          "dns_encoded_entropy": 4.093139062229566,
+          "dns_base_queries_10s": 3,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 3
+        },
+        "alerts": []
+      },
+      {
+        "query": 4,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 25,
+          "dns_encoded_total_length": 32,
+          "dns_encoded_entropy": 4.077819531114783,
+          "dns_base_queries_10s": 4,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 4
+        },
+        "alerts": []
+      },
+      {
+        "query": 5,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 25,
+          "dns_encoded_total_length": 32,
+          "dns_encoded_entropy": 4.038909765557392,
+          "dns_base_queries_10s": 5,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 5
+        },
+        "alerts": []
+      },
+      {
+        "query": 6,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 25,
+          "dns_encoded_total_length": 32,
+          "dns_encoded_entropy": 3.9917292966721747,
+          "dns_base_queries_10s": 6,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 6
+        },
+        "alerts": []
+      },
+      {
+        "query": 7,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 25,
+          "dns_encoded_total_length": 32,
+          "dns_encoded_entropy": 4.152518266288633,
+          "dns_base_queries_10s": 7,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 7
+        },
+        "alerts": []
+      },
+      {
+        "query": 8,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 25,
+          "dns_encoded_total_length": 32,
+          "dns_encoded_entropy": 4.0,
+          "dns_base_queries_10s": 8,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 8
+        },
+        "alerts": []
+      },
+      {
+        "query": 9,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 25,
+          "dns_encoded_total_length": 32,
+          "dns_encoded_entropy": 4.101409765557392,
+          "dns_base_queries_10s": 9,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 9
+        },
+        "alerts": []
+      },
+      {
+        "query": 10,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 25,
+          "dns_encoded_total_length": 32,
+          "dns_encoded_entropy": 3.9292292966721747,
+          "dns_base_queries_10s": 10,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 10
+        },
+        "alerts": []
+      },
+      {
+        "query": 11,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 25,
+          "dns_encoded_total_length": 32,
+          "dns_encoded_entropy": 3.8011085007312415,
+          "dns_base_queries_10s": 11,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 11
+        },
+        "alerts": []
+      },
+      {
+        "query": 12,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 25,
+          "dns_encoded_total_length": 32,
+          "dns_encoded_entropy": 4.155639062229566,
+          "dns_base_queries_10s": 12,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 12
+        },
+        "alerts": []
+      }
+    ]
+  },
+  {
+    "scenario": "val_discovery",
+    "first_alert_query": null,
+    "first_alert_delay_ms": null,
+    "traces": [
+      {
+        "query": 1,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 5,
+          "dns_encoded_total_length": 9,
+          "dns_encoded_entropy": 2.725480556997868,
+          "dns_base_queries_10s": 1,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 0
+        },
+        "alerts": []
+      },
+      {
+        "query": 2,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 9,
+          "dns_encoded_total_length": 13,
+          "dns_encoded_entropy": 3.238901256602631,
+          "dns_base_queries_10s": 2,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 0
+        },
+        "alerts": []
+      },
+      {
+        "query": 3,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 4,
+          "dns_encoded_total_length": 8,
+          "dns_encoded_entropy": 2.5,
+          "dns_base_queries_10s": 3,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 0
+        },
+        "alerts": []
+      },
+      {
+        "query": 4,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 5,
+          "dns_encoded_total_length": 9,
+          "dns_encoded_entropy": 2.725480556997868,
+          "dns_base_queries_10s": 4,
+          "dns_base_unique_ratio_10s": 0.75,
+          "dns_base_encoded_queries_10s": 0
+        },
+        "alerts": []
+      },
+      {
+        "query": 5,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 9,
+          "dns_encoded_total_length": 13,
+          "dns_encoded_entropy": 3.238901256602631,
+          "dns_base_queries_10s": 5,
+          "dns_base_unique_ratio_10s": 0.6,
+          "dns_base_encoded_queries_10s": 0
+        },
+        "alerts": []
+      },
+      {
+        "query": 6,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 4,
+          "dns_encoded_total_length": 8,
+          "dns_encoded_entropy": 2.5,
+          "dns_base_queries_10s": 6,
+          "dns_base_unique_ratio_10s": 0.5,
+          "dns_base_encoded_queries_10s": 0
+        },
+        "alerts": []
+      },
+      {
+        "query": 7,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 5,
+          "dns_encoded_total_length": 9,
+          "dns_encoded_entropy": 2.725480556997868,
+          "dns_base_queries_10s": 7,
+          "dns_base_unique_ratio_10s": 0.42857142857142855,
+          "dns_base_encoded_queries_10s": 0
+        },
+        "alerts": []
+      },
+      {
+        "query": 8,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 9,
+          "dns_encoded_total_length": 13,
+          "dns_encoded_entropy": 3.238901256602631,
+          "dns_base_queries_10s": 8,
+          "dns_base_unique_ratio_10s": 0.375,
+          "dns_base_encoded_queries_10s": 0
+        },
+        "alerts": []
+      },
+      {
+        "query": 9,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 4,
+          "dns_encoded_total_length": 8,
+          "dns_encoded_entropy": 2.5,
+          "dns_base_queries_10s": 9,
+          "dns_base_unique_ratio_10s": 0.3333333333333333,
+          "dns_base_encoded_queries_10s": 0
+        },
+        "alerts": []
+      },
+      {
+        "query": 10,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 5,
+          "dns_encoded_total_length": 9,
+          "dns_encoded_entropy": 2.725480556997868,
+          "dns_base_queries_10s": 10,
+          "dns_base_unique_ratio_10s": 0.3,
+          "dns_base_encoded_queries_10s": 0
+        },
+        "alerts": []
+      },
+      {
+        "query": 11,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 9,
+          "dns_encoded_total_length": 13,
+          "dns_encoded_entropy": 3.238901256602631,
+          "dns_base_queries_10s": 11,
+          "dns_base_unique_ratio_10s": 0.2727272727272727,
+          "dns_base_encoded_queries_10s": 0
+        },
+        "alerts": []
+      },
+      {
+        "query": 12,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 4,
+          "dns_encoded_total_length": 8,
+          "dns_encoded_entropy": 2.5,
+          "dns_base_queries_10s": 12,
+          "dns_base_unique_ratio_10s": 0.25,
+          "dns_base_encoded_queries_10s": 0
+        },
+        "alerts": []
+      }
+    ]
+  },
+  {
+    "scenario": "val_txt",
+    "first_alert_query": null,
+    "first_alert_delay_ms": null,
+    "traces": [
+      {
+        "query": 1,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 54,
+          "dns_encoded_total_length": 64,
+          "dns_encoded_entropy": 1.9243947268627177,
+          "dns_base_queries_10s": 1,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 0
+        },
+        "alerts": []
+      },
+      {
+        "query": 2,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 54,
+          "dns_encoded_total_length": 64,
+          "dns_encoded_entropy": 1.9243947268627177,
+          "dns_base_queries_10s": 2,
+          "dns_base_unique_ratio_10s": 0.5,
+          "dns_base_encoded_queries_10s": 0
+        },
+        "alerts": []
+      },
+      {
+        "query": 3,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 54,
+          "dns_encoded_total_length": 64,
+          "dns_encoded_entropy": 1.9243947268627177,
+          "dns_base_queries_10s": 3,
+          "dns_base_unique_ratio_10s": 0.3333333333333333,
+          "dns_base_encoded_queries_10s": 0
+        },
+        "alerts": []
+      },
+      {
+        "query": 4,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 54,
+          "dns_encoded_total_length": 64,
+          "dns_encoded_entropy": 1.9243947268627177,
+          "dns_base_queries_10s": 4,
+          "dns_base_unique_ratio_10s": 0.25,
+          "dns_base_encoded_queries_10s": 0
+        },
+        "alerts": []
+      },
+      {
+        "query": 5,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 54,
+          "dns_encoded_total_length": 64,
+          "dns_encoded_entropy": 1.9243947268627177,
+          "dns_base_queries_10s": 5,
+          "dns_base_unique_ratio_10s": 0.2,
+          "dns_base_encoded_queries_10s": 0
+        },
+        "alerts": []
+      },
+      {
+        "query": 6,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 54,
+          "dns_encoded_total_length": 64,
+          "dns_encoded_entropy": 1.9243947268627177,
+          "dns_base_queries_10s": 6,
+          "dns_base_unique_ratio_10s": 0.16666666666666666,
+          "dns_base_encoded_queries_10s": 0
+        },
+        "alerts": []
+      },
+      {
+        "query": 7,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 54,
+          "dns_encoded_total_length": 64,
+          "dns_encoded_entropy": 1.9243947268627177,
+          "dns_base_queries_10s": 7,
+          "dns_base_unique_ratio_10s": 0.14285714285714285,
+          "dns_base_encoded_queries_10s": 0
+        },
+        "alerts": []
+      },
+      {
+        "query": 8,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 54,
+          "dns_encoded_total_length": 64,
+          "dns_encoded_entropy": 1.9243947268627177,
+          "dns_base_queries_10s": 8,
+          "dns_base_unique_ratio_10s": 0.125,
+          "dns_base_encoded_queries_10s": 0
+        },
+        "alerts": []
+      },
+      {
+        "query": 9,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 54,
+          "dns_encoded_total_length": 64,
+          "dns_encoded_entropy": 1.9243947268627177,
+          "dns_base_queries_10s": 9,
+          "dns_base_unique_ratio_10s": 0.1111111111111111,
+          "dns_base_encoded_queries_10s": 0
+        },
+        "alerts": []
+      },
+      {
+        "query": 10,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 54,
+          "dns_encoded_total_length": 64,
+          "dns_encoded_entropy": 1.9243947268627177,
+          "dns_base_queries_10s": 10,
+          "dns_base_unique_ratio_10s": 0.1,
+          "dns_base_encoded_queries_10s": 0
+        },
+        "alerts": []
+      },
+      {
+        "query": 11,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 54,
+          "dns_encoded_total_length": 64,
+          "dns_encoded_entropy": 1.9243947268627177,
+          "dns_base_queries_10s": 11,
+          "dns_base_unique_ratio_10s": 0.09090909090909091,
+          "dns_base_encoded_queries_10s": 0
+        },
+        "alerts": []
+      },
+      {
+        "query": 12,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 4,
+          "dns_encoded_max_label_length": 54,
+          "dns_encoded_total_length": 64,
+          "dns_encoded_entropy": 1.9243947268627177,
+          "dns_base_queries_10s": 12,
+          "dns_base_unique_ratio_10s": 0.08333333333333333,
+          "dns_base_encoded_queries_10s": 0
+        },
+        "alerts": []
+      }
+    ]
+  },
+  {
+    "scenario": "val_machine",
+    "first_alert_query": null,
+    "first_alert_delay_ms": null,
+    "traces": [
+      {
+        "query": 1,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 11,
+          "dns_encoded_total_length": 28,
+          "dns_encoded_entropy": 3.797902689682947,
+          "dns_base_queries_10s": 1,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 0
+        },
+        "alerts": []
+      },
+      {
+        "query": 2,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 11,
+          "dns_encoded_total_length": 28,
+          "dns_encoded_entropy": 3.797902689682947,
+          "dns_base_queries_10s": 2,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 0
+        },
+        "alerts": []
+      },
+      {
+        "query": 3,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 11,
+          "dns_encoded_total_length": 28,
+          "dns_encoded_entropy": 3.9137995646056805,
+          "dns_base_queries_10s": 3,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 0
+        },
+        "alerts": []
+      },
+      {
+        "query": 4,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 11,
+          "dns_encoded_total_length": 28,
+          "dns_encoded_entropy": 3.9137995646056805,
+          "dns_base_queries_10s": 4,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 0
+        },
+        "alerts": []
+      },
+      {
+        "query": 5,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 11,
+          "dns_encoded_total_length": 28,
+          "dns_encoded_entropy": 3.9137995646056805,
+          "dns_base_queries_10s": 5,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 0
+        },
+        "alerts": []
+      },
+      {
+        "query": 6,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 11,
+          "dns_encoded_total_length": 28,
+          "dns_encoded_entropy": 3.842370993177109,
+          "dns_base_queries_10s": 6,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 0
+        },
+        "alerts": []
+      },
+      {
+        "query": 7,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 11,
+          "dns_encoded_total_length": 28,
+          "dns_encoded_entropy": 3.9137995646056805,
+          "dns_base_queries_10s": 7,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 0
+        },
+        "alerts": []
+      },
+      {
+        "query": 8,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 11,
+          "dns_encoded_total_length": 28,
+          "dns_encoded_entropy": 3.9137995646056805,
+          "dns_base_queries_10s": 8,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 0
+        },
+        "alerts": []
+      },
+      {
+        "query": 9,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 11,
+          "dns_encoded_total_length": 28,
+          "dns_encoded_entropy": 3.9137995646056805,
+          "dns_base_queries_10s": 9,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 0
+        },
+        "alerts": []
+      },
+      {
+        "query": 10,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 11,
+          "dns_encoded_total_length": 28,
+          "dns_encoded_entropy": 3.9137995646056805,
+          "dns_base_queries_10s": 10,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 0
+        },
+        "alerts": []
+      },
+      {
+        "query": 11,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 11,
+          "dns_encoded_total_length": 28,
+          "dns_encoded_entropy": 3.797902689682947,
+          "dns_base_queries_10s": 11,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 0
+        },
+        "alerts": []
+      },
+      {
+        "query": 12,
+        "features": {
+          "dns_query_visible": 1,
+          "dns_label_count": 5,
+          "dns_encoded_max_label_length": 11,
+          "dns_encoded_total_length": 28,
+          "dns_encoded_entropy": 3.767375797816042,
+          "dns_base_queries_10s": 12,
+          "dns_base_unique_ratio_10s": 1.0,
+          "dns_base_encoded_queries_10s": 0
+        },
+        "alerts": []
+      }
+    ]
+  }
+]

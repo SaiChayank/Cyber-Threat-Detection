@@ -1,0 +1,40 @@
+# Frozen JSON is hashed as raw bytes: never apply Git newline conversion.
+data/demo/*.json -text
+data/demo/*.jsonl -text
+data/demo/*.sha256 text eol=lf
+ml/artifact.json -text
+ml/dga_v2.json -text
+ml/dga_weighted_candidate.json -text
+ml/dga_oof_candidate.json -text
+ml/public_cic.json -text
+ml/public_dga.json -text
+ml/public_tls.json -text
+ml/*.sha256 text eol=lf
+data/dga_candidate_plan.json -text
+data/dga_evaluation_protocol.json -text
+data/dga_evaluation_design_review.json -text
+data/dga_oof_candidate_plan.json -text
+data/dga_*.sha256 text eol=lf
+
+# Research contracts also hash source and report bytes. Preserve those across
+# Windows checkouts; these rules do not change runtime/model contents.
+backend/** -text
+benchmarks/** -text
+datasets/** -text
+detection/** -text
+features/** -text
+ingest/** -text
+ml/** -text
+persistence/** -text
+replay/** -text
+schemas/** -text
+streaming/** -text
+alerts/** -text
+docs/** -text
+tests/** -text
+frontend/src/** -text
+scripts/** -text
+data/*.json -text
+data/*.sha256 -text
+README.md -text
+pyproject.toml -text

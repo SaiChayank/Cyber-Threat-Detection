@@ -1,0 +1,73 @@
+{
+  "date": "2026-10-12",
+  "execution_authorization": "Owner requested sequential continuous completion after each accepted stage",
+  "completed_stages": [
+    "sample/capture/family-aware development split",
+    "primary-source eligibility and development-only schema acquisition"
+  ],
+  "split_integrity_gate_passed": true,
+  "training_readiness": "BLOCKED: inadequate independent positive support, weak labels and absent causal/raw capture verification",
+  "release_status": "NOT READY",
+  "development_counts": {
+    "train": {
+      "BENIGN_REFERENCE": 11475,
+      "MALWARE_RELATED": 14,
+      "UNLABELLED": 74
+    },
+    "validation": {
+      "BENIGN_REFERENCE": 13123,
+      "MALWARE_RELATED": 32,
+      "UNLABELLED": 328
+    },
+    "quarantine_historical_test": {
+      "BENIGN_REFERENCE": 4928,
+      "MALWARE_RELATED": 755895,
+      "UNLABELLED": 496556
+    },
+    "unlabelled": {
+      "BENIGN_REFERENCE": 0,
+      "MALWARE_RELATED": 0,
+      "UNLABELLED": 152180
+    }
+  },
+  "tests": {
+    "new_cases": 6,
+    "targeted_passed": 19,
+    "elapsed_seconds": 0.32,
+    "full_backend_rerun": false,
+    "frontend_build_rerun": false,
+    "reason": "No shared runtime/frontend change"
+  },
+  "protected_files_checked": 134,
+  "changed_protected_files": [],
+  "new_development_source": "data\\raw\\encrypted-ms-development\\capture_getuid.joy.gz",
+  "new_development_source_sha256": "d18bad45afd5c62ee848a8db04e0216d22799a3824a58a6a9fd117f45a77ebc3",
+  "new_development_source_bytes": 4635278,
+  "source_role": "development-schema-only, no labels assigned",
+  "models_trained": false,
+  "thresholds_changed": false,
+  "candidates_promoted": false,
+  "reserved_feature_values_inspected": false,
+  "frozen_text_sha256_lf_normalized": {
+    "datasets/design_encrypted_split.py": "acb90ef1debdb14e4d0551cadfbba794cb35faa9ebecf8a5a7a24f41cb94d77f",
+    "tests/test_encrypted_split_design.py": "141c15408893d5a74fdb378238408bc77bd85d32554d131bf5306ca97b863917",
+    "docs/ENCRYPTED_SPLIT_DESIGN.md": "743cb775db6582d47644d32b1b029a95a964c5a93c4aec17a1188ad37ceb3ec4",
+    "docs/COMPLETION_PLAN.md": "7a1bebd3984862ac448bdd63793628224be03bad2ce94ca09bab07bf3e48af8f",
+    "docs/DATASETS.md": "16847d7153b4f6ee975005ceb8011a3bd6f73ba22396631f2b57cbf58bce3a5e",
+    "docs/MODEL_AND_VALIDATION.md": "1a6a5fb995ea007b59f69ccfd45b6252d6634c59ee0692cd8b4f56a56e456510",
+    "docs\\verification\\encrypted-split-design-20261012\\design.log": "48a8e4968d56ca6e2207e8f36df91caa40a3c44f03923bb456ca2c907a444b70",
+    "docs\\verification\\encrypted-split-design-20261012\\development-source-capability.json": "4e7e24e257d016dc669d8be8ff95bc113ba54c6f668e2be70da914dea8c7153c",
+    "docs\\verification\\encrypted-split-design-20261012\\development-source-inspection.json": "e45a61e37e608ffb1abb132c5817b7374faf62cd46ff40e0b7822f82c4d9d054",
+    "docs\\verification\\encrypted-split-design-20261012\\initial-integrity.json": "6da1df0bff3ada7877c4ef2e89e02a4cca9783d8042ceea7797e0ea94bb15ffc",
+    "docs\\verification\\encrypted-split-design-20261012\\manifest.json": "c7f38da221618d0608378223e08b7ac3bf4399afb4fbfd35291fec0ad24273c5",
+    "docs\\verification\\encrypted-split-design-20261012\\manifest.sha256": "5fdadbe33c22a4186101c9af406cb15f880561599942b6c76acf7eb1ad9ed8bb",
+    "docs\\verification\\encrypted-split-design-20261012\\new-source-metadata.json": "d2bd20f2864261e7426f1b306fadea6b2466a5e0e5a5642b15c1d5d5540e5ae6",
+    "docs\\verification\\encrypted-split-design-20261012\\PROTOCOL.md": "553a321290a706f2a35f2a5df13afc1db3f3d5663b856ffd49a23c1cfbc25022",
+    "docs\\verification\\encrypted-split-design-20261012\\source-access.json": "0cbcf3c5f0df005a3b672c14fc148e73c4c34a094a2b8cf4a73fbd7d0287849e",
+    "docs\\verification\\encrypted-split-design-20261012\\source-candidate-metadata.json": "679eebaa6e10a9525749e493ec5b66d3ebe5aaafcb7a7e2059e5b35c954fe61e",
+    "docs\\verification\\encrypted-split-design-20261012\\source-context.json": "a627b043eb9badd6ebf0d6eca75bfa36e945f373727d3654a5c8eccc95200189",
+    "docs\\verification\\encrypted-split-design-20261012\\SOURCE_PLAN.md": "415450ce2e3beab5c3bbf20552ab62357880e6324de2fb521e60257f8d1f8be2",
+    "docs\\verification\\encrypted-split-design-20261012\\tests.log": "558fc69d463ccc3db39c0b59fdc43b63f769fb03855ce338fcf20fcef4a47467"
+  },
+  "next_prerequisite": "Verified per-session labels and causal raw TLS development capture contract; do not invent observations or bypass failed gates."
+}

@@ -1,5 +1,6 @@
 """Bounded, causal rate aggregates; packet totals never depend on buffer length."""
 import math
+from copy import copy
 from collections import Counter, deque
 from dataclasses import dataclass, field
 
@@ -39,6 +40,17 @@ class RateWindow:
         self.syn_packets = self.unknown_syn_packets = self.summary_events = 0
         self.size_squared_packet_sum = 0.0
         self.count_log_sum = 0.0
+
+    def fork(self):
+        """Copy writable state for one update; expired buckets are read-only."""
+        staged = copy(self)
+        staged.sources = self.sources.copy()
+        staged.buckets = self.buckets.copy()
+        if staged.buckets:
+            last = copy(staged.buckets[-1])
+            last.sources = last.sources.copy()
+            staged.buckets[-1] = last
+        return staged
 
     def _count(self, source, change):
         previous = self.sources.get(source, 0)

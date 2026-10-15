@@ -1,0 +1,105 @@
+{
+  "date": "2026-10-14",
+  "status": "ACQUISITION_PROVENANCE_FROZEN",
+  "final_data_readiness": "BLOCKED",
+  "gates_and_models_unchanged": true,
+  "files": [
+    {
+      "path": "docs/DGA_SOURCE_ACQUISITION.md",
+      "bytes": 9839,
+      "sha256": "b87d97763ee859e9cf4b58b00e12371927dcfa755994bd2ffa209aa1554edda3"
+    },
+    {
+      "path": "datasets/acquire_dga_evaluation.py",
+      "bytes": 3991,
+      "sha256": "e6392dd4e8d6f3f44087a2abf995231091cb09dfef325c048c7adeaf802a7b34"
+    },
+    {
+      "path": "tests/test_dga_source_acquisition.py",
+      "bytes": 2206,
+      "sha256": "0686d6c9573e35a4c74f9d28be3f4e5c1fb2d2d206c45dbae632f105ddbb7693"
+    },
+    {
+      "path": "docs/verification/dga-source-acquisition-20261014/acquisition-plan.json",
+      "bytes": 1714,
+      "sha256": "46f7a63ad7f746a0099a821ec162360e2357c7ae4dd83028ce2221f610ef352c"
+    },
+    {
+      "path": "docs/verification/dga-source-acquisition-20261014/acquisition-plan.sha256",
+      "bytes": 66,
+      "sha256": "618ef6c5e88ed40d853e8eeb8f07b02686a6904dc6e501f9cb46f0ae628eb552"
+    },
+    {
+      "path": "docs/verification/dga-source-acquisition-20261014/benign-footer-check.json",
+      "bytes": 628,
+      "sha256": "45f7345b40f3e0b8af957dabbd971f02c4ee339cf6e76c27b813082da481622c"
+    },
+    {
+      "path": "docs/verification/dga-source-acquisition-20261014/dns-reference-acquisition-plan.json",
+      "bytes": 927,
+      "sha256": "b4c974662161023749a32c25eed6538db822cb318baf0946208aa82353e687fa"
+    },
+    {
+      "path": "docs/verification/dga-source-acquisition-20261014/dns-reference-download-report.json",
+      "bytes": 1582,
+      "sha256": "016f25837af90e037f714dafb4a68a4d95f39b90128471b0248ac5a397e4ded1"
+    },
+    {
+      "path": "docs/verification/dga-source-acquisition-20261014/download-report.json",
+      "bytes": 1029,
+      "sha256": "e15f67621e966b0596e07127636187514717f44efc34740ad514aefac1b130ca"
+    },
+    {
+      "path": "docs/verification/dga-source-acquisition-20261014/drift-file-catalogue.json",
+      "bytes": 7242,
+      "sha256": "9b8b02796e1dcdb2ae115db580169d009c3b91cf2120a11e8c91f4e83432afa2"
+    },
+    {
+      "path": "docs/verification/dga-source-acquisition-20261014/drift-release-metadata.json",
+      "bytes": 18533,
+      "sha256": "499fa351a8039c24961d9c885f56d6ebc2ca1e3ffb17a2a2c2ff15b253fde604"
+    },
+    {
+      "path": "docs/verification/dga-source-acquisition-20261014/DRIFT_README.md",
+      "bytes": 21146,
+      "sha256": "e65e466c3e6ad16ef43f3879f89d82c6027e6cc4cb47e19df8ef8be47e2bc10f"
+    },
+    {
+      "path": "docs/verification/dga-source-acquisition-20261014/final-integrity.json",
+      "bytes": 1430,
+      "sha256": "6759d20f54f9b6acef1e9dc95f7eae32284987380bf544e88417ca57790a7af1"
+    },
+    {
+      "path": "docs/verification/dga-source-acquisition-20261014/initial-integrity.json",
+      "bytes": 19067,
+      "sha256": "59d90c77abc9808bf906d75e1c9e9df2a93a228752eccae8eda76067b6658fc2"
+    },
+    {
+      "path": "docs/verification/dga-source-acquisition-20261014/mendeley-v5-file-metadata.json",
+      "bytes": 22,
+      "sha256": "63164806770bb21e2570730683d016adc25ad0de1e6589dd1a17747daff59a08"
+    },
+    {
+      "path": "docs/verification/dga-source-acquisition-20261014/schema-family-check.json",
+      "bytes": 5400,
+      "sha256": "e1e9f88d93f429361b808d69dd6363fde3a6fc882c4b1d7e2d8d3eef74fa5b96"
+    }
+  ],
+  "new_raw_inputs": [
+    {
+      "path": "data/raw/dga-evaluation-intake/drift-2025/T25_benign.parquet",
+      "bytes": 19772657,
+      "sha256": "37e0c10bd2ec750706dd153f4900c8f1fb7ed2d8fddf18393373ec278a9c4eea"
+    },
+    {
+      "path": "data/raw/dga-evaluation-intake/drift-2025/T25_dga.parquet",
+      "bytes": 336599103,
+      "sha256": "c6d410dbeb7e5d4e345523defb9752fbb62c1000182a20937c96192fc4080bbd"
+    },
+    {
+      "path": "data/raw/dga-evaluation-intake/mendeley-dns-623sshkdrz-v5/BenignAndMaliciousDataset.csv",
+      "bytes": 12633896,
+      "sha256": "b0e50977577597574c7aee1f1b119de7c6599d85f687d43cfa24f6edab816b8e"
+    }
+  ]
+}

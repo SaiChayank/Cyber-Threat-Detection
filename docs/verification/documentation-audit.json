@@ -1,0 +1,996 @@
+{
+  "audit_date": "2026-10-02",
+  "scope": "Documentation/provenance audit only; no model training, reserved inspection, detector change or benchmark rerun",
+  "active_model": "ml/artifact.json",
+  "disabled_runtime_candidates": [
+    "ml/dga_v2.json",
+    "ml/dga_weighted_candidate.json",
+    "detection/dns_tunnel_candidate.py"
+  ],
+  "models": {
+    "ml/artifact.json": {
+      "sha256": "4d8e08323374535789e21f9f7cd1ee3f1c84b663ce555e67bb4ced57c95e8010",
+      "sidecar": "ml/artifact.sha256",
+      "integrity_passed": true,
+      "runtime_enabled": true,
+      "note": "Default runtime loads artifact.json and disabled dga_v2 only; others are separate research artifacts"
+    },
+    "ml/dga_v2.json": {
+      "sha256": "c0314dd5f1fe360db11e2494326fd6e99f267d6e920fa091f6c9fcebc796996e",
+      "sidecar": "ml/dga_v2.sha256",
+      "integrity_passed": true,
+      "runtime_enabled": false,
+      "note": "Default runtime loads artifact.json and disabled dga_v2 only; others are separate research artifacts"
+    },
+    "ml/dga_weighted_candidate.json": {
+      "sha256": "e81821f753d1e1b71fb5a08ff446467165941db996929767edec008c01c130ca",
+      "sidecar": "ml/dga_weighted_candidate.sha256",
+      "integrity_passed": true,
+      "runtime_enabled": false,
+      "note": "Default runtime loads artifact.json and disabled dga_v2 only; others are separate research artifacts"
+    },
+    "ml/public_cic.json": {
+      "sha256": "2c49c360d5745d6f050b12189c16db0a79c51f79b644d4243c81b3910810e7ae",
+      "sidecar": "ml/public_cic.sha256",
+      "integrity_passed": true,
+      "runtime_enabled": false,
+      "note": "Default runtime loads artifact.json and disabled dga_v2 only; others are separate research artifacts"
+    },
+    "ml/public_dga.json": {
+      "sha256": "a5766baa18463d25a5329596a8373849d4a41093c8625d694cd8dfe79e8ce7ad",
+      "sidecar": "ml/public_dga.sha256",
+      "integrity_passed": true,
+      "runtime_enabled": false,
+      "note": "Default runtime loads artifact.json and disabled dga_v2 only; others are separate research artifacts"
+    },
+    "ml/public_tls.json": {
+      "sha256": "39241b3e9defdf42f6ad5e786666fe724bf9b74239ebea456e673c23456b2c1e",
+      "sidecar": "ml/public_tls.sha256",
+      "integrity_passed": true,
+      "runtime_enabled": false,
+      "note": "Default runtime loads artifact.json and disabled dga_v2 only; others are separate research artifacts"
+    }
+  },
+  "protected_dataset_and_protocol_manifests": {
+    "data/cicddos2019_manifest.json": "9f5c1b20c2a1a9469830627154c297340d34e4efe84cda012c7e9dbd9d99349b",
+    "data/cicdns2021_manifest.json": "8db11c6b25f0002b0f792e5c73d8710a303e15a00cfbcc2d95e929b24c0c88c2",
+    "data/cicids2017_manifest.json": "a65f78be32faf4ca211dcc147de29b3c1b812368449253846a8a9acb03bf09d1",
+    "data/public_manifest.json": "500e0fb5b4a47c240f143cc1ec2b565a479e15cb3f05a089ff35ca7d2d4dd07d",
+    "data/umudga_expanded_manifest.json": "4daf4448f4a3437ff085754c49d9c90520b569577c8c5ba80dd8e5795b828e76",
+    "data/umudga_manifest.json": "99d744c738983077e301ed7c0c9eea82c3558950952e671498efd25af61bd742",
+    "data/dga_candidate_plan.json": "395d4213ef1d204728143050d4a6153ff5707af3cb6c7ecf6af36e5ad7ccbfe1",
+    "data/dga_evaluation_protocol.json": "2bcf5534437fb55045d40be8f0558734184ea4d687abd97f9a5d10e8df79c763"
+  },
+  "reports": [
+    {
+      "path": "benchmarks/delivery_latest.json",
+      "sha256": "8ecf0a0b18d8bc37d67124c5d3a308ae533351fe971012d04bb35981c0e9c81f",
+      "generated_at_utc": "2026-10-01T12:11:03.284685+00:00",
+      "recorded_scope": "Loopback API ingestion, inference, SQLite and direct SSE reception; excludes Next.js proxy, browser rendering, raw capture and concurrent subscribers",
+      "recorded_model_sha256": "4d8e08323374535789e21f9f7cd1ee3f1c84b663ce555e67bb4ced57c95e8010",
+      "recorded_source_hashes_match": true,
+      "source_checks": [
+        {
+          "path": "backend/application.py",
+          "recorded_sha256": "51252ee7446bf932b34fc069d32e9164048277f9efdc30a7d4dcd0cc9f52873e",
+          "actual_sha256": "51252ee7446bf932b34fc069d32e9164048277f9efdc30a7d4dcd0cc9f52873e",
+          "matches": true
+        },
+        {
+          "path": "detection/pipeline.py",
+          "recorded_sha256": "d5c9623e63ab7d143fe2e5f041b23a3ccbf5d114e1c0f0b349962f861a014d5b",
+          "actual_sha256": "d5c9623e63ab7d143fe2e5f041b23a3ccbf5d114e1c0f0b349962f861a014d5b",
+          "matches": true
+        },
+        {
+          "path": "features/extractor.py",
+          "recorded_sha256": "27a5155f8f9bc4a0c6b4d7828c1960d4954705d37d1b67e5e5eca5fa36d8c88d",
+          "actual_sha256": "27a5155f8f9bc4a0c6b4d7828c1960d4954705d37d1b67e5e5eca5fa36d8c88d",
+          "matches": true
+        },
+        {
+          "path": "features/rate_window.py",
+          "recorded_sha256": "8fde1be3af18ee1ad6f3d8911afb214432676669406010a01f0603995ff62a11",
+          "actual_sha256": "8fde1be3af18ee1ad6f3d8911afb214432676669406010a01f0603995ff62a11",
+          "matches": true
+        },
+        {
+          "path": "persistence/store.py",
+          "recorded_sha256": "56bdc7cbb9d25ec0ceedf0fb2fc9e2169ee53bb54fc2731d1e034f4156e1a490",
+          "actual_sha256": "56bdc7cbb9d25ec0ceedf0fb2fc9e2169ee53bb54fc2731d1e034f4156e1a490",
+          "matches": true
+        },
+        {
+          "path": "ml/model.py",
+          "recorded_sha256": "2721a53d667d1ea773154fdebf3d349c5ef221dfdb51e937d5afdba1ffa6f354",
+          "actual_sha256": "2721a53d667d1ea773154fdebf3d349c5ef221dfdb51e937d5afdba1ffa6f354",
+          "matches": true
+        },
+        {
+          "path": "ml/dga.py",
+          "recorded_sha256": "0a03098bf4cc22d8f5b7ff5fe3bd75d82d735479730e1890a7f99bedb9d6c0b7",
+          "actual_sha256": "0a03098bf4cc22d8f5b7ff5fe3bd75d82d735479730e1890a7f99bedb9d6c0b7",
+          "matches": true
+        },
+        {
+          "path": "detection/dga_rules.py",
+          "recorded_sha256": "2d6ea804a0ecf0e4ac9e16ee884e477581e975b767241c4486c3297b07ddee59",
+          "actual_sha256": "2d6ea804a0ecf0e4ac9e16ee884e477581e975b767241c4486c3297b07ddee59",
+          "matches": true
+        },
+        {
+          "path": "detection/dns_tunnel_candidate.py",
+          "recorded_sha256": "c1713f2a8bbc59753bbad586054e5b103082f4d67bf5c9cfa617383965540a9a",
+          "actual_sha256": "c1713f2a8bbc59753bbad586054e5b103082f4d67bf5c9cfa617383965540a9a",
+          "matches": true
+        },
+        {
+          "path": "features/dns_tunnel.py",
+          "recorded_sha256": "8ded37ba73c2d605f22baf4571f80842791f7b2b1584ce0230ddc365466605eb",
+          "actual_sha256": "8ded37ba73c2d605f22baf4571f80842791f7b2b1584ce0230ddc365466605eb",
+          "matches": true
+        },
+        {
+          "path": "schemas/traffic_event.py",
+          "recorded_sha256": "e5be7daf5689e39e2cbe877b6972a81b947d70176dd2aed23a30620f5c3ae7a4",
+          "actual_sha256": "e5be7daf5689e39e2cbe877b6972a81b947d70176dd2aed23a30620f5c3ae7a4",
+          "matches": true
+        },
+        {
+          "path": "schemas/alert.py",
+          "recorded_sha256": "334362e24535863247903d82c0f6ba60e0f21aaa4d3a2f263f7bdf2a81c695f2",
+          "actual_sha256": "334362e24535863247903d82c0f6ba60e0f21aaa4d3a2f263f7bdf2a81c695f2",
+          "matches": true
+        },
+        {
+          "path": "schemas/flow_record.py",
+          "recorded_sha256": "026d07266e98a14c53631e81c676ec9d1a0314feae959611c7ca3e3664ce1d24",
+          "actual_sha256": "026d07266e98a14c53631e81c676ec9d1a0314feae959611c7ca3e3664ce1d24",
+          "matches": true
+        },
+        {
+          "path": "schemas/enums.py",
+          "recorded_sha256": "8b8f820eea9af47d7d9cdb05d6963e2245fb44e7b0e641a620a4d0e6b4e2b576",
+          "actual_sha256": "8b8f820eea9af47d7d9cdb05d6963e2245fb44e7b0e641a620a4d0e6b4e2b576",
+          "matches": true
+        },
+        {
+          "path": "replay/scenarios.py",
+          "recorded_sha256": "e24b4dbb24b729fc4fa98faaf7de83554e3beac58e243a17d56ed38b3234ed2d",
+          "actual_sha256": "e24b4dbb24b729fc4fa98faaf7de83554e3beac58e243a17d56ed38b3234ed2d",
+          "matches": true
+        },
+        {
+          "path": "benchmarks/delivery.py",
+          "recorded_sha256": "1335da3b51a4c7af34820d619615274fa2c43135063c8144c5c05f3ab60d205c",
+          "actual_sha256": "1335da3b51a4c7af34820d619615274fa2c43135063c8144c5c05f3ab60d205c",
+          "matches": true
+        },
+        {
+          "path": "benchmarks/environment.py",
+          "recorded_sha256": "f9d1012bc5b4823aea70bc1298fae7e5fea73dd08c840816d7f0ee73ac06fe6c",
+          "actual_sha256": "f9d1012bc5b4823aea70bc1298fae7e5fea73dd08c840816d7f0ee73ac06fe6c",
+          "matches": true
+        }
+      ],
+      "classification": "Latest saved source-matching scoped performance run; NOT rerun on audit date"
+    },
+    {
+      "path": "benchmarks/latest.json",
+      "sha256": "ccc7b77e2e2661fca82d9e785bd31c1530192311c81fa4117439ab771d5065d1",
+      "generated_at_utc": "2026-10-01T12:10:58.190131+00:00",
+      "recorded_scope": "Core event processing + persistence; excludes capture, HTTP, SSE and rendering",
+      "recorded_model_sha256": "4d8e08323374535789e21f9f7cd1ee3f1c84b663ce555e67bb4ced57c95e8010",
+      "recorded_source_hashes_match": true,
+      "source_checks": [
+        {
+          "path": "detection/pipeline.py",
+          "recorded_sha256": "d5c9623e63ab7d143fe2e5f041b23a3ccbf5d114e1c0f0b349962f861a014d5b",
+          "actual_sha256": "d5c9623e63ab7d143fe2e5f041b23a3ccbf5d114e1c0f0b349962f861a014d5b",
+          "matches": true
+        },
+        {
+          "path": "features/extractor.py",
+          "recorded_sha256": "27a5155f8f9bc4a0c6b4d7828c1960d4954705d37d1b67e5e5eca5fa36d8c88d",
+          "actual_sha256": "27a5155f8f9bc4a0c6b4d7828c1960d4954705d37d1b67e5e5eca5fa36d8c88d",
+          "matches": true
+        },
+        {
+          "path": "features/rate_window.py",
+          "recorded_sha256": "8fde1be3af18ee1ad6f3d8911afb214432676669406010a01f0603995ff62a11",
+          "actual_sha256": "8fde1be3af18ee1ad6f3d8911afb214432676669406010a01f0603995ff62a11",
+          "matches": true
+        },
+        {
+          "path": "ml/model.py",
+          "recorded_sha256": "2721a53d667d1ea773154fdebf3d349c5ef221dfdb51e937d5afdba1ffa6f354",
+          "actual_sha256": "2721a53d667d1ea773154fdebf3d349c5ef221dfdb51e937d5afdba1ffa6f354",
+          "matches": true
+        },
+        {
+          "path": "ml/dga.py",
+          "recorded_sha256": "0a03098bf4cc22d8f5b7ff5fe3bd75d82d735479730e1890a7f99bedb9d6c0b7",
+          "actual_sha256": "0a03098bf4cc22d8f5b7ff5fe3bd75d82d735479730e1890a7f99bedb9d6c0b7",
+          "matches": true
+        },
+        {
+          "path": "persistence/store.py",
+          "recorded_sha256": "56bdc7cbb9d25ec0ceedf0fb2fc9e2169ee53bb54fc2731d1e034f4156e1a490",
+          "actual_sha256": "56bdc7cbb9d25ec0ceedf0fb2fc9e2169ee53bb54fc2731d1e034f4156e1a490",
+          "matches": true
+        },
+        {
+          "path": "detection/dga_rules.py",
+          "recorded_sha256": "2d6ea804a0ecf0e4ac9e16ee884e477581e975b767241c4486c3297b07ddee59",
+          "actual_sha256": "2d6ea804a0ecf0e4ac9e16ee884e477581e975b767241c4486c3297b07ddee59",
+          "matches": true
+        },
+        {
+          "path": "detection/dns_tunnel_candidate.py",
+          "recorded_sha256": "c1713f2a8bbc59753bbad586054e5b103082f4d67bf5c9cfa617383965540a9a",
+          "actual_sha256": "c1713f2a8bbc59753bbad586054e5b103082f4d67bf5c9cfa617383965540a9a",
+          "matches": true
+        },
+        {
+          "path": "features/dns_tunnel.py",
+          "recorded_sha256": "8ded37ba73c2d605f22baf4571f80842791f7b2b1584ce0230ddc365466605eb",
+          "actual_sha256": "8ded37ba73c2d605f22baf4571f80842791f7b2b1584ce0230ddc365466605eb",
+          "matches": true
+        },
+        {
+          "path": "schemas/traffic_event.py",
+          "recorded_sha256": "e5be7daf5689e39e2cbe877b6972a81b947d70176dd2aed23a30620f5c3ae7a4",
+          "actual_sha256": "e5be7daf5689e39e2cbe877b6972a81b947d70176dd2aed23a30620f5c3ae7a4",
+          "matches": true
+        },
+        {
+          "path": "schemas/alert.py",
+          "recorded_sha256": "334362e24535863247903d82c0f6ba60e0f21aaa4d3a2f263f7bdf2a81c695f2",
+          "actual_sha256": "334362e24535863247903d82c0f6ba60e0f21aaa4d3a2f263f7bdf2a81c695f2",
+          "matches": true
+        },
+        {
+          "path": "schemas/flow_record.py",
+          "recorded_sha256": "026d07266e98a14c53631e81c676ec9d1a0314feae959611c7ca3e3664ce1d24",
+          "actual_sha256": "026d07266e98a14c53631e81c676ec9d1a0314feae959611c7ca3e3664ce1d24",
+          "matches": true
+        },
+        {
+          "path": "schemas/enums.py",
+          "recorded_sha256": "8b8f820eea9af47d7d9cdb05d6963e2245fb44e7b0e641a620a4d0e6b4e2b576",
+          "actual_sha256": "8b8f820eea9af47d7d9cdb05d6963e2245fb44e7b0e641a620a4d0e6b4e2b576",
+          "matches": true
+        },
+        {
+          "path": "replay/scenarios.py",
+          "recorded_sha256": "e24b4dbb24b729fc4fa98faaf7de83554e3beac58e243a17d56ed38b3234ed2d",
+          "actual_sha256": "e24b4dbb24b729fc4fa98faaf7de83554e3beac58e243a17d56ed38b3234ed2d",
+          "matches": true
+        },
+        {
+          "path": "benchmarks/run.py",
+          "recorded_sha256": "af396a4cce77e8bc6b549634c62fe20c5bab1b98df2917bb09fdf9cd15d88802",
+          "actual_sha256": "af396a4cce77e8bc6b549634c62fe20c5bab1b98df2917bb09fdf9cd15d88802",
+          "matches": true
+        },
+        {
+          "path": "benchmarks/environment.py",
+          "recorded_sha256": "f9d1012bc5b4823aea70bc1298fae7e5fea73dd08c840816d7f0ee73ac06fe6c",
+          "actual_sha256": "f9d1012bc5b4823aea70bc1298fae7e5fea73dd08c840816d7f0ee73ac06fe6c",
+          "matches": true
+        }
+      ],
+      "classification": "Latest saved source-matching scoped performance run; NOT rerun on audit date"
+    },
+    {
+      "path": "ml/c2_beacon_development.json",
+      "sha256": "d72c6498397f2d2d8c81c67d7abe4c23a68d3340c6dfd409c6f2950155af8865",
+      "generated_at_utc": null,
+      "recorded_scope": "Controlled synthetic development only; no reserved or production evaluation",
+      "recorded_model_sha256": null,
+      "recorded_source_hashes_match": false,
+      "source_checks": [
+        {
+          "path": "datasets/validate_c2_beacon.py",
+          "recorded_sha256": "2de8cdd0382d855356c3c4df2b1bf493a9f0e37a06edd14ffce17d6ba1b3c54c",
+          "actual_sha256": "2de8cdd0382d855356c3c4df2b1bf493a9f0e37a06edd14ffce17d6ba1b3c54c",
+          "matches": true
+        },
+        {
+          "path": "detection/pipeline.py",
+          "recorded_sha256": "e29beac44c35378f1162a356f93644b59c91d7f139360a0627e3aa0ae9869f9d",
+          "actual_sha256": "d5c9623e63ab7d143fe2e5f041b23a3ccbf5d114e1c0f0b349962f861a014d5b",
+          "matches": false
+        },
+        {
+          "path": "features/extractor.py",
+          "recorded_sha256": "8d438bcfa97ddcfbcd8c305b60e018b8f41416d36bdf3d2a7ff5b966f642dbde",
+          "actual_sha256": "27a5155f8f9bc4a0c6b4d7828c1960d4954705d37d1b67e5e5eca5fa36d8c88d",
+          "matches": false
+        },
+        {
+          "path": "ml/artifact.json",
+          "recorded_sha256": "4d8e08323374535789e21f9f7cd1ee3f1c84b663ce555e67bb4ced57c95e8010",
+          "actual_sha256": "4d8e08323374535789e21f9f7cd1ee3f1c84b663ce555e67bb4ced57c95e8010",
+          "matches": true
+        }
+      ],
+      "classification": "Historical source revision; not a current-runtime measurement"
+    },
+    {
+      "path": "ml/dga_rule_validation.json",
+      "sha256": "07c12340c1eb80879daacc509232c3b89a19b78f5ce53e7db8970cc041ac8ce8",
+      "generated_at_utc": null,
+      "recorded_scope": "Existing training and validation partitions only; no final evaluation",
+      "recorded_model_sha256": "c0314dd5f1fe360db11e2494326fd6e99f267d6e920fa091f6c9fcebc796996e",
+      "recorded_source_hashes_match": null,
+      "source_checks": [],
+      "classification": "Historical experiment/classifier report; no complete current-runtime provenance claim"
+    },
+    {
+      "path": "ml/dga_v2_evaluation.json",
+      "sha256": "fb2f4218d43d77c6a310547ccd7aa48f2b343b8579b7975714ddb0ca530cbf70",
+      "generated_at_utc": "2026-09-29T12:52:01.430032+00:00",
+      "recorded_scope": null,
+      "recorded_model_sha256": "c0314dd5f1fe360db11e2494326fd6e99f267d6e920fa091f6c9fcebc796996e",
+      "recorded_source_hashes_match": null,
+      "source_checks": [],
+      "classification": "Historical experiment/classifier report; no complete current-runtime provenance claim"
+    },
+    {
+      "path": "ml/dga_v2_initial_evaluation.json",
+      "sha256": "32a81c373e57ad85ad597143883c7d1f78c819c0ff6d54c34413ad70588f7496",
+      "generated_at_utc": "2026-09-29T12:43:23.646234+00:00",
+      "recorded_scope": null,
+      "recorded_model_sha256": "5e1e6ebe63ad48ebaf79fc99fdf16ebed240aefeea8faba613ea2c0b702c2d00",
+      "recorded_source_hashes_match": null,
+      "source_checks": [],
+      "classification": "Historical experiment/classifier report; no complete current-runtime provenance claim"
+    },
+    {
+      "path": "ml/dga_v2_linear_evaluation.json",
+      "sha256": "dd66ec335a2ba70843c50e3dc37a145bade2f164d0279d241fe2b15ebd75d778",
+      "generated_at_utc": "2026-09-29T12:45:50.879520+00:00",
+      "recorded_scope": null,
+      "recorded_model_sha256": "10d432df6612fca50d40a0bafd30da91412a60a4b0ec5d670b359a9b36a7cf9b",
+      "recorded_source_hashes_match": null,
+      "source_checks": [],
+      "classification": "Historical experiment/classifier report; no complete current-runtime provenance claim"
+    },
+    {
+      "path": "ml/dga_weighted_candidate_validation.json",
+      "sha256": "d51badcab6b74a0dba08269ebc225df00992af2c423b06883f83012fed333259",
+      "generated_at_utc": "2026-09-29T19:12:25.711485+00:00",
+      "recorded_scope": "One frozen training/validation experiment only; no reserved or inspected comparison scoring",
+      "recorded_model_sha256": "e81821f753d1e1b71fb5a08ff446467165941db996929767edec008c01c130ca",
+      "recorded_source_hashes_match": null,
+      "source_checks": [],
+      "classification": "Historical experiment/classifier report; no complete current-runtime provenance claim"
+    },
+    {
+      "path": "ml/dns_tunnel_candidate_validation.json",
+      "sha256": "28f878b93a534dabc69f07301747c3bcc65e36fcd16e9ef2c793906e99d5c45c",
+      "generated_at_utc": null,
+      "recorded_scope": "Controlled synthetic training/configuration and validation scenarios only; no public mixed PCAP truth",
+      "recorded_model_sha256": null,
+      "recorded_source_hashes_match": true,
+      "source_checks": [
+        {
+          "path": "datasets/dns_tunnel_development.py",
+          "recorded_sha256": "3156b012b2a0c9c71321c36ec3d036e1c2510529c9bfc71918c7abc4088520f6",
+          "actual_sha256": "3156b012b2a0c9c71321c36ec3d036e1c2510529c9bfc71918c7abc4088520f6",
+          "matches": true
+        },
+        {
+          "path": "features/dns_tunnel.py",
+          "recorded_sha256": "8ded37ba73c2d605f22baf4571f80842791f7b2b1584ce0230ddc365466605eb",
+          "actual_sha256": "8ded37ba73c2d605f22baf4571f80842791f7b2b1584ce0230ddc365466605eb",
+          "matches": true
+        },
+        {
+          "path": "detection/dns_tunnel_candidate.py",
+          "recorded_sha256": "c1713f2a8bbc59753bbad586054e5b103082f4d67bf5c9cfa617383965540a9a",
+          "actual_sha256": "c1713f2a8bbc59753bbad586054e5b103082f4d67bf5c9cfa617383965540a9a",
+          "matches": true
+        }
+      ],
+      "classification": "Recorded pinned sources match; retain original scope. Partial pins do NOT certify full hybrid final evaluation"
+    },
+    {
+      "path": "ml/encrypted_session_validation.json",
+      "sha256": "be2e6311356b497ccb0cb4cf57c6bf8e85c87d3fcef849332756817eeb20a5e7",
+      "generated_at_utc": null,
+      "recorded_scope": "Controlled synthetic, runtime-compatible metadata diagnostics; no independent reserved/production accuracy",
+      "recorded_model_sha256": null,
+      "recorded_source_hashes_match": true,
+      "source_checks": [
+        {
+          "path": "docs/ENCRYPTED_SESSION_VALIDATION.md",
+          "recorded_sha256": "69e1d0f0c3b2acab54098e15a31aa6230a743c577307c8cd0d203c94efab4e9c",
+          "actual_sha256": "69e1d0f0c3b2acab54098e15a31aa6230a743c577307c8cd0d203c94efab4e9c",
+          "matches": true
+        },
+        {
+          "path": "datasets/validate_encrypted.py",
+          "recorded_sha256": "4dc197b688c4e054c29f1b7384dd98b6722d1c963eae40bac6766b72e1d72448",
+          "actual_sha256": "4dc197b688c4e054c29f1b7384dd98b6722d1c963eae40bac6766b72e1d72448",
+          "matches": true
+        },
+        {
+          "path": "detection/pipeline.py",
+          "recorded_sha256": "d5c9623e63ab7d143fe2e5f041b23a3ccbf5d114e1c0f0b349962f861a014d5b",
+          "actual_sha256": "d5c9623e63ab7d143fe2e5f041b23a3ccbf5d114e1c0f0b349962f861a014d5b",
+          "matches": true
+        },
+        {
+          "path": "features/extractor.py",
+          "recorded_sha256": "27a5155f8f9bc4a0c6b4d7828c1960d4954705d37d1b67e5e5eca5fa36d8c88d",
+          "actual_sha256": "27a5155f8f9bc4a0c6b4d7828c1960d4954705d37d1b67e5e5eca5fa36d8c88d",
+          "matches": true
+        },
+        {
+          "path": "ml/artifact.json",
+          "recorded_sha256": "4d8e08323374535789e21f9f7cd1ee3f1c84b663ce555e67bb4ced57c95e8010",
+          "actual_sha256": "4d8e08323374535789e21f9f7cd1ee3f1c84b663ce555e67bb4ced57c95e8010",
+          "matches": true
+        }
+      ],
+      "classification": "Recorded pinned sources match; retain original scope. Partial pins do NOT certify full hybrid final evaluation"
+    },
+    {
+      "path": "ml/evaluation.json",
+      "sha256": "e8f186f937d5cf178393ec4e142b1e08355029545d0f9f1e2e8d2c98d8faeafa",
+      "generated_at_utc": null,
+      "recorded_scope": null,
+      "recorded_model_sha256": null,
+      "recorded_source_hashes_match": null,
+      "source_checks": [],
+      "classification": "Historical experiment/classifier report; no complete current-runtime provenance claim"
+    },
+    {
+      "path": "ml/exfil_development.json",
+      "sha256": "23790826c10f8660c7a4412db24a2fa2be922b7327d6524d13bf7ec185eeba99",
+      "generated_at_utc": null,
+      "recorded_scope": "Controlled synthetic development only; no reserved or production evaluation",
+      "recorded_model_sha256": null,
+      "recorded_source_hashes_match": true,
+      "source_checks": [
+        {
+          "path": "datasets/validate_exfil.py",
+          "recorded_sha256": "455fd31445b059e3e893070c273c95014d3743336d88e3b32f5761f1719b21be",
+          "actual_sha256": "455fd31445b059e3e893070c273c95014d3743336d88e3b32f5761f1719b21be",
+          "matches": true
+        },
+        {
+          "path": "detection/pipeline.py",
+          "recorded_sha256": "d5c9623e63ab7d143fe2e5f041b23a3ccbf5d114e1c0f0b349962f861a014d5b",
+          "actual_sha256": "d5c9623e63ab7d143fe2e5f041b23a3ccbf5d114e1c0f0b349962f861a014d5b",
+          "matches": true
+        },
+        {
+          "path": "features/extractor.py",
+          "recorded_sha256": "27a5155f8f9bc4a0c6b4d7828c1960d4954705d37d1b67e5e5eca5fa36d8c88d",
+          "actual_sha256": "27a5155f8f9bc4a0c6b4d7828c1960d4954705d37d1b67e5e5eca5fa36d8c88d",
+          "matches": true
+        },
+        {
+          "path": "ml/artifact.json",
+          "recorded_sha256": "4d8e08323374535789e21f9f7cd1ee3f1c84b663ce555e67bb4ced57c95e8010",
+          "actual_sha256": "4d8e08323374535789e21f9f7cd1ee3f1c84b663ce555e67bb4ced57c95e8010",
+          "matches": true
+        }
+      ],
+      "classification": "Recorded pinned sources match; retain original scope. Partial pins do NOT certify full hybrid final evaluation"
+    },
+    {
+      "path": "ml/exfil_development_initial.json",
+      "sha256": "a34ea81fd678cde63b33485ae9e857915ccc6d27ba3985b825c1e67fc5dd27db",
+      "generated_at_utc": null,
+      "recorded_scope": "Controlled synthetic development only; no reserved or production evaluation",
+      "recorded_model_sha256": null,
+      "recorded_source_hashes_match": false,
+      "source_checks": [
+        {
+          "path": "datasets/validate_exfil.py",
+          "recorded_sha256": "455fd31445b059e3e893070c273c95014d3743336d88e3b32f5761f1719b21be",
+          "actual_sha256": "455fd31445b059e3e893070c273c95014d3743336d88e3b32f5761f1719b21be",
+          "matches": true
+        },
+        {
+          "path": "detection/pipeline.py",
+          "recorded_sha256": "b3b115a4e88efbecc415aa1afcdb87e7751fa3471da3bcc8d41d75f75a9fd400",
+          "actual_sha256": "d5c9623e63ab7d143fe2e5f041b23a3ccbf5d114e1c0f0b349962f861a014d5b",
+          "matches": false
+        },
+        {
+          "path": "features/extractor.py",
+          "recorded_sha256": "8d438bcfa97ddcfbcd8c305b60e018b8f41416d36bdf3d2a7ff5b966f642dbde",
+          "actual_sha256": "27a5155f8f9bc4a0c6b4d7828c1960d4954705d37d1b67e5e5eca5fa36d8c88d",
+          "matches": false
+        },
+        {
+          "path": "ml/artifact.json",
+          "recorded_sha256": "4d8e08323374535789e21f9f7cd1ee3f1c84b663ce555e67bb4ced57c95e8010",
+          "actual_sha256": "4d8e08323374535789e21f9f7cd1ee3f1c84b663ce555e67bb4ced57c95e8010",
+          "matches": true
+        }
+      ],
+      "classification": "Historical source revision; not a current-runtime measurement"
+    },
+    {
+      "path": "ml/public_cic_evaluation.json",
+      "sha256": "ac01b640bbdb93e51d43270cca00e0c6f0bf25eec132423d92bb45406589d541",
+      "generated_at_utc": null,
+      "recorded_scope": null,
+      "recorded_model_sha256": null,
+      "recorded_source_hashes_match": null,
+      "source_checks": [],
+      "classification": "Historical experiment/classifier report; no complete current-runtime provenance claim"
+    },
+    {
+      "path": "ml/public_ddos_evaluation.json",
+      "sha256": "78b0cb0a60101399c91f5302cd2bf5d5827298bb387c17d8acc185c5f4e8eeac",
+      "generated_at_utc": null,
+      "recorded_scope": null,
+      "recorded_model_sha256": null,
+      "recorded_source_hashes_match": null,
+      "source_checks": [],
+      "classification": "Historical experiment/classifier report; no complete current-runtime provenance claim"
+    },
+    {
+      "path": "ml/public_dga_evaluation.json",
+      "sha256": "9f6bd6b0823c7ec869bb774d1783b32864208a7ba9409fe373b27662025f5cbe",
+      "generated_at_utc": null,
+      "recorded_scope": null,
+      "recorded_model_sha256": null,
+      "recorded_source_hashes_match": null,
+      "source_checks": [],
+      "classification": "Historical experiment/classifier report; no complete current-runtime provenance claim"
+    },
+    {
+      "path": "ml/public_dns_evaluation.json",
+      "sha256": "11b145ea671519238302cce3a636d089ffd9ecac7044a70638c1bad936bdc56a",
+      "generated_at_utc": null,
+      "recorded_scope": "Unmodified synthetic-trained streaming pipeline on real PCAP; full captures; metadata only",
+      "recorded_model_sha256": null,
+      "recorded_source_hashes_match": null,
+      "source_checks": [],
+      "classification": "Historical experiment/classifier report; no complete current-runtime provenance claim"
+    },
+    {
+      "path": "ml/public_tls_evaluation.json",
+      "sha256": "59bcdef3016a2d74a1b466479840c0cbda7ba1d44361bc63dc510362b8515eab",
+      "generated_at_utc": null,
+      "recorded_scope": "completed TLS connection; forward-only view",
+      "recorded_model_sha256": null,
+      "recorded_source_hashes_match": null,
+      "source_checks": [],
+      "classification": "Historical experiment/classifier report; no complete current-runtime provenance claim"
+    },
+    {
+      "path": "ml/recon_development.json",
+      "sha256": "c88911a7d81a8a0434b69a201775afc400361b9d03b125971f345c663a63847a",
+      "generated_at_utc": null,
+      "recorded_scope": "Controlled synthetic development only; no reserved or production evaluation",
+      "recorded_model_sha256": null,
+      "recorded_source_hashes_match": false,
+      "source_checks": [
+        {
+          "path": "datasets/validate_recon.py",
+          "recorded_sha256": "3bb5a51fe06d4831661f6700bd26c2b0473e9ffdd92d1e5f7854286f136810b0",
+          "actual_sha256": "3bb5a51fe06d4831661f6700bd26c2b0473e9ffdd92d1e5f7854286f136810b0",
+          "matches": true
+        },
+        {
+          "path": "detection/pipeline.py",
+          "recorded_sha256": "b3b115a4e88efbecc415aa1afcdb87e7751fa3471da3bcc8d41d75f75a9fd400",
+          "actual_sha256": "d5c9623e63ab7d143fe2e5f041b23a3ccbf5d114e1c0f0b349962f861a014d5b",
+          "matches": false
+        },
+        {
+          "path": "features/extractor.py",
+          "recorded_sha256": "8d438bcfa97ddcfbcd8c305b60e018b8f41416d36bdf3d2a7ff5b966f642dbde",
+          "actual_sha256": "27a5155f8f9bc4a0c6b4d7828c1960d4954705d37d1b67e5e5eca5fa36d8c88d",
+          "matches": false
+        },
+        {
+          "path": "ml/artifact.json",
+          "recorded_sha256": "4d8e08323374535789e21f9f7cd1ee3f1c84b663ce555e67bb4ced57c95e8010",
+          "actual_sha256": "4d8e08323374535789e21f9f7cd1ee3f1c84b663ce555e67bb4ced57c95e8010",
+          "matches": true
+        }
+      ],
+      "classification": "Historical source revision; not a current-runtime measurement"
+    },
+    {
+      "path": "ml/recon_development_initial.json",
+      "sha256": "e1f18d5d3db9c91bd3f1cadec1e6ad9a2270c7dd5b8f3a8a9f1c3a4a018ead14",
+      "generated_at_utc": null,
+      "recorded_scope": "Controlled synthetic development only; no reserved or production evaluation",
+      "recorded_model_sha256": null,
+      "recorded_source_hashes_match": false,
+      "source_checks": [
+        {
+          "path": "datasets/validate_recon.py",
+          "recorded_sha256": "3bb5a51fe06d4831661f6700bd26c2b0473e9ffdd92d1e5f7854286f136810b0",
+          "actual_sha256": "3bb5a51fe06d4831661f6700bd26c2b0473e9ffdd92d1e5f7854286f136810b0",
+          "matches": true
+        },
+        {
+          "path": "detection/pipeline.py",
+          "recorded_sha256": "e29beac44c35378f1162a356f93644b59c91d7f139360a0627e3aa0ae9869f9d",
+          "actual_sha256": "d5c9623e63ab7d143fe2e5f041b23a3ccbf5d114e1c0f0b349962f861a014d5b",
+          "matches": false
+        },
+        {
+          "path": "features/extractor.py",
+          "recorded_sha256": "8d438bcfa97ddcfbcd8c305b60e018b8f41416d36bdf3d2a7ff5b966f642dbde",
+          "actual_sha256": "27a5155f8f9bc4a0c6b4d7828c1960d4954705d37d1b67e5e5eca5fa36d8c88d",
+          "matches": false
+        },
+        {
+          "path": "ml/artifact.json",
+          "recorded_sha256": "4d8e08323374535789e21f9f7cd1ee3f1c84b663ce555e67bb4ced57c95e8010",
+          "actual_sha256": "4d8e08323374535789e21f9f7cd1ee3f1c84b663ce555e67bb4ced57c95e8010",
+          "matches": true
+        }
+      ],
+      "classification": "Historical source revision; not a current-runtime measurement"
+    },
+    {
+      "path": "ml/runtime_evaluation.json",
+      "sha256": "e95b85acfff5ceaf159bbd1889ceced535dd7a4d93a486c8c935e6ddd00e4b69",
+      "generated_at_utc": "2026-09-29T13:20:31.754978+00:00",
+      "recorded_scope": "Frozen-model classifier on synthetic lab experiments, not hybrid alert accuracy or deployment validation",
+      "recorded_model_sha256": "4d8e08323374535789e21f9f7cd1ee3f1c84b663ce555e67bb4ced57c95e8010",
+      "recorded_source_hashes_match": false,
+      "source_checks": [
+        {
+          "path": "features/extractor.py",
+          "recorded_sha256": "ae9e7361704b581a6ae63113447f1d984ee51970a1ee98b8e5fb70ff3f9acffc",
+          "actual_sha256": "27a5155f8f9bc4a0c6b4d7828c1960d4954705d37d1b67e5e5eca5fa36d8c88d",
+          "matches": false
+        },
+        {
+          "path": "features/rate_window.py",
+          "recorded_sha256": "718c07419c1103ad2b68400d49e330dea46cc667997244c01601e9d0ff3a9445",
+          "actual_sha256": "8fde1be3af18ee1ad6f3d8911afb214432676669406010a01f0603995ff62a11",
+          "matches": false
+        },
+        {
+          "path": "ml/model.py",
+          "recorded_sha256": "2721a53d667d1ea773154fdebf3d349c5ef221dfdb51e937d5afdba1ffa6f354",
+          "actual_sha256": "2721a53d667d1ea773154fdebf3d349c5ef221dfdb51e937d5afdba1ffa6f354",
+          "matches": true
+        }
+      ],
+      "classification": "Historical source revision; not a current-runtime measurement"
+    },
+    {
+      "path": "ml/spoofed_source_validation.json",
+      "sha256": "11e931caae6d2e7f630594494efc81c2e2c9266f15c6f2aa986e022a7936a01f",
+      "generated_at_utc": null,
+      "recorded_scope": "One-shot controlled synthetic flow-summary audit; no source verification or production claim",
+      "recorded_model_sha256": null,
+      "recorded_source_hashes_match": false,
+      "source_checks": [
+        {
+          "path": "datasets/validate_spoofed_source.py",
+          "recorded_sha256": "4f17ea2bf8585fcc35e122e1c24183809313427b75146fdb062b44af79bc0b8d",
+          "actual_sha256": "4f17ea2bf8585fcc35e122e1c24183809313427b75146fdb062b44af79bc0b8d",
+          "matches": true
+        },
+        {
+          "path": "detection/pipeline.py",
+          "recorded_sha256": "e29beac44c35378f1162a356f93644b59c91d7f139360a0627e3aa0ae9869f9d",
+          "actual_sha256": "d5c9623e63ab7d143fe2e5f041b23a3ccbf5d114e1c0f0b349962f861a014d5b",
+          "matches": false
+        },
+        {
+          "path": "features/extractor.py",
+          "recorded_sha256": "8d438bcfa97ddcfbcd8c305b60e018b8f41416d36bdf3d2a7ff5b966f642dbde",
+          "actual_sha256": "27a5155f8f9bc4a0c6b4d7828c1960d4954705d37d1b67e5e5eca5fa36d8c88d",
+          "matches": false
+        },
+        {
+          "path": "features/rate_window.py",
+          "recorded_sha256": "8fde1be3af18ee1ad6f3d8911afb214432676669406010a01f0603995ff62a11",
+          "actual_sha256": "8fde1be3af18ee1ad6f3d8911afb214432676669406010a01f0603995ff62a11",
+          "matches": true
+        }
+      ],
+      "classification": "Historical source revision; not a current-runtime measurement"
+    },
+    {
+      "path": "ml/streaming_validation.json",
+      "sha256": "4ec8e37bdfd9a2d1f4b9d8321e8b0f2f79d71f0f6ae7eb624eed6bc9e3cee1f1",
+      "generated_at_utc": "2026-09-29T13:19:51.134240+00:00",
+      "recorded_scope": null,
+      "recorded_model_sha256": "4d8e08323374535789e21f9f7cd1ee3f1c84b663ce555e67bb4ced57c95e8010",
+      "recorded_source_hashes_match": false,
+      "source_checks": [
+        {
+          "path": "detection/pipeline.py",
+          "recorded_sha256": "5f8b6809a81c45374c1fb685aa53b6f5635be141278a1b86756a10aec5a3d7ee",
+          "actual_sha256": "d5c9623e63ab7d143fe2e5f041b23a3ccbf5d114e1c0f0b349962f861a014d5b",
+          "matches": false
+        },
+        {
+          "path": "features/extractor.py",
+          "recorded_sha256": "ae9e7361704b581a6ae63113447f1d984ee51970a1ee98b8e5fb70ff3f9acffc",
+          "actual_sha256": "27a5155f8f9bc4a0c6b4d7828c1960d4954705d37d1b67e5e5eca5fa36d8c88d",
+          "matches": false
+        },
+        {
+          "path": "features/rate_window.py",
+          "recorded_sha256": "718c07419c1103ad2b68400d49e330dea46cc667997244c01601e9d0ff3a9445",
+          "actual_sha256": "8fde1be3af18ee1ad6f3d8911afb214432676669406010a01f0603995ff62a11",
+          "matches": false
+        },
+        {
+          "path": "ingest/protocol_parsers.py",
+          "recorded_sha256": "cf8cda0df2a543e85f1ad822d0634a2e417c049d2df2b56fd23a23890c56a6cd",
+          "actual_sha256": "cf8cda0df2a543e85f1ad822d0634a2e417c049d2df2b56fd23a23890c56a6cd",
+          "matches": true
+        },
+        {
+          "path": "ml/dga.py",
+          "recorded_sha256": "0a03098bf4cc22d8f5b7ff5fe3bd75d82d735479730e1890a7f99bedb9d6c0b7",
+          "actual_sha256": "0a03098bf4cc22d8f5b7ff5fe3bd75d82d735479730e1890a7f99bedb9d6c0b7",
+          "matches": true
+        }
+      ],
+      "classification": "Historical source revision; not a current-runtime measurement"
+    },
+    {
+      "path": "ml/streaming_validation_baseline.json",
+      "sha256": "4d33deded867108adbba8b1a41b162fdc9001c5231550895a53491d0b2755a6f",
+      "generated_at_utc": "2026-09-28T06:06:06.674467+00:00",
+      "recorded_scope": null,
+      "recorded_model_sha256": "4d8e08323374535789e21f9f7cd1ee3f1c84b663ce555e67bb4ced57c95e8010",
+      "recorded_source_hashes_match": null,
+      "source_checks": [],
+      "classification": "Historical experiment/classifier report; no complete current-runtime provenance claim"
+    },
+    {
+      "path": "ml/syn_flood_validation.json",
+      "sha256": "c93be4dc61d60a22e7fd6aeabe6bd31b55215394bd646da5a3f504e8d3637d8c",
+      "generated_at_utc": null,
+      "recorded_scope": "Deterministic, labelled offline TCP-only controlled replays; not field accuracy",
+      "recorded_model_sha256": null,
+      "recorded_source_hashes_match": false,
+      "source_checks": [
+        {
+          "path": "datasets/validate_syn_flood.py",
+          "recorded_sha256": "5fe78266d61ebc5f1c9b45562d4d65f9e09e8b600fcfe1cb99ebcc3ef67b5a80",
+          "actual_sha256": "5fe78266d61ebc5f1c9b45562d4d65f9e09e8b600fcfe1cb99ebcc3ef67b5a80",
+          "matches": true
+        },
+        {
+          "path": "features/rate_window.py",
+          "recorded_sha256": "0b67198ea303d364903c0439e2dba98a0c26ccdc9e717536ac5ede63dec044b8",
+          "actual_sha256": "8fde1be3af18ee1ad6f3d8911afb214432676669406010a01f0603995ff62a11",
+          "matches": false
+        },
+        {
+          "path": "features/extractor.py",
+          "recorded_sha256": "6f4df286fbb82f99ed2dcc7e983fd73180d7cb1a7a7bfdd36fde22a80e6031b0",
+          "actual_sha256": "27a5155f8f9bc4a0c6b4d7828c1960d4954705d37d1b67e5e5eca5fa36d8c88d",
+          "matches": false
+        },
+        {
+          "path": "detection/pipeline.py",
+          "recorded_sha256": "29cf1c294cbdf7f6b921f0648bba540b2d5504dbf39d3ceb8a3d498f850e2ae1",
+          "actual_sha256": "d5c9623e63ab7d143fe2e5f041b23a3ccbf5d114e1c0f0b349962f861a014d5b",
+          "matches": false
+        },
+        {
+          "path": "ingest/protocol_parsers.py",
+          "recorded_sha256": "cf8cda0df2a543e85f1ad822d0634a2e417c049d2df2b56fd23a23890c56a6cd",
+          "actual_sha256": "cf8cda0df2a543e85f1ad822d0634a2e417c049d2df2b56fd23a23890c56a6cd",
+          "matches": true
+        },
+        {
+          "path": "ingest/metadata.py",
+          "recorded_sha256": "e0f26334b4102928f9ac98a76de44e3ca204f53ed0104e17b1ca51031213eed6",
+          "actual_sha256": "e0f26334b4102928f9ac98a76de44e3ca204f53ed0104e17b1ca51031213eed6",
+          "matches": true
+        },
+        {
+          "path": "replay/scenarios.py",
+          "recorded_sha256": "e24b4dbb24b729fc4fa98faaf7de83554e3beac58e243a17d56ed38b3234ed2d",
+          "actual_sha256": "e24b4dbb24b729fc4fa98faaf7de83554e3beac58e243a17d56ed38b3234ed2d",
+          "matches": true
+        }
+      ],
+      "classification": "Historical source revision; not a current-runtime measurement"
+    },
+    {
+      "path": "ml/syn_flood_validation_initial.json",
+      "sha256": "6e4e74f40d6b4fda229b8b55f966343d78e99c9872f2c935935d5e75baba4a1f",
+      "generated_at_utc": null,
+      "recorded_scope": "Deterministic, labelled offline TCP-only controlled replays; not field accuracy",
+      "recorded_model_sha256": null,
+      "recorded_source_hashes_match": false,
+      "source_checks": [
+        {
+          "path": "datasets/validate_syn_flood.py",
+          "recorded_sha256": "8ac95fd6e2f74529ac8cabe0961b6ee9f47a0ff82487521f836bb753427bc097",
+          "actual_sha256": "5fe78266d61ebc5f1c9b45562d4d65f9e09e8b600fcfe1cb99ebcc3ef67b5a80",
+          "matches": false
+        },
+        {
+          "path": "features/rate_window.py",
+          "recorded_sha256": "1c64eccdceff263f7e5bc9afdacc645000f1218b958d71a1501d5faf40ef71c6",
+          "actual_sha256": "8fde1be3af18ee1ad6f3d8911afb214432676669406010a01f0603995ff62a11",
+          "matches": false
+        },
+        {
+          "path": "features/extractor.py",
+          "recorded_sha256": "6f4df286fbb82f99ed2dcc7e983fd73180d7cb1a7a7bfdd36fde22a80e6031b0",
+          "actual_sha256": "27a5155f8f9bc4a0c6b4d7828c1960d4954705d37d1b67e5e5eca5fa36d8c88d",
+          "matches": false
+        },
+        {
+          "path": "detection/pipeline.py",
+          "recorded_sha256": "1a9b714819a6f559abcb35a8da0e2946f421762ff5d5eb077055fd01da4dec82",
+          "actual_sha256": "d5c9623e63ab7d143fe2e5f041b23a3ccbf5d114e1c0f0b349962f861a014d5b",
+          "matches": false
+        },
+        {
+          "path": "ingest/protocol_parsers.py",
+          "recorded_sha256": "cf8cda0df2a543e85f1ad822d0634a2e417c049d2df2b56fd23a23890c56a6cd",
+          "actual_sha256": "cf8cda0df2a543e85f1ad822d0634a2e417c049d2df2b56fd23a23890c56a6cd",
+          "matches": true
+        },
+        {
+          "path": "ingest/metadata.py",
+          "recorded_sha256": "e3d4f6d93c8074537b09f6a85b3384a788e3d128fc1e8d325055f0603272d72f",
+          "actual_sha256": "e0f26334b4102928f9ac98a76de44e3ca204f53ed0104e17b1ca51031213eed6",
+          "matches": false
+        },
+        {
+          "path": "replay/scenarios.py",
+          "recorded_sha256": "a89adfd75d0aef77ad5ee4423fed7fb10c616a9b690842545b56d9d9f90106a2",
+          "actual_sha256": "e24b4dbb24b729fc4fa98faaf7de83554e3beac58e243a17d56ed38b3234ed2d",
+          "matches": false
+        }
+      ],
+      "classification": "Historical source revision; not a current-runtime measurement"
+    },
+    {
+      "path": "ml/udp_flood_development.json",
+      "sha256": "645ac53f4f73c35aa80f02fcbdb5960d4f2d183c0d00c48abb4b85e3cf0d1a04",
+      "generated_at_utc": null,
+      "recorded_scope": "Inspected synthetic development cases only; not reserved or production quality",
+      "recorded_model_sha256": null,
+      "recorded_source_hashes_match": false,
+      "source_checks": [
+        {
+          "path": "datasets/validate_udp_flood.py",
+          "recorded_sha256": "4b69d9c1a73b0e34527d20ed5e24ba5fa2024a7faaff1edeb0dbe74f838f76e2",
+          "actual_sha256": "4b69d9c1a73b0e34527d20ed5e24ba5fa2024a7faaff1edeb0dbe74f838f76e2",
+          "matches": true
+        },
+        {
+          "path": "detection/pipeline.py",
+          "recorded_sha256": "e29beac44c35378f1162a356f93644b59c91d7f139360a0627e3aa0ae9869f9d",
+          "actual_sha256": "d5c9623e63ab7d143fe2e5f041b23a3ccbf5d114e1c0f0b349962f861a014d5b",
+          "matches": false
+        },
+        {
+          "path": "features/extractor.py",
+          "recorded_sha256": "8d438bcfa97ddcfbcd8c305b60e018b8f41416d36bdf3d2a7ff5b966f642dbde",
+          "actual_sha256": "27a5155f8f9bc4a0c6b4d7828c1960d4954705d37d1b67e5e5eca5fa36d8c88d",
+          "matches": false
+        },
+        {
+          "path": "features/rate_window.py",
+          "recorded_sha256": "8fde1be3af18ee1ad6f3d8911afb214432676669406010a01f0603995ff62a11",
+          "actual_sha256": "8fde1be3af18ee1ad6f3d8911afb214432676669406010a01f0603995ff62a11",
+          "matches": true
+        },
+        {
+          "path": "ingest/protocol_parsers.py",
+          "recorded_sha256": "cf8cda0df2a543e85f1ad822d0634a2e417c049d2df2b56fd23a23890c56a6cd",
+          "actual_sha256": "cf8cda0df2a543e85f1ad822d0634a2e417c049d2df2b56fd23a23890c56a6cd",
+          "matches": true
+        },
+        {
+          "path": "ingest/metadata.py",
+          "recorded_sha256": "e0f26334b4102928f9ac98a76de44e3ca204f53ed0104e17b1ca51031213eed6",
+          "actual_sha256": "e0f26334b4102928f9ac98a76de44e3ca204f53ed0104e17b1ca51031213eed6",
+          "matches": true
+        }
+      ],
+      "classification": "Historical source revision; not a current-runtime measurement"
+    },
+    {
+      "path": "ml/udp_flood_development_initial.json",
+      "sha256": "b281451dc5e5ca0f6bfcce1b4e99770f74d21d2664915f5bc7d9340c31e1582f",
+      "generated_at_utc": null,
+      "recorded_scope": "Inspected synthetic development cases only; not reserved or production quality",
+      "recorded_model_sha256": null,
+      "recorded_source_hashes_match": false,
+      "source_checks": [
+        {
+          "path": "datasets/validate_udp_flood.py",
+          "recorded_sha256": "4b69d9c1a73b0e34527d20ed5e24ba5fa2024a7faaff1edeb0dbe74f838f76e2",
+          "actual_sha256": "4b69d9c1a73b0e34527d20ed5e24ba5fa2024a7faaff1edeb0dbe74f838f76e2",
+          "matches": true
+        },
+        {
+          "path": "detection/pipeline.py",
+          "recorded_sha256": "29cf1c294cbdf7f6b921f0648bba540b2d5504dbf39d3ceb8a3d498f850e2ae1",
+          "actual_sha256": "d5c9623e63ab7d143fe2e5f041b23a3ccbf5d114e1c0f0b349962f861a014d5b",
+          "matches": false
+        },
+        {
+          "path": "features/extractor.py",
+          "recorded_sha256": "6f4df286fbb82f99ed2dcc7e983fd73180d7cb1a7a7bfdd36fde22a80e6031b0",
+          "actual_sha256": "27a5155f8f9bc4a0c6b4d7828c1960d4954705d37d1b67e5e5eca5fa36d8c88d",
+          "matches": false
+        },
+        {
+          "path": "features/rate_window.py",
+          "recorded_sha256": "0b67198ea303d364903c0439e2dba98a0c26ccdc9e717536ac5ede63dec044b8",
+          "actual_sha256": "8fde1be3af18ee1ad6f3d8911afb214432676669406010a01f0603995ff62a11",
+          "matches": false
+        },
+        {
+          "path": "ingest/protocol_parsers.py",
+          "recorded_sha256": "cf8cda0df2a543e85f1ad822d0634a2e417c049d2df2b56fd23a23890c56a6cd",
+          "actual_sha256": "cf8cda0df2a543e85f1ad822d0634a2e417c049d2df2b56fd23a23890c56a6cd",
+          "matches": true
+        },
+        {
+          "path": "ingest/metadata.py",
+          "recorded_sha256": "e0f26334b4102928f9ac98a76de44e3ca204f53ed0104e17b1ca51031213eed6",
+          "actual_sha256": "e0f26334b4102928f9ac98a76de44e3ca204f53ed0104e17b1ca51031213eed6",
+          "matches": true
+        }
+      ],
+      "classification": "Historical source revision; not a current-runtime measurement"
+    }
+  ],
+  "demo_documentation_provenance_migration": {
+    "previous_manifest_sha256": "5130f4fa3b59223a5c134f1373a91f5f34c2dd9e2a4d1475fe2a0f00131cfa2d",
+    "current_manifest_sha256": "e6eec414a1d32aa7ef3dd98024c02192f45f68d71bdd3285d6ec8139b7819442",
+    "previous_path": "docs/STREAMING_VALIDATION.md",
+    "archived_path": "docs/history/STREAMING_VALIDATION_20260929.md",
+    "archived_sha256": "6113e35a07b83d5b9804e92c99fe0cce582b9ac2556bfb92139abe925a0a96f6",
+    "unchanged_pinned_report_sha256": "6113e35a07b83d5b9804e92c99fe0cce582b9ac2556bfb92139abe925a0a96f6",
+    "note": "Archived exact original bytes; only documentation pointers changed. Input/model/expected trace hashes unchanged."
+  },
+  "clean_checkout": {
+    "status": "incomplete",
+    "snapshot": "d4b77fd984b7ba1a33de799f91a4d9c397c85134",
+    "environment": "New directory, isolated venv and npm/pip caches; no developer dependencies/raw captures/database copied",
+    "installation_and_dev_startup": "passed",
+    "initial_suite": {
+      "passed": 219,
+      "failed": 4
+    },
+    "corrected_full_rerun": "not performed before documentation task",
+    "production_build_and_default_replay": "not verified in clean checkout"
+  },
+  "latest_completed_working_tree_suite": {
+    "task": "demo preparation",
+    "passed": 223,
+    "warning": "Existing Starlette/httpx deprecation",
+    "fresh_install": false
+  },
+  "historical_reports_preserved": true,
+  "documentation_task_checks": {
+    "demo_preflight": "passed",
+    "targeted_demo_tests": {"passed": 15, "failed": 0},
+    "local_markdown_links": {"checked": 72, "missing": 0},
+    "git_diff_check": "passed",
+    "analyst_database_sha256": "42f67cde08aaa4db17432058fdd3521a7199a1dfd4afe740ca486d6b49226302",
+    "analyst_database_unchanged": true,
+    "full_backend_suite_rerun": false,
+    "frontend_build_rerun": false,
+    "benchmark_rerun": false,
+    "new_tests_added_in_documentation_task": 0
+  }
+}

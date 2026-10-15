@@ -20,6 +20,7 @@ from pathlib import Path
 
 import httpx
 from persistence.store import AlertStore
+from benchmarks.environment import hardware
 
 ROOT = Path(__file__).resolve().parent.parent
 DELIVERY_TARGET_MS = 1000
@@ -93,6 +94,7 @@ async def measure(url, count):
             if observer.done():
                 observer.result()
                 raise ValueError('SSE stream ended before ingest began')
+            batch_started = time.perf_counter()
             for i in range(count):
                 flow = f'delivery-check-{i}'
                 # Explicit simulated flow summary, not a raw packet or an attack
@@ -110,6 +112,7 @@ async def measure(url, count):
                     raise ValueError('Ingest did not persist exactly one expected DDoS alert')
                 accepted[flow] = rows[0]
             await asyncio.wait_for(observer, timeout=10)
+            batch_elapsed = time.perf_counter() - batch_started
         finally:
             observer.cancel()
             await asyncio.gather(observer, return_exceptions=True)
@@ -141,7 +144,11 @@ async def measure(url, count):
     latencies = [row['latency_ms'] for row in received.values()]
     return dict(events=count, accepted_alerts=len(accepted), persisted_alerts=len(stored),
                 delivered_alerts=len(received), success_count=len(received),
+                elapsed_seconds=batch_elapsed,
+                serial_batch_events_per_second=count / batch_elapsed,
+                batch_timing_scope='First submission through final SSE receipt; excludes startup, verification and shutdown; serial batch rate is not a sustained capacity claim',
                 persisted_records_sha256=record_digest(stored_rows),
+                api_acceptance_p50_ms=percentile(post_durations, .50),
                 api_acceptance_p95_ms=percentile(post_durations, .95),
                 api_to_sse_p50_ms=percentile(latencies, .50),
                 api_to_sse_p95_ms=percentile(latencies, .95),
@@ -155,9 +162,12 @@ async def measure(url, count):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--events', type=int, default=100)
+    parser.add_argument('--output', type=Path, default=Path(__file__).with_name('delivery_latest.json'),
+                        help='Report destination; use a separate path for scoped regression runs')
     args = parser.parse_args()
     if not 10 <= args.events <= 500:
         parser.error('Use 10 to 500 simulated events')
+    environment = hardware()
     with tempfile.TemporaryDirectory() as directory:
         with socket.socket() as probe:
             probe.bind(('127.0.0.1', 0))
@@ -210,11 +220,19 @@ def main():
                   scope='Loopback API ingestion, inference, SQLite and direct SSE reception; excludes Next.js proxy, browser rendering, raw capture and concurrent subscribers',
                   workload='100-or-configured-count simulated high-rate flow summaries in an isolated temporary database',
                   python=platform.python_version(), platform=platform.platform(),
+                  hardware=environment, percentile_method='Nearest rank: ceil(n * fraction), one-based',
+                  model_sha256=hashlib.sha256((ROOT / 'ml/artifact.json').read_bytes()).hexdigest(),
+                  benchmark_source_sha256={name: hashlib.sha256((ROOT / name).read_bytes()).hexdigest()
+                                           for name in ('benchmarks/delivery.py', 'benchmarks/environment.py')},
                   runtime_source_sha256={name: hashlib.sha256((ROOT / name).read_bytes()).hexdigest()
                                          for name in ('backend/application.py', 'detection/pipeline.py',
                                                       'features/extractor.py', 'features/rate_window.py',
-                                                      'persistence/store.py')})
-    Path(__file__).with_name('delivery_latest.json').write_text(json.dumps(report, indent=2), encoding='utf-8')
+                                                      'persistence/store.py', 'ml/model.py', 'ml/dga.py',
+                                                      'detection/dga_rules.py', 'detection/dns_tunnel_candidate.py',
+                                                      'features/dns_tunnel.py', 'schemas/traffic_event.py',
+                                                      'schemas/alert.py', 'schemas/flow_record.py',
+                                                      'schemas/enums.py', 'replay/scenarios.py')})
+    args.output.write_text(json.dumps(report, indent=2), encoding='utf-8')
     print(json.dumps(report, indent=2))
     if not report['delivery_pass']:
         raise SystemExit('API-to-SSE latency target failed')

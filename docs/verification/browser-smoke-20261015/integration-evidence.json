@@ -1,0 +1,20 @@
+{
+  "api_export_sqlite_exact_match": true,
+  "alert_count": 17,
+  "unique_ids": 17,
+  "classes": [
+    "BOTNET_C2",
+    "DATA_EXFILTRATION",
+    "DDOS",
+    "DGA_DOMAINS",
+    "DNS_TUNNELLING",
+    "ENCRYPTED_MALWARE",
+    "RECONNAISSANCE"
+  ],
+  "sequence_range": [
+    1,
+    17
+  ],
+  "protected_backend_files_unchanged": 185,
+  "candidate_promotion": false
+}

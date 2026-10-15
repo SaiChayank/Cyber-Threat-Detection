@@ -1,0 +1,26 @@
+{
+  "role": "existing development-schema-only derivative",
+  "no_labels_assigned": true,
+  "counts": {
+    "flows": 17421,
+    "stored_packet_summaries": 135704,
+    "flows_with_more_total_packets_than_stored_summaries": 17421,
+    "flows_without_explicit_clienthello_position": 17421
+  },
+  "packet_directions": {
+    ">": 59763,
+    "<": 75941
+  },
+  "tls_record_types": {
+    "22": 156789,
+    "20": 34842,
+    "23": 45342,
+    "21": 17421
+  },
+  "client_version_codes": {
+    "5": 17421
+  },
+  "configured_packet_summary_limit_per_direction": 50,
+  "raw_packet_lengths_reconstructed": false,
+  "causal_runtime_events_created": false
+}

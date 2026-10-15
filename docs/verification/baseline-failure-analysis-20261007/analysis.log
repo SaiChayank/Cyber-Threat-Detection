@@ -1,0 +1,39 @@
+{
+  "first_false_positive_sources": {
+    "HYBRID": 6,
+    "ML": 7,
+    "RULE": 4
+  },
+  "groups": {
+    "UDP": {
+      "TP": 4,
+      "TN": 2,
+      "FP": 4,
+      "FN": 0
+    },
+    "C2": {
+      "TP": 3,
+      "TN": 6,
+      "FP": 2,
+      "FN": 3
+    },
+    "RECON": {
+      "TP": 4,
+      "TN": 3,
+      "FP": 3,
+      "FN": 1
+    },
+    "EXFIL": {
+      "TP": 4,
+      "TN": 2,
+      "FP": 4,
+      "FN": 1
+    },
+    "ENCRYPTED": {
+      "TP": 3,
+      "TN": 6,
+      "FP": 4,
+      "FN": 5
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "revision": "86bd1dc970b919a04f12eeda679893beee32ec8d",
+  "paths": [
+    "meter/features/context/packet_direction.py",
+    "meter/features/context/packet_flow_key.py",
+    "meter/features/flow_bytes.py",
+    "meter/features/packet_length.py",
+    "meter/features/packet_time.py",
+    "meter/flow.py",
+    "meter/flow_session.py",
+    "meter/time_series/flow_clumps.py",
+    "meter/time_series/processor.py"
+  ]
+}

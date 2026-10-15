@@ -1,0 +1,905 @@
+{
+  "scope": "Raw file integrity only; no domain/capture observations scored or inspected",
+  "files": [
+    {
+      "manifest": "data/public_manifest.json",
+      "file": "Data.md",
+      "expected_sha256": "f58f5112ca438b883ef8c775f0351eb44284de745e195d1599d1cc772be1657e",
+      "matches": true,
+      "results": [
+        {
+          "path": "data/raw/tls-18336960/Data.md",
+          "sha256": "f58f5112ca438b883ef8c775f0351eb44284de745e195d1599d1cc772be1657e",
+          "matches": true
+        }
+      ]
+    },
+    {
+      "manifest": "data/public_manifest.json",
+      "file": "Readme.md",
+      "expected_sha256": "b13713f3503da1e3badea3e6c7972a21a6f4bed64bdc7e5707f6f5bbc1472ce9",
+      "matches": true,
+      "results": [
+        {
+          "path": "data/raw/tls-18336960/Readme.md",
+          "sha256": "b13713f3503da1e3badea3e6c7972a21a6f4bed64bdc7e5707f6f5bbc1472ce9",
+          "matches": true
+        }
+      ]
+    },
+    {
+      "manifest": "data/public_manifest.json",
+      "file": "winapps.parquet.zip",
+      "expected_sha256": "4e3e80c4cd50b823f99553348ab49ac4bf09158decb470390380d10341737fa3",
+      "matches": true,
+      "results": [
+        {
+          "path": "data/raw/tls-18336960/winapps.parquet.zip",
+          "sha256": "4e3e80c4cd50b823f99553348ab49ac4bf09158decb470390380d10341737fa3",
+          "matches": true
+        }
+      ]
+    },
+    {
+      "manifest": "data/public_manifest.json",
+      "file": "malware.parquet.zip",
+      "expected_sha256": "767bcd2b552496b9d878b6b15b975cf7d3b04a27c656fd1557b065a42f6a3750",
+      "matches": true,
+      "results": [
+        {
+          "path": "data/raw/tls-18336960/malware.parquet.zip",
+          "sha256": "767bcd2b552496b9d878b6b15b975cf7d3b04a27c656fd1557b065a42f6a3750",
+          "matches": true
+        }
+      ]
+    },
+    {
+      "manifest": "data/public_manifest.json",
+      "file": "soho.parquet.zip",
+      "expected_sha256": "0981dea89b23af6085a4fe9d0fb213a43e03b46c509a0b4e48f7e26457e8307b",
+      "matches": true,
+      "results": [
+        {
+          "path": "data/raw/tls-18336960/soho.parquet.zip",
+          "sha256": "0981dea89b23af6085a4fe9d0fb213a43e03b46c509a0b4e48f7e26457e8307b",
+          "matches": true
+        }
+      ]
+    },
+    {
+      "manifest": "data/cicids2017_manifest.json",
+      "file": "data/raw/cicids2017/MachineLearningCSV.md5",
+      "expected_sha256": "9f8789602d7f885f1e024eac19653592e25d42a5218af25090d29a06f27fa362",
+      "matches": true,
+      "results": [
+        {
+          "path": "data/raw/cicids2017/MachineLearningCSV.md5",
+          "sha256": "9f8789602d7f885f1e024eac19653592e25d42a5218af25090d29a06f27fa362",
+          "matches": true
+        }
+      ]
+    },
+    {
+      "manifest": "data/cicids2017_manifest.json",
+      "file": "data/raw/cicids2017/MachineLearningCSV.zip",
+      "expected_sha256": "c3f26274b36c837ccf28ffd2dbf4582941c30b3ee70a635c6e5b2f87c4727928",
+      "matches": true,
+      "results": [
+        {
+          "path": "data/raw/cicids2017/MachineLearningCSV.zip",
+          "sha256": "c3f26274b36c837ccf28ffd2dbf4582941c30b3ee70a635c6e5b2f87c4727928",
+          "matches": true
+        }
+      ]
+    },
+    {
+      "manifest": "data/cicddos2019_manifest.json",
+      "file": "data/raw/cicddos2019/first-csv-100000-rows.csv",
+      "expected_sha256": "019d85ea5c5811a3896822195bb68262139e13774648e3e0db1e5a47587336fc",
+      "matches": true,
+      "results": [
+        {
+          "path": "data/raw/cicddos2019/first-csv-100000-rows.csv",
+          "sha256": "019d85ea5c5811a3896822195bb68262139e13774648e3e0db1e5a47587336fc",
+          "matches": true
+        }
+      ]
+    },
+    {
+      "manifest": "data/cicdns2021_manifest.json",
+      "file": "data/raw/cicdns2021/benign-Benign.zip",
+      "expected_sha256": "299787ac7f88f56dd9caf1aa7dd60d21bd398f9f46e5ae4b2d165b0363add899",
+      "matches": true,
+      "results": [
+        {
+          "path": "data/raw/cicdns2021/benign-Benign.zip",
+          "sha256": "299787ac7f88f56dd9caf1aa7dd60d21bd398f9f46e5ae4b2d165b0363add899",
+          "matches": true
+        }
+      ]
+    },
+    {
+      "manifest": "data/cicdns2021_manifest.json",
+      "file": "data/raw/cicdns2021/light-Attacks.zip",
+      "expected_sha256": "1ab347229846cfa92a100b3c603982b0eb95799ca35b422235d310a578287dd0",
+      "matches": true,
+      "results": [
+        {
+          "path": "data/raw/cicdns2021/light-Attacks.zip",
+          "sha256": "1ab347229846cfa92a100b3c603982b0eb95799ca35b422235d310a578287dd0",
+          "matches": true
+        }
+      ]
+    },
+    {
+      "manifest": "data/cicdns2021_manifest.json",
+      "file": "data/raw/cicdns2021/heavy-Attacks.zip",
+      "expected_sha256": "1d9dd77380df3b004c5387e2771c24fab8ce6756e3dc6f3e2a5675df160df343",
+      "matches": true,
+      "results": [
+        {
+          "path": "data/raw/cicdns2021/heavy-Attacks.zip",
+          "sha256": "1d9dd77380df3b004c5387e2771c24fab8ce6756e3dc6f3e2a5675df160df343",
+          "matches": true
+        }
+      ]
+    },
+    {
+      "manifest": "data/umudga_manifest.json",
+      "file": "data/raw/umudga/legit.txt",
+      "expected_sha256": "5431e97b5ae41fdfcf4dbef10e08a1c81d9b252514ce8bba36452a1500c0e49e",
+      "matches": true,
+      "results": [
+        {
+          "path": "data/raw/umudga/legit.txt",
+          "sha256": "5431e97b5ae41fdfcf4dbef10e08a1c81d9b252514ce8bba36452a1500c0e49e",
+          "matches": true
+        }
+      ]
+    },
+    {
+      "manifest": "data/umudga_manifest.json",
+      "file": "data/raw/umudga/banjori.txt",
+      "expected_sha256": "552770009ba5640d37b5a7eee310434a1d8ff641c5c69702e75f3d6c035bcabb",
+      "matches": true,
+      "results": [
+        {
+          "path": "data/raw/umudga/banjori.txt",
+          "sha256": "552770009ba5640d37b5a7eee310434a1d8ff641c5c69702e75f3d6c035bcabb",
+          "matches": true
+        }
+      ]
+    },
+    {
+      "manifest": "data/umudga_manifest.json",
+      "file": "data/raw/umudga/corebot.txt",
+      "expected_sha256": "26e2535ead55fbfecef8a0e0e3214914ce62f0c03062c9bbaa744d8f2430d6f2",
+      "matches": true,
+      "results": [
+        {
+          "path": "data/raw/umudga/corebot.txt",
+          "sha256": "26e2535ead55fbfecef8a0e0e3214914ce62f0c03062c9bbaa744d8f2430d6f2",
+          "matches": true
+        }
+      ]
+    },
+    {
+      "manifest": "data/umudga_manifest.json",
+      "file": "data/raw/umudga/dircrypt.txt",
+      "expected_sha256": "97938e517ba99dc9781cd437982cf304cb3c658246cd4267801b81b148832470",
+      "matches": true,
+      "results": [
+        {
+          "path": "data/raw/umudga/dircrypt.txt",
+          "sha256": "97938e517ba99dc9781cd437982cf304cb3c658246cd4267801b81b148832470",
+          "matches": true
+        }
+      ]
+    },
+    {
+      "manifest": "data/umudga_manifest.json",
+      "file": "data/raw/umudga/matsnu.txt",
+      "expected_sha256": "32fbd0fb5844172b92ff45f34c23c6be4867a3be19db988a6866a0abee2fb2d6",
+      "matches": true,
+      "results": [
+        {
+          "path": "data/raw/umudga/matsnu.txt",
+          "sha256": "32fbd0fb5844172b92ff45f34c23c6be4867a3be19db988a6866a0abee2fb2d6",
+          "matches": true
+        }
+      ]
+    },
+    {
+      "manifest": "data/umudga_manifest.json",
+      "file": "data/raw/umudga/necurs.txt",
+      "expected_sha256": "8c9bf2684cc57717606b0ce1e7a6f3d91d9e83ca9be957ad844a4e3e6596b147",
+      "matches": true,
+      "results": [
+        {
+          "path": "data/raw/umudga/necurs.txt",
+          "sha256": "8c9bf2684cc57717606b0ce1e7a6f3d91d9e83ca9be957ad844a4e3e6596b147",
+          "matches": true
+        }
+      ]
+    },
+    {
+      "manifest": "data/umudga_manifest.json",
+      "file": "data/raw/umudga/ramnit.txt",
+      "expected_sha256": "21f274e8f5888354c5d1611a44b5a09cdc42af89c80b02b6e7274bdc85286cc4",
+      "matches": true,
+      "results": [
+        {
+          "path": "data/raw/umudga/ramnit.txt",
+          "sha256": "21f274e8f5888354c5d1611a44b5a09cdc42af89c80b02b6e7274bdc85286cc4",
+          "matches": true
+        }
+      ]
+    },
+    {
+      "manifest": "data/umudga_expanded_manifest.json",
+      "file": "data/raw/umudga-expanded/alureon.txt",
+      "expected_sha256": "59212a00719f24c2adf7a0b6c4802c94d1686ceb3c5e0a34923622ee8deab342",
+      "matches": true,
+      "results": [
+        {
+          "path": "data/raw/umudga-expanded/alureon.txt",
+          "sha256": "59212a00719f24c2adf7a0b6c4802c94d1686ceb3c5e0a34923622ee8deab342",
+          "matches": true
+        }
+      ]
+    },
+    {
+      "manifest": "data/umudga_expanded_manifest.json",
+      "file": "data/raw/umudga-expanded/banjori.txt",
+      "expected_sha256": "0f1a7048067c0d030d02d658e3b6f35152597495c47539e0fa6e4423d916a7ff",
+      "matches": true,
+      "results": [
+        {
+          "path": "data/raw/umudga-expanded/banjori.txt",
+          "sha256": "0f1a7048067c0d030d02d658e3b6f35152597495c47539e0fa6e4423d916a7ff",
+          "matches": true
+        }
+      ]
+    },
+    {
+      "manifest": "data/umudga_expanded_manifest.json",
+      "file": "data/raw/umudga-expanded/bedep.txt",
+      "expected_sha256": "cb23b12a16c48e69fbec01ae850076bf7bd20aaedce9f79f5e47ac2acac729ce",
+      "matches": true,
+      "results": [
+        {
+          "path": "data/raw/umudga-expanded/bedep.txt",
+          "sha256": "cb23b12a16c48e69fbec01ae850076bf7bd20aaedce9f79f5e47ac2acac729ce",
+          "matches": true
+        }
+      ]
+    },
+    {
+      "manifest": "data/umudga_expanded_manifest.json",
+      "file": "data/raw/umudga-expanded/ccleaner.txt",
+      "expected_sha256": "bfba45646455098d9d6f4ffcf3f8207d3079d40692e13b62eff2b9b9c54fc491",
+      "matches": true,
+      "results": [
+        {
+          "path": "data/raw/umudga-expanded/ccleaner.txt",
+          "sha256": "bfba45646455098d9d6f4ffcf3f8207d3079d40692e13b62eff2b9b9c54fc491",
+          "matches": true
+        }
+      ]
+    },
+    {
+      "manifest": "data/umudga_expanded_manifest.json",
+      "file": "data/raw/umudga-expanded/chinad.txt",
+      "expected_sha256": "77398394c641deab953a126d6df4ccf77dea5a99c0dd79a5285ae4371ec3b41a",
+      "matches": true,
+      "results": [
+        {
+          "path": "data/raw/umudga-expanded/chinad.txt",
+          "sha256": "77398394c641deab953a126d6df4ccf77dea5a99c0dd79a5285ae4371ec3b41a",
+          "matches": true
+        }
+      ]
+    },
+    {
+      "manifest": "data/umudga_expanded_manifest.json",
+      "file": "data/raw/umudga-expanded/corebot.txt",
+      "expected_sha256": "d30ab70c63af086ab6a02e59ca58bff23dc1eb4a529b39b9520e72030d98f3dd",
+      "matches": true,
+      "results": [
+        {
+          "path": "data/raw/umudga-expanded/corebot.txt",
+          "sha256": "d30ab70c63af086ab6a02e59ca58bff23dc1eb4a529b39b9520e72030d98f3dd",
+          "matches": true
+        }
+      ]
+    },
+    {
+      "manifest": "data/umudga_expanded_manifest.json",
+      "file": "data/raw/umudga-expanded/cryptolocker.txt",
+      "expected_sha256": "9102e995370df3fb8ffa37a9762ec639bc6977ab27e0a0552c65ac6d6e580379",
+      "matches": true,
+      "results": [
+        {
+          "path": "data/raw/umudga-expanded/cryptolocker.txt",
+          "sha256": "9102e995370df3fb8ffa37a9762ec639bc6977ab27e0a0552c65ac6d6e580379",
+          "matches": true
+        }
+      ]
+    },
+    {
+      "manifest": "data/umudga_expanded_manifest.json",
+      "file": "data/raw/umudga-expanded/dircrypt.txt",
+      "expected_sha256": "76359a72af450e523090c2292938ca3ebe351ea9a9d7b0bd262ac91052b67803",
+      "matches": true,
+      "results": [
+        {
+          "path": "data/raw/umudga-expanded/dircrypt.txt",
+          "sha256": "76359a72af450e523090c2292938ca3ebe351ea9a9d7b0bd262ac91052b67803",
+          "matches": true
+        }
+      ]
+    },
+    {
+      "manifest": "data/umudga_expanded_manifest.json",
+      "file": "data/raw/umudga-expanded/dyre.txt",
+      "expected_sha256": "f6d998765b6e38a82971eec7906ebd66282b1fb7b964b15a7e0ac82bbd108a41",
+      "matches": true,
+      "results": [
+        {
+          "path": "data/raw/umudga-expanded/dyre.txt",
+          "sha256": "f6d998765b6e38a82971eec7906ebd66282b1fb7b964b15a7e0ac82bbd108a41",
+          "matches": true
+        }
+      ]
+    },
+    {
+      "manifest": "data/umudga_expanded_manifest.json",
+      "file": "data/raw/umudga-expanded/fobber_v1.txt",
+      "expected_sha256": "e59576d13465479ee268aaee8a0d8ad93d22aa7c2698f3cee9c241db5d13e79c",
+      "matches": true,
+      "results": [
+        {
+          "path": "data/raw/umudga-expanded/fobber_v1.txt",
+          "sha256": "e59576d13465479ee268aaee8a0d8ad93d22aa7c2698f3cee9c241db5d13e79c",
+          "matches": true
+        }
+      ]
+    },
+    {
+      "manifest": "data/umudga_expanded_manifest.json",
+      "file": "data/raw/umudga-expanded/fobber_v2.txt",
+      "expected_sha256": "0e92c30d95a66cf4a754a091e3faec36be676093b053c38f8a8b9280da864aaf",
+      "matches": true,
+      "results": [
+        {
+          "path": "data/raw/umudga-expanded/fobber_v2.txt",
+          "sha256": "0e92c30d95a66cf4a754a091e3faec36be676093b053c38f8a8b9280da864aaf",
+          "matches": true
+        }
+      ]
+    },
+    {
+      "manifest": "data/umudga_expanded_manifest.json",
+      "file": "data/raw/umudga-expanded/gozi_gpl.txt",
+      "expected_sha256": "5df353443154e7546137a4178baf5b6c044cb2d10017b56f22942323d94183f6",
+      "matches": true,
+      "results": [
+        {
+          "path": "data/raw/umudga-expanded/gozi_gpl.txt",
+          "sha256": "5df353443154e7546137a4178baf5b6c044cb2d10017b56f22942323d94183f6",
+          "matches": true
+        }
+      ]
+    },
+    {
+      "manifest": "data/umudga_expanded_manifest.json",
+      "file": "data/raw/umudga-expanded/gozi_luther.txt",
+      "expected_sha256": "2e38dd79a13c09a9b1b893d51493889b2d2be8e34293021618b60808bf8e8c6c",
+      "matches": true,
+      "results": [
+        {
+          "path": "data/raw/umudga-expanded/gozi_luther.txt",
+          "sha256": "2e38dd79a13c09a9b1b893d51493889b2d2be8e34293021618b60808bf8e8c6c",
+          "matches": true
+        }
+      ]
+    },
+    {
+      "manifest": "data/umudga_expanded_manifest.json",
+      "file": "data/raw/umudga-expanded/gozi_nasa.txt",
+      "expected_sha256": "b3fadc6130b90d992fa606145c67bc98ae2525d659007ded6b69e075e252ad83",
+      "matches": true,
+      "results": [
+        {
+          "path": "data/raw/umudga-expanded/gozi_nasa.txt",
+          "sha256": "b3fadc6130b90d992fa606145c67bc98ae2525d659007ded6b69e075e252ad83",
+          "matches": true
+        }
+      ]
+    },
+    {
+      "manifest": "data/umudga_expanded_manifest.json",
+      "file": "data/raw/umudga-expanded/gozi_rfc4343.txt",
+      "expected_sha256": "d7936f49c632b03de7493a25bdc9d30b9c4e9999cee5549aeaf1ffc3b0fcdb7e",
+      "matches": true,
+      "results": [
+        {
+          "path": "data/raw/umudga-expanded/gozi_rfc4343.txt",
+          "sha256": "d7936f49c632b03de7493a25bdc9d30b9c4e9999cee5549aeaf1ffc3b0fcdb7e",
+          "matches": true
+        }
+      ]
+    },
+    {
+      "manifest": "data/umudga_expanded_manifest.json",
+      "file": "data/raw/umudga-expanded/kraken_v1.txt",
+      "expected_sha256": "995d1d64308eefa1f48b883de7fe6034b66aea560e5a61fbb13af581086000f3",
+      "matches": true,
+      "results": [
+        {
+          "path": "data/raw/umudga-expanded/kraken_v1.txt",
+          "sha256": "995d1d64308eefa1f48b883de7fe6034b66aea560e5a61fbb13af581086000f3",
+          "matches": true
+        }
+      ]
+    },
+    {
+      "manifest": "data/umudga_expanded_manifest.json",
+      "file": "data/raw/umudga-expanded/kraken_v2.txt",
+      "expected_sha256": "5178352935730b22b9be2307fe81f01e87df58bfe777237138e297d1fc2bfa39",
+      "matches": true,
+      "results": [
+        {
+          "path": "data/raw/umudga-expanded/kraken_v2.txt",
+          "sha256": "5178352935730b22b9be2307fe81f01e87df58bfe777237138e297d1fc2bfa39",
+          "matches": true
+        }
+      ]
+    },
+    {
+      "manifest": "data/umudga_expanded_manifest.json",
+      "file": "data/raw/umudga-expanded/legit.txt",
+      "expected_sha256": "d82bfef4bfd3a6c7f20762c0bdecf748cbb80e58a83eb6b4e70085b810ba0ffa",
+      "matches": true,
+      "results": [
+        {
+          "path": "data/raw/umudga-expanded/legit.txt",
+          "sha256": "d82bfef4bfd3a6c7f20762c0bdecf748cbb80e58a83eb6b4e70085b810ba0ffa",
+          "matches": true
+        }
+      ]
+    },
+    {
+      "manifest": "data/umudga_expanded_manifest.json",
+      "file": "data/raw/umudga-expanded/locky.txt",
+      "expected_sha256": "9276e6e88b35f050351eefce1d01d883c6ea87ca78e66eeb569b86d52cc0a93f",
+      "matches": true,
+      "results": [
+        {
+          "path": "data/raw/umudga-expanded/locky.txt",
+          "sha256": "9276e6e88b35f050351eefce1d01d883c6ea87ca78e66eeb569b86d52cc0a93f",
+          "matches": true
+        }
+      ]
+    },
+    {
+      "manifest": "data/umudga_expanded_manifest.json",
+      "file": "data/raw/umudga-expanded/matsnu.txt",
+      "expected_sha256": "bfa5392fee115134d727ba95d69ee21c56a406a6fbec6ba0118c0ec13a6c76d5",
+      "matches": true,
+      "results": [
+        {
+          "path": "data/raw/umudga-expanded/matsnu.txt",
+          "sha256": "bfa5392fee115134d727ba95d69ee21c56a406a6fbec6ba0118c0ec13a6c76d5",
+          "matches": true
+        }
+      ]
+    },
+    {
+      "manifest": "data/umudga_expanded_manifest.json",
+      "file": "data/raw/umudga-expanded/murofet_v1.txt",
+      "expected_sha256": "9cb25e713f3af944042aad562eff8eea185770a897a45adf718ee5e384470ea9",
+      "matches": true,
+      "results": [
+        {
+          "path": "data/raw/umudga-expanded/murofet_v1.txt",
+          "sha256": "9cb25e713f3af944042aad562eff8eea185770a897a45adf718ee5e384470ea9",
+          "matches": true
+        }
+      ]
+    },
+    {
+      "manifest": "data/umudga_expanded_manifest.json",
+      "file": "data/raw/umudga-expanded/murofet_v2.txt",
+      "expected_sha256": "182b578f48ff00232cfe7f9320e5ca714123d30cbe737c48bfb8c3d6d427e64d",
+      "matches": true,
+      "results": [
+        {
+          "path": "data/raw/umudga-expanded/murofet_v2.txt",
+          "sha256": "182b578f48ff00232cfe7f9320e5ca714123d30cbe737c48bfb8c3d6d427e64d",
+          "matches": true
+        }
+      ]
+    },
+    {
+      "manifest": "data/umudga_expanded_manifest.json",
+      "file": "data/raw/umudga-expanded/murofet_v3.txt",
+      "expected_sha256": "a6086f4bb4a30d61a95e0d1751efee39a0c690d12a9f5a4f9c8bf0e59a8867f0",
+      "matches": true,
+      "results": [
+        {
+          "path": "data/raw/umudga-expanded/murofet_v3.txt",
+          "sha256": "a6086f4bb4a30d61a95e0d1751efee39a0c690d12a9f5a4f9c8bf0e59a8867f0",
+          "matches": true
+        }
+      ]
+    },
+    {
+      "manifest": "data/umudga_expanded_manifest.json",
+      "file": "data/raw/umudga-expanded/necurs.txt",
+      "expected_sha256": "c4cdd6404742579ef377863f52c68c85bcbc1eb56e18e228f7c78e297a5972b5",
+      "matches": true,
+      "results": [
+        {
+          "path": "data/raw/umudga-expanded/necurs.txt",
+          "sha256": "c4cdd6404742579ef377863f52c68c85bcbc1eb56e18e228f7c78e297a5972b5",
+          "matches": true
+        }
+      ]
+    },
+    {
+      "manifest": "data/umudga_expanded_manifest.json",
+      "file": "data/raw/umudga-expanded/nymaim.txt",
+      "expected_sha256": "ed3cc6fe5fcf37bfbc223d70eaca0bd1fdaa06e791225800255c0f810e6583b2",
+      "matches": true,
+      "results": [
+        {
+          "path": "data/raw/umudga-expanded/nymaim.txt",
+          "sha256": "ed3cc6fe5fcf37bfbc223d70eaca0bd1fdaa06e791225800255c0f810e6583b2",
+          "matches": true
+        }
+      ]
+    },
+    {
+      "manifest": "data/umudga_expanded_manifest.json",
+      "file": "data/raw/umudga-expanded/padcrypt.txt",
+      "expected_sha256": "2714ad96481231b5a847443a51f559344f807b7af19e07988dcdc6a1bf73c00f",
+      "matches": true,
+      "results": [
+        {
+          "path": "data/raw/umudga-expanded/padcrypt.txt",
+          "sha256": "2714ad96481231b5a847443a51f559344f807b7af19e07988dcdc6a1bf73c00f",
+          "matches": true
+        }
+      ]
+    },
+    {
+      "manifest": "data/umudga_expanded_manifest.json",
+      "file": "data/raw/umudga-expanded/pizd.txt",
+      "expected_sha256": "531559d9f53f8327a78cb26689b1969e31faff6e52a3fafd9ec33322d8859975",
+      "matches": true,
+      "results": [
+        {
+          "path": "data/raw/umudga-expanded/pizd.txt",
+          "sha256": "531559d9f53f8327a78cb26689b1969e31faff6e52a3fafd9ec33322d8859975",
+          "matches": true
+        }
+      ]
+    },
+    {
+      "manifest": "data/umudga_expanded_manifest.json",
+      "file": "data/raw/umudga-expanded/proslikefan.txt",
+      "expected_sha256": "90a123e49fe591b1d1fb23c13a15251c205858232508ea2ee56b7ffb37d300fe",
+      "matches": true,
+      "results": [
+        {
+          "path": "data/raw/umudga-expanded/proslikefan.txt",
+          "sha256": "90a123e49fe591b1d1fb23c13a15251c205858232508ea2ee56b7ffb37d300fe",
+          "matches": true
+        }
+      ]
+    },
+    {
+      "manifest": "data/umudga_expanded_manifest.json",
+      "file": "data/raw/umudga-expanded/pushdo.txt",
+      "expected_sha256": "357b308a201d249dcc8c1324296d6dea4da4f98482b4d960e17791375bd23990",
+      "matches": true,
+      "results": [
+        {
+          "path": "data/raw/umudga-expanded/pushdo.txt",
+          "sha256": "357b308a201d249dcc8c1324296d6dea4da4f98482b4d960e17791375bd23990",
+          "matches": true
+        }
+      ]
+    },
+    {
+      "manifest": "data/umudga_expanded_manifest.json",
+      "file": "data/raw/umudga-expanded/pykspa.txt",
+      "expected_sha256": "00e9ba2af7f265a7268dfbc5d42f1d2e5a9a8d5813062dee79365fab3507c6ce",
+      "matches": true,
+      "results": [
+        {
+          "path": "data/raw/umudga-expanded/pykspa.txt",
+          "sha256": "00e9ba2af7f265a7268dfbc5d42f1d2e5a9a8d5813062dee79365fab3507c6ce",
+          "matches": true
+        }
+      ]
+    },
+    {
+      "manifest": "data/umudga_expanded_manifest.json",
+      "file": "data/raw/umudga-expanded/pykspa_noise.txt",
+      "expected_sha256": "4160d02d5734d38b4a6aa7fa577ffc7771ebe78282ee02e4371c3c04e2767839",
+      "matches": true,
+      "results": [
+        {
+          "path": "data/raw/umudga-expanded/pykspa_noise.txt",
+          "sha256": "4160d02d5734d38b4a6aa7fa577ffc7771ebe78282ee02e4371c3c04e2767839",
+          "matches": true
+        }
+      ]
+    },
+    {
+      "manifest": "data/umudga_expanded_manifest.json",
+      "file": "data/raw/umudga-expanded/qadars.txt",
+      "expected_sha256": "581e3bf33f76287d8b2f1bd680cf98da685ff0a959f876e4ebff99a3fb38e9e5",
+      "matches": true,
+      "results": [
+        {
+          "path": "data/raw/umudga-expanded/qadars.txt",
+          "sha256": "581e3bf33f76287d8b2f1bd680cf98da685ff0a959f876e4ebff99a3fb38e9e5",
+          "matches": true
+        }
+      ]
+    },
+    {
+      "manifest": "data/umudga_expanded_manifest.json",
+      "file": "data/raw/umudga-expanded/qakbot.txt",
+      "expected_sha256": "3b57df7ed63359ee43fef8f06160dc46fa04978195a951e98b4af5010e4c71cd",
+      "matches": true,
+      "results": [
+        {
+          "path": "data/raw/umudga-expanded/qakbot.txt",
+          "sha256": "3b57df7ed63359ee43fef8f06160dc46fa04978195a951e98b4af5010e4c71cd",
+          "matches": true
+        }
+      ]
+    },
+    {
+      "manifest": "data/umudga_expanded_manifest.json",
+      "file": "data/raw/umudga-expanded/ramdo.txt",
+      "expected_sha256": "66abd553ba1fd3b6a41f58becbe4aa2f9465dbec6a7036b3159410c9b36ac2e5",
+      "matches": true,
+      "results": [
+        {
+          "path": "data/raw/umudga-expanded/ramdo.txt",
+          "sha256": "66abd553ba1fd3b6a41f58becbe4aa2f9465dbec6a7036b3159410c9b36ac2e5",
+          "matches": true
+        }
+      ]
+    },
+    {
+      "manifest": "data/umudga_expanded_manifest.json",
+      "file": "data/raw/umudga-expanded/ramnit.txt",
+      "expected_sha256": "f1ddd8cd067b9cc8daa23192ec17c47ea978ccf0cbc17790d663a285fb127520",
+      "matches": true,
+      "results": [
+        {
+          "path": "data/raw/umudga-expanded/ramnit.txt",
+          "sha256": "f1ddd8cd067b9cc8daa23192ec17c47ea978ccf0cbc17790d663a285fb127520",
+          "matches": true
+        }
+      ]
+    },
+    {
+      "manifest": "data/umudga_expanded_manifest.json",
+      "file": "data/raw/umudga-expanded/ranbyus_v1.txt",
+      "expected_sha256": "cea30f47c67af718a17d4016c7e1ff3cab3f7bde78aa302e66f135183f233632",
+      "matches": true,
+      "results": [
+        {
+          "path": "data/raw/umudga-expanded/ranbyus_v1.txt",
+          "sha256": "cea30f47c67af718a17d4016c7e1ff3cab3f7bde78aa302e66f135183f233632",
+          "matches": true
+        }
+      ]
+    },
+    {
+      "manifest": "data/umudga_expanded_manifest.json",
+      "file": "data/raw/umudga-expanded/ranbyus_v2.txt",
+      "expected_sha256": "69a9b54968fd9570293b2f8ade940f8d024f614314bc56cc9652c1c6fdfd6e67",
+      "matches": true,
+      "results": [
+        {
+          "path": "data/raw/umudga-expanded/ranbyus_v2.txt",
+          "sha256": "69a9b54968fd9570293b2f8ade940f8d024f614314bc56cc9652c1c6fdfd6e67",
+          "matches": true
+        }
+      ]
+    },
+    {
+      "manifest": "data/umudga_expanded_manifest.json",
+      "file": "data/raw/umudga-expanded/rovnix.txt",
+      "expected_sha256": "3b9c0e8a36b4b3d418bac475e5c040e4224bee974da0f074e1bade2d3565434d",
+      "matches": true,
+      "results": [
+        {
+          "path": "data/raw/umudga-expanded/rovnix.txt",
+          "sha256": "3b9c0e8a36b4b3d418bac475e5c040e4224bee974da0f074e1bade2d3565434d",
+          "matches": true
+        }
+      ]
+    },
+    {
+      "manifest": "data/umudga_expanded_manifest.json",
+      "file": "data/raw/umudga-expanded/shiotob.txt",
+      "expected_sha256": "643b88d586bcf4f9c3fe171dcc40351850af238661b32dbcb873e68485a2516f",
+      "matches": true,
+      "results": [
+        {
+          "path": "data/raw/umudga-expanded/shiotob.txt",
+          "sha256": "643b88d586bcf4f9c3fe171dcc40351850af238661b32dbcb873e68485a2516f",
+          "matches": true
+        }
+      ]
+    },
+    {
+      "manifest": "data/umudga_expanded_manifest.json",
+      "file": "data/raw/umudga-expanded/simda.txt",
+      "expected_sha256": "24af347cee5a85a7d3f6c7989f642e7f0b34e6488d68d8d79ec164ead924faf0",
+      "matches": true,
+      "results": [
+        {
+          "path": "data/raw/umudga-expanded/simda.txt",
+          "sha256": "24af347cee5a85a7d3f6c7989f642e7f0b34e6488d68d8d79ec164ead924faf0",
+          "matches": true
+        }
+      ]
+    },
+    {
+      "manifest": "data/umudga_expanded_manifest.json",
+      "file": "data/raw/umudga-expanded/sisron.txt",
+      "expected_sha256": "14ade91f1dbd36de17e4be6365507f4b50ec3885db71d2683ff33f6e74ec9c68",
+      "matches": true,
+      "results": [
+        {
+          "path": "data/raw/umudga-expanded/sisron.txt",
+          "sha256": "14ade91f1dbd36de17e4be6365507f4b50ec3885db71d2683ff33f6e74ec9c68",
+          "matches": true
+        }
+      ]
+    },
+    {
+      "manifest": "data/umudga_expanded_manifest.json",
+      "file": "data/raw/umudga-expanded/suppobox_1.txt",
+      "expected_sha256": "41999ff336385fb27e413f7d593b62a26dca8e1ae5ce75d14ca49ece3f8d8fbf",
+      "matches": true,
+      "results": [
+        {
+          "path": "data/raw/umudga-expanded/suppobox_1.txt",
+          "sha256": "41999ff336385fb27e413f7d593b62a26dca8e1ae5ce75d14ca49ece3f8d8fbf",
+          "matches": true
+        }
+      ]
+    },
+    {
+      "manifest": "data/umudga_expanded_manifest.json",
+      "file": "data/raw/umudga-expanded/suppobox_2.txt",
+      "expected_sha256": "669d4d9cfa37f8333efc088e59dd80d02740619eca64ece2d011a001dc600c2c",
+      "matches": true,
+      "results": [
+        {
+          "path": "data/raw/umudga-expanded/suppobox_2.txt",
+          "sha256": "669d4d9cfa37f8333efc088e59dd80d02740619eca64ece2d011a001dc600c2c",
+          "matches": true
+        }
+      ]
+    },
+    {
+      "manifest": "data/umudga_expanded_manifest.json",
+      "file": "data/raw/umudga-expanded/suppobox_3.txt",
+      "expected_sha256": "5daa5bacf37c87ef395df31c92b143d7e2233373456bb9cdeff53476bea4d7e9",
+      "matches": true,
+      "results": [
+        {
+          "path": "data/raw/umudga-expanded/suppobox_3.txt",
+          "sha256": "5daa5bacf37c87ef395df31c92b143d7e2233373456bb9cdeff53476bea4d7e9",
+          "matches": true
+        }
+      ]
+    },
+    {
+      "manifest": "data/umudga_expanded_manifest.json",
+      "file": "data/raw/umudga-expanded/symmi.txt",
+      "expected_sha256": "9a0387cdf1ddbdd7e0b1b7ccc0fb9920ac429d9c4f809880991e21fd697b0f78",
+      "matches": true,
+      "results": [
+        {
+          "path": "data/raw/umudga-expanded/symmi.txt",
+          "sha256": "9a0387cdf1ddbdd7e0b1b7ccc0fb9920ac429d9c4f809880991e21fd697b0f78",
+          "matches": true
+        }
+      ]
+    },
+    {
+      "manifest": "data/umudga_expanded_manifest.json",
+      "file": "data/raw/umudga-expanded/tempedreve.txt",
+      "expected_sha256": "99a5f4d23ab553194638110a2d5ad182c850519c18486e01ac6b7bbca87c789d",
+      "matches": true,
+      "results": [
+        {
+          "path": "data/raw/umudga-expanded/tempedreve.txt",
+          "sha256": "99a5f4d23ab553194638110a2d5ad182c850519c18486e01ac6b7bbca87c789d",
+          "matches": true
+        }
+      ]
+    },
+    {
+      "manifest": "data/umudga_expanded_manifest.json",
+      "file": "data/raw/umudga-expanded/tinba.txt",
+      "expected_sha256": "ac69eba6a3892715c822d4c326e8013454ed3c51f4340a41fb203c3f23c274ff",
+      "matches": true,
+      "results": [
+        {
+          "path": "data/raw/umudga-expanded/tinba.txt",
+          "sha256": "ac69eba6a3892715c822d4c326e8013454ed3c51f4340a41fb203c3f23c274ff",
+          "matches": true
+        }
+      ]
+    },
+    {
+      "manifest": "data/umudga_expanded_manifest.json",
+      "file": "data/raw/umudga-expanded/vawtrak_v1.txt",
+      "expected_sha256": "9d04aa5ffe93082dee403f202dbd5a29f9f815950f998a568e6fa5077e4d4b95",
+      "matches": true,
+      "results": [
+        {
+          "path": "data/raw/umudga-expanded/vawtrak_v1.txt",
+          "sha256": "9d04aa5ffe93082dee403f202dbd5a29f9f815950f998a568e6fa5077e4d4b95",
+          "matches": true
+        }
+      ]
+    },
+    {
+      "manifest": "data/umudga_expanded_manifest.json",
+      "file": "data/raw/umudga-expanded/vawtrak_v2.txt",
+      "expected_sha256": "0ae4f11db718d23bf10f79f092f3ca99d8fdad2e54783c239a454f5d096f1514",
+      "matches": true,
+      "results": [
+        {
+          "path": "data/raw/umudga-expanded/vawtrak_v2.txt",
+          "sha256": "0ae4f11db718d23bf10f79f092f3ca99d8fdad2e54783c239a454f5d096f1514",
+          "matches": true
+        }
+      ]
+    },
+    {
+      "manifest": "data/umudga_expanded_manifest.json",
+      "file": "data/raw/umudga-expanded/vawtrak_v3.txt",
+      "expected_sha256": "33b3c56fc45b57e3ea577e032b5ae16237aab227671104d12611612a5ee06f9f",
+      "matches": true,
+      "results": [
+        {
+          "path": "data/raw/umudga-expanded/vawtrak_v3.txt",
+          "sha256": "33b3c56fc45b57e3ea577e032b5ae16237aab227671104d12611612a5ee06f9f",
+          "matches": true
+        }
+      ]
+    },
+    {
+      "manifest": "data/umudga_expanded_manifest.json",
+      "file": "data/raw/umudga-expanded/zeus-newgoz.txt",
+      "expected_sha256": "4cc53cf5cbc174df3979d12bf19538d49d6194b09cc3987e9a9afbd86c307f39",
+      "matches": true,
+      "results": [
+        {
+          "path": "data/raw/umudga-expanded/zeus-newgoz.txt",
+          "sha256": "4cc53cf5cbc174df3979d12bf19538d49d6194b09cc3987e9a9afbd86c307f39",
+          "matches": true
+        }
+      ]
+    }
+  ],
+  "checked": 69,
+  "matched": 69,
+  "unmatched": []
+}

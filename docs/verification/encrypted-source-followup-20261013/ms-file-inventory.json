@@ -1,0 +1,783 @@
+{
+  "node": "b64e5",
+  "metadata_only": true,
+  "pages": [
+    {
+      "url": "https://api.osf.io/v2/nodes/b64e5/files/osfstorage/",
+      "folder": "MS"
+    },
+    {
+      "url": "https://api.osf.io/v2/nodes/b64e5/files/osfstorage/6691616c5a51c40294e803f2/",
+      "folder": "MS/tls12-longcert"
+    },
+    {
+      "url": "https://api.osf.io/v2/nodes/b64e5/files/osfstorage/66916174ec07f901debdb805/",
+      "folder": "MS/tls12-shortcert"
+    },
+    {
+      "url": "https://api.osf.io/v2/nodes/b64e5/files/osfstorage/6691617d1de9f7026030ddf6/",
+      "folder": "MS/tls13-longcert"
+    },
+    {
+      "url": "https://api.osf.io/v2/nodes/b64e5/files/osfstorage/669161851de9f7025230da88/",
+      "folder": "MS/tls13-shortcert"
+    },
+    {
+      "url": "https://api.osf.io/v2/nodes/b64e5/files/osfstorage/669162086068db0276dde1fa/",
+      "folder": "MS/tls12-longcert/csv"
+    },
+    {
+      "url": "https://api.osf.io/v2/nodes/b64e5/files/osfstorage/6691620eec07f901debdb84f/",
+      "folder": "MS/tls12-longcert/joy"
+    },
+    {
+      "url": "https://api.osf.io/v2/nodes/b64e5/files/osfstorage/669162121de9f7026930dd30/",
+      "folder": "MS/tls12-shortcert/csv"
+    },
+    {
+      "url": "https://api.osf.io/v2/nodes/b64e5/files/osfstorage/66916216e9fa1301da56a9a1/",
+      "folder": "MS/tls12-shortcert/joy"
+    },
+    {
+      "url": "https://api.osf.io/v2/nodes/b64e5/files/osfstorage/6691621cec07f901e2bdba31/",
+      "folder": "MS/tls13-longcert/csv"
+    },
+    {
+      "url": "https://api.osf.io/v2/nodes/b64e5/files/osfstorage/66916220e9fa1301d756a93e/",
+      "folder": "MS/tls13-longcert/joy"
+    },
+    {
+      "url": "https://api.osf.io/v2/nodes/b64e5/files/osfstorage/669162276068db028bdde29d/",
+      "folder": "MS/tls13-shortcert/csv"
+    },
+    {
+      "url": "https://api.osf.io/v2/nodes/b64e5/files/osfstorage/6691622c5a51c4028ee80a44/",
+      "folder": "MS/tls13-shortcert/joy"
+    },
+    {
+      "url": "https://api.osf.io/v2/nodes/b64e5/files/osfstorage/669162086068db0276dde1fa/?page=2",
+      "folder": "MS/tls12-longcert/csv"
+    },
+    {
+      "url": "https://api.osf.io/v2/nodes/b64e5/files/osfstorage/6691620eec07f901debdb84f/?page=2",
+      "folder": "MS/tls12-longcert/joy"
+    },
+    {
+      "url": "https://api.osf.io/v2/nodes/b64e5/files/osfstorage/669162121de9f7026930dd30/?page=2",
+      "folder": "MS/tls12-shortcert/csv"
+    },
+    {
+      "url": "https://api.osf.io/v2/nodes/b64e5/files/osfstorage/66916216e9fa1301da56a9a1/?page=2",
+      "folder": "MS/tls12-shortcert/joy"
+    },
+    {
+      "url": "https://api.osf.io/v2/nodes/b64e5/files/osfstorage/6691621cec07f901e2bdba31/?page=2",
+      "folder": "MS/tls13-longcert/csv"
+    },
+    {
+      "url": "https://api.osf.io/v2/nodes/b64e5/files/osfstorage/66916220e9fa1301d756a93e/?page=2",
+      "folder": "MS/tls13-longcert/joy"
+    },
+    {
+      "url": "https://api.osf.io/v2/nodes/b64e5/files/osfstorage/669162276068db028bdde29d/?page=2",
+      "folder": "MS/tls13-shortcert/csv"
+    },
+    {
+      "url": "https://api.osf.io/v2/nodes/b64e5/files/osfstorage/6691622c5a51c4028ee80a44/?page=2",
+      "folder": "MS/tls13-shortcert/joy"
+    }
+  ],
+  "entries": [
+    {
+      "path": "MS/certificates_length.csv",
+      "kind": "file",
+      "bytes": 180577465,
+      "id": "6691601c6068db0280dde62c"
+    },
+    {
+      "path": "MS/tls12-longcert",
+      "kind": "folder",
+      "bytes": null,
+      "id": "6691616c5a51c40294e803f2"
+    },
+    {
+      "path": "MS/tls12-shortcert",
+      "kind": "folder",
+      "bytes": null,
+      "id": "66916174ec07f901debdb805"
+    },
+    {
+      "path": "MS/tls13-longcert",
+      "kind": "folder",
+      "bytes": null,
+      "id": "6691617d1de9f7026030ddf6"
+    },
+    {
+      "path": "MS/tls13-shortcert",
+      "kind": "folder",
+      "bytes": null,
+      "id": "669161851de9f7025230da88"
+    },
+    {
+      "path": "MS/captures.tar.gz",
+      "kind": "file",
+      "bytes": 4659730806,
+      "id": "66916305ec07f901e2bdba6a"
+    },
+    {
+      "path": "MS/ms-full.csv",
+      "kind": "file",
+      "bytes": 366562590,
+      "id": "6697e2b26068db07a1dde87c"
+    },
+    {
+      "path": "MS/tls12-longcert/all.csv",
+      "kind": "file",
+      "bytes": 117674981,
+      "id": "669161b26068db027fdde44a"
+    },
+    {
+      "path": "MS/tls12-longcert/csv",
+      "kind": "folder",
+      "bytes": null,
+      "id": "669162086068db0276dde1fa"
+    },
+    {
+      "path": "MS/tls12-longcert/joy",
+      "kind": "folder",
+      "bytes": null,
+      "id": "6691620eec07f901debdb84f"
+    },
+    {
+      "path": "MS/tls12-shortcert/csv",
+      "kind": "folder",
+      "bytes": null,
+      "id": "669162121de9f7026930dd30"
+    },
+    {
+      "path": "MS/tls12-shortcert/joy",
+      "kind": "folder",
+      "bytes": null,
+      "id": "66916216e9fa1301da56a9a1"
+    },
+    {
+      "path": "MS/tls12-shortcert/all.csv",
+      "kind": "file",
+      "bytes": 58844234,
+      "id": "669163cc1de9f7025230db1d"
+    },
+    {
+      "path": "MS/tls13-longcert/csv",
+      "kind": "folder",
+      "bytes": null,
+      "id": "6691621cec07f901e2bdba31"
+    },
+    {
+      "path": "MS/tls13-longcert/joy",
+      "kind": "folder",
+      "bytes": null,
+      "id": "66916220e9fa1301d756a93e"
+    },
+    {
+      "path": "MS/tls13-longcert/all.csv",
+      "kind": "file",
+      "bytes": 118566145,
+      "id": "6691640be9fa1301d756aa67"
+    },
+    {
+      "path": "MS/tls13-shortcert/csv",
+      "kind": "folder",
+      "bytes": null,
+      "id": "669162276068db028bdde29d"
+    },
+    {
+      "path": "MS/tls13-shortcert/joy",
+      "kind": "folder",
+      "bytes": null,
+      "id": "6691622c5a51c4028ee80a44"
+    },
+    {
+      "path": "MS/tls13-shortcert/all.csv",
+      "kind": "file",
+      "bytes": 59348894,
+      "id": "6691641d5a51c4027ee80672"
+    },
+    {
+      "path": "MS/tls12-longcert/csv/capture_getuid.csv",
+      "kind": "file",
+      "bytes": 7678052,
+      "id": "669163881de9f7026030df78"
+    },
+    {
+      "path": "MS/tls12-longcert/csv/capture_getpid.csv",
+      "kind": "file",
+      "bytes": 7690050,
+      "id": "66916388ec07f901e3bdbcbc"
+    },
+    {
+      "path": "MS/tls12-longcert/csv/capture.csv",
+      "kind": "file",
+      "bytes": 16397013,
+      "id": "669163896068db0280dde8f8"
+    },
+    {
+      "path": "MS/tls12-longcert/csv/capture_download_shadow.csv",
+      "kind": "file",
+      "bytes": 10442630,
+      "id": "66916389ec07f901e3bdbcbe"
+    },
+    {
+      "path": "MS/tls12-longcert/csv/capture_cat_shadow.csv",
+      "kind": "file",
+      "bytes": 14256973,
+      "id": "6691638a5a51c4028ee80b19"
+    },
+    {
+      "path": "MS/tls12-longcert/csv/capture_ipconfig.csv",
+      "kind": "file",
+      "bytes": 7759952,
+      "id": "6691638ce9fa1301d756a9f4"
+    },
+    {
+      "path": "MS/tls12-longcert/csv/capture_ls.csv",
+      "kind": "file",
+      "bytes": 10458026,
+      "id": "6691638d6068db0280dde8fa"
+    },
+    {
+      "path": "MS/tls12-longcert/csv/capture_ls_etc.csv",
+      "kind": "file",
+      "bytes": 10564590,
+      "id": "6691638fec07f901debdb8fd"
+    },
+    {
+      "path": "MS/tls12-longcert/csv/capture_pwd.csv",
+      "kind": "file",
+      "bytes": 7702296,
+      "id": "6691638f5a51c40294e805bf"
+    },
+    {
+      "path": "MS/tls12-longcert/csv/capture_ps.csv",
+      "kind": "file",
+      "bytes": 7761894,
+      "id": "669163906068db027fdde507"
+    },
+    {
+      "path": "MS/tls12-longcert/joy/capture_getuid.joy.gz",
+      "kind": "file",
+      "bytes": 4635278,
+      "id": "6691639fe9fa1301d756aa15"
+    },
+    {
+      "path": "MS/tls12-longcert/joy/capture_getpid.joy.gz",
+      "kind": "file",
+      "bytes": 4640210,
+      "id": "669163a01de9f7025930dd6e"
+    },
+    {
+      "path": "MS/tls12-longcert/joy/capture_download_shadow.joy.gz",
+      "kind": "file",
+      "bytes": 6281202,
+      "id": "669163a0ec07f901cfbdb86b"
+    },
+    {
+      "path": "MS/tls12-longcert/joy/capture_cat_shadow.joy.gz",
+      "kind": "file",
+      "bytes": 8515730,
+      "id": "669163a1e9fa1301d056abf7"
+    },
+    {
+      "path": "MS/tls12-longcert/joy/capture.joy.gz",
+      "kind": "file",
+      "bytes": 9813592,
+      "id": "669163a1ec07f901cfbdb86d"
+    },
+    {
+      "path": "MS/tls12-longcert/joy/capture_ipconfig.joy.gz",
+      "kind": "file",
+      "bytes": 4682033,
+      "id": "669163a2ec07f901e8bdb416"
+    },
+    {
+      "path": "MS/tls12-longcert/joy/capture_ls.joy.gz",
+      "kind": "file",
+      "bytes": 6317419,
+      "id": "669163a31de9f7026930deb9"
+    },
+    {
+      "path": "MS/tls12-longcert/joy/capture_ls_etc.joy.gz",
+      "kind": "file",
+      "bytes": 6468033,
+      "id": "669163a4e9fa1301da56aae3"
+    },
+    {
+      "path": "MS/tls12-longcert/joy/capture_pwd.joy.gz",
+      "kind": "file",
+      "bytes": 4645530,
+      "id": "669163a5e9fa1301da56aae5"
+    },
+    {
+      "path": "MS/tls12-longcert/joy/capture_ps.joy.gz",
+      "kind": "file",
+      "bytes": 4690219,
+      "id": "669163a5ec07f901e8bdb418"
+    },
+    {
+      "path": "MS/tls12-shortcert/csv/capture_download_shadow.csv",
+      "kind": "file",
+      "bytes": 5229801,
+      "id": "669163cbe9fa1301bc56a672"
+    },
+    {
+      "path": "MS/tls12-shortcert/csv/capture_getpid.csv",
+      "kind": "file",
+      "bytes": 3846203,
+      "id": "669163cb1de9f7025930dd84"
+    },
+    {
+      "path": "MS/tls12-shortcert/csv/capture_cat_shadow.csv",
+      "kind": "file",
+      "bytes": 7106923,
+      "id": "669163ccec07f901e3bdbcf4"
+    },
+    {
+      "path": "MS/tls12-shortcert/csv/capture.csv",
+      "kind": "file",
+      "bytes": 8207282,
+      "id": "669163cdec07f901e3bdbcf6"
+    },
+    {
+      "path": "MS/tls12-shortcert/csv/capture_getuid.csv",
+      "kind": "file",
+      "bytes": 3840000,
+      "id": "669163cfec07f901cfbdb873"
+    },
+    {
+      "path": "MS/tls12-shortcert/csv/capture_ls_etc.csv",
+      "kind": "file",
+      "bytes": 5274909,
+      "id": "669163cf6068db028bdde426"
+    },
+    {
+      "path": "MS/tls12-shortcert/csv/capture_ipconfig.csv",
+      "kind": "file",
+      "bytes": 3867834,
+      "id": "669163d01de9f7026030df8c"
+    },
+    {
+      "path": "MS/tls12-shortcert/csv/capture_ls.csv",
+      "kind": "file",
+      "bytes": 5222523,
+      "id": "669163d06068db028bdde431"
+    },
+    {
+      "path": "MS/tls12-shortcert/csv/capture_ps.csv",
+      "kind": "file",
+      "bytes": 3894141,
+      "id": "669163d15a51c40294e805f5"
+    },
+    {
+      "path": "MS/tls12-shortcert/csv/capture_pwd.csv",
+      "kind": "file",
+      "bytes": 3842571,
+      "id": "669163d3e9fa1301bc56a674"
+    },
+    {
+      "path": "MS/tls12-shortcert/joy/capture_cat_shadow.joy.gz",
+      "kind": "file",
+      "bytes": 3812898,
+      "id": "669163d56068db027fdde538"
+    },
+    {
+      "path": "MS/tls12-shortcert/joy/capture.joy.gz",
+      "kind": "file",
+      "bytes": 4406845,
+      "id": "669163d5e9fa1301d056ac0c"
+    },
+    {
+      "path": "MS/tls12-shortcert/joy/capture_getpid.joy.gz",
+      "kind": "file",
+      "bytes": 2088411,
+      "id": "669163d6ec07f901e8bdb45b"
+    },
+    {
+      "path": "MS/tls12-shortcert/joy/capture_download_shadow.joy.gz",
+      "kind": "file",
+      "bytes": 2819576,
+      "id": "669163d76068db028bdde44b"
+    },
+    {
+      "path": "MS/tls12-shortcert/joy/capture_ipconfig.joy.gz",
+      "kind": "file",
+      "bytes": 2104882,
+      "id": "669163d81de9f7026930ded6"
+    },
+    {
+      "path": "MS/tls12-shortcert/joy/capture_getuid.joy.gz",
+      "kind": "file",
+      "bytes": 2089627,
+      "id": "669163d81de9f7026030df90"
+    },
+    {
+      "path": "MS/tls12-shortcert/joy/capture_ls_etc.joy.gz",
+      "kind": "file",
+      "bytes": 2866059,
+      "id": "669163d9ec07f901e8bdb45f"
+    },
+    {
+      "path": "MS/tls12-shortcert/joy/capture_ls.joy.gz",
+      "kind": "file",
+      "bytes": 2817551,
+      "id": "669163da6068db027fdde550"
+    },
+    {
+      "path": "MS/tls12-shortcert/joy/capture_pwd.joy.gz",
+      "kind": "file",
+      "bytes": 2076154,
+      "id": "669163dbec07f901e2bdbb33"
+    },
+    {
+      "path": "MS/tls12-shortcert/joy/capture_ps.joy.gz",
+      "kind": "file",
+      "bytes": 2140414,
+      "id": "669163dbe9fa1301da56ab2a"
+    },
+    {
+      "path": "MS/tls13-longcert/csv/capture_getpid.csv",
+      "kind": "file",
+      "bytes": 7762167,
+      "id": "669163f9e9fa1301d756aa63"
+    },
+    {
+      "path": "MS/tls13-longcert/csv/capture_download_shadow.csv",
+      "kind": "file",
+      "bytes": 10518845,
+      "id": "669163fa5a51c4027de80434"
+    },
+    {
+      "path": "MS/tls13-longcert/csv/capture_cat_shadow.csv",
+      "kind": "file",
+      "bytes": 14391179,
+      "id": "669163fb6068db0276dde288"
+    },
+    {
+      "path": "MS/tls13-longcert/csv/capture.csv",
+      "kind": "file",
+      "bytes": 16547819,
+      "id": "669163fc6068db028bdde578"
+    },
+    {
+      "path": "MS/tls13-longcert/csv/capture_ipconfig.csv",
+      "kind": "file",
+      "bytes": 7804286,
+      "id": "669163fd5a51c4028ee80b6d"
+    },
+    {
+      "path": "MS/tls13-longcert/csv/capture_getuid.csv",
+      "kind": "file",
+      "bytes": 7754582,
+      "id": "669163fd6068db027fdde55f"
+    },
+    {
+      "path": "MS/tls13-longcert/csv/capture_ls.csv",
+      "kind": "file",
+      "bytes": 10505653,
+      "id": "669164026068db0276dde28b"
+    },
+    {
+      "path": "MS/tls13-longcert/csv/capture_ls_etc.csv",
+      "kind": "file",
+      "bytes": 10644395,
+      "id": "66916403ec07f901e8bdb47d"
+    },
+    {
+      "path": "MS/tls13-longcert/csv/capture_ps.csv",
+      "kind": "file",
+      "bytes": 7817606,
+      "id": "669164031de9f7026030dfc1"
+    },
+    {
+      "path": "MS/tls13-longcert/csv/capture_pwd.csv",
+      "kind": "file",
+      "bytes": 7748877,
+      "id": "669164035a51c4028ee80b73"
+    },
+    {
+      "path": "MS/tls13-longcert/joy/capture_cat_shadow.joy.gz",
+      "kind": "file",
+      "bytes": 10604050,
+      "id": "6691640aec07f901e3bdbd1f"
+    },
+    {
+      "path": "MS/tls13-longcert/joy/capture.joy.gz",
+      "kind": "file",
+      "bytes": 12208168,
+      "id": "6691640a1de9f7025930dda8"
+    },
+    {
+      "path": "MS/tls13-longcert/joy/capture_download_shadow.joy.gz",
+      "kind": "file",
+      "bytes": 7794377,
+      "id": "6691640be9fa1301da56ab63"
+    },
+    {
+      "path": "MS/tls13-longcert/joy/capture_getpid.joy.gz",
+      "kind": "file",
+      "bytes": 5776452,
+      "id": "6691640cec07f901e8bdb48d"
+    },
+    {
+      "path": "MS/tls13-longcert/joy/capture_ipconfig.joy.gz",
+      "kind": "file",
+      "bytes": 5810107,
+      "id": "6691640d5a51c4028ee80b77"
+    },
+    {
+      "path": "MS/tls13-longcert/joy/capture_getuid.joy.gz",
+      "kind": "file",
+      "bytes": 5772010,
+      "id": "6691640e5a51c4028ee80b79"
+    },
+    {
+      "path": "MS/tls13-longcert/joy/capture_ps.joy.gz",
+      "kind": "file",
+      "bytes": 5828034,
+      "id": "669164105a51c4028ee80b7b"
+    },
+    {
+      "path": "MS/tls13-longcert/joy/capture_ls_etc.joy.gz",
+      "kind": "file",
+      "bytes": 7931315,
+      "id": "669164101de9f7025930ddaf"
+    },
+    {
+      "path": "MS/tls13-longcert/joy/capture_ls.joy.gz",
+      "kind": "file",
+      "bytes": 7786155,
+      "id": "66916410e9fa1301da56ab68"
+    },
+    {
+      "path": "MS/tls13-longcert/joy/capture_pwd.joy.gz",
+      "kind": "file",
+      "bytes": 5766655,
+      "id": "669164105a51c40294e80631"
+    },
+    {
+      "path": "MS/tls13-shortcert/csv/capture_getpid.csv",
+      "kind": "file",
+      "bytes": 3874721,
+      "id": "66916417e9fa1301da56ab6e"
+    },
+    {
+      "path": "MS/tls13-shortcert/csv/capture_cat_shadow.csv",
+      "kind": "file",
+      "bytes": 7204576,
+      "id": "669164186068db028bdde58b"
+    },
+    {
+      "path": "MS/tls13-shortcert/csv/capture_download_shadow.csv",
+      "kind": "file",
+      "bytes": 5281823,
+      "id": "66916418ec07f901e8bdb4a3"
+    },
+    {
+      "path": "MS/tls13-shortcert/csv/capture.csv",
+      "kind": "file",
+      "bytes": 8246978,
+      "id": "669164196068db028bdde58e"
+    },
+    {
+      "path": "MS/tls13-shortcert/csv/capture_getuid.csv",
+      "kind": "file",
+      "bytes": 3881699,
+      "id": "6691641bec07f901e2bdbb43"
+    },
+    {
+      "path": "MS/tls13-shortcert/csv/capture_ipconfig.csv",
+      "kind": "file",
+      "bytes": 3919880,
+      "id": "6691641bec07f901e3bdbd2e"
+    },
+    {
+      "path": "MS/tls13-shortcert/csv/capture_ls.csv",
+      "kind": "file",
+      "bytes": 5288566,
+      "id": "6691641c1de9f7026930df21"
+    },
+    {
+      "path": "MS/tls13-shortcert/csv/capture_ls_etc.csv",
+      "kind": "file",
+      "bytes": 5322195,
+      "id": "6691641c5a51c40294e8063b"
+    },
+    {
+      "path": "MS/tls13-shortcert/csv/capture_route.csv",
+      "kind": "file",
+      "bytes": 3907654,
+      "id": "6691641fe9fa1301bc56a6a8"
+    },
+    {
+      "path": "MS/tls13-shortcert/csv/capture_pwd.csv",
+      "kind": "file",
+      "bytes": 3872837,
+      "id": "6691641f1de9f7026030dfd0"
+    },
+    {
+      "path": "MS/tls13-shortcert/joy/capture.joy.gz",
+      "kind": "file",
+      "bytes": 6088790,
+      "id": "669164236068db0276dde298"
+    },
+    {
+      "path": "MS/tls13-shortcert/joy/capture_cat_shadow.joy.gz",
+      "kind": "file",
+      "bytes": 5303483,
+      "id": "669164246068db0276dde29a"
+    },
+    {
+      "path": "MS/tls13-shortcert/joy/capture_download_shadow.joy.gz",
+      "kind": "file",
+      "bytes": 3907528,
+      "id": "669164241de9f7026030dfd4"
+    },
+    {
+      "path": "MS/tls13-shortcert/joy/capture_getpid.joy.gz",
+      "kind": "file",
+      "bytes": 2882350,
+      "id": "669164241de9f7026030dfd6"
+    },
+    {
+      "path": "MS/tls13-shortcert/joy/capture_getuid.joy.gz",
+      "kind": "file",
+      "bytes": 2886749,
+      "id": "66916425ec07f901e8bdb4af"
+    },
+    {
+      "path": "MS/tls13-shortcert/joy/capture_ipconfig.joy.gz",
+      "kind": "file",
+      "bytes": 2915902,
+      "id": "669164265a51c4027de8045d"
+    },
+    {
+      "path": "MS/tls13-shortcert/joy/capture_ps.joy.gz",
+      "kind": "file",
+      "bytes": 2921617,
+      "id": "669164275a51c40294e80648"
+    },
+    {
+      "path": "MS/tls13-shortcert/joy/capture_ls.joy.gz",
+      "kind": "file",
+      "bytes": 3914830,
+      "id": "66916427ec07f901e8bdb4b3"
+    },
+    {
+      "path": "MS/tls13-shortcert/joy/capture_pwd.joy.gz",
+      "kind": "file",
+      "bytes": 2881782,
+      "id": "66916428e9fa1301d756aa9e"
+    },
+    {
+      "path": "MS/tls13-shortcert/joy/capture_ls_etc.joy.gz",
+      "kind": "file",
+      "bytes": 3960616,
+      "id": "669164295a51c4027de80462"
+    },
+    {
+      "path": "MS/tls12-longcert/csv/capture_sysinfo.csv",
+      "kind": "file",
+      "bytes": 7871712,
+      "id": "669163916068db027fdde509"
+    },
+    {
+      "path": "MS/tls12-longcert/csv/capture_route.csv",
+      "kind": "file",
+      "bytes": 7775701,
+      "id": "66916391ec07f901e2bdbabd"
+    },
+    {
+      "path": "MS/tls12-longcert/joy/capture_route.joy.gz",
+      "kind": "file",
+      "bytes": 4688979,
+      "id": "669163a56068db028bdde3d6"
+    },
+    {
+      "path": "MS/tls12-longcert/joy/capture_sysinfo.joy.gz",
+      "kind": "file",
+      "bytes": 4755228,
+      "id": "669163a7e9fa1301d056abf9"
+    },
+    {
+      "path": "MS/tls12-shortcert/csv/capture_route.csv",
+      "kind": "file",
+      "bytes": 3900738,
+      "id": "669163d35a51c4028ee80b5c"
+    },
+    {
+      "path": "MS/tls12-shortcert/csv/capture_sysinfo.csv",
+      "kind": "file",
+      "bytes": 3959440,
+      "id": "669163d46068db028bdde437"
+    },
+    {
+      "path": "MS/tls12-shortcert/joy/capture_route.joy.gz",
+      "kind": "file",
+      "bytes": 2120141,
+      "id": "669163dd5a51c40294e80602"
+    },
+    {
+      "path": "MS/tls12-shortcert/joy/capture_sysinfo.joy.gz",
+      "kind": "file",
+      "bytes": 2140997,
+      "id": "669163ddec07f901e8bdb463"
+    },
+    {
+      "path": "MS/tls13-longcert/csv/capture_route.csv",
+      "kind": "file",
+      "bytes": 7821793,
+      "id": "669164066068db028bdde57b"
+    },
+    {
+      "path": "MS/tls13-longcert/csv/capture_sysinfo.csv",
+      "kind": "file",
+      "bytes": 7937326,
+      "id": "669164085a51c40294e8062e"
+    },
+    {
+      "path": "MS/tls13-longcert/joy/capture_route.joy.gz",
+      "kind": "file",
+      "bytes": 5825660,
+      "id": "669164126068db028bdde583"
+    },
+    {
+      "path": "MS/tls13-longcert/joy/capture_sysinfo.joy.gz",
+      "kind": "file",
+      "bytes": 5907578,
+      "id": "669164136068db0280dde960"
+    },
+    {
+      "path": "MS/tls13-shortcert/csv/capture_ps.csv",
+      "kind": "file",
+      "bytes": 3927282,
+      "id": "6691641fec07f901e3bdbd33"
+    },
+    {
+      "path": "MS/tls13-shortcert/csv/capture_sysinfo.csv",
+      "kind": "file",
+      "bytes": 3971452,
+      "id": "66916422e9fa1301d056ac22"
+    },
+    {
+      "path": "MS/tls13-shortcert/joy/capture_route.joy.gz",
+      "kind": "file",
+      "bytes": 2911641,
+      "id": "6691642a6068db0280dde983"
+    },
+    {
+      "path": "MS/tls13-shortcert/joy/capture_sysinfo.joy.gz",
+      "kind": "file",
+      "bytes": 2950714,
+      "id": "6691642bec07f901e3bdbd3d"
+    }
+  ],
+  "raw_capture_files": []
+}

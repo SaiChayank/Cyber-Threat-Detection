@@ -1,0 +1,38 @@
+[
+  {
+    "file": "PCAPs/DoHMalicious/MaliciousDoH-dnscat2-Pcap-001-600.zip",
+    "status": 200,
+    "headers": {
+      "content-disposition": "attachment; filename=\"MaliciousDoH-dnscat2-Pcap-001-600.zip\"",
+      "content-type": "application/octet-stream"
+    },
+    "prefix_magic": "504b0304"
+  },
+  {
+    "file": "PCAPs/DoHBenign-NonDoH/BenignDoH_NonDoH-Firefox-AdGuard.zip",
+    "status": 200,
+    "headers": {
+      "content-disposition": "attachment; filename=\"BenignDoH_NonDoH-Firefox-AdGuard.zip\"",
+      "content-type": "application/octet-stream"
+    },
+    "prefix_magic": "504b0304"
+  },
+  {
+    "file": "CSVs/MaliciousDoH-CSVs.zip",
+    "status": 200,
+    "headers": {
+      "content-disposition": "attachment; filename=\"MaliciousDoH-CSVs.zip\"",
+      "content-type": "application/octet-stream"
+    },
+    "prefix_magic": "504b0304"
+  },
+  {
+    "file": "CSVs/BenignDoH-NonDoH-CSVs.zip",
+    "status": 200,
+    "headers": {
+      "content-disposition": "attachment; filename=\"BenignDoH-NonDoH-CSVs.zip\"",
+      "content-type": "application/octet-stream"
+    },
+    "prefix_magic": "504b0304"
+  }
+]

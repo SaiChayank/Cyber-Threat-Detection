@@ -1,0 +1,52 @@
+[
+  {
+    "url": "https://cicresearch.ca/CICDataset/DoHBrw-2020/browse.php?p=PCAPs",
+    "entries": [
+      {
+        "href": "https://cicresearch.ca/CICDataset/DoHBrw-2020/browse.php?p=",
+        "text": "\u2b05 Up"
+      },
+      {
+        "href": "https://cicresearch.ca/CICDataset/DoHBrw-2020/browse.php?p=PCAPs%2FDoHBenign-NonDoH",
+        "text": "DoHBenign-NonDoH"
+      },
+      {
+        "href": "https://cicresearch.ca/CICDataset/DoHBrw-2020/browse.php?p=PCAPs%2FDoHMalicious",
+        "text": "DoHMalicious"
+      }
+    ]
+  },
+  {
+    "url": "https://cicresearch.ca/CICDataset/DoHBrw-2020/browse.php?p=CSVs",
+    "entries": [
+      {
+        "href": "https://cicresearch.ca/CICDataset/DoHBrw-2020/browse.php?p=",
+        "text": "\u2b05 Up"
+      },
+      {
+        "href": "https://cicresearch.ca/CICDataset/DoHBrw-2020/download.php?file=CSVs%2FBenignDoH-NonDoH-CSVs.md5",
+        "text": "Download"
+      },
+      {
+        "href": "https://cicresearch.ca/CICDataset/DoHBrw-2020/download.php?file=CSVs%2FBenignDoH-NonDoH-CSVs.zip",
+        "text": "Download"
+      },
+      {
+        "href": "https://cicresearch.ca/CICDataset/DoHBrw-2020/download.php?file=CSVs%2FMaliciousDoH-CSVs.md5",
+        "text": "Download"
+      },
+      {
+        "href": "https://cicresearch.ca/CICDataset/DoHBrw-2020/download.php?file=CSVs%2FMaliciousDoH-CSVs.zip",
+        "text": "Download"
+      },
+      {
+        "href": "https://cicresearch.ca/CICDataset/DoHBrw-2020/download.php?file=CSVs%2FTotal_CSVs.md5",
+        "text": "Download"
+      },
+      {
+        "href": "https://cicresearch.ca/CICDataset/DoHBrw-2020/download.php?file=CSVs%2FTotal_CSVs.zip",
+        "text": "Download"
+      }
+    ]
+  }
+]

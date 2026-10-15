@@ -1,0 +1,234 @@
+{
+  "scope": "Offline semantic conformance/compatibility; not model quality or promotion",
+  "contract_version": "univect-gnb-semantics-20261007-v1",
+  "contract_sha256": "32741180e7ceb95ffc8541201f3f5644a502f035f1791232368faefe76bba616",
+  "model_sha256": "4d8e08323374535789e21f9f7cd1ee3f1c84b663ce555e67bb4ced57c95e8010",
+  "reference_commit": "8c1b7cc70d3318a28f107fa2ca9f292e95e9a583",
+  "current_conformance": "PASS",
+  "historical_compatibility": "FAIL",
+  "issues": [],
+  "current_source_sha256": {
+    "ml/train.py": "c37ae8cac948271d7717aa4931276227718f4f47945b9e0a10f44c5c40798ddb",
+    "ml/model.py": "2721a53d667d1ea773154fdebf3d349c5ef221dfdb51e937d5afdba1ffa6f354",
+    "features/extractor.py": "624952f8063464c88466b861c72f121c318be5835a02a3d2a4b24b38b1800ac8",
+    "features/rate_window.py": "a0d4542ab56b44bb51bdee88ebd56a7df95e9a9d6a79fc569769a9100b65d683",
+    "detection/pipeline.py": "4e70bc3e50546e57fa5f0d9432f3a9be969b906897d837f6f3638311c9b54926",
+    "replay/scenarios.py": "e24b4dbb24b729fc4fa98faaf7de83554e3beac58e243a17d56ed38b3234ed2d",
+    "ingest/metadata.py": "e0f26334b4102928f9ac98a76de44e3ca204f53ed0104e17b1ca51031213eed6",
+    "datasets/audit_feature_parity.py": "bcad1dd77b6471e27595937634cd8e9f57e7532ea0f9c52ba620880fec2d3f15",
+    "schemas/traffic_event.py": "e5be7daf5689e39e2cbe877b6972a81b947d70176dd2aed23a30620f5c3ae7a4",
+    "features/dns_tunnel.py": "8ded37ba73c2d605f22baf4571f80842791f7b2b1584ce0230ddc365466605eb",
+    "ml/dga.py": "0a03098bf4cc22d8f5b7ff5fe3bd75d82d735479730e1890a7f99bedb9d6c0b7"
+  },
+  "historical_source_sha256": {
+    "features/extractor.py": "a2ead438a95d4bb3c71ad8410804f0b87b89fd97c22b16aac210e47fa81e78df",
+    "replay/scenarios.py": "a89adfd75d0aef77ad5ee4423fed7fb10c616a9b690842545b56d9d9f90106a2"
+  },
+  "data_policy": {
+    "controlled_metadata_only": true,
+    "training_data_used": false,
+    "validation_data_used": false,
+    "reserved_data_used": false,
+    "fit_called": false,
+    "predictions_called": false,
+    "runtime_changed": false
+  },
+  "historical_drift": {
+    "bucket_boundary": {
+      "packet_rate": {
+        "before": 0.1,
+        "after": 10.1,
+        "delta": 10.0
+      },
+      "byte_rate": {
+        "before": 10.0,
+        "after": 20.0,
+        "delta": 10.0
+      },
+      "source_entropy": {
+        "before": -0.0,
+        "after": 1.0,
+        "delta": 1.0
+      }
+    },
+    "bounded_global_history": {
+      "packet_rate": {
+        "before": 409.6,
+        "after": 409.7,
+        "delta": 0.0999999999999659
+      },
+      "byte_rate": {
+        "before": 24576.0,
+        "after": 24582.0,
+        "delta": 6.0
+      }
+    },
+    "reverse_observed_zero": {
+      "byte_ratio": {
+        "before": 100.0,
+        "after": 0,
+        "delta": -100.0
+      }
+    }
+  },
+  "probes": {
+    "bucket_boundary": {
+      "events": 2,
+      "changes": {
+        "packet_rate": {
+          "before": 0.1,
+          "after": 10.1,
+          "delta": 10.0
+        },
+        "byte_rate": {
+          "before": 10.0,
+          "after": 20.0,
+          "delta": 10.0
+        },
+        "source_entropy": {
+          "before": -0.0,
+          "after": 1.0,
+          "delta": 1.0
+        }
+      },
+      "observed_ratio_before": null,
+      "observed_ratio_after": null,
+      "current_source_bytes_60s": 100,
+      "current_ml_egress_bytes": 100
+    },
+    "bounded_global_history": {
+      "events": 4097,
+      "changes": {
+        "packet_rate": {
+          "before": 409.6,
+          "after": 409.7,
+          "delta": 0.0999999999999659
+        },
+        "byte_rate": {
+          "before": 24576.0,
+          "after": 24582.0,
+          "delta": 6.0
+        }
+      },
+      "observed_ratio_before": null,
+      "observed_ratio_after": null,
+      "current_source_bytes_60s": 245820,
+      "current_ml_egress_bytes": 30720
+    },
+    "reverse_unavailable": {
+      "events": 1,
+      "changes": {},
+      "observed_ratio_before": null,
+      "observed_ratio_after": null,
+      "current_source_bytes_60s": 100,
+      "current_ml_egress_bytes": 100
+    },
+    "reverse_observed_zero": {
+      "events": 1,
+      "changes": {
+        "byte_ratio": {
+          "before": 100.0,
+          "after": 0,
+          "delta": -100.0
+        }
+      },
+      "observed_ratio_before": 100.0,
+      "observed_ratio_after": null,
+      "current_source_bytes_60s": 100,
+      "current_ml_egress_bytes": 100
+    },
+    "reverse_observed_positive": {
+      "events": 1,
+      "changes": {},
+      "observed_ratio_before": 4.0,
+      "observed_ratio_after": 4.0,
+      "current_source_bytes_60s": 100,
+      "current_ml_egress_bytes": 100
+    },
+    "packet_vs_summary": {
+      "summaries": {
+        "packet_rate": 1.0,
+        "byte_rate": 100.0,
+        "source_entropy": 1.0
+      },
+      "packets": {
+        "packet_rate": 1.0,
+        "byte_rate": 100.0,
+        "source_entropy": 0.46899559358928133
+      }
+    }
+  },
+  "extra_probes": {
+    "expiration": {
+      "boundary": {
+        "packet_rate": 10.1,
+        "byte_rate": 12.0,
+        "source_entropy": 0.0,
+        "rate_window_seconds": 10,
+        "rate_window_resolution_ms": 1000
+      },
+      "expired": {
+        "packet_rate": 0.2,
+        "byte_rate": 12.0,
+        "source_entropy": 0.0,
+        "rate_window_seconds": 10,
+        "rate_window_resolution_ms": 1000
+      },
+      "reset": {
+        "packet_rate": 0.1,
+        "byte_rate": 6.0,
+        "source_entropy": 0.0,
+        "rate_window_seconds": 10,
+        "rate_window_resolution_ms": 1000
+      }
+    },
+    "overflow": {
+      "partial": {
+        "packet_rate": 1.0,
+        "source_entropy": 1.5,
+        "source_count_lower_bound": 3,
+        "source_entropy_partial": true
+      },
+      "recovered": {
+        "packet_rate": 0.1,
+        "source_entropy": 0.0,
+        "source_count_lower_bound": 1,
+        "source_entropy_partial": false
+      }
+    },
+    "late_event": {
+      "dropped": true,
+      "late_events": 1,
+      "packet_rate_before": 10.0,
+      "packet_rate_after": 10.1
+    },
+    "peer": {
+      "size_cv": 0.3333333333333333,
+      "syn_fraction": 0.5,
+      "iat_mean": 1.0,
+      "iat_cv": 0.0,
+      "history_count": 2,
+      "egress_bytes": 1100
+    },
+    "reverse": {
+      "unavailable": {
+        "byte_ratio": 0,
+        "reverse_available": 0.0,
+        "observed_byte_ratio": null,
+        "observed_byte_ratio_status": "reverse_unavailable"
+      },
+      "zero": {
+        "byte_ratio": 0,
+        "reverse_available": 1.0,
+        "observed_byte_ratio": null,
+        "observed_byte_ratio_status": "zero_observed_reverse_bytes"
+      },
+      "positive": {
+        "byte_ratio": 2.4,
+        "reverse_available": 1.0,
+        "observed_byte_ratio": 2.4,
+        "observed_byte_ratio_status": "finite_observed_ratio"
+      }
+    }
+  }
+}

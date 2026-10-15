@@ -1,0 +1,712 @@
+{
+  "access_date": "2026-10-14",
+  "scope": "Public documentation/file metadata only; no data file blobs fetched",
+  "commit": "7acfebc6f17fe774df91a1b550c4b23613b90fe9",
+  "requests": [
+    {
+      "kind": "repository",
+      "url": "https://api.github.com/repos/cp-tsp/ares2025-artifacts",
+      "status": 200,
+      "body_bytes": 5301,
+      "body_sha256": "f8bcae781aa652614f27cdbea12c334ce3109fe738d9633cbe514a02092ba279"
+    },
+    {
+      "kind": "tree",
+      "url": "https://api.github.com/repos/cp-tsp/ares2025-artifacts/git/trees/7acfebc6f17fe774df91a1b550c4b23613b90fe9?recursive=1",
+      "status": 200,
+      "body_bytes": 29691,
+      "body_sha256": "3e3cbe3e09ad7d17fbb8a2692a833b59311ef75ef13a0ccc617ecbb7f11835b4"
+    }
+  ],
+  "repository": {
+    "full_name": "cp-tsp/ares2025-artifacts",
+    "html_url": "https://github.com/cp-tsp/ares2025-artifacts",
+    "default_branch": "main",
+    "created_at": "2024-12-10T09:05:22Z",
+    "updated_at": "2026-08-19T10:39:35Z",
+    "pushed_at": "2025-03-11T20:37:42Z",
+    "license": null
+  },
+  "tree_truncated": false,
+  "file_catalogue": [
+    {
+      "path": "README.md",
+      "type": "blob",
+      "size": 942,
+      "sha": "db9a1846f068dbebd843376c06b467211b8099f7"
+    },
+    {
+      "path": "data",
+      "type": "tree",
+      "size": null,
+      "sha": "f093460ecb8807d2c560af9dcf6d44a323e83bad"
+    },
+    {
+      "path": "data/csv",
+      "type": "tree",
+      "size": null,
+      "sha": "843d8a3b0a2d219d2baa69aa8b40f5e9d6f61b4f"
+    },
+    {
+      "path": "data/csv/amazon_dns_generic",
+      "type": "tree",
+      "size": null,
+      "sha": "22137751f9934ef82b57bbef0a84f86154910ef0"
+    },
+    {
+      "path": "data/csv/amazon_dns_generic/cs2_dns_default_with_amazon.csv",
+      "type": "blob",
+      "size": 23302228,
+      "sha": "2e1cd118f900fb6d61f14f8450c060dbe11df738"
+    },
+    {
+      "path": "data/csv/amazon_dns_generic/cs_dns_default_with_amazon.csv",
+      "type": "blob",
+      "size": 23302228,
+      "sha": "2e1cd118f900fb6d61f14f8450c060dbe11df738"
+    },
+    {
+      "path": "data/csv/amazon_http_amazon",
+      "type": "tree",
+      "size": null,
+      "sha": "b8a81f716df9a69351ed2ce6512eb28391b5942f"
+    },
+    {
+      "path": "data/csv/amazon_http_amazon/benign_amazon_https.csv",
+      "type": "blob",
+      "size": 3137260,
+      "sha": "a9c7447639fad11748e0ab1aa9894995f56f8c4b"
+    },
+    {
+      "path": "data/csv/amazon_http_amazon/cs2_amazon_http.csv",
+      "type": "blob",
+      "size": 7034299,
+      "sha": "55b9cd787ab20c089293f2faa02c660675de411b"
+    },
+    {
+      "path": "data/csv/amazon_http_amazon/cs3_amazon_http.csv",
+      "type": "blob",
+      "size": 236386,
+      "sha": "f7e1d9df8f0c45febf04846ad6a947dc27fe3fed"
+    },
+    {
+      "path": "data/csv/amazon_http_amazon/cs4_amazon_http.csv",
+      "type": "blob",
+      "size": 91286,
+      "sha": "26e84e9d13d5ed9d5cfd45f40164044c4fc08370"
+    },
+    {
+      "path": "data/csv/amazon_http_amazon/cs5_amazon_http.csv",
+      "type": "blob",
+      "size": 95444,
+      "sha": "ab8408f08873fc1d5db7139c834f1ae10c5c38c8"
+    },
+    {
+      "path": "data/csv/amazon_http_amazon/cs_amazon_http.csv",
+      "type": "blob",
+      "size": 874045,
+      "sha": "f4e88f29bdfabd295b9581bd518f93cd8cc359e5"
+    },
+    {
+      "path": "data/csv/amazon_https_amazon",
+      "type": "tree",
+      "size": null,
+      "sha": "2f4481e2fdc181a79921615c31fe4679bf7a8740"
+    },
+    {
+      "path": "data/csv/amazon_https_amazon/benign_amazon_https.csv",
+      "type": "blob",
+      "size": 3137260,
+      "sha": "082a3f19b49bbb067151f573cdc3901832e14d81"
+    },
+    {
+      "path": "data/csv/amazon_https_amazon/cs2_amazon_https.csv",
+      "type": "blob",
+      "size": 165818,
+      "sha": "5ba3683b6e59bea1c944e328e7b86d8b1c69abed"
+    },
+    {
+      "path": "data/csv/amazon_https_amazon/cs3_amazon_https.csv",
+      "type": "blob",
+      "size": 7041235,
+      "sha": "d29d9214a8fc66151b662b259e6620fca0dcfb4a"
+    },
+    {
+      "path": "data/csv/amazon_https_amazon/cs4_amazon_https.csv",
+      "type": "blob",
+      "size": 177678,
+      "sha": "1f7300c7e5aa55c8900c085cca6962c841bc6d04"
+    },
+    {
+      "path": "data/csv/amazon_https_amazon/cs5_amazon_https.csv",
+      "type": "blob",
+      "size": 223706,
+      "sha": "0102d941db9ad29323ab0db80f64666f846a76fc"
+    },
+    {
+      "path": "data/csv/amazon_https_amazon/cs_amazon_https.csv",
+      "type": "blob",
+      "size": 146304,
+      "sha": "e69bca8c503ec662eddf960a069804cafe77665e"
+    },
+    {
+      "path": "data/csv/amazon_https_amazon/ctu_https_amazon.csv",
+      "type": "blob",
+      "size": 69012,
+      "sha": "d112590fa8155718acdc27fac1858219d359b023"
+    },
+    {
+      "path": "data/csv/default_dns_generic",
+      "type": "tree",
+      "size": null,
+      "sha": "dc62a127a4d91c6fe5b4c32cecff093b7892c140"
+    },
+    {
+      "path": "data/csv/default_dns_generic/cs2_dns_default.csv",
+      "type": "blob",
+      "size": 24526247,
+      "sha": "ed7f83a4091348ab65aefcc8a4019c6f872473d0"
+    },
+    {
+      "path": "data/csv/default_dns_generic/cs_dns_default.csv",
+      "type": "blob",
+      "size": 19695934,
+      "sha": "177b38386da12155b30a0b0f5de29b6ccd44c5a7"
+    },
+    {
+      "path": "data/csv/default_https_generic",
+      "type": "tree",
+      "size": null,
+      "sha": "9b40ffdf5eaa885106f6e9d0d373f511315e2069"
+    },
+    {
+      "path": "data/csv/default_https_generic/cs2_default_https.csv",
+      "type": "blob",
+      "size": 458330,
+      "sha": "02a27a3217182dc8346f5233bb95c9dc7d89791b"
+    },
+    {
+      "path": "data/csv/default_https_generic/cs3_default_https.csv",
+      "type": "blob",
+      "size": 7279742,
+      "sha": "8ad407820cd727076a519a82f0ae6894ddfee003"
+    },
+    {
+      "path": "data/csv/default_https_generic/cs_default_https.csv",
+      "type": "blob",
+      "size": 424575,
+      "sha": "e5b5420c37d250c3fd4f22a07857e145a6909ef9"
+    },
+    {
+      "path": "data/csv/jquery_http_jquery",
+      "type": "tree",
+      "size": null,
+      "sha": "b27b07122b99e4399fd6710a3affcafddd32b1c1"
+    },
+    {
+      "path": "data/csv/jquery_http_jquery/benign_jquery_http.csv",
+      "type": "blob",
+      "size": 258520,
+      "sha": "896302ff193a77e840ba71b86f62a3741134f774"
+    },
+    {
+      "path": "data/csv/jquery_http_jquery/cs2_jquery_http.csv",
+      "type": "blob",
+      "size": 516619,
+      "sha": "59159ac2655902b37f15d53e43969922c78751f6"
+    },
+    {
+      "path": "data/csv/jquery_http_jquery/cs3_jquery_http.csv",
+      "type": "blob",
+      "size": 11729211,
+      "sha": "5817a513ebdf7a08a51e9c79c974e69f6e1680d5"
+    },
+    {
+      "path": "data/csv/jquery_http_jquery/cs4_jquery_http.csv",
+      "type": "blob",
+      "size": 477015,
+      "sha": "cdf995cf880cec2939a798c240b4c923df98306e"
+    },
+    {
+      "path": "data/csv/jquery_http_jquery/cs5_jquery_http.csv",
+      "type": "blob",
+      "size": 413880,
+      "sha": "aca0711edfb77a0584548df07ad4cd63262937ca"
+    },
+    {
+      "path": "data/csv/jquery_http_jquery/cs_jquery_http.csv",
+      "type": "blob",
+      "size": 11626268,
+      "sha": "cb0d40b2871ddead1e5981f7d2bce456b19de871"
+    },
+    {
+      "path": "data/csv/jquery_http_jquery/ctu_jquery.csv",
+      "type": "blob",
+      "size": 309470,
+      "sha": "9a0f3c12b13fa69c2af9788cd37f3d80daa88119"
+    },
+    {
+      "path": "data/csv/smashburger_https_smashburger",
+      "type": "tree",
+      "size": null,
+      "sha": "2ce075c88d782c82459f3b3e5f6ccc3159f8a9b1"
+    },
+    {
+      "path": "data/csv/smashburger_https_smashburger/benign1_smashburger.csv",
+      "type": "blob",
+      "size": 85417,
+      "sha": "378ff37a78ff28dec06e2e3f253f6cdbe2f42a2b"
+    },
+    {
+      "path": "data/csv/smashburger_https_smashburger/benign2_smashburger.csv",
+      "type": "blob",
+      "size": 84985,
+      "sha": "69af2e7740c1246bc9f947eacb1d8ed8eb4fef44"
+    },
+    {
+      "path": "data/csv/smashburger_https_smashburger/benign3_smashburger.csv",
+      "type": "blob",
+      "size": 32971,
+      "sha": "d833ff2bb4d4cac8e3a39c23ba33d1b075245189"
+    },
+    {
+      "path": "data/csv/smashburger_https_smashburger/benign4_smashburger.csv",
+      "type": "blob",
+      "size": 69945,
+      "sha": "92a9e4f85811945913f2b1452db2e1db72beed8a"
+    },
+    {
+      "path": "data/csv/smashburger_https_smashburger/benign5_smashburger.csv",
+      "type": "blob",
+      "size": 53829,
+      "sha": "876e0fa07efa4acb1343139de6591f8bfd315a8c"
+    },
+    {
+      "path": "data/csv/smashburger_https_smashburger/benign6_smashburger.csv",
+      "type": "blob",
+      "size": 404287,
+      "sha": "36a1c69df5c62e6493a63588a9f4ece6b51a7e59"
+    },
+    {
+      "path": "data/csv/smashburger_https_smashburger/benign7_smashburger.csv",
+      "type": "blob",
+      "size": 397341,
+      "sha": "b1ec419a14551d2863baf76caf0294857559f889"
+    },
+    {
+      "path": "data/csv/smashburger_https_smashburger/benign8_smashburger.csv",
+      "type": "blob",
+      "size": 301002,
+      "sha": "04eab90ff6e1b57d02f5fef5d6c16bdb9547cae2"
+    },
+    {
+      "path": "data/csv/smashburger_https_smashburger/cs2_smashburger_https.csv",
+      "type": "blob",
+      "size": 144869,
+      "sha": "588b2675eda483d0f931818d0bca53252a06795b"
+    },
+    {
+      "path": "data/csv/smashburger_https_smashburger/cs3_smashburger_https.csv",
+      "type": "blob",
+      "size": 124157,
+      "sha": "b08152f20358e4fba9a3036bac4861aaff034425"
+    },
+    {
+      "path": "data/csv/smashburger_https_smashburger/cs4_smashburger_https.csv",
+      "type": "blob",
+      "size": 6999796,
+      "sha": "cd76fb3227dfdcfad1a789e44da5e0d46d00cd68"
+    },
+    {
+      "path": "data/csv/smashburger_https_smashburger/cs_smashburger_https.csv",
+      "type": "blob",
+      "size": 82740,
+      "sha": "a7560081bebb0fa3e8e1817dda8343762a987d34"
+    },
+    {
+      "path": "data/pcap",
+      "type": "tree",
+      "size": null,
+      "sha": "5b8f7aa114f1cd2911941ae6e1019162ff21aeba"
+    },
+    {
+      "path": "data/pcap/amazon_dns_generic",
+      "type": "tree",
+      "size": null,
+      "sha": "3a3acd5913c05923ea4c959c35372e64f5fed7ef"
+    },
+    {
+      "path": "data/pcap/amazon_dns_generic/cs2_dns_default_with_amazon.pcap",
+      "type": "blob",
+      "size": 7221976,
+      "sha": "4d611f1b51a66900a74425a4eb8ed49315bb34b6"
+    },
+    {
+      "path": "data/pcap/amazon_dns_generic/cs_dns_default_with_amazon.pcap",
+      "type": "blob",
+      "size": 7221976,
+      "sha": "4d611f1b51a66900a74425a4eb8ed49315bb34b6"
+    },
+    {
+      "path": "data/pcap/amazon_http_amazon",
+      "type": "tree",
+      "size": null,
+      "sha": "a3e192c3a81014c1f9a15b854a205139891ba16e"
+    },
+    {
+      "path": "data/pcap/amazon_http_amazon/benign_amazon_https.pcapng",
+      "type": "blob",
+      "size": 28010108,
+      "sha": "18a9cc1e1783248696262e64913289dd159fc45a"
+    },
+    {
+      "path": "data/pcap/amazon_http_amazon/cs2_amazon_http.pcapng",
+      "type": "blob",
+      "size": 2975068,
+      "sha": "cb7d0aebf02bc6d5bd2baeca219b18d819b72e44"
+    },
+    {
+      "path": "data/pcap/amazon_http_amazon/cs3_amazon_http.pcap",
+      "type": "blob",
+      "size": 2446444,
+      "sha": "c5938858e842926b06a88f4b2511284931239fff"
+    },
+    {
+      "path": "data/pcap/amazon_http_amazon/cs4_amazon_http.pcapng",
+      "type": "blob",
+      "size": 431544,
+      "sha": "a796be920f5a9833ea68e26d8dd8850123585d3c"
+    },
+    {
+      "path": "data/pcap/amazon_http_amazon/cs5_amazon_http.pcapng",
+      "type": "blob",
+      "size": 237504,
+      "sha": "bb8aa4f9087b0c0a20fdbd9ee8f20a661b3bb8a2"
+    },
+    {
+      "path": "data/pcap/amazon_http_amazon/cs_amazon_http.pcap",
+      "type": "blob",
+      "size": 2690608,
+      "sha": "3bbcbe17227d61fa9e0afc6ae37c0e8d6b2fbcd3"
+    },
+    {
+      "path": "data/pcap/amazon_https_amazon",
+      "type": "tree",
+      "size": null,
+      "sha": "77d9e43e0222516e06b954561ccbb990408fd6c9"
+    },
+    {
+      "path": "data/pcap/amazon_https_amazon/benign_amazon_https.pcapng",
+      "type": "blob",
+      "size": 28010108,
+      "sha": "18a9cc1e1783248696262e64913289dd159fc45a"
+    },
+    {
+      "path": "data/pcap/amazon_https_amazon/cs2_amazon_https.pcap",
+      "type": "blob",
+      "size": 112132,
+      "sha": "373fb6231dc3c0e8e27aa3dadc0fc55ddd0fd83f"
+    },
+    {
+      "path": "data/pcap/amazon_https_amazon/cs3_amazon_https.pcapng",
+      "type": "blob",
+      "size": 3079616,
+      "sha": "871935ebba21a30c9182c2f84b72d20821d29846"
+    },
+    {
+      "path": "data/pcap/amazon_https_amazon/cs4_amazon_https.pcapng",
+      "type": "blob",
+      "size": 2137380,
+      "sha": "d76b5c207a6c3f0d6df94dee72670b7616a7ff02"
+    },
+    {
+      "path": "data/pcap/amazon_https_amazon/cs5_amazon_https.pcapng",
+      "type": "blob",
+      "size": 2529484,
+      "sha": "b130ea266fe337fde2d458c3bf8c76ead85f4bc9"
+    },
+    {
+      "path": "data/pcap/amazon_https_amazon/cs_amazon_https.pcap",
+      "type": "blob",
+      "size": 95096,
+      "sha": "26c97ed16c7f2ecce8d63639be6f437d2533c814"
+    },
+    {
+      "path": "data/pcap/default_dns_generic",
+      "type": "tree",
+      "size": null,
+      "sha": "930b32cc9622f6afb0f462bb1cb422ac5cfaa576"
+    },
+    {
+      "path": "data/pcap/default_dns_generic/cs2_dns_default.pcap",
+      "type": "blob",
+      "size": 4470676,
+      "sha": "1df296df3fb188e904d76cd44bcf84b75929babf"
+    },
+    {
+      "path": "data/pcap/default_dns_generic/cs_dns_default.pcap",
+      "type": "blob",
+      "size": 3966640,
+      "sha": "150fb5a446960f21baf3311aadfa237a88e70c56"
+    },
+    {
+      "path": "data/pcap/default_https_generic",
+      "type": "tree",
+      "size": null,
+      "sha": "57b2df6e69b4c4d3632ba1a8bbf243fe6ab461f6"
+    },
+    {
+      "path": "data/pcap/default_https_generic/cs2_default_https.pcap",
+      "type": "blob",
+      "size": 7542580,
+      "sha": "9211bbfa2e534d9d59d37b79177fe90308c9fcea"
+    },
+    {
+      "path": "data/pcap/default_https_generic/cs3_default_https.pcap",
+      "type": "blob",
+      "size": 7885768,
+      "sha": "f77929dfd75ec3b78d2fd229837a49f4a5487036"
+    },
+    {
+      "path": "data/pcap/default_https_generic/cs_default_https.pcap",
+      "type": "blob",
+      "size": 3670884,
+      "sha": "41906fc5bc2b611b4b6b0cd2ddfe4ec4a5182bd9"
+    },
+    {
+      "path": "data/pcap/jquery_http_jquery",
+      "type": "tree",
+      "size": null,
+      "sha": "4ef6e7076331509664969c228583b86274bb9f04"
+    },
+    {
+      "path": "data/pcap/jquery_http_jquery/benign_jquery_http.pcapng",
+      "type": "blob",
+      "size": 9712520,
+      "sha": "59f05737c538462d6ee0e8b696f349a02e7a00d0"
+    },
+    {
+      "path": "data/pcap/jquery_http_jquery/cs2_jquery_http.pcap",
+      "type": "blob",
+      "size": 4553152,
+      "sha": "987f00c0a174d1070d9ac1ae836205b69ed75131"
+    },
+    {
+      "path": "data/pcap/jquery_http_jquery/cs3_jquery_http.pcap",
+      "type": "blob",
+      "size": 49674624,
+      "sha": "54c3f4005c16b4d86602b69489db29e172fce136"
+    },
+    {
+      "path": "data/pcap/jquery_http_jquery/cs4_jquery_http.pcap",
+      "type": "blob",
+      "size": 5387712,
+      "sha": "3e72e689ab33fcb45b8894fcb7adabb83c192a02"
+    },
+    {
+      "path": "data/pcap/jquery_http_jquery/cs5_jquery_http.pcap",
+      "type": "blob",
+      "size": 4097844,
+      "sha": "45ea0f3eb62d8bd6a9d68179e681aa14d3ede2bc"
+    },
+    {
+      "path": "data/pcap/jquery_http_jquery/cs_jquery_http.pcap",
+      "type": "blob",
+      "size": 49077296,
+      "sha": "5335f3c34f8d742655a9c8c74ebfadd0d079041c"
+    },
+    {
+      "path": "data/pcap/smashburger_https_smashburger",
+      "type": "tree",
+      "size": null,
+      "sha": "9d532301456b56abca6ec26919e2839763942721"
+    },
+    {
+      "path": "data/pcap/smashburger_https_smashburger/benign1_smashburger.pcapng",
+      "type": "blob",
+      "size": 133892,
+      "sha": "7120d1ca11589f3c1b1d00e48e98f6b77ceda833"
+    },
+    {
+      "path": "data/pcap/smashburger_https_smashburger/benign2_smashburger.pcapng",
+      "type": "blob",
+      "size": 129180,
+      "sha": "c1f4b6148a094c22910e5a5af51b8ab5a13aceef"
+    },
+    {
+      "path": "data/pcap/smashburger_https_smashburger/benign3_smashburger.pcapng",
+      "type": "blob",
+      "size": 17040,
+      "sha": "3c0425bb131ce8ffd8e009fd78bf59ecf506301a"
+    },
+    {
+      "path": "data/pcap/smashburger_https_smashburger/benign4_smashburger.pcapng",
+      "type": "blob",
+      "size": 98768,
+      "sha": "1e5a3dcc99b9b5201d8f5ec61f2bea370981c756"
+    },
+    {
+      "path": "data/pcap/smashburger_https_smashburger/benign5_smashburger.pcapng",
+      "type": "blob",
+      "size": 64420,
+      "sha": "0469d5144d463d68e89f8ed6fcb53759e49bc8b1"
+    },
+    {
+      "path": "data/pcap/smashburger_https_smashburger/benign6_smashburger.pcapng",
+      "type": "blob",
+      "size": 788868,
+      "sha": "bee5382c25efaa21c3027df717f6d4ead68b6ccb"
+    },
+    {
+      "path": "data/pcap/smashburger_https_smashburger/benign7_smashburger.pcapng",
+      "type": "blob",
+      "size": 769748,
+      "sha": "ca395a1e7c442e01fb23034fb3c1995f7a8ef1d8"
+    },
+    {
+      "path": "data/pcap/smashburger_https_smashburger/benign8_smashburger.pcapng",
+      "type": "blob",
+      "size": 577848,
+      "sha": "49688b4ff17ec2e328b7da8bda2a83174757cc15"
+    },
+    {
+      "path": "data/pcap/smashburger_https_smashburger/cs2_smashburger_https.pcapng",
+      "type": "blob",
+      "size": 3607108,
+      "sha": "089cefa263a9f35d7273be159c6c76d73ec0caf7"
+    },
+    {
+      "path": "data/pcap/smashburger_https_smashburger/cs3_smashburger_https.pcap",
+      "type": "blob",
+      "size": 1632464,
+      "sha": "7dc8863c01b162b19b42aea7affc3dcf18a3e097"
+    },
+    {
+      "path": "data/pcap/smashburger_https_smashburger/cs4_smashburger_https.pcap",
+      "type": "blob",
+      "size": 2901528,
+      "sha": "d3300d7db75328823def7bf650d8aee68cccf690"
+    },
+    {
+      "path": "data/pcap/smashburger_https_smashburger/cs_smashburger_https.pcapng",
+      "type": "blob",
+      "size": 761016,
+      "sha": "e81016f97c49f3f16babee010152cfb7860182eb"
+    },
+    {
+      "path": "src",
+      "type": "tree",
+      "size": null,
+      "sha": "d1784ddacd5f6d3d6f4f4adc07c189481dcb833c"
+    },
+    {
+      "path": "src/LICENSE.txt",
+      "type": "blob",
+      "size": 1067,
+      "sha": "2e5d9f0f61418bc9f7f883a7fb4ded0745f03734"
+    },
+    {
+      "path": "src/README.md",
+      "type": "blob",
+      "size": 3225,
+      "sha": "5995688d93d4bca7acd81b13d73af7cb18540efb"
+    },
+    {
+      "path": "src/boxplot_article.py",
+      "type": "blob",
+      "size": 4790,
+      "sha": "48e8e99f7d952376fcc99b2efc9433a322f9cae5"
+    },
+    {
+      "path": "src/combine_csv.py",
+      "type": "blob",
+      "size": 1836,
+      "sha": "4695195237e487e979d1020e106f71258a5fe8a0"
+    },
+    {
+      "path": "src/config.json",
+      "type": "blob",
+      "size": 1507,
+      "sha": "1133067058d19487f3f5f89f1ba6b2968bbf4e49"
+    },
+    {
+      "path": "src/feature_importance_build.py",
+      "type": "blob",
+      "size": 8504,
+      "sha": "442be83a4bc720364bd295227bcfa0192380243b"
+    },
+    {
+      "path": "src/feature_importance_plot_article.py",
+      "type": "blob",
+      "size": 7848,
+      "sha": "c25d342a17f054425c50a673eb585e0d4d36b39e"
+    },
+    {
+      "path": "src/features.json",
+      "type": "blob",
+      "size": 3402,
+      "sha": "81f07bee03d59dc799d13332b44ec17c07b50619"
+    },
+    {
+      "path": "src/learning_curve_build.py",
+      "type": "blob",
+      "size": 8966,
+      "sha": "fce51a316ffa80c43571beea93145fa6f60e2a80"
+    },
+    {
+      "path": "src/learning_curve_plot_article.py",
+      "type": "blob",
+      "size": 6655,
+      "sha": "e175988e95a9326b1d1d403a7e99fb260160f37d"
+    },
+    {
+      "path": "src/ml_config_detailed.toml",
+      "type": "blob",
+      "size": 6424,
+      "sha": "a5ede333224f456ff47344e164cc343672eb5c43"
+    },
+    {
+      "path": "src/plot_legends.py",
+      "type": "blob",
+      "size": 3240,
+      "sha": "163cf5af2599a097c23472f4bfbc31e43b96dbf5"
+    },
+    {
+      "path": "src/prepare_dataframe.py",
+      "type": "blob",
+      "size": 3732,
+      "sha": "a02fca7331bc7f53e36bcc6d07e9c5c516720e65"
+    },
+    {
+      "path": "src/requirements.txt",
+      "type": "blob",
+      "size": 352,
+      "sha": "0537574ec63b9bd92bfad435beb8680852937da8"
+    },
+    {
+      "path": "src/utils",
+      "type": "tree",
+      "size": null,
+      "sha": "997945e4c898f908b4d04acf6d0ff36c6500724c"
+    },
+    {
+      "path": "src/utils/data_utils.py",
+      "type": "blob",
+      "size": 1339,
+      "sha": "a3e818dbbbdddad812f56312953e9f2ad14d7d2b"
+    },
+    {
+      "path": "src/utils/estimator_builder.py",
+      "type": "blob",
+      "size": 7170,
+      "sha": "699f015db39a8f293d8a7ec0007aa081a32bfb6d"
+    },
+    {
+      "path": "src/utils/plot_utils.py",
+      "type": "blob",
+      "size": 3520,
+      "sha": "478b7659ea1bb87b15ec9792b8344450624a7ac5"
+    }
+  ],
+  "sha_note": "Git blob/object SHA metadata, not locally verified file SHA256"
+}

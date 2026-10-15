@@ -1,0 +1,76 @@
+{
+  "date": "2026-10-14",
+  "scope": "Previously exposed development integrity; scoring/network prohibited in checker",
+  "protocol_sha256": "2bcf5534437fb55045d40be8f0558734184ea4d687abd97f9a5d10e8df79c763",
+  "supplement_sha256": "e4a52ae8c8fbb80e0bb251566d5f0db0cc55ac33d14eacba91682209ad8d6a01",
+  "raw_sources_verified": 60,
+  "development_counts": {
+    "train": {
+      "BENIGN": 67715,
+      "DGA": 69993
+    },
+    "validation": {
+      "BENIGN": 15236,
+      "DGA": 80000
+    },
+    "test": {
+      "BENIGN": 14910,
+      "DGA": 60577
+    }
+  },
+  "development_overlap": {
+    "train_validation": {
+      "scored_label_overlap": 0,
+      "declared_group_overlap": 0
+    },
+    "train_test": {
+      "scored_label_overlap": 0,
+      "declared_group_overlap": 0
+    },
+    "validation_test": {
+      "scored_label_overlap": 0,
+      "declared_group_overlap": 0
+    }
+  },
+  "historical_test_role": "inspected comparison, never reserved",
+  "second_dns_count": 11731,
+  "second_dns_overlap": {
+    "train": 0,
+    "validation": 1278,
+    "test": 1260
+  },
+  "public_exclusion_union": {
+    "count": 596591,
+    "sha256": "a971fce2e75f0f25e7c51469d631dd343f56e5883547ff89ce3d98f5185643fe"
+  },
+  "disabled_models": {
+    "ml/dga_v2.json": {
+      "sha256": "c0314dd5f1fe360db11e2494326fd6e99f267d6e920fa091f6c9fcebc796996e",
+      "runtime_enabled": false
+    },
+    "C:/Users/Saich/OneDrive/Desktop/PS26145/ml/dga_weighted_candidate.json": {
+      "sha256": "e81821f753d1e1b71fb5a08ff446467165941db996929767edec008c01c130ca",
+      "runtime_enabled": false
+    },
+    "C:/Users/Saich/OneDrive/Desktop/PS26145/ml/dga_oof_candidate.json": {
+      "sha256": "266b80bc7edac63dda815b61ef6ef162d2af9b919e70bfa168958133431b730b",
+      "runtime_enabled": false
+    }
+  },
+  "reserved_materialization_exists": false,
+  "reserved_checks": "NOT_ASSESSABLE: materialization absent",
+  "reserved_values_read": false,
+  "training_performed": false,
+  "promotion_performed": false,
+  "classification_metrics_refreshed": false,
+  "tests": {
+    "command": "python -B -m pytest tests/test_dga_diagnostic.py tests/test_dga_candidate.py -q -p no:cacheprovider",
+    "passed": 26,
+    "elapsed_seconds": 0.63
+  },
+  "earlier_check_attempt": {
+    "status": "runner_error_before_report_write",
+    "cause": "Incorrect guessed weighted-artifact path ml/dga_candidate.json; rerun uses existing trainer OUTPUT constant",
+    "repository_bug": false
+  }
+}

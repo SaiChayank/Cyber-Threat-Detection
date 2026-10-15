@@ -1,5 +1,6 @@
 """Incremental passive inference. No networking operations."""
 import time
+from copy import copy
 from collections import deque, OrderedDict
 from features.extractor import FeatureExtractor
 from ml.model import Model
@@ -45,8 +46,30 @@ class Pipeline:
             self.sessions.popitem(last=False)
         return FlowRecord.compute_flow_id(*key, start)
 
-    def process(self, event):
+    def process(self, event, persist=None):
+        """Commit causal/dedup state only after inference and optional persistence.
+
+        The synchronous caller supplies an atomic alert-batch writer. Exceptions
+        leave the prior state intact, so the failed observation can be retried.
+        Models are immutable during inference; no full model/history copy is made.
+        """
         started = time.perf_counter()
+        staged = copy(self)
+        staged.extractor = self.extractor.fork(event)
+        staged.sessions = self.sessions.copy()
+        alerts = staged._detect(event)
+        processing_ms = (time.perf_counter() - started) * 1000
+        result = persist(alerts) if persist is not None else alerts
+        late = staged.extractor.late_events != self.extractor.late_events
+        self.extractor = staged.extractor
+        self.sessions = staged.sessions
+        self.dedup = staged.dedup
+        self.processed = staged.processed
+        if not late:
+            self.latencies.append(processing_ms)  # Preserve inference-only telemetry scope.
+        return result
+
+    def _detect(self, event):
         f = self.extractor.update(event)
         self.processed += 1
         if f is None:
@@ -172,7 +195,6 @@ class Pipeline:
             alerts.append(AlertEvent.create(fid, ThreatClass(threat), score, severity, narrative,
                           str(event.src_ip), str(event.dst_ip), event.protocol, event.src_port,
                           event.dst_port, source, timestamp=event.timestamp, raw_evidence_metrics=evidence))
-        self.latencies.append((time.perf_counter()-started)*1000)
         return alerts
 
     def telemetry(self):

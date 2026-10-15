@@ -1,0 +1,375 @@
+{
+  "scope": "Inspected synthetic development cases only; not reserved or production quality",
+  "source_sha256": {
+    "datasets/validate_udp_flood.py": "5de8cd7263a1b026a7f30675ff0a80ecb2814b351e8cd86050ce3fb5f0ba15a6",
+    "detection/pipeline.py": "72904223b4982520411e935113f97d2b68fd563af6b7da59c9d3cc5d8c70e62d",
+    "features/extractor.py": "03bc064a23076a08d1f3446b8f376a5f4bb836c6439116b55b9f336774b227cd",
+    "features/rate_window.py": "5e6ea379876c936cbf7d591f59e8f0a4b328fcff8678276a1cb2190bb31aa02b",
+    "ingest/protocol_parsers.py": "1108ff30ff4dff342685920d46ec27a0e3d271ba638fc528f13da215eb343104",
+    "ingest/metadata.py": "25830071ba94fcdbbe8323824b9b5384afb23c314d82d652c842e7f381170bf3"
+  },
+  "counts": {
+    "TP": 4,
+    "TN": 2,
+    "FP": 4,
+    "FN": 0
+  },
+  "scenarios": [
+    {
+      "scenario": "flood_single_small",
+      "positive": true,
+      "format": "raw",
+      "events": 12000,
+      "verdict": "TP",
+      "first_alert": {
+        "event": 10000,
+        "timestamp": 1700000004999.5,
+        "evidence": {
+          "packet_rate": 1000.0,
+          "byte_rate": 64000.0,
+          "source_entropy": 0.0,
+          "syn_fraction": 0.0,
+          "source_entropy_partial": false,
+          "rate_window_seconds": 10,
+          "rate_window_resolution_ms": 1000,
+          "global_packet_rate": 1000.0,
+          "source_count_lower_bound": 1,
+          "destination_concentration": 1.0,
+          "mean_packet_bytes": 64.0,
+          "packet_size_cv": 0.0,
+          "packet_size_basis": "packet_exact",
+          "udp_target": "destination_udp",
+          "confidence_kind": "synthetic-trained model posterior",
+          "window_partial": true
+        },
+        "supporting_evidence": "packet_rate=1000.0; byte_rate=64000.0; source_entropy=0.0; syn_fraction=0.0; source_entropy_partial=False; rate_window_seconds=10; rate_window_resolution_ms=1000; global_packet_rate=1000.0; source_count_lower_bound=1; destination_concentration=1.0; mean_packet_bytes=64.0; packet_size_cv=0.0; packet_size_basis=packet_exact; udp_target=destination_udp; confidence_kind=synthetic-trained model posterior; window_partial=True; high-rate UDP pattern; passive metadata cannot verify reflection or amplification"
+      },
+      "observed": {
+        "target_packet_rate": 1200.0,
+        "target_byte_rate": 76800.0,
+        "source_count": 1,
+        "source_entropy": -0.0,
+        "destination_concentration": 1.0,
+        "packet_size_mean": 64.0,
+        "packet_size_cv": 0.0,
+        "packet_size_basis": "packet_exact"
+      }
+    },
+    {
+      "scenario": "flood_many_large",
+      "positive": true,
+      "format": "raw",
+      "events": 12000,
+      "verdict": "TP",
+      "first_alert": {
+        "event": 10000,
+        "timestamp": 1700000004999.5,
+        "evidence": {
+          "packet_rate": 1000.0,
+          "byte_rate": 1200000.0,
+          "source_entropy": 4.999998153349514,
+          "syn_fraction": 0.0,
+          "source_entropy_partial": false,
+          "rate_window_seconds": 10,
+          "rate_window_resolution_ms": 1000,
+          "global_packet_rate": 1000.0,
+          "source_count_lower_bound": 32,
+          "destination_concentration": 1.0,
+          "mean_packet_bytes": 1200.0,
+          "packet_size_cv": 0.0,
+          "packet_size_basis": "packet_exact",
+          "udp_target": "destination_udp",
+          "confidence_kind": "synthetic-trained model posterior",
+          "window_partial": true
+        },
+        "supporting_evidence": "packet_rate=1000.0; byte_rate=1200000.0; source_entropy=5.0; syn_fraction=0.0; source_entropy_partial=False; rate_window_seconds=10; rate_window_resolution_ms=1000; global_packet_rate=1000.0; source_count_lower_bound=32; destination_concentration=1.0; mean_packet_bytes=1200.0; packet_size_cv=0.0; packet_size_basis=packet_exact; udp_target=destination_udp; confidence_kind=synthetic-trained model posterior; window_partial=True; consistent with UDP reflection/amplification behavior; passive metadata cannot verify reflection or amplification factor"
+      },
+      "observed": {
+        "target_packet_rate": 1200.0,
+        "target_byte_rate": 1440000.0,
+        "source_count": 32,
+        "source_entropy": 5.0,
+        "destination_concentration": 1.0,
+        "packet_size_mean": 1200.0,
+        "packet_size_cv": 0.0,
+        "packet_size_basis": "packet_exact"
+      }
+    },
+    {
+      "scenario": "flood_single_large",
+      "positive": true,
+      "format": "aggregate",
+      "events": 4,
+      "verdict": "TP",
+      "first_alert": {
+        "event": 3,
+        "timestamp": 1700000002000.0,
+        "evidence": {
+          "packet_rate": 1200.0,
+          "byte_rate": 1440000.0,
+          "source_entropy": 0.0,
+          "syn_fraction": 0.0,
+          "source_entropy_partial": false,
+          "rate_window_seconds": 10,
+          "rate_window_resolution_ms": 1000,
+          "global_packet_rate": 1200.0,
+          "source_count_lower_bound": 1,
+          "destination_concentration": 1.0,
+          "mean_packet_bytes": 1200.0,
+          "packet_size_cv": 0.0,
+          "packet_size_basis": "summary_mean_proxy",
+          "udp_target": "destination_udp",
+          "confidence_kind": "synthetic-trained model posterior",
+          "window_partial": true
+        },
+        "supporting_evidence": "packet_rate=1200.0; byte_rate=1440000.0; source_entropy=0.0; syn_fraction=0.0; source_entropy_partial=False; rate_window_seconds=10; rate_window_resolution_ms=1000; global_packet_rate=1200.0; source_count_lower_bound=1; destination_concentration=1.0; mean_packet_bytes=1200.0; packet_size_cv=0.0; packet_size_basis=summary_mean_proxy; udp_target=destination_udp; confidence_kind=synthetic-trained model posterior; window_partial=True; high-rate UDP pattern; passive metadata cannot verify reflection or amplification"
+      },
+      "observed": {
+        "target_packet_rate": 1600.0,
+        "target_byte_rate": 1920000.0,
+        "source_count": 1,
+        "source_entropy": -0.0,
+        "destination_concentration": 1.0,
+        "packet_size_mean": 1200.0,
+        "packet_size_cv": 0.0,
+        "packet_size_basis": "summary_mean_proxy"
+      }
+    },
+    {
+      "scenario": "flood_many_mixed",
+      "positive": true,
+      "format": "aggregate",
+      "events": 32,
+      "verdict": "TP",
+      "first_alert": {
+        "event": 25,
+        "timestamp": 1700000002400.0,
+        "evidence": {
+          "packet_rate": 1000.0,
+          "byte_rate": 570880.0,
+          "source_entropy": 4.64385618977472,
+          "syn_fraction": 0.0,
+          "source_entropy_partial": false,
+          "rate_window_seconds": 10,
+          "rate_window_resolution_ms": 1000,
+          "global_packet_rate": 1000.0,
+          "source_count_lower_bound": 25,
+          "destination_concentration": 1.0,
+          "mean_packet_bytes": 570.88,
+          "packet_size_cv": 0.8220906366946288,
+          "packet_size_basis": "summary_mean_proxy",
+          "udp_target": "destination_udp",
+          "confidence_kind": "synthetic-trained model posterior",
+          "window_partial": true
+        },
+        "supporting_evidence": "packet_rate=1000.0; byte_rate=570880.0; source_entropy=4.6439; syn_fraction=0.0; source_entropy_partial=False; rate_window_seconds=10; rate_window_resolution_ms=1000; global_packet_rate=1000.0; source_count_lower_bound=25; destination_concentration=1.0; mean_packet_bytes=570.88; packet_size_cv=0.8221; packet_size_basis=summary_mean_proxy; udp_target=destination_udp; confidence_kind=synthetic-trained model posterior; window_partial=True; consistent with UDP reflection/amplification behavior; passive metadata cannot verify reflection or amplification factor"
+      },
+      "observed": {
+        "target_packet_rate": 1280.0,
+        "target_byte_rate": 733440.0,
+        "source_count": 32,
+        "source_entropy": 5.0,
+        "destination_concentration": 1.0,
+        "packet_size_mean": 573.0,
+        "packet_size_cv": 0.8058047282546461,
+        "packet_size_basis": "summary_mean_proxy"
+      }
+    },
+    {
+      "scenario": "benign_quic_bulk",
+      "positive": false,
+      "format": "raw",
+      "events": 12000,
+      "verdict": "FP",
+      "first_alert": {
+        "event": 10000,
+        "timestamp": 1700000004999.5,
+        "evidence": {
+          "packet_rate": 1000.0,
+          "byte_rate": 1200000.0,
+          "source_entropy": 0.0,
+          "syn_fraction": 0.0,
+          "source_entropy_partial": false,
+          "rate_window_seconds": 10,
+          "rate_window_resolution_ms": 1000,
+          "global_packet_rate": 1000.0,
+          "source_count_lower_bound": 1,
+          "destination_concentration": 1.0,
+          "mean_packet_bytes": 1200.0,
+          "packet_size_cv": 0.0,
+          "packet_size_basis": "packet_exact",
+          "udp_target": "destination_udp",
+          "confidence_kind": "synthetic-trained model posterior",
+          "window_partial": true
+        },
+        "supporting_evidence": "packet_rate=1000.0; byte_rate=1200000.0; source_entropy=0.0; syn_fraction=0.0; source_entropy_partial=False; rate_window_seconds=10; rate_window_resolution_ms=1000; global_packet_rate=1000.0; source_count_lower_bound=1; destination_concentration=1.0; mean_packet_bytes=1200.0; packet_size_cv=0.0; packet_size_basis=packet_exact; udp_target=destination_udp; confidence_kind=synthetic-trained model posterior; window_partial=True; high-rate UDP pattern; passive metadata cannot verify reflection or amplification"
+      },
+      "observed": {
+        "target_packet_rate": 1200.0,
+        "target_byte_rate": 1440000.0,
+        "source_count": 1,
+        "source_entropy": -0.0,
+        "destination_concentration": 1.0,
+        "packet_size_mean": 1200.0,
+        "packet_size_cv": 0.0,
+        "packet_size_basis": "packet_exact"
+      }
+    },
+    {
+      "scenario": "benign_dns_queries",
+      "positive": false,
+      "format": "raw",
+      "events": 12000,
+      "verdict": "FP",
+      "first_alert": {
+        "event": 10000,
+        "timestamp": 1700000004999.5,
+        "evidence": {
+          "packet_rate": 1000.0,
+          "byte_rate": 80000.0,
+          "source_entropy": 4.999998153349514,
+          "syn_fraction": 0.0,
+          "source_entropy_partial": false,
+          "rate_window_seconds": 10,
+          "rate_window_resolution_ms": 1000,
+          "global_packet_rate": 1000.0,
+          "source_count_lower_bound": 32,
+          "destination_concentration": 1.0,
+          "mean_packet_bytes": 80.0,
+          "packet_size_cv": 0.0,
+          "packet_size_basis": "packet_exact",
+          "udp_target": "destination_udp",
+          "confidence_kind": "synthetic-trained model posterior",
+          "window_partial": true
+        },
+        "supporting_evidence": "packet_rate=1000.0; byte_rate=80000.0; source_entropy=5.0; syn_fraction=0.0; source_entropy_partial=False; rate_window_seconds=10; rate_window_resolution_ms=1000; global_packet_rate=1000.0; source_count_lower_bound=32; destination_concentration=1.0; mean_packet_bytes=80.0; packet_size_cv=0.0; packet_size_basis=packet_exact; udp_target=destination_udp; confidence_kind=synthetic-trained model posterior; window_partial=True; high-rate UDP pattern; passive metadata cannot verify reflection or amplification"
+      },
+      "observed": {
+        "target_packet_rate": 1200.0,
+        "target_byte_rate": 96000.0,
+        "source_count": 32,
+        "source_entropy": 5.0,
+        "destination_concentration": 1.0,
+        "packet_size_mean": 80.0,
+        "packet_size_cv": 0.0,
+        "packet_size_basis": "packet_exact"
+      }
+    },
+    {
+      "scenario": "benign_video_bulk",
+      "positive": false,
+      "format": "aggregate",
+      "events": 4,
+      "verdict": "FP",
+      "first_alert": {
+        "event": 3,
+        "timestamp": 1700000002000.0,
+        "evidence": {
+          "packet_rate": 1200.0,
+          "byte_rate": 1440000.0,
+          "source_entropy": 0.0,
+          "syn_fraction": 0.0,
+          "source_entropy_partial": false,
+          "rate_window_seconds": 10,
+          "rate_window_resolution_ms": 1000,
+          "global_packet_rate": 1200.0,
+          "source_count_lower_bound": 1,
+          "destination_concentration": 1.0,
+          "mean_packet_bytes": 1200.0,
+          "packet_size_cv": 0.0,
+          "packet_size_basis": "summary_mean_proxy",
+          "udp_target": "destination_udp",
+          "confidence_kind": "synthetic-trained model posterior",
+          "window_partial": true
+        },
+        "supporting_evidence": "packet_rate=1200.0; byte_rate=1440000.0; source_entropy=0.0; syn_fraction=0.0; source_entropy_partial=False; rate_window_seconds=10; rate_window_resolution_ms=1000; global_packet_rate=1200.0; source_count_lower_bound=1; destination_concentration=1.0; mean_packet_bytes=1200.0; packet_size_cv=0.0; packet_size_basis=summary_mean_proxy; udp_target=destination_udp; confidence_kind=synthetic-trained model posterior; window_partial=True; high-rate UDP pattern; passive metadata cannot verify reflection or amplification"
+      },
+      "observed": {
+        "target_packet_rate": 1600.0,
+        "target_byte_rate": 1920000.0,
+        "source_count": 1,
+        "source_entropy": -0.0,
+        "destination_concentration": 1.0,
+        "packet_size_mean": 1200.0,
+        "packet_size_cv": 0.0,
+        "packet_size_basis": "summary_mean_proxy"
+      }
+    },
+    {
+      "scenario": "benign_spread",
+      "positive": false,
+      "format": "aggregate",
+      "events": 20,
+      "verdict": "TN",
+      "first_alert": null,
+      "observed": {
+        "target_packet_rate": 80.0,
+        "target_byte_rate": 96000.0,
+        "source_count": 1,
+        "source_entropy": -0.0,
+        "destination_concentration": 0.05,
+        "packet_size_mean": 1200.0,
+        "packet_size_cv": 0.0,
+        "packet_size_basis": "summary_mean_proxy"
+      }
+    },
+    {
+      "scenario": "benign_dns_low",
+      "positive": false,
+      "format": "aggregate",
+      "events": 10,
+      "verdict": "TN",
+      "first_alert": null,
+      "observed": {
+        "target_packet_rate": 100.0,
+        "target_byte_rate": 8000.0,
+        "source_count": 1,
+        "source_entropy": -0.0,
+        "destination_concentration": 1.0,
+        "packet_size_mean": 80.0,
+        "packet_size_cv": 0.0,
+        "packet_size_basis": "summary_mean_proxy"
+      }
+    },
+    {
+      "scenario": "benign_telemetry_many",
+      "positive": false,
+      "format": "aggregate",
+      "events": 32,
+      "verdict": "FP",
+      "first_alert": {
+        "event": 25,
+        "timestamp": 1700000002400.0,
+        "evidence": {
+          "packet_rate": 1000.0,
+          "byte_rate": 256000.0,
+          "source_entropy": 4.64385618977472,
+          "syn_fraction": 0.0,
+          "source_entropy_partial": false,
+          "rate_window_seconds": 10,
+          "rate_window_resolution_ms": 1000,
+          "global_packet_rate": 1000.0,
+          "source_count_lower_bound": 25,
+          "destination_concentration": 1.0,
+          "mean_packet_bytes": 256.0,
+          "packet_size_cv": 0.0,
+          "packet_size_basis": "summary_mean_proxy",
+          "udp_target": "destination_udp",
+          "confidence_kind": "synthetic-trained model posterior",
+          "window_partial": true
+        },
+        "supporting_evidence": "packet_rate=1000.0; byte_rate=256000.0; source_entropy=4.6439; syn_fraction=0.0; source_entropy_partial=False; rate_window_seconds=10; rate_window_resolution_ms=1000; global_packet_rate=1000.0; source_count_lower_bound=25; destination_concentration=1.0; mean_packet_bytes=256.0; packet_size_cv=0.0; packet_size_basis=summary_mean_proxy; udp_target=destination_udp; confidence_kind=synthetic-trained model posterior; window_partial=True; high-rate UDP pattern; passive metadata cannot verify reflection or amplification"
+      },
+      "observed": {
+        "target_packet_rate": 1280.0,
+        "target_byte_rate": 327680.0,
+        "source_count": 32,
+        "source_entropy": 5.0,
+        "destination_concentration": 1.0,
+        "packet_size_mean": 256.0,
+        "packet_size_cv": 0.0,
+        "packet_size_basis": "summary_mean_proxy"
+      }
+    }
+  ]
+}

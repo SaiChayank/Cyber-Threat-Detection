@@ -1,0 +1,15 @@
+{
+  "protected_files": 199,
+  "mismatches": [],
+  "new_raw_inputs_hash_verified": 3,
+  "models_enabled": {
+    "dga_v2": false,
+    "dga_weighted_candidate": false,
+    "dga_oof_candidate": false
+  },
+  "reserved_domain_rows_read": false,
+  "training_or_scoring_performed": false,
+  "review_known_alias_conflicts": 0,
+  "scope": "Known alias evidence, not exhaustive generator equivalence proof",
+  "full_final_data_ready": false
+}

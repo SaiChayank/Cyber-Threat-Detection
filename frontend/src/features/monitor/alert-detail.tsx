@@ -93,15 +93,15 @@ export function AlertDetail({
               <section>
                 <h3 className="text-xs font-semibold text-white">Observed connection</h3>
                 <div className="mt-3 flex flex-wrap items-center gap-2 font-mono text-xs text-accent">
-                  <span>
+                  <span className="min-w-0 break-all">
                     {alert.src_ip}:{alert.src_port ?? '—'}
                   </span>
                   <ArrowRight size={13} />
-                  <span>
+                  <span className="min-w-0 break-all">
                     {alert.dst_ip}:{alert.dst_port ?? '—'}
                   </span>
                 </div>
-                <p className="mt-2 text-[10px] text-muted">
+                <p className="mt-2 text-[10px] break-words text-muted">
                   {new Date(alert.timestamp).toISOString()} · captured event time
                 </p>
               </section>

@@ -1,0 +1,698 @@
+{
+  "_id": "6a33b65f1075c0dbda8af3f9",
+  "id": "snsec-net/dga-detection-drift26dsn",
+  "author": "snsec-net",
+  "sha": "3b31077020cd1c013d0a75cad51042a2327c4521",
+  "lastModified": "2026-07-20T06:24:36.000Z",
+  "private": false,
+  "gated": false,
+  "disabled": false,
+  "tags": [
+    "task_categories:text-classification",
+    "annotations_creators:machine-generated",
+    "source_datasets:original",
+    "language:en",
+    "license:cc-by-nc-sa-3.0",
+    "size_categories:100M<n<1B",
+    "format:parquet",
+    "modality:text",
+    "library:datasets",
+    "library:pandas",
+    "library:polars",
+    "library:mlcroissant",
+    "arxiv:2605.10436",
+    "region:us",
+    "security",
+    "dga",
+    "domain-generation-algorithm",
+    "malware",
+    "concept-drift",
+    "cybersecurity",
+    "network-security"
+  ],
+  "description": "\n\t\n\t\t\n\t\n\t\n\t\tDRIFT Dataset\n\t\n\nLongitudinal Benign and DGA Domain Name Dataset (2017\u20132025)\n\nAuthors: Chaeyoung Lee*, Chaeri Jung*, Seonghoon Jeong (* Equal contribution)\nAffiliation: Division of Artificial Intelligence Engineering, Sookmyung Women's University\nVenue & Paper: IEEE/IFIP International Conference on Dependable Systems and Networks (DSN 2026)\narXiv: arxiv.org/abs/2605.10436\nGitHub: snsec-net/2026-DSN-DRIFT\nHugging Face: Paper \u00b7 Dataset \u00b7 Model\nIEEE DataPort: 10.21227/za2s-9e09\u2026 See the full description on the dataset page: https://huggingface.co/datasets/snsec-net/dga-detection-drift26dsn.",
+  "downloads": 300,
+  "likes": 1,
+  "cardData": {
+    "license": "cc-by-nc-sa-3.0",
+    "language": [
+      "en"
+    ],
+    "pretty_name": "DRIFT: Longitudinal Benign and DGA Domain Name Dataset (2017-2025)",
+    "size_categories": [
+      "100M<n<1B"
+    ],
+    "task_categories": [
+      "text-classification"
+    ],
+    "tags": [
+      "security",
+      "dga",
+      "domain-generation-algorithm",
+      "malware",
+      "concept-drift",
+      "cybersecurity",
+      "network-security"
+    ],
+    "annotations_creators": [
+      "machine-generated"
+    ],
+    "source_datasets": [
+      "original"
+    ],
+    "configs": [
+      {
+        "config_name": "T17_eSLD",
+        "default": true,
+        "data_files": [
+          {
+            "split": "train",
+            "path": [
+              "DRIFT_input_eSLD/T17_benign_train.parquet",
+              "DRIFT_input_eSLD/T17_dga_train.parquet"
+            ]
+          },
+          {
+            "split": "validation",
+            "path": [
+              "DRIFT_input_eSLD/T17_benign_val.parquet",
+              "DRIFT_input_eSLD/T17_dga_val.parquet"
+            ]
+          },
+          {
+            "split": "test",
+            "path": [
+              "DRIFT_input_eSLD/T17_benign_test.parquet",
+              "DRIFT_input_eSLD/T17_dga_test.parquet"
+            ]
+          }
+        ]
+      },
+      {
+        "config_name": "T18_eSLD",
+        "data_files": [
+          {
+            "split": "train",
+            "path": [
+              "DRIFT_input_eSLD/T18_benign_train.parquet",
+              "DRIFT_input_eSLD/T18_dga_train.parquet"
+            ]
+          },
+          {
+            "split": "validation",
+            "path": [
+              "DRIFT_input_eSLD/T18_benign_val.parquet",
+              "DRIFT_input_eSLD/T18_dga_val.parquet"
+            ]
+          },
+          {
+            "split": "test",
+            "path": [
+              "DRIFT_input_eSLD/T18_benign_test.parquet",
+              "DRIFT_input_eSLD/T18_dga_test.parquet"
+            ]
+          }
+        ]
+      },
+      {
+        "config_name": "T19_eSLD",
+        "data_files": [
+          {
+            "split": "train",
+            "path": [
+              "DRIFT_input_eSLD/T19_benign_train.parquet",
+              "DRIFT_input_eSLD/T19_dga_train.parquet"
+            ]
+          },
+          {
+            "split": "validation",
+            "path": [
+              "DRIFT_input_eSLD/T19_benign_val.parquet",
+              "DRIFT_input_eSLD/T19_dga_val.parquet"
+            ]
+          },
+          {
+            "split": "test",
+            "path": [
+              "DRIFT_input_eSLD/T19_benign_test.parquet",
+              "DRIFT_input_eSLD/T19_dga_test.parquet"
+            ]
+          }
+        ]
+      },
+      {
+        "config_name": "T20_eSLD",
+        "data_files": [
+          {
+            "split": "train",
+            "path": [
+              "DRIFT_input_eSLD/T20_benign_train.parquet",
+              "DRIFT_input_eSLD/T20_dga_train.parquet"
+            ]
+          },
+          {
+            "split": "validation",
+            "path": [
+              "DRIFT_input_eSLD/T20_benign_val.parquet",
+              "DRIFT_input_eSLD/T20_dga_val.parquet"
+            ]
+          },
+          {
+            "split": "test",
+            "path": [
+              "DRIFT_input_eSLD/T20_benign_test.parquet",
+              "DRIFT_input_eSLD/T20_dga_test.parquet"
+            ]
+          }
+        ]
+      },
+      {
+        "config_name": "T21_eSLD",
+        "data_files": [
+          {
+            "split": "train",
+            "path": [
+              "DRIFT_input_eSLD/T21_benign_train.parquet",
+              "DRIFT_input_eSLD/T21_dga_train.parquet"
+            ]
+          },
+          {
+            "split": "validation",
+            "path": [
+              "DRIFT_input_eSLD/T21_benign_val.parquet",
+              "DRIFT_input_eSLD/T21_dga_val.parquet"
+            ]
+          },
+          {
+            "split": "test",
+            "path": [
+              "DRIFT_input_eSLD/T21_benign_test.parquet",
+              "DRIFT_input_eSLD/T21_dga_test.parquet"
+            ]
+          }
+        ]
+      },
+      {
+        "config_name": "T22_eSLD",
+        "data_files": [
+          {
+            "split": "train",
+            "path": [
+              "DRIFT_input_eSLD/T22_benign_train.parquet",
+              "DRIFT_input_eSLD/T22_dga_train.parquet"
+            ]
+          },
+          {
+            "split": "validation",
+            "path": [
+              "DRIFT_input_eSLD/T22_benign_val.parquet",
+              "DRIFT_input_eSLD/T22_dga_val.parquet"
+            ]
+          },
+          {
+            "split": "test",
+            "path": [
+              "DRIFT_input_eSLD/T22_benign_test.parquet",
+              "DRIFT_input_eSLD/T22_dga_test.parquet"
+            ]
+          }
+        ]
+      },
+      {
+        "config_name": "T23_eSLD",
+        "data_files": [
+          {
+            "split": "train",
+            "path": [
+              "DRIFT_input_eSLD/T23_benign_train.parquet",
+              "DRIFT_input_eSLD/T23_dga_train.parquet"
+            ]
+          },
+          {
+            "split": "validation",
+            "path": [
+              "DRIFT_input_eSLD/T23_benign_val.parquet",
+              "DRIFT_input_eSLD/T23_dga_val.parquet"
+            ]
+          },
+          {
+            "split": "test",
+            "path": [
+              "DRIFT_input_eSLD/T23_benign_test.parquet",
+              "DRIFT_input_eSLD/T23_dga_test.parquet"
+            ]
+          }
+        ]
+      },
+      {
+        "config_name": "T24_eSLD",
+        "data_files": [
+          {
+            "split": "train",
+            "path": [
+              "DRIFT_input_eSLD/T24_benign_train.parquet",
+              "DRIFT_input_eSLD/T24_dga_train.parquet"
+            ]
+          },
+          {
+            "split": "validation",
+            "path": [
+              "DRIFT_input_eSLD/T24_benign_val.parquet",
+              "DRIFT_input_eSLD/T24_dga_val.parquet"
+            ]
+          },
+          {
+            "split": "test",
+            "path": [
+              "DRIFT_input_eSLD/T24_benign_test.parquet",
+              "DRIFT_input_eSLD/T24_dga_test.parquet"
+            ]
+          }
+        ]
+      },
+      {
+        "config_name": "T25_eSLD",
+        "data_files": [
+          {
+            "split": "train",
+            "path": [
+              "DRIFT_input_eSLD/T25_benign_train.parquet",
+              "DRIFT_input_eSLD/T25_dga_train.parquet"
+            ]
+          },
+          {
+            "split": "validation",
+            "path": [
+              "DRIFT_input_eSLD/T25_benign_val.parquet",
+              "DRIFT_input_eSLD/T25_dga_val.parquet"
+            ]
+          },
+          {
+            "split": "test",
+            "path": [
+              "DRIFT_input_eSLD/T25_benign_test.parquet",
+              "DRIFT_input_eSLD/T25_dga_test.parquet"
+            ]
+          }
+        ]
+      },
+      {
+        "config_name": "T17_raw",
+        "data_files": [
+          {
+            "split": "benign",
+            "path": "raw_including_TLD/T17_benign.parquet"
+          },
+          {
+            "split": "dga",
+            "path": "raw_including_TLD/T17_dga.parquet"
+          }
+        ]
+      },
+      {
+        "config_name": "T18_raw",
+        "data_files": [
+          {
+            "split": "benign",
+            "path": "raw_including_TLD/T18_benign.parquet"
+          },
+          {
+            "split": "dga",
+            "path": "raw_including_TLD/T18_dga.parquet"
+          }
+        ]
+      },
+      {
+        "config_name": "T19_raw",
+        "data_files": [
+          {
+            "split": "benign",
+            "path": "raw_including_TLD/T19_benign.parquet"
+          },
+          {
+            "split": "dga",
+            "path": "raw_including_TLD/T19_dga.parquet"
+          }
+        ]
+      },
+      {
+        "config_name": "T20_raw",
+        "data_files": [
+          {
+            "split": "benign",
+            "path": "raw_including_TLD/T20_benign.parquet"
+          },
+          {
+            "split": "dga",
+            "path": "raw_including_TLD/T20_dga.parquet"
+          }
+        ]
+      },
+      {
+        "config_name": "T21_raw",
+        "data_files": [
+          {
+            "split": "benign",
+            "path": "raw_including_TLD/T21_benign.parquet"
+          },
+          {
+            "split": "dga",
+            "path": "raw_including_TLD/T21_dga.parquet"
+          }
+        ]
+      },
+      {
+        "config_name": "T22_raw",
+        "data_files": [
+          {
+            "split": "benign",
+            "path": "raw_including_TLD/T22_benign.parquet"
+          },
+          {
+            "split": "dga",
+            "path": "raw_including_TLD/T22_dga.parquet"
+          }
+        ]
+      },
+      {
+        "config_name": "T23_raw",
+        "data_files": [
+          {
+            "split": "benign",
+            "path": "raw_including_TLD/T23_benign.parquet"
+          },
+          {
+            "split": "dga",
+            "path": "raw_including_TLD/T23_dga.parquet"
+          }
+        ]
+      },
+      {
+        "config_name": "T24_raw",
+        "data_files": [
+          {
+            "split": "benign",
+            "path": "raw_including_TLD/T24_benign.parquet"
+          },
+          {
+            "split": "dga",
+            "path": "raw_including_TLD/T24_dga.parquet"
+          }
+        ]
+      },
+      {
+        "config_name": "T25_raw",
+        "data_files": [
+          {
+            "split": "benign",
+            "path": "raw_including_TLD/T25_benign.parquet"
+          },
+          {
+            "split": "dga",
+            "path": "raw_including_TLD/T25_dga.parquet"
+          }
+        ]
+      }
+    ]
+  },
+  "siblings": [
+    {
+      "rfilename": ".gitattributes"
+    },
+    {
+      "rfilename": "DRIFT_input_eSLD/T17_benign.parquet"
+    },
+    {
+      "rfilename": "DRIFT_input_eSLD/T17_benign_test.parquet"
+    },
+    {
+      "rfilename": "DRIFT_input_eSLD/T17_benign_train.parquet"
+    },
+    {
+      "rfilename": "DRIFT_input_eSLD/T17_benign_val.parquet"
+    },
+    {
+      "rfilename": "DRIFT_input_eSLD/T17_dga.parquet"
+    },
+    {
+      "rfilename": "DRIFT_input_eSLD/T17_dga_test.parquet"
+    },
+    {
+      "rfilename": "DRIFT_input_eSLD/T17_dga_train.parquet"
+    },
+    {
+      "rfilename": "DRIFT_input_eSLD/T17_dga_val.parquet"
+    },
+    {
+      "rfilename": "DRIFT_input_eSLD/T18_benign.parquet"
+    },
+    {
+      "rfilename": "DRIFT_input_eSLD/T18_benign_test.parquet"
+    },
+    {
+      "rfilename": "DRIFT_input_eSLD/T18_benign_train.parquet"
+    },
+    {
+      "rfilename": "DRIFT_input_eSLD/T18_benign_val.parquet"
+    },
+    {
+      "rfilename": "DRIFT_input_eSLD/T18_dga.parquet"
+    },
+    {
+      "rfilename": "DRIFT_input_eSLD/T18_dga_test.parquet"
+    },
+    {
+      "rfilename": "DRIFT_input_eSLD/T18_dga_train.parquet"
+    },
+    {
+      "rfilename": "DRIFT_input_eSLD/T18_dga_val.parquet"
+    },
+    {
+      "rfilename": "DRIFT_input_eSLD/T19_benign.parquet"
+    },
+    {
+      "rfilename": "DRIFT_input_eSLD/T19_benign_test.parquet"
+    },
+    {
+      "rfilename": "DRIFT_input_eSLD/T19_benign_train.parquet"
+    },
+    {
+      "rfilename": "DRIFT_input_eSLD/T19_benign_val.parquet"
+    },
+    {
+      "rfilename": "DRIFT_input_eSLD/T19_dga.parquet"
+    },
+    {
+      "rfilename": "DRIFT_input_eSLD/T19_dga_test.parquet"
+    },
+    {
+      "rfilename": "DRIFT_input_eSLD/T19_dga_train.parquet"
+    },
+    {
+      "rfilename": "DRIFT_input_eSLD/T19_dga_val.parquet"
+    },
+    {
+      "rfilename": "DRIFT_input_eSLD/T20_benign.parquet"
+    },
+    {
+      "rfilename": "DRIFT_input_eSLD/T20_benign_test.parquet"
+    },
+    {
+      "rfilename": "DRIFT_input_eSLD/T20_benign_train.parquet"
+    },
+    {
+      "rfilename": "DRIFT_input_eSLD/T20_benign_val.parquet"
+    },
+    {
+      "rfilename": "DRIFT_input_eSLD/T20_dga.parquet"
+    },
+    {
+      "rfilename": "DRIFT_input_eSLD/T20_dga_test.parquet"
+    },
+    {
+      "rfilename": "DRIFT_input_eSLD/T20_dga_train.parquet"
+    },
+    {
+      "rfilename": "DRIFT_input_eSLD/T20_dga_val.parquet"
+    },
+    {
+      "rfilename": "DRIFT_input_eSLD/T21_benign.parquet"
+    },
+    {
+      "rfilename": "DRIFT_input_eSLD/T21_benign_test.parquet"
+    },
+    {
+      "rfilename": "DRIFT_input_eSLD/T21_benign_train.parquet"
+    },
+    {
+      "rfilename": "DRIFT_input_eSLD/T21_benign_val.parquet"
+    },
+    {
+      "rfilename": "DRIFT_input_eSLD/T21_dga.parquet"
+    },
+    {
+      "rfilename": "DRIFT_input_eSLD/T21_dga_test.parquet"
+    },
+    {
+      "rfilename": "DRIFT_input_eSLD/T21_dga_train.parquet"
+    },
+    {
+      "rfilename": "DRIFT_input_eSLD/T21_dga_val.parquet"
+    },
+    {
+      "rfilename": "DRIFT_input_eSLD/T22_benign.parquet"
+    },
+    {
+      "rfilename": "DRIFT_input_eSLD/T22_benign_test.parquet"
+    },
+    {
+      "rfilename": "DRIFT_input_eSLD/T22_benign_train.parquet"
+    },
+    {
+      "rfilename": "DRIFT_input_eSLD/T22_benign_val.parquet"
+    },
+    {
+      "rfilename": "DRIFT_input_eSLD/T22_dga.parquet"
+    },
+    {
+      "rfilename": "DRIFT_input_eSLD/T22_dga_test.parquet"
+    },
+    {
+      "rfilename": "DRIFT_input_eSLD/T22_dga_train.parquet"
+    },
+    {
+      "rfilename": "DRIFT_input_eSLD/T22_dga_val.parquet"
+    },
+    {
+      "rfilename": "DRIFT_input_eSLD/T23_benign.parquet"
+    },
+    {
+      "rfilename": "DRIFT_input_eSLD/T23_benign_test.parquet"
+    },
+    {
+      "rfilename": "DRIFT_input_eSLD/T23_benign_train.parquet"
+    },
+    {
+      "rfilename": "DRIFT_input_eSLD/T23_benign_val.parquet"
+    },
+    {
+      "rfilename": "DRIFT_input_eSLD/T23_dga.parquet"
+    },
+    {
+      "rfilename": "DRIFT_input_eSLD/T23_dga_test.parquet"
+    },
+    {
+      "rfilename": "DRIFT_input_eSLD/T23_dga_train.parquet"
+    },
+    {
+      "rfilename": "DRIFT_input_eSLD/T23_dga_val.parquet"
+    },
+    {
+      "rfilename": "DRIFT_input_eSLD/T24_benign.parquet"
+    },
+    {
+      "rfilename": "DRIFT_input_eSLD/T24_benign_test.parquet"
+    },
+    {
+      "rfilename": "DRIFT_input_eSLD/T24_benign_train.parquet"
+    },
+    {
+      "rfilename": "DRIFT_input_eSLD/T24_benign_val.parquet"
+    },
+    {
+      "rfilename": "DRIFT_input_eSLD/T24_dga.parquet"
+    },
+    {
+      "rfilename": "DRIFT_input_eSLD/T24_dga_test.parquet"
+    },
+    {
+      "rfilename": "DRIFT_input_eSLD/T24_dga_train.parquet"
+    },
+    {
+      "rfilename": "DRIFT_input_eSLD/T24_dga_val.parquet"
+    },
+    {
+      "rfilename": "DRIFT_input_eSLD/T25_benign.parquet"
+    },
+    {
+      "rfilename": "DRIFT_input_eSLD/T25_benign_test.parquet"
+    },
+    {
+      "rfilename": "DRIFT_input_eSLD/T25_benign_train.parquet"
+    },
+    {
+      "rfilename": "DRIFT_input_eSLD/T25_benign_val.parquet"
+    },
+    {
+      "rfilename": "DRIFT_input_eSLD/T25_dga.parquet"
+    },
+    {
+      "rfilename": "DRIFT_input_eSLD/T25_dga_test.parquet"
+    },
+    {
+      "rfilename": "DRIFT_input_eSLD/T25_dga_train.parquet"
+    },
+    {
+      "rfilename": "DRIFT_input_eSLD/T25_dga_val.parquet"
+    },
+    {
+      "rfilename": "README.md"
+    },
+    {
+      "rfilename": "raw_including_TLD/T17_benign.parquet"
+    },
+    {
+      "rfilename": "raw_including_TLD/T17_dga.parquet"
+    },
+    {
+      "rfilename": "raw_including_TLD/T18_benign.parquet"
+    },
+    {
+      "rfilename": "raw_including_TLD/T18_dga.parquet"
+    },
+    {
+      "rfilename": "raw_including_TLD/T19_benign.parquet"
+    },
+    {
+      "rfilename": "raw_including_TLD/T19_dga.parquet"
+    },
+    {
+      "rfilename": "raw_including_TLD/T20_benign.parquet"
+    },
+    {
+      "rfilename": "raw_including_TLD/T20_dga.parquet"
+    },
+    {
+      "rfilename": "raw_including_TLD/T21_benign.parquet"
+    },
+    {
+      "rfilename": "raw_including_TLD/T21_dga.parquet"
+    },
+    {
+      "rfilename": "raw_including_TLD/T22_benign.parquet"
+    },
+    {
+      "rfilename": "raw_including_TLD/T22_dga.parquet"
+    },
+    {
+      "rfilename": "raw_including_TLD/T23_benign.parquet"
+    },
+    {
+      "rfilename": "raw_including_TLD/T23_dga.parquet"
+    },
+    {
+      "rfilename": "raw_including_TLD/T24_benign.parquet"
+    },
+    {
+      "rfilename": "raw_including_TLD/T24_dga.parquet"
+    },
+    {
+      "rfilename": "raw_including_TLD/T25_benign.parquet"
+    },
+    {
+      "rfilename": "raw_including_TLD/T25_dga.parquet"
+    }
+  ],
+  "createdAt": "2026-06-18T09:11:59.000Z",
+  "usedStorage": 11991274513
+}

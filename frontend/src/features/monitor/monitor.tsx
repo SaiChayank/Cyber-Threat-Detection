@@ -1,4 +1,5 @@
 'use client'
+import { useReducedMotion } from '@/hooks/use-reduced-motion'
 import { motion } from 'motion/react'
 import { MoveRight, CircleAlert, RefreshCw, Radio } from 'lucide-react'
 import { useMonitor } from '@/hooks/use-monitor'
@@ -16,16 +17,18 @@ import { Coverage, Benchmark } from './coverage'
 import { AlertFeed } from './alert-feed'
 
 export function Monitor() {
-  const { alerts, telemetry, datasets, samples, connection, error, loading, refresh } = useMonitor()
+  const reducedMotion = useReducedMotion()
+  const { alerts, telemetry, datasets, samples, connection, error, unavailable, loading, refresh } =
+    useMonitor()
   const rate = samples.at(-1)?.rate ?? 0
   return (
     <div className="relative isolate min-h-screen">
       <div className="product-background -z-10" aria-hidden="true" />
       <SiteNav monitor />
       <motion.main
-        initial={{ opacity: 0, y: 12 }}
+        initial={reducedMotion ? false : { opacity: 0, y: 12 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.45 }}
+        transition={{ duration: reducedMotion ? 0 : 0.45 }}
         id="main-content"
       >
         <div className="mx-auto max-w-[1440px] space-y-6 px-5 pt-8 pb-16 sm:px-8 lg:px-12">
@@ -75,7 +78,10 @@ export function Monitor() {
               className="flex flex-wrap items-center gap-3 rounded-xl border border-brand/25 bg-brand/5 p-4 text-xs text-accent"
             >
               <CircleAlert size={16} />
-              <p className="min-w-0 flex-1 leading-5">{error}</p>
+              <p className="min-w-0 flex-1 leading-5">
+                {error}
+                {telemetry && unavailable ? ' Showing the last received data.' : ''}
+              </p>
               <Button variant="ghost" className="text-current" onClick={() => void refresh()}>
                 <RefreshCw size={13} /> Retry connection
               </Button>
@@ -94,7 +100,7 @@ export function Monitor() {
               datasets={datasets}
               state={telemetry?.replay_status ?? 'idle'}
               refresh={refresh}
-              connected={!!telemetry && !error}
+              connected={!!telemetry && !unavailable}
             />
           </Reveal>
           <Metrics telemetry={telemetry} rate={rate} loading={loading} />
@@ -117,6 +123,7 @@ export function Monitor() {
               loading={loading}
               lateEvents={telemetry?.late_events ?? 0}
               live={connection === 'live'}
+              unavailable={unavailable}
             />
           </Reveal>
           <div className="grid items-start gap-6 xl:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)]">

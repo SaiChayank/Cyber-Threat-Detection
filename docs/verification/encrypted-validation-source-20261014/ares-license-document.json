@@ -1,0 +1,10 @@
+{
+  "url": "https://raw.githubusercontent.com/cp-tsp/ares2025-artifacts/7acfebc6f17fe774df91a1b550c4b23613b90fe9/src/LICENSE.txt",
+  "status": 200,
+  "bytes": 1067,
+  "sha256": "c52aafd2a2f580e9f5a0a14b097cc100845c2b4dca37fff284ab68ab1462d77e",
+  "git_blob_sha": "2e5d9f0f61418bc9f7f883a7fb4ded0745f03734",
+  "document": "src/LICENSE.txt",
+  "scope_note": "Code-directory licence document inspected; do not assume raw capture data has the same terms without explicit scope",
+  "raw_data_fetched": false
+}

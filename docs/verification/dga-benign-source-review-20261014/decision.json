@@ -1,0 +1,29 @@
+{
+  "date": "2026-10-14",
+  "primary_paper": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8437788/",
+  "doi": "10.1016/j.dib.2021.107342",
+  "dataset_version": "10.17632/623sshkdrz.5",
+  "source_identity_findings": {
+    "negative_source": "Rapid7 Labs Project Sonar",
+    "positive_source": "SANS suspicious-domain lists",
+    "class_basis": "source membership",
+    "domain_encoding": "Paper reports anonymized encoded Domain field",
+    "v5_raw_name_exception_or_recovery_mapping": "NOT_ESTABLISHED",
+    "source_does_not_establish": "A known-benign client-query log or all required service strata"
+  },
+  "decision": "INELIGIBLE_AS_IS_FOR_FROZEN_BENIGN_DNS_GATE",
+  "qualified_dns_source": null,
+  "minimum_eligible_labels": 2500,
+  "eligible_label_count": null,
+  "dataset_rows_opened": false,
+  "candidate_scoring_performed": false,
+  "training_or_tuning_performed": false,
+  "models_remain_disabled": true,
+  "sample_counts_and_quality_gates_unchanged": true,
+  "sequential_work_stopped_reason": "Missing original-name compatibility and independently benign source/category evidence, not usage limits",
+  "next_action": "Publisher clarification or qualified new benign-client source",
+  "contact_request_draft": "docs/DGA_BENIGN_DATA_REQUEST.md",
+  "contact_sent": false,
+  "corresponding_author_email_source": "Published primary paper, claudioms@ipvc.pt",
+  "code_or_tests_changed_in_this_source_audit": false
+}

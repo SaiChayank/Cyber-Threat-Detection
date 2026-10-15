@@ -1,6 +1,7 @@
 'use client'
+import { useReducedMotion } from '@/hooks/use-reduced-motion'
 import { useId, useState } from 'react'
-import { AnimatePresence, motion, useReducedMotion } from 'motion/react'
+import { AnimatePresence, motion } from 'motion/react'
 import { Database, CheckCircle2, CircleAlert, ChevronDown } from 'lucide-react'
 import { Skeleton } from '@/components/ui/panel'
 import { formatNumber } from '@/lib/utils'

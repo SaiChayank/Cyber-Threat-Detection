@@ -1,0 +1,38 @@
+{
+  "date": "2026-10-14",
+  "status": "REVIEW_FINDINGS_FROZEN",
+  "final_data_readiness": "BLOCKED",
+  "no_detector_or_model_changes": true,
+  "files": [
+    {
+      "path": "docs/DGA_EVALUATION_DATA_GAP.md",
+      "sha256": "1d17bd723f6e4dfc8aa1f332a5cb445c617530faa3201b9935042fd1d6c8f2e1",
+      "bytes": 11964
+    },
+    {
+      "path": "docs/verification/dga-evaluation-gap-20261014/final-integrity.json",
+      "sha256": "5946dd62e8f850b8b67d9d55f526063ff79440206ffec16562999118d4e5b856",
+      "bytes": 204
+    },
+    {
+      "path": "docs/verification/dga-evaluation-gap-20261014/initial-integrity.json",
+      "sha256": "b907c450d8b8aae8e118671dd668071761fe371ef0e76adde7ebdca2e2e3223e",
+      "bytes": 26249
+    },
+    {
+      "path": "docs/verification/dga-evaluation-gap-20261014/integrity-checks.json",
+      "sha256": "189bdbcf2445f068412d8de5a760319950810b923aefe867423e7287b02d8a3a",
+      "bytes": 2515
+    },
+    {
+      "path": "docs/verification/dga-evaluation-gap-20261014/source-readiness.json",
+      "sha256": "199c6f8e3c37036b9ae35ccf027b8f2350c5a80bcbaac10a51cdcfa9ac15e5d6",
+      "bytes": 5331
+    },
+    {
+      "path": "docs/verification/dga-evaluation-gap-20261014/source-readiness.sha256",
+      "sha256": "938a8673080033ae7f19d9536faaf461b47351847ca540a333d8a6620c91f8e9",
+      "bytes": 66
+    }
+  ]
+}

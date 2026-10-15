@@ -1,5 +1,6 @@
 'use client'
-import { motion, useReducedMotion } from 'motion/react'
+import { useReducedMotion } from '@/hooks/use-reduced-motion'
+import { motion } from 'motion/react'
 import type { ReactNode } from 'react'
 import { easeOut } from '@/lib/motion'
 export function Reveal({

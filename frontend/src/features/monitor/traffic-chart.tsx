@@ -1,4 +1,5 @@
 'use client'
+import { useReducedMotion } from '@/hooks/use-reduced-motion'
 import {
   Area,
   AreaChart,
@@ -8,7 +9,6 @@ import {
   XAxis,
   YAxis,
 } from 'recharts'
-import { useReducedMotion } from 'motion/react'
 import { Activity } from 'lucide-react'
 import { Panel, Eyebrow, Skeleton } from '@/components/ui/panel'
 import { AnimatedNumber } from '@/components/animated-number'

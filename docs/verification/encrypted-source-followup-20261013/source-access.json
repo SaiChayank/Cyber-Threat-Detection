@@ -1,0 +1,16 @@
+[
+  {
+    "url": "https://cicresearch.ca/CICDataset/DoHBrw-2020/",
+    "status": 200,
+    "response_sha256": "6df6a49b408a057ac2e43fcb76d8745e92ce40ab7500d66d5fcbf6d95c35a67e",
+    "page_reports_server_error": true,
+    "checked_on": "2026-10-13"
+  },
+  {
+    "url": "https://api.osf.io/v2/nodes/b64e5/",
+    "status": 200,
+    "response_sha256": "366ef3d4a1152d76aa21efba4477775a6bddf8cf504aae35dff07e2b30b4be15",
+    "page_reports_server_error": false,
+    "checked_on": "2026-10-13"
+  }
+]

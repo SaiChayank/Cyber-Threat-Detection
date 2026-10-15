@@ -1,0 +1,810 @@
+{
+  "model_sha256": "266b80bc7edac63dda815b61ef6ef162d2af9b919e70bfa168958133431b730b",
+  "scope": "Frozen validation only; independent sklearn reference; never reserved data",
+  "cases": [
+    {
+      "domain": "00336.example",
+      "expected_score": 0.02058445791205599
+    },
+    {
+      "domain": "91pu.example",
+      "expected_score": 0.005457056297646191
+    },
+    {
+      "domain": "amwater.example",
+      "expected_score": 0.2161837149815894
+    },
+    {
+      "domain": "azg168.example",
+      "expected_score": 0.01076668590072652
+    },
+    {
+      "domain": "blackriflecoffee.example",
+      "expected_score": 0.7360053799559849
+    },
+    {
+      "domain": "cartoonnetworkhq.example",
+      "expected_score": 0.4356376728532481
+    },
+    {
+      "domain": "coinswitch.example",
+      "expected_score": 0.12099083651451752
+    },
+    {
+      "domain": "dc.example",
+      "expected_score": 0.009722603925817686
+    },
+    {
+      "domain": "duck-wsf.example",
+      "expected_score": 0.23369203641370667
+    },
+    {
+      "domain": "esudany.example",
+      "expected_score": 0.2770693191522249
+    },
+    {
+      "domain": "foodclub.example",
+      "expected_score": 0.10143344788685615
+    },
+    {
+      "domain": "geshanchangjia888.example",
+      "expected_score": 0.3813222425251733
+    },
+    {
+      "domain": "hanhande.example",
+      "expected_score": 0.1263270824163525
+    },
+    {
+      "domain": "i-len.example",
+      "expected_score": 0.03609774874262352
+    },
+    {
+      "domain": "iuj.example",
+      "expected_score": 0.015019383620686786
+    },
+    {
+      "domain": "katamail.example",
+      "expected_score": 0.04658460847476997
+    },
+    {
+      "domain": "legavenue.example",
+      "expected_score": 0.12457128173640641
+    },
+    {
+      "domain": "maj.example",
+      "expected_score": 0.012812769239979422
+    },
+    {
+      "domain": "miped.example",
+      "expected_score": 0.09453037077281029
+    },
+    {
+      "domain": "myfeed4u.example",
+      "expected_score": 0.045658098974647024
+    },
+    {
+      "domain": "notebook-center.example",
+      "expected_score": 0.44505655866696253
+    },
+    {
+      "domain": "pan6.example",
+      "expected_score": 0.005457056297646191
+    },
+    {
+      "domain": "popso.example",
+      "expected_score": 0.025401729264606748
+    },
+    {
+      "domain": "radiostorage.example",
+      "expected_score": 0.09145962705566038
+    },
+    {
+      "domain": "s2p.example",
+      "expected_score": 0.005272417594387556
+    },
+    {
+      "domain": "shopdoc.example",
+      "expected_score": 0.16389091826188268
+    },
+    {
+      "domain": "sravni24.example",
+      "expected_score": 0.0348654885279385
+    },
+    {
+      "domain": "teachingenglish.example",
+      "expected_score": 0.3317782885046081
+    },
+    {
+      "domain": "topadbid.example",
+      "expected_score": 0.16025402553925897
+    },
+    {
+      "domain": "universcine.example",
+      "expected_score": 0.11291587054968472
+    },
+    {
+      "domain": "wakuden.example",
+      "expected_score": 0.27863861088619707
+    },
+    {
+      "domain": "xin-health.example",
+      "expected_score": 0.045905631167819184
+    },
+    {
+      "domain": "zz.example",
+      "expected_score": 0.00800264020169814
+    },
+    {
+      "domain": "hmdopmfgvpqd.example",
+      "expected_score": 0.9928386821831158
+    },
+    {
+      "domain": "jvgfrrfiborgiu.example",
+      "expected_score": 0.991609884153066
+    },
+    {
+      "domain": "lavhvbiscnqey.example",
+      "expected_score": 0.9898795316069672
+    },
+    {
+      "domain": "tbmvxcugytbskm.example",
+      "expected_score": 0.9927051088133698
+    },
+    {
+      "domain": "ynsfbdnuvhqgpyc.example",
+      "expected_score": 0.9927051088133698
+    },
+    {
+      "domain": "ggkuxadcfsrrro.example",
+      "expected_score": 0.9926184581161235
+    },
+    {
+      "domain": "uuffkpedgthj.example",
+      "expected_score": 0.9927536065248395
+    },
+    {
+      "domain": "trfmnyylfdha.example",
+      "expected_score": 0.9928609426719284
+    },
+    {
+      "domain": "pkdbhyiwbleluku.example",
+      "expected_score": 0.9845319223512559
+    },
+    {
+      "domain": "tetigpdhydqulcp.example",
+      "expected_score": 0.9927051088133698
+    },
+    {
+      "domain": "sxghcbfcmichll.example",
+      "expected_score": 0.9927277814650457
+    },
+    {
+      "domain": "levjgitgdmlhnif.example",
+      "expected_score": 0.9927051088133698
+    },
+    {
+      "domain": "vjoswoqlmcpoor.example",
+      "expected_score": 0.9883650585724979
+    },
+    {
+      "domain": "ipaaibtemelm.example",
+      "expected_score": 0.7148756414726932
+    },
+    {
+      "domain": "rmbctabwpesnmda.example",
+      "expected_score": 0.9898795316069672
+    },
+    {
+      "domain": "lahkokrbxwpt.example",
+      "expected_score": 0.9908148118035314
+    },
+    {
+      "domain": "bscafxbyvxmd.example",
+      "expected_score": 0.9924989112547327
+    },
+    {
+      "domain": "tebopxlxltlfba.example",
+      "expected_score": 0.9919180104780966
+    },
+    {
+      "domain": "nryetcgbrsgtlvu.example",
+      "expected_score": 0.9927051088133698
+    },
+    {
+      "domain": "atdhchqlremj.example",
+      "expected_score": 0.9928386821831158
+    },
+    {
+      "domain": "fhjfrxvxrkjbmw.example",
+      "expected_score": 0.9916519728497292
+    },
+    {
+      "domain": "eizkklgrfnffoyjug.example",
+      "expected_score": 0.9929088778210298
+    },
+    {
+      "domain": "hddcjafvojggdcbet.example",
+      "expected_score": 0.9901614455417954
+    },
+    {
+      "domain": "vvpypuxypbjslzomy.example",
+      "expected_score": 0.9927277814650457
+    },
+    {
+      "domain": "rppxqvwcurchgxhfk.example",
+      "expected_score": 0.9927277814650457
+    },
+    {
+      "domain": "bnsjsiuqvqryzddhm.example",
+      "expected_score": 0.9927277814650457
+    },
+    {
+      "domain": "uqivkwrjiuvkwffpp.example",
+      "expected_score": 0.9930610419780652
+    },
+    {
+      "domain": "yugiyrzgkmlztlmhh.example",
+      "expected_score": 0.9927277814650457
+    },
+    {
+      "domain": "pcswqibbpkmribpcz.example",
+      "expected_score": 0.9899108969498714
+    },
+    {
+      "domain": "yuiojbayzjmldtehm.example",
+      "expected_score": 0.9915837557721606
+    },
+    {
+      "domain": "xyeiofcenhusasfxf.example",
+      "expected_score": 0.9884180392261277
+    },
+    {
+      "domain": "bgvoujuctwcchftfa.example",
+      "expected_score": 0.9927277814650457
+    },
+    {
+      "domain": "ekldlrupfbeyphgup.example",
+      "expected_score": 0.9898795316069672
+    },
+    {
+      "domain": "ihpifpwtvckegeqjx.example",
+      "expected_score": 0.9927051088133698
+    },
+    {
+      "domain": "nxmkuubdyrqgenmto.example",
+      "expected_score": 0.9899108969498714
+    },
+    {
+      "domain": "nzbpzqpposteipwnk.example",
+      "expected_score": 0.9927277814650457
+    },
+    {
+      "domain": "afmtaqceknvnfzfyd.example",
+      "expected_score": 0.9927051088133698
+    },
+    {
+      "domain": "qigcurftntdffmgow.example",
+      "expected_score": 0.9927277814650457
+    },
+    {
+      "domain": "eactcnkqgabgzkglj.example",
+      "expected_score": 0.9927051088133698
+    },
+    {
+      "domain": "tpbdritxbotoepfpp.example",
+      "expected_score": 0.9803105938824348
+    },
+    {
+      "domain": "jsmxtirawqljbbtkl.example",
+      "expected_score": 0.9927277814650457
+    },
+    {
+      "domain": "slmjnzghoaanrszkc.example",
+      "expected_score": 0.9927277814650457
+    },
+    {
+      "domain": "tqabgtaugf.example",
+      "expected_score": 0.977944263533959
+    },
+    {
+      "domain": "hauvsumouf.example",
+      "expected_score": 0.953344466603468
+    },
+    {
+      "domain": "tocccudwag.example",
+      "expected_score": 0.6209325049112246
+    },
+    {
+      "domain": "sickawsetc.example",
+      "expected_score": 0.7014838676806633
+    },
+    {
+      "domain": "fbmxdfmtcl.example",
+      "expected_score": 0.9918046705079238
+    },
+    {
+      "domain": "herldnqajo.example",
+      "expected_score": 0.7402577167109562
+    },
+    {
+      "domain": "ltkawombam.example",
+      "expected_score": 0.7745313890284247
+    },
+    {
+      "domain": "imspxmsndh.example",
+      "expected_score": 0.9798571040026954
+    },
+    {
+      "domain": "ivgyedkbmq.example",
+      "expected_score": 0.9928386821831158
+    },
+    {
+      "domain": "kvnnkngtyd.example",
+      "expected_score": 0.9918301187058145
+    },
+    {
+      "domain": "alveipbzqb.example",
+      "expected_score": 0.9729378665171978
+    },
+    {
+      "domain": "jigblilpqg.example",
+      "expected_score": 0.9470979704479604
+    },
+    {
+      "domain": "yyizplngfo.example",
+      "expected_score": 0.9765565174142493
+    },
+    {
+      "domain": "xbzcpwlgiy.example",
+      "expected_score": 0.9923818324083052
+    },
+    {
+      "domain": "dfubsipiee.example",
+      "expected_score": 0.373012645567887
+    },
+    {
+      "domain": "cmxvxsqtrc.example",
+      "expected_score": 0.9912824360878842
+    },
+    {
+      "domain": "yssqrrnvro.example",
+      "expected_score": 0.976209917060324
+    },
+    {
+      "domain": "jxzrxdbvks.example",
+      "expected_score": 0.9769921389741254
+    },
+    {
+      "domain": "gnepgdqdez.example",
+      "expected_score": 0.9924989112547327
+    },
+    {
+      "domain": "aruprdofcx.example",
+      "expected_score": 0.6265940234616715
+    },
+    {
+      "domain": "behdxirupg.example",
+      "expected_score": 0.9322860339732453
+    },
+    {
+      "domain": "pnxshimixkogpbk.example",
+      "expected_score": 0.9847791512237124
+    },
+    {
+      "domain": "xrjsequ.example",
+      "expected_score": 0.9505160004121377
+    },
+    {
+      "domain": "ulcegrcttwofgo.example",
+      "expected_score": 0.991609884153066
+    },
+    {
+      "domain": "exsgfpynklnmol.example",
+      "expected_score": 0.9927051088133698
+    },
+    {
+      "domain": "ndsurxwra.example",
+      "expected_score": 0.8573485758460284
+    },
+    {
+      "domain": "gxteufxuuvaabdtx.example",
+      "expected_score": 0.989955891999919
+    },
+    {
+      "domain": "pwnvqsejpdyuscphk.example",
+      "expected_score": 0.9898795316069672
+    },
+    {
+      "domain": "omklqsvejw.example",
+      "expected_score": 0.9928386821831158
+    },
+    {
+      "domain": "rpmqeplnslhm.example",
+      "expected_score": 0.9928386821831158
+    },
+    {
+      "domain": "ysitcvqidie.example",
+      "expected_score": 0.9436456860019756
+    },
+    {
+      "domain": "spcwxwretjompvxe.example",
+      "expected_score": 0.9927051088133698
+    },
+    {
+      "domain": "mtgosljsynqvbx.example",
+      "expected_score": 0.9927051088133698
+    },
+    {
+      "domain": "rtlbgohqkhk.example",
+      "expected_score": 0.9928386821831158
+    },
+    {
+      "domain": "anxknoubirv.example",
+      "expected_score": 0.9372624059154471
+    },
+    {
+      "domain": "mwcafykg.example",
+      "expected_score": 0.9757354511223698
+    },
+    {
+      "domain": "efhlrjwkv.example",
+      "expected_score": 0.9928998112743316
+    },
+    {
+      "domain": "moifrmbrjpy.example",
+      "expected_score": 0.9798571040026954
+    },
+    {
+      "domain": "aptosefvqay.example",
+      "expected_score": 0.9370029181763303
+    },
+    {
+      "domain": "ojqwbgcrp.example",
+      "expected_score": 0.9925629189092368
+    },
+    {
+      "domain": "ihmbcfcgqkxiysfrg.example",
+      "expected_score": 0.9927051088133698
+    },
+    {
+      "domain": "tmkxjtjnhr.example",
+      "expected_score": 0.9912824360878842
+    },
+    {
+      "domain": "qodzhirjvqtayhqrwhlbeqfs.example",
+      "expected_score": 0.9894470054848838
+    },
+    {
+      "domain": "xeadepzyddlnjydtwqkmvjraiyxz.example",
+      "expected_score": 0.9903500638987044
+    },
+    {
+      "domain": "klrljvsojireuvsusdiucnbkjem.example",
+      "expected_score": 0.9857797391172305
+    },
+    {
+      "domain": "dakjslgmaqraupjbyhxdekn.example",
+      "expected_score": 0.9894470054848838
+    },
+    {
+      "domain": "hyzhxlvvkdmtoozkfivjfsoyxwgtcsg.example",
+      "expected_score": 0.9860591722707126
+    },
+    {
+      "domain": "pftsivyvszpeymlbwsjvl.example",
+      "expected_score": 0.9932315888931241
+    },
+    {
+      "domain": "kdpfeyuibuofmreytszlpbpzgy.example",
+      "expected_score": 0.9921434503948724
+    },
+    {
+      "domain": "uskbyhrfmrmrskbdmcuppd.example",
+      "expected_score": 0.9936720165787811
+    },
+    {
+      "domain": "dikjfutrwdqdpvcfalntaexxwhe.example",
+      "expected_score": 0.9866245826153127
+    },
+    {
+      "domain": "usrkyhvaymrmbukjndibamnthe.example",
+      "expected_score": 0.9903708421048576
+    },
+    {
+      "domain": "hicmyhqgvgpjfkzqcskgqirwsfy.example",
+      "expected_score": 0.9906748521173178
+    },
+    {
+      "domain": "nvnzvwtdugytgrkrvvstgrcgu.example",
+      "expected_score": 0.9917346681337887
+    },
+    {
+      "domain": "sgonxwibydeujqkfmljqkctcmvfy.example",
+      "expected_score": 0.9903500638987044
+    },
+    {
+      "domain": "hvgvcdqgmvhdqnzkjlhxlzrw.example",
+      "expected_score": 0.9919558764954757
+    },
+    {
+      "domain": "xmvwopwstmnuopqohrceufmd.example",
+      "expected_score": 0.9911956409680246
+    },
+    {
+      "domain": "ypmjfanbeswuwscnrwljvofmpnj.example",
+      "expected_score": 0.9876362748690791
+    },
+    {
+      "domain": "kvdylzdaifbutoztpjvwvcqpofqo.example",
+      "expected_score": 0.9866245826153127
+    },
+    {
+      "domain": "irlhtclsoaiwolvgvwzhdmprp.example",
+      "expected_score": 0.9927407768732037
+    },
+    {
+      "domain": "xjbpvlnfixgzpnzxobeqcipljlv.example",
+      "expected_score": 0.9858891643422287
+    },
+    {
+      "domain": "kzdgaijaelpvuktzciqomvofm.example",
+      "expected_score": 0.9885784278913592
+    },
+    {
+      "domain": "zheutvctldqwfmtgsgddqu.example",
+      "expected_score": 0.9932526363572478
+    },
+    {
+      "domain": "vemhorevmodktoph.example",
+      "expected_score": 0.9863467182933288
+    },
+    {
+      "domain": "pfykopkvvmltpzet.example",
+      "expected_score": 0.9927277814650457
+    },
+    {
+      "domain": "rkxtwgnonppytps.example",
+      "expected_score": 0.9927277814650457
+    },
+    {
+      "domain": "uiilykmpjrostv.example",
+      "expected_score": 0.9873704179530272
+    },
+    {
+      "domain": "rnkxyogszhexzoox.example",
+      "expected_score": 0.982741916857034
+    },
+    {
+      "domain": "txrcsgxgntwtfzs.example",
+      "expected_score": 0.9916519728497292
+    },
+    {
+      "domain": "txlweiorjwpnkk.example",
+      "expected_score": 0.9927277814650457
+    },
+    {
+      "domain": "nvfwtwzrtxwninn.example",
+      "expected_score": 0.9927277814650457
+    },
+    {
+      "domain": "rvptrsqpksfnikf.example",
+      "expected_score": 0.9927051088133698
+    },
+    {
+      "domain": "yxppqqujtjnvwtns.example",
+      "expected_score": 0.9929088778210298
+    },
+    {
+      "domain": "vfpqutmgmylnonyd.example",
+      "expected_score": 0.9927051088133698
+    },
+    {
+      "domain": "ixkhxouqplqtsik.example",
+      "expected_score": 0.9883289441351271
+    },
+    {
+      "domain": "opxjamgipthjqh.example",
+      "expected_score": 0.9927051088133698
+    },
+    {
+      "domain": "ppmofizvtlltnyp.example",
+      "expected_score": 0.9929088778210298
+    },
+    {
+      "domain": "qcloytpdisrytfpn.example",
+      "expected_score": 0.9927051088133698
+    },
+    {
+      "domain": "wyumuwygzkggjhz.example",
+      "expected_score": 0.9927277814650457
+    },
+    {
+      "domain": "jeprrypltktnif.example",
+      "expected_score": 0.9927277814650457
+    },
+    {
+      "domain": "eodpoouelowjwlh.example",
+      "expected_score": 0.9864649252251914
+    },
+    {
+      "domain": "tspmnvhitoypryp.example",
+      "expected_score": 0.9890129200899975
+    },
+    {
+      "domain": "cmrzeofuppormrp.example",
+      "expected_score": 0.9550419267059314
+    },
+    {
+      "domain": "wopjerqunkvix.example",
+      "expected_score": 0.9760331145758575
+    },
+    {
+      "domain": "o31cqp42cspqnql28ismsm59gtjqp22izkvcx.example",
+      "expected_score": 0.9872116052525293
+    },
+    {
+      "domain": "m69k47k17jrd60mtlyh64b38b48grnrmudyj56cz.example",
+      "expected_score": 0.988518639307934
+    },
+    {
+      "domain": "f12byiwmxd50f52e61mynsfye41b18m39i45m59p22.example",
+      "expected_score": 0.9856632984526001
+    },
+    {
+      "domain": "l48jvbqdwkug53jwasc29ixoypwjsfsdraw.example",
+      "expected_score": 0.9879208643579461
+    },
+    {
+      "domain": "prlrl18l28c49h54dtiqpwc69f62mubuhxaqgv.example",
+      "expected_score": 0.988518639307934
+    },
+    {
+      "domain": "nseqdsgzc19g33m59p42iqp42m49dzn20h44jrpr.example",
+      "expected_score": 0.9857075420718246
+    },
+    {
+      "domain": "b18i15e51ayb28nxi65htnte51f32h24msa27excz.example",
+      "expected_score": 0.9875723499257801
+    },
+    {
+      "domain": "e21h54evgwdwgubqlraua17j36f22cwkzg23mt.example",
+      "expected_score": 0.987438017876279
+    },
+    {
+      "domain": "izp62ixo41l18oulyfujzd30csdxa47msmxls.example",
+      "expected_score": 0.987438017876279
+    },
+    {
+      "domain": "asg53bzozeyoyi55cwp12juotpyeunvn10h44.example",
+      "expected_score": 0.9919351991850868
+    },
+    {
+      "domain": "axk57eseyizdqiva17mudqa17grounqa37e41.example",
+      "expected_score": 0.9905553117961703
+    },
+    {
+      "domain": "e21eqhsjyiudzeve11ezeth14gwl48l18f42oq.example",
+      "expected_score": 0.9868945606407554
+    },
+    {
+      "domain": "k27jzjyk37ixhya67fwisn10ksp62ftc39atpr.example",
+      "expected_score": 0.988518639307934
+    },
+    {
+      "domain": "evesmycufvftm39cuasewbuarixgqo31et.example",
+      "expected_score": 0.9859827636550932
+    },
+    {
+      "domain": "aslujuowe11g13nubwlsota17e61b18j66dtaz.example",
+      "expected_score": 0.9861752551126225
+    },
+    {
+      "domain": "fuj36ftfzjuoqbrm49nwfvcslzltfzivjw.example",
+      "expected_score": 0.9866245826153127
+    },
+    {
+      "domain": "ezj26nugyg23h44p62are11iygvgtf22esm59h64.example",
+      "expected_score": 0.987476854227309
+    },
+    {
+      "domain": "l68myhzfwawiwp12o21j36hudqi15bqk47ksiz.example",
+      "expected_score": 0.987438017876279
+    },
+    {
+      "domain": "cynqo11dwc19cwayl48dzgvn40b28f12dsbqoq.example",
+      "expected_score": 0.9868945606407554
+    },
+    {
+      "domain": "erp22e51nzf62k27j46a27i65hrpymvawivd40d60.example",
+      "expected_score": 0.9856632984526001
+    },
+    {
+      "domain": "f52hrm59ptlxhrdwm49l38h14k57g13c69j46krhy.example",
+      "expected_score": 0.9866273639223843
+    },
+    {
+      "domain": "xlifactqdy.example",
+      "expected_score": 0.9621997397665177
+    },
+    {
+      "domain": "ixvyblus.example",
+      "expected_score": 0.5564501665325456
+    },
+    {
+      "domain": "hupbkexp.example",
+      "expected_score": 0.6757828820730115
+    },
+    {
+      "domain": "ydeumgml.example",
+      "expected_score": 0.8286675379420754
+    },
+    {
+      "domain": "orarhubu.example",
+      "expected_score": 0.11316190434502521
+    },
+    {
+      "domain": "lgknse.example",
+      "expected_score": 0.7133212865875659
+    },
+    {
+      "domain": "klrohv.example",
+      "expected_score": 0.6481409069267023
+    },
+    {
+      "domain": "apxconacxh.example",
+      "expected_score": 0.8556311086773208
+    },
+    {
+      "domain": "ozeoqxr.example",
+      "expected_score": 0.9770085420939351
+    },
+    {
+      "domain": "vvnuuqlw.example",
+      "expected_score": 0.9822222778583191
+    },
+    {
+      "domain": "yfxcvfigw.example",
+      "expected_score": 0.9928998112743316
+    },
+    {
+      "domain": "cxkyia.example",
+      "expected_score": 0.15108661987879096
+    },
+    {
+      "domain": "nfypwub.example",
+      "expected_score": 0.938790410947406
+    },
+    {
+      "domain": "pnpvkzcocmtl.example",
+      "expected_score": 0.9928386821831158
+    },
+    {
+      "domain": "xzjaoous.example",
+      "expected_score": 0.1433625436056114
+    },
+    {
+      "domain": "tueycyvb.example",
+      "expected_score": 0.8980498276426195
+    },
+    {
+      "domain": "zzyuqi.example",
+      "expected_score": 0.15028084953486265
+    },
+    {
+      "domain": "bdzwwxcbz.example",
+      "expected_score": 0.9858941405330448
+    },
+    {
+      "domain": "trsklxn.example",
+      "expected_score": 0.7118974853789136
+    },
+    {
+      "domain": "ozkhmdh.example",
+      "expected_score": 0.9861049539465376
+    },
+    {
+      "domain": "mkhcebq.example",
+      "expected_score": 0.9581548033111087
+    }
+  ]
+}

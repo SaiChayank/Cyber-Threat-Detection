@@ -1,0 +1,100 @@
+{
+  "date": "2026-10-13",
+  "diagnostic_definition_of_done": "PASS",
+  "streaming_development_data_readiness": "BLOCKED",
+  "scope": "Publisher preprocessing/code and public file metadata; existing development-only JOY derivative only",
+  "ms_public_listing": {
+    "pages": 21,
+    "files": 103,
+    "raw_pcap_or_pcapng_files": 0,
+    "absence_scope": "current public MS listing, not a claim that authors never captured PCAP"
+  },
+  "publisher_preprocessing": {
+    "revision": "5562b6a31e5b078f51c2564d8229514697248c3c",
+    "code_executed": false,
+    "notebook_outputs_inspected": false,
+    "session_label_mapping_verified": false,
+    "finding": "MS notebook reads completed CSVs, assigns TLS/certificate variant from directory name and retains command column; no verified per-session label mapping or raw-capture join in inspected code."
+  },
+  "joy_semantics": {
+    "revision": "21770513e27ad10cde7c1ab7c1e6f024c8668119",
+    "downloaded_derivative_version": "4.5.0",
+    "references": [
+      {
+        "file": "src/pkt_proc.c",
+        "lines": [
+          481,
+          519,
+          520,
+          553
+        ],
+        "finding": "TCP length passed to packet summary and accumulated byte count is transport payload size."
+      },
+      {
+        "file": "src/p2f.c",
+        "lines": [
+          954,
+          955,
+          1425,
+          1464,
+          1475
+        ],
+        "finding": "JSON packet b uses saved payload size; ipt is a millisecond inter-entry delta; output may omit zero-length packets and has per-direction summary limit."
+      },
+      {
+        "file": "src/tls.c",
+        "lines": [
+          1802,
+          1841,
+          2059,
+          2274
+        ],
+        "finding": "TLS record types/timing are separate from IP packets; ClientHello metadata is emitted at flow export, without an explicit matching packet/event index in this derivative."
+      }
+    ],
+    "scope_caveat": "Code revision is pinned current public source, not cryptographic proof of the exact binary which made the derivative. File configuration identifies version 4.5.0."
+  },
+  "existing_development_derivative": {
+    "role": "existing development-schema-only derivative",
+    "no_labels_assigned": true,
+    "counts": {
+      "flows": 17421,
+      "stored_packet_summaries": 135704,
+      "flows_with_more_total_packets_than_stored_summaries": 17421,
+      "flows_without_explicit_clienthello_position": 17421
+    },
+    "packet_directions": {
+      ">": 59763,
+      "<": 75941
+    },
+    "tls_record_types": {
+      "22": 156789,
+      "20": 34842,
+      "23": 45342,
+      "21": 17421
+    },
+    "client_version_codes": {
+      "5": 17421
+    },
+    "configured_packet_summary_limit_per_direction": 50,
+    "raw_packet_lengths_reconstructed": false,
+    "causal_runtime_events_created": false
+  },
+  "other_sources": [
+    {
+      "source": "https://www.unb.ca/cic/datasets/dohbrw-2020.html",
+      "eligibility": "Potential labelled raw encrypted tunnelling only; not established generic encrypted malware truth",
+      "download": "Publisher form still reports Server error; no capture acquired."
+    },
+    {
+      "source": "https://www.yorku.ca/research/bccc/ucs-technical/cybersecurity-datasets-cds/dns-over-https-bccc-cira-cic-dohbrw-2020/",
+      "eligibility": "Not qualifying raw capture: publisher describes three SMOTE-balanced CSVs; neither genuine untouched evaluation observations nor timestamped raw packets."
+    }
+  ],
+  "changes_to_detection": false,
+  "training": false,
+  "promotion": false,
+  "reserved_feature_values_inspected": false,
+  "labels_assigned": false,
+  "next_smallest_experiment": "Acquire one eligible development-only raw TLS cohort with documented session labels, then verify label join and causal ClientHello visibility before training."
+}

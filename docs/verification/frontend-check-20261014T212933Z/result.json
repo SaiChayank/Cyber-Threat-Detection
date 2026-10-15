@@ -1,0 +1,11 @@
+{
+  "typecheck_exit_code": 0,
+  "build_exit_code": 0,
+  "confirmed_build_seconds": 13.315019500001654,
+  "protected_frontend_files": 52,
+  "changed_files": [
+    "frontend/next-env.d.ts"
+  ],
+  "initial_wrapper_error": "Windows cp1252 could not print Next.js Unicode symbols after saving successful build log; no application defect. Re-ran build with UTF-8 reporting.",
+  "browser_smoke_test_run": false
+}

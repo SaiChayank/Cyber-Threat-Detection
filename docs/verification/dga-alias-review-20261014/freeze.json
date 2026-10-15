@@ -1,0 +1,39 @@
+{
+  "date": "2026-10-14",
+  "status": "ALIAS_REVIEW_FROZEN_WITH_LIMITATIONS",
+  "final_data_ready": false,
+  "files": [
+    {
+      "path": "docs/DGA_ALIAS_REVIEW.md",
+      "sha256": "604bec42436da68e08f64403bf8e911401045d28cc7ffcb72b6a81001d0b3741"
+    },
+    {
+      "path": "docs/verification/dga-alias-review-20261014/alias-review.json",
+      "sha256": "47e113c29e44848dd0cafcd67563a73dbc6844c8c77a67451eaf2edb13de66d2"
+    },
+    {
+      "path": "docs/verification/dga-alias-review-20261014/alias-review.sha256",
+      "sha256": "759d8e4d1fd72be99bc966edfa649871bd5116fc286189e4f9a6f673a6037435"
+    },
+    {
+      "path": "docs/verification/dga-alias-review-20261014/documentation-exposures.json",
+      "sha256": "53fa234290d805bbc6c697825bbb5e2e7f7ba6d3f0079e8eef4e9d28c94ef61d"
+    },
+    {
+      "path": "docs/verification/dga-alias-review-20261014/documentation-exposures.sha256",
+      "sha256": "1932f4cfa6b44152b651ff2980980106c5b2d724cf8534aa31313c0363c12afa"
+    },
+    {
+      "path": "docs/verification/dga-alias-review-20261014/final-integrity.json",
+      "sha256": "5171cd101447139762bc592ffb89bad6647285af8b2271e92f5f22a5baf83098"
+    },
+    {
+      "path": "docs/verification/dga-alias-review-20261014/initial-integrity.json",
+      "sha256": "42b927306af8a41e08b3071f656e7ee22280049ac0fbe8a183e1d0f65bd0544a"
+    },
+    {
+      "path": "docs/verification/dga-alias-review-20261014/source-document-identities.json",
+      "sha256": "2a14f944eb398e616f736091bc50671f85d843ed0f9fb7a156aa05b6425d2b2d"
+    }
+  ]
+}

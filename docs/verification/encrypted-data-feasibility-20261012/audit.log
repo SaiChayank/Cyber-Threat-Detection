@@ -1,0 +1,25 @@
+{
+  "winapps": {
+    "members": 5892,
+    "footer_rows": 29526,
+    "annotation_rows:historical_test": 4928,
+    "members_excluded_from_feature_read": 457,
+    "annotation_rows:train": 19831,
+    "members_feature_read": 2553,
+    "annotation_rows:validation": 4767
+  },
+  "malware": {
+    "members": 916,
+    "footer_rows": 1405079,
+    "annotation_rows:unlabelled": 649138,
+    "annotation_rows:historical_test": 142547,
+    "members_excluded_from_feature_read": 242,
+    "annotation_rows:train": 376274,
+    "members_feature_read": 223,
+    "annotation_rows:validation": 237120
+  },
+  "soho": {
+    "members": 104,
+    "footer_rows": 108036
+  }
+}

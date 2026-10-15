@@ -1,0 +1,39 @@
+{
+  "completion_date": "2026-10-07",
+  "definition_of_done": "PASS for failure analysis only",
+  "release_quality": "UNRESOLVED",
+  "inspected_report_false_positives": 17,
+  "retained_historical_false_negatives": 10,
+  "first_false_positive_sources": {
+    "HYBRID": 6,
+    "ML": 7,
+    "RULE": 4
+  },
+  "false_positive_first_positions_and_evidence": "17/17 reproduce saved evaluation",
+  "tests": {
+    "new_cases": 11,
+    "targeted_passed": 39,
+    "elapsed_seconds": 1.77,
+    "full_backend_rerun": false,
+    "frontend_build_rerun": false,
+    "reason": "No shared runtime/frontend behavior changed."
+  },
+  "protected_files_checked": 109,
+  "changed_protected_files": [],
+  "model_sha256": "4d8e08323374535789e21f9f7cd1ee3f1c84b663ce555e67bb4ced57c95e8010",
+  "behavior_changes": false,
+  "threshold_changes": false,
+  "ablation_implemented": false,
+  "reserved_data_used": false,
+  "quality_metrics_refreshed": false,
+  "frozen_file_sha256_lf_normalized": {
+    "datasets/analyze_baseline_failures.py": "510d62aad38a4842007c4dccbc1e89eeb8735f7a4ab3cd059411049a96e90d92",
+    "tests/test_baseline_failure_analysis.py": "91169fe346b156ea1908bba8e38633c0f7316ae750481dadef27e1655bb60086",
+    "docs/BASELINE_FAILURE_ANALYSIS.md": "fc6a1021d21692be04f306949f4e8ab2c700524c5e27ad7e70bd464c337ec0d4",
+    "docs/COMPLETION_PLAN.md": "6a783231764d3f99c0e1b1ccbe75a82eca4ef5615df5c063264f94808c689b78",
+    "docs/MODEL_AND_VALIDATION.md": "7aea1349cba85868b9636b207e616855fb69b3d3dfdb5f5d1ed915d21600301a",
+    "docs/verification/baseline-failure-analysis-20261007/report.json": "8f759506de23ff1923d2eef479ca608fb254897ff59f5daddfa17cadd1980bc7",
+    "docs/verification/baseline-failure-analysis-20261007/tests.log": "4e8eec365c0e8cad66419b15da666327d0a4af54a98cd49a25903e3311993e36"
+  },
+  "next_experiment": "Offline counterfactual fingerprint_risk=0 GNB sensitivity on existing 18 encrypted development scenarios; no rule/artifact/threshold change, fitting, reserved data or promotion."
+}

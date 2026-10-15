@@ -1,4 +1,45 @@
-# Streaming reliability — 29 September 2026
+# Streaming reliability: current semantics and historical checks
+
+Audited **2 October 2026**. The 29 September results below are a historical
+implementation record, not the latest benchmark, capture regression, test suite or
+deployed-model evaluation. The old classifier/capture runtime hashes differ from
+current source. No reliability measurement was rerun in this documentation task.
+See [report currency](STREAMING_VALIDATION.md) and
+[source-matching performance](PERFORMANCE_VALIDATION.md).
+
+## Current runtime contract
+
+- Global packet/byte rates retain all counts in bounded one-second buckets;
+  the old 4,096-event rate cap no longer applies. Ten-second rates retain part of
+  the oldest bucket, with less than one second of overhang disclosed in evidence.
+- Global entropy weights events with a 4,096-identity cap; target TCP/UDP entropy
+  weights packets with a 256-identity cap and marked overflow lower bounds.
+  At most 512 TCP and512 UDP target states are retained; target eviction can shorten
+  history and does not have a separate target-eviction telemetry counter.
+- TCP SYN detection requires known initial-SYN packet counts. Raw SYN-without-ACK
+  contributes one, SYN+ACK contributes zero. Aggregate cumulative flags alone do
+  not establish a fraction. Destination rate>=1,000/s and SYN share>=0.70 are
+  required, so high established-TCP rate alone cannot trigger this path.
+- UDP requires destination rate>=1,000/s and reports concentration/size evidence;
+  legitimate bulk traffic can match. Reflection/amplification cannot be proven.
+- Exfil rule/evidence use source-specific one-second forward-byte buckets over
+  60 seconds, independently of the 512-event history cap. The classifier retains
+  its historical bounded source-byte input. Missing reverse remains null;
+  explicitly observed zero reverse also has no finite ratio but availability=true.
+- Recon dedup is source/class scoped; target SYN/UDP DDOS dedup is destination/class
+  scoped. Other classes retain source/destination/class scope. Suppression lasts
+  30 event-time seconds; it never establishes a scenario-level negative label.
+- API persists alerts before SSE sequence delivery. Database-backed resume and
+  replay error/stop/upload/restart behavior have separate scoped validation reports.
+  No message broker, WebSocket path or external database is introduced.
+
+Latest saved source-matching runs on 1 October: core 20,000 events/1,170 commits,
+5,649.91 metadata events/s, p50 0.0971 ms, p95 0.8416 ms; direct loopback API-to-SSE
+100/100 matching records, p50 129.06 ms, p95 240.27 ms, p99 251.66 ms. Core excludes
+capture/HTTP/SSE/browser; delivery excludes capture/Next.js/browser. Gates pass
+within those scopes, not raw-capture-to-browser capacity or detection accuracy.
+
+## Historical 29 September implementation record
 
 This completes the first implementation task in the
 [completion plan](COMPLETION_PLAN.md). It corrects stream accounting and measures
@@ -33,7 +74,7 @@ malware accuracy or hybrid alert accuracy.
 
 ## Functional checks
 
-All **89 backend tests pass**, including eight new rate-window regressions:
+At that revision **89 backend tests passed**, including eight rate-window regressions:
 
 - A 12,000-packet stream triggers the DDoS rule at packet 10,000, before completion.
 - Aggregated flow summaries and equivalent packet observations retain equal totals.
@@ -67,8 +108,9 @@ Next.js proxy, browser rendering, raw capture and concurrent subscribers. Histor
 traffic timestamps are never subtracted from the wall clock to invent latency.
 The live analyst database is untouched by tests and benchmarks.
 
-Reports: `benchmarks/latest.json`, `benchmarks/delivery_latest.json`, and
-`ml/runtime_evaluation.json`. They include source hashes and measurement scope.
+The benchmark filenames were subsequently overwritten by the1 October measured
+runs; their current values are not the historical table above. The retained
+`ml/runtime_evaluation.json` remains a29 September classifier-only report.
 
 ## Refreshed public-capture regression
 
@@ -83,7 +125,7 @@ FPR. Their earlier guard run emitted 97 alerts. A one-alert difference is not pr
 of improved detection. There are still no tunnelling alerts on the unlabelled mixed
 captures. No capture is relabelled just to produce a successful result.
 
-`ml/streaming_validation.json` contains the refreshed counts and source hashes,
+`ml/streaming_validation.json` contains that revision's counts and source hashes,
 including the new helper. Capture-processing timings are local unpaced observations
 and are separate from the core/SSE benchmark targets.
 
@@ -104,6 +146,17 @@ files are needed for capture validation, but not for backend tests, model regres
 core/delivery benchmarking or application startup. No monitored host is queried,
 no payload is decrypted and no network attack is transmitted.
 
-Next priority is phase 2: improve DGA discrimination with new reserved evaluation
-data and validation-only model experiments. Passing functional checks does not
-permit activation of the existing failed candidate.
+## Event recovery follow-up — 3 October 2026
+
+[Event recovery validation](EVENT_RECOVERY_VALIDATION.md) proves rollback of failed
+feature/inference/alert/persistence operations, atomic event alert batches and
+retry-to-SSE/restart behavior. The full 268-test suite passes. Core+SQLite p95 is
+0.9228 ms at 4,072.43 events/s; direct API-to-SSE p95 is 248.92 ms for 100/100 alerts.
+These separately saved results supersede earlier source-match claims for changed
+runtime files; historical reports retain their dates. Retry ordering, busy timeout
+and in-memory restart limitations are disclosed. Model quality is unchanged.
+
+The historical “phase2 next” recommendation is superseded by the
+[completion plan](COMPLETION_PLAN.md). DGA final data, tunnel labels and other
+quality gaps remain unresolved. Passing reliability checks never authorizes
+activation of failed or unevaluated candidates.

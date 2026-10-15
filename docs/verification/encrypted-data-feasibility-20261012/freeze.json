@@ -1,0 +1,43 @@
+{
+  "completion_date": "2026-10-12",
+  "definition_of_done": "PASS for feasibility/visibility audit only",
+  "offline_handshake_research_feasibility": "CONDITIONAL: weak labels and sample-aware split needed",
+  "streaming_training_promotion_readiness": "BLOCKED",
+  "source_hashes_verified": 5,
+  "strict_development_handshake_rows": 59215,
+  "benign_reference_rows": 24598,
+  "malware_related_rows": 34617,
+  "malware_sample_overlaps": {
+    "train_validation": 544,
+    "train_historical_test": 382,
+    "validation_historical_test": 432
+  },
+  "parsed_clienthellos_in_benign_pcaps": 0,
+  "tests": {
+    "new_cases": 13,
+    "targeted_passed": 18,
+    "elapsed_seconds": 0.38,
+    "full_backend_rerun": false,
+    "frontend_build_rerun": false,
+    "reason": "No shared runtime/frontend changes"
+  },
+  "protected_files_checked": 129,
+  "changed_protected_files": [],
+  "historical_test_feature_values_read": false,
+  "reserved_data_used": false,
+  "models_trained": false,
+  "detection_quality_metrics_refreshed": false,
+  "hash_scope": "Frozen task text hashes normalize CRLF to LF; protected file integrity uses raw bytes.",
+  "frozen_file_sha256": {
+    "datasets/audit_encrypted_data.py": "f2e8d370df418664148f43331371b3a9e30a2cecc64d91e605914ab4c2abf29e",
+    "tests/test_encrypted_data_audit.py": "52637718bcd53b68d915595c2218c08d44a5a70bec14e46ab964087c9e152e26",
+    "docs/ENCRYPTED_DATA_FEASIBILITY.md": "fd51c55d1ac5d73b18e266bac5ec7710c64ad16f31db29317d56e7e5eaeb2bf1",
+    "docs/DATASETS.md": "3aae08f6dfba4df4aba8a81e2546e675964db4b08aaf50312bddacc29c9339b3",
+    "docs/MODEL_AND_VALIDATION.md": "b8e5dbdd751bab6d693a0a04c6452b8fe1c78891f7f51637a963d3616df93ca1",
+    "docs/COMPLETION_PLAN.md": "919b050424aa38ea1afe430864de804f162020de824b31ad3dd909d7cb90279f",
+    "docs/verification/encrypted-data-feasibility-20261012/PROTOCOL.md": "189d6858c7c9ada07d60e31896bc9a7434574bf86fa7dcefe80f7df1a43b5eca",
+    "docs/verification/encrypted-data-feasibility-20261012/report-complete.json": "50c86872cddfd92d0e2eb5540b44332c5bfe50c7cbfab35b92db4152b1429e47",
+    "docs/verification/encrypted-data-feasibility-20261012/tests-final.log": "79e4ba00e63fc08d8d512c2fa4b1016cef741ad8e43a8c7970419d5fd5578dff"
+  },
+  "next_task": "Sample/capture-aware encrypted development split design only; check family overlap and feasibility; no fitting, feature changes or reserved features."
+}

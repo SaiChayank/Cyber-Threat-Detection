@@ -1,0 +1,13 @@
+{
+  "scope": "Protected existing files including prior freezes, raw inputs, code/tests/model and alert history",
+  "protected_files": 564,
+  "mismatches": [],
+  "passed": true,
+  "staged_files": [],
+  "public_tls_production_enabled": false,
+  "editable_summary_docs_only": [
+    "docs/COMPLETION_PLAN.md",
+    "docs/DATASETS.md",
+    "docs/MODEL_AND_VALIDATION.md"
+  ]
+}

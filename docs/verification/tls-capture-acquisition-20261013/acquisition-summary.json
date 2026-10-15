@@ -1,0 +1,74 @@
+{
+  "role": "development-only",
+  "cira_complete_archives": [
+    {
+      "file": "data\\raw\\cicdoh2020-development\\MaliciousDoH-dnscat2-Pcap-001-600.zip",
+      "bytes": 75851683,
+      "sha256": "3b87f3f764cbad1774fc8d654d3f48b2f8f11891d8905daed84fa228bd11629f",
+      "all_member_crcs_verified": true,
+      "members": 600
+    },
+    {
+      "file": "data\\raw\\cicdoh2020-development\\MaliciousDoH-CSVs.zip",
+      "bytes": 132326153,
+      "sha256": "a4b3e546a9a4b9d307af6bf86d5bd60ba14db110ebd09e27b9da524c6b55deb1",
+      "all_member_crcs_verified": true,
+      "members": 13611
+    },
+    {
+      "file": "data\\raw\\cicdoh2020-development\\BenignDoH-NonDoH-CSVs.zip",
+      "bytes": 368599172,
+      "sha256": "2e86a58edc88137320df51b4aa607119022a3e0cb8313d634b851b71ae3c0f0a",
+      "all_member_crcs_verified": true,
+      "members": 37
+    }
+  ],
+  "cira_excluded_partial_downloads": [
+    {
+      "file": "data\\raw\\cicdoh2020-development\\BenignDoH_NonDoH-Firefox-AdGuard.zip.acquisition-part",
+      "bytes": 176463136,
+      "complete": false,
+      "excluded": true
+    },
+    {
+      "file": "data\\raw\\cicdoh2020-development\\BenignDoH_NonDoH-Firefox-AdGuard.zip.part",
+      "bytes": 358612992,
+      "complete": false,
+      "excluded": true
+    },
+    {
+      "file": "data\\raw\\cicdoh2020-development\\MaliciousDoH-CSVs.zip.annotations-part",
+      "bytes": 0,
+      "complete": false,
+      "excluded": true
+    }
+  ],
+  "source_label_protocols": {
+    "tcp": 582,
+    "udp": 57,
+    "icmp": 23
+  },
+  "qualified_session_counts": {
+    "malicious_c2": 115,
+    "benign": 467
+  },
+  "ja3_by_source_intent": {
+    "malicious_c2": {
+      "3f9b835b5a7e7c2c3eb40390a93a3bf9": 115
+    },
+    "benign": {
+      "4ea056e63b7910cbf543f0c095064dfe": 410,
+      "900e66af9af55f6d4bec4bfd2f79423c": 57
+    }
+  },
+  "raw_clienthello_packet_index_min_max": [
+    12,
+    68285
+  ],
+  "milliseconds_after_source_connection_start": {
+    "minimum": 0.209,
+    "median": 6.623,
+    "maximum": 330.006
+  },
+  "scope": "Acquisition/visibility statistics; no model performance, training or prediction"
+}

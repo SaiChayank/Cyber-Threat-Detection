@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-15",
+  "protected_runtime_model_files_unchanged": 69,
+  "current_source_pins_verified": 23,
+  "historical_protocol_unchanged": true,
+  "tests": {
+    "command": ".venv/Scripts/python.exe -B -m pytest -q -p no:cacheprovider tests/test_dns_tunnel_evaluation_contract.py tests/test_dns_tunnel_candidate.py tests/test_dns_visibility_audit.py tests/test_schemas_and_parsers.py tests/test_event_recovery.py",
+    "passed": 70,
+    "seconds": 12.3,
+    "warnings": [
+      "Existing Starlette/httpx deprecation"
+    ]
+  },
+  "comparison_scope": "20 existing development scenarios; 240 events",
+  "new_reserved_values_inspected": false,
+  "runtime_promoted": false,
+  "configuration_reconciliation": "PASS",
+  "formal_quality": "BLOCKED_MISSING_DATA_AND_QUALIFIED_SCORER"
+}

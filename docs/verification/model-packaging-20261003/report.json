@@ -1,0 +1,228 @@
+{
+  "audit_date_local": "2026-10-03",
+  "timezone": "Asia/Calcutta",
+  "generated_at_utc": "2026-10-03T05:25:46.311579+00:00",
+  "task": "Windows-checkout model integrity only",
+  "definition_of_done": "passed for corrected pending snapshot; publication not performed",
+  "scope": "Git byte preservation, fresh isolated installation/startup, deterministic synthetic replay and regression/build checks. No detector/model/threshold/training/evaluation change. No raw data or analyst database copied. Browser rendering and benchmarks not rerun.",
+  "snapshot_commit": "43a67cfe830c068d866e6eb064be56857c5dd7fa",
+  "parent_head": "186d768dee293d373111ad75c60cb861e9b6b2f5",
+  "snapshot_files": 354,
+  "checkout_style": "isolated temporary source repository; clone --no-local --no-hardlinks with core.autocrlf=true; original branch/index untouched",
+  "models": [
+    {
+      "artifact": "ml/artifact.json",
+      "expected_sha256": "4d8e08323374535789e21f9f7cd1ee3f1c84b663ce555e67bb4ced57c95e8010",
+      "original_sha256": "4d8e08323374535789e21f9f7cd1ee3f1c84b663ce555e67bb4ced57c95e8010",
+      "checkout_sha256": "4d8e08323374535789e21f9f7cd1ee3f1c84b663ce555e67bb4ced57c95e8010",
+      "passed": true
+    },
+    {
+      "artifact": "ml/dga_oof_candidate.json",
+      "expected_sha256": "266b80bc7edac63dda815b61ef6ef162d2af9b919e70bfa168958133431b730b",
+      "original_sha256": "266b80bc7edac63dda815b61ef6ef162d2af9b919e70bfa168958133431b730b",
+      "checkout_sha256": "266b80bc7edac63dda815b61ef6ef162d2af9b919e70bfa168958133431b730b",
+      "passed": true
+    },
+    {
+      "artifact": "ml/dga_v2.json",
+      "expected_sha256": "c0314dd5f1fe360db11e2494326fd6e99f267d6e920fa091f6c9fcebc796996e",
+      "original_sha256": "c0314dd5f1fe360db11e2494326fd6e99f267d6e920fa091f6c9fcebc796996e",
+      "checkout_sha256": "c0314dd5f1fe360db11e2494326fd6e99f267d6e920fa091f6c9fcebc796996e",
+      "passed": true
+    },
+    {
+      "artifact": "ml/dga_weighted_candidate.json",
+      "expected_sha256": "e81821f753d1e1b71fb5a08ff446467165941db996929767edec008c01c130ca",
+      "original_sha256": "e81821f753d1e1b71fb5a08ff446467165941db996929767edec008c01c130ca",
+      "checkout_sha256": "e81821f753d1e1b71fb5a08ff446467165941db996929767edec008c01c130ca",
+      "passed": true
+    },
+    {
+      "artifact": "ml/public_cic.json",
+      "expected_sha256": "2c49c360d5745d6f050b12189c16db0a79c51f79b644d4243c81b3910810e7ae",
+      "original_sha256": "2c49c360d5745d6f050b12189c16db0a79c51f79b644d4243c81b3910810e7ae",
+      "checkout_sha256": "2c49c360d5745d6f050b12189c16db0a79c51f79b644d4243c81b3910810e7ae",
+      "passed": true
+    },
+    {
+      "artifact": "ml/public_dga.json",
+      "expected_sha256": "a5766baa18463d25a5329596a8373849d4a41093c8625d694cd8dfe79e8ce7ad",
+      "original_sha256": "a5766baa18463d25a5329596a8373849d4a41093c8625d694cd8dfe79e8ce7ad",
+      "checkout_sha256": "a5766baa18463d25a5329596a8373849d4a41093c8625d694cd8dfe79e8ce7ad",
+      "passed": true
+    },
+    {
+      "artifact": "ml/public_tls.json",
+      "expected_sha256": "39241b3e9defdf42f6ad5e786666fe724bf9b74239ebea456e673c23456b2c1e",
+      "original_sha256": "39241b3e9defdf42f6ad5e786666fe724bf9b74239ebea456e673c23456b2c1e",
+      "checkout_sha256": "39241b3e9defdf42f6ad5e786666fe724bf9b74239ebea456e673c23456b2c1e",
+      "passed": true
+    }
+  ],
+  "regression": {
+    "before": {
+      "passed": 2,
+      "failed": 3,
+      "windows_failure": "ml/public_cic.json raw bytes changed under core.autocrlf=true",
+      "explicit_model_coverage": 3
+    },
+    "after": {
+      "checkout_tests_passed": 5,
+      "autocrlf_policies": [
+        "true",
+        "input",
+        "false"
+      ],
+      "explicit_model_coverage": 7,
+      "packaging_and_demo_tests_passed": 20
+    }
+  },
+  "fresh_install": {
+    "npm_packages_added": 146,
+    "python_version": "3.13.5",
+    "include_system_site_packages": false,
+    "new_npm_pip_caches": true,
+    "pip_check": "passed",
+    "runtime": {
+      "fastapi": "0.142.2",
+      "uvicorn": "0.54.0",
+      "pydantic": "2.13.5",
+      "httpx": "0.28.1",
+      "pytest": "9.1.1",
+      "next": "16.3.6"
+    }
+  },
+  "fresh_backend_tests": {
+    "passed": 252,
+    "failed": 0,
+    "skipped": 0,
+    "warnings": 1,
+    "duration_seconds": 52.7
+  },
+  "fresh_typecheck": "passed",
+  "fresh_production_build": "passed",
+  "fresh_demo_preflight": {
+    "scope": "Deterministic controlled synthetic functional replay; no independent detection-quality or production accuracy claim.",
+    "results": [
+      {
+        "preset": "BENIGN",
+        "events": 32,
+        "alert_count": 0,
+        "verified": true
+      },
+      {
+        "preset": "DDOS",
+        "events": 32,
+        "alert_count": 2,
+        "verified": true
+      },
+      {
+        "preset": "BOTNET_C2",
+        "events": 32,
+        "alert_count": 2,
+        "verified": true
+      },
+      {
+        "preset": "DGA_DOMAINS",
+        "events": 32,
+        "alert_count": 2,
+        "verified": true
+      },
+      {
+        "preset": "DNS_TUNNELLING",
+        "events": 32,
+        "alert_count": 4,
+        "verified": true
+      },
+      {
+        "preset": "ENCRYPTED_MALWARE",
+        "events": 32,
+        "alert_count": 2,
+        "verified": true
+      },
+      {
+        "preset": "RECONNAISSANCE",
+        "events": 32,
+        "alert_count": 1,
+        "verified": true
+      },
+      {
+        "preset": "DATA_EXFILTRATION",
+        "events": 32,
+        "alert_count": 2,
+        "verified": true
+      },
+      {
+        "preset": "ALL",
+        "events": 256,
+        "alert_count": 15,
+        "verified": true
+      }
+    ],
+    "passed": true
+  },
+  "fresh_startup_replay": {
+    "scope": "Fresh isolated Windows-style checkout; documented ALL20x replay via Next.js proxy; synthetic functional demo only",
+    "routes": {
+      "/": 200,
+      "/monitor": 200,
+      "/api/health": 200
+    },
+    "processed": 256,
+    "status": "complete",
+    "error": null,
+    "alerts": 15,
+    "persisted": 15,
+    "sse_received": 15,
+    "sse_matches_api": true,
+    "classes": [
+      "BOTNET_C2",
+      "DATA_EXFILTRATION",
+      "DDOS",
+      "DGA_DOMAINS",
+      "DNS_TUNNELLING",
+      "ENCRYPTED_MALWARE",
+      "RECONNAISSANCE"
+    ],
+    "first_alert_observed": {
+      "processed": 38,
+      "replay_status": "running"
+    },
+    "dga_candidate_enabled": false,
+    "dns_tunnel_candidate_enabled": false,
+    "elapsed_seconds": 46.012,
+    "sse_errors": []
+  },
+  "original_protected_files": {
+    "checked": 72,
+    "changed": [],
+    "includes": [
+      "models and sidecars",
+      "demo fixtures/manifests",
+      "DGA metadata/plans",
+      "runtime code",
+      "original analyst database",
+      "original Git index"
+    ]
+  },
+  "owned_services_stopped": true,
+  "limitations": [
+    "Pending snapshot is not published to GitHub",
+    "Existing quality gates and missing independent evaluation remain unresolved",
+    "No production-start or new browser verification; dev startup and production build verified",
+    "One existing Starlette/httpx deprecation warning"
+  ],
+  "next_implementation_task": "Persistence/inference retry recovery only, with targeted regressions; no automatic continuation",
+  "evidence_sha256": {
+    "backend-tests.log": "5a905d394b57160645113635d6edc3f40ed756a6cf6d248bebcf66227a103225",
+    "demo-preflight.json": "cfdf22988bdd4807d34eed56d080dd09a117d6626f03c7566ca70cac4da89d57",
+    "production-build.log": "f27aeb00c6fb6e4c4cc531ad9c0f9d7f5754e9c45715a9b90bd7fc4ba05b29dc",
+    "startup-replay.json": "c8a1c9bddd9c7379386303951ef1d6fbf616a7c5754304c8ca475fd5480fb408",
+    "typecheck.log": "22804682dd3b35baf06f11525a9727f75236288cb7fdf9ea688f24bff52e5efb"
+  },
+  "verified_source_sha256": {
+    ".gitattributes": "7cf432e68b410f9bf25ff626fd6eb0f54b537b17d17b52950d82d5b754bddfd4",
+    "tests/test_checkout_setup.py": "ce0e14942eefa03c68719a7cdd8626aad789527f34c00c19ef50af0e6e9809f2"
+  }
+}

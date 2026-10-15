@@ -1,6 +1,7 @@
 """Local analyst API; separate from the passive capture path."""
 import asyncio
 import json
+import logging
 import os
 import tempfile
 from contextlib import asynccontextmanager
@@ -33,7 +34,7 @@ app = FastAPI(title='PS26145 Cyber Threat Detection API', lifespan=lifespan)
 app.add_middleware(CORSMiddleware, allow_origins=['http://localhost:3000', 'http://127.0.0.1:3000'], allow_methods=['GET', 'POST'], allow_headers=['Content-Type'])
 
 def consume(event):
-    return [app.state.store.append(a) for a in app.state.pipeline.process(event)]
+    return app.state.pipeline.process(event, persist=app.state.store.append_many)
 
 @app.get('/api/health')
 async def health():
@@ -65,7 +66,11 @@ async def alerts(after: int = Query(0, ge=0), limit: int = Query(200, ge=1, le=1
 async def events(event: TrafficEvent):
     if app.state.replay_status == 'running':
         raise HTTPException(409, 'Stop replay before ingesting another stream')
-    return consume(event)
+    try:
+        return consume(event)
+    except Exception as exc:
+        logging.getLogger(__name__).exception('Event processing failed; causal state was not committed')
+        raise HTTPException(503, 'Event processing failed; retry the same event after recovery') from exc
 
 @app.get('/api/stream')
 async def stream(request: Request, after: int = Query(0, ge=0)):

@@ -1,0 +1,19 @@
+{
+  "protected_file_count": 181,
+  "changed_protected_files": [],
+  "all_catalogued_raw_hashes_match": true,
+  "candidate_default_enabled": false,
+  "tests": {
+    "command": ".venv/Scripts/python.exe -B -m pytest -q -p no:cacheprovider tests/test_dns_tunnel_candidate.py tests/test_dns_visibility_audit.py tests/test_schemas_and_parsers.py",
+    "passed": 48,
+    "seconds": 2.21,
+    "warnings": 1,
+    "initial_command_error": "Nonexistent tests/test_protocol_parsers.py; no tests ran; corrected filename"
+  },
+  "reserved_scoring_performed": false,
+  "new_raw_capture_acquisition": false,
+  "final_data_ready": false,
+  "pipeline_protocol_hash_matches": false,
+  "historical_protocol_sha256": "3c814055d4ed58dc260b911a1a820545e5307aff548526ee2585e7a72f47c4ba",
+  "current_pipeline_sha256": "4e70bc3e50546e57fa5f0d9432f3a9be969b906897d837f6f3638311c9b54926"
+}

@@ -1,0 +1,16 @@
+[
+  {
+    "url": "https://raw.githubusercontent.com/CarlosANovo/extending12to13/5562b6a31e5b078f51c2564d8229514697248c3c/01-2-MS-Data.ipynb",
+    "revision": "5562b6a31e5b078f51c2564d8229514697248c3c",
+    "response_sha256": "421b0e0b41b452af06e264024ba74bebbd940fb6264a496ef8a915d6f1bd77e5",
+    "saved_text_sha256": "9ceb79ea79ba3079dc2d47477266225288c941742c8846fd795d544f8c12fcc5",
+    "outputs_included": false
+  },
+  {
+    "url": "https://raw.githubusercontent.com/CarlosANovo/extending12to13/5562b6a31e5b078f51c2564d8229514697248c3c/tls_paper_funcs.py",
+    "revision": "5562b6a31e5b078f51c2564d8229514697248c3c",
+    "response_sha256": "f56d64115d7ecb7c61e1281f3178712de3d7fca7015b0949fa422c67b65242bf",
+    "saved_text_sha256": "a696b7000199c33382180c426c18160af26a847e739a6367e2e1767ae7d86366",
+    "outputs_included": false
+  }
+]

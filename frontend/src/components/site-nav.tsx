@@ -1,14 +1,8 @@
 'use client'
+import { useReducedMotion } from '@/hooks/use-reduced-motion'
 import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
-import {
-  AnimatePresence,
-  motion,
-  useMotionValueEvent,
-  useScroll,
-  useSpring,
-  useReducedMotion,
-} from 'motion/react'
+import { AnimatePresence, motion, useMotionValueEvent, useScroll, useSpring } from 'motion/react'
 import { ArrowLeft, ArrowUpRight, Menu, X, MoveRight } from 'lucide-react'
 import { Brand } from './brand'
 import { Button, buttonClass } from './ui/button'
@@ -112,7 +106,7 @@ export function SiteNav({ monitor = false }: { monitor?: boolean }) {
           className="hidden items-center gap-1 xl:flex"
         >
           {links.map(({ label, id }) => (
-            <Link
+            <a
               key={id}
               href={`${base}#${id}`}
               onClick={() => setActive(id)}
@@ -130,7 +124,7 @@ export function SiteNav({ monitor = false }: { monitor?: boolean }) {
                 />
               )}
               <span className="relative">{label}</span>
-            </Link>
+            </a>
           ))}
         </nav>
         <div className="flex items-center gap-2 sm:gap-3">
@@ -187,7 +181,7 @@ export function SiteNav({ monitor = false }: { monitor?: boolean }) {
           >
             <div className="mx-auto flex max-w-[1440px] flex-col gap-1 px-5 py-4 sm:px-8">
               {links.map(({ label, id }) => (
-                <Link
+                <a
                   key={id}
                   href={`${base}#${id}`}
                   aria-current={active === id ? 'location' : undefined}
@@ -201,7 +195,7 @@ export function SiteNav({ monitor = false }: { monitor?: boolean }) {
                   )}
                 >
                   {label}
-                </Link>
+                </a>
               ))}
               <div className="mt-2 flex flex-wrap gap-3 border-t border-line pt-4">
                 <Link

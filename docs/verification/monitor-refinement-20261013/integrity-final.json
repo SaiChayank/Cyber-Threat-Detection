@@ -1,0 +1,12 @@
+{
+  "protected_content_files": 177,
+  "changed": {},
+  "passed": true,
+  "git_index": {
+    "raw_before": "a294c3ce2f9b3a5b26226199baa8b29d63f2d75cbf24d2ee943d634fccbf95df",
+    "raw_after": "498c27604d707486c637cc15d21d409d6c5757d423f5074b29f159be59809cb5",
+    "staged_changes": [],
+    "finding": "Git index cache metadata refreshed after generated file restoration/diff checks; no staged content changes. Index bytes are not detector/model/data integrity."
+  },
+  "scope": "Raw checks of analyst DB, models, sources, detector/backend/ingest/features/persistence, prior frozen diagnostics, demo/ML contracts and restored Next declaration. Git cache metadata audited separately."
+}

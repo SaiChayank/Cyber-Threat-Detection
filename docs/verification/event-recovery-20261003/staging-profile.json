@@ -1,0 +1,8 @@
+{
+  "scope": "FeatureExtractor.fork instrumentation only; no SQLite/API/capture/browser; not a throughput benchmark",
+  "events": 20000,
+  "mean_ms": 0.028640365054889115,
+  "p50_ms": 0.025200017262250185,
+  "p95_ms": 0.04060001811012626,
+  "active_sources": 33
+}

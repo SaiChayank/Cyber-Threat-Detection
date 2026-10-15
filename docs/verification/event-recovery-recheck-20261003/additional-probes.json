@@ -1,0 +1,28 @@
+{
+  "scope": "Additional isolated structural recovery checks; no detector tuning",
+  "results": [
+    {
+      "case": "SQLite commit-time deferred-constraint failure",
+      "failed_status": 503,
+      "partial_alerts": 0,
+      "rollback_and_state_unchanged": true,
+      "retry_alerts": 1,
+      "passed": true
+    },
+    {
+      "case": "Protocol 6 full target-window LRU rollback",
+      "target_limit": 512,
+      "rollback_and_state_unchanged": true,
+      "retry_processed": 514,
+      "passed": true
+    },
+    {
+      "case": "Protocol 17 full target-window LRU rollback",
+      "target_limit": 512,
+      "rollback_and_state_unchanged": true,
+      "retry_processed": 514,
+      "passed": true
+    }
+  ],
+  "passed": true
+}

@@ -1,0 +1,268 @@
+{
+  "scope": "Read-only feature parity/sensitivity on previously used training seeds and controlled probes; not accuracy or promotion",
+  "baseline_commit": "8c1b7cc70d3318a28f107fa2ca9f292e95e9a583",
+  "historical_source_sha256": {
+    "features/extractor.py": "a2ead438a95d4bb3c71ad8410804f0b87b89fd97c22b16aac210e47fa81e78df",
+    "replay/scenarios.py": "a89adfd75d0aef77ad5ee4423fed7fb10c616a9b690842545b56d9d9f90106a2"
+  },
+  "model_sha256": "4d8e08323374535789e21f9f7cd1ee3f1c84b663ce555e67bb4ced57c95e8010",
+  "features": [
+    "packet_rate",
+    "byte_rate",
+    "source_entropy",
+    "syn_fraction",
+    "iat_mean",
+    "iat_cv",
+    "destination_count",
+    "port_count",
+    "domain_entropy",
+    "domain_length",
+    "domain_digit_ratio",
+    "bigram_surprise",
+    "txt_record",
+    "encrypted",
+    "size_cv",
+    "egress_bytes",
+    "byte_ratio",
+    "reverse_available",
+    "fingerprint_risk",
+    "history_count"
+  ],
+  "transform": "log1p(max(0, value)) in the same fixed order",
+  "feature_semantic_version_in_artifact": false,
+  "input_policy": {
+    "training_seeds": [
+      1,
+      30
+    ],
+    "rows": 7680,
+    "validation_seeds_used": false,
+    "test_seeds_used": false,
+    "reserved_domain_or_dns_data_used": false,
+    "fit_called": false,
+    "thresholds_changed": false
+  },
+  "current_training_runtime_vector_mismatches": 0,
+  "historical_vs_current_features": {
+    "packet_rate": {
+      "changed_rows": 2214,
+      "max_absolute_delta": 1086.5
+    },
+    "byte_rate": {
+      "changed_rows": 2214,
+      "max_absolute_delta": 556155.8
+    },
+    "source_entropy": {
+      "changed_rows": 256,
+      "max_absolute_delta": 0.3625700793847084
+    },
+    "syn_fraction": {
+      "changed_rows": 0,
+      "max_absolute_delta": 0.0
+    },
+    "iat_mean": {
+      "changed_rows": 0,
+      "max_absolute_delta": 0.0
+    },
+    "iat_cv": {
+      "changed_rows": 0,
+      "max_absolute_delta": 0.0
+    },
+    "destination_count": {
+      "changed_rows": 0,
+      "max_absolute_delta": 0.0
+    },
+    "port_count": {
+      "changed_rows": 0,
+      "max_absolute_delta": 0.0
+    },
+    "domain_entropy": {
+      "changed_rows": 0,
+      "max_absolute_delta": 0.0
+    },
+    "domain_length": {
+      "changed_rows": 0,
+      "max_absolute_delta": 0.0
+    },
+    "domain_digit_ratio": {
+      "changed_rows": 0,
+      "max_absolute_delta": 0.0
+    },
+    "bigram_surprise": {
+      "changed_rows": 0,
+      "max_absolute_delta": 0.0
+    },
+    "txt_record": {
+      "changed_rows": 0,
+      "max_absolute_delta": 0.0
+    },
+    "encrypted": {
+      "changed_rows": 0,
+      "max_absolute_delta": 0.0
+    },
+    "size_cv": {
+      "changed_rows": 0,
+      "max_absolute_delta": 0.0
+    },
+    "egress_bytes": {
+      "changed_rows": 0,
+      "max_absolute_delta": 0.0
+    },
+    "byte_ratio": {
+      "changed_rows": 0,
+      "max_absolute_delta": 0.0
+    },
+    "reverse_available": {
+      "changed_rows": 0,
+      "max_absolute_delta": 0.0
+    },
+    "fingerprint_risk": {
+      "changed_rows": 0,
+      "max_absolute_delta": 0.0
+    },
+    "history_count": {
+      "changed_rows": 0,
+      "max_absolute_delta": 0.0
+    }
+  },
+  "per_class": {
+    "BENIGN": {
+      "rows": 960,
+      "historical_feature_changed_rows": 272,
+      "frozen_prediction_disagreement_rows": 0
+    },
+    "DDOS": {
+      "rows": 960,
+      "historical_feature_changed_rows": 256,
+      "frozen_prediction_disagreement_rows": 0
+    },
+    "BOTNET_C2": {
+      "rows": 960,
+      "historical_feature_changed_rows": 327,
+      "frozen_prediction_disagreement_rows": 0
+    },
+    "DGA_DOMAINS": {
+      "rows": 960,
+      "historical_feature_changed_rows": 266,
+      "frozen_prediction_disagreement_rows": 0
+    },
+    "DNS_TUNNELLING": {
+      "rows": 960,
+      "historical_feature_changed_rows": 269,
+      "frozen_prediction_disagreement_rows": 0
+    },
+    "ENCRYPTED_MALWARE": {
+      "rows": 960,
+      "historical_feature_changed_rows": 279,
+      "frozen_prediction_disagreement_rows": 0
+    },
+    "RECONNAISSANCE": {
+      "rows": 960,
+      "historical_feature_changed_rows": 279,
+      "frozen_prediction_disagreement_rows": 0
+    },
+    "DATA_EXFILTRATION": {
+      "rows": 960,
+      "historical_feature_changed_rows": 266,
+      "frozen_prediction_disagreement_rows": 0
+    }
+  },
+  "historical_vs_current_prediction_disagreements": 0,
+  "controlled_probes": {
+    "bucket_boundary": {
+      "events": 2,
+      "changes": {
+        "packet_rate": {
+          "before": 0.1,
+          "after": 10.1,
+          "delta": 10.0
+        },
+        "byte_rate": {
+          "before": 10.0,
+          "after": 20.0,
+          "delta": 10.0
+        },
+        "source_entropy": {
+          "before": -0.0,
+          "after": 1.0,
+          "delta": 1.0
+        }
+      },
+      "observed_ratio_before": null,
+      "observed_ratio_after": null,
+      "current_source_bytes_60s": 100,
+      "current_ml_egress_bytes": 100
+    },
+    "bounded_global_history": {
+      "events": 4097,
+      "changes": {
+        "packet_rate": {
+          "before": 409.6,
+          "after": 409.7,
+          "delta": 0.0999999999999659
+        },
+        "byte_rate": {
+          "before": 24576.0,
+          "after": 24582.0,
+          "delta": 6.0
+        }
+      },
+      "observed_ratio_before": null,
+      "observed_ratio_after": null,
+      "current_source_bytes_60s": 245820,
+      "current_ml_egress_bytes": 30720
+    },
+    "reverse_unavailable": {
+      "events": 1,
+      "changes": {},
+      "observed_ratio_before": null,
+      "observed_ratio_after": null,
+      "current_source_bytes_60s": 100,
+      "current_ml_egress_bytes": 100
+    },
+    "reverse_observed_zero": {
+      "events": 1,
+      "changes": {
+        "byte_ratio": {
+          "before": 100.0,
+          "after": 0,
+          "delta": -100.0
+        }
+      },
+      "observed_ratio_before": 100.0,
+      "observed_ratio_after": null,
+      "current_source_bytes_60s": 100,
+      "current_ml_egress_bytes": 100
+    },
+    "reverse_observed_positive": {
+      "events": 1,
+      "changes": {},
+      "observed_ratio_before": 4.0,
+      "observed_ratio_after": 4.0,
+      "current_source_bytes_60s": 100,
+      "current_ml_egress_bytes": 100
+    },
+    "packet_vs_summary": {
+      "summaries": {
+        "packet_rate": 1.0,
+        "byte_rate": 100.0,
+        "source_entropy": 1.0
+      },
+      "packets": {
+        "packet_rate": 1.0,
+        "byte_rate": 100.0,
+        "source_entropy": 0.46899559358928133
+      }
+    }
+  },
+  "source_sha256": {
+    "ml/train.py": "c37ae8cac948271d7717aa4931276227718f4f47945b9e0a10f44c5c40798ddb",
+    "ml/model.py": "2721a53d667d1ea773154fdebf3d349c5ef221dfdb51e937d5afdba1ffa6f354",
+    "features/extractor.py": "624952f8063464c88466b861c72f121c318be5835a02a3d2a4b24b38b1800ac8",
+    "features/rate_window.py": "a0d4542ab56b44bb51bdee88ebd56a7df95e9a9d6a79fc569769a9100b65d683",
+    "detection/pipeline.py": "4e70bc3e50546e57fa5f0d9432f3a9be969b906897d837f6f3638311c9b54926",
+    "replay/scenarios.py": "e24b4dbb24b729fc4fa98faaf7de83554e3beac58e243a17d56ed38b3234ed2d",
+    "ingest/metadata.py": "e0f26334b4102928f9ac98a76de44e3ca204f53ed0104e17b1ca51031213eed6",
+    "datasets/audit_feature_parity.py": "bcad1dd77b6471e27595937634cd8e9f57e7532ea0f9c52ba620880fec2d3f15"
+  }
+}

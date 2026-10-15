@@ -1,0 +1,29 @@
+{
+  "proxy": {
+    "status": "online",
+    "architecture": "unidirectional-passive-monitoring",
+    "threat_classes": [
+      "DDOS",
+      "BOTNET_C2",
+      "DGA_DOMAINS",
+      "DNS_TUNNELLING",
+      "ENCRYPTED_MALWARE",
+      "RECONNAISSANCE",
+      "DATA_EXFILTRATION"
+    ]
+  },
+  "api": {
+    "status": "online",
+    "architecture": "unidirectional-passive-monitoring",
+    "threat_classes": [
+      "DDOS",
+      "BOTNET_C2",
+      "DGA_DOMAINS",
+      "DNS_TUNNELLING",
+      "ENCRYPTED_MALWARE",
+      "RECONNAISSANCE",
+      "DATA_EXFILTRATION"
+    ]
+  },
+  "monitor_http": 200
+}

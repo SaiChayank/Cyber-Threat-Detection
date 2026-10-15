@@ -1,0 +1,22 @@
+{
+  "protected_files": 185,
+  "changed_protected_files": [],
+  "verified_publisher_documents": 11,
+  "metadata_samples": 4,
+  "dns_server_configurations": 4,
+  "sampled_metadata_with_any_interface_capture": 4,
+  "server_configurations_with_any_interface_capture": 4,
+  "actual_pcap_headers_checked": 0,
+  "new_raw_acquisition": false,
+  "new_scoring": false,
+  "new_messages": false,
+  "qualification": "BLOCKED",
+  "public_contact": {
+    "route": "https://github.com/Korving-F/dns-tunnel-dataset/issues",
+    "has_issues": true,
+    "public_profile_email": null,
+    "pdf_url": "https://papers.academic-conferences.org/index.php/iccws/article/download/962/938",
+    "pdf_result": "HTTP 200 verification interstitial; not paper contents"
+  },
+  "tests": "Not rerun: docs-only; prior 377 backend, typecheck/build, 32 browser checks retain their recorded scopes."
+}

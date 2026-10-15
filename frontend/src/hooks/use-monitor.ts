@@ -16,7 +16,8 @@ export function useMonitor() {
   const [datasets, setDatasets] = useState<Dataset[]>([])
   const [samples, setSamples] = useState<RateSample[]>([])
   const [connection, setConnection] = useState<'connecting' | 'live' | 'reconnecting'>('connecting')
-  const [error, setError] = useState<string | null>(null)
+  const [apiError, setApiError] = useState<string | null>(null)
+  const [streamError, setStreamError] = useState<string | null>(null)
   const [loading, setLoading] = useState(true)
   const refreshRef = useRef<() => Promise<void>>(async () => {})
   const refresh = useCallback(() => refreshRef.current(), [])
@@ -28,26 +29,48 @@ export function useMonitor() {
     let initialized = false
     let previous: { at: number; processed: number } | null = null
     let fetching = false
+    let apiAvailable = false
+    let hasConnected = false
     const alive = () => !controller.signal.aborted
+
+    function updateConnection() {
+      if (!alive()) return
+      setConnection(
+        apiAvailable && source?.readyState === EventSource.OPEN
+          ? 'live'
+          : hasConnected || !apiAvailable
+            ? 'reconnecting'
+            : 'connecting',
+      )
+    }
 
     function connect() {
       if (!alive() || source) return
       source = new EventSource(`/api/stream?after=${cursor}`)
       source.onopen = () => {
-        if (alive()) setConnection('live')
+        hasConnected = true
+        updateConnection()
       }
       source.onerror = () => {
-        if (alive()) setConnection('reconnecting')
+        if (!alive()) return
+        // A non-200 proxy response can permanently close native EventSource.
+        // The next successful telemetry poll reopens it from the persisted cursor.
+        if (source?.readyState === EventSource.CLOSED) {
+          source.close()
+          source = null
+        }
+        updateConnection()
       }
       source.onmessage = (event) => {
         if (!alive()) return
         try {
           const parsed = alertSchema.safeParse(JSON.parse(event.data))
           if (!parsed.success) {
-            setError('An alert did not match the expected API schema.')
+            setStreamError('An alert did not match the expected API schema.')
             return
           }
           const row = parsed.data
+          setStreamError(null)
           cursor = Math.max(cursor, row.sequence)
           setAlerts((current) =>
             current.some((item) => item.sequence === row.sequence)
@@ -55,7 +78,7 @@ export function useMonitor() {
               : [row, ...current].sort((a, b) => b.sequence - a.sequence).slice(0, 200),
           )
         } catch {
-          setError('The stream delivered an unreadable alert. Retrying on the next update.')
+          setStreamError('The stream delivered an unreadable alert. Retrying on the next update.')
         }
       }
     }
@@ -76,7 +99,6 @@ export function useMonitor() {
           cursor = rows.reduce((max, row) => Math.max(max, row.sequence), 0)
           previous = { at: Date.now(), processed: nextTelemetry.processed }
           initialized = true
-          connect()
         } else {
           const next = await api.telemetry(controller.signal)
           if (!alive()) return
@@ -95,11 +117,15 @@ export function useMonitor() {
           )
           setTelemetry(next)
         }
-        setError(null)
+        apiAvailable = true
+        setApiError(null)
+        connect()
+        updateConnection()
       } catch (exception) {
         if (alive()) {
-          setConnection('reconnecting')
-          setError(
+          apiAvailable = false
+          updateConnection()
+          setApiError(
             `Local API unavailable or incompatible. ${exception instanceof Error ? exception.message : 'Check the server output.'}`,
           )
         }
@@ -121,5 +147,15 @@ export function useMonitor() {
       refreshRef.current = async () => {}
     }
   }, [])
-  return { alerts, telemetry, datasets, samples, connection, error, loading, refresh }
+  return {
+    alerts,
+    telemetry,
+    datasets,
+    samples,
+    connection,
+    error: apiError ?? streamError,
+    unavailable: apiError !== null,
+    loading,
+    refresh,
+  }
 }

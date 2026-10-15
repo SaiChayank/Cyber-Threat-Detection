@@ -1,0 +1,20 @@
+{
+  "revision": "bdc4486751f5e87fa6100b17dd57fc001743b43c",
+  "repository": "Korving-F/dns-tunnel-dataset",
+  "selection": "First two metadata files per published top-level experiment group, lexicographic path; plus existing README and DNS-server configurations. Not a capture or session sample.",
+  "documents": [
+    "dns_tunnel_c2/10194c4889fb8a4d18459e1722ce6677/.metadata",
+    "dns_tunnel_c2/16985c987adf046c5af25fa918803186/.metadata",
+    "dns_tunnel_file_transfer/03bb49505f204e73deae1f011d2af759/.metadata",
+    "dns_tunnel_file_transfer/0455ce50cb935a6dbfc73182674c9e5f/.metadata",
+    "README.md",
+    "scenario/dns_tunnel/README.md",
+    "dns_tunnel_c2/README.md",
+    "scenario/dns_tunnel/dns_server/bind9.yaml",
+    "scenario/dns_tunnel/dns_server/coredns.yaml",
+    "scenario/dns_tunnel/dns_server/dnsmasq.yaml",
+    "scenario/dns_tunnel/dns_server/powerdns.yaml"
+  ],
+  "raw_capture_reads": false,
+  "scoring": false
+}

@@ -1,0 +1,9 @@
+{
+  "url": "https://zenodo.org/records/22732327/files/TQH-C2_labels_D.zip?download=1",
+  "bytes": 2238688,
+  "sha256": "10d8e4ef6edd5416ae2d866d93e6165d174049c85a1ffa6861958784cabc2dc2",
+  "publisher_sha256_verified": true,
+  "zip_crc_verified": true,
+  "role": "development-only",
+  "value_inspection_scope": "matching selected D_i300_j30 cell only"
+}

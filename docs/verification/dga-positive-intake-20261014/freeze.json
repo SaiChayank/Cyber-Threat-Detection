@@ -1,0 +1,48 @@
+{
+  "date": "2026-10-14",
+  "status": "PROVISIONAL_COUNT_CHECK_FROZEN",
+  "counts_gate_passed": true,
+  "complete_final_data_ready": false,
+  "files": [
+    {
+      "path": "docs/DGA_POSITIVE_INTAKE_CHECK.md",
+      "sha256": "9c8db631a9b50f2ce05bb29bd72e34972df0c8aabf4463431514801b2b38ce69"
+    },
+    {
+      "path": "datasets/check_dga_positive_intake.py",
+      "sha256": "a1f8f984727896b9b268802533a5d90eec5928d10a329bb132122f5da2b97e7d"
+    },
+    {
+      "path": "tests/test_dga_positive_intake.py",
+      "sha256": "72e6c7e15ddd67d015df8d7e94407863180710cef00ff23ec3c01a4ed7416d92"
+    },
+    {
+      "path": "docs/verification/dga-positive-intake-20261014/counts.json",
+      "sha256": "29712f4f85aee416241367c7ec24c48edf3eba7185dfe22f7f74bae16dd02d11"
+    },
+    {
+      "path": "docs/verification/dga-positive-intake-20261014/documentation-exclusions.json",
+      "sha256": "1d1b3150579d09214782f6af4310dcf9a44fcaef96972d00272ddb4766ad1151"
+    },
+    {
+      "path": "docs/verification/dga-positive-intake-20261014/documentation-exclusions.sha256",
+      "sha256": "cd6328dff922c01a3a6ae7fd3139d36fdabbb662f68dbaf8005f54b59eeb7be1"
+    },
+    {
+      "path": "docs/verification/dga-positive-intake-20261014/final-integrity.json",
+      "sha256": "734424f124e3b93a64b855cd6f66da53faf5ffe160600c5c2cabf529931529de"
+    },
+    {
+      "path": "docs/verification/dga-positive-intake-20261014/initial-integrity.json",
+      "sha256": "064f74fd9cd05d6b1fb5eefdb50b48cebf400ece3609326858510394c51256d3"
+    },
+    {
+      "path": "docs/verification/dga-positive-intake-20261014/plan.json",
+      "sha256": "8065dc1f878bdb1c5ca9836c8b45a19232c8e8b5928216fbb617576815ec4995"
+    },
+    {
+      "path": "docs/verification/dga-positive-intake-20261014/plan.sha256",
+      "sha256": "b3d8046609d60d1a7de4976c3e5345df2e95d1fd2356f6f3183ceaf36d64fd85"
+    }
+  ]
+}

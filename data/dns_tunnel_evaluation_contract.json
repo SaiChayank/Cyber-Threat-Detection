@@ -1,0 +1,130 @@
+{
+  "version": 1,
+  "frozen_on": "2026-10-15",
+  "status": "CONFIGURATION_FROZEN_DATA_BLOCKED",
+  "historical_protocol": "docs/DNS_TUNNELLING_FORMAL_VALIDATION.md",
+  "historical_protocol_sha256": "3c814055d4ed58dc260b911a1a820545e5307aff548526ee2585e7a72f47c4ba",
+  "historical_commit": "12c7933715662e8291154304c44607b429085d11",
+  "supersedes_historical_runtime_identity_only": true,
+  "candidate_runtime_default_enabled": false,
+  "evaluation_arm": {
+    "constructor": "Pipeline(dns_tunnel_candidate=True)",
+    "model_override": "predict returns BENIGN, 1.0, exactly as existing controlled comparison",
+    "counted_class": "DNS_TUNNELLING",
+    "reset": "New pipeline per independently labelled source/namespace/time session",
+    "production_runtime_promoted": false
+  },
+  "input_contract": {
+    "source": "New qualified full-question passive captures or equivalent original client query logs with source/timestamp/QNAME/QTYPE provenance; none assigned yet",
+    "raw_capture_format": "Classic PCAP v2.4 Ethernet link type 1 only",
+    "query_selection": "Complete annotated client questions, TCP/UDP destination port 53, DNS QR=0 verified from source sidecar; first question only as supported by current parser",
+    "time": "Capture UTC epoch milliseconds; original capture order, no timestamp sorting or wall-clock replay-speed adjustment",
+    "duplicates": "Preserve observed input events; do not invent independent sessions from duplicate packets or file fragments",
+    "late_events": "Current global watermark drop; disclose every dropped/unsupported question and coverage denominator; do not silently remove difficult sessions",
+    "scope": "Rule-only complete-question session evaluation, not full mixed-network production/API/SSE accuracy",
+    "unsupported": "No LLMNR/5355, encrypted DNS/DoH, cooked-link PCAP, PCAPNG, fragmented/reassembled DNS support or decryption added"
+  },
+  "quality_gates": {
+    "minimum_positive_sessions": 20,
+    "minimum_benign_sessions": 50,
+    "recall_min": 0.8,
+    "precision_min": 0.95,
+    "benign_session_fpr_max": 0.02,
+    "all_true_positives_before_completion": true,
+    "early_true_positive_fraction_min": 0.9,
+    "early_query_index_max": 10,
+    "early_delay_ms_max": 10000,
+    "early_conditions_combined": "AND",
+    "undefined_denominator": "undefined; cannot pass",
+    "final_query_only_positive": "FN"
+  },
+  "coverage": {
+    "required_tool": "dnscat2 or iodine",
+    "independent_mechanism": "Include if available; disclose absent coverage",
+    "record_types_reported": [
+      1,
+      28,
+      16,
+      10
+    ],
+    "interval_groups_seconds": {
+      "low": ">2",
+      "medium": "0.5-2 inclusive",
+      "high": "<0.5"
+    },
+    "benign_categories": [
+      "cdn_cloud",
+      "telemetry",
+      "service_discovery",
+      "legitimate_txt",
+      "machine_generated_hostnames"
+    ],
+    "independence": "Whole experiment/run/session groups; fragments, copies and related exports stay grouped; no random query split"
+  },
+  "candidate_definition": {
+    "history_window_ms": 10000,
+    "max_same_base_recent_queries": 128,
+    "source_history_max_events": 512,
+    "max_sources": 4096,
+    "base": "last-two-label proxy, not public suffix",
+    "minimum_queries": 5,
+    "unique_ratio_min": 0.8,
+    "encoded_history_min": 4,
+    "qualifying_history": {
+      "max_label_min": 24,
+      "total_prefix_min": 32,
+      "entropy_min": 3.5
+    },
+    "long_branch": {
+      "max_label_min": 40,
+      "entropy_min": 3.5
+    },
+    "multi_branch": {
+      "label_count_min": 4,
+      "max_label_min": 24,
+      "total_prefix_min": 48,
+      "entropy_min": 3.7
+    }
+  },
+  "scoring_controls": {
+    "reserved_passes_max": 1,
+    "reserved_set_ready": false,
+    "reserved_manifest": null,
+    "training_allowed": false,
+    "tuning_reserved_allowed": false,
+    "automatic_promotion_allowed": false,
+    "prerequisites": [
+      "Capture-data permission",
+      "Independent labelled sessions and all benign strata",
+      "Actual format/full question/timestamp visibility",
+      "Exposed-domain/run inventory and disjointness",
+      "Frozen immutable session/selection manifest",
+      "Scorer conforming to before-completion and undefined-denominator semantics"
+    ]
+  },
+  "source_sha256": {
+    "detection/pipeline.py": "4e70bc3e50546e57fa5f0d9432f3a9be969b906897d837f6f3638311c9b54926",
+    "detection/dns_tunnel_candidate.py": "c1713f2a8bbc59753bbad586054e5b103082f4d67bf5c9cfa617383965540a9a",
+    "features/extractor.py": "624952f8063464c88466b861c72f121c318be5835a02a3d2a4b24b38b1800ac8",
+    "features/dns_tunnel.py": "8ded37ba73c2d605f22baf4571f80842791f7b2b1584ce0230ddc365466605eb",
+    "features/rate_window.py": "a0d4542ab56b44bb51bdee88ebd56a7df95e9a9d6a79fc569769a9100b65d683",
+    "ingest/metadata.py": "e0f26334b4102928f9ac98a76de44e3ca204f53ed0104e17b1ca51031213eed6",
+    "ingest/pcap_reader.py": "591b09c0f6fc8cf2aab791d6aa52506a9e10adf80f9a4dc72850d78dc4e50157",
+    "ingest/protocol_parsers.py": "cf8cda0df2a543e85f1ad822d0634a2e417c049d2df2b56fd23a23890c56a6cd",
+    "ingest/dead_letter.py": "d8e0912dab5537be9ba0f65d129c297732e9702a83ed75e54407fd2e17e8bc6b",
+    "schemas/traffic_event.py": "e5be7daf5689e39e2cbe877b6972a81b947d70176dd2aed23a30620f5c3ae7a4",
+    "schemas/flow_record.py": "026d07266e98a14c53631e81c676ec9d1a0314feae959611c7ca3e3664ce1d24",
+    "schemas/dns_record.py": "bf3670d063025c481b851fdf60e30331744993cca7f88fc970eeaa59ed44ea8e",
+    "schemas/tls_metadata.py": "5aa0ecd0b7f33e5d0c4ea9e0103caa9d0f9567dab0db2ef2b0d2cafaa5a09237",
+    "schemas/alert.py": "334362e24535863247903d82c0f6ba60e0f21aaa4d3a2f263f7bdf2a81c695f2",
+    "schemas/enums.py": "8b8f820eea9af47d7d9cdb05d6963e2245fb44e7b0e641a620a4d0e6b4e2b576",
+    "ml/model.py": "2721a53d667d1ea773154fdebf3d349c5ef221dfdb51e937d5afdba1ffa6f354",
+    "ml/dga.py": "0a03098bf4cc22d8f5b7ff5fe3bd75d82d735479730e1890a7f99bedb9d6c0b7",
+    "detection/dga_rules.py": "2d6ea804a0ecf0e4ac9e16ee884e477581e975b767241c4486c3297b07ddee59",
+    "ml/artifact.json": "4d8e08323374535789e21f9f7cd1ee3f1c84b663ce555e67bb4ced57c95e8010",
+    "ml/artifact.sha256": "81e4ef2dc7bdff28a82225e803c3e5ab675f3a3979b273a0ac3bef34241c284b",
+    "ml/dga_v2.json": "c0314dd5f1fe360db11e2494326fd6e99f267d6e920fa091f6c9fcebc796996e",
+    "ml/dga_v2.sha256": "fb134985e6fd255935bb80fa4f77a73fc490957c0b669afd6bf290f9271ae080",
+    "datasets/dns_tunnel_development.py": "3156b012b2a0c9c71321c36ec3d036e1c2510529c9bfc71918c7abc4088520f6"
+  }
+}

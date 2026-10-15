@@ -38,6 +38,7 @@ frontend/public/__verify-responsive.html
 node_modules/
 dist/
 npm-debug.log*
+artifacts/ui-pass/
 yarn-debug.log*
 yarn-error.log*
 

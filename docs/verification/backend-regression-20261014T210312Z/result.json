@@ -1,0 +1,21 @@
+{
+  "started_utc": "20261014T210312Z",
+  "python": "3.13.5 (tags/v3.13.5:6cb20a2, Jun 11 2025, 16:15:46) [MSC v.1943 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "command": [
+    "C:\\Users\\Saich\\OneDrive\\Desktop\\PS26145\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-m",
+    "pytest",
+    "-q",
+    "-p",
+    "no:cacheprovider",
+    "--junitxml=C:\\Users\\Saich\\OneDrive\\Desktop\\PS26145\\docs\\verification\\backend-regression-20261014T210312Z\\pytest.xml"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 130.3402733999992,
+  "isolated_alert_db": true,
+  "protected_file_count": 185,
+  "changed_protected_files": [],
+  "scope": "Full existing backend pytest suite; no frontend build or new reserved-data evaluation"
+}

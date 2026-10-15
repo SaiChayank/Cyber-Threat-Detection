@@ -1,197 +1,108 @@
-# External streaming validation
+# Validation evidence and report currency
 
-The expanded DGA candidate is documented in [DGA development](DGA_DETECTION.md).
-It remains disabled after failing its gates. This streaming report checks the
-active conservative guard and records the inactive candidate's hash/status; it
-must not be confused with the candidate's development comparison metrics.
+Audited **2 October 2026**. This index distinguishes deployed behavior, synthetic
+regressions, public-data experiments and disabled candidates. No captures were
+replayed, models trained, reserved data inspected or measurements rerun for this
+documentation task. Original JSON measurements and their source hashes are retained.
 
-The later stream-accounting fix is documented in
-[Streaming reliability](STREAM_RELIABILITY.md). `ml/streaming_validation.json` has
-been refreshed with that code, including the rate-window helper hash. Numeric
-tables below retain the earlier guard comparison; read the newer report for current
-capture counts. Detection quality limitations and the disabled DGA candidate remain.
+**Subsequent release audit:** [Final release audit](FINAL_RELEASE_AUDIT.md) records
+fresh controlled reruns, 225 clean-checkout tests, production UI/build checks and
+new scoped benchmark runs. The historical table below classifies the original
+saved reports; it is not a claim that the later audit did not occur. The new
+controlled counts remain unchanged and detector-quality blockers remain unresolved.
+Three inactive public-model artifacts fail byte integrity in Windows checkout.
 
-## Follow-up — 29 September 2026
+## Which evidence is current
 
-Focused changes preserve the existing pipeline, model weights, API and frontend:
+“Source-matching” means the report's recorded runtime/benchmark hash set matches
+the audited files. It does not extend a report beyond its recorded workload or
+establish production accuracy. A report without a full runtime hash set cannot be
+called a final-runtime evaluation merely because its model artifact still exists.
 
-- Every DGA alert now requires the existing entropy/bigram rule, including a
-  model-only prediction. Length >=20 is measured on the first label, consistently
-  with the other lexical features. A readable suffix cannot satisfy this guard.
-- The long TXT/NULL rule likewise measures first-label length >=50.
-- DNS/TCP skips the two-byte message length and parses a complete first message
-  within the packet. Partial TCP messages are left unparsed; no reassembly is added.
-- DNS name compression is decoded with cycle, truncation, label, expanded-length
-  and 128-step traversal checks. Invalid names no longer produce partial evidence.
+| Saved evidence | Scope and measured result | Currency / interpretation |
+| --- | --- | --- |
+| `benchmarks/latest.json`, 1 Oct 12:10:58 UTC | 20,000 synthetic metadata events, 1,170 SQLite alerts; 5,649.91 events/s; processing+commit p50 0.0971 ms, p95 0.8416 ms | Source/model/script hashes match. Both core gates pass. Excludes capture, HTTP, SSE and browser. |
+| `benchmarks/delivery_latest.json`, 1 Oct 12:11:03 UTC | 100/100 API/SQLite/SSE records; p50 129.06 ms, p95 240.27 ms, p99 251.66 ms | Source/model/script hashes match. Loopback p95<1,000 ms passes. Excludes Next.js proxy, capture and rendering. |
+| `ml/encrypted_session_validation.json` | Controlled TP3/TN6/FP4/FN5; recall 37.5%, precision 42.86%, FPR 40% | Recorded runtime hashes match. Failed controlled quality gate; experimental, no independent reserved capture. |
+| `ml/exfil_development.json` | Controlled TP4/TN2/FP4/FN1; recall 80%, precision 50%, FPR 66.67% | Recorded runtime hashes match. Failed intent-discrimination gate; byte accounting corrected. |
+| `ml/dns_tunnel_candidate_validation.json` | Candidate validation TP5/TN5/FP0/FN0, query 5/12; rule-only baseline TP0/TN4/FP1/FN5 | Candidate/features/scenario hashes match, but report does not pin the full deployed hybrid pipeline. Development-only, candidate disabled; formal evaluation unavailable. |
+| `ml/syn_flood_validation.json` | Controlled TP6/TN6/FP0/FN0, incremental and feature gates passed at recorded revision | Historical: extractor/rate/pipeline hashes differ. Retains the SYN functional decision; not newly validated on final source. |
+| `ml/udp_flood_development.json`, `ml/spoofed_source_validation.json` | Controlled TP4/TN2/FP4/FN0; precision 50%, FPR 66.67% | Historical runtime revisions; failed quality/identifiability gates. Generic UDP DDOS heuristic active; spoof-specific predicate disabled. |
+| `ml/c2_beacon_development.json` | Controlled TP3/TN6/FP2/FN3; recall 50%, precision 60%, FPR 25% | Historical extractor/pipeline revision; quality unresolved, periodic benign overlap. |
+| `ml/recon_development.json` | Controlled TP4/TN3/FP3/FN1; recall 80%, precision 57.14%, FPR 50% | Historical extractor/pipeline revision; authorized-scanner false positives remain documented. |
+| `ml/streaming_validation.json`, 29 Sep 13:19:51 UTC | Public-domain wrapper plus14 PCAPs/609,583 parsed IP packets | Historical: pipeline/extractor/rate hashes differ. Public replay sanity check, not final runtime or labelled tunnel recall. |
+| `ml/runtime_evaluation.json`, 29 Sep 13:20:31 UTC | Frozen synthetic classifier F1 0.9894827640/0.9902547932 validation/test | Historical extractor/rate hashes; classifier-only, not hybrid or field accuracy. |
+| `ml/evaluation.json` | Original synthetic classifier fit-time report | Historical; lacks current runtime provenance. Do not present as final deployed quality. |
+| `ml/dga_v2_evaluation.json` | Inspected public-domain development recall 76.77%, FPR 1.68%; separate DNS FPR 2.34% | Candidate artifact matches, disabled; inspected cohorts influenced development. Recall/DNS gates failed. |
+| `ml/dga_weighted_candidate_validation.json` | Validation recall 92.80%, precision 99.63%, FPR 1.82% | Candidate artifact/plan hashes preserved; validation only. Reserved domain and separate benign-DNS results null, promotion blocked. |
+| `ml/public_*evaluation.json` | Separate completed-flow/domain research baselines and original PCAP replay | Historical experiments; none is the active runtime model. Failed public candidates remain inactive. |
 
-The unchanged model SHA256 is
-`4d8e08323374535789e21f9f7cd1ee3f1c84b663ce555e67bb4ced57c95e8010`.
-The current report also records hashes of the pipeline, extractor and parser source.
-No dependency, model promotion, source query or payload decryption was added.
+The [audit JSON](verification/documentation-audit.json) contains report hashes,
+recorded source mismatches and protected artifact/manifest hashes. Hash comparison
+is provenance checking, not a new detection experiment.
 
-### DGA comparison on the same inspected domain lists
+## Historical public-domain and capture observations
 
-| Measure | Original baseline | Conservative guard |
-| --- | ---: | ---: |
-| Legitimate domains evaluated | 1,000 | 1,000 |
-| Legitimate false positives | 912 | 0 |
-| Legitimate false-positive rate | 91.2% | 0% |
-| DGA true positives | 5,996 | 478 |
-| DGA false negatives | 0 | 5,518 |
-| DGA recall | 100% | 7.97% |
-| DGA precision in this sample | 86.80% | 100% |
+The conservative-guard comparison reused six previously inspected DGA lists and
+1,000 legitimate references: TP478/FN5518/FP0/TN1000, recall 7.97%, precision 100%,
+reference FPR 0%. Original baseline TP5996/FN0/FP912/TN88 gave reference FPR 91.2%.
+Real strings were wrapped in simulated tuples/times/sizes. Noise reduction came
+with large recall loss; zero FPs on that list never certified deployment FPR.
 
-**This fixes unsupported alert noise, not DGA coverage.** Most short and word-based
-DGA families remain undetected. Zero false positives applies only to this limited
-legitimate reference list; it does not establish deployment FPR. The same previously
-inspected data is reused, so this is regression comparison, not an untouched holdout
-or a promotion-quality evaluation. Addresses and timing remain explicitly simulated.
+The last saved public capture regression processed 609,583 IP packets from 14 files.
+Its two benign references emitted **96** deduplicated alerts: DDOS55, DGA25, C2 13,
+recon3. The earlier guard revision emitted97; the original baseline emitted1,671.
+These are alert counts on publisher-designated references, not per-flow FPR.
+Mixed attack-category captures lack joined trustworthy query/session labels, so
+they cannot yield attack recall or precision. No formal tunnel alert was established.
+These counts are historical and were not refreshed against current detectors.
 
-### Capture comparison and DNS visibility
+All 14 captures have96-byte snaplen. Complete parsed DNS/53 names reached at most
+36 characters, but clipped questions can be longer. Across the audit, attack-related
+queries are mostly clipped before complete QNAME/QTYPE. UDP5355 is consistent with
+LLMNR, not a new DNS attack input. The `heavy_text` port-header inventory counted
+192,490 UDP5355 datagrams:124,085 clipped and68,405 complete questions (66,685 PTR,
+1,508 ANY,212 A). See [visibility audit](DNS_TUNNELLING_VISIBILITY_AUDIT.md).
 
-All 14 captures still contribute 609,583 parsed IP packets. Across the two benign
-references, DGA alerts fall from 1,599 to 25; total alerts fall from 1,671 to 97.
-The remaining counts are 55 DDoS, 13 C2 and four reconnaissance alerts. These counts
-remain deduplicated false-positive candidates, not per-flow FPR.
+The archived [29 September narrative](history/STREAMING_VALIDATION_20260929.md)
+preserves its original bytes. Statements saying “current” inside that archived
+document refer to its historical revision only. Machine-readable results remain
+unchanged. Demo provenance points to the archived narrative rather than silently
+replacing its pinned evidence with this new index.
 
-The final capture run takes 120.80 seconds, about 5,046 parsed IP packets/sec for
-parsing, metadata adaptation, features and inference. It excludes hashing, replay
-pacing, SQLite, HTTP and UI, and must not be compared directly with flow/event rates.
+## Current implementation is not current accuracy
 
-There are still **zero DNS-tunnelling alerts** in the downloaded captures. The
-largest observed DNS/53 name is 36 characters; no long TXT/NULL first label reaches
-the rule. The later full packet inventory of `heavy_text.pcap` found 192,490
-UDP/5355 port headers, of which 124,085 datagrams are clipped and 68,405 have
-complete readable questions: 66,685 PTR, 1,508 ANY and 212 A.
-Common names are reverse lookups such as `252.0.0.224.in-addr.arpa`. This is consistent
-with local name-resolution traffic, not evidence that the tunnel detector should
-flag port 5355. LLMNR traffic remains distinct from DNS attack inputs.
+[Model/validation](MODEL_AND_VALIDATION.md) maps every threat to current features,
+rules/models, data sources, recorded counts, false positives and limits. All seven
+alert classes still function in the controlled [demo pack](FINAL_DEMO.md).
+DGA weighted validation success and tunnel development success do not justify
+promotion without the untouched final sets and unchanged gates. Most intent-based
+detectors fail matched benign controls; this remains an unresolved deliverable risk.
 
-The later [DNS visibility audit](DNS_TUNNELLING_VISIBILITY_AUDIT.md) resolves the
-larger visibility gap across all 14 captures: each has a 96-byte snap length,
-so almost all attack-category UDP/53 queries are clipped before their complete
-name and QTYPE. The 36-character maximum applies only to *complete parsed*
-questions, not to those clipped queries. The inventory's port-header count
-supersedes the earlier approximate single-capture count.
+The latest completed full working-tree suite was 223 tests in demo preparation; the later
+initial clean-checkout attempt reported 219 passed/4 failed due packaging/provenance.
+Setup corrections and two new packaging tests were added, but that full clean run
+was not repeated before the owner selected this documentation task. The earlier
+UI report records20/20 production browser checks and TypeScript/build success for
+that run. None is labelled a newly completed clean-install check.
 
-Controlled UDP and complete-message TCP captures with a long TXT question do
-produce a DNS-tunnelling alert through the parser, metadata adapter, API upload,
-asynchronous replay and SQLite. This verifies that the implemented path works; it
-does not establish recall on the public captures or justify lowering thresholds.
+For this documentation audit, demo preflight and all 15 targeted demo regressions
+passed after the historical narrative was archived. Six model checksums, eight
+dataset/protocol manifest hashes and both latest benchmark provenance sets were
+verified; 72 local Markdown links resolved. No full backend suite, frontend build
+or performance measurement was rerun. Individual detector narratives retain their
+original revision and frozen criteria: “current” within a historical narrative
+means current at that recorded revision, as classified in the table above.
 
-Verification: **59 tests pass**, including all seven threat scenarios, common-domain
-regressions, malformed/compressed DNS and DNS/TCP capture upload. The unchanged
-website's same-origin health, telemetry and benchmark routes respond successfully.
-The refreshed 20,000-event core + SQLite benchmark sustains **2,827 metadata
-events/sec** (target 2,000), with processing/persistence p95 **1.13 ms** (target
-50 ms). It excludes capture, HTTP, SSE and browser rendering. Original dashboard
-history is preserved; tests and benchmarking use separate databases.
+## Reproduction boundaries
 
-Remaining priority: train and independently evaluate a stronger lexical DGA model,
-obtain labelled tunnel traffic with visible DNS metadata, and validate other threat
-classes before calibration or deployment claims. Authentication and broader capture
-support remain separate deployment work.
+Follow README for installation, tests, demo preflight and the two benchmark commands.
+`python -m datasets.validate_streaming` requires the locally downloaded public
+inputs and overwrites its report. `python -m ml.train --evaluate-only` overwrites the
+classifier report; regular `ml.train` refits the frozen model. Do not run either
+as a documentation refresh or replace missing final evidence with inspected data.
 
-## Original baseline — 28 September 2026
-
-The current detector runs successfully, but its external detection quality does
-not yet meet a defensible deployment standard. This validation establishes a
-baseline before any model or threshold changes.
-
-Run `.venv/Scripts/python.exe -m datasets.validate_streaming` from the repository
-root for current results in `ml/streaming_validation.json`. The original run below
-is retained in `ml/streaming_validation_baseline.json`. The command reads local
-inputs, checks PCAP SHA256 values against the capture catalog, and records the
-runtime model hash. It does not train a model, modify captures, write dashboard
-alerts, contact monitored hosts, or decrypt encrypted payloads.
-
-## Runtime DGA detector
-
-Seven UMUDGA lists supplied 6,996 unique within-list domain decisions: 5,996 DGA
-domains and 1,000 legitimate domains. Duplicate strings within lists are excluded;
-legitimate strings overlapping attack lists would also be excluded. Positive
-domains appearing in different families may contribute once per family.
-
-- True positives: 5,996; false negatives: 0.
-- False positives: 912; true negatives: 88.
-- Recall: 100%; precision: 86.80%; legitimate-domain false-positive rate: 91.2%.
-- False-positive examples include `google.com`, `youtube.com`, `facebook.com`,
-  `baidu.com`, and `wikipedia.org`.
-
-These results evaluate the deployed synthetic-trained hybrid detector, rather
-than the separate public-domain research candidate. High recall is not useful
-when almost all legitimate inputs also trigger an alert.
-
-Domain names are real; addresses, packet sizes and times are simulated. Events
-are separated by 61 simulated seconds to isolate lexical decisions from prior
-peer history and 30-second alert suppression. Metrics measure whether a DGA
-alert is emitted for a domain, not accuracy on genuine network flows. Other
-emitted threat classes do not enter this DGA confusion matrix. Zero-denominator
-metrics are stored as null, rather than reported as perfect accuracy.
-
-## Full passive PCAP replay
-
-All 14 prepared CIC-Bell-DNS-EXF captures were processed, totaling **609,583 parsed
-IP packets**. Each capture starts with a fresh pipeline. Original packet times
-and tuples are preserved; processing remains incremental.
-
-The two benign-reference captures produced **1,671 alerts**, including 1,599 DGA
-alerts, 13 C2 alerts, 55 DDoS alerts and four reconnaissance alerts. These are
-false-positive candidates. Alert suppression and missing flow-level truth mean
-these counts must not be converted into a per-flow false-positive rate.
-
-No DNS-tunnelling alerts were emitted. The current adapter only attempts DNS
-sidecars on port 53. Parsed DNS observations contained no first label of at least
-50 characters with TXT type, so the current long-TXT rule had no matching input.
-The largest parsed complete DNS name was 36 characters. UDP destination port
-5355 dominated the attack-category captures, indicating a visibility question
-that needs capture inspection; this alone does not establish where the attack
-traffic resides. Simply lowering a TXT threshold would not resolve this gap.
-
-Attack-category PCAPs contain mixed traffic and lack trustworthy per-flow attack
-labels in the downloaded files. Their alert counts do not establish recall,
-precision, or successful exfiltration detection. Similarly, encrypted-malware
-alerts in these captures do not establish the presence of malware.
-
-Measured parsing, event adaptation, feature extraction and inference took
-108.76 seconds across all captures, approximately **5,605 parsed IP packets/sec**
-in aggregate. Per-capture core-processing p95 ranged from 0.166 to 1.659 ms.
-These are measurements of one local unpaced run, excluding integrity hashing,
-SQLite persistence, HTTP, replay pacing and dashboard delivery. They are not
-an end-to-end flow-throughput or alert-delivery benchmark.
-
-## Separate completed-flow candidates
-
-The CIC-DDoS2019 candidate evaluation was rerun against the existing 100,000-row
-UDP prefix. After exact-vector deduplication, it missed all 43,145 evaluated
-attack vectors and incorrectly flagged nine of 85 benign vectors: 0% recall and
-10.59% false-positive rate. This is a completed-flow research baseline, not the
-deployed streaming detector. See `ml/public_ddos_evaluation.json`.
-
-Earlier CIC-IDS2017, TLS and DGA candidate reports remain separate and were not
-retrained during this validation. Their definitions, splits and failed promotion
-gates are described in [Dataset integration](DATASETS.md).
-
-## Required follow-up
-
-1. Fix DGA discrimination first: use diverse legitimate domains, inspect shared
-   training/runtime lexical features, and compare rules with supervised baselines.
-   Threshold changes alone must not conceal missed attacks or false positives.
-2. Inspect capture protocol visibility and DNS record formats before expanding
-   tunnelling features. Keep extraction passive and metadata-only.
-3. Improve completed-flow DDoS baselines separately; do not invent packet arrival
-   times from CSVs or backdate complete-session totals.
-4. Collect trustworthy independent labels for C2, scanning, encrypted-session
-   suspicion and exfiltration. Synthetic demonstrations remain regression checks.
-5. Reevaluate, calibrate scores, and measure persistence/API alert latency after
-   a candidate meets a predefined detection-quality gate.
-
-All seven domain lists and 14 captures were inspected in the original run. Reusing them
-after changes is a regression/comparison experiment, not an untouched holdout.
-Credible generalization claims need new independent data or an explicitly
-documented evaluation design. The original validation changed no deployed model
-and promoted no public-data research candidate; the follow-up keeps model weights
-unchanged but adds the conservative alert guard described above.
-
-Verification: all 34 existing and validation-metric tests pass; the frontend
-production build also passes. Functional checks do not establish detection accuracy.
+No payload decryption, external reputation/DNS query, source probe, active address
+verification or inline response is implemented. See [expected solution](EXPECTED_SOLUTION.md)
+and [completion plan](COMPLETION_PLAN.md) for the distinction between working
+prototype infrastructure and unresolved detection-quality acceptance.

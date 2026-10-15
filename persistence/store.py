@@ -13,11 +13,18 @@ class AlertStore:
         self.connection.commit()
 
     def append(self, alert):
-        body = alert.to_dict()
-        cursor = self.connection.execute('INSERT INTO alerts(alert_id, threat, body) VALUES (?, ?, ?)',
-                                         (alert.alert_id, alert.threat_class, json.dumps(body)))
-        self.connection.commit()
-        return body | {'sequence': cursor.lastrowid}
+        return self.append_many([alert])[0]
+
+    def append_many(self, alerts):
+        """Persist all alerts for one observation, or roll back the entire batch."""
+        rows = []
+        with self.connection:
+            for alert in alerts:
+                body = alert.to_dict()
+                cursor = self.connection.execute('INSERT INTO alerts(alert_id, threat, body) VALUES (?, ?, ?)',
+                                                 (alert.alert_id, alert.threat_class, json.dumps(body)))
+                rows.append(body | {'sequence': cursor.lastrowid})
+        return rows
 
     def list(self, after=0, limit=200, threat=None, newest=False):
         condition = 'sequence > ?'

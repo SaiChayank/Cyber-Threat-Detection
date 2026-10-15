@@ -1,0 +1,25 @@
+{
+  "path": "data/raw/dga-evaluation-intake/drift-2025/T25_benign.parquet",
+  "bytes": 19772657,
+  "sha256": "37e0c10bd2ec750706dd153f4900c8f1fb7ed2d8fddf18393373ec278a9c4eea",
+  "num_rows": 2336094,
+  "num_row_groups": 20,
+  "columns": [
+    {
+      "name": "domain",
+      "type": "large_string"
+    },
+    {
+      "name": "family",
+      "type": "large_string"
+    },
+    {
+      "name": "label",
+      "type": "int32"
+    }
+  ],
+  "scope": "Parquet footer and schema only; no domain rows read",
+  "distinct_eligible_first_labels": null,
+  "assigned_strata": null,
+  "classification_metrics": null
+}

@@ -1,0 +1,17 @@
+{
+  "status": "SCOPED_RECONCILIATION_FROZEN_DATA_BLOCKED",
+  "sha256": {
+    "docs/verification/dns-contract-reconciliation-20261015/compare_versions.py": "b9659b583c9ad6cb1194d0f92baf68c2ffe34426a24dfa4ffbf7e506416f51f5",
+    "docs/verification/dns-contract-reconciliation-20261015/comparison.json": "2c536d213f473335fd8073db94bdea725f8fa47543c6efa7ce359b0e8470f6b0",
+    "docs/verification/dns-contract-reconciliation-20261015/current-development-traces.json": "47142345cb31d241a6ecf5548cbe77f87d53064a41fd7bf1a2d03414780e26d1",
+    "docs/verification/dns-contract-reconciliation-20261015/final-checks.json": "d68cbda27dbe2faff017619599523fefc872da388df3325ed5f43ff38615ef40",
+    "docs/verification/dns-contract-reconciliation-20261015/historical-development-traces.json": "47142345cb31d241a6ecf5548cbe77f87d53064a41fd7bf1a2d03414780e26d1",
+    "docs/verification/dns-contract-reconciliation-20261015/historical-pipeline.py.txt": "c01de15ed0fff1c3576cd757e0665c78358bd3a0efd365c3ddb11e32c9efdb86",
+    "docs/verification/dns-contract-reconciliation-20261015/initial-integrity.json": "5a5f80a286a852233a48265b5cf807c7f4ba69a6c4d9ded1e71e82f1e5d38a3e",
+    "docs/verification/dns-contract-reconciliation-20261015/source-diff.patch": "0af38e51793f711374d4387b680a95e57132a1563e5fa9deb3e594d9de58f2fc",
+    "data/dns_tunnel_evaluation_contract.json": "a30b164f22ed1d9bd61a89d9e8f225ab408fc91df2c06449159f6144ec68208b",
+    "data/dns_tunnel_evaluation_contract.sha256": "91777b6066f9a3cd34a7516a2ba7fe97212885b4f10ae4b6923fcf6f9fdacca6",
+    "tests/test_dns_tunnel_evaluation_contract.py": "c98629577dac8d695b2acda9e4b4af458e94bb2dcdbd0bfee46f7c386bb420a3",
+    "docs/DNS_TUNNELLING_CONTRACT_RECONCILIATION.md": "52ab10ef898580fd1afd4c57c86073c56e475c2c54678b8e3950625d3a65cad3"
+  }
+}

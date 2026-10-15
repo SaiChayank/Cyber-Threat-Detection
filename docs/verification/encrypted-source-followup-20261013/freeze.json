@@ -1,0 +1,29 @@
+{
+  "date": "2026-10-13",
+  "diagnostic_definition_of_done": "PASS",
+  "candidate_data_readiness": "BLOCKED",
+  "new_source_data_downloaded": false,
+  "labels_or_causal_events_created": false,
+  "model_changed": false,
+  "reserved_feature_values_inspected": false,
+  "tests": "Concurrent full backend suite: 333 passed; no new diagnostic code",
+  "protected_files_unchanged": 177,
+  "findings": "No raw capture in MS public listing; JOY transport-payload byte summaries and incomplete sequence are incompatible with direct IP-packet replay; session labels and ClientHello join unverified",
+  "next_smallest_experiment": "One eligible development-only raw TLS cohort with session labels; validate join/visibility before fitting",
+  "hashes": {
+    "docs\\verification\\encrypted-source-followup-20261013\\development-sequence-capability.json": "85e6778e6ce1e89c7ce2a1d6757228fed3deb644bcc90e6744fdff079c4ae54d",
+    "docs\\verification\\encrypted-source-followup-20261013\\findings.json": "7f3a2a9bf48a36bffd4bc074f1190850a57c0a81e199a5328a7afe10d8b3ac48",
+    "docs\\verification\\encrypted-source-followup-20261013\\joy-code-provenance.json": "d35003e9558510c86cf121d722c59a121c2a5a18485fab378dcdac5845c63b7e",
+    "docs\\verification\\encrypted-source-followup-20261013\\joy-config.json": "ca0ddb55804a866ac7829d08b4920933cff213037d8ca040a8e12e1f03265952",
+    "docs\\verification\\encrypted-source-followup-20261013\\joy-source-index.json": "c347c55d4883e84b94aafc55339e9725de856260c004b8921bbf3880bb448592",
+    "docs\\verification\\encrypted-source-followup-20261013\\ms-file-inventory.json": "64c6345ea0e2f90c9a67a10dacbc88186454a0f2531cf76aee7f5c13d13380ce",
+    "docs\\verification\\encrypted-source-followup-20261013\\PROTOCOL.md": "4bd4d707b96849e39f6d49366b619b26f93120b62f3dede5a9a6b5d579e5a7fa",
+    "docs\\verification\\encrypted-source-followup-20261013\\publisher-code-provenance.json": "da10d06ad8669f7687c260db07b8006938b8fe2bb78519fc2a72c8d6d019bf8d",
+    "docs\\verification\\encrypted-source-followup-20261013\\publisher-tree.json": "eb47056997316560c66fd22e56b688b5b156fd6d5d45ad5b419befb37fccb8f8",
+    "docs\\verification\\encrypted-source-followup-20261013\\source-access.json": "4f9c818944be5b4df12c7a3ea5fc0b19911c5fb18775ef78d6919f62f1e2d423",
+    "docs/ENCRYPTED_SOURCE_FOLLOWUP.md": "77d16b1b4c7629a541061b417d733c314982fea9574f448deb31ff6b9529070b",
+    "docs/DATASETS.md": "a60822605ccabc1ccd3916237c6a3d1ebae220e8f5e9f9449b01600b0aebc067",
+    "docs/MODEL_AND_VALIDATION.md": "99d953ff68da3ab753ed7aae1435c4e76cb4e02b99e7933af756234751f53df0"
+  },
+  "git_index_staged_changes": []
+}

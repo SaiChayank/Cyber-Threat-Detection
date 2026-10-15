@@ -9,13 +9,41 @@ black/red/white interface includes an original U/vector symbol, responsive top
 navigation, glass panels, a redesigned Monitor and a project footer. See
 [the design system](docs/UNIVECT_DESIGN_SYSTEM.md) for branding and motion conventions.
 
+**Status audited 2 October 2026:** the deployed classifier is synthetic-trained.
+Public/weighted DGA candidates and the DNS-tunnelling candidate remain disabled.
+Controlled replay works; most threat-quality gates are unresolved or failed.
+The corrected fresh checkout passes 225 backend tests, TypeScript, production
+build/start, 20/20 Monitor checks and the documented demo. Three inactive public
+model artifacts still lose byte-hash integrity under Windows checkout.
+**Final release status: NOT READY** — detector-quality blockers remain. See the
+[final release audit](docs/FINAL_RELEASE_AUDIT.md) for the requirement table and evidence.
+Current local updates are not all published to the remote repository. See the
+[completion plan](docs/COMPLETION_PLAN.md) and [report currency](docs/STREAMING_VALIDATION.md).
+
+**Packaging follow-up, 3 October 2026:** all seven frozen models now preserve their
+raw checksums in the corrected Windows-style checkout. Its isolated installation,
+252 backend tests, TypeScript, production build and incremental demo passed.
+This fix is still pending publication; detection-quality blockers are unchanged.
+See [model packaging validation](docs/MODEL_PACKAGING_VALIDATION.md).
+
+**Recovery follow-up, 3 October 2026:** failed inference/writes no longer commit
+causal state or partial alert batches. Sixteen new regressions, the full 268-test
+suite, TypeScript/build and unchanged demo traces pass. Scoped core/SSE performance
+gates still pass; model quality is unchanged. See
+[event recovery validation](docs/EVENT_RECOVERY_VALIDATION.md) for results and retry
+limitations. These changes are pending publication.
+
 ## Run locally
 
-Requires Python 3.11+ on PATH and Node.js 22.14+. The website uses Next.js 16,
+Requires Python 3.11+ on PATH, Node.js 22.14+, npm and a modern browser.
+Git is required to clone the repository. Initial package installation needs
+Internet access. The website uses Next.js 16,
 React 19, TypeScript, Tailwind CSS 4, Radix UI, Motion, Lucide, Recharts and Three.js.
-From the repository root in PowerShell:
+Start from a fresh directory in PowerShell:
 
 ```powershell
+git clone https://github.com/SaiChayank/Cyber-Threat-Detection.git
+cd Cyber-Threat-Detection
 npm install
 npm run dev
 ```
@@ -28,17 +56,36 @@ If a compatible API is already running, it reuses that service. Stop with Ctrl+C
 If port 3000 is occupied, the launcher selects a free port up to 3010 and prints
 the website URL. An explicitly configured `WEB_PORT` is respected.
 PowerShell installations that block `npm.ps1` can use `npm.cmd` for the same commands.
-The fitted model is included, so training is optional.
+The frozen fitted model is included; do not retrain it during setup or a demo.
 No Redis server, paid service, network attack generator or model download is required.
 Use one API worker so streaming state and replay controls stay consistent.
 
-Select **All threat scenarios**, choose a speed, and start replay. Alerts appear while
+Select **All threat scenarios** and **20× speed**, then start replay. The bundled
+256-event demo completes in approximately 44 seconds plus delivery overhead and
+produces 15 alerts across seven classes; its benign segment emits no alerts.
+The initial UI speed is 1×, which takes approximately 15 minutes for this same
+recorded stream. Alerts appear while
 processing continues. Click an alert for its connection details and numeric evidence.
 Replay each class individually or upload a classic Ethernet `.pcap` file (up to 16 MiB).
 Filters and JSON export operate on the latest 200 displayed alerts. SQLite retains the
 full alert history; `/api/alerts` supports sequence-based pagination and class filtering.
 
-To run the optimized website, use `npm run build` followed by `npm start`.
+After the first `npm run dev` has installed Python dependencies, stop it with
+Ctrl+C before testing the production workflow:
+
+```powershell
+npm run build
+npm start
+```
+
+The production launcher starts both the API and dashboard. No existing `.venv`,
+`.env`, raw datasets or analyst database is needed. The API creates a new local
+SQLite database automatically; existing history is never cleared by startup.
+For the frozen eight-scenario demonstration and offline replay fallbacks, follow
+[Final demo guide](docs/FINAL_DEMO.md). Run
+`.venv/Scripts/python.exe -m replay.demo_pack` first to verify artifact hashes,
+expected evidence and incremental alert positions without changing analyst history.
+
 `npm run typecheck` checks frontend types. Copy `.env.example` to `.env` to customize
 ports, API proxy and alert database; defaults work without an environment file.
 The browser uses same-origin `/api` requests, including SSE and PCAP uploads.
@@ -53,7 +100,8 @@ See [Website guide](docs/FRONTEND.md) for architecture, environment variables an
 - DDoS: SYN / high-rate flood summaries, traffic volume and source entropy.
 - Botnet C2: inter-arrival regularity and repeated peer communication.
 - DGA: domain entropy, digits and bigram statistics.
-- DNS tunnelling: long query names and TXT / NULL anomalies.
+- DNS tunnelling: long first-label TXT / NULL evidence and synthetic-model hits;
+  the broader causal-history candidate is disabled.
 - Encrypted-session malware suspicion: TLS fingerprints and encrypted packet-size /
   timing patterns; no application payload decryption.
 - Reconnaissance: destination host and port fan-out.
@@ -70,9 +118,12 @@ is confident. This reduces false alarms but misses short and word-based families
 The [before/after validation](docs/STREAMING_VALIDATION.md) reports both noise and
 recall; detection quality remains a prototype limitation.
 
-A broader lexical DGA classifier is now trained and integrated behind quality
-gates. It reaches 76.77% recall / 1.68% FPR in development comparisons, but remains
-disabled because recall and a separate benign-DNS check miss their targets.
+A broader lexical DGA classifier has optional integration behind quality gates.
+It recorded 76.77% recall / 1.68% FPR in inspected development comparisons, but
+remains disabled because recall and separate benign-DNS FPR 2.34% miss their gates.
+The later weighted candidate recorded validation recall 92.80%, precision 99.63%,
+FPR 1.82%; it is also disabled because independent reserved domain and separate
+benign-DNS evaluations are unavailable. These are not deployed-model accuracy.
 The existing guard stays active. See [DGA development](docs/DGA_DETECTION.md) for
 the expanded dataset, reproducible training and limitations.
 
@@ -80,14 +131,22 @@ the expanded dataset, reproducible training and limitations.
 
 ```powershell
 .venv/Scripts/python.exe -m pytest -q
-.venv/Scripts/python.exe -m datasets.validate_streaming
-.venv/Scripts/python.exe -m ml.train
-.venv/Scripts/python.exe -m ml.train --evaluate-only
+.venv/Scripts/python.exe -m replay.demo_pack
 .venv/Scripts/python.exe -m benchmarks.run --events 20000
 .venv/Scripts/python.exe -m benchmarks.delivery --events 100
-.venv/Scripts/python.exe -m replay.export
-.venv/Scripts/python.exe -m replay.cli data/lab/dga_domains.jsonl
+.venv/Scripts/python.exe -m replay.cli data/demo/all.jsonl --speed 20
 ```
+
+Run these after launcher installation, or after the documented manual Python
+setup above. They require no downloaded datasets or optional training libraries.
+Use `.venv/bin/python` on macOS/Linux. Benchmarks use disposable databases and
+write their reports inside this checkout. The offline CLI prints alerts without
+writing analyst history. Stop servers before benchmarking to reduce interference.
+
+Training/export commands are optional development tools, not setup or demo steps.
+Do not run `python -m ml.train` as a smoke check: it replaces the frozen model.
+Public-data evaluations need separately downloaded sources, and candidate training
+needs optional training libraries; neither is required for the bundled demo.
 
 `ml/train.py` trains Gaussian naive Bayes on independent synthetic experiments using
 exactly the runtime feature extractor. It writes the hash-verified JSON model and
@@ -99,6 +158,16 @@ The target is **2,000 simulated flow-metadata events/sec** with core processing 
 SQLite persistence **p95 below 50 ms**. Actual measured results and test workload are
 stored in `benchmarks/latest.json`; the benchmark excludes HTTP, browser delivery and
 raw capture overhead. Packet records and flow summaries are different units.
+
+Earlier saved source-matching run, 1 October 2026:20,000 metadata events,1,170 committed
+alerts,5,649.91 events/sec, processing+SQLite p95 0.8416 ms. Separately,
+`benchmarks/delivery_latest.json` records100/100 API/persisted/SSE alerts with
+loopback p95 240.27 ms against the<1,000 ms gate, excluding capture, Next.js proxy
+and browser rendering. [Performance evidence](docs/PERFORMANCE_VALIDATION.md)
+records hardware, p50/p95/p99, workload and provenance. Neither is a
+raw-capture-to-browser throughput claim. The later clean-checkout release audit
+measured 6,248.12 events/sec, core p95 0.8070 ms and API-to-SSE p95 247.48 ms
+(100/100 alerts). Its separate reports preserve the earlier JSON measurements.
 
 ## Passive architecture and visibility
 
@@ -142,6 +211,9 @@ Current implementation and requirement traceability: [Expected solution](docs/EX
 Remaining work, acceptance checks and current progress: [Completion plan](docs/COMPLETION_PLAN.md).
 Stream-accounting fix and delivery verification: [Streaming reliability](docs/STREAM_RELIABILITY.md).
 Model, features and evaluation: [Model documentation](docs/MODEL_AND_VALIDATION.md).
+Offline feature definitions/integrity and known historical drift:
+[Semantic contract preflight](docs/FEATURE_SEMANTIC_CONTRACT.md) (expected exit 1;
+not a runtime activation change or an accuracy gate).
 Downloaded public sources, replay presets and measured limitations: [Dataset integration](docs/DATASETS.md).
 Current runtime results and prioritized detection gaps: [Streaming validation](docs/STREAMING_VALIDATION.md).
 Older design documents describe proposals; they do not override the supplied screenshots

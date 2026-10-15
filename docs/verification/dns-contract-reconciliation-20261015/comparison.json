@@ -1,0 +1,114 @@
+{
+  "historical_commit": "12c7933715662e8291154304c44607b429085d11",
+  "historical_pipeline_sha256": "c01de15ed0fff1c3576cd757e0665c78358bd3a0efd365c3ddb11e32c9efdb86",
+  "scenarios": 20,
+  "events": 240,
+  "dns_feature_vector_disagreements": 0,
+  "dns_stable_alert_disagreements": 0,
+  "first_alert_query_or_capture_time_disagreements": 0,
+  "protected_files_unchanged": 69,
+  "reserved_access": false,
+  "scope": "Already exposed 20 synthetic development scenarios only; no production/generalization claim",
+  "first_alerts": [
+    {
+      "scenario": "train_long_a",
+      "first_alert_query": 5,
+      "first_alert_delay_ms": 1800.0
+    },
+    {
+      "scenario": "train_long_aaaa",
+      "first_alert_query": 5,
+      "first_alert_delay_ms": 2800.0
+    },
+    {
+      "scenario": "train_long_txt",
+      "first_alert_query": 5,
+      "first_alert_delay_ms": 2200.0
+    },
+    {
+      "scenario": "train_long_null",
+      "first_alert_query": 5,
+      "first_alert_delay_ms": 2600.0
+    },
+    {
+      "scenario": "train_multi_a",
+      "first_alert_query": 5,
+      "first_alert_delay_ms": 3200.0
+    },
+    {
+      "scenario": "train_cdn",
+      "first_alert_query": null,
+      "first_alert_delay_ms": null
+    },
+    {
+      "scenario": "train_telemetry",
+      "first_alert_query": null,
+      "first_alert_delay_ms": null
+    },
+    {
+      "scenario": "train_discovery",
+      "first_alert_query": null,
+      "first_alert_delay_ms": null
+    },
+    {
+      "scenario": "train_txt",
+      "first_alert_query": null,
+      "first_alert_delay_ms": null
+    },
+    {
+      "scenario": "train_machine",
+      "first_alert_query": null,
+      "first_alert_delay_ms": null
+    },
+    {
+      "scenario": "val_long_a",
+      "first_alert_query": 5,
+      "first_alert_delay_ms": 7200.0
+    },
+    {
+      "scenario": "val_long_aaaa",
+      "first_alert_query": 5,
+      "first_alert_delay_ms": 4400.0
+    },
+    {
+      "scenario": "val_multi_txt",
+      "first_alert_query": 5,
+      "first_alert_delay_ms": 4800.0
+    },
+    {
+      "scenario": "val_multi_null",
+      "first_alert_query": 5,
+      "first_alert_delay_ms": 3800.0
+    },
+    {
+      "scenario": "val_long_txt",
+      "first_alert_query": 5,
+      "first_alert_delay_ms": 6000.0
+    },
+    {
+      "scenario": "val_cdn",
+      "first_alert_query": null,
+      "first_alert_delay_ms": null
+    },
+    {
+      "scenario": "val_telemetry",
+      "first_alert_query": null,
+      "first_alert_delay_ms": null
+    },
+    {
+      "scenario": "val_discovery",
+      "first_alert_query": null,
+      "first_alert_delay_ms": null
+    },
+    {
+      "scenario": "val_txt",
+      "first_alert_query": null,
+      "first_alert_delay_ms": null
+    },
+    {
+      "scenario": "val_machine",
+      "first_alert_query": null,
+      "first_alert_delay_ms": null
+    }
+  ]
+}

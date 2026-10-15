@@ -1,0 +1,24 @@
+PASS Initial live connection and empty state
+PASS 1440px empty state and section navigation
+PASS 768px empty state and section navigation
+PASS 390px empty state and section navigation
+PASS 320px empty state and section navigation
+PASS Scenario selection, incremental start/stop and metric updates
+PASS Replay restart, completion, SSE alerts and metric counts
+PASS Threat/severity/search filters, pagination, no-match recovery and JSON export
+PASS 1440px populated table, alert detail and focus return
+PASS 768px populated table, alert detail and focus return
+PASS 390px populated table, alert detail and focus return
+PASS 320px populated table, alert detail and focus return
+PASS IPv6 addresses and long identifiers fit mobile alert detail
+PASS PCAP file input: invalid extension/empty/invalid/oversized and valid upload
+PASS Telemetry unavailable/retry recovers the live status
+PASS SSE-only disconnect/resume receives persisted alerts without duplicate records
+PASS Stream schema errors survive telemetry polling and recover on a valid event
+PASS Initial backend unavailable state and subsequent recovery
+PASS Held queue stays stable while real alerts persist and SSE/metrics continue
+PASS Engine filter combines with search/class/severity, reset and JSON export
+FAIL Investigation controls fit desktop, tablet and phone; reduced motion stays usable: Reduced motion retained a queue transition
+PASS Landing/Monitor routing and reduced-motion UI
+PASS Browser runtime and console
+22/23 checks passed. Report: C:\Users\Saich\OneDrive\Desktop\PS26145\docs\verification\monitor-refinement-20261013\browser

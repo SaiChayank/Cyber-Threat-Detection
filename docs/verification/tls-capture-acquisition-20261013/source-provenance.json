@@ -1,0 +1,7 @@
+{
+  "source_url": "https://www.unb.ca/cic/datasets/dohbrw-2020.html",
+  "source_sha256": "2f855662791b5294de5361569db0f19e545d9fc88836504ef7a60f53c0db39eb",
+  "licence": "Dataset redistribution/republication permitted with DoHMeter and paper citation",
+  "attribution": "MontazeriShatoori, Davidson, Kaur, Lashkari. Detection of DoH Tunnels using Time-series Classification of Encrypted Traffic. IEEE CyberSciTech 2020. DOI 10.1109/DASC-PICom-CBDCom-CyberSciTech49142.2020.00026",
+  "label_scope": "Controlled encrypted DNS tunnelling versus controlled browser HTTPS/DoH; not generic malware/session compromise"
+}

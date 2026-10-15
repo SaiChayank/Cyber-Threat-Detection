@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-14",
+  "status": "SOURCE_FAILURE_FINDINGS_FROZEN",
+  "definition_of_done": "Eligible benign data requirement NOT MET",
+  "files": [
+    {
+      "path": "docs/DGA_BENIGN_SOURCE_QUALIFICATION.md",
+      "sha256": "7cbb133c68d7860007b29992ce0ca53e8a2eac6eaaeee2ee8615d3cb04803755"
+    },
+    {
+      "path": "docs/DGA_BENIGN_DATA_REQUEST.md",
+      "sha256": "c4b8bede627ef9d7598c69eb3de782ad48a20a552603138ccedd62706bf78470"
+    },
+    {
+      "path": "docs/verification/dga-benign-source-review-20261014/decision.json",
+      "sha256": "7d1c8b7c701448e616e5ef32d76d3665df121a447001a85bb5bc38f499421688"
+    },
+    {
+      "path": "docs/verification/dga-benign-source-review-20261014/decision.sha256",
+      "sha256": "d24a3b1b2c865b2dd19d932e3563355e489b0a6618c937532df5daaafeaf834e"
+    }
+  ]
+}

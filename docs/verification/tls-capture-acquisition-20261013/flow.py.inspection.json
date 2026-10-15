@@ -1,0 +1,54 @@
+{
+  "url": "https://raw.githubusercontent.com/ahlashkari/DoHLyzer/86bd1dc970b919a04f12eeda679893beee32ec8d/meter/flow.py",
+  "sha256": "3f3ff1460caaf34c4c67183af4f0b36a756327fdf011ec0544e903d2b2096471",
+  "matched_lines": [
+    [
+      27,
+      "        self.latest_timestamp = 0"
+    ],
+    [
+      28,
+      "        self.start_timestamp = 0"
+    ],
+    [
+      56,
+      "            'TimeStamp': packet_time.get_time_stamp(),"
+    ],
+    [
+      57,
+      "            'Duration': packet_time.get_duration(),"
+    ],
+    [
+      95,
+      "            'DoH': self.is_doh(),"
+    ],
+    [
+      110,
+      "        self.latest_timestamp = max([packet.time, self.latest_timestamp])"
+    ],
+    [
+      112,
+      "        if self.start_timestamp == 0:"
+    ],
+    [
+      113,
+      "            self.start_timestamp = packet.time"
+    ],
+    [
+      115,
+      "    def is_doh(self) -> bool:"
+    ],
+    [
+      116,
+      "        return self.src_ip in constants.DOH_IPS or self.dest_ip in constants.DOH_IPS"
+    ],
+    [
+      119,
+      "    def duration(self):"
+    ],
+    [
+      120,
+      "        return self.latest_timestamp - self.start_timestamp"
+    ]
+  ]
+}

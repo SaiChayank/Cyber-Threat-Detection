@@ -1,0 +1,54 @@
+{
+  "counts": {
+    "configuration_rows": 1,
+    "flow_rows": 17421,
+    "explicit_label_rows": 0,
+    "flows_with_packet_sequence": 17421,
+    "flows_with_tls_metadata": 17421
+  },
+  "tls_fields": [
+    "c_extensions",
+    "c_key_exchange",
+    "c_key_length",
+    "c_random",
+    "c_version",
+    "cs",
+    "s_cert",
+    "s_extensions",
+    "s_random",
+    "s_version",
+    "scs",
+    "srlt"
+  ],
+  "packet_fields": [
+    "b",
+    "dir",
+    "ipt"
+  ],
+  "schema_only_examples": [
+    {
+      "tls_field_types": {
+        "c_version": "int",
+        "s_version": "int",
+        "c_key_length": "int",
+        "c_key_exchange": "str",
+        "c_random": "str",
+        "s_random": "str",
+        "scs": "str",
+        "cs": "list",
+        "c_extensions": "list",
+        "s_extensions": "list",
+        "s_cert": "list",
+        "srlt": "list"
+      },
+      "first_packet_field_types": {
+        "b": "int",
+        "dir": "str",
+        "ipt": "int"
+      }
+    }
+  ],
+  "labels_assigned": false,
+  "synthetic_times_created": false,
+  "runtime_format_added": false
+}

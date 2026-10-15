@@ -1,0 +1,65 @@
+[
+  {
+    "file": "PCAPs/DoHMalicious/MaliciousDoH-dnscat2-Pcap-001-600.zip",
+    "url": "https://cicresearch.ca/CICDataset/DoHBrw-2020/download.php?file=PCAPs%2FDoHMalicious%2FMaliciousDoH-dnscat2-Pcap-001-600.zip",
+    "status": 200,
+    "headers": {
+      "content-disposition": "attachment; filename=\"MaliciousDoH-dnscat2-Pcap-001-600.zip\"",
+      "content-type": "application/octet-stream"
+    }
+  },
+  {
+    "file": "PCAPs/DoHMalicious/MaliciousDoH-dns2tcp-Pcap-001_600.zip",
+    "url": "https://cicresearch.ca/CICDataset/DoHBrw-2020/download.php?file=PCAPs%2FDoHMalicious%2FMaliciousDoH-dns2tcp-Pcap-001_600.zip",
+    "status": 200,
+    "headers": {
+      "content-disposition": "attachment; filename=\"MaliciousDoH-dns2tcp-Pcap-001_600.zip\"",
+      "content-type": "application/octet-stream"
+    }
+  },
+  {
+    "file": "PCAPs/DoHMalicious/MaliciousDoH-iodine-pcap-5409_5521.zip",
+    "url": "https://cicresearch.ca/CICDataset/DoHBrw-2020/download.php?file=PCAPs%2FDoHMalicious%2FMaliciousDoH-iodine-pcap-5409_5521.zip",
+    "status": 200,
+    "headers": {
+      "content-disposition": "attachment; filename=\"MaliciousDoH-iodine-pcap-5409_5521.zip\"",
+      "content-type": "application/octet-stream"
+    }
+  },
+  {
+    "file": "PCAPs/DoHBenign-NonDoH/BenignDoH_NonDoH-Firefox-AdGuard.zip",
+    "url": "https://cicresearch.ca/CICDataset/DoHBrw-2020/download.php?file=PCAPs%2FDoHBenign-NonDoH%2FBenignDoH_NonDoH-Firefox-AdGuard.zip",
+    "status": 200,
+    "headers": {
+      "content-disposition": "attachment; filename=\"BenignDoH_NonDoH-Firefox-AdGuard.zip\"",
+      "content-type": "application/octet-stream"
+    }
+  },
+  {
+    "file": "PCAPs/DoHBenign-NonDoH/BenignDoH_NonDoH-Chrome-AdGuard.zip",
+    "url": "https://cicresearch.ca/CICDataset/DoHBrw-2020/download.php?file=PCAPs%2FDoHBenign-NonDoH%2FBenignDoH_NonDoH-Chrome-AdGuard.zip",
+    "status": 200,
+    "headers": {
+      "content-disposition": "attachment; filename=\"BenignDoH_NonDoH-Chrome-AdGuard.zip\"",
+      "content-type": "application/octet-stream"
+    }
+  },
+  {
+    "file": "CSVs/MaliciousDoH-CSVs.zip",
+    "url": "https://cicresearch.ca/CICDataset/DoHBrw-2020/download.php?file=CSVs%2FMaliciousDoH-CSVs.zip",
+    "status": 200,
+    "headers": {
+      "content-disposition": "attachment; filename=\"MaliciousDoH-CSVs.zip\"",
+      "content-type": "application/octet-stream"
+    }
+  },
+  {
+    "file": "CSVs/BenignDoH-NonDoH-CSVs.zip",
+    "url": "https://cicresearch.ca/CICDataset/DoHBrw-2020/download.php?file=CSVs%2FBenignDoH-NonDoH-CSVs.zip",
+    "status": 200,
+    "headers": {
+      "content-disposition": "attachment; filename=\"BenignDoH-NonDoH-CSVs.zip\"",
+      "content-type": "application/octet-stream"
+    }
+  }
+]

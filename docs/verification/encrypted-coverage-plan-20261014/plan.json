@@ -1,0 +1,555 @@
+{
+  "protocol_id": "ps26145-encrypted-tls-coverage-partitions-v1",
+  "date": "2026-10-14",
+  "design_status": "FROZEN",
+  "scope": "Native passive TLS/TCP controlled C2 indicators; no generic malware or raw QUIC claim",
+  "training_status": "BLOCKED",
+  "training_performed": false,
+  "inference_performed": false,
+  "promotion_performed": false,
+  "reserved_values_read": false,
+  "source_influence_inventory": [
+    {
+      "id": "synthetic_demo_and_controlled_encrypted",
+      "frameworks": [
+        "fixed_demo_fingerprint",
+        "controlled_synthetic_scenario_families"
+      ],
+      "influenced": [
+        "features",
+        "rules",
+        "training",
+        "validation",
+        "historical_evaluation",
+        "demo"
+      ],
+      "eligibility": "regression_only",
+      "final_reserve_allowed": false,
+      "counts_scope": "historical generator/scenario counts, not independent raw TLS"
+    },
+    {
+      "id": "annotated_tls_18336960_winapps_malware",
+      "frameworks": "All prior family/application groups in pinned historical component manifest",
+      "influenced": [
+        "features",
+        "training",
+        "validation",
+        "historical_evaluation",
+        "split_diagnosis"
+      ],
+      "eligibility": "historical_weak_label_completed_session_only",
+      "final_reserve_allowed": false,
+      "counts": {
+        "train": {
+          "BENIGN_REFERENCE": 11475,
+          "MALWARE_RELATED": 14,
+          "UNLABELLED": 74
+        },
+        "validation": {
+          "BENIGN_REFERENCE": 13123,
+          "MALWARE_RELATED": 32,
+          "UNLABELLED": 328
+        },
+        "quarantine_historical_test": {
+          "BENIGN_REFERENCE": 4928,
+          "MALWARE_RELATED": 755895,
+          "UNLABELLED": 496556
+        },
+        "unlabelled": {
+          "BENIGN_REFERENCE": 0,
+          "MALWARE_RELATED": 0,
+          "UNLABELLED": 152180
+        }
+      },
+      "sample_leakage": {
+        "historical_train_validation_shared_samples": 544
+      },
+      "new_raw_causal_training_allowed": false
+    },
+    {
+      "id": "annotated_tls_18336960_soho",
+      "frameworks": null,
+      "influenced": [
+        "source_schema_inventory"
+      ],
+      "eligibility": "unlabelled_excluded",
+      "final_reserve_allowed": false,
+      "observed_footer_rows": 108036
+    },
+    {
+      "id": "osf_ms_meterpreter_joy",
+      "frameworks": [
+        "meterpreter"
+      ],
+      "influenced": [
+        "source_feature_semantics",
+        "visibility_diagnosis"
+      ],
+      "eligibility": "derivative_only_no_verified_session_truth_or_hello_position",
+      "final_reserve_allowed": false,
+      "observed_flow_records": 17421,
+      "sha256": "d18bad45afd5c62ee848a8db04e0216d22799a3824a58a6a9fd117f45a77ebc3",
+      "raw_capture_available_in_inspected_public_listing_or_local_download": false,
+      "raw_capture_existence_elsewhere": "NOT_ESTABLISHED: inspected listing does not prove authors lack raw captures"
+    },
+    {
+      "id": "osf_tranco_same_research_collection",
+      "frameworks": null,
+      "influenced": [
+        "source_metadata_research"
+      ],
+      "eligibility": "unqualified_benign_lead_only",
+      "final_reserve_allowed": false,
+      "acquired": false,
+      "note": "Browser/web destination popularity does not prove browser/updater/API session intent; do not use as sole negative source against TQH positives"
+    },
+    {
+      "id": "cira_doh_selected_dnscat2",
+      "frameworks": [
+        "dnscat2_filename_only_unverified_baseline_intent"
+      ],
+      "influenced": [
+        "source_selection",
+        "parser_visibility",
+        "timing_diagnosis"
+      ],
+      "eligibility": "excluded_sll113_intent_timezone_gaps",
+      "final_reserve_allowed": false,
+      "inspected_raw_captures": 3,
+      "verified_malicious_sessions": 0
+    },
+    {
+      "id": "cira_doh_benign_archives",
+      "frameworks": null,
+      "influenced": [
+        "archive_metadata_only"
+      ],
+      "eligibility": "csv_not_raw_timing_and_incomplete_raw_downloads_excluded",
+      "final_reserve_allowed": false,
+      "benign_csv_values_read": false
+    },
+    {
+      "id": "tqh_d_merlin_current",
+      "frameworks": [
+        "merlin"
+      ],
+      "influenced": [
+        "source_selection",
+        "visibility_design",
+        "label_join_design",
+        "fingerprint_distribution_diagnosis"
+      ],
+      "eligibility": "qualified_training_development_only_global_training_blocked",
+      "final_reserve_allowed": false,
+      "source_labels": {
+        "malicious_c2": 115,
+        "benign": 547
+      },
+      "qualified_tls_sessions": {
+        "malicious_c2": 115,
+        "benign": 467
+      },
+      "independent_capture_runs": 1,
+      "source_environment_groups": 1,
+      "positive_ja3s": 1,
+      "verified_benign_application_categories": []
+    },
+    {
+      "id": "tqh_a_sliver_lead",
+      "frameworks": [
+        "sliver"
+      ],
+      "influenced": [
+        "publisher_documentation_only"
+      ],
+      "eligibility": "conditional_training_only_same_tqh_provenance",
+      "final_reserve_allowed": false,
+      "acquired": false,
+      "qualified_tls_sessions": null,
+      "note": "Different framework/server host does not establish independent publisher/collection environment"
+    },
+    {
+      "id": "tqh_b_merlin_quic",
+      "frameworks": [
+        "merlin"
+      ],
+      "influenced": [
+        "publisher_documentation_only"
+      ],
+      "eligibility": "positive_scope_excluded_raw_quic_unsupported",
+      "final_reserve_allowed": false,
+      "acquired": false
+    },
+    {
+      "id": "tqh_c_mythic_poseidon_http_aes",
+      "frameworks": [
+        "mythic_poseidon"
+      ],
+      "influenced": [
+        "publisher_documentation_only"
+      ],
+      "eligibility": "positive_scope_excluded_not_tls",
+      "final_reserve_allowed": false,
+      "acquired": false
+    },
+    {
+      "id": "cicmaldroid_ustc",
+      "frameworks": null,
+      "influenced": [
+        "source_documentation_research"
+      ],
+      "eligibility": "unqualified_app_directory_labels_not_session_intent",
+      "final_reserve_allowed": false,
+      "acquired_for_tls": false
+    },
+    {
+      "id": "bccc_doh_smote",
+      "frameworks": null,
+      "influenced": [
+        "source_documentation_research"
+      ],
+      "eligibility": "excluded_oversampled_csv_derivative",
+      "final_reserve_allowed": false,
+      "acquired": false
+    },
+    {
+      "id": "iot23_restricted_sources",
+      "frameworks": null,
+      "influenced": [
+        "permission_availability_only"
+      ],
+      "eligibility": "excluded_no_authorization",
+      "final_reserve_allowed": false,
+      "acquired": false
+    },
+    {
+      "id": "already_used_cic_dns_and_completed_flow_sources",
+      "frameworks": null,
+      "influenced": [
+        "prior_detector_replay",
+        "visibility_inventory"
+      ],
+      "eligibility": "no_verified_tls_session_intent_or_full_handshake_controls",
+      "final_reserve_allowed": false
+    }
+  ],
+  "baseline_references": [
+    {
+      "file": "docs/ENCRYPTED_SESSION_VALIDATION.md",
+      "sha256": "69e1d0f0c3b2acab54098e15a31aa6230a743c577307c8cd0d203c94efab4e9c",
+      "bytes": 4031,
+      "checksum_policy": "text_lf_normalized",
+      "content_sha256": "69e1d0f0c3b2acab54098e15a31aa6230a743c577307c8cd0d203c94efab4e9c"
+    },
+    {
+      "file": "docs/ENCRYPTED_DATA_FEASIBILITY.md",
+      "sha256": "fd51c55d1ac5d73b18e266bac5ec7710c64ad16f31db29317d56e7e5eaeb2bf1",
+      "bytes": 10387,
+      "checksum_policy": "text_lf_normalized",
+      "content_sha256": "fd51c55d1ac5d73b18e266bac5ec7710c64ad16f31db29317d56e7e5eaeb2bf1"
+    },
+    {
+      "file": "docs/ENCRYPTED_SPLIT_DESIGN.md",
+      "sha256": "743cb775db6582d47644d32b1b029a95a964c5a93c4aec17a1188ad37ceb3ec4",
+      "bytes": 7108,
+      "checksum_policy": "text_lf_normalized",
+      "content_sha256": "743cb775db6582d47644d32b1b029a95a964c5a93c4aec17a1188ad37ceb3ec4"
+    },
+    {
+      "file": "docs/ENCRYPTED_SOURCE_FOLLOWUP.md",
+      "sha256": "77d16b1b4c7629a541061b417d733c314982fea9574f448deb31ff6b9529070b",
+      "bytes": 4891,
+      "checksum_policy": "text_lf_normalized",
+      "content_sha256": "77d16b1b4c7629a541061b417d733c314982fea9574f448deb31ff6b9529070b"
+    },
+    {
+      "file": "docs/TLS_CAPTURE_ACQUISITION.md",
+      "sha256": "4e6bda67dc7aeeaac2e3e3b9313e307e68d353664eafebac493849b7b90a6c14",
+      "bytes": 14127,
+      "checksum_policy": "text_lf_normalized",
+      "content_sha256": "4e6bda67dc7aeeaac2e3e3b9313e307e68d353664eafebac493849b7b90a6c14"
+    },
+    {
+      "file": "docs/FEATURE_SEMANTIC_CONTRACT.md",
+      "sha256": "e59acdc5d359a8ac7dbf39d97e5f43b1db742a03ff99c2bc6ec397c1ffbf4a31",
+      "bytes": 5712,
+      "checksum_policy": "text_lf_normalized",
+      "content_sha256": "e59acdc5d359a8ac7dbf39d97e5f43b1db742a03ff99c2bc6ec397c1ffbf4a31"
+    },
+    {
+      "file": "data/public_manifest.json",
+      "sha256": "500e0fb5b4a47c240f143cc1ec2b565a479e15cb3f05a089ff35ca7d2d4dd07d",
+      "bytes": 1748,
+      "checksum_policy": "text_lf_normalized",
+      "content_sha256": "4f7cfc1c01cb45fa53f89418a515fafa185e734ffbde167f848cfa28a6a1369a"
+    },
+    {
+      "file": "data/feature_semantic_contract.json",
+      "sha256": "32741180e7ceb95ffc8541201f3f5644a502f035f1791232368faefe76bba616",
+      "bytes": 10578,
+      "checksum_policy": "text_lf_normalized",
+      "content_sha256": "32741180e7ceb95ffc8541201f3f5644a502f035f1791232368faefe76bba616"
+    },
+    {
+      "file": "docs/verification/encrypted-split-design-20261012/manifest.json",
+      "sha256": "c7f38da221618d0608378223e08b7ac3bf4399afb4fbfd35291fec0ad24273c5",
+      "bytes": 3380252,
+      "checksum_policy": "text_lf_normalized",
+      "content_sha256": "c7f38da221618d0608378223e08b7ac3bf4399afb4fbfd35291fec0ad24273c5"
+    },
+    {
+      "file": "docs/verification/tls-capture-acquisition-20261013/TQH_README_v122.md",
+      "sha256": "eed4c1f74bdb5f452389eee141e8a3bc0c530657ffc6f71034a07b6090966f07",
+      "bytes": 21373,
+      "checksum_policy": "text_lf_normalized",
+      "content_sha256": "eed4c1f74bdb5f452389eee141e8a3bc0c530657ffc6f71034a07b6090966f07"
+    },
+    {
+      "file": "docs/verification/tls-capture-acquisition-20261013/TQH_SELECTION.md",
+      "sha256": "4168071679dfa7f7e7c67651c3329bb50d8d3e687c914dcafd0212ba6f41241c",
+      "bytes": 2338,
+      "checksum_policy": "text_lf_normalized",
+      "content_sha256": "4168071679dfa7f7e7c67651c3329bb50d8d3e687c914dcafd0212ba6f41241c"
+    },
+    {
+      "file": "docs/verification/tls-capture-acquisition-20261013/tqh-input-manifest.json",
+      "sha256": "0c09265c3830ed4b11801943c81ccfd33d73539549c8adf392c5f65429f5758c",
+      "bytes": 1444,
+      "checksum_policy": "text_lf_normalized",
+      "content_sha256": "e08a901ef23e730cdeb9b8ad75fa3d0c97e10930f224e1824322a7fc96125f5e"
+    },
+    {
+      "file": "docs/verification/tls-capture-acquisition-20261013/tqh-qualification-release.json",
+      "sha256": "638d99f19b4b7bf5240fca6ad7fc2c2c7305bbde4650a9222cf5a89f9dfea862",
+      "bytes": 649535,
+      "checksum_policy": "text_lf_normalized",
+      "content_sha256": "67de7c5f91bc1914e4daa6e4e5f542b5e2b016465c401780256bc17d3a2cecf5"
+    },
+    {
+      "file": "docs/verification/tls-capture-acquisition-20261013/capture-manifest.json",
+      "sha256": "2f771fdc725f0820cf7cf50254a0ec0b2a53783c7e18da5040174b368d855680",
+      "bytes": 1879,
+      "checksum_policy": "text_lf_normalized",
+      "content_sha256": "2f771fdc725f0820cf7cf50254a0ec0b2a53783c7e18da5040174b368d855680"
+    },
+    {
+      "file": "docs/verification/tls-capture-acquisition-20261013/acquisition-summary.json",
+      "sha256": "8391e6bdc993d9961d07abf95e838d841f9c060ec9d5d80f83949865ad58b7e1",
+      "bytes": 2185,
+      "checksum_policy": "text_lf_normalized",
+      "content_sha256": "07aac0cc17b69c86c400d1ba4e3c33dc91e49c5e9830a45170d9b0e46201372f"
+    },
+    {
+      "file": "docs/verification/tls-capture-acquisition-20261013/freeze.json",
+      "sha256": "e5accde8a744cafeab253e7821a1e4cdbfe6a361b40da61e40f7a8a7dfe7f7c9",
+      "bytes": 11314,
+      "checksum_policy": "text_lf_normalized",
+      "content_sha256": "fe072cc07ca1c6fc865d190647e007dc1383bf4ad0c2d1f1a2406e14f044e0b1"
+    },
+    {
+      "file": "ml/artifact.json",
+      "sha256": "4d8e08323374535789e21f9f7cd1ee3f1c84b663ce555e67bb4ced57c95e8010",
+      "bytes": 7657,
+      "checksum_policy": "raw_bytes",
+      "content_sha256": "4d8e08323374535789e21f9f7cd1ee3f1c84b663ce555e67bb4ced57c95e8010"
+    },
+    {
+      "file": "ml/public_tls.json",
+      "sha256": "39241b3e9defdf42f6ad5e786666fe724bf9b74239ebea456e673c23456b2c1e",
+      "bytes": 1606,
+      "checksum_policy": "raw_bytes",
+      "content_sha256": "39241b3e9defdf42f6ad5e786666fe724bf9b74239ebea456e673c23456b2c1e"
+    },
+    {
+      "file": "ml/public_tls_evaluation.json",
+      "sha256": "59bcdef3016a2d74a1b466479840c0cbda7ba1d44361bc63dc510362b8515eab",
+      "bytes": 1425,
+      "checksum_policy": "text_lf_normalized",
+      "content_sha256": "7a7b31fe7086b21a05d019d8482b0c7b263f39e29bae0c685367a542c35a97d3"
+    },
+    {
+      "file": "ml/encrypted_session_validation.json",
+      "sha256": "be2e6311356b497ccb0cb4cf57c6bf8e85c87d3fcef849332756817eeb20a5e7",
+      "bytes": 13847,
+      "checksum_policy": "text_lf_normalized",
+      "content_sha256": "376d6a092efd94e60392179e082cfb69603ff1d0edc22a4080f5f7d1e5807ab7"
+    }
+  ],
+  "known_cohort_roster": {
+    "file": "docs/verification/encrypted-coverage-plan-20261014/known-cohort-roster.json",
+    "sha256": "8448fcbd0a6c0c2746cdb42e3a10c3bb8d5f21741b348a3f127ef154e86ea46e",
+    "bytes": 43465,
+    "checksum_policy": "text_lf_normalized"
+  },
+  "partition_roles": {
+    "training_development": {
+      "source_ids": [
+        "tqh_c2_22732327_v122"
+      ],
+      "provenance_groups": [
+        "tqh_shared_collection_all_versions_profiles"
+      ],
+      "assigned_positive_frameworks": [
+        "merlin"
+      ],
+      "supplementary_frameworks_conditionally_training_only": [
+        "sliver"
+      ],
+      "known_qualified_tls_sessions": {
+        "malicious_c2": 115,
+        "benign": 467
+      },
+      "actual_cohorts": [
+        "TQHC2-202607-D-i300-j30"
+      ],
+      "meaning": "Role assignment only; fitting remains blocked"
+    },
+    "validation_tuning": {
+      "source_ids": [],
+      "provenance_groups": [],
+      "assigned_positive_frameworks": [],
+      "actual_cohorts": [],
+      "known_qualified_tls_sessions": null,
+      "status": "UNAVAILABLE",
+      "required": "Independently collected source/environment outside TQH; TLS framework absent from training. Newly documented raw Meterpreter/TLS is a possible lead only; existing MS JOY cannot qualify."
+    },
+    "reserved_evaluation": {
+      "source_ids": [],
+      "provenance_groups": [],
+      "assigned_positive_frameworks": [],
+      "actual_cohorts": [],
+      "known_qualified_tls_sessions": null,
+      "status": "UNAVAILABLE_NOT_ASSIGNED",
+      "required": "Third independently collected source/environment and TLS framework absent from training/validation and feature/tuning exposure. No qualifying supplier or family has been selected."
+    }
+  },
+  "minimum_coverage_prerequisites": {
+    "distinct_tls_c2_framework_families": 3,
+    "source_environment_provenance_groups": 3,
+    "separate_capture_runs_per_role": 2,
+    "runs_policy": "Different UTC dates and documented collection deployments; rotations/fragments/reconnects/replicas of one run do not count as separate runs. Conditional replicates are not population-independent trials.",
+    "minimum_distinct_positive_ja3s_in_training": 2,
+    "minimum_shared_positive_benign_ja3s_in_development": 1,
+    "fingerprint_policy": "Coverage/matched counterexample requirement, not feature selection or permission to cherry-pick evaluation. Same JA3 alone is not a session-duplicate grouping key.",
+    "benign_categories_required_in_every_role": [
+      "browser_tls",
+      "software_update_tls",
+      "api_sdk_client_tls",
+      "ordinary_encrypted_application_tls"
+    ],
+    "benign_control_eligibility": "Exact application/build/TLS-stack/deployment identity, session intent and raw UTC/UID/tuple join; fingerprints or external destinations alone do not establish category.",
+    "benign_build_deployment_groups_disjoint_between_roles": true,
+    "each_source_environment_has_both_intents": true,
+    "benign_only_complete_capture_scenarios_required_in_every_role": true,
+    "interpretation": "New data coverage prerequisites frozen before further contents; not a weakened/changed accuracy gate, statistical power claim or SIH requirement."
+  },
+  "partition_assignment_policy": {
+    "method": "Explicit source/framework role binding before raw content access, then transitive whole-provenance-component isolation; unassigned or contradictory inputs quarantined, never default-train.",
+    "indivisible_links": [
+      "publisher_collection_environment_and_related_derivatives_versions",
+      "canonical_c2_framework_family_aliases",
+      "malware_sample_campaign_identity_where_known",
+      "agent_build_deployment_identity",
+      "collection_run_and_all_rotations_fragments",
+      "exact_raw_capture_or_session_artifact_hashes",
+      "namespaced_session_uid_or_tuple_utc_identity",
+      "overlapping_intervals_in_same_deployment_run",
+      "benign_application_build_tls_stack_deployment_identity"
+    ],
+    "overlap_checks_required": [
+      "canonical_framework_family",
+      "source_collection_environment",
+      "run_rotations",
+      "sample_campaign_agent_deployment",
+      "namespaced_session_identity",
+      "raw_capture_or_duplicate_session_hash",
+      "benign_application_build_deployment"
+    ],
+    "framework_same_role_across_independent_sources": true,
+    "tqh_all_profiles_versions_training_development_only": true,
+    "historical_test_quarantine_preserved": true,
+    "random_row_split": false,
+    "random_uid_split": false,
+    "component_fragmentation": false,
+    "salt_search": false,
+    "role_reassignment_after_content_or_results": false,
+    "rebalance_by_dropping_benign": false,
+    "identity_normalization": "Canonical alias/build/run registry in each future source manifest before features. Missing identifiers block a trusted partition; global IP/port/time/JA3 equality alone never establishes shared identity."
+  },
+  "causal_feature_boundary": {
+    "runtime_contract_ref": "data/feature_semantic_contract.json",
+    "new_candidate_feature_order_frozen_here": false,
+    "requirements": [
+      "Use the same observed-prefix runtime definitions during training and inference",
+      "ClientHello fields become available only at the actual raw packet index/timestamp",
+      "No complete-session totals/duration/record-length sequence masquerading as early IP packet features",
+      "Missing reverse/handshake metadata remains unavailable, not fabricated observed zero",
+      "Preserve raw acquisition order, count late/duplicate/clipped/unparsed observations; future evaluation applies existing runtime late-event policy",
+      "No TCP/TLS reassembly support or QUIC extraction assumed beyond current implementation"
+    ],
+    "forbidden_predictors": [
+      "dataset_source_or_environment",
+      "framework_family_or_label",
+      "filename_capture_id_or_uid",
+      "source_destination_address_or_endpoint_role",
+      "scenario_id_interval_jitter_or_generator_settings",
+      "source_service_history_annotations",
+      "completed_session_future_fields"
+    ],
+    "fingerprints": "Do not freeze a JA3-based model here. Any future fingerprint-derived feature must be causally runtime-compatible and checked with genuine shared-fingerprint benign controls and novel positive builds; one fingerprint cannot establish generalization."
+  },
+  "evaluation_protocol": {
+    "gate_unit": "complete independently reset causally replayed labelled scenario, clustered by source/framework/run; session metrics are secondary",
+    "primary_positive_scenario": "Full acquisition run containing explicitly labelled malicious TLS sessions; qualifying ENCRYPTED_MALWARE alert must match a malicious session UID/tuple/time and occur before last raw scenario event. A benign-flow alert cannot count as TP.",
+    "primary_benign_scenario": "Separately captured documented benign-only complete application/control scenario, with no malicious or unknown intent within evaluated TLS scope; any ENCRYPTED_MALWARE alert is FP. Do not manufacture it by deleting positive/background packets from a mixed capture.",
+    "mixed_capture_controls": "Preserve matched benign background, report session-level FP/FN separately; same-run sessions are clustered and cannot inflate independent scenario counts.",
+    "parser_blind_positives": "Genuinely labelled TLS sessions/scenarios not observed or not detected count as missed in the declared input scope. Do not select evaluation sessions by ClientHello parsing success or detector output. Report visibility separately.",
+    "unknown_intent": "Never assign a synthetic positive/benign label to unknown background; insufficiently labelled complete scenarios do not supply quantitative gate metrics.",
+    "confidence_intervals": "Report uncertainty/cluster denominators and per-family/per-control counts; point gates alone do not establish population FPR/generalization.",
+    "frozen_promotion_gate": {
+      "recall_min": 0.8,
+      "precision_min": 0.95,
+      "benign_scenario_fpr_max": 0.02,
+      "positive_alert_before_final_event": true
+    },
+    "gate_ref": "docs/ENCRYPTED_SESSION_VALIDATION.md",
+    "fail_action": "No gate lowering or reserved tuning; candidate disabled; failure analysis only and one unimplemented smallest next experiment."
+  },
+  "reserved_access_policy": {
+    "excluded_from_final": "All TQH, historical synthetic/public-TLS/consulted OSF/CIRA sources and anything used for feature/threshold/model decisions; new cells/releases do not reset exposure.",
+    "before_training": "Register an eligible independent reserved source identity, licence, framework/environment/build/run metadata, documented labels and hashes; acquire/seal with no tuner packet, label-value or fingerprint reads. Publisher/steward metadata attestations may establish planned coverage; metadata discovery does not establish quality.",
+    "before_final_read": "Freeze exact candidate artifact/hash, feature contract, training/validation role manifests, preprocessing/missingness, threshold, scenario mapping, uncertainty method and all gates.",
+    "qualification": "Trusted source/runtime qualification attestation without tuning access to values, or first full qualification in the one-shot final evaluation after all choices frozen. Missing qualification blocks promotion.",
+    "final_read_count": 1,
+    "read_for_tuning": false,
+    "release_if_absent": "No independent evaluation or promotion claim; remain BLOCKED.",
+    "late_failures": "Retain failed source/candidate evidence; no replacing sources, changing unit, filtering sessions or thresholds in response to final outcomes without a new untouched protocol/set."
+  },
+  "readiness_now": {
+    "qualified_framework_families": 1,
+    "qualified_source_environment_groups": 1,
+    "training_capture_runs": 1,
+    "validation_capture_runs": 0,
+    "reserved_capture_runs": null,
+    "training_positive_ja3s": 1,
+    "development_shared_positive_benign_ja3s": 0,
+    "verified_benign_control_categories": {
+      "training_development": [],
+      "validation_tuning": [],
+      "reserved_evaluation": []
+    },
+    "separately_verified_benign_only_raw_scenarios": 0,
+    "independent_validation_qualified": false,
+    "reserved_identity_registered_and_sealed": false,
+    "new_candidate_causal_contract_frozen": false,
+    "data_readiness_passed": false,
+    "frozen_design_may_pass_without_training_readiness": true
+  },
+  "conflict_resolutions": [
+    "Use source-wide TQH development boundary rather than reserving unread related cells",
+    "Scenario acceptance gates stay scenario-level; 582 correlated session acquisitions are not 582 independent final trials",
+    "Historical component hash split is unchanged and remains weak-label completed-session research, not this new raw-TLS protocol",
+    "Publisher partial H3 balance failure is preserved and distinct from the project gate"
+  ],
+  "next_task": "Metadata-only identification/preassignment of one independent native-TLS validation cohort with verified positive session intent and the four benign application controls; no model training."
+}

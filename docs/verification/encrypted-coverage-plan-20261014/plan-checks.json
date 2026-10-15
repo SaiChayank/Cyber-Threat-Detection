@@ -1,0 +1,28 @@
+{
+  "scope": "Plan/checksum/known-report consistency, not final split or accuracy",
+  "checks": {
+    "plan_checksum": true,
+    "all_pinned_baseline_contents": true,
+    "known_roster_checksum": true,
+    "exact_qualified_roster_no_duplicate_uids": true,
+    "counts_and_capture_hash_match_acquisition": true,
+    "known_role_training_development_only": true,
+    "unavailable_heldout_roles_not_fabricated": true,
+    "no_row_split_or_related_tqh_holdout": true,
+    "original_scenario_gate_unchanged": true,
+    "all_benign_categories_and_independent_roles_required": true,
+    "current_fingerprint_gap_not_hidden": true,
+    "blocked_no_training_no_reserve_access_no_promotion": true
+  },
+  "design_integrity_passed": true,
+  "failures": [],
+  "known_counts": {
+    "benign": 467,
+    "malicious_c2": 115
+  },
+  "actual_validation_reserve_overlap_check": "NOT_ASSESSABLE: no real heldout cohorts are assigned",
+  "data_readiness_passed": false,
+  "training_status": "BLOCKED",
+  "training_performed": false,
+  "new_raw_values_read": false
+}

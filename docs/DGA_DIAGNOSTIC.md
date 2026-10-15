@@ -1,5 +1,18 @@
 # DGA diagnostic only
 
+**Diagnostic review, 2 October 2026:** the requested 76.77% recall/1.68% domain
+FPR/2.34% DNS FPR identifies `ml/dga_v2.json`, threshold **0.9**, SHA256
+`c0314dd5f1fe360db11e2494326fd6e99f267d6e920fa091f6c9fcebc796996e`.
+It remains disabled. The numerical sections below preserve the 29 September
+diagnosis of previously inspected development cohorts. No cohort was rescored,
+new raw/reference dataset opened, threshold changed, model trained or promoted
+in this review. The pinned diagnostic JSON was not overwritten.
+
+The historical recommendation at the end was subsequently tested as a separate
+weighted candidate. Its validation FPs increased from 268 to 278 at the respective
+frozen thresholds; it did not demonstrate FP reduction. The **one current next
+experiment**, not implemented, is specified in the final review section below.
+
 Scope frozen before the diagnostic run: inspect the existing active guard and
 disabled candidate on already-inspected local sources. No new evaluation dataset,
 training, threshold search, model promotion, runtime changes or source queries.
@@ -164,7 +177,7 @@ inspected during earlier iterations, and both domain sets and the DNS reference
 come from previously used sources. None is an untouched final test. All datasets
 and model artifacts remained byte-identical through this diagnostic run.
 
-## Smallest next experiment — recommendation only
+## Historical next-experiment recommendation (subsequently tested separately)
 
 Freeze a *new* independent evaluation set and its acceptance criteria before
 looking at its labels or outcomes. Then run **one training-only, length/shape-
@@ -179,3 +192,88 @@ the independent set once for a genuine final assessment, not tuning. If the
 training-only weighting does not improve the predeclared trade-off, keep the
 candidate disabled and investigate the in-sample stacked-logit issue as a
 separate, later hypothesis. **No such experiment was run here.**
+
+## Current diagnostic disposition — 2 October 2026
+
+### Findings by possible cause
+
+| Possible cause | Evidence-backed diagnosis |
+| --- | --- |
+| Entropy | The active rule's3.5-bit floor cannot accept labels with 11 or fewer characters, regardless of malicious provenance. Long legitimate FPs also have higher entropy than legitimate TNs. Entropy is a shape statistic, not maliciousness. |
+| Domain length | The active >=20 first-label floor rejects all 60,577 positives in the historical comparison. In the candidate, long alphabetic legitimate names dominate FPs, while symmi/kraken short labels dominate FNs. Length bias affects both paths differently. |
+| Digit ratio/runs | High digit ratio is not the main benign FP cause. Ccleaner hexadecimal misses have longer digit runs; the linear digit-run coefficient is negative. This association does not establish a causal remedy. |
+| Bigram statistics | The manual English bigram statistic is similar for FP/TN groups and penalizes non-English/compound spellings. It is used by the guard, not as that exact statistic by the public candidate, which learns 2/3-grams. |
+| Rule thresholds | The length/entropy conjunction structurally excludes short DGAs. The validation-only alternative improves recall but still fails 80% and increases FPs against the deployed guard. No threshold was changed. |
+| Candidate model behavior | Trees rely heavily on the linear logit and length. `train_dga_v2.py` trains the booster on the logistic encoder's in-sample training logit, while validation/runtime logits are out-of-sample. That is an unmeasured stacked-model optimism risk, not proof of evaluation leakage. |
+| Dataset imbalance | Training totals are near class-balanced, so overall label imbalance is not the primary cause. Shape/family imbalance matters:35,770 long-alphabetic positive versus 11,107 benign training labels; validation has 30,000 easy murofet labels out of 80,000 positives. |
+| Domain-family distribution | Symmi, ccleaner and kraken variants account for 95.49% of comparison misses. Per-variant caps give multi-variant algorithms extra representation. Family grouping by name prefix does not prove that all cross-family aliases/templates are independent. |
+| Visibility/context | Only the observed first label is scored. Hosted subdomain versus registered-domain context is discarded even when the full DNS name is visible. There is no independent contemporary labelled corpus certifying generalization; DNS names hidden by encryption/truncation cannot be recovered by tuning. |
+
+The first-label representation is causal and portable, but **not demonstrated
+sufficient for all required DGA families**. Vowel/consonant/character-class fields
+already exist; adding duplicate features is not the minimum next change. No dataset
+ID, family, source address, filename or scenario is a predictor. Length, entropy
+and dictionary/character-family patterns are plausible statistical shortcuts.
+Numeric/lexical definitions match the runtime scorer; all 50 saved diagnostic
+error examples reproduced their feature values exactly to 1e-12 in this review.
+
+### Contamination and report currency
+
+Current candidate train/validation/inspected-comparison scored labels and declared
+family groups have zero overlaps. Twenty positive/benign source conflicts were
+excluded. These checks do not establish family alias independence or trustworthy
+per-flow labels. The second DNS reference overlaps 1,278 validation and1,260
+comparison labels; its disjoint stratum FPR 2.60% is a post-hoc finding, **not a
+replacement** for the frozen 2.34% gate result. The older public NB artifact has
+scored-label overlap 6/5/2 across its split pairs despite disjoint full FQDNs.
+
+Earlier comparison and DNS outcomes already influenced development and are not
+reserved holdouts. The frozen protocol explicitly designates them as inspected
+development evidence. No reserved materialization manifest exists, and no reserved
+example, score or outcome was inspected here. This review reused saved examples
+and counts; it did not invoke `datasets.diagnose_dga`, which would overwrite the
+JSON pinned by `data/dga_evaluation_protocol.json`.
+
+The diagnostic/scorer/trainer source hashes still match the saved report. Shared
+extractor and Pipeline hashes changed in later unrelated tasks, so the historical
+counts are **not newly scored final-runtime accuracy**. Current lexical parity,
+disabled activation and existing unit tests were checked separately. Evidence is
+in [diagnostic review JSON](verification/dga-diagnostic-review.json).
+
+### One smallest next experiment — recommendation only
+
+Test **training-only out-of-fold logit stacking** in one disabled candidate,
+changing only how the booster receives its training logit. Use three deterministic
+training-only folds: keep related DGA variants together and benign canonical
+labels disjoint; fit vocabulary/IDF/scaler/base encoder on each fold's training
+portion only. Train the existing booster using those out-of-fold logits and the
+same ten runtime numeric features, then fit the final base encoder on full training.
+
+Keep the existing source partitions, feature contract, model hyperparameters,
+unweighted baseline and **0.9** decision threshold fixed. Compare only the frozen
+validation cohort against the existing unweighted candidate: FP shape breakdown,
+per-family recall and aggregate counts/gates. Do not score or use the historical
+comparison, second DNS reference or any reserved data to choose this experiment.
+This tests a specific training-path hypothesis; improvement is not guaranteed,
+and validation success would still not authorize promotion. Do not add a feature,
+change thresholds or repeat the already-tested benign-weighting intervention.
+
+**Not implemented.** No fitting, fold construction, candidate export, threshold
+search or new scoring was performed. The current candidate stays disabled and all
+four promotion gates stay unchanged.
+
+### Definition of Done and freeze
+
+Diagnostic Definition of Done passes: FP/FN/family/feature/shortcut/partition
+questions have explicit findings and exactly one next experiment is recommended.
+Existing DGA/diagnostic regressions: **42 passed**; no new tests or code fixes.
+Shared implementation was unchanged, and demo preflight checks the other threat
+traces without altering history. No full backend/build rerun is implied by this
+documentation-only review.
+
+Freeze the unchanged diagnostic/scorer/rule behavior and tests, candidate
+SHA256/threshold/disabled state, saved evaluation/diagnostic metrics and their
+limitations. Preserve the old pinned report. This is a completed diagnostic,
+**not a model gate pass**. The completion plan's next incomplete project task
+remains inactive-public-model checkout integrity; that task and the proposed DGA
+experiment require separate authorization and have not started.

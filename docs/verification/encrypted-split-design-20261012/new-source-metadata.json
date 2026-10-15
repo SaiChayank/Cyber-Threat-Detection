@@ -1,0 +1,218 @@
+[
+  {
+    "node": "b64e5",
+    "title": "MS dataset",
+    "public": true,
+    "licence_link": {
+      "related": {
+        "href": "https://api.osf.io/v2/licenses/563c1cf88c5e4a3877f9e96a/",
+        "meta": {}
+      }
+    },
+    "files": [
+      {
+        "name": "certificates_length.csv",
+        "kind": "file",
+        "bytes": 180577465,
+        "metadata_id": "6691601c6068db0280dde62c",
+        "links": {
+          "info": "https://api.osf.io/v2/files/6691601c6068db0280dde62c/",
+          "move": "https://files.de-1.osf.io/v1/resources/b64e5/providers/osfstorage/6691601c6068db0280dde62c",
+          "upload": "https://files.de-1.osf.io/v1/resources/b64e5/providers/osfstorage/6691601c6068db0280dde62c",
+          "delete": "https://files.de-1.osf.io/v1/resources/b64e5/providers/osfstorage/6691601c6068db0280dde62c",
+          "download": "https://osf.io/download/j3ewn/",
+          "render": "https://mfr.de-1.osf.io/render?url=https%3A%2F%2Fosf.io%2Fdownload%2Fj3ewn%2F%3Fdirect%26mode%3Drender",
+          "html": "https://osf.io/b64e5/files/osfstorage/6691601c6068db0280dde62c",
+          "self": "https://api.osf.io/v2/files/6691601c6068db0280dde62c/",
+          "iri": "https://osf.io/j3ewn"
+        },
+        "child_files": {}
+      },
+      {
+        "name": "tls12-longcert",
+        "kind": "folder",
+        "bytes": null,
+        "metadata_id": "6691616c5a51c40294e803f2",
+        "links": {
+          "info": "https://api.osf.io/v2/files/6691616c5a51c40294e803f2/",
+          "move": "https://files.de-1.osf.io/v1/resources/b64e5/providers/osfstorage/6691616c5a51c40294e803f2/",
+          "upload": "https://files.de-1.osf.io/v1/resources/b64e5/providers/osfstorage/6691616c5a51c40294e803f2/",
+          "delete": "https://files.de-1.osf.io/v1/resources/b64e5/providers/osfstorage/6691616c5a51c40294e803f2/",
+          "new_folder": "https://files.de-1.osf.io/v1/resources/b64e5/providers/osfstorage/6691616c5a51c40294e803f2/?kind=folder",
+          "self": "https://api.osf.io/v2/files/6691616c5a51c40294e803f2/"
+        },
+        "child_files": {
+          "related": {
+            "href": "https://api.osf.io/v2/nodes/b64e5/files/osfstorage/6691616c5a51c40294e803f2/",
+            "meta": {}
+          }
+        }
+      },
+      {
+        "name": "tls12-shortcert",
+        "kind": "folder",
+        "bytes": null,
+        "metadata_id": "66916174ec07f901debdb805",
+        "links": {
+          "info": "https://api.osf.io/v2/files/66916174ec07f901debdb805/",
+          "move": "https://files.de-1.osf.io/v1/resources/b64e5/providers/osfstorage/66916174ec07f901debdb805/",
+          "upload": "https://files.de-1.osf.io/v1/resources/b64e5/providers/osfstorage/66916174ec07f901debdb805/",
+          "delete": "https://files.de-1.osf.io/v1/resources/b64e5/providers/osfstorage/66916174ec07f901debdb805/",
+          "new_folder": "https://files.de-1.osf.io/v1/resources/b64e5/providers/osfstorage/66916174ec07f901debdb805/?kind=folder",
+          "self": "https://api.osf.io/v2/files/66916174ec07f901debdb805/"
+        },
+        "child_files": {
+          "related": {
+            "href": "https://api.osf.io/v2/nodes/b64e5/files/osfstorage/66916174ec07f901debdb805/",
+            "meta": {}
+          }
+        }
+      },
+      {
+        "name": "tls13-longcert",
+        "kind": "folder",
+        "bytes": null,
+        "metadata_id": "6691617d1de9f7026030ddf6",
+        "links": {
+          "info": "https://api.osf.io/v2/files/6691617d1de9f7026030ddf6/",
+          "move": "https://files.de-1.osf.io/v1/resources/b64e5/providers/osfstorage/6691617d1de9f7026030ddf6/",
+          "upload": "https://files.de-1.osf.io/v1/resources/b64e5/providers/osfstorage/6691617d1de9f7026030ddf6/",
+          "delete": "https://files.de-1.osf.io/v1/resources/b64e5/providers/osfstorage/6691617d1de9f7026030ddf6/",
+          "new_folder": "https://files.de-1.osf.io/v1/resources/b64e5/providers/osfstorage/6691617d1de9f7026030ddf6/?kind=folder",
+          "self": "https://api.osf.io/v2/files/6691617d1de9f7026030ddf6/"
+        },
+        "child_files": {
+          "related": {
+            "href": "https://api.osf.io/v2/nodes/b64e5/files/osfstorage/6691617d1de9f7026030ddf6/",
+            "meta": {}
+          }
+        }
+      },
+      {
+        "name": "tls13-shortcert",
+        "kind": "folder",
+        "bytes": null,
+        "metadata_id": "669161851de9f7025230da88",
+        "links": {
+          "info": "https://api.osf.io/v2/files/669161851de9f7025230da88/",
+          "move": "https://files.de-1.osf.io/v1/resources/b64e5/providers/osfstorage/669161851de9f7025230da88/",
+          "upload": "https://files.de-1.osf.io/v1/resources/b64e5/providers/osfstorage/669161851de9f7025230da88/",
+          "delete": "https://files.de-1.osf.io/v1/resources/b64e5/providers/osfstorage/669161851de9f7025230da88/",
+          "new_folder": "https://files.de-1.osf.io/v1/resources/b64e5/providers/osfstorage/669161851de9f7025230da88/?kind=folder",
+          "self": "https://api.osf.io/v2/files/669161851de9f7025230da88/"
+        },
+        "child_files": {
+          "related": {
+            "href": "https://api.osf.io/v2/nodes/b64e5/files/osfstorage/669161851de9f7025230da88/",
+            "meta": {}
+          }
+        }
+      },
+      {
+        "name": "captures.tar.gz",
+        "kind": "file",
+        "bytes": 4659730806,
+        "metadata_id": "66916305ec07f901e2bdba6a",
+        "links": {
+          "info": "https://api.osf.io/v2/files/66916305ec07f901e2bdba6a/",
+          "move": "https://files.de-1.osf.io/v1/resources/b64e5/providers/osfstorage/66916305ec07f901e2bdba6a",
+          "upload": "https://files.de-1.osf.io/v1/resources/b64e5/providers/osfstorage/66916305ec07f901e2bdba6a",
+          "delete": "https://files.de-1.osf.io/v1/resources/b64e5/providers/osfstorage/66916305ec07f901e2bdba6a",
+          "download": "https://osf.io/download/3cvez/",
+          "render": "https://mfr.de-1.osf.io/render?url=https%3A%2F%2Fosf.io%2Fdownload%2F3cvez%2F%3Fdirect%26mode%3Drender",
+          "html": "https://osf.io/b64e5/files/osfstorage/66916305ec07f901e2bdba6a",
+          "self": "https://api.osf.io/v2/files/66916305ec07f901e2bdba6a/",
+          "iri": "https://osf.io/3cvez"
+        },
+        "child_files": {}
+      },
+      {
+        "name": "ms-full.csv",
+        "kind": "file",
+        "bytes": 366562590,
+        "metadata_id": "6697e2b26068db07a1dde87c",
+        "links": {
+          "info": "https://api.osf.io/v2/files/6697e2b26068db07a1dde87c/",
+          "move": "https://files.de-1.osf.io/v1/resources/b64e5/providers/osfstorage/6697e2b26068db07a1dde87c",
+          "upload": "https://files.de-1.osf.io/v1/resources/b64e5/providers/osfstorage/6697e2b26068db07a1dde87c",
+          "delete": "https://files.de-1.osf.io/v1/resources/b64e5/providers/osfstorage/6697e2b26068db07a1dde87c",
+          "download": "https://osf.io/download/2w5g8/",
+          "render": "https://mfr.de-1.osf.io/render?url=https%3A%2F%2Fosf.io%2Fdownload%2F2w5g8%2F%3Fdirect%26mode%3Drender",
+          "html": "https://osf.io/b64e5/files/osfstorage/6697e2b26068db07a1dde87c",
+          "self": "https://api.osf.io/v2/files/6697e2b26068db07a1dde87c/",
+          "iri": "https://osf.io/2w5g8"
+        },
+        "child_files": {}
+      }
+    ]
+  },
+  {
+    "node": "zq9vs",
+    "title": "Web TLS 1.2 &amp; TLS 1.3 capture",
+    "public": true,
+    "licence_link": {
+      "related": {
+        "href": "https://api.osf.io/v2/licenses/563c1cf88c5e4a3877f9e96a/",
+        "meta": {}
+      }
+    },
+    "files": [
+      {
+        "name": "dataset.csv",
+        "kind": "file",
+        "bytes": 197636843,
+        "metadata_id": "669239e7e9fa13026f56a9a6",
+        "links": {
+          "info": "https://api.osf.io/v2/files/669239e7e9fa13026f56a9a6/",
+          "move": "https://files.de-1.osf.io/v1/resources/zq9vs/providers/osfstorage/669239e7e9fa13026f56a9a6",
+          "upload": "https://files.de-1.osf.io/v1/resources/zq9vs/providers/osfstorage/669239e7e9fa13026f56a9a6",
+          "delete": "https://files.de-1.osf.io/v1/resources/zq9vs/providers/osfstorage/669239e7e9fa13026f56a9a6",
+          "download": "https://osf.io/download/nzm4r/",
+          "render": "https://mfr.de-1.osf.io/render?url=https%3A%2F%2Fosf.io%2Fdownload%2Fnzm4r%2F%3Fdirect%26mode%3Drender",
+          "html": "https://osf.io/zq9vs/files/osfstorage/669239e7e9fa13026f56a9a6",
+          "self": "https://api.osf.io/v2/files/669239e7e9fa13026f56a9a6/",
+          "iri": "https://osf.io/nzm4r"
+        },
+        "child_files": {}
+      },
+      {
+        "name": "selected-domains.zip",
+        "kind": "file",
+        "bytes": 662210,
+        "metadata_id": "66923ac76068db031ddde07f",
+        "links": {
+          "info": "https://api.osf.io/v2/files/66923ac76068db031ddde07f/",
+          "move": "https://files.de-1.osf.io/v1/resources/zq9vs/providers/osfstorage/66923ac76068db031ddde07f",
+          "upload": "https://files.de-1.osf.io/v1/resources/zq9vs/providers/osfstorage/66923ac76068db031ddde07f",
+          "delete": "https://files.de-1.osf.io/v1/resources/zq9vs/providers/osfstorage/66923ac76068db031ddde07f",
+          "download": "https://osf.io/download/ruyx9/",
+          "render": "https://mfr.de-1.osf.io/render?url=https%3A%2F%2Fosf.io%2Fdownload%2Fruyx9%2F%3Fdirect%26mode%3Drender",
+          "html": "https://osf.io/zq9vs/files/osfstorage/66923ac76068db031ddde07f",
+          "self": "https://api.osf.io/v2/files/66923ac76068db031ddde07f/",
+          "iri": "https://osf.io/ruyx9"
+        },
+        "child_files": {}
+      },
+      {
+        "name": "pcaps",
+        "kind": "folder",
+        "bytes": null,
+        "metadata_id": "66923dd1ec07f90285bdb4ee",
+        "links": {
+          "info": "https://api.osf.io/v2/files/66923dd1ec07f90285bdb4ee/",
+          "move": "https://files.de-1.osf.io/v1/resources/zq9vs/providers/osfstorage/66923dd1ec07f90285bdb4ee/",
+          "upload": "https://files.de-1.osf.io/v1/resources/zq9vs/providers/osfstorage/66923dd1ec07f90285bdb4ee/",
+          "delete": "https://files.de-1.osf.io/v1/resources/zq9vs/providers/osfstorage/66923dd1ec07f90285bdb4ee/",
+          "new_folder": "https://files.de-1.osf.io/v1/resources/zq9vs/providers/osfstorage/66923dd1ec07f90285bdb4ee/?kind=folder",
+          "self": "https://api.osf.io/v2/files/66923dd1ec07f90285bdb4ee/"
+        },
+        "child_files": {
+          "related": {
+            "href": "https://api.osf.io/v2/nodes/zq9vs/files/osfstorage/66923dd1ec07f90285bdb4ee/",
+            "meta": {}
+          }
+        }
+      }
+    ]
+  }
+]

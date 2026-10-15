@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-15",
+  "scope": "DNS tunnelling metadata-only source gap review; not classifier evaluation",
+  "decision": "BLOCKED_MISSING_QUALIFIED_SESSIONS_AND_CURRENT_EVALUATION_CONTRACT",
+  "sha256": {
+    "docs/verification/dns-tunnel-data-gap-20261015/existing-capture-integrity.json": "4fb5dcc6219e90f2c43d10a0d1d1c66f53d01b64a1c2aab7d49ee2a00f5b98ba",
+    "docs/verification/dns-tunnel-data-gap-20261015/final-checks.json": "5d88768383cdd1b9cf31bce68806a8df98ebcf1fe361e5d334f4b1ab831ad4e9",
+    "docs/verification/dns-tunnel-data-gap-20261015/initial-integrity.json": "a68a1eba1dc6005de090ad9b9b63257c6591616120673fa4306534ed4ba1942b",
+    "docs/verification/dns-tunnel-data-gap-20261015/publisher-file-metadata.json": "941c246649b5eada002b6bb95c9f9e3dea41201e3ec88c9d60d234b78e8641c9"
+  },
+  "report_sha256": "c20c6528125afacc6f5bc3597684a9af7d3cce8e58544e3ca98a619d7c78cfe4",
+  "next_action": "Obtain Korving capture-data permissions, independent session truth and five benign control categories; no new contact without user authorization."
+}

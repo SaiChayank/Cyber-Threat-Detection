@@ -1,0 +1,14 @@
+{
+  "preserved_existing_files": 209,
+  "mismatches": [],
+  "positive_minimum_counts_passed": true,
+  "complete_reserved_materialization_ready": false,
+  "models_unchanged_and_disabled": true,
+  "tests": {
+    "passed": 38,
+    "seconds": 0.57,
+    "new_count_checker_cases": 6,
+    "initial_failure": "Unsupported names return empty string; fixed diagnostic guard before reading intake rows"
+  },
+  "limitations": "Source literals do not reconstruct all dynamic historical fixtures; older cached publisher renditions not byte-certified. Complete final exposure registry still required."
+}

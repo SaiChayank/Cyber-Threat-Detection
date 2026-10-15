@@ -1,0 +1,480 @@
+{
+  "scope": "Raw source qualification only; no fitting, prediction, replay or alerts",
+  "role": "development-only",
+  "qualified_for_current_runtime": false,
+  "captures": [
+    {
+      "pcap": "data/raw/cicdoh2020-development/selected/dnscat2/dsncat2_default-baseline_1111_doh10_2020-03-29T11_12_39.466544.pcap",
+      "pcap_bytes": 586390,
+      "pcap_sha256": "77b08a362f09b16ba9be7ac3a52ecac0ca491357e0e3ee8a393cf2a66bc1242d",
+      "annotation": "data/raw/cicdoh2020-development/selected/dnscat2-labels/dsncat2_default-baseline_1111_doh10_2020-03-29T11_12_39.466544.csv",
+      "annotation_sha256": "93d066964bea7f3e3aeba7b662c14ab083be971e1e9a370041c09ad5e2cb7c89",
+      "linktype": 113,
+      "snaplen": 262144,
+      "runtime_capture_accepted": false,
+      "runtime_rejection": "Only PCAP v2.4 Ethernet captures are supported",
+      "counts": {
+        "packets": 3405,
+        "clipped_packets": 0,
+        "out_of_order_packets": 0,
+        "complete_ipv4_tcp_packets": 3405
+      },
+      "first_timestamp_ns": 1585490535086195000,
+      "last_timestamp_ns": 1585491158605513000,
+      "clienthello_observations": [
+        {
+          "packet_index": 4,
+          "timestamp_ns": 1585490535101599000,
+          "tuple": [
+            "192.168.20.212",
+            "1.1.1.1",
+            45794,
+            443,
+            6
+          ],
+          "tcp_sequence": 1526680529,
+          "observed_ip_bytes": 301,
+          "ja3": "547df21d727c7b3a5dcb59aa0fd97c2c",
+          "cipher_count": 19,
+          "extension_count": 10
+        }
+      ],
+      "annotation_columns": [
+        "SourceIP",
+        "DestinationIP",
+        "SourcePort",
+        "DestinationPort",
+        "TimeStamp",
+        "Duration",
+        "FlowBytesSent",
+        "FlowSentRate",
+        "FlowBytesReceived",
+        "FlowReceivedRate",
+        "PacketLengthVariance",
+        "PacketLengthStandardDeviation",
+        "PacketLengthMean",
+        "PacketLengthMedian",
+        "PacketLengthMode",
+        "PacketLengthSkewFromMedian",
+        "PacketLengthSkewFromMode",
+        "PacketLengthCoefficientofVariation",
+        "PacketTimeVariance",
+        "PacketTimeStandardDeviation",
+        "PacketTimeMean",
+        "PacketTimeMedian",
+        "PacketTimeMode",
+        "PacketTimeSkewFromMedian",
+        "PacketTimeSkewFromMode",
+        "PacketTimeCoefficientofVariation",
+        "ResponseTimeTimeVariance",
+        "ResponseTimeTimeStandardDeviation",
+        "ResponseTimeTimeMean",
+        "ResponseTimeTimeMedian",
+        "ResponseTimeTimeMode",
+        "ResponseTimeTimeSkewFromMedian",
+        "ResponseTimeTimeSkewFromMode",
+        "ResponseTimeTimeCoefficientofVariation",
+        "DoH"
+      ],
+      "annotation_rows": 6,
+      "candidate_tuple_time_joins": [
+        {
+          "tuple": [
+            "192.168.20.212",
+            "1.1.1.1",
+            45794,
+            443,
+            6
+          ],
+          "doh_field": "True",
+          "csv_naive_start": "2020-03-29 11:02:15",
+          "duration_s": 120.91376,
+          "tuple_seen": true,
+          "packets_in_window_as_if_csv_utc": 0,
+          "packets_in_window_with_inferred_offset": 255,
+          "clienthellos_in_window_with_inferred_offset": [
+            4
+          ]
+        },
+        {
+          "tuple": [
+            "1.1.1.1",
+            "192.168.20.212",
+            443,
+            45794,
+            6
+          ],
+          "doh_field": "True",
+          "csv_naive_start": "2020-03-29 11:04:16",
+          "duration_s": 120.433622,
+          "tuple_seen": true,
+          "packets_in_window_as_if_csv_utc": 0,
+          "packets_in_window_with_inferred_offset": 354,
+          "clienthellos_in_window_with_inferred_offset": []
+        },
+        {
+          "tuple": [
+            "1.1.1.1",
+            "192.168.20.212",
+            443,
+            45794,
+            6
+          ],
+          "doh_field": "True",
+          "csv_naive_start": "2020-03-29 11:06:16",
+          "duration_s": 120.500289,
+          "tuple_seen": true,
+          "packets_in_window_as_if_csv_utc": 0,
+          "packets_in_window_with_inferred_offset": 354,
+          "clienthellos_in_window_with_inferred_offset": []
+        },
+        {
+          "tuple": [
+            "1.1.1.1",
+            "192.168.20.212",
+            443,
+            45794,
+            6
+          ],
+          "doh_field": "True",
+          "csv_naive_start": "2020-03-29 11:08:16",
+          "duration_s": 120.800168,
+          "tuple_seen": true,
+          "packets_in_window_as_if_csv_utc": 0,
+          "packets_in_window_with_inferred_offset": 356,
+          "clienthellos_in_window_with_inferred_offset": []
+        },
+        {
+          "tuple": [
+            "1.1.1.1",
+            "192.168.20.212",
+            443,
+            45794,
+            6
+          ],
+          "doh_field": "True",
+          "csv_naive_start": "2020-03-29 11:10:17",
+          "duration_s": 120.175498,
+          "tuple_seen": true,
+          "packets_in_window_as_if_csv_utc": 0,
+          "packets_in_window_with_inferred_offset": 352,
+          "clienthellos_in_window_with_inferred_offset": []
+        },
+        {
+          "tuple": [
+            "1.1.1.1",
+            "192.168.20.212",
+            443,
+            45794,
+            6
+          ],
+          "doh_field": "True",
+          "csv_naive_start": "2020-03-29 11:12:17",
+          "duration_s": 20.616637,
+          "tuple_seen": true,
+          "packets_in_window_as_if_csv_utc": 0,
+          "packets_in_window_with_inferred_offset": 65,
+          "clienthellos_in_window_with_inferred_offset": []
+        }
+      ],
+      "csv_utc_offset_seconds_tested": -10800,
+      "csv_utc_offset_independently_verified": false,
+      "explicit_malicious_session_labels_verified": false,
+      "qualified_for_current_runtime": false
+    },
+    {
+      "pcap": "data/raw/cicdoh2020-development/selected/dnscat2/dsncat2_default-baseline_1111_doh10_2020-03-29T11_40_09.588984.pcap",
+      "pcap_bytes": 28272,
+      "pcap_sha256": "2265ac0a8b8e8ec4dbaf9896eb0a9d9ff9d3d61fa9c51296d7b8f302baf74f54",
+      "annotation": "data/raw/cicdoh2020-development/selected/dnscat2-labels/dsncat2_default-baseline_1111_doh10_2020-03-29T11_40_09.588984.csv",
+      "annotation_sha256": "3204b8224802961387133f1ea4235073aa94f5087d8c99faf843b72bc6d1de7a",
+      "linktype": 113,
+      "snaplen": 262144,
+      "runtime_capture_accepted": false,
+      "runtime_rejection": "Only PCAP v2.4 Ethernet captures are supported",
+      "counts": {
+        "packets": 187,
+        "clipped_packets": 0,
+        "out_of_order_packets": 0,
+        "complete_ipv4_tcp_packets": 187
+      },
+      "first_timestamp_ns": 1585492183393971000,
+      "last_timestamp_ns": 1585492609276401000,
+      "clienthello_observations": [
+        {
+          "packet_index": 4,
+          "timestamp_ns": 1585492183409266000,
+          "tuple": [
+            "192.168.20.212",
+            "1.1.1.1",
+            45798,
+            443,
+            6
+          ],
+          "tcp_sequence": 4203761671,
+          "observed_ip_bytes": 301,
+          "ja3": "547df21d727c7b3a5dcb59aa0fd97c2c",
+          "cipher_count": 19,
+          "extension_count": 10
+        }
+      ],
+      "annotation_columns": [
+        "SourceIP",
+        "DestinationIP",
+        "SourcePort",
+        "DestinationPort",
+        "TimeStamp",
+        "Duration",
+        "FlowBytesSent",
+        "FlowSentRate",
+        "FlowBytesReceived",
+        "FlowReceivedRate",
+        "PacketLengthVariance",
+        "PacketLengthStandardDeviation",
+        "PacketLengthMean",
+        "PacketLengthMedian",
+        "PacketLengthMode",
+        "PacketLengthSkewFromMedian",
+        "PacketLengthSkewFromMode",
+        "PacketLengthCoefficientofVariation",
+        "PacketTimeVariance",
+        "PacketTimeStandardDeviation",
+        "PacketTimeMean",
+        "PacketTimeMedian",
+        "PacketTimeMode",
+        "PacketTimeSkewFromMedian",
+        "PacketTimeSkewFromMode",
+        "PacketTimeCoefficientofVariation",
+        "ResponseTimeTimeVariance",
+        "ResponseTimeTimeStandardDeviation",
+        "ResponseTimeTimeMean",
+        "ResponseTimeTimeMedian",
+        "ResponseTimeTimeMode",
+        "ResponseTimeTimeSkewFromMedian",
+        "ResponseTimeTimeSkewFromMode",
+        "ResponseTimeTimeCoefficientofVariation",
+        "DoH"
+      ],
+      "annotation_rows": 4,
+      "candidate_tuple_time_joins": [
+        {
+          "tuple": [
+            "192.168.20.212",
+            "1.1.1.1",
+            45798,
+            443,
+            6
+          ],
+          "doh_field": "True",
+          "csv_naive_start": "2020-03-29 11:29:43",
+          "duration_s": 131.247466,
+          "tuple_seen": true,
+          "packets_in_window_as_if_csv_utc": 0,
+          "packets_in_window_with_inferred_offset": 59,
+          "clienthellos_in_window_with_inferred_offset": [
+            4
+          ]
+        },
+        {
+          "tuple": [
+            "1.1.1.1",
+            "192.168.20.212",
+            443,
+            45798,
+            6
+          ],
+          "doh_field": "True",
+          "csv_naive_start": "2020-03-29 11:31:54",
+          "duration_s": 120.817035,
+          "tuple_seen": true,
+          "packets_in_window_as_if_csv_utc": 0,
+          "packets_in_window_with_inferred_offset": 9,
+          "clienthellos_in_window_with_inferred_offset": []
+        },
+        {
+          "tuple": [
+            "1.1.1.1",
+            "192.168.20.212",
+            443,
+            45798,
+            6
+          ],
+          "doh_field": "True",
+          "csv_naive_start": "2020-03-29 11:33:55",
+          "duration_s": 120.81709,
+          "tuple_seen": true,
+          "packets_in_window_as_if_csv_utc": 0,
+          "packets_in_window_with_inferred_offset": 9,
+          "clienthellos_in_window_with_inferred_offset": []
+        },
+        {
+          "tuple": [
+            "1.1.1.1",
+            "192.168.20.212",
+            443,
+            45798,
+            6
+          ],
+          "doh_field": "True",
+          "csv_naive_start": "2020-03-29 11:35:56",
+          "duration_s": 52.956025,
+          "tuple_seen": true,
+          "packets_in_window_as_if_csv_utc": 0,
+          "packets_in_window_with_inferred_offset": 7,
+          "clienthellos_in_window_with_inferred_offset": []
+        }
+      ],
+      "csv_utc_offset_seconds_tested": -10800,
+      "csv_utc_offset_independently_verified": false,
+      "explicit_malicious_session_labels_verified": false,
+      "qualified_for_current_runtime": false
+    },
+    {
+      "pcap": "data/raw/cicdoh2020-development/selected/dnscat2/dsncat2_default-baseline_1111_doh10_2020-03-29T12_07_35.233946.pcap",
+      "pcap_bytes": 18803,
+      "pcap_sha256": "59017086b192386b1dbd0b0e19c00173266cba0700145a6ca60280210275b67b",
+      "annotation": "data/raw/cicdoh2020-development/selected/dnscat2-labels/dsncat2_default-baseline_1111_doh10_2020-03-29T12_07_35.233946.csv",
+      "annotation_sha256": "d25c5452359ce91bd71a92ed48eec6ddd6a18df6801ded38fe6563c3443e06a8",
+      "linktype": 113,
+      "snaplen": 262144,
+      "runtime_capture_accepted": false,
+      "runtime_rejection": "Only PCAP v2.4 Ethernet captures are supported",
+      "counts": {
+        "packets": 139,
+        "clipped_packets": 0,
+        "out_of_order_packets": 0,
+        "complete_ipv4_tcp_packets": 139
+      },
+      "first_timestamp_ns": 1585493830020990000,
+      "last_timestamp_ns": 1585494239148435000,
+      "clienthello_observations": [
+        {
+          "packet_index": 4,
+          "timestamp_ns": 1585493830036373000,
+          "tuple": [
+            "192.168.20.212",
+            "1.1.1.1",
+            45802,
+            443,
+            6
+          ],
+          "tcp_sequence": 1757326393,
+          "observed_ip_bytes": 301,
+          "ja3": "547df21d727c7b3a5dcb59aa0fd97c2c",
+          "cipher_count": 19,
+          "extension_count": 10
+        }
+      ],
+      "annotation_columns": [
+        "SourceIP",
+        "DestinationIP",
+        "SourcePort",
+        "DestinationPort",
+        "TimeStamp",
+        "Duration",
+        "FlowBytesSent",
+        "FlowSentRate",
+        "FlowBytesReceived",
+        "FlowReceivedRate",
+        "PacketLengthVariance",
+        "PacketLengthStandardDeviation",
+        "PacketLengthMean",
+        "PacketLengthMedian",
+        "PacketLengthMode",
+        "PacketLengthSkewFromMedian",
+        "PacketLengthSkewFromMode",
+        "PacketLengthCoefficientofVariation",
+        "PacketTimeVariance",
+        "PacketTimeStandardDeviation",
+        "PacketTimeMean",
+        "PacketTimeMedian",
+        "PacketTimeMode",
+        "PacketTimeSkewFromMedian",
+        "PacketTimeSkewFromMode",
+        "PacketTimeCoefficientofVariation",
+        "ResponseTimeTimeVariance",
+        "ResponseTimeTimeStandardDeviation",
+        "ResponseTimeTimeMean",
+        "ResponseTimeTimeMedian",
+        "ResponseTimeTimeMode",
+        "ResponseTimeTimeSkewFromMedian",
+        "ResponseTimeTimeSkewFromMode",
+        "ResponseTimeTimeCoefficientofVariation",
+        "DoH"
+      ],
+      "annotation_rows": 4,
+      "candidate_tuple_time_joins": [
+        {
+          "tuple": [
+            "192.168.20.212",
+            "1.1.1.1",
+            45802,
+            443,
+            6
+          ],
+          "doh_field": "True",
+          "csv_naive_start": "2020-03-29 11:57:10",
+          "duration_s": 130.188449,
+          "tuple_seen": true,
+          "packets_in_window_as_if_csv_utc": 0,
+          "packets_in_window_with_inferred_offset": 45,
+          "clienthellos_in_window_with_inferred_offset": [
+            4
+          ]
+        },
+        {
+          "tuple": [
+            "1.1.1.1",
+            "192.168.20.212",
+            443,
+            45802,
+            6
+          ],
+          "doh_field": "True",
+          "csv_naive_start": "2020-03-29 11:59:20",
+          "duration_s": 120.816979,
+          "tuple_seen": true,
+          "packets_in_window_as_if_csv_utc": 0,
+          "packets_in_window_with_inferred_offset": 9,
+          "clienthellos_in_window_with_inferred_offset": []
+        },
+        {
+          "tuple": [
+            "1.1.1.1",
+            "192.168.20.212",
+            443,
+            45802,
+            6
+          ],
+          "doh_field": "True",
+          "csv_naive_start": "2020-03-29 12:01:21",
+          "duration_s": 120.81709,
+          "tuple_seen": true,
+          "packets_in_window_as_if_csv_utc": 0,
+          "packets_in_window_with_inferred_offset": 9,
+          "clienthellos_in_window_with_inferred_offset": []
+        },
+        {
+          "tuple": [
+            "1.1.1.1",
+            "192.168.20.212",
+            443,
+            45802,
+            6
+          ],
+          "doh_field": "True",
+          "csv_naive_start": "2020-03-29 12:03:21",
+          "duration_s": 37.260028,
+          "tuple_seen": true,
+          "packets_in_window_as_if_csv_utc": 0,
+          "packets_in_window_with_inferred_offset": 7,
+          "clienthellos_in_window_with_inferred_offset": []
+        }
+      ],
+      "csv_utc_offset_seconds_tested": -10800,
+      "csv_utc_offset_independently_verified": false,
+      "explicit_malicious_session_labels_verified": false,
+      "qualified_for_current_runtime": false
+    }
+  ]
+}

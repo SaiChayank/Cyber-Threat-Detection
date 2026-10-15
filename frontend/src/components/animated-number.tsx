@@ -1,6 +1,7 @@
 'use client'
+import { useReducedMotion } from '@/hooks/use-reduced-motion'
 import { useEffect } from 'react'
-import { animate, motion, useMotionValue, useReducedMotion, useTransform } from 'motion/react'
+import { animate, motion, useMotionValue, useTransform } from 'motion/react'
 import { formatNumber } from '@/lib/utils'
 import { easeOut } from '@/lib/motion'
 

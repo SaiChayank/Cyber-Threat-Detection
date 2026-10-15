@@ -9,6 +9,19 @@ materialized in the repository. Until the separate reserved-source manifest is
 complete and passes the checks below, **DGA promotion is blocked** and the
 candidate remains disabled.
 
+**Reconfirmed 2 October 2026:** the v1 protocol and its sidecar remain byte-identical
+(`2bcf5534437fb55045d40be8f0558734184ea4d687abd97f9a5d10e8df79c763`).
+[Exposure/integrity supplement](../data/dga_evaluation_design_review.json) records
+the later rule validation, weighted-candidate training/validation and diagnostic
+review, plus freshly rebuilt split/source hashes. It is protected by its
+[SHA256 sidecar](../data/dga_evaluation_design_review.sha256). It supplements the
+existing protocol; it does not resplit sources, change gates, train a candidate
+or replace any previously frozen artifact/report.
+
+The design is frozen. **A reserved dataset is not yet materialized or verified.**
+Its actual source URLs, algorithm names, counts and hashes remain unavailable,
+not fabricated. Final evaluation and promotion remain blocked.
+
 ## Exposure inventory and split decision
 
 | Source | Prior influence | New role |
@@ -19,6 +32,17 @@ candidate remains disabled.
 | CICBellEXFDNS2021 `benign_1.pcap` | 22,336 first-label hard negatives before exclusions/deduplication; also runtime checks | Training/reference history |
 | CICBellEXFDNS2021 `benign_2.pcap` | Earlier DNS-reference evaluation and later error diagnosis | Development DNS check, never fresh evaluation |
 | Other CIC DNS attack captures | Mixed traffic without reliable per-query DGA labels | Ineligible as DGA truth |
+
+Later exposure does not make a source independent again:
+
+| Later work | Influence already incurred | Data role |
+| --- | --- | --- |
+| Feature/rule validation | Vowel/consonant feature reuse and rule trade-off assessment | Existing training/validation, never final evaluation |
+| Weighted candidate | Training-only benign weighting, fitting and validation-only threshold selection at 0.85 | Same training/validation; all reserved metrics unmeasured |
+| 2 October diagnostic review | Existing error interpretation and an unimplemented OOF-stacking recommendation | Saved inspected development reports/examples; no new cohort scored |
+
+Model names, family labels and source identifiers are partition/provenance fields,
+not predictive inputs. No model or feature change is authorized by this freeze.
 
 The prior comparison set has been inspected repeatedly, including the ccleaner,
 symmi and kraken false negatives; it is **validation/tuning evidence for future
@@ -97,6 +121,20 @@ strata. Break a hash tie lexicographically by label. These are deterministic
 **within-algorithm/stratum samples**, not random row-level train/test splitting.
 The DNS reference uses all eligible unique labels.
 
+For a reproducible literal sampling seed, the supplement records these exact
+ASCII stratum IDs: `common_popular`, `machine_generated_legitimate`, `cdn_cloud`,
+`short`, `long`, each with 600 domain labels. These instantiate the existing
+`<stratum>` placeholder; the original category precedence and sample sizes remain
+unchanged. The future materialization manifest must bind both the v1 protocol
+hash and the supplement hash before any score is computed.
+
+Overlap exclusions cover **full previously exposed raw sources**, including
+unselected positive rows, rather than only the capped model-training rows. The
+supplement records their canonical-label exclusion-union digest. Synthetic lab,
+demo, unit/export-fixture exposures also remain development-only and must be
+excluded/documented during materialization. Algorithm alias/derivative review is
+required separately; name-prefix grouping alone is not proof of independence.
+
 Before any tuning, an integrity/overlap checker may read raw sources and emit
 only hashes, source metadata, total/stratum counts and collision counts. Do not
 expose reserved example strings, outcome labels, score distributions, errors or
@@ -151,3 +189,90 @@ The next permitted task is to acquire and materialize that independent set,
 verify its licence/provenance, SHA256, algorithm separation, stratum counts and
 scored-label disjointness, then freeze the materialization manifest. **No model
 training or promotion occurred in this task.**
+
+## Reconfirmation checks and immutable boundaries — 2 October 2026
+
+Fresh read-only checks verified 58 raw domain files (seven smaller and 51 expanded)
+and two previously inspected benign PCAPs. The current loader reproduced the
+35/8/7 variant assignments and all counts in the table above. Pairwise scored-label
+and declared-family-group overlaps are zero. Twenty conflicting labels remain
+excluded; zero positive cross-split labels required exclusion. The inspected DNS
+reference still has 11,731 eligible labels and 1,278/1,260 validation/comparison
+overlaps. It remains **development evidence**, never a reserved DNS set.
+
+Each source entry in the supplement records path, publisher/source, available
+licence/DOI, bytes, SHA256, family or capture ID, canonical-label count and digest.
+Each development partition records exact families/counts and a deterministic
+selected-row digest. Actual reserved-source hashes/counts remain null because no
+qualifying source manifest exists. No candidate score or threshold was computed.
+
+**Not inspected during tuning:** the future three-unseen-algorithm positive set,
+five-stratum legitimate-domain set and separate new benign-DNS set named by
+`data/dga_reserved_materialization.json`. Until integrity-only eligibility checks
+and frozen hashes exist, none may substitute for a passing final result. In an
+eventual materialization check, emit only metadata/hashes/counts/collision counts;
+do not reveal reserved example strings, scores, distributions or outcomes.
+
+### Reproduce the integrity and development overlap checks
+
+Run from the repository root with the already installed Python environment.
+The imported module's training `main()` is not called. This checks only previously
+exposed development sources; it neither reads nor creates a reserved set.
+
+```powershell
+@'
+from pathlib import Path
+import hashlib, json, socket
+from datasets.train_dga_v2 import load_data
+from ml.dga import DgaModel
+sha = lambda p: hashlib.sha256(p.read_bytes()).hexdigest()
+p = Path('data/dga_evaluation_design_review.json')
+assert sha(p) == p.with_suffix('.sha256').read_text().strip()
+m = json.loads(p.read_text())
+parent = m['original_protocol']
+assert sha(Path(parent['path'])) == parent['sha256']
+for item in m['raw_source_integrity']:
+    assert sha(Path(item['path'])) == item['sha256']
+def forbidden(*args, **kwargs):
+    raise AssertionError('No scoring/network operations in a protocol check')
+DgaModel.predict = DgaModel._uncached_score = socket.socket = forbidden
+rows, provenance, captures = load_data()
+digest = lambda v: hashlib.sha256(json.dumps(v, ensure_ascii=True,
+    separators=(',', ':')).encode()).hexdigest()
+labels = {k: {label for label, _, _ in v} for k, v in rows.items()}
+groups = {k: {family.split('_')[0] for family in fs}
+    for k, fs in provenance['family_splits'].items()}
+for k, v in rows.items():
+    expected = m['development_partitions'][k]
+    assert provenance['split_counts'][k] == expected['counts']
+    assert provenance['family_splits'][k] == expected['families']
+    assert digest(sorted(v)) == expected['selected_rows_sha256']
+for a, b in [('train','validation'), ('train','test'), ('validation','test')]:
+    assert not labels[a] & labels[b]
+    assert not groups[a] & groups[b]
+second = captures['benign-benign_2'] - labels['train'] - captures['benign-benign_1']
+assert len(second) == m['inspected_second_dns']['canonical_label_count']
+assert {k: len(second & v) for k, v in labels.items()} == m['inspected_second_dns']['overlap_with_domain_partitions']
+print('PASS: source hashes, frozen rows/families and development overlaps')
+'@ | .venv/Scripts/python.exe -
+```
+
+The supplement uses compact sorted-key UTF-8 JSON **without a newline** so its
+raw-byte hash survives Windows checkout without changing `.gitattributes` or
+existing manifests. The v1 protocol, candidate plan, artifacts, prior numerical
+reports, raw sources and analyst database retain their hashes. No code/tests were
+added or changed; existing partition/manifest regressions are reused. Freeze these
+definitions and limitations; do not refactor a completed detector in this task.
+
+The documented integrity command passed. Reused tests passed with **17 passed**:
+`python -m pytest tests/test_dga_diagnostic.py tests/test_dga_candidate.py -q`.
+No regression tests were added because no executable behavior or bug was changed.
+The full backend suite and frontend build were not rerun for this manifest/docs
+task; this result makes no new claim about unrelated runtime behavior.
+
+**Definition of Done:** evaluation-design freeze passes. Actual reserved dataset
+materialization and its integrity/overlap checks are **blocked**, so this is not
+a final-data freeze, model-quality pass or authorization to train/promote. The next
+incomplete DGA evaluation task is eligible independent source materialization
+followed by integrity-only verification and manifest freeze. No future task starts
+automatically; the separate project completion-plan tasks remain unchanged.

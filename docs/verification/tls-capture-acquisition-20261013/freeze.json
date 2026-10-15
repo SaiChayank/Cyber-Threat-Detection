@@ -1,0 +1,266 @@
+{
+  "task": "Raw TLS source acquisition/qualification only",
+  "date": "2026-10-13",
+  "definition_of_done": "PASS: narrow controlled development cohort acquired and qualified",
+  "source_role": "development-only; consulted Testbed D cannot become untouched final evaluation",
+  "qualification_gates": {
+    "original_runtime_format": true,
+    "source_label_uid_tuple_time_integrity": true,
+    "raw_packet_clock_inside_explicit_utc_run": true,
+    "complete_native_labelled_c2_clienthello": true,
+    "complete_native_labelled_benign_clienthello": true
+  },
+  "qualified_session_counts": {
+    "malicious_c2": 115,
+    "benign": 467
+  },
+  "model_training": "BLOCKED",
+  "training_performed": false,
+  "inference_performed": false,
+  "promotion_performed": false,
+  "runtime_changed": false,
+  "reserved_evaluation_inspected": false,
+  "acquisition_tests_passed": 25,
+  "combined_tests_passed": 44,
+  "protected_files_unchanged": 344,
+  "failed_public_tls_production_enabled": false,
+  "no_staged_files": true,
+  "frozen": [
+    {
+      "file": "datasets\\acquire_tls_source.py",
+      "bytes": 8548,
+      "sha256": "da34fccc0b6f597b3c86cdb657f35f7bcbde23fd34481c3fe06ce01f1f63f1c8"
+    },
+    {
+      "file": "datasets\\qualify_tls_capture.py",
+      "bytes": 10005,
+      "sha256": "fc64478458e8a8ddef44accec0314ca52089457763b020bfbd38c88846d5623f"
+    },
+    {
+      "file": "datasets\\qualify_tqh_tls.py",
+      "bytes": 11264,
+      "sha256": "966d79d990ebda056dd602e3d40238c97027beff4f92a94f2ce326cd9ba76a52"
+    },
+    {
+      "file": "tests\\test_tls_capture_qualification.py",
+      "bytes": 5297,
+      "sha256": "91b4994cf608fb40135219e9dc85cf9b7881378b59978fa855cc857af5d93de7"
+    },
+    {
+      "file": "tests\\test_tls_source_acquisition.py",
+      "bytes": 3486,
+      "sha256": "81ac6b4c793486c9c1370c9d486e6c6bf332ac5e7aac3a3ac7b318421c39601c"
+    },
+    {
+      "file": "tests\\test_tqh_tls_qualification.py",
+      "bytes": 5843,
+      "sha256": "09f4f0439b63081937156a55b3ed8725545e995d76efa3c2bfdac6352ebeb121"
+    },
+    {
+      "file": "docs\\TLS_CAPTURE_ACQUISITION.md",
+      "bytes": 14127,
+      "sha256": "4e6bda67dc7aeeaac2e3e3b9313e307e68d353664eafebac493849b7b90a6c14"
+    },
+    {
+      "file": "docs\\DATASETS.md",
+      "bytes": 15640,
+      "sha256": "892775164a1f288735ec1f91fa6b1fd62b2f4386ec6375ddd7db4afc995c2155"
+    },
+    {
+      "file": "docs\\MODEL_AND_VALIDATION.md",
+      "bytes": 17040,
+      "sha256": "7c21c7d5c021cb3b1eefe30452934b012a48a2e2a2cb8d0ba60e5ff92dad6465"
+    },
+    {
+      "file": "docs\\COMPLETION_PLAN.md",
+      "bytes": 15933,
+      "sha256": "b04bf3a2d414b2613df75fd73ea40bb4e98a3a14e542a85db5a815b5688bdc4e"
+    },
+    {
+      "file": "docs\\verification\\tls-capture-acquisition-20261013\\acquisition-summary.json",
+      "bytes": 2185,
+      "sha256": "8391e6bdc993d9961d07abf95e838d841f9c060ec9d5d80f83949865ad58b7e1"
+    },
+    {
+      "file": "docs\\verification\\tls-capture-acquisition-20261013\\browse-CSVs.html",
+      "bytes": 1247,
+      "sha256": "dc6c9ce7bfe23dc4ff12b1881141b2818f30610f31f5be1de2f0fcc199e861ea"
+    },
+    {
+      "file": "docs\\verification\\tls-capture-acquisition-20261013\\browse-PCAPs.html",
+      "bytes": 678,
+      "sha256": "36013375a8ba84a88368d34eeb883f406a0f2269f2721db43dc6be8cf2f1f157"
+    },
+    {
+      "file": "docs\\verification\\tls-capture-acquisition-20261013\\capture-manifest.json",
+      "bytes": 1879,
+      "sha256": "2f771fdc725f0820cf7cf50254a0ec0b2a53783c7e18da5040174b368d855680"
+    },
+    {
+      "file": "docs\\verification\\tls-capture-acquisition-20261013\\cira-selected-report.json",
+      "bytes": 15777,
+      "sha256": "340d966ba53c27f84b181d2d9288146e90df94597f0c3e6eac7781ba7ea260b7"
+    },
+    {
+      "file": "docs\\verification\\tls-capture-acquisition-20261013\\download-metadata.json",
+      "bytes": 2776,
+      "sha256": "f20c2b34764bbb76d16197fa8d16927d3c2cbddd039508a2d5cb21b186cb54f4"
+    },
+    {
+      "file": "docs\\verification\\tls-capture-acquisition-20261013\\final-integrity.json",
+      "bytes": 55508,
+      "sha256": "e05a79b950b38739a56236136a1eb0ff8bd915e765ec39bef76b9c033c147357"
+    },
+    {
+      "file": "docs\\verification\\tls-capture-acquisition-20261013\\flow.py.inspection.json",
+      "bytes": 1228,
+      "sha256": "c9c44e8ce5ecf66628f4927c53e6968a5f3523d6719ba2268b28b67176109fbe"
+    },
+    {
+      "file": "docs\\verification\\tls-capture-acquisition-20261013\\flow_session.py.inspection.json",
+      "bytes": 1313,
+      "sha256": "f18cdff7be388bc92567ab2d35c1f68344339c53c2a946385cd8e33bbf66c90e"
+    },
+    {
+      "file": "docs\\verification\\tls-capture-acquisition-20261013\\initial-integrity.json",
+      "bytes": 40539,
+      "sha256": "1dbbbd495b23ee104c28c43c46ed56bf66295e192a0a34cc35c1bc35f7e60691"
+    },
+    {
+      "file": "docs\\verification\\tls-capture-acquisition-20261013\\meter_constants.py.inspection.json",
+      "bytes": 342,
+      "sha256": "2c70ab39dee189bff8472cb13cbe9e0b07ccbb0f96fc475415f609c88c782b4c"
+    },
+    {
+      "file": "docs\\verification\\tls-capture-acquisition-20261013\\meter_features_context_packet_flow_key.py.inspection.json",
+      "bytes": 260,
+      "sha256": "7cd31910b5d1eeb7c01a3ae6dfda1664662d789a40d0553eb5769586e5fdba7e"
+    },
+    {
+      "file": "docs\\verification\\tls-capture-acquisition-20261013\\meter_features_packet_time.py.inspection.json",
+      "bytes": 365,
+      "sha256": "ed7c66ec1d8ffb9b9a655db104d9c2cf21ff3acaf06fbe6cd9cf9d19da03cfd7"
+    },
+    {
+      "file": "docs\\verification\\tls-capture-acquisition-20261013\\pcap-file-listings.json",
+      "bytes": 9367,
+      "sha256": "3eb63e74b3fb9af22a500bb6b93174e8eb4f078bc953d38c42ce46be243f217f"
+    },
+    {
+      "file": "docs\\verification\\tls-capture-acquisition-20261013\\PROTOCOL.md",
+      "bytes": 2372,
+      "sha256": "f2b00f195427056f630112e6636176a071e795dc81e027cb038045c2af44caa0"
+    },
+    {
+      "file": "docs\\verification\\tls-capture-acquisition-20261013\\publisher-browse-source.json",
+      "bytes": 110,
+      "sha256": "b8779522553620032779f4da565c14090491567c0852c6a6f186bdb74789f18e"
+    },
+    {
+      "file": "docs\\verification\\tls-capture-acquisition-20261013\\publisher-browse.html",
+      "bytes": 753,
+      "sha256": "f5532e23baa26848ffecf77063e5da9e4f4f8149ad0d5dd622a0f0739c999d61"
+    },
+    {
+      "file": "docs\\verification\\tls-capture-acquisition-20261013\\publisher-label-code-index.json",
+      "bytes": 431,
+      "sha256": "affbafc5385c5814ffad7d9ba0ac1f7ba7bd2ee8d5bd9d7c42c20aaa22b8c1ae"
+    },
+    {
+      "file": "docs\\verification\\tls-capture-acquisition-20261013\\publisher-listings.json",
+      "bytes": 1754,
+      "sha256": "7b56deed9c4c03b075abb8d01f7a722ebbf2febea2189a1b8e4e5b1923bd3cfc"
+    },
+    {
+      "file": "docs\\verification\\tls-capture-acquisition-20261013\\range-capability.json",
+      "bytes": 1155,
+      "sha256": "dec29afaef5dd77c02db7e7a09d002fa9283d884e23cb58605ae775db0abb293"
+    },
+    {
+      "file": "docs\\verification\\tls-capture-acquisition-20261013\\registration-result.json",
+      "bytes": 253,
+      "sha256": "6c3195ac6ae51f961fd6f4e3485a6e8a302bfdb336d1d90805c0be50064a3ac9"
+    },
+    {
+      "file": "docs\\verification\\tls-capture-acquisition-20261013\\SELECTION.md",
+      "bytes": 1716,
+      "sha256": "1254d738633408a40c7ba3c206e0d985637fca6757fa3d0d5c829e32d9ad632b"
+    },
+    {
+      "file": "docs\\verification\\tls-capture-acquisition-20261013\\source-provenance.json",
+      "bytes": 621,
+      "sha256": "d873bf5876a8245754b10539f929f6bb1ee9997e73a38d0297fa22a2cb22e39a"
+    },
+    {
+      "file": "docs\\verification\\tls-capture-acquisition-20261013\\tests.txt",
+      "bytes": 611,
+      "sha256": "5610701fb8ba1a1f4d5250c35921114aa8d80303d8f06b0f2ce6cabff3bd4692"
+    },
+    {
+      "file": "docs\\verification\\tls-capture-acquisition-20261013\\tqh-input-manifest.json",
+      "bytes": 1444,
+      "sha256": "0c09265c3830ed4b11801943c81ccfd33d73539549c8adf392c5f65429f5758c"
+    },
+    {
+      "file": "docs\\verification\\tls-capture-acquisition-20261013\\tqh-label-download.json",
+      "bytes": 360,
+      "sha256": "86735f0e3c0034cdcf5e4112ec2cd2ec4f6b50559318dcdb4a2cbc6ab47ef53b"
+    },
+    {
+      "file": "docs\\verification\\tls-capture-acquisition-20261013\\tqh-qualification-complete.json",
+      "bytes": 649491,
+      "sha256": "57cb10c6a07b47c86a500819ab43580c23396856cba1f121bffef94493e18237"
+    },
+    {
+      "file": "docs\\verification\\tls-capture-acquisition-20261013\\tqh-qualification-final.json",
+      "bytes": 649001,
+      "sha256": "04825d656083993045b94745ea1c314aa85e7eabab16f1018c382aecbc3ff02d"
+    },
+    {
+      "file": "docs\\verification\\tls-capture-acquisition-20261013\\tqh-qualification-release.json",
+      "bytes": 649535,
+      "sha256": "638d99f19b4b7bf5240fca6ad7fc2c2c7305bbde4650a9222cf5a89f9dfea862"
+    },
+    {
+      "file": "docs\\verification\\tls-capture-acquisition-20261013\\tqh-qualification.json",
+      "bytes": 647572,
+      "sha256": "ba7dc4091c02c06e945baccb4870a6485f564e8fb9e9b992bc2142de5f0902db"
+    },
+    {
+      "file": "docs\\verification\\tls-capture-acquisition-20261013\\tqh-selected-download.json",
+      "bytes": 295,
+      "sha256": "6005f053718df2fc9fbc0d59534e955d3d49510e18fbb15c7fce089461f4a8e3"
+    },
+    {
+      "file": "docs\\verification\\tls-capture-acquisition-20261013\\tqh-selected-label-files.json",
+      "bytes": 1121,
+      "sha256": "859d172353369d72f2683ff9c17a7e8e30bdc8e7cad9319ceaaf16464db38d40"
+    },
+    {
+      "file": "docs\\verification\\tls-capture-acquisition-20261013\\tqh-zip-catalogue.json",
+      "bytes": 3139,
+      "sha256": "806940614d4e0b8afce88065947b83d495b7ccf434ce301fe4a670ca50f9e3cd"
+    },
+    {
+      "file": "docs\\verification\\tls-capture-acquisition-20261013\\TQH_README_v122.md",
+      "bytes": 21373,
+      "sha256": "eed4c1f74bdb5f452389eee141e8a3bc0c530657ffc6f71034a07b6090966f07"
+    },
+    {
+      "file": "docs\\verification\\tls-capture-acquisition-20261013\\TQH_SELECTION.md",
+      "bytes": 2338,
+      "sha256": "4168071679dfa7f7e7c67651c3329bb50d8d3e687c914dcafd0212ba6f41241c"
+    }
+  ],
+  "limitations": [
+    "One controlled Merlin HTTP/2-over-TLS framework/cell/environment",
+    "One positive JA3, disjoint from two benign JA3s; severe shortcut risk",
+    "Publisher partial source gate retains failed H3 balance",
+    "Raw interval join uses +/-1 microsecond; source time equality is exact binary64",
+    "Complete first IPv4 ClientHello in one native packet/record only; no TLS reassembly/raw QUIC qualification",
+    "267 adjacent timestamp reversals; zero exact frame-and-timestamp duplicates does not rule out TCP retransmissions",
+    "Selected PCAP member CRC/local SHA verified; whole PCAP archive SHA unverified",
+    "CIRA selected captures remain unqualified; benign raw download partials preserved/excluded"
+  ],
+  "next_task": "Freeze source/family-aware coverage and partition plan with independent framework/benign application requirements; do not train yet"
+}

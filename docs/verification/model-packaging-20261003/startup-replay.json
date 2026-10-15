@@ -1,0 +1,32 @@
+{
+  "scope": "Fresh isolated Windows-style checkout; documented ALL20x replay via Next.js proxy; synthetic functional demo only",
+  "routes": {
+    "/": 200,
+    "/monitor": 200,
+    "/api/health": 200
+  },
+  "processed": 256,
+  "status": "complete",
+  "error": null,
+  "alerts": 15,
+  "persisted": 15,
+  "sse_received": 15,
+  "sse_matches_api": true,
+  "classes": [
+    "BOTNET_C2",
+    "DATA_EXFILTRATION",
+    "DDOS",
+    "DGA_DOMAINS",
+    "DNS_TUNNELLING",
+    "ENCRYPTED_MALWARE",
+    "RECONNAISSANCE"
+  ],
+  "first_alert_observed": {
+    "processed": 38,
+    "replay_status": "running"
+  },
+  "dga_candidate_enabled": false,
+  "dns_tunnel_candidate_enabled": false,
+  "elapsed_seconds": 46.012,
+  "sse_errors": []
+}

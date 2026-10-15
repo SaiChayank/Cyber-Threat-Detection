@@ -1,0 +1,25 @@
+{
+  "all_nine_expected_traces_unchanged": true,
+  "updated_pins": [
+    {
+      "file": "backend/application.py",
+      "before": "51252ee7446bf932b34fc069d32e9164048277f9efdc30a7d4dcd0cc9f52873e",
+      "after": "7df09be3a45daf82621e00dfc4c217d07222ab0f44b80a90a7ba0bd4c7b9d18b"
+    },
+    {
+      "file": "detection/pipeline.py",
+      "before": "d5c9623e63ab7d143fe2e5f041b23a3ccbf5d114e1c0f0b349962f861a014d5b",
+      "after": "4e70bc3e50546e57fa5f0d9432f3a9be969b906897d837f6f3638311c9b54926"
+    },
+    {
+      "file": "features/extractor.py",
+      "before": "27a5155f8f9bc4a0c6b4d7828c1960d4954705d37d1b67e5e5eca5fa36d8c88d",
+      "after": "624952f8063464c88466b861c72f121c318be5835a02a3d2a4b24b38b1800ac8"
+    },
+    {
+      "file": "features/rate_window.py",
+      "before": "8fde1be3af18ee1ad6f3d8911afb214432676669406010a01f0603995ff62a11",
+      "after": "a0d4542ab56b44bb51bdee88ebd56a7df95e9a9d6a79fc569769a9100b65d683"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "gate_passed": true,
+  "development_counts": {
+    "train": {
+      "BENIGN_REFERENCE": 11475,
+      "MALWARE_RELATED": 14,
+      "UNLABELLED": 74
+    },
+    "validation": {
+      "BENIGN_REFERENCE": 13123,
+      "MALWARE_RELATED": 32,
+      "UNLABELLED": 328
+    },
+    "quarantine_historical_test": {
+      "BENIGN_REFERENCE": 4928,
+      "MALWARE_RELATED": 755895,
+      "UNLABELLED": 496556
+    },
+    "unlabelled": {
+      "BENIGN_REFERENCE": 0,
+      "MALWARE_RELATED": 0,
+      "UNLABELLED": 152180
+    }
+  },
+  "component_counts": {
+    "validation": 24,
+    "unlabelled": 410,
+    "train": 31,
+    "quarantine_historical_test": 12
+  },
+  "overlap_checks": {
+    "members": {
+      "train:validation": 0,
+      "train:quarantine_historical_test": 0,
+      "validation:quarantine_historical_test": 0
+    },
+    "groups": {
+      "train:validation": 0,
+      "train:quarantine_historical_test": 0,
+      "validation:quarantine_historical_test": 0
+    },
+    "sample_ids_sha256": {
+      "train:validation": 0,
+      "train:quarantine_historical_test": 0,
+      "validation:quarantine_historical_test": 0
+    }
+  }
+}

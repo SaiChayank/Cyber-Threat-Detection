@@ -1,0 +1,45 @@
+{
+  "task": "Offline feature-semantic contract preflight only",
+  "completion_date": "2026-10-07",
+  "definition_of_done": "PASS for offline tool only",
+  "contract_version": "univect-gnb-semantics-20261007-v1",
+  "current_conformance": "PASS",
+  "historical_compatibility": "FAIL",
+  "expected_cli_exit": 1,
+  "incompatible_features": [
+    "byte_rate",
+    "byte_ratio",
+    "packet_rate",
+    "source_entropy"
+  ],
+  "tests": {
+    "new_cases": 20,
+    "targeted_combined_passed": 31,
+    "elapsed_seconds": 62.1,
+    "full_backend_rerun": false,
+    "frontend_build_rerun": false,
+    "reason": "No shared runtime/frontend behavior changed; preceding recovery recheck passed 268/backend, TypeScript and build."
+  },
+  "protected_files_checked": 81,
+  "changed_protected_files": [],
+  "model_sha256": "4d8e08323374535789e21f9f7cd1ee3f1c84b663ce555e67bb4ced57c95e8010",
+  "runtime_changes": false,
+  "model_changes": false,
+  "dataset_evaluation": false,
+  "benchmark_refresh": false,
+  "hash_scope": "Task file text SHA256 with CRLF normalized to LF; protected files checked as raw bytes.",
+  "frozen_file_sha256": {
+    "datasets/check_feature_contract.py": "45d307b632ef241ce81d07ccd940ffd7b299fe0d423a36f8057a55b038d7588d",
+    "tests/test_feature_semantic_contract.py": "495ba7b2aad75b44751d1743815f9eb7baefd0c6106a8ed493bd7b1eae29bff1",
+    "data/feature_semantic_contract.json": "32741180e7ceb95ffc8541201f3f5644a502f035f1791232368faefe76bba616",
+    "data/feature_semantic_contract.sha256": "7cce294bc5e911d853c1d2b6550919a78624b4809df265f27e657c2cf3e6c735",
+    "docs/FEATURE_SEMANTIC_CONTRACT.md": "e59acdc5d359a8ac7dbf39d97e5f43b1db742a03ff99c2bc6ec397c1ffbf4a31",
+    "README.md": "92db2556006888e3589997ae342445e2b87eac1e8d5b836dced4589c94f23128",
+    "docs/MODEL_AND_VALIDATION.md": "83f4647da351196730d05bbf227181d2e4a4b37ef4389c67fe22f51f1ffad25f",
+    "docs/COMPLETION_PLAN.md": "ee3362cc113f1e7d2a208c2ddae6233236018bbb88c587d938ab5a31d714d402",
+    "docs/verification/feature-semantic-contract-20261007/ACCEPTANCE.md": "afc31a5bfe8521127d2a89ae221388ecce9b6c73a11340c7490192fcdea23949",
+    "docs/verification/feature-semantic-contract-20261007/report-final.json": "d80851a1b75f947a52dba017cb5cfb258e94c497d0aa8e556e4ccd227fb7e885",
+    "docs/verification/feature-semantic-contract-20261007/tests-final.log": "e3577010aa6cb60de93346e4fa39afb8e5eb66d95e29b2ca26ec1e98d512a170"
+  },
+  "next_task": "Failure analysis of active baseline already evaluated benign hard controls; separate rule and frozen-model contributions; recommend one experiment without implementation, tuning or reserved data."
+}

@@ -1,0 +1,125 @@
+{
+  "role": "development-only",
+  "url": "https://zenodo.org/records/22732327/files/TQH-C2_pcap_D_merlin_h2.zip?download=1",
+  "archive_bytes": 1823494055,
+  "archive_sha256_locally_verified": false,
+  "members": [
+    {
+      "name": "D_i1800_j0/D_0817.pcap",
+      "compressed_bytes": 147873459,
+      "raw_bytes": 153458527,
+      "crc32": 538655382,
+      "method": 8,
+      "flags": 0,
+      "local_offset": 0
+    },
+    {
+      "name": "D_i1800_j30/D_0930.pcap",
+      "compressed_bytes": 153603778,
+      "raw_bytes": 159315407,
+      "crc32": 3263010950,
+      "method": 8,
+      "flags": 0,
+      "local_offset": 147873539
+    },
+    {
+      "name": "D_i1800_j70/D_1044.pcap",
+      "compressed_bytes": 151957935,
+      "raw_bytes": 157684061,
+      "crc32": 1835775821,
+      "method": 8,
+      "flags": 0,
+      "local_offset": 301477398
+    },
+    {
+      "name": "D_i300_j0/D_0604.pcap",
+      "compressed_bytes": 117646526,
+      "raw_bytes": 121871214,
+      "crc32": 1088333062,
+      "method": 8,
+      "flags": 0,
+      "local_offset": 453435414
+    },
+    {
+      "name": "D_i300_j30/D_0648.pcap",
+      "compressed_bytes": 100877693,
+      "raw_bytes": 104730430,
+      "crc32": 3627789436,
+      "method": 8,
+      "flags": 0,
+      "local_offset": 571082019
+    },
+    {
+      "name": "D_i300_j70/D_0732.pcap",
+      "compressed_bytes": 103756994,
+      "raw_bytes": 107538553,
+      "crc32": 3973421837,
+      "method": 8,
+      "flags": 0,
+      "local_offset": 671959792
+    },
+    {
+      "name": "D_i30_j0/D_0506.pcap",
+      "compressed_bytes": 156712951,
+      "raw_bytes": 162976253,
+      "crc32": 3800520637,
+      "method": 8,
+      "flags": 0,
+      "local_offset": 775716866
+    },
+    {
+      "name": "D_i30_j30/D_0525.pcap",
+      "compressed_bytes": 124060118,
+      "raw_bytes": 129107496,
+      "crc32": 1038139101,
+      "method": 8,
+      "flags": 0,
+      "local_offset": 932429895
+    },
+    {
+      "name": "D_i30_j70/D_0544.pcap",
+      "compressed_bytes": 125482811,
+      "raw_bytes": 130811750,
+      "crc32": 2427873327,
+      "method": 8,
+      "flags": 0,
+      "local_offset": 1056490092
+    },
+    {
+      "name": "D_i3600_j0/D_1158.pcap",
+      "compressed_bytes": 218959334,
+      "raw_bytes": 226724208,
+      "crc32": 1556157621,
+      "method": 8,
+      "flags": 0,
+      "local_offset": 1181972982
+    },
+    {
+      "name": "D_i3600_j30/D_1342.pcap",
+      "compressed_bytes": 220734977,
+      "raw_bytes": 228897534,
+      "crc32": 2656624943,
+      "method": 8,
+      "flags": 0,
+      "local_offset": 1400932396
+    },
+    {
+      "name": "D_i3600_j70/D_1526.pcap",
+      "compressed_bytes": 201825395,
+      "raw_bytes": 209399790,
+      "crc32": 2780891682,
+      "method": 8,
+      "flags": 0,
+      "local_offset": 1621667454
+    }
+  ],
+  "selected": {
+    "name": "D_i300_j30/D_0648.pcap",
+    "compressed_bytes": 100877693,
+    "raw_bytes": 104730430,
+    "crc32": 3627789436,
+    "method": 8,
+    "flags": 0,
+    "local_offset": 571082019
+  }
+}

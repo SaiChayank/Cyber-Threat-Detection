@@ -1,0 +1,90 @@
+{
+  "base": "http://127.0.0.1:3000",
+  "browser": "154.0.8037.92",
+  "checked_at": "2026-10-01T12:06:28.126Z",
+  "passed": 20,
+  "total": 20,
+  "results": [
+    {
+      "name": "Initial live connection and empty state",
+      "passed": true
+    },
+    {
+      "name": "1440px empty state and section navigation",
+      "passed": true
+    },
+    {
+      "name": "768px empty state and section navigation",
+      "passed": true
+    },
+    {
+      "name": "390px empty state and section navigation",
+      "passed": true
+    },
+    {
+      "name": "320px empty state and section navigation",
+      "passed": true
+    },
+    {
+      "name": "Scenario selection, incremental start/stop and metric updates",
+      "passed": true
+    },
+    {
+      "name": "Replay restart, completion, SSE alerts and metric counts",
+      "passed": true
+    },
+    {
+      "name": "Threat/severity/search filters, pagination, no-match recovery and JSON export",
+      "passed": true
+    },
+    {
+      "name": "1440px populated table, alert detail and focus return",
+      "passed": true
+    },
+    {
+      "name": "768px populated table, alert detail and focus return",
+      "passed": true
+    },
+    {
+      "name": "390px populated table, alert detail and focus return",
+      "passed": true
+    },
+    {
+      "name": "320px populated table, alert detail and focus return",
+      "passed": true
+    },
+    {
+      "name": "IPv6 addresses and long identifiers fit mobile alert detail",
+      "passed": true
+    },
+    {
+      "name": "PCAP file input: invalid extension/empty/invalid/oversized and valid upload",
+      "passed": true
+    },
+    {
+      "name": "Telemetry unavailable/retry recovers the live status",
+      "passed": true
+    },
+    {
+      "name": "SSE-only disconnect/resume receives persisted alerts without duplicate records",
+      "passed": true
+    },
+    {
+      "name": "Stream schema errors survive telemetry polling and recover on a valid event",
+      "passed": true
+    },
+    {
+      "name": "Initial backend unavailable state and subsequent recovery",
+      "passed": true
+    },
+    {
+      "name": "Landing/Monitor routing and reduced-motion UI",
+      "passed": true
+    },
+    {
+      "name": "Browser runtime and console",
+      "passed": true
+    }
+  ],
+  "errors": []
+}

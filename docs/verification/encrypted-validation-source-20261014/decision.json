@@ -1,0 +1,270 @@
+{
+  "task": "Independent TLS validation-source metadata identification and preassignment",
+  "date": "2026-10-14",
+  "frozen_plan": {
+    "file": "docs/verification/encrypted-coverage-plan-20261014/plan.json",
+    "sha256_lf_normalized": "1f8192e3ffd2f22c2a9e786846222457d8b81114d7622ae5ecdb70e4cbee8e4f"
+  },
+  "research_complete_for_reviewed_sources": true,
+  "search_scope": "Bounded review of primary documentation and file metadata, not exhaustive Internet absence",
+  "source_preassignment_definition_of_done": "NOT_MET: no source satisfies every frozen mandatory condition",
+  "validation_role": {
+    "assigned_source": null,
+    "assigned_framework": null,
+    "assigned_environment": null,
+    "assigned_cohorts": [],
+    "qualified_counts": null,
+    "status": "UNAVAILABLE_UNASSIGNED"
+  },
+  "reserved_role_changed": false,
+  "candidates": [
+    {
+      "id": "ares2025_cobalt_strike",
+      "sources": [
+        "https://github.com/cp-tsp/ares2025-artifacts",
+        "https://arxiv.org/html/2506.08922v1"
+      ],
+      "commit": "7acfebc6f17fe774df91a1b550c4b23613b90fe9",
+      "publisher": "Cl\u00e9ment Parssegny and coauthors; ANSSI / T\u00e9l\u00e9com SudParis",
+      "framework": "cobalt_strike",
+      "review_status": "UNQUALIFIED_LEAD_ONLY_NOT_ROLE_ASSIGNED",
+      "supported_metadata": [
+        "Author-generated Cobalt Strike HTTPS captures advertised",
+        "Windows Server 2022/Vagrant lab and Selenium browser generation described",
+        "Separate benign capture files advertised"
+      ],
+      "format_catalogue": {
+        ".pcap": 18,
+        ".pcapng": 19
+      },
+      "benign_capture_paths": 11,
+      "unique_benign_git_objects": 10,
+      "all_advertised_benign_capture_paths_pcapng": true,
+      "duplicate_git_object_references": {
+        "4d611f1b51a66900a74425a4eb8ed49315bb34b6": [
+          "data/pcap/amazon_dns_generic/cs2_dns_default_with_amazon.pcap",
+          "data/pcap/amazon_dns_generic/cs_dns_default_with_amazon.pcap"
+        ],
+        "18a9cc1e1783248696262e64913289dd159fc45a": [
+          "data/pcap/amazon_http_amazon/benign_amazon_https.pcapng",
+          "data/pcap/amazon_https_amazon/benign_amazon_https.pcapng"
+        ]
+      },
+      "duplicate_scope": "Git tree/object identity only; no raw-byte file SHA256 or packet inspection",
+      "permission_scope": {
+        "github_repository_license_metadata": null,
+        "src_code_license": "MIT document inspected",
+        "paper_license": "CC BY-SA 4.0",
+        "explicit_capture_data_license_established": false,
+        "meaning": "No conclusion that permissions never exist; code/paper terms do not establish capture-data scope"
+      },
+      "benign_categories_documented": {
+        "browser_tls": "Selenium/browser activity described",
+        "software_update_tls": "NOT_ESTABLISHED",
+        "api_sdk_client_tls": "NOT_ESTABLISHED",
+        "ordinary_encrypted_application_tls": "NOT_ESTABLISHED"
+      },
+      "mandatory_metadata_conditions": {
+        "independent_tls_framework_and_collection_documented": true,
+        "data_use_permission_scope_established": null,
+        "session_intent_tuple_uid_and_utc_join_available": null,
+        "native_classic_ethernet_benign_captures_attested": false,
+        "complete_clienthello_raw_timing_attested": null,
+        "four_benign_application_categories_verified": false,
+        "two_separate_run_dates_and_builds_attested": null,
+        "matched_environment_and_benign_only_scenario_truth_attested": null
+      },
+      "blockers": [
+        "All advertised benign captures use unsupported PCAPNG naming; headers unread",
+        "File-prefix labels do not establish every TLS session intent and UTC mapping",
+        "Updater, API/SDK and ordinary encrypted application controls not documented",
+        "Capture-data permission scope and native complete ClientHello visibility not established",
+        "Duplicate Amazon Git objects cannot establish independent capture runs"
+      ],
+      "raw_or_label_values_downloaded": false,
+      "preassigned_role": null
+    },
+    {
+      "id": "mta_cobalt_strike_derived_study",
+      "sources": [
+        "https://github.com/HuyLHP/encrypted-c2-detection",
+        "https://arxiv.org/html/2609.27311v1"
+      ],
+      "publisher": "Study authors / MTA-derived corpus",
+      "framework": "cobalt_strike",
+      "supported_metadata": [
+        "Cobalt Strike traffic study and repository",
+        "Destination-indicator labelling method documented"
+      ],
+      "blockers": [
+        "Raw captures not redistributed by inspected repository",
+        "Non-indicator flows are labelled benign despite documented incomplete ground truth",
+        "No verified four benign application categories, full UTC/session/native visibility attestation"
+      ],
+      "license_scope": "MIT repository code; underlying capture permissions not assumed",
+      "review_status": "UNQUALIFIED_LEAD_ONLY_NOT_ROLE_ASSIGNED",
+      "raw_or_label_values_downloaded": false,
+      "preassigned_role": null
+    },
+    {
+      "id": "ecu_malnett",
+      "sources": [
+        "https://ro.ecu.edu.au/datasets/151/"
+      ],
+      "publisher": "Edith Cowan University, Gaber/Ahmed/Johnstone",
+      "framework": null,
+      "supported_metadata": [
+        "Raw host PCAP plus benign/baseline and malware corpus advertised",
+        "CC BY-NC 4.0 dataset stated"
+      ],
+      "blockers": [
+        "Publisher explicitly lacks process-to-flow ground truth",
+        "Labels inferred from whitelist/DNS/beacon/HTTP/port evidence overlap proposed detector signals",
+        "Four application controls and verified raw TLS session/UTC/handshake truth absent in inspected documentation"
+      ],
+      "license_scope": "CC BY-NC 4.0",
+      "review_status": "UNQUALIFIED_LEAD_ONLY_NOT_ROLE_ASSIGNED",
+      "raw_or_label_values_downloaded": false,
+      "preassigned_role": null
+    },
+    {
+      "id": "mit_vnat",
+      "sources": [
+        "https://www.ll.mit.edu/r-d/datasets/vpnnonvpn-network-application-traffic-dataset-vnat"
+      ],
+      "publisher": "MIT Lincoln Laboratory / Steven Jorgensen",
+      "framework": null,
+      "supported_metadata": [
+        "Application-isolated libpcap traffic captures advertised",
+        "Browser streaming/chat/file-transfer applications documented"
+      ],
+      "blockers": [
+        "C2 category is legitimate SSH/RDP remote control, not malicious TLS framework truth",
+        "Updater/API controls and TLS session/UTC/native Ethernet/complete ClientHello qualification absent"
+      ],
+      "license_scope": "Not established in the inspected page; raw files not obtained",
+      "review_status": "UNQUALIFIED_LEAD_ONLY_NOT_ROLE_ASSIGNED",
+      "raw_or_label_values_downloaded": false,
+      "preassigned_role": null
+    },
+    {
+      "id": "trustlab",
+      "sources": [
+        "https://github.com/trustlabupct/trustlab_dataset",
+        "https://www.frontiersin.org/journals/computer-science/articles/10.3389/fcomp.2026.1803271/full",
+        "https://doi.org/10.82432/10317/21203"
+      ],
+      "publisher": "TRUST Lab / UPCT",
+      "framework": null,
+      "supported_metadata": [
+        "Controlled single-class campaign documentation",
+        "API services and benign background described",
+        "Released representation is CICFlowMeter CSV"
+      ],
+      "blockers": [
+        "Released completed-flow CSV does not establish raw TLS packet/ClientHello timing",
+        "C2 simulated protocol traffic is not documented as a distinct TLS C2 framework",
+        "All four benign controls not verified",
+        "Official repository DOI page required browser verification in reviewer access; no bypass or global-unavailability claim"
+      ],
+      "license_scope": "Repository says research/educational; no blanket licence for hypothetical raw PCAP inferred",
+      "review_status": "UNQUALIFIED_LEAD_ONLY_NOT_ROLE_ASSIGNED",
+      "raw_or_label_values_downloaded": false,
+      "preassigned_role": null
+    },
+    {
+      "id": "mda_tls_fingerprinting",
+      "sources": [
+        "https://github.com/matousp/tls-fingerprinting",
+        "https://link.springer.com/article/10.1007/s12243-025-01114-z"
+      ],
+      "publisher": "Matou\u0161ek and coauthors, overlapping existing annotated TLS research team",
+      "framework": null,
+      "supported_metadata": [
+        "Raw PCAP/application datasets described",
+        "Windows socket-to-process and Android application provenance described",
+        "Browsers and ordinary applications documented"
+      ],
+      "blockers": [
+        "No verified independent malicious TLS cohort",
+        "Updater/API controls and complete UTC/build/run/native format qualification absent",
+        "Collection/derivative links to historical annotated TLS source require exclusion checks"
+      ],
+      "license_scope": "Not established for this role; no data files obtained",
+      "review_status": "UNQUALIFIED_LEAD_ONLY_NOT_ROLE_ASSIGNED",
+      "raw_or_label_values_downloaded": false,
+      "preassigned_role": null
+    },
+    {
+      "id": "isot_http_botnet",
+      "sources": [
+        "https://onlineacademiccommunity.uvic.ca/isot/2022/11/27/botnet-and-ransomware-detection-datasets/"
+      ],
+      "publisher": "University of Victoria ISOT",
+      "framework": null,
+      "supported_metadata": [
+        "Benign application list includes browsers, Windows Update and ordinary applications"
+      ],
+      "blockers": [
+        "Documented released observations are DNS, not qualifying raw TLS update sessions",
+        "No TLS framework/session/ClientHello/control coverage established"
+      ],
+      "license_scope": "No eligibility or data use assumed",
+      "review_status": "UNQUALIFIED_LEAD_ONLY_NOT_ROLE_ASSIGNED",
+      "raw_or_label_values_downloaded": false,
+      "preassigned_role": null
+    },
+    {
+      "id": "sans_trusted_service_abuse",
+      "sources": [
+        "https://www.sans.edu/cyber-research/network-artifacts-of-trusted-service-abuse"
+      ],
+      "publisher": "SANS research page",
+      "framework": [
+        "daac2",
+        "dbc2",
+        "gdog",
+        "callidus"
+      ],
+      "supported_metadata": [
+        "Page metadata describes several C2 frameworks with baseline/browser captures"
+      ],
+      "blockers": [
+        "HTTP 200 documentation response body reports technical error 500",
+        "Raw capture availability, data licence, session/time labels, native format and four controls remain unverified"
+      ],
+      "license_scope": "Unknown; only page metadata/excerpt usable",
+      "review_status": "UNQUALIFIED_LEAD_ONLY_NOT_ROLE_ASSIGNED",
+      "raw_or_label_values_downloaded": false,
+      "preassigned_role": null
+    }
+  ],
+  "excluded_sources_retained": [
+    "all TQH-related sources",
+    "historical or consulted OSF/CIRA sources",
+    "unauthorized IoT-23 sources"
+  ],
+  "data_acquisition_performed": false,
+  "new_raw_or_annotation_values_read": false,
+  "training_performed": false,
+  "inference_performed": false,
+  "promotion_performed": false,
+  "training_status": "BLOCKED",
+  "failed_candidates_remain_disabled": true,
+  "metrics_before_after": {
+    "qualified_training_development_cohorts": [
+      1,
+      1
+    ],
+    "qualified_tls_sessions": [
+      582,
+      582
+    ],
+    "qualified_independent_validation_cohorts": [
+      0,
+      0
+    ],
+    "classification_metrics_refreshed": false
+  },
+  "smallest_next_action": "Obtain one publisher/steward qualification bundle resolving the ARES capture-data permission, session UTC/tuple labels, native classic-PCAP benign controls and three missing benign application categories. No contact or acquisition is authorized/performed by this review."
+}

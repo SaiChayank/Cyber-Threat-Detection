@@ -1,5 +1,6 @@
 'use client'
-import { motion, useReducedMotion } from 'motion/react'
+import { useReducedMotion } from '@/hooks/use-reduced-motion'
+import { motion } from 'motion/react'
 import { Activity, ShieldAlert, Timer, ArrowDownLeft, Info } from 'lucide-react'
 import { Panel, Skeleton, Eyebrow } from '@/components/ui/panel'
 import { Hint } from '@/components/ui/tooltip'

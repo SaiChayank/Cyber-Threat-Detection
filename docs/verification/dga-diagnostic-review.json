@@ -1,0 +1,552 @@
+{
+  "review_date_local": "2026-10-02",
+  "scope": "Existing disabled dga_v2 failure analysis only, using saved inspected-development reports/examples; no dataset rescoring/training/tuning/reserved inspection/promotion",
+  "candidate": {
+    "path": "ml/dga_v2.json",
+    "sha256": "c0314dd5f1fe360db11e2494326fd6e99f267d6e920fa091f6c9fcebc796996e",
+    "threshold": 0.9,
+    "runtime_enabled": false
+  },
+  "gates_unchanged": {
+    "recall_min": 0.8,
+    "precision_min": 0.95,
+    "domain_fpr_max": 0.02,
+    "separate_benign_dns_fpr_max": 0.02
+  },
+  "numerical_evidence_date_utc": "2026-09-29T18:09:20.312586+00:00",
+  "metrics_remeasured": false,
+  "saved_metrics": {
+    "validation": {
+      "tp": 73577,
+      "fn": 6423,
+      "fp": 268,
+      "tn": 14968,
+      "precision": 0.9963707766267181,
+      "recall": 0.9197125,
+      "false_positive_rate": 0.0175899186138094,
+      "per_family": {
+        "cryptolocker": {
+          "tp": 9787,
+          "fn": 213,
+          "fp": 0,
+          "tn": 0,
+          "precision": 1.0,
+          "recall": 0.9787,
+          "false_positive_rate": null
+        },
+        "fobber_v1": {
+          "tp": 9989,
+          "fn": 11,
+          "fp": 0,
+          "tn": 0,
+          "precision": 1.0,
+          "recall": 0.9989,
+          "false_positive_rate": null
+        },
+        "fobber_v2": {
+          "tp": 8744,
+          "fn": 1256,
+          "fp": 0,
+          "tn": 0,
+          "precision": 1.0,
+          "recall": 0.8744,
+          "false_positive_rate": null
+        },
+        "legit": {
+          "tp": 0,
+          "fn": 0,
+          "fp": 268,
+          "tn": 14968,
+          "precision": 0.0,
+          "recall": null,
+          "false_positive_rate": 0.0175899186138094
+        },
+        "locky": {
+          "tp": 8804,
+          "fn": 1196,
+          "fp": 0,
+          "tn": 0,
+          "precision": 1.0,
+          "recall": 0.8804,
+          "false_positive_rate": null
+        },
+        "murofet_v1": {
+          "tp": 10000,
+          "fn": 0,
+          "fp": 0,
+          "tn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "false_positive_rate": null
+        },
+        "murofet_v2": {
+          "tp": 9958,
+          "fn": 42,
+          "fp": 0,
+          "tn": 0,
+          "precision": 1.0,
+          "recall": 0.9958,
+          "false_positive_rate": null
+        },
+        "murofet_v3": {
+          "tp": 10000,
+          "fn": 0,
+          "fp": 0,
+          "tn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "false_positive_rate": null
+        },
+        "proslikefan": {
+          "tp": 6295,
+          "fn": 3705,
+          "fp": 0,
+          "tn": 0,
+          "precision": 1.0,
+          "recall": 0.6295,
+          "false_positive_rate": null
+        }
+      }
+    },
+    "test": {
+      "tp": 46503,
+      "fn": 14074,
+      "fp": 251,
+      "tn": 14659,
+      "precision": 0.9946314753817855,
+      "recall": 0.7676675966125758,
+      "false_positive_rate": 0.016834339369550637,
+      "per_family": {
+        "bedep": {
+          "tp": 9686,
+          "fn": 314,
+          "fp": 0,
+          "tn": 0,
+          "precision": 1.0,
+          "recall": 0.9686,
+          "false_positive_rate": null
+        },
+        "ccleaner": {
+          "tp": 5867,
+          "fn": 4133,
+          "fp": 0,
+          "tn": 0,
+          "precision": 1.0,
+          "recall": 0.5867,
+          "false_positive_rate": null
+        },
+        "chinad": {
+          "tp": 9948,
+          "fn": 52,
+          "fp": 0,
+          "tn": 0,
+          "precision": 1.0,
+          "recall": 0.9948,
+          "false_positive_rate": null
+        },
+        "kraken_v1": {
+          "tp": 6639,
+          "fn": 3355,
+          "fp": 0,
+          "tn": 0,
+          "precision": 1.0,
+          "recall": 0.6642985791474885,
+          "false_positive_rate": null
+        },
+        "kraken_v2": {
+          "tp": 6404,
+          "fn": 1676,
+          "fp": 0,
+          "tn": 0,
+          "precision": 1.0,
+          "recall": 0.7925742574257426,
+          "false_positive_rate": null
+        },
+        "legit": {
+          "tp": 0,
+          "fn": 0,
+          "fp": 251,
+          "tn": 14659,
+          "precision": 0.0,
+          "recall": null,
+          "false_positive_rate": 0.016834339369550637
+        },
+        "sisron": {
+          "tp": 2234,
+          "fn": 269,
+          "fp": 0,
+          "tn": 0,
+          "precision": 1.0,
+          "recall": 0.89252896524171,
+          "false_positive_rate": null
+        },
+        "symmi": {
+          "tp": 5725,
+          "fn": 4275,
+          "fp": 0,
+          "tn": 0,
+          "precision": 1.0,
+          "recall": 0.5725,
+          "false_positive_rate": null
+        }
+      }
+    },
+    "second_dns": {
+      "tp": 0,
+      "fn": 0,
+      "fp": 275,
+      "tn": 11456,
+      "precision": 0.0,
+      "recall": null,
+      "false_positive_rate": 0.023442161793538488,
+      "per_family": {
+        "dns_reference": {
+          "tp": 0,
+          "fn": 0,
+          "fp": 275,
+          "tn": 11456,
+          "precision": 0.0,
+          "recall": null,
+          "false_positive_rate": 0.023442161793538488
+        }
+      }
+    }
+  },
+  "false_positive_shapes": {
+    "validation": {
+      "digits_only": {
+        "fp": 0,
+        "benign_total": 77
+      },
+      "hexadecimal_shaped": {
+        "fp": 2,
+        "benign_total": 4
+      },
+      "hyphenated": {
+        "fp": 22,
+        "benign_total": 1517
+      },
+      "letters_only_long": {
+        "fp": 153,
+        "benign_total": 2738
+      },
+      "letters_only_short": {
+        "fp": 77,
+        "benign_total": 9500
+      },
+      "mixed_alphanumeric": {
+        "fp": 14,
+        "benign_total": 1400
+      }
+    },
+    "test": {
+      "digits_only": {
+        "fp": 0,
+        "benign_total": 77
+      },
+      "hexadecimal_shaped": {
+        "fp": 3,
+        "benign_total": 4
+      },
+      "hyphenated": {
+        "fp": 33,
+        "benign_total": 1438
+      },
+      "letters_only_long": {
+        "fp": 142,
+        "benign_total": 2654
+      },
+      "letters_only_short": {
+        "fp": 67,
+        "benign_total": 9407
+      },
+      "mixed_alphanumeric": {
+        "fp": 6,
+        "benign_total": 1330
+      }
+    },
+    "second_dns": {
+      "digits_only": {
+        "fp": 0,
+        "benign_total": 19
+      },
+      "hexadecimal_shaped": {
+        "fp": 2,
+        "benign_total": 2
+      },
+      "hyphenated": {
+        "fp": 41,
+        "benign_total": 1440
+      },
+      "letters_only_long": {
+        "fp": 165,
+        "benign_total": 2444
+      },
+      "letters_only_short": {
+        "fp": 59,
+        "benign_total": 7034
+      },
+      "mixed_alphanumeric": {
+        "fp": 8,
+        "benign_total": 792
+      }
+    }
+  },
+  "comparison_false_negatives": {
+    "bedep": {
+      "misses": 314,
+      "detections": 9686
+    },
+    "ccleaner": {
+      "misses": 4133,
+      "detections": 5867
+    },
+    "chinad": {
+      "misses": 52,
+      "detections": 9948
+    },
+    "kraken_v1": {
+      "misses": 3355,
+      "detections": 6639
+    },
+    "kraken_v2": {
+      "misses": 1676,
+      "detections": 6404
+    },
+    "sisron": {
+      "misses": 269,
+      "detections": 2234
+    },
+    "symmi": {
+      "misses": 4275,
+      "detections": 5725
+    }
+  },
+  "partition_findings": {
+    "exact_label_overlap": {
+      "train_validation": {
+        "count": 0,
+        "examples": []
+      },
+      "train_test": {
+        "count": 0,
+        "examples": []
+      },
+      "validation_test": {
+        "count": 0,
+        "examples": []
+      }
+    },
+    "family_group_overlap": {
+      "train_validation": {
+        "count": 0,
+        "examples": []
+      },
+      "train_test": {
+        "count": 0,
+        "examples": []
+      },
+      "validation_test": {
+        "count": 0,
+        "examples": []
+      }
+    },
+    "second_dns_overlap": {
+      "train": {
+        "count": 0,
+        "examples": []
+      },
+      "validation": {
+        "count": 1278,
+        "examples": [
+          "100x100banco",
+          "100xyev",
+          "11degrees",
+          "11klasov",
+          "123greetings",
+          "1aauto",
+          "1gai",
+          "1stwebdesigner",
+          "20govt",
+          "24horas"
+        ]
+      },
+      "test": {
+        "count": 1260,
+        "examples": [
+          "0101",
+          "10bis",
+          "10minutemail",
+          "1800petmeds",
+          "18qt",
+          "1c-bitrix",
+          "1clickforward",
+          "24news",
+          "2sao",
+          "3dmark"
+        ]
+      }
+    },
+    "second_dns_overlap_positive": {
+      "train": {
+        "count": 0,
+        "examples": []
+      },
+      "validation": {
+        "count": 0,
+        "examples": []
+      },
+      "test": {
+        "count": 0,
+        "examples": []
+      }
+    },
+    "first_second_capture_overlap": {
+      "count": 922,
+      "examples": [
+        "104",
+        "112",
+        "1337x",
+        "1377x",
+        "1tv",
+        "22bet",
+        "22bet1",
+        "360doc",
+        "3dsecure",
+        "7learn"
+      ]
+    },
+    "second_dns_total": 11731
+  },
+  "legacy_partition_findings": {
+    "fqdn_overlap": {
+      "train_validation": {
+        "count": 0,
+        "examples": []
+      },
+      "train_test": {
+        "count": 0,
+        "examples": []
+      },
+      "validation_test": {
+        "count": 0,
+        "examples": []
+      }
+    },
+    "scored_label_overlap": {
+      "train_validation": {
+        "count": 6,
+        "examples": [
+          "amazon",
+          "bbc",
+          "google",
+          "ouo",
+          "yahoo",
+          "yandex"
+        ]
+      },
+      "train_test": {
+        "count": 5,
+        "examples": [
+          "google",
+          "kinogo",
+          "mercadolibre",
+          "naver",
+          "olx"
+        ]
+      },
+      "validation_test": {
+        "count": 2,
+        "examples": [
+          "google",
+          "wordpress"
+        ]
+      }
+    }
+  },
+  "source_currency": {
+    "datasets/diagnose_dga.py": {
+      "saved_sha256": "145a7dae6c8a3ed10b0c76f81b88b427df89434dc2d664e311f201f2caa97066",
+      "current_sha256": "145a7dae6c8a3ed10b0c76f81b88b427df89434dc2d664e311f201f2caa97066",
+      "matches": true
+    },
+    "datasets/train_dga_v2.py": {
+      "saved_sha256": "15b26610f82969729c0fa1d69f147dd964858f37a5fa03b7b247591395446009",
+      "current_sha256": "15b26610f82969729c0fa1d69f147dd964858f37a5fa03b7b247591395446009",
+      "matches": true
+    },
+    "ml/dga.py": {
+      "saved_sha256": "0a03098bf4cc22d8f5b7ff5fe3bd75d82d735479730e1890a7f99bedb9d6c0b7",
+      "current_sha256": "0a03098bf4cc22d8f5b7ff5fe3bd75d82d735479730e1890a7f99bedb9d6c0b7",
+      "matches": true
+    },
+    "features/extractor.py": {
+      "saved_sha256": "ae9e7361704b581a6ae63113447f1d984ee51970a1ee98b8e5fb70ff3f9acffc",
+      "current_sha256": "27a5155f8f9bc4a0c6b4d7828c1960d4954705d37d1b67e5e5eca5fa36d8c88d",
+      "matches": false
+    },
+    "detection/pipeline.py": {
+      "saved_sha256": "5f8b6809a81c45374c1fb685aa53b6f5635be141278a1b86756a10aec5a3d7ee",
+      "current_sha256": "d5c9623e63ab7d143fe2e5f041b23a3ccbf5d114e1c0f0b349962f861a014d5b",
+      "matches": false
+    }
+  },
+  "checks": {
+    "existing_dga_tests_passed": 42,
+    "failed_tests": 0,
+    "new_or_changed_tests": 0,
+    "saved_example_feature_parity": {
+      "checked": 50,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    "demo_preflight_passed": true,
+    "shared_behavior_changed": false,
+    "full_suite_or_frontend_build_rerun": false,
+    "reserved_manifest_present": false,
+    "reserved_manifest_opened": false,
+    "frozen_protocol_diagnostic_pin_verified": true
+  },
+  "protected_hashes": {
+    "ml/artifact.json": "4d8e08323374535789e21f9f7cd1ee3f1c84b663ce555e67bb4ced57c95e8010",
+    "ml/artifact.sha256": "81e4ef2dc7bdff28a82225e803c3e5ab675f3a3979b273a0ac3bef34241c284b",
+    "ml/dga_v2.json": "c0314dd5f1fe360db11e2494326fd6e99f267d6e920fa091f6c9fcebc796996e",
+    "ml/dga_v2.sha256": "fb134985e6fd255935bb80fa4f77a73fc490957c0b669afd6bf290f9271ae080",
+    "ml/dga_weighted_candidate.json": "e81821f753d1e1b71fb5a08ff446467165941db996929767edec008c01c130ca",
+    "ml/dga_weighted_candidate.sha256": "5019c0afe9cb983599660044316da6647447f3bcdcbd834d324e53c475fb611b",
+    "ml/dga_v2_evaluation.json": "fb2f4218d43d77c6a310547ccd7aa48f2b343b8579b7975714ddb0ca530cbf70",
+    "ml/dga_diagnostic.json": "d3e6d78bf3b3febff69fd0c858534c9fb949d24f6cf38786ae306d5c399286af",
+    "ml/dga_rule_validation.json": "07c12340c1eb80879daacc509232c3b89a19b78f5ce53e7db8970cc041ac8ce8",
+    "ml/dga_weighted_candidate_validation.json": "d51badcab6b74a0dba08269ebc225df00992af2c423b06883f83012fed333259",
+    "data/umudga_manifest.json": "99d744c738983077e301ed7c0c9eea82c3558950952e671498efd25af61bd742",
+    "data/umudga_expanded_manifest.json": "4daf4448f4a3437ff085754c49d9c90520b569577c8c5ba80dd8e5795b828e76",
+    "data/dga_evaluation_protocol.json": "2bcf5534437fb55045d40be8f0558734184ea4d687abd97f9a5d10e8df79c763",
+    "data/dga_evaluation_protocol.sha256": "294c76ec15947b9df74f9b89126478097614147e4c5cd99d351e638d3fa92804",
+    "data/dga_candidate_plan.json": "395d4213ef1d204728143050d4a6153ff5707af3cb6c7ecf6af36e5ad7ccbfe1",
+    "data/dga_candidate_plan.sha256": "81afd9efd91543e2c6b7804ff9df5c7afa1a44c34c2b52f1d295118621e8ca3f",
+    "data/alerts.sqlite3": "42f67cde08aaa4db17432058fdd3521a7199a1dfd4afe740ca486d6b49226302"
+  },
+  "pinned_diagnostic_report_preserved": true,
+  "recommendation": {
+    "exactly_one_experiment": "Training-only three-fold family-grouped out-of-fold logit stacking; same features/hyperparameters/partitions/unweighted baseline/0.9 threshold; compare validation only",
+    "implemented": false,
+    "hypothesis_status": "Unmeasured model-training-path optimism risk, not proven cause or performance improvement",
+    "new_features": []
+  },
+  "definition_of_done": "passed for diagnostic only; model acceptance still failed",
+  "project_next_incomplete_task": "Inactive-public-model Windows checkout integrity from completion plan; not started",
+  "freeze": "Unchanged code/tests/artifacts; historical metrics/report hashes and documented limits retained",
+  "code_and_test_snapshot_sha256": {
+    "detection/dga_rules.py": "2d6ea804a0ecf0e4ac9e16ee884e477581e975b767241c4486c3297b07ddee59",
+    "detection/pipeline.py": "d5c9623e63ab7d143fe2e5f041b23a3ccbf5d114e1c0f0b349962f861a014d5b",
+    "features/extractor.py": "27a5155f8f9bc4a0c6b4d7828c1960d4954705d37d1b67e5e5eca5fa36d8c88d",
+    "ml/dga.py": "0a03098bf4cc22d8f5b7ff5fe3bd75d82d735479730e1890a7f99bedb9d6c0b7",
+    "datasets/diagnose_dga.py": "145a7dae6c8a3ed10b0c76f81b88b427df89434dc2d664e311f201f2caa97066",
+    "datasets/train_dga_v2.py": "15b26610f82969729c0fa1d69f147dd964858f37a5fa03b7b247591395446009",
+    "tests/test_dga_diagnostic.py": "b039c909210cd36814f93659f2620b4e4f8d4ba408f3104f8a9a87225a14b8f6",
+    "tests/test_dga_rules.py": "869080b32989abe3d06a84dd62aae84e8a588ee6e4faf51f3b7d655c10c88261",
+    "tests/test_dga.py": "db08ad4c407cdccacf4655e3f69cb6460f986b798845f327280cfbc08c692f5b",
+    "tests/test_dga_candidate.py": "27150dce43aee7f0493ca1f5f2fbbda421db61e5fc69b8e63263a0f5b5dffeee"
+  },
+  "review_document_sha256": "9f32b8943fa06fa383d012ca6670a5d47c1ce1b60799b6d373ebc1b4bfce8ded"
+}

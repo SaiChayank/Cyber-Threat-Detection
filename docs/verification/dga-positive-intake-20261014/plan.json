@@ -1,0 +1,24 @@
+{
+  "date": "2026-10-14",
+  "scope": "Positive intake integrity/count eligibility only, not final evaluation",
+  "protocol_sha256": "2bcf5534437fb55045d40be8f0558734184ea4d687abd97f9a5d10e8df79c763",
+  "alias_review_sha256": "47e113c29e44848dd0cafcd67563a73dbc6844c8c77a67451eaf2edb13de66d2",
+  "input": "data/raw/dga-evaluation-intake/drift-2025/T25_dga.parquet",
+  "input_sha256": "c6d410dbeb7e5d4e345523defb9752fbb62c1000182a20937c96192fc4080bbd",
+  "canonical_groups": [
+    "bumblebee",
+    "qsnatch",
+    "sharkbot"
+  ],
+  "role": "candidate_positive_evaluation_intake_only; all related versions grouped; no training",
+  "minimum_unique_labels_per_group": 1000,
+  "documentation_exclusion_sha256": "1d1b3150579d09214782f6af4310dcf9a44fcaef96972d00272ddb4766ad1151",
+  "public_development_exclusion_digest": "a971fce2e75f0f25e7c51469d631dd343f56e5883547ff89ce3d98f5185643fe",
+  "sampling_seed": "PS26145-DGA-family-holdout-v1",
+  "sample_selection_performed": false,
+  "legitimate_and_dns_reference_roles": "UNASSIGNED; further cross-role collision checks required",
+  "model_scoring_allowed": false,
+  "train_or_tune_allowed": false,
+  "emit_domain_examples_allowed": false,
+  "failure_policy": "Record insufficient counts/provenance and stop; do not lower counts, substitute by scores or promote"
+}

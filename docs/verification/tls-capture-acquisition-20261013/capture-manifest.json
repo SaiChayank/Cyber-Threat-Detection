@@ -1,0 +1,28 @@
+{
+  "role": "development-only",
+  "source": "CIRA-CIC-DoHBrw-2020",
+  "source_url": "https://www.unb.ca/cic/datasets/dohbrw-2020.html",
+  "selected_captures": [
+    {
+      "archive_member": "dsncat2_default-baseline_1111_doh10_2020-03-29T11:12:39.466544.pcap",
+      "pcap": "data/raw/cicdoh2020-development/selected/dnscat2/dsncat2_default-baseline_1111_doh10_2020-03-29T11_12_39.466544.pcap",
+      "pcap_sha256": "77b08a362f09b16ba9be7ac3a52ecac0ca491357e0e3ee8a393cf2a66bc1242d",
+      "annotation": "data/raw/cicdoh2020-development/selected/dnscat2-labels/dsncat2_default-baseline_1111_doh10_2020-03-29T11_12_39.466544.csv",
+      "annotation_sha256": "93d066964bea7f3e3aeba7b662c14ab083be971e1e9a370041c09ad5e2cb7c89"
+    },
+    {
+      "archive_member": "dsncat2_default-baseline_1111_doh10_2020-03-29T11:40:09.588984.pcap",
+      "pcap": "data/raw/cicdoh2020-development/selected/dnscat2/dsncat2_default-baseline_1111_doh10_2020-03-29T11_40_09.588984.pcap",
+      "pcap_sha256": "2265ac0a8b8e8ec4dbaf9896eb0a9d9ff9d3d61fa9c51296d7b8f302baf74f54",
+      "annotation": "data/raw/cicdoh2020-development/selected/dnscat2-labels/dsncat2_default-baseline_1111_doh10_2020-03-29T11_40_09.588984.csv",
+      "annotation_sha256": "3204b8224802961387133f1ea4235073aa94f5087d8c99faf843b72bc6d1de7a"
+    },
+    {
+      "archive_member": "dsncat2_default-baseline_1111_doh10_2020-03-29T12:07:35.233946.pcap",
+      "pcap": "data/raw/cicdoh2020-development/selected/dnscat2/dsncat2_default-baseline_1111_doh10_2020-03-29T12_07_35.233946.pcap",
+      "pcap_sha256": "59017086b192386b1dbd0b0e19c00173266cba0700145a6ca60280210275b67b",
+      "annotation": "data/raw/cicdoh2020-development/selected/dnscat2-labels/dsncat2_default-baseline_1111_doh10_2020-03-29T12_07_35.233946.csv",
+      "annotation_sha256": "d25c5452359ce91bd71a92ed48eec6ddd6a18df6801ded38fe6563c3443e06a8"
+    }
+  ]
+}

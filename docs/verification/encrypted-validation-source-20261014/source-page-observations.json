@@ -1,0 +1,87 @@
+{
+  "date": "2026-10-14",
+  "scope": "Bounded primary-source metadata research; no raw/CSV/Parquet/annotation values, no executables, no authors contacted",
+  "initial_firecrawl_routing_error": "This app tool requires a non-empty string link_id argument",
+  "routing_error_resolved": true,
+  "resolution": "Connected read-only account handle obtained from exposed tool metadata; no credentials logged or authentication workaround",
+  "built_in_web_fallback_used": true,
+  "observations": [
+    {
+      "url": "https://github.com/cp-tsp/ares2025-artifacts",
+      "access_date": "2026-10-14",
+      "method": "Firecrawl public documentation only",
+      "http_status": 200,
+      "title": "GitHub - cp-tsp/ares2025-artifacts · GitHub",
+      "retrieval": "public page/document, no capture or data blob",
+      "usable_document_body": true,
+      "content_error": null,
+      "snapshot_scope": "Document observations; raw dataset bytes/checksums are unverified"
+    },
+    {
+      "url": "https://arxiv.org/html/2506.08922",
+      "access_date": "2026-10-14",
+      "method": "Firecrawl public documentation only",
+      "http_status": 200,
+      "title": "Striking Back At Cobalt: Using Network Traffic Metadata To Detect Cobalt Strike Masquerading Command and Control Channels",
+      "retrieval": "public page/document, no capture or data blob",
+      "usable_document_body": true,
+      "content_error": null,
+      "snapshot_scope": "Document observations; raw dataset bytes/checksums are unverified"
+    },
+    {
+      "url": "https://www.sans.edu/cyber-research/network-artifacts-of-trusted-service-abuse",
+      "access_date": "2026-10-14",
+      "method": "Firecrawl public documentation only",
+      "http_status": 200,
+      "title": "Network Artifacts of Trusted Service Abuse | SANS Institute",
+      "retrieval": "public page/document, no capture or data blob",
+      "usable_document_body": false,
+      "content_error": "HTTP 200 page body reports technical error 500",
+      "snapshot_scope": "Document observations; raw dataset bytes/checksums are unverified"
+    },
+    {
+      "url": "https://ro.ecu.edu.au/datasets/151/",
+      "access_date": "2026-10-14",
+      "method": "Firecrawl public documentation only",
+      "http_status": 200,
+      "title": "ECU-MALNETT",
+      "retrieval": "public page/document, no capture or data blob",
+      "usable_document_body": true,
+      "content_error": null,
+      "snapshot_scope": "Document observations; raw dataset bytes/checksums are unverified"
+    },
+    {
+      "url": "https://www.ll.mit.edu/r-d/datasets/vpnnonvpn-network-application-traffic-dataset-vnat",
+      "access_date": "2026-10-14",
+      "method": "Firecrawl public documentation only",
+      "http_status": 200,
+      "title": "VPN/Non-VPN Network Application Traffic Dataset (VNAT) | MIT Lincoln Laboratory",
+      "retrieval": "public page/document, no capture or data blob",
+      "usable_document_body": true,
+      "content_error": null,
+      "snapshot_scope": "Document observations; raw dataset bytes/checksums are unverified"
+    },
+    {
+      "url": "https://github.com/trustlabupct/trustlab_dataset",
+      "access_date": "2026-10-14",
+      "method": "Firecrawl public documentation only",
+      "http_status": 200,
+      "title": "GitHub - trustlabupct/trustlab_dataset · GitHub",
+      "retrieval": "public page/document, no capture or data blob",
+      "usable_document_body": true,
+      "content_error": null,
+      "snapshot_scope": "Document observations; raw dataset bytes/checksums are unverified"
+    }
+  ],
+  "discovery_queries": [
+    "encrypted TLS C2 dataset raw pcap session labels benign browser software update API",
+    "TLS C2 dataset raw PCAP ground truth benign browser updater API session labels",
+    "\"dataset\" \"Sliver\" \"pcap\" -site:zenodo.org -site:researchgate.net",
+    "\"CIC\" \"APT\" \"dataset\" \"TLS\"",
+    "\"encrypted\" \"C2\" \"dataset\" \"benign\" \"update\"",
+    "\"encrypted C2\" \"dataset\" PCAP labels benign Cobalt Strike browser",
+    "\"TLS\" \"C2\" \"dataset\" \"software updates\" raw pcap",
+    "\"C2-Eye\" dataset github raw pcap"
+  ],
+  "source_coverage_claim": "No eligible source among the reviewed candidates; not an exhaustive Internet absence claim"
+}

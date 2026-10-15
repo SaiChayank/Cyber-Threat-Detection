@@ -1,0 +1,141 @@
+{
+  "task": "Source/family-aware encrypted TLS coverage and partition plan only",
+  "date": "2026-10-14",
+  "definition_of_done": "PASS: design frozen, actual heldout data not available",
+  "protocol_id": "ps26145-encrypted-tls-coverage-partitions-v1",
+  "plan_sha256_lf_normalized": "1f8192e3ffd2f22c2a9e786846222457d8b81114d7622ae5ecdb70e4cbee8e4f",
+  "training_status": "BLOCKED",
+  "failed_candidates_remain_disabled": true,
+  "promotion_gate": {
+    "recall_min": 0.8,
+    "precision_min": 0.95,
+    "benign_scenario_fpr_max": 0.02,
+    "positive_alert_before_final_event": true
+  },
+  "design_checks_passed": 12,
+  "targeted_tests_passed": 51,
+  "new_guard_tests": 7,
+  "protected_files_unchanged": 564,
+  "runtime_feature_model_changes": false,
+  "new_raw_or_reserved_values_read": false,
+  "training_inference_promotion": false,
+  "known_cohort_counts": {
+    "malicious_c2": 115,
+    "benign": 467
+  },
+  "data_readiness_passed": false,
+  "actual_heldout_overlap_check": "NOT_ASSESSABLE: validation and final source roles unassigned",
+  "frozen": [
+    {
+      "file": "docs/ENCRYPTED_COVERAGE_PARTITION_PLAN.md",
+      "bytes": 19658,
+      "sha256_observed_bytes": "6fb88ebae906adf811a0b24fc1ad5c309fcaaec06b28d66ecba33cc729109c18",
+      "sha256_lf_normalized_text": "6fb88ebae906adf811a0b24fc1ad5c309fcaaec06b28d66ecba33cc729109c18"
+    },
+    {
+      "file": "tests/test_encrypted_coverage_plan.py",
+      "bytes": 3437,
+      "sha256_observed_bytes": "624be3e027e258f136bb7f8bd2e05925f238cb124d5a7082a0cfd55f2bf6fb09",
+      "sha256_lf_normalized_text": "624be3e027e258f136bb7f8bd2e05925f238cb124d5a7082a0cfd55f2bf6fb09"
+    },
+    {
+      "file": "docs/COMPLETION_PLAN.md",
+      "bytes": 17467,
+      "sha256_observed_bytes": "b589a5e06a4d522e85ec64d0a8558d7296ba1bc3ab8deb2bbd90f76fd851605c",
+      "sha256_lf_normalized_text": "b589a5e06a4d522e85ec64d0a8558d7296ba1bc3ab8deb2bbd90f76fd851605c"
+    },
+    {
+      "file": "docs/DATASETS.md",
+      "bytes": 16245,
+      "sha256_observed_bytes": "e265335164b369b5809c154a3b6c76e42430fd56bd254bc476a41bb446b1a193",
+      "sha256_lf_normalized_text": "e265335164b369b5809c154a3b6c76e42430fd56bd254bc476a41bb446b1a193"
+    },
+    {
+      "file": "docs/MODEL_AND_VALIDATION.md",
+      "bytes": 17655,
+      "sha256_observed_bytes": "e4904615a83a23253da4816823fd200eb7a70f8e22f41c5699cf7e9650551327",
+      "sha256_lf_normalized_text": "e4904615a83a23253da4816823fd200eb7a70f8e22f41c5699cf7e9650551327"
+    },
+    {
+      "file": "docs/verification/encrypted-coverage-plan-20261014/final-integrity.json",
+      "bytes": 382,
+      "sha256_observed_bytes": "b40e4a16a80ad81de3d1f2206811dc8f57ef5187f604be1031a94d8f778509a8",
+      "sha256_lf_normalized_text": "80687b24b85e313d25736f2e6dc6d04c0ee246279a6f13158f3e7d28202c02bc"
+    },
+    {
+      "file": "docs/verification/encrypted-coverage-plan-20261014/initial-integrity.json",
+      "bytes": 66871,
+      "sha256_observed_bytes": "078da3b0fe6e89fa6a8199e4097866d35f2d1f6e990733cddf0bb5582aa85e9b",
+      "sha256_lf_normalized_text": "5f6e96d49930f615b879f887e9c6f4321c0872ac308eb9d627906f90598d6279"
+    },
+    {
+      "file": "docs/verification/encrypted-coverage-plan-20261014/known-cohort-roster.json",
+      "bytes": 43465,
+      "sha256_observed_bytes": "8448fcbd0a6c0c2746cdb42e3a10c3bb8d5f21741b348a3f127ef154e86ea46e",
+      "sha256_lf_normalized_text": "8448fcbd0a6c0c2746cdb42e3a10c3bb8d5f21741b348a3f127ef154e86ea46e"
+    },
+    {
+      "file": "docs/verification/encrypted-coverage-plan-20261014/plan-checks-final.json",
+      "bytes": 1070,
+      "sha256_observed_bytes": "7b0b292b92b38995fc081e57b466e7de7b441fb0c2fa93c1cbcc5c0d363dcf21",
+      "sha256_lf_normalized_text": "01b34ca5d3c1ac43242599fe2d1b7f3648272015e71b786948043809871d3cca"
+    },
+    {
+      "file": "docs/verification/encrypted-coverage-plan-20261014/plan-checks-release.json",
+      "bytes": 1070,
+      "sha256_observed_bytes": "7b0b292b92b38995fc081e57b466e7de7b441fb0c2fa93c1cbcc5c0d363dcf21",
+      "sha256_lf_normalized_text": "01b34ca5d3c1ac43242599fe2d1b7f3648272015e71b786948043809871d3cca"
+    },
+    {
+      "file": "docs/verification/encrypted-coverage-plan-20261014/plan-checks.json",
+      "bytes": 1070,
+      "sha256_observed_bytes": "7b0b292b92b38995fc081e57b466e7de7b441fb0c2fa93c1cbcc5c0d363dcf21",
+      "sha256_lf_normalized_text": "01b34ca5d3c1ac43242599fe2d1b7f3648272015e71b786948043809871d3cca"
+    },
+    {
+      "file": "docs/verification/encrypted-coverage-plan-20261014/plan.json",
+      "bytes": 24572,
+      "sha256_observed_bytes": "1f8192e3ffd2f22c2a9e786846222457d8b81114d7622ae5ecdb70e4cbee8e4f",
+      "sha256_lf_normalized_text": "1f8192e3ffd2f22c2a9e786846222457d8b81114d7622ae5ecdb70e4cbee8e4f"
+    },
+    {
+      "file": "docs/verification/encrypted-coverage-plan-20261014/plan.sha256",
+      "bytes": 65,
+      "sha256_observed_bytes": "5f19fe5dcb2f8e97b7177b8697d1d67442fda7d969eb11a3d098e3911f0d97b8",
+      "sha256_lf_normalized_text": "5f19fe5dcb2f8e97b7177b8697d1d67442fda7d969eb11a3d098e3911f0d97b8"
+    },
+    {
+      "file": "docs/verification/encrypted-coverage-plan-20261014/PROTOCOL.md",
+      "bytes": 2032,
+      "sha256_observed_bytes": "2aad5857cf7dd4442be051a462fbc9aeca6a4c0543d69ab4a1b51102ee75f13f",
+      "sha256_lf_normalized_text": "2aad5857cf7dd4442be051a462fbc9aeca6a4c0543d69ab4a1b51102ee75f13f"
+    },
+    {
+      "file": "docs/verification/encrypted-coverage-plan-20261014/tests-release.txt",
+      "bytes": 101,
+      "sha256_observed_bytes": "d7f080257b3afabeb74905cc84b7bea884f256454d9f1068cfdec37a3b9f1d48",
+      "sha256_lf_normalized_text": "7fa3363038498f4d140806b4f02bbc39e66b02736fc580fceae40bfb905df28b"
+    },
+    {
+      "file": "docs/verification/encrypted-coverage-plan-20261014/tests.txt",
+      "bytes": 101,
+      "sha256_observed_bytes": "05571128ffc10d043331794fa412c20260e1dad5efc307c8040c4969b076ef7a",
+      "sha256_lf_normalized_text": "702c6d5a44fb31ec48517e9c81091b150049693ccb55be96b9316e8516da9832"
+    },
+    {
+      "file": "docs/verification/encrypted-coverage-plan-20261014/verify_plan.py",
+      "bytes": 6878,
+      "sha256_observed_bytes": "38a6295b9fc3c3ff94edc57c71fb36bd0f15e215402b603e1049e6e946dcfe63",
+      "sha256_lf_normalized_text": "38a6295b9fc3c3ff94edc57c71fb36bd0f15e215402b603e1049e6e946dcfe63"
+    }
+  ],
+  "limitations": [
+    "One qualified framework/environment/run and one positive fingerprint",
+    "No verified required browser/update/API/ordinary application groups",
+    "No separate benign-only raw control scenarios",
+    "Independent validation and final sources/frameworks are unassigned/unavailable",
+    "Coverage prerequisites are design decisions, not population accuracy guarantees",
+    "New candidate causal feature contract is not frozen here"
+  ],
+  "next_task": "Metadata-only identification/preassignment of one independent native-TLS validation cohort with verified positive session intent and the four benign application controls; no model training."
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "url": "https://api.osf.io/v2/nodes/b64e5/",
+    "status": 200,
+    "content_type": "application/vnd.api+json; charset=utf-8",
+    "bytes": 4655
+  },
+  {
+    "url": "https://api.osf.io/v2/nodes/zq9vs/",
+    "status": 200,
+    "content_type": "application/vnd.api+json; charset=utf-8",
+    "bytes": 4615
+  },
+  {
+    "url": "https://cicresearch.ca/CICDataset/DoHBrw-2020/",
+    "status": 200,
+    "content_type": "text/html",
+    "bytes": 10535
+  }
+]

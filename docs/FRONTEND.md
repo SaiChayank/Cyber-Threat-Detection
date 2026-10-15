@@ -158,6 +158,24 @@ and allow long-lived connections. Ordinary assets may be compressed by that prox
 
 ## Verification and limits
 
+**13 October 2026 refinement:** the investigation queue gains a bounded hold/resume
+snapshot and a detection-engine filter, with a visible combined-filter reset and
+matching JSON export. Ingest, telemetry and persistence continue while the queue
+is held; resume displays the latest 200 loaded records, not an unlimited browser
+backlog. Rows and the hold notice use short transitions. A shared reactive
+reduced-motion hook fixes preference changes while the app is already open;
+initial preference and re-enabling animation are also covered. See
+[Monitor refinement](MONITOR_REFINEMENT.md) for the current validation evidence.
+**25/25 production browser checks**, **333 backend tests**, final TypeScript and
+production build pass. Earlier dated checks below remain historical.
+
+The earlier **functional UI pass (1 October 2026)** verifies the production Monitor
+on desktop, tablet and phone sizes, including actual PCAP file input, persisted SSE
+resume, JSON downloads and unavailable-state recovery. TypeScript/build and all 208
+backend tests pass. See [Final UI verification](UI_FUNCTIONAL_PASS.md) and its browser
+regression script for current results and reproduction. The checks below are earlier
+historical design/migration runs.
+
 The Monitor layout and motion refinement was rechecked on 29 September 2026.
 The production build and TypeScript check passed, along with all 34 Python tests.
 Browser checks covered actual live counters/chart updates, replay-dependent flow

@@ -1,0 +1,21 @@
+{
+  "scope": "Acquisition only; no rows/scoring/training",
+  "plan_sha256": "46f7a63ad7f746a0099a821ec162360e2357c7ae4dd83028ce2221f610ef352c",
+  "files": [
+    {
+      "path": "data/raw/dga-evaluation-intake/drift-2025/T25_benign.parquet",
+      "bytes": 19772657,
+      "sha256": "37e0c10bd2ec750706dd153f4900c8f1fb7ed2d8fddf18393373ec278a9c4eea",
+      "publisher_sha256_verified": true,
+      "url": "https://huggingface.co/datasets/snsec-net/dga-detection-drift26dsn/resolve/3b31077020cd1c013d0a75cad51042a2327c4521/raw_including_TLD/T25_benign.parquet"
+    },
+    {
+      "path": "data/raw/dga-evaluation-intake/drift-2025/T25_dga.parquet",
+      "bytes": 336599103,
+      "sha256": "c6d410dbeb7e5d4e345523defb9752fbb62c1000182a20937c96192fc4080bbd",
+      "publisher_sha256_verified": true,
+      "url": "https://huggingface.co/datasets/snsec-net/dga-detection-drift26dsn/resolve/3b31077020cd1c013d0a75cad51042a2327c4521/raw_including_TLD/T25_dga.parquet"
+    }
+  ],
+  "final_evaluation_ready": false
+}

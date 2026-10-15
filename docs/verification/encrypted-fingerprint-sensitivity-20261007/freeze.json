@@ -1,0 +1,59 @@
+{
+  "completion_date": "2026-10-07",
+  "definition_of_done": "PASS for offline sensitivity only",
+  "runtime_adoption": "REJECTED",
+  "candidate_trained_or_promoted": false,
+  "model_sha256": "4d8e08323374535789e21f9f7cd1ee3f1c84b663ce555e67bb4ced57c95e8010",
+  "observed_model_only": {
+    "TP": 3,
+    "TN": 6,
+    "FP": 4,
+    "FN": 5,
+    "precision": 0.42857142857142855,
+    "recall": 0.375,
+    "f1": 0.4,
+    "false_positive_rate": 0.4
+  },
+  "counterfactual_model_only": {
+    "TP": 2,
+    "TN": 7,
+    "FP": 3,
+    "FN": 6,
+    "precision": 0.4,
+    "recall": 0.25,
+    "f1": 0.3076923076923077,
+    "false_positive_rate": 0.3
+  },
+  "unchanged_hybrid_counts": {
+    "TP": 3,
+    "TN": 6,
+    "FP": 4,
+    "FN": 5
+  },
+  "paired_events": 360,
+  "changed_input_events": 80,
+  "identical_prediction_controls": 280,
+  "counterfactual_alerts": 0,
+  "tests": {
+    "new_cases": 12,
+    "targeted_passed": 26,
+    "elapsed_seconds": 0.46,
+    "full_backend_rerun": false,
+    "frontend_build_rerun": false,
+    "reason": "Shared runtime/frontend behavior unchanged."
+  },
+  "protected_files_checked": 114,
+  "changed_protected_files": [],
+  "hash_scope": "Protected files raw-byte SHA256; frozen task source/document text normalizes CRLF to LF.",
+  "frozen_file_sha256_lf_normalized": {
+    "datasets/encrypted_fingerprint_sensitivity.py": "94071844523919705f981c2ab67baa60865cac86ff5bf31b64fdd104660259b1",
+    "tests/test_encrypted_fingerprint_sensitivity.py": "5b72dfc48b8bdb9bf25d69e48539b5122e83176c3d343c0b5cde37daf2ced7be",
+    "docs/ENCRYPTED_FINGERPRINT_SENSITIVITY.md": "762d8e638316351e180e3018cd797ba3dbffd303fcfba605e610f42788888eae",
+    "docs/COMPLETION_PLAN.md": "abbf05ca0ae5ec0ec0d6131169a796e9856cf9f1464cbd2cb9d8a86fda73fe18",
+    "docs/MODEL_AND_VALIDATION.md": "9381857daece4c37897c40af9027a1102a2ed8ee5339f88a1cbc2bbaf59f0072",
+    "docs/verification/encrypted-fingerprint-sensitivity-20261007/PROTOCOL.md": "6383f007d28046239f1033b919877d72c2a3076b5d1dc670230023a7e7ef6bb0",
+    "docs/verification/encrypted-fingerprint-sensitivity-20261007/report.json": "9058bb304d9247195379cbb658090db213802dcd4b19215119f4d150032474b1",
+    "docs/verification/encrypted-fingerprint-sensitivity-20261007/tests.log": "7c60b198769b4c5f84dfca87420545a94986e04d5421dd92aff21086ca243cdc"
+  },
+  "next_task": "Encrypted development-data feasibility/visibility check; trusted labels and visible ClientHello cipher/extension metadata, no reserved data, training or detector changes."
+}

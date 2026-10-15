@@ -1,0 +1,42 @@
+{
+  "url": "https://raw.githubusercontent.com/ahlashkari/DoHLyzer/86bd1dc970b919a04f12eeda679893beee32ec8d/meter/flow_session.py",
+  "sha256": "989151fa531f67f73f4cb936d459125e9eed638f264bb904f96097a188041d86",
+  "matched_lines": [
+    [
+      29,
+      "        self.clumped_flows_per_label = defaultdict(list)"
+    ],
+    [
+      74,
+      "            elif (packet.time - flow.latest_timestamp) > EXPIRED_UPDATE:"
+    ],
+    [
+      78,
+      "                while (packet.time - flow.latest_timestamp) > expired:"
+    ],
+    [
+      88,
+      "        elif (packet.time - flow.latest_timestamp) > EXPIRED_UPDATE:"
+    ],
+    [
+      90,
+      "            while (packet.time - flow.latest_timestamp) > expired:"
+    ],
+    [
+      103,
+      "        if self.packets_count % 10000 == 0 or (flow.duration > 120 and self.output_mode == 'flow'):"
+    ],
+    [
+      118,
+      "                if latest_time is None or latest_time - flow.latest_timestamp > EXPIRED_UPDATE or flow.duration > 90:"
+    ],
+    [
+      126,
+      "                if latest_time is None or latest_time - flow.latest_timestamp > EXPIRED_UPDATE:"
+    ],
+    [
+      127,
+      "                    output_dir = os.path.join(self.output_file, 'doh' if flow.is_doh() else 'ndoh')"
+    ]
+  ]
+}

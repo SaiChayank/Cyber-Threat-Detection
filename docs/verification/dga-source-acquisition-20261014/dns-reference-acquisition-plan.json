@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-14",
+  "publisher": "Claudio Marques / Mendeley Data",
+  "doi": "10.17632/623sshkdrz.5",
+  "source_url": "https://data.mendeley.com/datasets/623sshkdrz/5",
+  "licence": "CC-BY-4.0",
+  "url": "https://data.mendeley.com/public-files/datasets/623sshkdrz/files/ac5af003-38ea-408a-b126-ed99bb77b48a/file_downloaded",
+  "file": "BenignAndMaliciousDataset.csv",
+  "max_bytes": 16777216,
+  "publisher_documented_rows": 90000,
+  "intake_role": "quarantined DNS-domain reference lead; source independence and benign label provenance unresolved; NOT final benign-DNS assignment",
+  "publisher_sha256": null,
+  "raw_query_log_available": false,
+  "predictive_use_of_enriched_fields": false,
+  "data_values_may_be_printed": false,
+  "training_or_scoring_allowed": false,
+  "metadata_listing_attempt": "HTTP 200 returned application error 400; no file checksum metadata available from that response"
+}

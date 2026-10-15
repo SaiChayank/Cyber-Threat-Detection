@@ -1,0 +1,14 @@
+{
+  "url": "https://raw.githubusercontent.com/ahlashkari/DoHLyzer/86bd1dc970b919a04f12eeda679893beee32ec8d/meter/constants.py",
+  "sha256": "6cbe44d91da748d6b91933b98e220faf8d1ad644c08c3071daf602a0ac95a76d",
+  "matched_lines": [
+    [
+      1,
+      "DOH_IPS = ["
+    ],
+    [
+      16,
+      "EXPIRED_UPDATE = 240"
+    ]
+  ]
+}

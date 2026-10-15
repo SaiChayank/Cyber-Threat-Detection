@@ -1,0 +1,32 @@
+[
+  {
+    "file": "data\\raw\\tqh-c2-development\\D_i300_j30\\conn.log",
+    "bytes": 341274,
+    "sha256": "25d6ae307c7f465413decc7763e1ced30350ae1b0bce0fe8e6803a66cbd4fd77"
+  },
+  {
+    "file": "data\\raw\\tqh-c2-development\\D_i300_j30\\ssl.log",
+    "bytes": 291239,
+    "sha256": "81eff7bbff3448c794cacb1ee530422be1c2d40cce525fc45d1c4086be16e3a0"
+  },
+  {
+    "file": "data\\raw\\tqh-c2-development\\D_i300_j30\\labeled.jsonl",
+    "bytes": 520843,
+    "sha256": "3262de231a5d1df204081b344c60c3cc83d7e4058a27562ccbda836b9e833cb0"
+  },
+  {
+    "file": "data\\raw\\tqh-c2-development\\D_i300_j30\\manifest.json",
+    "bytes": 2237,
+    "sha256": "a766cf771b3046ab95dc4149cd9bd9632a868c718bf80a1e2fd6bd33cac86953"
+  },
+  {
+    "file": "data\\raw\\tqh-c2-development\\D_i300_j30\\gate.json",
+    "bytes": 1213,
+    "sha256": "8398d71e42cdc41edee97248c9728d80bd31ba93a0bfd6fbf25183eedb922848"
+  },
+  {
+    "file": "data\\raw\\tqh-c2-development\\D_i300_j30\\labeled.jsonl.counts.json",
+    "bytes": 219,
+    "sha256": "6d85f2ebe41e98738fb8c1fa259dbc65f0cdc03aa3722ecb2bf15ce17f8c806c"
+  }
+]

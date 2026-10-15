@@ -3,6 +3,7 @@ import { motion } from 'motion/react'
 import { Radar, LockKeyhole, AudioLines, FileSearch } from 'lucide-react'
 import { SceneView } from '@/components/scene-view'
 import { Eyebrow } from '@/components/ui/panel'
+import { useReducedMotion } from '@/hooks/use-reduced-motion'
 
 const capabilities = [
   {
@@ -64,14 +65,15 @@ export function Platform() {
   )
 }
 function Capability({ item, index }: { item: (typeof capabilities)[number]; index: number }) {
+  const reducedMotion = useReducedMotion()
   const Icon = item.icon
   return (
     <motion.article
-      initial={{ opacity: 0, y: 15 }}
+      initial={reducedMotion ? false : { opacity: 0, y: 15 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.3 }}
-      transition={{ duration: 0.45, delay: index * 0.05 }}
-      whileHover={{ y: -4 }}
+      transition={{ duration: reducedMotion ? 0 : 0.45, delay: reducedMotion ? 0 : index * 0.05 }}
+      whileHover={reducedMotion ? undefined : { y: -4 }}
       className="glass-panel flex min-h-52 flex-col rounded-[22px] p-6"
     >
       <div className="mb-7 flex items-center justify-between">

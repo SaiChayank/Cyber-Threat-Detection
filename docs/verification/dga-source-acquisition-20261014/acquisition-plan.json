@@ -1,0 +1,37 @@
+{
+  "date": "2026-10-14",
+  "repository": "snsec-net/dga-detection-drift26dsn",
+  "revision": "3b31077020cd1c013d0a75cad51042a2327c4521",
+  "licence": "CC-BY-NC-SA-3.0",
+  "source_selection": "Newest documented yearly raw snapshot 2025; chosen before any row or model score inspection",
+  "intake_role": "quarantined_evaluation_acquisition; family/stratum eligibility pending; not training",
+  "files": [
+    {
+      "path": "raw_including_TLD/T25_benign.parquet",
+      "bytes": 19772657,
+      "sha256": "37e0c10bd2ec750706dd153f4900c8f1fb7ed2d8fddf18393373ec278a9c4eea",
+      "url": "https://huggingface.co/datasets/snsec-net/dga-detection-drift26dsn/resolve/3b31077020cd1c013d0a75cad51042a2327c4521/raw_including_TLD/T25_benign.parquet"
+    },
+    {
+      "path": "raw_including_TLD/T25_dga.parquet",
+      "bytes": 336599103,
+      "sha256": "c6d410dbeb7e5d4e345523defb9752fbb62c1000182a20937c96192fc4080bbd",
+      "url": "https://huggingface.co/datasets/snsec-net/dga-detection-drift26dsn/resolve/3b31077020cd1c013d0a75cad51042a2327c4521/raw_including_TLD/T25_dga.parquet"
+    }
+  ],
+  "source_url": "https://huggingface.co/datasets/snsec-net/dga-detection-drift26dsn",
+  "dataset_values_may_be_printed": false,
+  "model_scoring_allowed": false,
+  "training_allowed": false,
+  "data_readiness": "BLOCKED",
+  "original_protocol_sha256": "2bcf5534437fb55045d40be8f0558734184ea4d687abd97f9a5d10e8df79c763",
+  "existing_gates_unchanged": true,
+  "incidental_documentation_example_exposure": [
+    "google",
+    "vutotoid",
+    "runtime-incorrect",
+    "sbhya",
+    "w0gv"
+  ],
+  "other_exposed_publisher_examples": "Bader and Daumel README examples remain to be pinned/excluded before final materialization"
+}

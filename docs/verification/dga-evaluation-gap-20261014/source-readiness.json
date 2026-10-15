@@ -1,0 +1,170 @@
+{
+  "date": "2026-10-14",
+  "scope": "DGA evaluation-data readiness only",
+  "protocol_sha256": "2bcf5534437fb55045d40be8f0558734184ea4d687abd97f9a5d10e8df79c763",
+  "exposed_umudga_variants": [
+    "alureon",
+    "banjori",
+    "bedep",
+    "ccleaner",
+    "chinad",
+    "corebot",
+    "cryptolocker",
+    "dircrypt",
+    "dyre",
+    "fobber_v1",
+    "fobber_v2",
+    "gozi_gpl",
+    "gozi_luther",
+    "gozi_nasa",
+    "gozi_rfc4343",
+    "kraken_v1",
+    "kraken_v2",
+    "locky",
+    "matsnu",
+    "murofet_v1",
+    "murofet_v2",
+    "murofet_v3",
+    "necurs",
+    "nymaim",
+    "padcrypt",
+    "pizd",
+    "proslikefan",
+    "pushdo",
+    "pykspa",
+    "pykspa_noise",
+    "qadars",
+    "qakbot",
+    "ramdo",
+    "ramnit",
+    "ranbyus_v1",
+    "ranbyus_v2",
+    "rovnix",
+    "shiotob",
+    "simda",
+    "sisron",
+    "suppobox_1",
+    "suppobox_2",
+    "suppobox_3",
+    "symmi",
+    "tempedreve",
+    "tinba",
+    "vawtrak_v1",
+    "vawtrak_v2",
+    "vawtrak_v3",
+    "zeus-newgoz"
+  ],
+  "promotion_gates_unchanged": {
+    "minimum_recall": 0.8,
+    "minimum_precision": 0.95,
+    "maximum_domain_false_positive_rate": 0.02,
+    "maximum_separate_benign_dns_false_positive_rate": 0.02,
+    "metric_denominator": "domain recall=TP/(TP+FN), precision=TP/(TP+FP), domain FPR=FP/(FP+TN) on the frozen balanced 3000-positive/3000-negative domain set; separate DNS FPR=FP/(FP+TN) on its distinct benign labels",
+    "rule": "all four gates must pass on the single frozen reserved evaluation; no threshold search, feature tuning, sample replacement, or gate adjustment after seeing it"
+  },
+  "required_counts": {
+    "positive_algorithms": 3,
+    "positive_labels_per_algorithm": 1000,
+    "benign_labels_per_stratum": 600,
+    "benign_strata": 5,
+    "separate_dns_min_labels": 2500
+  },
+  "qualified_reserved_counts": null,
+  "reserved_materialization_status": "ABSENT",
+  "actual_reserved_overlap": "NOT_ASSESSABLE",
+  "source_leads": [
+    {
+      "id": "dgarchive",
+      "url": "https://dgarchive.caad.fkie.fraunhofer.de/",
+      "possible_role": "positive",
+      "status": "unqualified",
+      "gaps": [
+        "access and permission scope",
+        "release and family/alias metadata",
+        "eligible canonical counts and overlap"
+      ]
+    },
+    {
+      "id": "drift",
+      "url": "https://github.com/snsec-net/2026-DSN-DRIFT",
+      "dataset_url": "https://huggingface.co/datasets/snsec-net/dga-detection-drift26dsn",
+      "possible_role": "positive and common_popular reference",
+      "status": "unqualified",
+      "gaps": [
+        "original query names versus eSLD semantics",
+        "family catalogue and aliases",
+        "data licence and release revision",
+        "eligible post-exclusion counts"
+      ],
+      "model_adoption": false
+    },
+    {
+      "id": "bader_generators",
+      "url": "https://github.com/baderj/domain_generation_algorithms",
+      "possible_role": "positive generator-derived research",
+      "status": "unqualified",
+      "catalogue_shortlist_name_only": [
+        "bumblebee",
+        "qsnatch",
+        "sharkbot"
+      ],
+      "gaps": [
+        "algorithm alias/derivative proof",
+        "provenance and seed/date scope",
+        "eligible counts",
+        "documentation-example exclusion",
+        "output permission scope"
+      ],
+      "generator_executed": false
+    },
+    {
+      "id": "tranco",
+      "url": "https://tranco-list.eu/assets/tranco-ndss19.pdf",
+      "possible_role": "common_popular only unless separately documented categories",
+      "status": "unqualified",
+      "gaps": [
+        "fixed list identity and source scope",
+        "machine_generated and cdn_cloud truth not supplied by popularity",
+        "eligible counts and overlap"
+      ]
+    },
+    {
+      "id": "daumel_dns",
+      "url": "https://github.com/Daumel/dns-exfiltration-dataset",
+      "possible_role": "separate benign DNS reference lead",
+      "status": "unqualified",
+      "gaps": [
+        "source exclusions remove DGA by author identification; selection bias",
+        "original name preservation",
+        "independent benign provenance and licence",
+        "2500 distinct eligible labels"
+      ],
+      "raw_values_acquired": false
+    }
+  ],
+  "roles_assigned": [],
+  "incidental_exposure": {
+    "publisher_documentation_examples_encountered": true,
+    "source_documents": [
+      "https://github.com/baderj/domain_generation_algorithms",
+      "https://github.com/Daumel/dns-exfiltration-dataset"
+    ],
+    "example_exclusion_registry_pinned": false,
+    "future_related_materialization_blocked_until_examples_excluded": true,
+    "examples_scored_or_used_for_tuning": false
+  },
+  "access_errors": [
+    "Tranco FAQ fetch failed",
+    "Raw DRIFT dataset-card fetch inaccessible through web tool",
+    "First DGArchive terms click failed; subsequent correct link succeeded"
+  ],
+  "data_acquisition_performed": false,
+  "reserved_dataset_values_read": false,
+  "training_performed": false,
+  "candidate_tuning_performed": false,
+  "promotion_performed": false,
+  "failed_candidates_disabled": true,
+  "readiness_review_status": "COMPLETE",
+  "data_gap_definition_of_done": "BLOCKED",
+  "smallest_next_action": "Qualify DRIFT release metadata, family catalogue/aliases, original-name mapping and licence before selecting cohorts or opening rows"
+}

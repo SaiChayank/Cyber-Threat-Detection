@@ -1,0 +1,166 @@
+{
+  "date": "2026-10-15",
+  "scope": "Interactive production browser smoke using disposable SQLite; controlled replay, not real-world detector accuracy",
+  "checks": [
+    {
+      "name": "Empty state",
+      "passed": true
+    },
+    {
+      "name": "Replay initially enabled",
+      "passed": true
+    },
+    {
+      "name": "Empty export disabled",
+      "passed": true
+    },
+    {
+      "name": "Replay running and stop enabled",
+      "passed": true
+    },
+    {
+      "name": "Scenario locked while running",
+      "passed": true
+    },
+    {
+      "name": "Stop restores replay controls",
+      "passed": true
+    },
+    {
+      "name": "Live alerts rendered before replay completion",
+      "passed": true
+    },
+    {
+      "name": "Combined replay completes",
+      "passed": true
+    },
+    {
+      "name": "Processed metric reaches 256",
+      "passed": true
+    },
+    {
+      "name": "Traffic chart renders",
+      "passed": true
+    },
+    {
+      "name": "Threat filter returns four DGA alerts",
+      "passed": true
+    },
+    {
+      "name": "Filtered export includes evidence",
+      "passed": true
+    },
+    {
+      "name": "Severity and engine filters combine",
+      "passed": true
+    },
+    {
+      "name": "No-match search disables export",
+      "passed": true
+    },
+    {
+      "name": "Pagination shows remaining five alerts",
+      "passed": true
+    },
+    {
+      "name": "Alert detail shows supporting evidence",
+      "passed": true
+    },
+    {
+      "name": "Alert detail shows identifiers",
+      "passed": true
+    },
+    {
+      "name": "390px evidence dialog contained; Escape returns focus",
+      "passed": true,
+      "details": "dialog x16 width358 scroll/client346; focus returned to Inspect"
+    },
+    {
+      "name": "768px layout and mobile navigation",
+      "passed": true,
+      "details": {
+        "scenario": {
+          "width": 212.34375,
+          "x": 57
+        },
+        "scroll": 758,
+        "width": 768
+      }
+    },
+    {
+      "name": "390px layout and mobile navigation",
+      "passed": true,
+      "details": {
+        "scenario": {
+          "width": 298,
+          "x": 41
+        },
+        "scroll": 380,
+        "width": 390
+      }
+    },
+    {
+      "name": "320px layout and mobile navigation",
+      "passed": true,
+      "details": {
+        "scenario": {
+          "width": 228,
+          "x": 41
+        },
+        "scroll": 310,
+        "width": 320
+      }
+    },
+    {
+      "name": "Hold queue exposes resume action",
+      "passed": true
+    },
+    {
+      "name": "Malformed upload shows error and preserves controls",
+      "passed": true
+    },
+    {
+      "name": "Valid PCAP processes three packet events",
+      "passed": true
+    },
+    {
+      "name": "Backend outage disables replay with reconnect feedback",
+      "passed": true
+    },
+    {
+      "name": "Backend outage retains loaded alert page",
+      "passed": true
+    },
+    {
+      "name": "Backend restart restores connection and controls",
+      "passed": true
+    },
+    {
+      "name": "New SSE alerts arrive after restart",
+      "passed": true
+    },
+    {
+      "name": "Recovered queue has 17 unique alert IDs",
+      "passed": true
+    },
+    {
+      "name": "Landing navigation works",
+      "passed": true
+    },
+    {
+      "name": "Monitor reload restores persisted history",
+      "passed": true
+    },
+    {
+      "name": "No captured browser runtime/console errors",
+      "passed": true
+    }
+  ],
+  "logs": [],
+  "limitations": [
+    "No fault injection of malformed SSE messages",
+    "No full reduced-motion/performance audit",
+    "No new reserved evaluation data inspected"
+  ],
+  "isolated_database": "C:/Users/Saich/AppData/Local/Temp/univect-browser-smoke-0d60ed6ae29a48208d3296deeacf5ceb.sqlite3"
+}

@@ -1,0 +1,10 @@
+Command (repository root):
+.venv/Scripts/python.exe -B -m pytest tests/test_tls_capture_qualification.py tests/test_tls_source_acquisition.py tests/test_tqh_tls_qualification.py tests/test_encrypted_data_audit.py tests/test_encrypted_split_design.py -q -p no:cacheprovider
+
+............................................                             [100%]
+44 passed in 3.46s
+Exit code: 0
+
+Scope: 25 new acquisition diagnostics plus 19 existing encrypted-data/split
+regressions. No shared runtime/frontend code changed in this acquisition task;
+full backend tests and frontend build were not rerun for this stage.

@@ -1,6 +1,7 @@
 'use client'
+import { useReducedMotion } from '@/hooks/use-reduced-motion'
 import Link from 'next/link'
-import { motion, useReducedMotion } from 'motion/react'
+import { motion } from 'motion/react'
 import {
   ArrowRight,
   ArrowDown,

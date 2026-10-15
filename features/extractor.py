@@ -1,6 +1,7 @@
 """Causal bounded metadata features, shared by training and runtime."""
 import math
 import hashlib
+from copy import copy
 from collections import Counter, OrderedDict, deque
 from schemas.traffic_event import TrafficEvent
 from features.rate_window import RateWindow
@@ -78,6 +79,33 @@ class FeatureExtractor:
         self.watermark = -1.0
         self.late_events = 0
         self.evictions = 0
+
+    def fork(self, event):
+        """Stage one causal update without copying every source's history.
+
+        Maps retain their order; only this event's mutable history/windows and
+        the global rate window are copied. Other entries are never mutated by
+        update(), including entries removed by expiration or LRU eviction.
+        """
+        staged = copy(self)
+        if event.timestamp / 1000 < self.watermark:
+            return staged  # Late update changes only the scalar drop counter.
+        src, target = str(event.src_ip), str(event.dst_ip)
+        staged.sources = self.sources.copy()
+        if src in staged.sources:
+            staged.sources[src] = staged.sources[src].copy()
+        staged.source_byte_windows = self.source_byte_windows.copy()
+        if src in staged.source_byte_windows:
+            window = copy(staged.source_byte_windows[src])
+            window.buckets = deque([bucket.copy() for bucket in window.buckets])
+            staged.source_byte_windows[src] = window
+        staged.global_rates = self.global_rates.fork()
+        staged.syn_targets = self.syn_targets.copy()
+        staged.udp_targets = self.udp_targets.copy()
+        targets = staged.syn_targets if event.protocol == 6 else staged.udp_targets
+        if event.protocol in (6, 17) and target in targets:
+            targets[target] = targets[target].fork()
+        return staged
 
     def update(self, event: TrafficEvent):
         t = event.timestamp / 1000

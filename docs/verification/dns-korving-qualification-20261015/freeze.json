@@ -1,0 +1,23 @@
+{
+  "scope": "Pinned publisher text qualification only",
+  "sha256": {
+    "docs/verification/dns-korving-qualification-20261015/checks.json": "da17a042a8c55b029b6931db2e4aabdb8b6812edbd98684abb65529fa2f7a044",
+    "docs/verification/dns-korving-qualification-20261015/initial-integrity.json": "32c6e63815bfdda592179e39f41663752eeb536fc2c8ea2156d6f4a95840eede",
+    "docs/verification/dns-korving-qualification-20261015/plan.json": "da19665a3903ea1466dec93f72a582f15ddf4a4a1aa6573f329f63712a1dfe26",
+    "docs/verification/dns-korving-qualification-20261015/publisher-0.txt": "f2e13b9419fd53ae80ac87b4b356f940e1bbb95fae3fdb6f9473f7f5238132e9",
+    "docs/verification/dns-korving-qualification-20261015/publisher-1.txt": "056f4b533a579459075739f2f3b2af068751c4aaf84089facd7593c3bf44b44b",
+    "docs/verification/dns-korving-qualification-20261015/publisher-10.txt": "a7eba2cae547caa37d5c07e7b7fa2e3d3479c00d5f8dd094398483e22b2bdf4a",
+    "docs/verification/dns-korving-qualification-20261015/publisher-2.txt": "8195958c49e4dbfb0b6a2d7e7ab418bffac076e4ece64bf9985b4c3adb2e082c",
+    "docs/verification/dns-korving-qualification-20261015/publisher-3.txt": "7a63eb3ca0e673a4a34c877d5d2143cee7387f1dda0c93988ac355d9fc40c5f2",
+    "docs/verification/dns-korving-qualification-20261015/publisher-4.txt": "c5fa6d67ddcbcb18e64879e95a17cc8af373a5d029659c7cae05ee53458450d1",
+    "docs/verification/dns-korving-qualification-20261015/publisher-5.txt": "00253be0afd22e34495d4486be536a9b99342c65dc6fcc834388c8a78c0d65b1",
+    "docs/verification/dns-korving-qualification-20261015/publisher-6.txt": "a8ed34f58b77f156b60292afeac686e21d49904063082bb9ad3e7d8d69e07d80",
+    "docs/verification/dns-korving-qualification-20261015/publisher-7.txt": "8c546d618e58676776f73f08ed5e1386780c42adb62c3e7312c6b67fbf4bb595",
+    "docs/verification/dns-korving-qualification-20261015/publisher-8.txt": "ffec3f22ab0b8938afa8e5674f6797b69f6b6b5c76d521f5e0c012dfc90c0cde",
+    "docs/verification/dns-korving-qualification-20261015/publisher-9.txt": "87eae495ea136c81739041859a7ed74c244d1f8ccedf00904f5b805dcbe3c0bf",
+    "docs/verification/dns-korving-qualification-20261015/publisher-documents.json": "ea60b671bd95e6b8c47fc210564318953562d90d79b73b1c30079fe34ac7e4dd",
+    "docs/DNS_KORVING_QUALIFICATION.md": "9ea4bc1ff8c3029ea77041c9c18f1e57079aceb5a5d3966fef88a15ba6b6aa4b",
+    "docs/DNS_KORVING_DATA_REQUEST.md": "ab2898e3fa06d6eff266e181c0d3e69841cb69dd962c6ef4d908c06a2500deef"
+  },
+  "next": "Approval before posting prepared public issue; no acquisition/scoring while prerequisites unresolved"
+}
