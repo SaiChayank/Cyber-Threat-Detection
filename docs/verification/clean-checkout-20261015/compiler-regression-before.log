@@ -1,0 +1,29 @@
+F                                                                        [100%]
+================================== FAILURES ===================================
+___________ test_locked_typescript_matches_declared_compiler_range ____________
+
+    def test_locked_typescript_matches_declared_compiler_range():
+        """Fresh installs must not silently use another compiler major/minor."""
+        manifest = json.loads((ROOT / 'frontend/package.json').read_text())
+        lock = json.loads((ROOT / 'package-lock.json').read_text())
+        declared = manifest['devDependencies']['typescript']
+        match = re.fullmatch(r'~(\d+)\.(\d+)\.(\d+)', declared)
+        assert match, 'Review this packaging check when changing the compiler range'
+        requested = tuple(map(int, match.groups()))
+        packages = lock['packages']
+        compiler = packages.get('frontend/node_modules/typescript',
+                                packages.get('node_modules/typescript'))
+        assert compiler is not None, 'TypeScript missing from the npm lockfile'
+        resolved = tuple(map(int, compiler['version'].split('.')))
+>       assert resolved[:2] == requested[:2] and resolved[2] >= requested[2], (
+            f'Locked TypeScript {compiler["version"]} violates declared {declared}')
+E       AssertionError: Locked TypeScript 6.0.3 violates declared ~5.9.3
+E       assert ((6, 0) == (5, 9)
+E         
+E         At index 0 diff: 6 != 5
+E         Use -v to get more diff)
+
+tests\test_checkout_setup.py:34: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/test_checkout_setup.py::test_locked_typescript_matches_declared_compiler_range
+1 failed in 0.57s

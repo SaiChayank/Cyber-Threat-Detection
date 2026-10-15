@@ -2,6 +2,7 @@
 import hashlib
 import json
 import os
+import re
 from pathlib import Path
 import shutil
 import subprocess
@@ -15,6 +16,23 @@ FROZEN_MODELS = (
     'artifact', 'dga_v2', 'dga_weighted_candidate', 'dga_oof_candidate',
     'public_cic', 'public_dga', 'public_tls',
 )
+
+
+def test_locked_typescript_matches_declared_compiler_range():
+    """Fresh installs must not silently use another compiler major/minor."""
+    manifest = json.loads((ROOT / 'frontend/package.json').read_text())
+    lock = json.loads((ROOT / 'package-lock.json').read_text())
+    declared = manifest['devDependencies']['typescript']
+    match = re.fullmatch(r'~(\d+)\.(\d+)\.(\d+)', declared)
+    assert match, 'Review this packaging check when changing the compiler range'
+    requested = tuple(map(int, match.groups()))
+    packages = lock['packages']
+    compiler = packages.get('frontend/node_modules/typescript',
+                            packages.get('node_modules/typescript'))
+    assert compiler is not None, 'TypeScript missing from the npm lockfile'
+    resolved = tuple(map(int, compiler['version'].split('.')))
+    assert resolved[:2] == requested[:2] and resolved[2] >= requested[2], (
+        f'Locked TypeScript {compiler["version"]} violates declared {declared}')
 
 
 def test_checkout_inventory_covers_every_checksummed_model():
