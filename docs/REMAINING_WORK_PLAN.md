@@ -1,0 +1,287 @@
+# Univect / PS26145 — remaining work to release
+
+15 October 2026. Planning only; no new implementation or evaluation is authorized
+by this document. Baseline commit: `8f2cf30`. This execution order supplements
+`COMPLETION_PLAN.md`; it does not overwrite historical evidence or supersede the
+governing screenshots, frozen protocols or acceptance gates. The prior approximate
+75% estimate is not an acceptance measurement. Release remains NOT READY.
+
+## Definition of complete
+
+Deliver the required passive local prototype: read-only ingest, causal features,
+actual rule/ML inference, all required threat categories, standardized incremental
+evidence-bearing alerts, persistent history, working Monitor, measured throughput,
+reproducible source/demo and truthful model/training/validation documentation.
+
+All release BLOCKERs must be closed with source-matching evidence. A failed or
+unassessed required detector does not become accepted through a successful UI demo,
+wording change or a completion percentage. If a frozen gate cannot be achieved
+with available observations/data, record the blocker and request an explicit scope
+decision; never silently weaken a gate or remove an official threat requirement.
+Production hosting, enterprise authentication/RBAC, a new database, new capture
+formats, graph analytics and a frontend redesign are outside this completion plan.
+
+## Keep these working foundations
+
+- Existing FastAPI/SQLite/SSE/replay/upload and React/Next.js Monitor architecture.
+- Atomic event persistence/recovery, sequence resume and preserved analyst history.
+- Current passive parser boundary and missing-reverse-data semantics.
+- Bundled hash-checked models, disabled experimental candidates and frozen gates.
+- Existing deterministic demo pack, alert schema, evidence and qualified wording.
+- Latest verification: 377-test full backend run before the six new DNS-contract
+  tests; 70-test targeted DNS/recovery run including those six; TypeScript/build;
+  32 interactive browser checks; 11 packaging/contract checks after Git attributes
+  were extended. These are different runs, not a newly measured full-suite total.
+
+Do not refactor a passed feature unless a later integration test exposes a defect.
+
+## Execution rules for every work package
+
+1. Inspect its listed implementation, source-matching reports and frozen protocol.
+2. Declare exact scope, input roles, exposure history, gates and output before
+   inspecting new evaluation values. Work on one detector/task at a time.
+3. Make the smallest evidence-justified change. No new service/dependency without
+   a demonstrated need; no labels/source identity as predictive shortcuts.
+4. Add meaningful regressions for defects; run the smallest relevant checks first.
+   Run full backend and frontend build when shared runtime behavior changes.
+5. Freeze passing code/tests/artifacts/report/limits. If a candidate fails, leave
+   it disabled, analyze FP/FN by family/scenario and recommend one next experiment;
+   do not implement that experiment in the failure-analysis task.
+6. Every task reports inspected evidence, finding, files, tests/results, scoped
+   before/after metrics, limitations, DoD and exactly one next incomplete task.
+
+No active probing, detector-generated handshakes, inline mitigation, return-path
+dependency, payload decryption, reserved tuning or automatic model activation.
+Use disposable test databases. Preserve original raw files and existing reports.
+New external recipients/messages require direct user authorization. This plan is
+not authorization to post additional requests or watch email automatically.
+
+## Phase 1 — finish evaluation tooling and verify the committed baseline
+
+**T01 — Formal DNS-tunnelling scorer. P0; TOOLING COMPLETE (15 October 2026).**
+
+Outcome: [scorer freeze](DNS_TUNNELLING_SCORER.md), 61 new cases and 131 targeted
+tests passed. Existing runtime/gates unchanged; reserved CLI refuses before data
+access/receipt creation. Final data qualification/scoring still depends on T30.
+
+- Problem: the development evaluator counts any alert and is not sufficient for
+  final-query-only FN and joint timing gates. Runtime configuration is now frozen.
+- Affected: `datasets/evaluate_dns_tunnel_candidate.py` (retain as development),
+  `data/dns_tunnel_evaluation_contract.json`, new minimal offline formal scorer and
+  its tests. Reuse existing runtime/parser; do not create another detector.
+- Required: session-level TP/TN/FP/FN, precision/recall/F1/FPR; first-alert query
+  and capture delay; final-query-only FN; query<=10 AND delay<=10s for >=90% of TPs;
+  undefined denominators; every TP before completion. Validate source/config and
+  manifest integrity, coverage/disjointness and single-pass controls before scoring.
+  Test calculations with existing fixtures; never consume reserve to debug a scorer.
+- Dependencies: frozen current DNS contract (done); new final data NOT needed for
+  implementation. Actual final scoring stays blocked on T30.
+- Tests: no-alert, early alert, final-only alert, benign alert, repeated alerts,
+  timing boundary/either-condition failure, empty denominators, changed hash,
+  missing control/labels, duplicate session/fragment, refused repeated final run.
+- DoD: deterministic tested scorer, pinned source and invocation contract, no
+  reserved reads and no runtime/threshold change. Record its evidence separately.
+
+**T02 — Clean checkout of the committed snapshot. P1; READY TO START.**
+
+- Problem: older clean-checkout evidence predates the current committed additions.
+- Affected: README, lockfiles/packaging, `.gitattributes`, setup scripts and tests.
+- Required: new directory and isolated Python/npm installations using README only;
+  verify hashes, startup, full tests, typecheck/build, default replay and persisted
+  alerts. Bundled demo must work without research raw datasets or developer caches.
+- Dependencies: current commit; repeat final check after all accepted runtime work.
+- Tests: fresh-environment demo and documented commands, Windows checkout bytes;
+  record platform limits rather than claiming untested Linux support.
+- DoD: reproducible logged installation/demo with no undocumented fixes. Fix setup
+  defects only; do not retrain models as a setup step.
+
+## Phase 2 — close active-baseline quality blockers, one subtype at a time
+
+**T20 — Observability and next-experiment decision. P0; READY TO START.**
+
+- Problem: baseline failure analysis found exact opposite-label metadata pairs and
+  feature-only collisions. Repeated threshold/model trials cannot resolve all of
+  them. The fingerprint ablation was already completed and rejected; do not rerun it.
+- Affected: `BASELINE_FAILURE_ANALYSIS.md`, current per-threat validation protocols,
+  `detection/pipeline.py`, `features/extractor.py`, existing development generators.
+- Required: for ONE chosen subtype distinguish observable behavior from hidden
+  intent; retain every hard negative. Identify whether genuinely observed causal
+  metadata can address a measured representation defect. Define ONE smallest
+  development experiment and its non-regression criteria before implementing it.
+- Dependencies: existing diagnosis; no new reserved observations.
+- Tests: exact metadata/feature-pair comparison and rule-versus-model attribution.
+- DoD: one evidence-based experiment ready for an explicitly scoped implementation
+  task, or an explicit visibility/data blocker. No runtime change in this package.
+
+**T21–T26 — Per-detector quality closure. P0; DEPENDS ON T20.**
+
+Order: UDP flood (T21), suspected spoofed-source indicators (T22), C2 (T23), recon/
+port scans (T24), possible exfiltration (T25), then SYN non-regression (T26).
+Skip ahead only to independent eligible work when the current package is blocked.
+
+- Affected: `datasets/validate_udp_flood.py`, `validate_spoofed_source.py`,
+  `validate_c2_beacon.py`, `validate_recon.py`, `validate_exfil.py`,
+  `validate_syn_flood.py`; corresponding protocol/report and narrow runtime paths.
+- Required: preserve each existing gate, introduce only the agreed causal feature/
+  rule correction, compare on development, freeze choices, then assess a genuinely
+  independent qualified set. Do not recycle consumed evaluation sets as reserve.
+- Controls: legitimate bulk UDP/QUIC/DNS and distributed clients; periodic health/
+  update/telemetry/polling; authorized scans/discovery/inventory/monitoring; cloud
+  backup/upload/sync/replication. Preserve reverse-unavailable versus observed-zero.
+- Tests: per-subtype causal accounting, evidence, early alerts, hard negatives;
+  full backend/build after shared changes. Passing SYN behavior is not a redesign
+  target; rerun it only when integration changes justify it.
+- DoD per subtype: frozen gate passes within documented scope, or unresolved
+  decision with failed candidates disabled. Do not claim forged addresses,
+  reflection, malicious authorization or stolen content is passively proven.
+- Release DoD: unresolved required-quality BLOCKERs cannot be marked complete by
+  merely relabelling them experimental. Escalate irreducible visibility limits.
+
+## Phase 3 — resolve the three data-dependent detector tracks
+
+These can progress as independent research tracks, but each actual implementation
+and reserved evaluation is a separate scoped task. Do not mix/tune their data.
+
+**T30 — DNS-tunnelling qualification, evaluation and conditional promotion. P0;
+SOURCE BLOCKED.**
+
+- Affected: DNS gap/contract/source-review docs, capture manifests, T01 scorer,
+  existing candidate and parser. Maintainer clarification is already posted as
+  https://github.com/Korving-F/dns-tunnel-dataset/issues/3; do not duplicate it.
+- Required: establish capture rights, compatible original format, complete DNS,
+  independent session truth/time joins and benign strata. Resolve `-i any` risk
+  from actual permitted artifact headers, not file extension. Freeze bounded
+  acquisition/roles before raw values; verify hashes, joins and disjointness.
+- Gates: >=20 positive/50 benign independent sessions; five benign categories;
+  recall>=80%, precision>=95%, benign-session FPR<=2%; original timing conditions.
+  Report true tool/type/rate coverage and unsupported observations without invention.
+- Dependencies: qualified source bundle, T01, frozen session manifest/scorer.
+- Tests: integrity, parser visibility, manifest/scorer cases; one reserved pass only.
+- DoD: recorded decision. If passed, separate minimal runtime-promotion task with
+  full regressions/build/replay. If failed/unassessed, no promotion or gate reduction.
+
+**T31 — DGA final data and evaluation. P0; SOURCE BLOCKED.**
+
+- Affected: frozen DGA protocol/design, acquisition/exclusion manifests, candidate
+  reports and `ml/dga_oof_candidate.json`. Existing clarification sent to Marques.
+- Required: finish known alias/exposure exclusions; obtain five legitimate strata
+  with 600 eligible labels each and independent benign DNS >=2,500 eligible unique
+  first labels. Finish cross-role overlap and provenance checks before final
+  materialization. Positive counts remain provisional until all exclusions pass.
+- Gates: recall>=80%, precision>=95%, domain FPR<=2%, separate benign-DNS FPR<=2%.
+- Dependencies: qualified original names/service context and frozen final manifest.
+- Tests: source/alias/disjointness/hash/canonicalization and runtime feature parity.
+- DoD: single reserved evaluation of already-frozen choices; no automatic retraining.
+  Passing artifact/hash/report precedes a separate explicit runtime-promotion task.
+  Failing candidate stays disabled with family/FP/FN analysis.
+
+**T32 — Encrypted-session coverage and validation. P0; SOURCE BLOCKED.**
+
+- Affected: frozen encrypted coverage plan and qualification scripts, causal TLS
+  feature contract, current experimental artifact and validation docs. ARES author
+  clarification already sent; delivery/answers must be established, not assumed.
+- Required: satisfy the frozen independent framework/source/environment/run roles,
+  verified session intent, complete ClientHello timing and browser/updater/API/
+  ordinary-app controls. Three TLS-capable framework and source groups across
+  roles, two runs per role and development JA3 counterexamples remain prerequisites.
+- Dependencies: source qualification and role assignment before raw-value access;
+  no training until all coverage requirements pass.
+- Tests: label/time joins, capture visibility, family/group isolation, causal
+  training/runtime parity and shortcut controls; no decryption or invented QUIC
+  fingerprint extraction.
+- DoD: freeze a lightweight candidate only after readiness; train/tune on permitted
+  development roles; one reserved pass against the existing encrypted gates. A
+  passing decision still needs separate runtime integration/regressions. Failed
+  candidates stay disabled; raw QUIC capability is not silently claimed.
+
+## Phase 4 — safely integrate only accepted changes
+
+**T40 — Promotion and application non-regression. P1; CONDITIONAL ON PASS.**
+
+- Affected: only approved artifact/config/loading and affected detector; existing
+  alert API/schema, SQLite, SSE, replay, upload and Monitor consumers.
+- Required: reference previous artifact, verify approved SHA before activation,
+  preserve evidence/score-vs-severity semantics and incremental output; no unrelated
+  feature/model changes. Keep analyst history and source datasets intact.
+- Tests: affected detector plus full backend, typecheck/build, public replay where
+  eligible, persistence/restart, SSE resume, replay failures, uploads, desktop/
+  tablet/mobile smoke. Use disposable databases and qualified control inputs.
+- DoD: accepted candidate safely integrated with unchanged contracts; no lost or
+  duplicated analyst records. If integration reveals a real defect, fix/test that
+  defect before proceeding. Do not reopen passed UI work for cosmetic changes.
+
+## Phase 5 — final reliability, security and performance evidence
+
+**T50 — Scoped hardening and failure recovery. P1; AFTER FINAL INTEGRATIONS.**
+
+- Affected: current API/config/upload/error/logging/persistence paths only.
+- Required: confirm loopback binding, upload bounds/temp cleanup, safe path handling,
+  input validation, non-leaking errors, model integrity and DB/SSE failure recovery.
+  Keep final data permissions/private material out of public publication.
+- Tests: reuse existing negative/regression tests; add one for each new defect.
+- DoD: no unresolved demo-critical failure/security gap; clearly document local-only
+  scope. Public deployment or multi-user auth is a separately approved scope.
+
+**T51 — Rerun declared benchmarks. P1; AFTER FINAL RUNTIME CHANGES.**
+
+- Affected: existing `benchmarks.run`, `benchmarks.delivery`, separate dated reports.
+- Required: core>=2,000 metadata events/s, processing+SQLite p95<50ms; >=100
+  deterministic API/persistence/SSE alerts, none lost, loopback p95<1,000ms.
+  Record machine/Python/source hashes, workload, elapsed time, alert counts and
+  available percentiles. New output paths; preserve old reports.
+- Tests: reproducible runners and exact alert identity matching. If a regression
+  appears, identify its stage before minimal optimization.
+- DoD: both scoped gates pass on final source. Do not claim capture-to-browser or
+  physical deployment throughput; no new cache/broker/distributed infrastructure.
+
+## Phase 6 — final reproducibility and judge demonstration
+
+**T60 — Final clean-checkout and demo rehearsal. P1; AFTER T40/T50/T51.**
+
+- Affected: README/setup, bundled artifacts, demo manifest/CLI and Monitor.
+- Required: repeat T02 on final revision; verify one benign plus all seven threat
+  labels with deterministic replay fallbacks, hashes, expected evidence/timing and
+  limitations. Rehearse startup → replay → live evidence → failure recovery.
+- Tests: clean install, complete suite, typecheck/build, UI smoke and demo preflight;
+  manual rehearsal without relying on pending downloads, publisher availability or
+  developer environments. Never call synthetic success real-data accuracy.
+- DoD: another team member can reproduce the demonstrated local application using
+  only the documented instructions, with no unrecorded fixes.
+
+## Phase 7 — documentation, release audit and publication
+
+**T70 — Reconcile final docs. P1; AFTER MEASUREMENTS.**
+
+- Affected: README, EXPECTED_SOLUTION, MODEL_AND_VALIDATION, DATASETS,
+  STREAMING_VALIDATION, STREAM_RELIABILITY, performance/demo docs and completion plan.
+- Required: exact per-threat data/features/rule/model, deployed-vs-disabled state,
+  evaluation scope/counts/FPs/limitations, hash/provenance and throughput scope.
+  Add dated supplements; do not mutate frozen historical reports to imply reruns.
+- Tests: reference/command/hash review and agreement with actual runtime flags.
+- DoD: no stale result presented as current, no unmeasured accuracy/completion claim.
+
+**T71 — Final requirement audit and publish. P0 RELEASE GATE; LAST.**
+
+- Required: requirement/status/evidence/limitation matrix covering passive design,
+  all threats, quality gates, causal/bounded streaming, application, performance,
+  reproducibility and dataset/model rights. Classify BLOCKER/HIGH/MEDIUM/LOW.
+- Dependencies: all required packages above have accepted, source-matching evidence.
+- Tests: verify final source/artifact/report identities and clean Git state.
+- DoD: no BLOCKER remains before `FINAL SIH RELEASE STATUS: READY`. Commit final
+  source/docs/reports; push only with user authorization. Existing local commit is
+  not evidence that the remote already contains it.
+
+## P2/P3 work — explicitly deferred
+
+Broader performance characterization, physical-device accessibility/motion checks
+and dependency deprecation cleanup can follow demonstrated needs. Cosmetic
+animation additions are optional. Native flow-export collectors, PCAPNG/cooked
+formats, raw QUIC fingerprints, enterprise auth, cloud hosting and infrastructure
+expansion are future scope; none substitutes for unresolved mandatory quality.
+
+## Start here
+
+**Next eligible package: T02, clean-checkout reproduction of the committed
+baseline.** T01 tooling is complete/frozen. T20 is another independent scoped
+decision if reproduction is blocked. Do not automatically train candidates or
+manufacture a completion deadline while external data qualification is unresolved.

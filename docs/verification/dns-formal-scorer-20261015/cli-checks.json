@@ -1,0 +1,14 @@
+[
+  {
+    "mode": "development",
+    "exit_code": 0,
+    "stdout": "{\"scope\": \"Already exposed synthetic development only; not independent accuracy\", \"promotion_decision\": \"NOT_EVALUATED_DATA_BLOCKED\"}\n",
+    "stderr": ""
+  },
+  {
+    "mode": "reserved",
+    "exit_code": 2,
+    "stdout": "",
+    "stderr": "Reserved evaluation blocked: qualified frozen data is unavailable\n"
+  }
+]

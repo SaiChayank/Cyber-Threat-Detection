@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-15",
+  "tooling_DoD": "PASS",
+  "candidate_quality": "BLOCKED_UNASSESSED",
+  "new_test_cases": 61,
+  "targeted_tests_passed": 131,
+  "runtime_model_files_unchanged": 69,
+  "contract_sha256": "a30b164f22ed1d9bd61a89d9e8f225ab408fc91df2c06449159f6144ec68208b",
+  "contract_source_pins_verified": 23,
+  "reserved_pass_consumed": false,
+  "runtime_activated": false,
+  "training_performed": false,
+  "new_raw_values_read": false,
+  "development_only": true,
+  "source_version_sha256": "ac993e57cc1d2af78da66310eabed669e1d4cfb49815603946b70e0c0456e466"
+}

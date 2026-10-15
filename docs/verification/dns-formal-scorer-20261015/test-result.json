@@ -1,0 +1,19 @@
+{
+  "command": [
+    "C:\\Users\\Saich\\OneDrive\\Desktop\\PS26145\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-m",
+    "pytest",
+    "-q",
+    "-p",
+    "no:cacheprovider",
+    "tests/test_dns_tunnel_scorer.py",
+    "tests/test_dns_tunnel_evaluation_contract.py",
+    "tests/test_dns_tunnel_candidate.py",
+    "tests/test_dns_visibility_audit.py",
+    "tests/test_schemas_and_parsers.py",
+    "tests/test_event_recovery.py"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 16.007013900000004
+}

@@ -1,5 +1,29 @@
 # Univect completion plan
 
+**T01 completed, 15 October 2026:** [formal DNS scorer](DNS_TUNNELLING_SCORER.md)
+implements session/final-query/timing/undefined-metric semantics, source/manifest
+checks and exclusive reserved-pass handling using the existing candidate pipeline.
+61 new cases; 131 targeted tests pass. Known development splits remain 5TP/5TN each,
+not independent quality evidence. Reserved CLI refuses before input/receipt/output;
+no new evaluation, runtime change, training or activation. Freeze this tooling.
+Next eligible work is T02, current committed-baseline clean-checkout reproduction;
+data-dependent detector acceptance remains blocked.
+
+## Current execution roadmap — 15 October 2026
+
+[Remaining work plan](REMAINING_WORK_PLAN.md) organizes the unresolved tasks by
+priority, dependencies, affected modules, tests and Definition of Done. Baseline
+commit `8f2cf30` is local; remote publication is not established. Historical entries
+below retain their dates and superseded states. No official requirement, frozen
+quality gate or completed behavior is changed by the roadmap.
+
+**T01 scorer tooling is now complete; next ready package: T02 — committed-baseline
+clean-checkout reproduction.** Independent source tracks remain blocked;
+no new reserved scoring, training or promotion is permitted. Other eligible work
+while waiting is current clean-checkout verification (T02) or one scoped baseline
+observability/experiment decision (T20). A source/intent impossibility remains a
+blocker, not permission to tune thresholds or label a failed detector complete.
+
 **DNS evaluation-contract reconciliation, 15 October 2026:**
 [reconciliation](DNS_TUNNELLING_CONTRACT_RECONCILIATION.md) finds the exact historical
 pipeline commit and compares it with current source on 20 exposed scenarios/240

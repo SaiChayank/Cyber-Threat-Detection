@@ -1,0 +1,19 @@
+{
+  "scope": "Formal scorer tooling only; no candidate promotion",
+  "sha256": {
+    "docs/verification/dns-formal-scorer-20261015/cli-checks.json": "62106a4893042a2cb1e95a8c56329bf968f30e2981c06b24b810926762103be9",
+    "docs/verification/dns-formal-scorer-20261015/cli-final.json": "62106a4893042a2cb1e95a8c56329bf968f30e2981c06b24b810926762103be9",
+    "docs/verification/dns-formal-scorer-20261015/development-comparison.json": "749df74bc949012fd6565e7c6a0ffa0ec757da2fd745cee39981c5b60db8ddad",
+    "docs/verification/dns-formal-scorer-20261015/development-final.json": "749df74bc949012fd6565e7c6a0ffa0ec757da2fd745cee39981c5b60db8ddad",
+    "docs/verification/dns-formal-scorer-20261015/final-integrity.json": "7ff55f6bbbb6bc145a3c0b8c33de09412addb7c8c4c84b9b63abe962d623531f",
+    "docs/verification/dns-formal-scorer-20261015/PROTOCOL.md": "508d00ef8e57b2d411322facd8d043832741b33d215a24e363d0910b0b915fb3",
+    "docs/verification/dns-formal-scorer-20261015/test-result-final.json": "4801b6efc702e7dcc153dcabbe032662612750c2e3d3e2b1e81a9ace7e6c826f",
+    "docs/verification/dns-formal-scorer-20261015/test-result.json": "ecfc30dffd2311ad3bd5856d3019ae696c3d9291bf2049febb7e2741270ddc4a",
+    "docs/verification/dns-formal-scorer-20261015/tests-final.log": "8e5ec0c82706c3c410ec80a5293cd212a3782a7de495b42a64c9c5a48476bf5e",
+    "docs/verification/dns-formal-scorer-20261015/tests.log": "05467cf49563ed7c3db12b6b2db1d7d2ba5d6f0506384e42ee10456e77e51cae",
+    "datasets/score_dns_tunnel.py": "ac993e57cc1d2af78da66310eabed669e1d4cfb49815603946b70e0c0456e466",
+    "tests/test_dns_tunnel_scorer.py": "48479df3259bca74d5f5ffca459e9df93978fd52953f57b036fa26ef0807643f",
+    "docs/DNS_TUNNELLING_SCORER.md": "aa88c4f7b73fb4fd41002014d220468c688188a82e7908e714f835770e75522e"
+  },
+  "next_eligible_task": "T02 clean-checkout reproduction; no data prerequisite bypass"
+}
