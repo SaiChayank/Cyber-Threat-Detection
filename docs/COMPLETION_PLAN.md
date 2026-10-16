@@ -1,5 +1,13 @@
 # Univect completion plan
 
+**T23 producer clarification sent, 17 October 2026:** user approved the exact
+TQH request. [Dispatch status](C2_TQH_CONTACT_STATUS.md) verifies one Gmail send
+to `dejeon@stud.assist.ac.kr`, displayed 01:56, with exact approved text, envelope
+and screenshot/hash receipt. This supersedes the pending-approval entry below.
+Delivery/reply and callback/benign-control qualification remain unestablished.
+No packet-value inspection, training, detector change or reserved scoring. Next
+verify producer evidence against the frozen protocol; no resend or monitoring.
+
 **T23 C2 development-pair qualification, 17 October 2026:**
 [source screen](C2_PAIR_QUALIFICATION.md) freezes pre-value provenance/contact and
 periodicity criteria. Four bounded publisher leads yield no qualified pair;

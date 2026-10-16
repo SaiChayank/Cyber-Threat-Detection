@@ -138,6 +138,12 @@ the observability work for remaining subtypes or accept the UDP detector.
 
 **T21–T26 — Per-detector quality closure. P0; DEPENDS ON T20.**
 
+T23 contact update, 17 October 2026: the exact TQH clarification was explicitly
+approved and sent once. [Sent status](C2_TQH_CONTACT_STATUS.md) pins recipient,
+approved text and Gmail evidence. Delivery/reply remain unknown; qualify producer
+contact/application records before packet values. No runtime/model/gate change.
+The earlier pending-approval status below is historical and superseded.
+
 T23 qualification update, 17 October 2026: [C2 source screen](C2_PAIR_QUALIFICATION.md)
 and `data/c2_pair_qualification.json` record NO QUALIFIED PAIR after four bounded
 publisher leads. The pre-value protocol is frozen; executed-contact joins and a

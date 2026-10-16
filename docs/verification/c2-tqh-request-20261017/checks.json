@@ -1,0 +1,21 @@
+{
+  "scope": "Dispatch receipt and frozen-source integrity only",
+  "checks": {
+    "approved_request_hash_matches": true,
+    "approved_body_hash_matches": true,
+    "screenshot_hash_matches": true,
+    "single_send": true,
+    "exact_recipient_and_sender": true,
+    "no_extra_recipients_or_attachments": true,
+    "delivery_and_reply_not_claimed": true,
+    "frozen_unchanged_data/c2_pair_qualification.json": true,
+    "frozen_unchanged_docs/C2_PAIR_QUALIFICATION_PROTOCOL.md": true,
+    "frozen_unchanged_docs/C2_PAIR_QUALIFICATION.md": true,
+    "frozen_unchanged_docs/C2_TQH_CONTACT_REQUEST.md": true,
+    "protected_files_unchanged": true
+  },
+  "all_passed": true,
+  "protected_files_unchanged": 107,
+  "tests_added": 0,
+  "tests_rerun": false
+}
