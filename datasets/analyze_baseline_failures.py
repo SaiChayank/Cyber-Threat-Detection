@@ -12,7 +12,7 @@ from collections import Counter
 from pathlib import Path
 
 from detection.pipeline import Pipeline
-from features.extractor import FeatureExtractor
+from features.extractor import FEATURES, FeatureExtractor
 from ml.model import ARTIFACT, vector
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -123,9 +123,52 @@ def udp_collision_detail(positive, benign):
                     [row['udp_target_packet_rate'] >= 1000 for row in b_features])
 
 
+def c2_history_detail(stream):
+    """Trace exposed causal features without prediction or alternate horizons."""
+    from datasets.validate_c2_beacon import feature_snapshot
+
+    if not stream or any(b.timestamp < a.timestamp for a, b in zip(stream, stream[1:])):
+        raise ValueError('C2 history requires nonempty timestamp-ordered metadata')
+    extractor = FeatureExtractor()
+    snapshots = [feature_snapshot(extractor, event, extractor.update(event)) for event in stream]
+    return dict(max_peer_history_count=max(row['peer_history_count'] for row in snapshots),
+                first_eight_peer_event=next((i for i, row in enumerate(snapshots, 1)
+                                            if row['peer_history_count'] >= 8), None),
+                final_audited_features=snapshots[-1])
+
+
+def c2_pair_detail(positive, benign):
+    """Separate timing-rule collisions from full observations/model collisions."""
+    if not positive or len(positive) != len(benign):
+        raise ValueError('C2 pairs require nonempty aligned event counts')
+    left = [event.model_dump(mode='json') for event in positive]
+    right = [event.model_dump(mode='json') for event in benign]
+    a_extractor, b_extractor = FeatureExtractor(), FeatureExtractor()
+    a_features = [a_extractor.update(event) for event in positive]
+    b_features = [b_extractor.update(event) for event in benign]
+    if any(row is None for row in a_features + b_features):
+        raise ValueError('C2 pairs require timestamp-ordered metadata')
+
+    def rule(row):
+        return row['history_count'] >= 8 and row['iat_mean'] >= 1 and row['iat_cv'] < .05
+
+    different_features = sorted({key for a, b in zip(a_features, b_features)
+                                 for key in a if a[key] != b[key]})
+    return dict(metadata_identical=left == right,
+                different_metadata_fields=sorted({key for a, b in zip(left, right)
+                                                  for key in a if a[key] != b[key]}),
+                complete_runtime_features_identical=a_features == b_features,
+                different_runtime_features=different_features,
+                different_model_features=[key for key in different_features if key in FEATURES],
+                model_vectors_identical=[vector(row) for row in a_features] ==
+                                        [vector(row) for row in b_features],
+                c2_rule_decisions_identical=[rule(row) for row in a_features] ==
+                                            [rule(row) for row in b_features])
+
+
 def analyze(group=None):
-    if group not in (None, 'UDP'):
-        raise ValueError('Only UDP has a scoped diagnostic selection')
+    if group not in (None, 'UDP', 'C2'):
+        raise ValueError('Only UDP and C2 have a scoped diagnostic selection')
     model_hash = hashlib.sha256(ARTIFACT.read_bytes()).hexdigest()
     modules = []
     for selected_group, module_name, report_name, target in SOURCES:
@@ -156,6 +199,8 @@ def analyze(group=None):
                 stream = list(module.events(case, case_index))
             else:
                 stream = list(module.events(*case[2:]))
+            if selected_group == 'C2' and group == 'C2' and row['ground_truth_c2'] is not positive:
+                raise ValueError('C2 labels differ from saved development cases')
             digest = stream_digest(stream)
             recorded_digest = row.get('observed_stream_sha256', row.get('stream_sha256'))
             if len(stream) != row['events'] or (recorded_digest and digest != recorded_digest):
@@ -181,6 +226,16 @@ def analyze(group=None):
                             report=path.relative_to(ROOT).as_posix(),
                             report_sha256=hashlib.sha256(raw_report).hexdigest(),
                             failures=failures, opposite_label_overlaps=collisions))
+        if selected_group == 'C2' and group == 'C2':
+            histories = {name: c2_history_detail(stream) for name, stream in streams.items()}
+            for name, history in histories.items():
+                if any(history[key] != lookup[name][key]
+                       for key in ('max_peer_history_count', 'final_audited_features')):
+                    raise ValueError('C2 causal history differs from saved development evidence')
+            modules[-1]['causal_histories'] = histories
+            modules[-1]['same_timing_pairs'] = [
+                dict(positive=a[0], benign=b[0], **c2_pair_detail(streams[a[0]], streams[b[0]]))
+                for a in module.CASES if a[1] for b in module.CASES if not b[1] and a[2] == b[2]]
     fp_sources = Counter(item['first_alert']['detection_source']
                          for module in modules for item in module['failures'] if item['verdict'] == 'FP')
     return dict(scope='Failure analysis of already evaluated development cases; attribution replay, not a new quality evaluation',
@@ -195,7 +250,7 @@ def analyze(group=None):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--output', type=Path, required=True)
-    parser.add_argument('--group', choices=['UDP'], help='Inspect UDP only; default retains the historical all-group diagnostic')
+    parser.add_argument('--group', choices=['UDP', 'C2'], help='Inspect one subtype only; default retains the historical all-group diagnostic')
     args = parser.parse_args()
     report = analyze(group=args.group)
     args.output.parent.mkdir(parents=True, exist_ok=True)

@@ -104,7 +104,15 @@ verification; the final release still requires its separate post-integration run
 
 ## Phase 2 — close active-baseline quality blockers, one subtype at a time
 
-**T20 — Observability and next-experiment decision. P0; COMPLETE FOR UDP (16 October 2026).**
+**T20 — Observability and next-experiment decision. P0; COMPLETE FOR UDP AND C2 (16 October 2026).**
+
+C2 outcome: [diagnostic decision](C2_OBSERVABILITY_DECISION.md), two exact first-FP
+reproductions (one HYBRID, one ML), full health-check/beacon metadata collision,
+and three slow/rotating misses explained by the unchanged causal horizon/count
+guard. Thirteen new cases; 41 targeted C2/baseline/UDP checks pass. Historical C2
+quality remains TP3/TN6/FP2/FN3; no runtime/training/gate change or reserved access.
+T23 remains blocked on independently labelled matched-periodicity development
+evidence and contact-versus-packet visibility, not on another threshold trial.
 
 Outcome: [UDP decision](UDP_OBSERVABILITY_DECISION.md), four first-FP HYBRID
 reproductions and exact full-runtime feature collision for flood/video metadata
@@ -112,7 +120,7 @@ that differs only by destination port. Seven new tests; 23 targeted checks pass.
 No runtime/model/threshold change. One same-service matched-load development-pair
 qualification is recommended, not implemented. T21 remains data/visibility blocked;
 no threshold or training experiment is currently justified. This does not complete
-the observability work for other subtypes or accept the UDP detector.
+the observability work for remaining subtypes or accept the UDP detector.
 
 - Problem: baseline failure analysis found exact opposite-label metadata pairs and
   feature-only collisions. Repeated threshold/model trials cannot resolve all of

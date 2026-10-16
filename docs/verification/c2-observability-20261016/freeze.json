@@ -1,0 +1,35 @@
+{
+  "baseline": "bdffcf0",
+  "scope": "C2 development-only observability diagnosis",
+  "definition_of_done": "PASS_DIAGNOSTIC_ONLY",
+  "c2_quality": "UNRESOLVED",
+  "release": "NOT_READY",
+  "targeted_tests_passed": 41,
+  "new_test_cases": 13,
+  "historical_counts": {
+    "TP": 3,
+    "TN": 6,
+    "FP": 2,
+    "FN": 3
+  },
+  "quality_refreshed": false,
+  "runtime_changed": false,
+  "training": false,
+  "reserved_access": false,
+  "model_sha256": "4d8e08323374535789e21f9f7cd1ee3f1c84b663ce555e67bb4ced57c95e8010",
+  "protected_files_unchanged": 229,
+  "next_task": "Qualify one independently labelled matched-periodicity C2/benign development pair with original contact timestamps; experiment not implemented",
+  "sha256": {
+    "datasets/analyze_baseline_failures.py": "195949e6bcacfe786b882e247978d702e8102be75dbbe35b2dc1ddae3b2eb48e",
+    "tests/test_c2_observability.py": "cdb595aae2dc2f2081a49f2ffb7fd4ae4965112cae910f18e013701f32ffb38d",
+    "docs/C2_OBSERVABILITY_DECISION.md": "abc15d3ae9047982b7b7ffca6c6651f9a7410ce55d8728fb28513ef17a226a65",
+    "docs/COMPLETION_PLAN.md": "383bc3a3272bc999e7ba66bdd9845d4d9d8c06882a2547f2f4dffafce3cd3aca",
+    "docs/REMAINING_WORK_PLAN.md": "8289142151cad88c8b17abe1201d9df91c3b59395ec1b02dc1fe2a44623b681a",
+    "docs/verification/c2-observability-20261016/integrity-after.json": "edd7c33fe385dd0dd8f08a5080c06753260b1d9a77a4569328e2a16b0fd33c8c",
+    "docs/verification/c2-observability-20261016/integrity-before.json": "1f8e5f5cd972efdc5db24851e4e1a79a808bc884f1001571885f58278e2f3d0b",
+    "docs/verification/c2-observability-20261016/protocol.md": "3a8aebd56596d2b75301b67b9c65b94fe53652985286f9e4f30c12764e70a960",
+    "docs/verification/c2-observability-20261016/report.json": "46b0fd23b163b50f918043dee7fc57415175d646c235c6b709b2ef95735453ea",
+    "docs/verification/c2-observability-20261016/tests.log": "32da7e523ac97b1571566d5bf19e2e4afdfad4b005fb42e344ce066019a9fbf3"
+  },
+  "evidence_text_policy": "New diagnostic JSON normalized to LF for repository checks; JSON values unchanged"
+}

@@ -1,5 +1,15 @@
 # Univect completion plan
 
+**C2 observability diagnosis completed, 16 October 2026:**
+[decision](C2_OBSERVABILITY_DECISION.md) reproduces both recorded first false
+positives, proves the identical health-check/beacon metadata pair and verifies
+the causal-history cause of three slow/rotating misses. Thirteen new diagnostic
+cases; 41 targeted tests pass. Historical quality remains 3TP/6TN/2FP/3FN; no
+runtime, threshold, artifact, training or reserved-evaluation change. Diagnostic
+DoD passes; C2 intent quality and release remain unresolved. Next qualify one
+independently labelled matched-periodicity C2/benign development pair with original
+timestamps and contact truth; no experiment/training starts automatically.
+
 **Dependency security triage completed, 16 October 2026:** [report](DEPENDENCY_SECURITY_TRIAGE_20261016.md)
 raises Next.js to 16.3.8 and transitive source-map-js to 1.2.2. Fresh npm audit
 drops from two high-severity packages to zero known findings. Three new packaging
