@@ -1,5 +1,13 @@
 # Univect completion plan
 
+**T21 ORION request sent, 16 October 2026:** user approved the exact prepared
+message. [Sent status](UDP_ORION_RUNBOOK_STATUS.md) verifies Gmail Sent to
+`proenca@uel.br`, displayed 11:04, with recipient/subject/body confirmation and
+screenshot/hash receipt. This supersedes the earlier pending-approval entry.
+Delivery/reply and runbook qualification are not established. No packet values,
+detector experiment, training, activation or reserved evaluation. Next assess
+producer evidence before any packet inspection; do not resend automatically.
+
 **T21 producer runbook follow-up, 16 October 2026:** [status](UDP_ORION_RUNBOOK_STATUS.md)
 records no confirming public runbook located. Coordinator contact verified;
 [exact clarification request](UDP_ORION_RUNBOOK_REQUEST.md) prepared locally.

@@ -3,6 +3,16 @@
 16 October 2026; baseline `e155d18`.
 **Runbook obtained: NO. Pair remains BLOCKED / NOT QUALIFIED.**
 
+**Current contact status: SENT, verified 16 October 2026.** User explicitly approved
+the exact prepared request. Sent once from `saichayank07@gmail.com` to
+`proenca@uel.br`, without attachments, CC or BCC. Gmail displayed
+`16 Oct 2026, 11:04`; the popup did not print a time-zone offset.
+[Open Sent message](https://mail.google.com/mail/u/0/#sent/KtbxLrjCJqsBFFpktrjCZJfZTShPsdfMqV).
+Gmail's Message sent confirmation and full Sent envelope/body were verified.
+[Receipt](verification/udp-orion-runbook-20261016/sent/receipt.json) records the
+approved body hash and screenshot. Delivery to the recipient, a reply and the
+requested runbook are **not established** by this Sent record.
+
 ## Inspected and finding
 
 Inspected the frozen UDP qualification protocol/manifest, previous source receipts
@@ -28,13 +38,16 @@ It states the already frozen load-overlap screen; it asks for existing records,
 not newly generated traffic or post-hoc labels. A negative producer answer is valid
 evidence that this lead cannot supply the required pair.
 
-Status: prepared locally; user authorization for this new recipient is pending.
-No message sent, no Gmail draft created, no reply expected yet. Earlier approvals
-were for different TLS/DGA/DNS recipients. The user's instruction to obtain the
-runbook authorizes public research and preparation; it does not explicitly say to
-send a message to this new recipient. Request authorization for the exact prepared
-email before using the account to send it. Once approved, send once and record
-verified sent evidence; do not claim receipt or reply merely from a sent record.
+The earlier pending-authorization status is superseded by the explicit user
+approval and verified send above. The prepared request file remains an unchanged
+historical snapshot of the approved text. Its SHA256 and trimmed UTF-8 body hash
+match the sent composition; Gmail's nonbreaking indentation spaces were normalized
+for the text comparison. An exact recipient/subject Sent search returned no match
+before composing; Send was invoked once. No unrelated messages were opened.
+
+Next assess the producer's actual response/runbook against the frozen same-service,
+run-label, timestamp and format requirements before inspecting packet values.
+Do not resend, contact another recipient or start automatic inbox monitoring.
 
 ## Preservation and Definition of Done
 
@@ -50,3 +63,9 @@ No application tests added or rerun for this correspondence-only change; prior
 23-pass UDP regression evidence remains historical and is not a new test result.
 Request preparation DoD passes; acquisition DoD remains unmet pending an actual
 producer runbook that confirms the required facts. Stop before packet inspection.
+
+Dispatch follow-up against `0a052f9`: changed only this current status and completion
+plan pointer, adding the scoped Sent receipt, screenshot and preservation checks.
+The approved request, frozen qualification protocol/manifest and runtime artifacts
+are unchanged. Dispatch DoD passes. No tests added or rerun, no bug fix, no new
+performance/accuracy metric and no detector/model or data-processing change.
