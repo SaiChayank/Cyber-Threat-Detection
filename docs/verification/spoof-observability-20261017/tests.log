@@ -1,0 +1,4 @@
+Observed tool output; process exit code 0
+Command: .venv/Scripts/python.exe -B -m pytest -q -p no:cacheprovider tests/test_spoof_observability.py tests/test_spoofed_source_validation.py tests/test_baseline_failure_analysis.py tests/test_udp_observability.py tests/test_c2_observability.py tests/test_c2_beacon_validation.py
+..................................................................       [100%]
+66 passed in 2.71s

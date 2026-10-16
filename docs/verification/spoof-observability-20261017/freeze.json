@@ -1,0 +1,47 @@
+{
+  "baseline_commit": "06fb845",
+  "date_ist": "2026-10-17",
+  "scope": "Suspected spoofed-source observability diagnosis on ten exposed controlled development cases",
+  "definition_of_done": "PASS_DIAGNOSIS_ONLY",
+  "subtype_quality": "UNRESOLVED_VISIBILITY_BLOCKER",
+  "subtype_predicate_enabled": false,
+  "runtime_alert_class": "DDOS_generic_unchanged",
+  "release": "NOT_READY",
+  "targeted_tests_passed": 66,
+  "new_test_cases": 19,
+  "historical_counts": {
+    "TP": 4,
+    "TN": 2,
+    "FP": 4,
+    "FN": 0
+  },
+  "quality_refreshed": false,
+  "first_recorded_fp_attributions": {
+    "HYBRID": 4
+  },
+  "exact_opposite_label_metadata_pairs": 3,
+  "complete_disabled_feature_telemetry_collision": true,
+  "protected_files_unchanged": 105,
+  "model_sha256": "4d8e08323374535789e21f9f7cd1ee3f1c84b663ce555e67bb4ced57c95e8010",
+  "runtime_changed": false,
+  "training": false,
+  "reserved_data": false,
+  "messages_sent": 0,
+  "evidence_text_policy": "New reports normalized to LF, JSON values unchanged; report-final is current and report.json predates diagnostic-sequence hashes",
+  "next_action": "Qualify one already-collected producer-labelled forged/genuine lab pair on matching UDP service and load; no acquisition or experiment implemented",
+  "sha256": {
+    "datasets/analyze_baseline_failures.py": "1ea7967a72b7ae0af228835da02a0ee63de2440be8198dd6c7f2d9d4657e1a4f",
+    "tests/test_spoof_observability.py": "9be8fc42b77a7229feaca17f08b7def388f69c186f5f5839af260d1639459045",
+    "docs/SPOOF_OBSERVABILITY_DECISION.md": "4c4a18a725587cd39426df20814aa70b2b31321bb1e0cc30af439fc0585bc72a",
+    "docs/COMPLETION_PLAN.md": "5276ced57d555b9b128053cae1016770145d70a72dd879798ec00d7f649e2b25",
+    "docs/REMAINING_WORK_PLAN.md": "f287709fb9ff1205f1ab40a1b2375127df3184f69a4b273ea0999858c041b978",
+    "docs/verification/spoof-observability-20261017/analysis-final.log": "e2af61898c45b6bc0e4090530eb614b28b368c36902761b6d96273f9189581a1",
+    "docs/verification/spoof-observability-20261017/analysis.log": "47458fc6855a46526aaa88ce328f74da6220efc56502bf42ee3a0a939a2e5df7",
+    "docs/verification/spoof-observability-20261017/integrity-after.json": "404bc0b8cdc9382fdb2fe7ac6a72e14cea712e907283d452afdeb932932deaf5",
+    "docs/verification/spoof-observability-20261017/integrity-before.json": "88866c054a6205ca8e0e021da2d42223812ca13955467970bdf3a8e1a82552e0",
+    "docs/verification/spoof-observability-20261017/protocol.md": "9d440a4d02650ed3cc3343e5e720b35cdad9c7e114daa90993cd631e3d28153c",
+    "docs/verification/spoof-observability-20261017/report-final.json": "454d78a8ef8f9cc7780e90bc2294cde6e2e0803d7541498899c733f9d43ea1b6",
+    "docs/verification/spoof-observability-20261017/report.json": "68079ca85696dbc8952d8ae39ab232367597db0dee190ad6a5b4c494adc5f93a",
+    "docs/verification/spoof-observability-20261017/tests.log": "bf62a88846601a42cc78e146c1f7e275fcc00ab17117e290906ca1514b5c2895"
+  }
+}

@@ -1,0 +1,798 @@
+{
+  "scope": "Failure analysis of already evaluated development cases; attribution replay, not a new quality evaluation",
+  "model_sha256": "4d8e08323374535789e21f9f7cd1ee3f1c84b663ce555e67bb4ced57c95e8010",
+  "modules": [
+    {
+      "group": "SPOOF",
+      "threat_class": "DDOS",
+      "saved_counts": {
+        "TP": 4,
+        "TN": 2,
+        "FP": 4,
+        "FN": 0
+      },
+      "report": "docs/verification/release-audit/spoofed_source_validation.json",
+      "report_sha256": "1bc2941123c7ad14311427d1133974780585387c35742d5a9ee541a9c41ae040",
+      "failures": [
+        {
+          "scenario": "genuine_distributed_32",
+          "verdict": "FP",
+          "stream_sha256": "0d82ddb9da56a654c4db36c7999c0aee1fd44d7a6d2742fcb2e5c5a95929e180",
+          "first_alert": {
+            "event": 25,
+            "elapsed_seconds": 2.4,
+            "evidence": {
+              "packet_rate": 1000.0,
+              "byte_rate": 1200000.0,
+              "source_entropy": 4.64385618977472,
+              "syn_fraction": 0.0,
+              "source_entropy_partial": false,
+              "rate_window_seconds": 10,
+              "rate_window_resolution_ms": 1000,
+              "global_packet_rate": 1000.0,
+              "source_count_lower_bound": 25,
+              "destination_concentration": 1.0,
+              "mean_packet_bytes": 1200.0,
+              "packet_size_cv": 0.0,
+              "packet_size_basis": "summary_mean_proxy",
+              "udp_target": "destination_udp",
+              "confidence_kind": "synthetic-trained model posterior",
+              "window_partial": true
+            },
+            "runtime_features": {
+              "packet_rate": 1000.0,
+              "byte_rate": 1200000.0,
+              "source_entropy": 4.643856189774724,
+              "syn_fraction": 0.0,
+              "iat_mean": 0,
+              "iat_cv": 0.0,
+              "destination_count": 1,
+              "port_count": 1,
+              "domain_entropy": 0,
+              "domain_length": 0,
+              "domain_digit_ratio": 0.0,
+              "bigram_surprise": 0.0,
+              "txt_record": 0.0,
+              "encrypted": 0.0,
+              "size_cv": 0.0,
+              "egress_bytes": 480000,
+              "byte_ratio": 0,
+              "reverse_available": 0.0,
+              "fingerprint_risk": 0.0,
+              "history_count": 1,
+              "dns_query_visible": 0,
+              "dns_label_count": 0,
+              "dns_encoded_max_label_length": 0,
+              "dns_encoded_total_length": 0,
+              "dns_encoded_entropy": 0,
+              "dns_base_queries_10s": 0,
+              "dns_base_unique_ratio_10s": 0,
+              "dns_base_encoded_queries_10s": 0,
+              "observed_byte_ratio": null,
+              "observed_byte_ratio_status": "reverse_unavailable",
+              "source_forward_bytes_60s": 480000,
+              "source_forward_byte_rate_10s": 48000.0,
+              "source_byte_window_resolution_ms": 1000,
+              "domain_label_length": 0,
+              "domain_vowel_ratio": 0.0,
+              "domain_consonant_run": 0.0,
+              "source_entropy_partial": false,
+              "syn_target_packet_rate": 0.0,
+              "syn_target_fraction": 0.0,
+              "syn_target_source_entropy": 0.0,
+              "syn_target_source_count_lower_bound": 0,
+              "syn_target_entropy_partial": false,
+              "syn_target_fraction_basis": "not_tcp",
+              "udp_target_packet_rate": 1000.0,
+              "udp_target_byte_rate": 1200000.0,
+              "udp_target_source_entropy": 4.64385618977472,
+              "udp_target_source_count_lower_bound": 25,
+              "udp_target_entropy_partial": false,
+              "udp_destination_concentration": 1.0,
+              "udp_packet_size_mean": 1200.0,
+              "udp_packet_size_cv": 0.0,
+              "udp_packet_size_basis": "summary_mean_proxy",
+              "rate_window_seconds": 10,
+              "rate_window_resolution_ms": 1000,
+              "window_partial": true,
+              "state_evictions": 0
+            },
+            "detection_source": "HYBRID",
+            "model_label": "DDOS",
+            "model_posterior": 1.0,
+            "target_model_hit": true,
+            "target_rule_hit": true
+          }
+        },
+        {
+          "scenario": "flash_crowd_64",
+          "verdict": "FP",
+          "stream_sha256": "8c9e9a2d3987d08da43355f82ef694176b07b4ae0ff6c26d20a1de973cab3a56",
+          "first_alert": {
+            "event": 50,
+            "elapsed_seconds": 4.9,
+            "evidence": {
+              "packet_rate": 1000.0,
+              "byte_rate": 1200000.0,
+              "source_entropy": 5.6438561897747155,
+              "syn_fraction": 0.0,
+              "source_entropy_partial": false,
+              "rate_window_seconds": 10,
+              "rate_window_resolution_ms": 1000,
+              "global_packet_rate": 1000.0,
+              "source_count_lower_bound": 50,
+              "destination_concentration": 1.0,
+              "mean_packet_bytes": 1200.0,
+              "packet_size_cv": 0.0,
+              "packet_size_basis": "summary_mean_proxy",
+              "udp_target": "destination_udp",
+              "confidence_kind": "synthetic-trained model posterior",
+              "window_partial": true
+            },
+            "runtime_features": {
+              "packet_rate": 1000.0,
+              "byte_rate": 1200000.0,
+              "source_entropy": 5.643856189774724,
+              "syn_fraction": 0.0,
+              "iat_mean": 0,
+              "iat_cv": 0.0,
+              "destination_count": 1,
+              "port_count": 1,
+              "domain_entropy": 0,
+              "domain_length": 0,
+              "domain_digit_ratio": 0.0,
+              "bigram_surprise": 0.0,
+              "txt_record": 0.0,
+              "encrypted": 0.0,
+              "size_cv": 0.0,
+              "egress_bytes": 240000,
+              "byte_ratio": 0,
+              "reverse_available": 0.0,
+              "fingerprint_risk": 0.0,
+              "history_count": 1,
+              "dns_query_visible": 0,
+              "dns_label_count": 0,
+              "dns_encoded_max_label_length": 0,
+              "dns_encoded_total_length": 0,
+              "dns_encoded_entropy": 0,
+              "dns_base_queries_10s": 0,
+              "dns_base_unique_ratio_10s": 0,
+              "dns_base_encoded_queries_10s": 0,
+              "observed_byte_ratio": null,
+              "observed_byte_ratio_status": "reverse_unavailable",
+              "source_forward_bytes_60s": 240000,
+              "source_forward_byte_rate_10s": 24000.0,
+              "source_byte_window_resolution_ms": 1000,
+              "domain_label_length": 0,
+              "domain_vowel_ratio": 0.0,
+              "domain_consonant_run": 0.0,
+              "source_entropy_partial": false,
+              "syn_target_packet_rate": 0.0,
+              "syn_target_fraction": 0.0,
+              "syn_target_source_entropy": 0.0,
+              "syn_target_source_count_lower_bound": 0,
+              "syn_target_entropy_partial": false,
+              "syn_target_fraction_basis": "not_tcp",
+              "udp_target_packet_rate": 1000.0,
+              "udp_target_byte_rate": 1200000.0,
+              "udp_target_source_entropy": 5.6438561897747155,
+              "udp_target_source_count_lower_bound": 50,
+              "udp_target_entropy_partial": false,
+              "udp_destination_concentration": 1.0,
+              "udp_packet_size_mean": 1200.0,
+              "udp_packet_size_cv": 0.0,
+              "udp_packet_size_basis": "summary_mean_proxy",
+              "rate_window_seconds": 10,
+              "rate_window_resolution_ms": 1000,
+              "window_partial": true,
+              "state_evictions": 0
+            },
+            "detection_source": "HYBRID",
+            "model_label": "DDOS",
+            "model_posterior": 1.0,
+            "target_model_hit": true,
+            "target_rule_hit": true
+          }
+        },
+        {
+          "scenario": "genuine_repeat_32",
+          "verdict": "FP",
+          "stream_sha256": "ca9706c4b92b13bdbb3c0f04de7aff137c808ee9132c4fed72ebe3e3e3904a0a",
+          "first_alert": {
+            "event": 25,
+            "elapsed_seconds": 2.4,
+            "evidence": {
+              "packet_rate": 1000.0,
+              "byte_rate": 1200000.0,
+              "source_entropy": 4.64385618977472,
+              "syn_fraction": 0.0,
+              "source_entropy_partial": false,
+              "rate_window_seconds": 10,
+              "rate_window_resolution_ms": 1000,
+              "global_packet_rate": 1000.0,
+              "source_count_lower_bound": 25,
+              "destination_concentration": 1.0,
+              "mean_packet_bytes": 1200.0,
+              "packet_size_cv": 0.0,
+              "packet_size_basis": "summary_mean_proxy",
+              "udp_target": "destination_udp",
+              "confidence_kind": "synthetic-trained model posterior",
+              "window_partial": true
+            },
+            "runtime_features": {
+              "packet_rate": 1000.0,
+              "byte_rate": 1200000.0,
+              "source_entropy": 4.643856189774724,
+              "syn_fraction": 0.0,
+              "iat_mean": 0,
+              "iat_cv": 0.0,
+              "destination_count": 1,
+              "port_count": 1,
+              "domain_entropy": 0,
+              "domain_length": 0,
+              "domain_digit_ratio": 0.0,
+              "bigram_surprise": 0.0,
+              "txt_record": 0.0,
+              "encrypted": 0.0,
+              "size_cv": 0.0,
+              "egress_bytes": 480000,
+              "byte_ratio": 0,
+              "reverse_available": 0.0,
+              "fingerprint_risk": 0.0,
+              "history_count": 1,
+              "dns_query_visible": 0,
+              "dns_label_count": 0,
+              "dns_encoded_max_label_length": 0,
+              "dns_encoded_total_length": 0,
+              "dns_encoded_entropy": 0,
+              "dns_base_queries_10s": 0,
+              "dns_base_unique_ratio_10s": 0,
+              "dns_base_encoded_queries_10s": 0,
+              "observed_byte_ratio": null,
+              "observed_byte_ratio_status": "reverse_unavailable",
+              "source_forward_bytes_60s": 480000,
+              "source_forward_byte_rate_10s": 48000.0,
+              "source_byte_window_resolution_ms": 1000,
+              "domain_label_length": 0,
+              "domain_vowel_ratio": 0.0,
+              "domain_consonant_run": 0.0,
+              "source_entropy_partial": false,
+              "syn_target_packet_rate": 0.0,
+              "syn_target_fraction": 0.0,
+              "syn_target_source_entropy": 0.0,
+              "syn_target_source_count_lower_bound": 0,
+              "syn_target_entropy_partial": false,
+              "syn_target_fraction_basis": "not_tcp",
+              "udp_target_packet_rate": 1000.0,
+              "udp_target_byte_rate": 1200000.0,
+              "udp_target_source_entropy": 4.64385618977472,
+              "udp_target_source_count_lower_bound": 25,
+              "udp_target_entropy_partial": false,
+              "udp_destination_concentration": 1.0,
+              "udp_packet_size_mean": 1200.0,
+              "udp_packet_size_cv": 0.0,
+              "udp_packet_size_basis": "summary_mean_proxy",
+              "rate_window_seconds": 10,
+              "rate_window_resolution_ms": 1000,
+              "window_partial": true,
+              "state_evictions": 0
+            },
+            "detection_source": "HYBRID",
+            "model_label": "DDOS",
+            "model_posterior": 1.0,
+            "target_model_hit": true,
+            "target_rule_hit": true
+          }
+        },
+        {
+          "scenario": "authorised_telemetry_32",
+          "verdict": "FP",
+          "stream_sha256": "b79de1dbd8aaef06984619e4a91801f8fc7f38f737d0ca065de5f1e4499d229f",
+          "first_alert": {
+            "event": 25,
+            "elapsed_seconds": 2.4,
+            "evidence": {
+              "packet_rate": 1000.0,
+              "byte_rate": 256000.0,
+              "source_entropy": 4.64385618977472,
+              "syn_fraction": 0.0,
+              "source_entropy_partial": false,
+              "rate_window_seconds": 10,
+              "rate_window_resolution_ms": 1000,
+              "global_packet_rate": 1000.0,
+              "source_count_lower_bound": 25,
+              "destination_concentration": 1.0,
+              "mean_packet_bytes": 256.0,
+              "packet_size_cv": 0.0,
+              "packet_size_basis": "summary_mean_proxy",
+              "udp_target": "destination_udp",
+              "confidence_kind": "synthetic-trained model posterior",
+              "window_partial": true
+            },
+            "runtime_features": {
+              "packet_rate": 1000.0,
+              "byte_rate": 256000.0,
+              "source_entropy": 4.643856189774724,
+              "syn_fraction": 0.0,
+              "iat_mean": 0,
+              "iat_cv": 0.0,
+              "destination_count": 1,
+              "port_count": 1,
+              "domain_entropy": 0,
+              "domain_length": 0,
+              "domain_digit_ratio": 0.0,
+              "bigram_surprise": 0.0,
+              "txt_record": 0.0,
+              "encrypted": 0.0,
+              "size_cv": 0.0,
+              "egress_bytes": 102400,
+              "byte_ratio": 0,
+              "reverse_available": 0.0,
+              "fingerprint_risk": 0.0,
+              "history_count": 1,
+              "dns_query_visible": 0,
+              "dns_label_count": 0,
+              "dns_encoded_max_label_length": 0,
+              "dns_encoded_total_length": 0,
+              "dns_encoded_entropy": 0,
+              "dns_base_queries_10s": 0,
+              "dns_base_unique_ratio_10s": 0,
+              "dns_base_encoded_queries_10s": 0,
+              "observed_byte_ratio": null,
+              "observed_byte_ratio_status": "reverse_unavailable",
+              "source_forward_bytes_60s": 102400,
+              "source_forward_byte_rate_10s": 10240.0,
+              "source_byte_window_resolution_ms": 1000,
+              "domain_label_length": 0,
+              "domain_vowel_ratio": 0.0,
+              "domain_consonant_run": 0.0,
+              "source_entropy_partial": false,
+              "syn_target_packet_rate": 0.0,
+              "syn_target_fraction": 0.0,
+              "syn_target_source_entropy": 0.0,
+              "syn_target_source_count_lower_bound": 0,
+              "syn_target_entropy_partial": false,
+              "syn_target_fraction_basis": "not_tcp",
+              "udp_target_packet_rate": 1000.0,
+              "udp_target_byte_rate": 256000.0,
+              "udp_target_source_entropy": 4.64385618977472,
+              "udp_target_source_count_lower_bound": 25,
+              "udp_target_entropy_partial": false,
+              "udp_destination_concentration": 1.0,
+              "udp_packet_size_mean": 256.0,
+              "udp_packet_size_cv": 0.0,
+              "udp_packet_size_basis": "summary_mean_proxy",
+              "rate_window_seconds": 10,
+              "rate_window_resolution_ms": 1000,
+              "window_partial": true,
+              "state_evictions": 0
+            },
+            "detection_source": "HYBRID",
+            "model_label": "DDOS",
+            "model_posterior": 1.0,
+            "target_model_hit": true,
+            "target_rule_hit": true
+          }
+        }
+      ],
+      "opposite_label_overlaps": [
+        {
+          "model_feature_sequence_sha256": "6a0ef5daa92a5fa70fccf613e39d4c3ecb9fc58b03dc03a5acfc53b6e74a274d",
+          "positives": [
+            "forged_32_once"
+          ],
+          "benign": [
+            "genuine_distributed_32",
+            "authorised_spread"
+          ],
+          "identical_raw_event_pairs": [
+            [
+              "forged_32_once",
+              "genuine_distributed_32"
+            ]
+          ],
+          "paired_observability": [
+            {
+              "positive": "forged_32_once",
+              "benign": "genuine_distributed_32",
+              "metadata_identical": true,
+              "different_metadata_fields": [],
+              "differing_values": {},
+              "complete_runtime_features_identical": true,
+              "model_vectors_identical": true,
+              "udp_rate_rule_decisions_identical": true
+            },
+            {
+              "positive": "forged_32_once",
+              "benign": "authorised_spread",
+              "metadata_identical": false,
+              "different_metadata_fields": [
+                "dst_ip"
+              ],
+              "differing_values": {
+                "dst_ip": {
+                  "positive": [
+                    "198.51.100.10"
+                  ],
+                  "benign": [
+                    "198.51.100.10",
+                    "198.51.100.11",
+                    "198.51.100.12",
+                    "198.51.100.13",
+                    "198.51.100.14",
+                    "198.51.100.15",
+                    "198.51.100.16",
+                    "198.51.100.17",
+                    "198.51.100.18",
+                    "198.51.100.19",
+                    "198.51.100.20",
+                    "198.51.100.21",
+                    "198.51.100.22",
+                    "198.51.100.23",
+                    "198.51.100.24",
+                    "198.51.100.25",
+                    "198.51.100.26",
+                    "198.51.100.27",
+                    "198.51.100.28",
+                    "198.51.100.29",
+                    "198.51.100.30",
+                    "198.51.100.31",
+                    "198.51.100.32",
+                    "198.51.100.33",
+                    "198.51.100.34",
+                    "198.51.100.35",
+                    "198.51.100.36",
+                    "198.51.100.37",
+                    "198.51.100.38",
+                    "198.51.100.39",
+                    "198.51.100.40",
+                    "198.51.100.41"
+                  ]
+                }
+              },
+              "complete_runtime_features_identical": false,
+              "model_vectors_identical": true,
+              "udp_rate_rule_decisions_identical": false
+            }
+          ]
+        },
+        {
+          "model_feature_sequence_sha256": "b203f40ea01e746e8a12a134d504e0d8621d97acfd54497750530eef6980be58",
+          "positives": [
+            "forged_64_once"
+          ],
+          "benign": [
+            "flash_crowd_64"
+          ],
+          "identical_raw_event_pairs": [
+            [
+              "forged_64_once",
+              "flash_crowd_64"
+            ]
+          ],
+          "paired_observability": [
+            {
+              "positive": "forged_64_once",
+              "benign": "flash_crowd_64",
+              "metadata_identical": true,
+              "different_metadata_fields": [],
+              "differing_values": {},
+              "complete_runtime_features_identical": true,
+              "model_vectors_identical": true,
+              "udp_rate_rule_decisions_identical": true
+            }
+          ]
+        },
+        {
+          "model_feature_sequence_sha256": "6237b7bdd12792c470a04234e27010be6be259d4c91e1316875ff058fe456288",
+          "positives": [
+            "forged_32_repeat"
+          ],
+          "benign": [
+            "genuine_repeat_32"
+          ],
+          "identical_raw_event_pairs": [
+            [
+              "forged_32_repeat",
+              "genuine_repeat_32"
+            ]
+          ],
+          "paired_observability": [
+            {
+              "positive": "forged_32_repeat",
+              "benign": "genuine_repeat_32",
+              "metadata_identical": true,
+              "different_metadata_fields": [],
+              "differing_values": {},
+              "complete_runtime_features_identical": true,
+              "model_vectors_identical": true,
+              "udp_rate_rule_decisions_identical": true
+            }
+          ]
+        }
+      ],
+      "causal_histories": {
+        "forged_32_once": {
+          "first_disabled_indicator": {
+            "event": 25,
+            "timestamp": 1700000002400.0,
+            "features": {
+              "target_packet_rate": 1000.0,
+              "target_flow_summary_rate": 2.5,
+              "source_entropy": 4.643856189774724,
+              "unique_source_count_lower_bound": 25,
+              "source_entropy_partial": false,
+              "singleton_source_fraction": 1.0,
+              "destination_concentration": 1.0
+            },
+            "wording": "consistent with suspected spoofed-source flood"
+          },
+          "final_visible_features": {
+            "target_packet_rate": 1280.0,
+            "target_flow_summary_rate": 3.2,
+            "source_entropy": 5.0,
+            "unique_source_count_lower_bound": 32,
+            "source_entropy_partial": false,
+            "singleton_source_fraction": 1.0,
+            "destination_concentration": 1.0
+          },
+          "diagnostic_feature_sequence_sha256": "8bfca10d376fac562694399325dd18d7d81691956bb1e07e959fe20d3692be56"
+        },
+        "forged_64_once": {
+          "first_disabled_indicator": {
+            "event": 50,
+            "timestamp": 1700000004900.0,
+            "features": {
+              "target_packet_rate": 1000.0,
+              "target_flow_summary_rate": 5.0,
+              "source_entropy": 5.643856189774724,
+              "unique_source_count_lower_bound": 50,
+              "source_entropy_partial": false,
+              "singleton_source_fraction": 1.0,
+              "destination_concentration": 1.0
+            },
+            "wording": "consistent with suspected spoofed-source flood"
+          },
+          "final_visible_features": {
+            "target_packet_rate": 1280.0,
+            "target_flow_summary_rate": 6.4,
+            "source_entropy": 6.0,
+            "unique_source_count_lower_bound": 64,
+            "source_entropy_partial": false,
+            "singleton_source_fraction": 1.0,
+            "destination_concentration": 1.0
+          },
+          "diagnostic_feature_sequence_sha256": "c4b7832dfec667d6ee8afa39b3ad367c9f17d71b76b7da2a2d64ff927ef87226"
+        },
+        "forged_32_repeat": {
+          "first_disabled_indicator": {
+            "event": 25,
+            "timestamp": 1700000002400.0,
+            "features": {
+              "target_packet_rate": 1000.0,
+              "target_flow_summary_rate": 2.5,
+              "source_entropy": 4.643856189774724,
+              "unique_source_count_lower_bound": 25,
+              "source_entropy_partial": false,
+              "singleton_source_fraction": 1.0,
+              "destination_concentration": 1.0
+            },
+            "wording": "consistent with suspected spoofed-source flood"
+          },
+          "final_visible_features": {
+            "target_packet_rate": 4320.0,
+            "target_flow_summary_rate": 10.8,
+            "source_entropy": 4.985463890651714,
+            "unique_source_count_lower_bound": 32,
+            "source_entropy_partial": false,
+            "singleton_source_fraction": 0.0,
+            "destination_concentration": 1.0
+          },
+          "diagnostic_feature_sequence_sha256": "2614426fe95ba532673c844eb7e26dce00e29bc85a99c1567135e9da356e97c2"
+        },
+        "forged_32_mixed": {
+          "first_disabled_indicator": {
+            "event": 31,
+            "timestamp": 1700000002400.0,
+            "features": {
+              "target_packet_rate": 1000.0,
+              "target_flow_summary_rate": 2.5,
+              "source_entropy": 4.643856189774724,
+              "unique_source_count_lower_bound": 25,
+              "source_entropy_partial": false,
+              "singleton_source_fraction": 1.0,
+              "destination_concentration": 0.8064516129032258
+            },
+            "wording": "consistent with suspected spoofed-source flood"
+          },
+          "final_visible_features": {
+            "target_packet_rate": 1280.0,
+            "target_flow_summary_rate": 3.2,
+            "source_entropy": 5.0,
+            "unique_source_count_lower_bound": 32,
+            "source_entropy_partial": false,
+            "singleton_source_fraction": 1.0,
+            "destination_concentration": 0.8
+          },
+          "diagnostic_feature_sequence_sha256": "3571c897cfd4d260e203c2df8883905c08a9577fed51d59cd84660029e5fc649"
+        },
+        "genuine_distributed_32": {
+          "first_disabled_indicator": {
+            "event": 25,
+            "timestamp": 1700000002400.0,
+            "features": {
+              "target_packet_rate": 1000.0,
+              "target_flow_summary_rate": 2.5,
+              "source_entropy": 4.643856189774724,
+              "unique_source_count_lower_bound": 25,
+              "source_entropy_partial": false,
+              "singleton_source_fraction": 1.0,
+              "destination_concentration": 1.0
+            },
+            "wording": "consistent with suspected spoofed-source flood"
+          },
+          "final_visible_features": {
+            "target_packet_rate": 1280.0,
+            "target_flow_summary_rate": 3.2,
+            "source_entropy": 5.0,
+            "unique_source_count_lower_bound": 32,
+            "source_entropy_partial": false,
+            "singleton_source_fraction": 1.0,
+            "destination_concentration": 1.0
+          },
+          "diagnostic_feature_sequence_sha256": "8bfca10d376fac562694399325dd18d7d81691956bb1e07e959fe20d3692be56"
+        },
+        "flash_crowd_64": {
+          "first_disabled_indicator": {
+            "event": 50,
+            "timestamp": 1700000004900.0,
+            "features": {
+              "target_packet_rate": 1000.0,
+              "target_flow_summary_rate": 5.0,
+              "source_entropy": 5.643856189774724,
+              "unique_source_count_lower_bound": 50,
+              "source_entropy_partial": false,
+              "singleton_source_fraction": 1.0,
+              "destination_concentration": 1.0
+            },
+            "wording": "consistent with suspected spoofed-source flood"
+          },
+          "final_visible_features": {
+            "target_packet_rate": 1280.0,
+            "target_flow_summary_rate": 6.4,
+            "source_entropy": 6.0,
+            "unique_source_count_lower_bound": 64,
+            "source_entropy_partial": false,
+            "singleton_source_fraction": 1.0,
+            "destination_concentration": 1.0
+          },
+          "diagnostic_feature_sequence_sha256": "c4b7832dfec667d6ee8afa39b3ad367c9f17d71b76b7da2a2d64ff927ef87226"
+        },
+        "genuine_repeat_32": {
+          "first_disabled_indicator": {
+            "event": 25,
+            "timestamp": 1700000002400.0,
+            "features": {
+              "target_packet_rate": 1000.0,
+              "target_flow_summary_rate": 2.5,
+              "source_entropy": 4.643856189774724,
+              "unique_source_count_lower_bound": 25,
+              "source_entropy_partial": false,
+              "singleton_source_fraction": 1.0,
+              "destination_concentration": 1.0
+            },
+            "wording": "consistent with suspected spoofed-source flood"
+          },
+          "final_visible_features": {
+            "target_packet_rate": 4320.0,
+            "target_flow_summary_rate": 10.8,
+            "source_entropy": 4.985463890651714,
+            "unique_source_count_lower_bound": 32,
+            "source_entropy_partial": false,
+            "singleton_source_fraction": 0.0,
+            "destination_concentration": 1.0
+          },
+          "diagnostic_feature_sequence_sha256": "2614426fe95ba532673c844eb7e26dce00e29bc85a99c1567135e9da356e97c2"
+        },
+        "authorised_telemetry_32": {
+          "first_disabled_indicator": {
+            "event": 25,
+            "timestamp": 1700000002400.0,
+            "features": {
+              "target_packet_rate": 1000.0,
+              "target_flow_summary_rate": 2.5,
+              "source_entropy": 4.643856189774724,
+              "unique_source_count_lower_bound": 25,
+              "source_entropy_partial": false,
+              "singleton_source_fraction": 1.0,
+              "destination_concentration": 1.0
+            },
+            "wording": "consistent with suspected spoofed-source flood"
+          },
+          "final_visible_features": {
+            "target_packet_rate": 1280.0,
+            "target_flow_summary_rate": 3.2,
+            "source_entropy": 5.0,
+            "unique_source_count_lower_bound": 32,
+            "source_entropy_partial": false,
+            "singleton_source_fraction": 1.0,
+            "destination_concentration": 1.0
+          },
+          "diagnostic_feature_sequence_sha256": "8bfca10d376fac562694399325dd18d7d81691956bb1e07e959fe20d3692be56"
+        },
+        "authorised_spread": {
+          "first_disabled_indicator": null,
+          "final_visible_features": {
+            "target_packet_rate": 40.0,
+            "target_flow_summary_rate": 0.1,
+            "source_entropy": 0.0,
+            "unique_source_count_lower_bound": 1,
+            "source_entropy_partial": false,
+            "singleton_source_fraction": 1.0,
+            "destination_concentration": 0.03125
+          },
+          "diagnostic_feature_sequence_sha256": "024bc3ff6beef2fe63881717836f16a51b381fff35da61730004131702fceefe"
+        },
+        "genuine_low_rate_32": {
+          "first_disabled_indicator": null,
+          "final_visible_features": {
+            "target_packet_rate": 320.0,
+            "target_flow_summary_rate": 3.2,
+            "source_entropy": 5.0,
+            "unique_source_count_lower_bound": 32,
+            "source_entropy_partial": false,
+            "singleton_source_fraction": 1.0,
+            "destination_concentration": 1.0
+          },
+          "diagnostic_feature_sequence_sha256": "4f2f9de69f817f945337e05d02ec322586d2e161001899cfed235d67b50fb305"
+        }
+      },
+      "saved_disabled_indicator_counts": {
+        "TP": 4,
+        "TN": 2,
+        "FP": 4,
+        "FN": 0
+      },
+      "historical_report_model_pin_absent": true,
+      "baseline_model_reference_sha256": "4d8e08323374535789e21f9f7cd1ee3f1c84b663ce555e67bb4ced57c95e8010",
+      "same_rate_telemetry_comparison": {
+        "metadata_identical": false,
+        "different_metadata_fields": [
+          "bytes"
+        ],
+        "differing_values": {
+          "bytes": {
+            "positive": [
+              "480000"
+            ],
+            "benign": [
+              "102400"
+            ]
+          }
+        },
+        "complete_runtime_features_identical": false,
+        "model_vectors_identical": false,
+        "udp_rate_rule_decisions_identical": true,
+        "disabled_indicator_feature_sequences_identical": true
+      }
+    }
+  ],
+  "first_false_positive_sources": {
+    "HYBRID": 4
+  },
+  "policy": {
+    "fit": false,
+    "tuning": false,
+    "ablation": false,
+    "reserved_data": false,
+    "runtime_changes": false,
+    "positive_quality_replay": false
+  },
+  "current_source_sha256": {
+    "detection/pipeline.py": "4e70bc3e50546e57fa5f0d9432f3a9be969b906897d837f6f3638311c9b54926",
+    "features/extractor.py": "624952f8063464c88466b861c72f121c318be5835a02a3d2a4b24b38b1800ac8",
+    "ml/model.py": "2721a53d667d1ea773154fdebf3d349c5ef221dfdb51e937d5afdba1ffa6f354",
+    "features/rate_window.py": "a0d4542ab56b44bb51bdee88ebd56a7df95e9a9d6a79fc569769a9100b65d683",
+    "datasets/analyze_baseline_failures.py": "1ea7967a72b7ae0af228835da02a0ee63de2440be8198dd6c7f2d9d4657e1a4f"
+  }
+}

@@ -1,5 +1,14 @@
 # Univect completion plan
 
+**T22 suspected-spoof observability diagnosis completed, 17 October 2026:**
+[decision](SPOOF_OBSERVABILITY_DECISION.md) reproduces four generic-DDOS FPs as
+HYBRID, proves three complete forged/genuine metadata/runtime collisions, and
+verifies causal singleton evidence without future values. Nineteen new cases;
+66 targeted tests pass. Historical TP4/TN2/FP4/FN0, gates and runtime remain
+unchanged; failed subtype predicate stays disabled. Diagnostic DoD passes, T22
+quality/release do not. Next qualify one producer-labelled, matched-service/load
+forged/genuine lab pair before new packet values; no experiment starts automatically.
+
 **T23 producer clarification sent, 17 October 2026:** user approved the exact
 TQH request. [Dispatch status](C2_TQH_CONTACT_STATUS.md) verifies one Gmail send
 to `dejeon@stud.assist.ac.kr`, displayed 01:56, with exact approved text, envelope

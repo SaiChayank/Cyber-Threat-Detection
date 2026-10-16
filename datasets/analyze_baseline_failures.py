@@ -8,7 +8,7 @@ import argparse
 import hashlib
 import importlib
 import json
-from collections import Counter
+from collections import Counter, defaultdict, deque
 from pathlib import Path
 
 from detection.pipeline import Pipeline
@@ -23,6 +23,8 @@ SOURCES = (
     ('EXFIL', 'validate_exfil', 'exfil_development', 'DATA_EXFILTRATION'),
     ('ENCRYPTED', 'validate_encrypted', 'encrypted_session_validation', 'ENCRYPTED_MALWARE'),
 )
+SPOOF_SOURCE = ('SPOOF', 'validate_spoofed_source', 'spoofed_source_validation', 'DDOS')
+SPOOF_MODEL_SHA256 = '4d8e08323374535789e21f9f7cd1ee3f1c84b663ce555e67bb4ced57c95e8010'
 
 
 def stream_digest(stream):
@@ -166,12 +168,44 @@ def c2_pair_detail(positive, benign):
                                             [rule(row) for row in b_features])
 
 
+def spoof_history_detail(stream):
+    """Reconstruct only the existing disabled predicate's causal evidence."""
+    from types import SimpleNamespace
+    from datasets.validate_spoofed_source import VICTIM, diagnostic_indicator, snapshot
+
+    if (not stream or any(event.protocol != 17 for event in stream)
+            or any(b.timestamp < a.timestamp for a, b in zip(stream, stream[1:]))):
+        raise ValueError('Spoof history requires nonempty timestamp-ordered UDP metadata')
+    extractor = FeatureExtractor()
+    view = SimpleNamespace(extractor=extractor)
+    observations = defaultdict(deque)
+    feature_sequence = hashlib.sha256()
+    first = final = None
+    for index, event in enumerate(stream, 1):
+        extractor.update(event)  # No Pipeline/model prediction for this trace.
+        target, second = str(event.dst_ip), int(event.timestamp // 1000)
+        history = observations[target]
+        while history and history[0][0] < second - 10:
+            history.popleft()
+        history.append((second, str(event.src_ip)))
+        final = snapshot(view, observations[VICTIM])
+        feature_sequence.update(json.dumps(final, sort_keys=True, separators=(',', ':')).encode() + b'\n')
+        if target == VICTIM and first is None and diagnostic_indicator(final):
+            first = dict(event=index, timestamp=event.timestamp, features=final,
+                         wording='consistent with suspected spoofed-source flood')
+    return dict(first_disabled_indicator=first, final_visible_features=final,
+                diagnostic_feature_sequence_sha256=feature_sequence.hexdigest())
+
+
 def analyze(group=None):
-    if group not in (None, 'UDP', 'C2'):
-        raise ValueError('Only UDP and C2 have a scoped diagnostic selection')
+    if group not in (None, 'UDP', 'C2', 'SPOOF'):
+        raise ValueError('Only UDP, C2 and SPOOF have a scoped diagnostic selection')
     model_hash = hashlib.sha256(ARTIFACT.read_bytes()).hexdigest()
+    if group == 'SPOOF' and model_hash != SPOOF_MODEL_SHA256:
+        raise ValueError('Spoof diagnosis requires the unchanged frozen baseline model')
     modules = []
-    for selected_group, module_name, report_name, target in SOURCES:
+    sources = (SPOOF_SOURCE,) if group == 'SPOOF' else SOURCES
+    for selected_group, module_name, report_name, target in sources:
         if group is not None and selected_group != group:
             continue
         path = ROOT/f'docs/verification/release-audit/{report_name}.json'
@@ -184,6 +218,12 @@ def analyze(group=None):
         if 'ml/artifact.json' in report['source_sha256'] and report['source_sha256']['ml/artifact.json'] != model_hash:
             raise ValueError('Historical report uses a different model')
         rows = report.get('scenarios', report.get('rows'))
+        saved_counts = report['existing_ddos_counts'] if group == 'SPOOF' else report['counts']
+        if group == 'SPOOF':
+            # Adapt the historical nested report, without changing its bytes or
+            # including this additional subtype in the frozen default all-group run.
+            rows = [row | dict(verdict=row['existing_ddos']['verdict'],
+                               first_alert=row['existing_ddos']['first']) for row in rows]
         lookup = {row['scenario']: row for row in rows}
         if set(lookup) != {case[0] for case in module.CASES}:
             raise ValueError('Scenario inventory differs from previously evaluated cases')
@@ -201,6 +241,8 @@ def analyze(group=None):
                 stream = list(module.events(*case[2:]))
             if selected_group == 'C2' and group == 'C2' and row['ground_truth_c2'] is not positive:
                 raise ValueError('C2 labels differ from saved development cases')
+            if group == 'SPOOF' and row['ground_truth_forged'] is not positive:
+                raise ValueError('Spoof labels differ from saved development cases')
             digest = stream_digest(stream)
             recorded_digest = row.get('observed_stream_sha256', row.get('stream_sha256'))
             if len(stream) != row['events'] or (recorded_digest and digest != recorded_digest):
@@ -214,7 +256,7 @@ def analyze(group=None):
             elif row['verdict'] == 'FN':
                 failures.append(dict(scenario=name, verdict='FN', saved_row=row))
         counts = Counter(row['verdict'] for row in rows)
-        if any(counts[key] != value for key, value in report['counts'].items()):
+        if any(counts[key] != value for key, value in saved_counts.items()):
             raise ValueError('Saved counts disagree with saved scenario verdicts')
         collisions = overlaps(streams, positives)
         if selected_group == 'UDP' and group == 'UDP':
@@ -222,7 +264,7 @@ def analyze(group=None):
                 collision['paired_observability'] = [
                     dict(positive=a, benign=b, **udp_collision_detail(streams[a], streams[b]))
                     for a in collision['positives'] for b in collision['benign']]
-        modules.append(dict(group=selected_group, threat_class=target, saved_counts=report['counts'],
+        modules.append(dict(group=selected_group, threat_class=target, saved_counts=saved_counts,
                             report=path.relative_to(ROOT).as_posix(),
                             report_sha256=hashlib.sha256(raw_report).hexdigest(),
                             failures=failures, opposite_label_overlaps=collisions))
@@ -236,6 +278,29 @@ def analyze(group=None):
             modules[-1]['same_timing_pairs'] = [
                 dict(positive=a[0], benign=b[0], **c2_pair_detail(streams[a[0]], streams[b[0]]))
                 for a in module.CASES if a[1] for b in module.CASES if not b[1] and a[2] == b[2]]
+        if group == 'SPOOF':
+            histories = {name: spoof_history_detail(stream) for name, stream in streams.items()}
+            for name, history in histories.items():
+                row = lookup[name]
+                if (history['final_visible_features'] != row['final_visible_features']
+                        or history['first_disabled_indicator'] != row['diagnostic_only_indicator']['first']):
+                    raise ValueError('Spoof causal history differs from saved development evidence')
+            indicator_counts = Counter(row['diagnostic_only_indicator']['verdict'] for row in rows)
+            if any(indicator_counts[key] != value for key, value in report['diagnostic_only_indicator_counts'].items()):
+                raise ValueError('Saved spoof predicate counts disagree with saved verdicts')
+            modules[-1].update(causal_histories=histories,
+                               saved_disabled_indicator_counts=report['diagnostic_only_indicator_counts'],
+                               historical_report_model_pin_absent=True,
+                               baseline_model_reference_sha256=SPOOF_MODEL_SHA256,
+                               same_rate_telemetry_comparison=udp_collision_detail(
+                                   streams['forged_32_once'], streams['authorised_telemetry_32']))
+            modules[-1]['same_rate_telemetry_comparison']['disabled_indicator_feature_sequences_identical'] = (
+                histories['forged_32_once']['diagnostic_feature_sequence_sha256'] ==
+                histories['authorised_telemetry_32']['diagnostic_feature_sequence_sha256'])
+            for collision in collisions:
+                collision['paired_observability'] = [
+                    dict(positive=a, benign=b, **udp_collision_detail(streams[a], streams[b]))
+                    for a in collision['positives'] for b in collision['benign']]
     fp_sources = Counter(item['first_alert']['detection_source']
                          for module in modules for item in module['failures'] if item['verdict'] == 'FP')
     return dict(scope='Failure analysis of already evaluated development cases; attribution replay, not a new quality evaluation',
@@ -250,7 +315,7 @@ def analyze(group=None):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--output', type=Path, required=True)
-    parser.add_argument('--group', choices=['UDP', 'C2'], help='Inspect one subtype only; default retains the historical all-group diagnostic')
+    parser.add_argument('--group', choices=['UDP', 'C2', 'SPOOF'], help='Inspect one subtype only; default retains the historical all-group diagnostic')
     args = parser.parse_args()
     report = analyze(group=args.group)
     args.output.parent.mkdir(parents=True, exist_ok=True)

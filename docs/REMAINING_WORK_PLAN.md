@@ -104,7 +104,15 @@ verification; the final release still requires its separate post-integration run
 
 ## Phase 2 — close active-baseline quality blockers, one subtype at a time
 
-**T20 — Observability and next-experiment decision. P0; COMPLETE FOR UDP AND C2 (16 October 2026).**
+**T20 — Observability and next-experiment decision. P0; COMPLETE FOR UDP, C2 AND SUSPECTED-SPOOF DIAGNOSIS (17 October 2026).**
+
+T22 outcome: [suspected-spoof decision](SPOOF_OBSERVABILITY_DECISION.md), four
+exact first-FP HYBRID reproductions, three full opposite-label metadata/runtime
+collisions and an additional telemetry collision in the disabled diagnostic
+feature sequence. Nineteen new cases; 66 targeted spoof/baseline/UDP/C2 checks
+pass. Original TP4/TN2/FP4/FN0 and failed gates remain; subtype stays disabled.
+No runtime/model/threshold change or reserve. T22 is blocked on independently
+labelled lab provenance plus genuinely separating passive evidence, not tuning.
 
 C2 outcome: [diagnostic decision](C2_OBSERVABILITY_DECISION.md), two exact first-FP
 reproductions (one HYBRID, one ML), full health-check/beacon metadata collision,

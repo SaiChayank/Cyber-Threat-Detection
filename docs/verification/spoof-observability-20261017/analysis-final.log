@@ -1,0 +1,14 @@
+Command: .venv/Scripts/python.exe -B -m datasets.analyze_baseline_failures --group SPOOF --output docs\verification\spoof-observability-20261017\report-final.json
+{
+  "first_false_positive_sources": {
+    "HYBRID": 4
+  },
+  "groups": {
+    "SPOOF": {
+      "TP": 4,
+      "TN": 2,
+      "FP": 4,
+      "FN": 0
+    }
+  }
+}
