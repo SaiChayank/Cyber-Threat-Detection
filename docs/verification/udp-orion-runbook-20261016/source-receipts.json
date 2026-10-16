@@ -1,0 +1,56 @@
+{
+  "baseline": "e155d18",
+  "scope": "Public producer descriptive metadata only; no capture values",
+  "sources": [
+    {
+      "id": "dataset",
+      "url": "https://www.uel.br/grupos/orion/datasets/orion-2026.html",
+      "status": 200,
+      "resolved_url": "https://www.uel.br/grupos/orion/datasets/orion-2026.html",
+      "utc": "2026-10-16T05:32:41.718826+00:00",
+      "bytes": 17724,
+      "sha256": "3777587b87d0036d00cc2c45ae4b4b482089ce5d28f8aa75dd6bb9da6ce478cc",
+      "matches_previous_page_sha256": true
+    },
+    {
+      "id": "contact",
+      "url": "https://www.uel.br/grupos/orion/contact.html",
+      "status": 200,
+      "resolved_url": "https://www.uel.br/grupos/orion/contact.html",
+      "utc": "2026-10-16T05:32:42.517826+00:00",
+      "bytes": 3589,
+      "sha256": "6a8733b5dfac1d355a0d8318cbf6295d1905909991fb332fc10a311706e7d867",
+      "verified_recipient_mailto": "mailto:proenca@uel.br"
+    },
+    {
+      "id": "people",
+      "url": "https://www.uel.br/grupos/orion/people.html",
+      "status": 200,
+      "resolved_url": "https://www.uel.br/grupos/orion/people.html",
+      "utc": "2026-10-16T05:32:44.283135+00:00",
+      "bytes": 41414,
+      "sha256": "d7601e9710a16ba2cfea1bd154d8eda7d11d1315b037d7dd14d74890b7942300",
+      "verified_recipient_mailto": "mailto:proenca@uel.br"
+    },
+    {
+      "id": "publications",
+      "url": "https://www.uel.br/grupos/orion/publications.html",
+      "status": 200,
+      "resolved_url": "https://www.uel.br/grupos/orion/publications.html",
+      "utc": "2026-10-16T05:32:45.658812+00:00",
+      "bytes": 39187,
+      "sha256": "3b9920c9313a176b0da82590de676b7c285103a385909e8e433d2344d0f78652"
+    },
+    {
+      "id": "navigation",
+      "url": "https://www.uel.br/grupos/orion/header.html",
+      "status": 200,
+      "resolved_url": "https://www.uel.br/grupos/orion/header.html",
+      "utc": "2026-10-16T05:32:46.470507+00:00",
+      "bytes": 1882,
+      "sha256": "5bbccc9fbbebe34ed38006fdcf6bcd126a16daf2a12d8fc92de9c855d663fd5a"
+    }
+  ],
+  "email_sent": false,
+  "runbook_obtained": false
+}

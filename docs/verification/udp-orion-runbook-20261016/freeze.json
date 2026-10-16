@@ -1,0 +1,13 @@
+{
+  "scope": "Producer runbook lookup and unsent request preparation",
+  "baseline": "e155d18",
+  "message_sent": false,
+  "runbook_obtained": false,
+  "sha256": {
+    "docs/COMPLETION_PLAN.md": "e97a9a838e8e1d6c37e11132bdb1649519f656015bcf182851bae8aa34df2f18",
+    "docs/UDP_ORION_RUNBOOK_REQUEST.md": "f6392095874fd4ce76ec0b35a2be71a197f3ba59de62bcb3210e724b6e7e1668",
+    "docs/UDP_ORION_RUNBOOK_STATUS.md": "8d11dcceeaa9f432c6f518c6130e335679d3b200c7f3720281aca3bc7571daf2",
+    "docs/verification/udp-orion-runbook-20261016/integrity.json": "cfabfaf243aa5308cfed8414be45d0fb56170ca843ea509f14c6c0762db73ccc",
+    "docs/verification/udp-orion-runbook-20261016/source-receipts.json": "adc9be5147b74e4c830aa7972892d0caad3204b561d8e0bd6124af9ef0627840"
+  }
+}

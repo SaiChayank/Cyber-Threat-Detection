@@ -1,0 +1,14 @@
+{
+  "checks": "PASS",
+  "baseline": "e155d18",
+  "metadata_pages_sha256_recorded": 5,
+  "recipient_verified_on_two_producer_pages": true,
+  "existing_tracked_changes_only": "docs/COMPLETION_PLAN.md",
+  "frozen_qualification_protocol_unchanged": true,
+  "application_tests_rerun": false,
+  "packet_values_read": false,
+  "runbook_obtained": false,
+  "message_sent": false,
+  "request_preparation_dod": "PASS",
+  "runbook_acquisition_dod": "BLOCKED"
+}

@@ -1,5 +1,11 @@
 # Univect completion plan
 
+**T21 producer runbook follow-up, 16 October 2026:** [status](UDP_ORION_RUNBOOK_STATUS.md)
+records no confirming public runbook located. Coordinator contact verified;
+[exact clarification request](UDP_ORION_RUNBOOK_REQUEST.md) prepared locally.
+Sending to the new recipient awaits user approval. No packet values inspected,
+no message sent and no detector experiment. Pair qualification remains blocked.
+
 **T21 source screen, 16 October 2026:** [UDP pair qualification](UDP_PAIR_QUALIFICATION.md)
 freezes a development-only same-service/load protocol and pins publisher metadata.
 No pair qualifies: producer-labelled high-load benign service/run provenance is
