@@ -1,0 +1,11 @@
+{
+  "checks": "PASS",
+  "baseline": "588d2cc",
+  "qualification": "BLOCKED",
+  "local_metadata_snapshots_verified": 6,
+  "snapshot_check_scope": "Only present local snapshots; none required in clean checkout",
+  "protected_tracked_files_verified": 766,
+  "preservation_semantics": "Git canonical tracked content unchanged; SHA256 records local checkout bytes",
+  "new_packet_values_or_predictions": false,
+  "scope": "Offline metadata/manifest and tracked-file preservation; no load or accuracy test"
+}

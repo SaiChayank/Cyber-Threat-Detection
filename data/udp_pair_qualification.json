@@ -1,0 +1,88 @@
+{
+  "version": 1,
+  "date": "2026-10-16",
+  "baseline_commit": "588d2cc",
+  "scope": "T21 development-only UDP pair qualification; no detector experiment",
+  "status": "BLOCKED_NOT_QUALIFIED",
+  "qualification_dod_passed": false,
+  "selected_pair": null,
+  "protocol": {
+    "path": "docs/UDP_PAIR_QUALIFICATION_PROTOCOL.md",
+    "sha256": "0c440df7b2f445045ff68331dfebc010b1363b608b3f468c650f64f9e6a50ca9"
+  },
+  "quality_gates_unchanged": {
+    "recall_min": 0.8,
+    "precision_min": 0.95,
+    "fpr_max": 0.02,
+    "timing_accounting_coverage": "docs/UDP_FLOOD_VALIDATION.md"
+  },
+  "new_capture_records_read": false,
+  "new_flow_rows_read": false,
+  "load_overlap_measured": false,
+  "detector_scoring": false,
+  "training": false,
+  "reserved_evaluation": false,
+  "runtime_change": false,
+  "candidate_activation": false,
+  "primary_lead": {
+    "id": "orion-2026",
+    "publisher_url": "https://www.uel.br/grupos/orion/datasets/orion-2026.html",
+    "licence": "CC BY 4.0 confirmed by archive LICENSE.txt",
+    "citation_doi": "10.1109/ACCESS.2026.3738009",
+    "archive_url": "https://www.uel.br/grupos/orion/datasets/dataset_orion_2026_pcap.zip",
+    "archive_bytes": 11323268172,
+    "publisher_advertised_archive_sha256": "f68f4120bbe8dff4fed7558a62af4fbdda351391ecdac7148e4aff0731980252",
+    "full_archive_sha256_locally_verified": false,
+    "producer_attack_annotation": {
+      "day": "2025-11-06",
+      "interval": "07:00:00 through 07:29:59; timezone not established",
+      "sources": "10.0.0.[4-7]:random",
+      "destination": "10.0.0.3:9090",
+      "transport": "UDP",
+      "member": "dataset_orion_2026_pcap/day4/reordered_pcapflow_2025-11-06_atk-n-1_udp_30m.pcap.zst",
+      "status": "metadata-only lead; not selected or packet-verified"
+    },
+    "benign_run": null,
+    "actual_application_verified": false,
+    "same_service_verified": false,
+    "capture_format_verified": false,
+    "original_timestamp_provenance_verified": false,
+    "readme_and_licence": [
+      {
+        "member": "dataset_orion_2026_pcap/LICENSE.txt",
+        "bytes": 339,
+        "sha256": "f2d6fa0612d7e4d5a462207d2c6d18b57c237135c0fd04587b8cfb85b1a9963f",
+        "crc32": "5a87705c",
+        "local_metadata": "data/raw/discovery/udp-pair-20261016/orion.LICENSE.txt"
+      },
+      {
+        "member": "dataset_orion_2026_pcap/README.md",
+        "bytes": 9910,
+        "sha256": "541deec1d0b6ed0f4f1267364ae2e335fff56676f3df10d8664e7f9e418d588c",
+        "crc32": "ee0c8a3f",
+        "local_metadata": "data/raw/discovery/udp-pair-20261016/orion.README.md"
+      }
+    ],
+    "blocked_on": [
+      "producer-labelled same-service authorized high-load benign run",
+      "application and endpoint/direction mapping",
+      "original timestamp/timezone and reordering provenance",
+      "inner complete classic Ethernet PCAP verification",
+      "original-time rate and size overlap after provenance qualifies"
+    ]
+  },
+  "other_screened_sources": [
+    {
+      "id": "trustlab",
+      "revision": "c207488ba85804d74ff82413122e9762b7a4c529",
+      "reason": "README distributed flow CSV; required raw paired run not established"
+    },
+    {
+      "id": "cicddos2019",
+      "local_manifest": "data/cicddos2019_manifest.json",
+      "reason": "local completed-flow CSV subset; publisher metadata does not establish same-service high-load benign run"
+    }
+  ],
+  "source_receipts": "docs/verification/udp-pair-qualification-20261016/source-receipts.json",
+  "stop_decision": "Stop at source/provenance blocker; obtain producer runbook before any capture-value read or detector experiment."
+}

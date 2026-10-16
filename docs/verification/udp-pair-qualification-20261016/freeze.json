@@ -1,0 +1,21 @@
+{
+  "scope": "T21 development-data source qualification only",
+  "qualification_dod": "BLOCKED",
+  "baseline_commit": "588d2cc",
+  "tests_passed": 23,
+  "sha256": {
+    "data/udp_pair_qualification.json": "d457bdd13fc9a14f79380f8b7d2263dde72cdafff84f5be0f3a2483accdf289f",
+    "docs/COMPLETION_PLAN.md": "db15c1b0ec1c033ff7a69bc75ae1cf211d88c56bcaddb8cb1af256a23f65ab5f",
+    "docs/REMAINING_WORK_PLAN.md": "4fe5887a5bb7ec625e54465c38b879244075406d0ca60b010c5c63ba67602259",
+    "docs/UDP_PAIR_QUALIFICATION.md": "4b78adec0183f5c408877843d26f58587731d3082b3b9b9ce0ee46b56d35d5cc",
+    "docs/UDP_PAIR_QUALIFICATION_PROTOCOL.md": "0c440df7b2f445045ff68331dfebc010b1363b608b3f468c650f64f9e6a50ca9",
+    "docs/verification/udp-pair-qualification-20261016/archive-metadata-receipt.json": "220d43068ee3d37e6025d8d76148d8cb636b3f44d4478db4823d1ac649adc7dd",
+    "docs/verification/udp-pair-qualification-20261016/integrity-attempt1.log": "7dd2086a2a743f3fe7cba5d791c029a72ee52b2bcb06c577292878e1e1fc9a34",
+    "docs/verification/udp-pair-qualification-20261016/integrity.json": "e4e33b98d870f76e46d31230955c4c2f266453ad2f0c15abe8d4ed61af36f567",
+    "docs/verification/udp-pair-qualification-20261016/integrity.log": "dd26a858f0691957250e9386eef922f11ffc49253789fa79bdea7dc26db414ab",
+    "docs/verification/udp-pair-qualification-20261016/protocol-freeze.json": "236092ceb408e25d95229ee5260d54f59a8035a2d674395c5c3076baafe86bdd",
+    "docs/verification/udp-pair-qualification-20261016/source-receipts.json": "10b040a63010124ddb713d26c4563dacb00df44f33f54c9ad32986108740cdfe",
+    "docs/verification/udp-pair-qualification-20261016/tests.log": "48534c42016983beea2e394d5aa9d217f8295369a8d3c85ab2471d99e305ddd0",
+    "docs/verification/udp-pair-qualification-20261016/verify_evidence.py": "580f4adeec1e9405eb2c34f0560c443bbc0a07a9d9a8c002c51efbc1c0e3a2f0"
+  }
+}

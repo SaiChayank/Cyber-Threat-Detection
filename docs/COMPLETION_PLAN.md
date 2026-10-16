@@ -1,5 +1,14 @@
 # Univect completion plan
 
+**T21 source screen, 16 October 2026:** [UDP pair qualification](UDP_PAIR_QUALIFICATION.md)
+freezes a development-only same-service/load protocol and pins publisher metadata.
+No pair qualifies: producer-labelled high-load benign service/run provenance is
+missing; original timing/inner format and load overlap remain unverified. Bounded
+ORION archive README/licence reads only; no packet values, training, detector
+experiment or reserved scoring. Qualification DoD is BLOCKED, not completed.
+Next obtain the producer runbook described in that report; preserve UDP quality
+gates and all hard controls.
+
 **T20 UDP decision completed, 16 October 2026:** [observability decision](UDP_OBSERVABILITY_DECISION.md)
 reproduces all four recorded UDP FPs as HYBRID; the flood/video pair differs only
 by destination port and has identical complete runtime features/model vectors.

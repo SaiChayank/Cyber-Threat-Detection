@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\docs\verification\udp-pair-qualification-20261016\verify_evidence.py", line 77, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\docs\verification\udp-pair-qualification-20261016\verify_evidence.py", line 61, in main
+    assert path.read_bytes() == expected, name
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: .env.example

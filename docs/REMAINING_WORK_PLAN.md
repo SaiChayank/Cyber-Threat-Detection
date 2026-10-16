@@ -130,6 +130,12 @@ the observability work for other subtypes or accept the UDP detector.
 
 **T21–T26 — Per-detector quality closure. P0; DEPENDS ON T20.**
 
+T21 qualification update, 16 October 2026: [source screen](UDP_PAIR_QUALIFICATION.md)
+and `data/udp_pair_qualification.json` record NO QUALIFIED PAIR. Same-service benign
+run provenance is absent; load overlap is unmeasured. The pre-value qualification
+protocol is frozen. No detector experiment, training or reserved scoring. Obtain
+the producer runbook before capture inspection; stop while that blocker remains.
+
 Order: UDP flood (T21), suspected spoofed-source indicators (T22), C2 (T23), recon/
 port scans (T24), possible exfiltration (T25), then SYN non-regression (T26).
 Skip ahead only to independent eligible work when the current package is blocked.

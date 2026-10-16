@@ -1,0 +1,268 @@
+{
+  "scope": "publisher metadata / ZIP member names only; no capture or CSV records",
+  "sources": [
+    {
+      "id": "orion",
+      "url": "https://www.uel.br/grupos/orion/datasets/orion-2026.html",
+      "resolved_url": "https://www.uel.br/grupos/orion/datasets/orion-2026.html",
+      "status": 200,
+      "bytes": 17724,
+      "sha256": "3777587b87d0036d00cc2c45ae4b4b482089ce5d28f8aa75dd6bb9da6ce478cc",
+      "utc": "2026-10-16T05:26:37.236009+00:00"
+    },
+    {
+      "id": "trustlab",
+      "url": "https://api.github.com/repos/trustlabupct/trustlab_dataset/commits/main",
+      "resolved_url": "https://api.github.com/repos/trustlabupct/trustlab_dataset/commits/main",
+      "status": 200,
+      "bytes": 4533,
+      "sha256": "19baae6a128b2150b2fe56a7cc036c205705fd9303b95f0eef1f2ef5ae2eae54",
+      "utc": "2026-10-16T05:26:37.702554+00:00",
+      "revision": "c207488ba85804d74ff82413122e9762b7a4c529",
+      "readme": {
+        "url": "https://raw.githubusercontent.com/trustlabupct/trustlab_dataset/c207488ba85804d74ff82413122e9762b7a4c529/README.md",
+        "bytes": 8763,
+        "sha256": "7efeac076e124e6e599a73950c5a3c57ec0d1e835cf6aa88de3b92a6121d0888"
+      }
+    },
+    {
+      "id": "cicddos",
+      "url": "https://www.unb.ca/cic/datasets/ddos-2019.html",
+      "resolved_url": "https://www.unb.ca/cic/datasets/ddos-2019.html",
+      "status": 200,
+      "bytes": 73242,
+      "sha256": "70644f83c138f9900031ef08244d01467bf46b5cb4d0a77362dab189032a877f",
+      "utc": "2026-10-16T05:26:40.677519+00:00"
+    }
+  ],
+  "orion_archive": {
+    "url": "https://www.uel.br/grupos/orion/datasets/dataset_orion_2026_pcap.zip",
+    "payload_values_read": false,
+    "full_archive_downloaded": false,
+    "ranges": [
+      {
+        "start": 11323202615,
+        "end": 11323268171,
+        "sha256": "55c41cf6ba1ff7abe0c352bff9cf520fa49a123320b40d25ab6df6bb97adfdce"
+      },
+      {
+        "start": 11323262171,
+        "end": 11323268073,
+        "sha256": "e1c4fe41bb1034646ef92060b3f2eacdd7c44725cc199cb683b6a95a38aad794"
+      }
+    ],
+    "bytes": 11323268172,
+    "headers": {
+      "Server": "nginx/1.20.1",
+      "Date": "Fri, 16 Oct 2026 05:26:41 GMT",
+      "Content-Type": "application/zip",
+      "Content-Length": "11323268172",
+      "Connection": "close",
+      "Last-Modified": "Mon, 28 Sep 2026 14:03:41 GMT",
+      "ETag": "\"10485fb0-2a2eb5c4c-65c8b8886a940\"",
+      "Accept-Ranges": "bytes"
+    },
+    "members": [
+      {
+        "name": "dataset_orion_2026_pcap/",
+        "compressed_bytes_32bit": 0,
+        "uncompressed_bytes_32bit": 0
+      },
+      {
+        "name": "dataset_orion_2026_pcap/day2/",
+        "compressed_bytes_32bit": 0,
+        "uncompressed_bytes_32bit": 0
+      },
+      {
+        "name": "dataset_orion_2026_pcap/day2/reordered_pcapflow_2025-11-04_24h.pcap.zst",
+        "compressed_bytes_32bit": 1299448528,
+        "uncompressed_bytes_32bit": 1310134699
+      },
+      {
+        "name": "dataset_orion_2026_pcap/LICENSE.txt",
+        "compressed_bytes_32bit": 245,
+        "uncompressed_bytes_32bit": 339
+      },
+      {
+        "name": "dataset_orion_2026_pcap/day4/",
+        "compressed_bytes_32bit": 0,
+        "uncompressed_bytes_32bit": 0
+      },
+      {
+        "name": "dataset_orion_2026_pcap/day4/reordered_pcapflow_2025-11-06_atk-n-1_rst_30m.pcap.zst",
+        "compressed_bytes_32bit": 51812816,
+        "uncompressed_bytes_32bit": 52099117
+      },
+      {
+        "name": "dataset_orion_2026_pcap/day4/reordered_pcapflow_2025-11-06_atk-n-1_udp_30m.pcap.zst",
+        "compressed_bytes_32bit": 38561032,
+        "uncompressed_bytes_32bit": 39074213
+      },
+      {
+        "name": "dataset_orion_2026_pcap/day4/reordered_pcapflow_2025-11-06_atk-n-1_urg_30m.pcap.zst",
+        "compressed_bytes_32bit": 51294655,
+        "uncompressed_bytes_32bit": 51596533
+      },
+      {
+        "name": "dataset_orion_2026_pcap/day4/reordered_pcapflow_2025-11-06_atk-n-1_psh_30m.pcap.zst",
+        "compressed_bytes_32bit": 51574166,
+        "uncompressed_bytes_32bit": 51860384
+      },
+      {
+        "name": "dataset_orion_2026_pcap/day4/reordered_pcapflow_2025-11-06_atk-n-1_fin_30m.pcap.zst",
+        "compressed_bytes_32bit": 52328859,
+        "uncompressed_bytes_32bit": 52622720
+      },
+      {
+        "name": "dataset_orion_2026_pcap/day4/reordered_pcapflow_2025-11-06_24h.pcap.zst",
+        "compressed_bytes_32bit": 1303202313,
+        "uncompressed_bytes_32bit": 1314071976
+      },
+      {
+        "name": "dataset_orion_2026_pcap/day4/reordered_pcapflow_2025-11-06_atk-n-1_ack_30m.pcap.zst",
+        "compressed_bytes_32bit": 46434651,
+        "uncompressed_bytes_32bit": 46522139
+      },
+      {
+        "name": "dataset_orion_2026_pcap/day4/filtered_reordered_pcapflow_2025-11-06_24h.pcap.zst",
+        "compressed_bytes_32bit": 1236634180,
+        "uncompressed_bytes_32bit": 1251086804
+      },
+      {
+        "name": "dataset_orion_2026_pcap/day4/reordered_pcapflow_2025-11-06_atk-n-1_icmp_30m.pcap.zst",
+        "compressed_bytes_32bit": 50231508,
+        "uncompressed_bytes_32bit": 50557483
+      },
+      {
+        "name": "dataset_orion_2026_pcap/day4/reordered_pcapflow_2025-11-06_atk-n-1_syn_30m.pcap.zst",
+        "compressed_bytes_32bit": 54293586,
+        "uncompressed_bytes_32bit": 54554927
+      },
+      {
+        "name": "dataset_orion_2026_pcap/day5/",
+        "compressed_bytes_32bit": 0,
+        "uncompressed_bytes_32bit": 0
+      },
+      {
+        "name": "dataset_orion_2026_pcap/day5/reordered_pcapflow_2025-11-07_atk-n-n_psh_30m.pcap.zst",
+        "compressed_bytes_32bit": 65823323,
+        "uncompressed_bytes_32bit": 65863211
+      },
+      {
+        "name": "dataset_orion_2026_pcap/day5/reordered_pcapflow_2025-11-07_atk-n-n_icmp_30m.pcap.zst",
+        "compressed_bytes_32bit": 59889729,
+        "uncompressed_bytes_32bit": 60072023
+      },
+      {
+        "name": "dataset_orion_2026_pcap/day5/reordered_pcapflow_2025-11-07_atk-n-n_ack_30m.pcap.zst",
+        "compressed_bytes_32bit": 55724291,
+        "uncompressed_bytes_32bit": 55722596
+      },
+      {
+        "name": "dataset_orion_2026_pcap/day5/reordered_pcapflow_2025-11-07_atk-n-n_fin_30m.pcap.zst",
+        "compressed_bytes_32bit": 64426267,
+        "uncompressed_bytes_32bit": 64478149
+      },
+      {
+        "name": "dataset_orion_2026_pcap/day5/reordered_pcapflow_2025-11-07_atk-n-n_udp_30m.pcap.zst",
+        "compressed_bytes_32bit": 59389180,
+        "uncompressed_bytes_32bit": 59759451
+      },
+      {
+        "name": "dataset_orion_2026_pcap/day5/reordered_pcapflow_2025-11-07_atk-n-n_rst_30m.pcap.zst",
+        "compressed_bytes_32bit": 65900470,
+        "uncompressed_bytes_32bit": 65948800
+      },
+      {
+        "name": "dataset_orion_2026_pcap/day5/reordered_pcapflow_2025-11-07_atk-n-n_urg_30m.pcap.zst",
+        "compressed_bytes_32bit": 63650577,
+        "uncompressed_bytes_32bit": 63702768
+      },
+      {
+        "name": "dataset_orion_2026_pcap/day5/reordered_pcapflow_2025-11-07_24h.pcap.zst",
+        "compressed_bytes_32bit": 1296865481,
+        "uncompressed_bytes_32bit": 1307690831
+      },
+      {
+        "name": "dataset_orion_2026_pcap/day5/filtered_reordered_pcapflow_2025-11-07_24h.pcap.zst",
+        "compressed_bytes_32bit": 1230584654,
+        "uncompressed_bytes_32bit": 1245015228
+      },
+      {
+        "name": "dataset_orion_2026_pcap/day5/reordered_pcapflow_2025-11-07_atk-n-n_syn_30m.pcap.zst",
+        "compressed_bytes_32bit": 61553593,
+        "uncompressed_bytes_32bit": 61571928
+      },
+      {
+        "name": "dataset_orion_2026_pcap/day3/",
+        "compressed_bytes_32bit": 0,
+        "uncompressed_bytes_32bit": 0
+      },
+      {
+        "name": "dataset_orion_2026_pcap/day3/reordered_pcapflow_2025-11-05_atk-1-1_urg_30m.pcap.zst",
+        "compressed_bytes_32bit": 23167832,
+        "uncompressed_bytes_32bit": 23677922
+      },
+      {
+        "name": "dataset_orion_2026_pcap/day3/reordered_pcapflow_2025-11-05_atk-1-1_ack_30m.pcap.zst",
+        "compressed_bytes_32bit": 35359360,
+        "uncompressed_bytes_32bit": 35436986
+      },
+      {
+        "name": "dataset_orion_2026_pcap/day3/reordered_pcapflow_2025-11-05_atk-1-1_rst_30m.pcap.zst",
+        "compressed_bytes_32bit": 23273502,
+        "uncompressed_bytes_32bit": 23780876
+      },
+      {
+        "name": "dataset_orion_2026_pcap/day3/reordered_pcapflow_2025-11-05_atk-1-1_psh_30m.pcap.zst",
+        "compressed_bytes_32bit": 23357098,
+        "uncompressed_bytes_32bit": 23872169
+      },
+      {
+        "name": "dataset_orion_2026_pcap/day3/reordered_pcapflow_2025-11-05_atk-1-1_udp_30m.pcap.zst",
+        "compressed_bytes_32bit": 15435180,
+        "uncompressed_bytes_32bit": 16154353
+      },
+      {
+        "name": "dataset_orion_2026_pcap/day3/reordered_pcapflow_2025-11-05_atk-1-1_fin_30m.pcap.zst",
+        "compressed_bytes_32bit": 23294518,
+        "uncompressed_bytes_32bit": 23802398
+      },
+      {
+        "name": "dataset_orion_2026_pcap/day3/reordered_pcapflow_2025-11-05_24h.pcap.zst",
+        "compressed_bytes_32bit": 1294161619,
+        "uncompressed_bytes_32bit": 1304943133
+      },
+      {
+        "name": "dataset_orion_2026_pcap/day3/filtered_reordered_pcapflow_2025-11-05_24h.pcap.zst",
+        "compressed_bytes_32bit": 1239130735,
+        "uncompressed_bytes_32bit": 1253543077
+      },
+      {
+        "name": "dataset_orion_2026_pcap/day3/reordered_pcapflow_2025-11-05_atk-1-1_syn_30m.pcap.zst",
+        "compressed_bytes_32bit": 40461717,
+        "uncompressed_bytes_32bit": 40631646
+      },
+      {
+        "name": "dataset_orion_2026_pcap/day3/reordered_pcapflow_2025-11-05_atk-1-1_icmp_30m.pcap.zst",
+        "compressed_bytes_32bit": 32808117,
+        "uncompressed_bytes_32bit": 33126604
+      },
+      {
+        "name": "dataset_orion_2026_pcap/README.md",
+        "compressed_bytes_32bit": 2913,
+        "uncompressed_bytes_32bit": 9910
+      },
+      {
+        "name": "dataset_orion_2026_pcap/day1/",
+        "compressed_bytes_32bit": 0,
+        "uncompressed_bytes_32bit": 0
+      },
+      {
+        "name": "dataset_orion_2026_pcap/day1/reordered_pcapflow_2025-11-03_24h.pcap.zst",
+        "compressed_bytes_32bit": 1313180329,
+        "uncompressed_bytes_32bit": 1324095181
+      }
+    ]
+  }
+}
