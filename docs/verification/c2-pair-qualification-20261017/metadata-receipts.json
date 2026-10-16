@@ -1,0 +1,84 @@
+{
+  "tqh-record": {
+    "url": "https://zenodo.org/api/records/22732327",
+    "retrieved_at_utc": "2026-10-16T20:20:05.121809+00:00",
+    "scope": "publisher record/repository metadata only",
+    "status": 200,
+    "final_url": "https://zenodo.org/api/records/22732327",
+    "content_type": "application/json",
+    "file": "docs/verification/c2-pair-qualification-20261017/tqh-record.json",
+    "bytes": 8348,
+    "sha256": "cf49a261dfafc8255f89a014997e368ef1a908e238c16992358d16a85c403840"
+  },
+  "ait-lds-record": {
+    "url": "https://zenodo.org/api/records/5789064",
+    "retrieved_at_utc": "2026-10-16T20:20:05.122650+00:00",
+    "scope": "publisher record/repository metadata only",
+    "status": 200,
+    "final_url": "https://zenodo.org/api/records/5789064",
+    "content_type": "application/json",
+    "file": "docs/verification/c2-pair-qualification-20261017/ait-lds-record.json",
+    "bytes": 17209,
+    "sha256": "ff68a1d7a8362ba5a162cfec48e17d064ca59daddf632bddc7d4eb4985c1e08f"
+  },
+  "ait-cam-record": {
+    "url": "https://zenodo.org/api/records/18861762",
+    "retrieved_at_utc": "2026-10-16T20:20:05.122924+00:00",
+    "scope": "publisher record/repository metadata only",
+    "status": 200,
+    "final_url": "https://zenodo.org/api/records/18861762",
+    "content_type": "application/json",
+    "file": "docs/verification/c2-pair-qualification-20261017/ait-cam-record.json",
+    "bytes": 21227,
+    "sha256": "6e9a7c80aa7efd2c0a3cee159c7680fdbf96da5756cf6356f86e22e19fc720b3"
+  },
+  "deepred-record": {
+    "url": "https://zenodo.org/api/records/15668685",
+    "retrieved_at_utc": "2026-10-16T20:20:05.123096+00:00",
+    "scope": "publisher record/repository metadata only",
+    "status": 200,
+    "final_url": "https://zenodo.org/api/records/15668685",
+    "content_type": "application/json",
+    "file": "docs/verification/c2-pair-qualification-20261017/deepred-record.json",
+    "bytes": 6813,
+    "sha256": "738a0f0452c561bdc615a5fbee581f36e2aa3a4ca80d179eb3a56e97904c123b"
+  },
+  "deepred-tag": {
+    "url": "https://api.github.com/repos/Mehrdad-hajizadeh/DeepRed-C2/git/ref/tags/v1.0",
+    "retrieved_at_utc": "2026-10-16T20:20:06.509611+00:00",
+    "scope": "publisher record/repository metadata only",
+    "status": 200,
+    "final_url": "https://api.github.com/repos/Mehrdad-hajizadeh/DeepRed-C2/git/ref/tags/v1.0",
+    "content_type": "application/json; charset=utf-8",
+    "file": "docs/verification/c2-pair-qualification-20261017/deepred-tag.json",
+    "bytes": 351,
+    "sha256": "6e7c7be7a1b49461e53ca8b98b0e901a6984809d2fa813394f96e2741a84f850"
+  },
+  "ares-commit": {
+    "url": "https://api.github.com/repos/cp-tsp/ares2025-artifacts/commits/main",
+    "retrieved_at_utc": "2026-10-16T20:20:06.621254+00:00",
+    "scope": "publisher record/repository metadata only",
+    "status": 200,
+    "final_url": "https://api.github.com/repos/cp-tsp/ares2025-artifacts/commits/main",
+    "content_type": "application/json; charset=utf-8",
+    "file": "data/raw/c2-source-metadata-quarantine/ares-commit-response-20261017.json",
+    "bytes": 733088,
+    "sha256": "a95a6a02f381b80bbe9cf0c351323567412c153e9de6347a3ec3a5982b40697b",
+    "quarantine_file": "data/raw/c2-source-metadata-quarantine/ares-commit-response-20261017.json",
+    "patch_paths_metadata_only": [
+      "README.md",
+      "data/csv/amazon_http_amazon/cs4_amazon_http.csv",
+      "data/csv/amazon_http_amazon/cs5_amazon_http.csv",
+      "data/csv/amazon_https_amazon/ctu_https_amazon.csv",
+      "data/csv/smashburger_https_smashburger/benign1_smashburger.csv",
+      "data/csv/smashburger_https_smashburger/benign2_smashburger.csv",
+      "data/csv/smashburger_https_smashburger/benign3_smashburger.csv",
+      "data/csv/smashburger_https_smashburger/benign4_smashburger.csv",
+      "data/csv/smashburger_https_smashburger/benign5_smashburger.csv",
+      "data/csv/smashburger_https_smashburger/cs_smashburger_https.csv"
+    ],
+    "scope_correction": "Commit REST response included 10 patches. Only paths/commit metadata inspected; patch text not inspected, evaluated or used. Original response retained locally outside Git; tracked summary excludes all files/diffs.",
+    "summary_file": "docs/verification/c2-pair-qualification-20261017/ares-commit.json",
+    "summary_sha256": "fa1458eaf2f64be23477a6830db745afa661496ba8fb9100779265c0dbe434f3"
+  }
+}

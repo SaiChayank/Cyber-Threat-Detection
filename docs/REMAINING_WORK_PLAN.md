@@ -138,6 +138,13 @@ the observability work for remaining subtypes or accept the UDP detector.
 
 **T21–T26 — Per-detector quality closure. P0; DEPENDS ON T20.**
 
+T23 qualification update, 17 October 2026: [C2 source screen](C2_PAIR_QUALIFICATION.md)
+and `data/c2_pair_qualification.json` record NO QUALIFIED PAIR after four bounded
+publisher leads. The pre-value protocol is frozen; executed-contact joins and a
+named matched periodic benign application remain missing. Prepared TQH producer
+clarification is not sent; new-recipient approval is required. No detector/model
+change, new packet/annotation value inspection, training or reserved scoring.
+
 T21 qualification update, 16 October 2026: [source screen](UDP_PAIR_QUALIFICATION.md)
 and `data/udp_pair_qualification.json` record NO QUALIFIED PAIR. Same-service benign
 run provenance is absent; load overlap is unmeasured. The pre-value qualification

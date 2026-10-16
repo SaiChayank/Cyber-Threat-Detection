@@ -1,0 +1,156 @@
+{
+  "protocol_version": "univect-c2-development-pair-20261017-v1",
+  "protocol": "docs/C2_PAIR_QUALIFICATION_PROTOCOL.md",
+  "protocol_sha256": "d7a32a5643da390585b41d4bcf5b5dab2a3ae6c7dace614583313d41032f452b",
+  "baseline_commit": "20f0c23",
+  "status": "BLOCKED_NOT_QUALIFIED",
+  "selected_pair": null,
+  "qualified_pairs": 0,
+  "contact_count_positive": null,
+  "contact_count_benign": null,
+  "interval_overlap": null,
+  "source_leads": [
+    {
+      "id": "TQH-C2-v1.2.2",
+      "urls": [
+        "https://zenodo.org/records/22732327"
+      ],
+      "version": "1.2.2",
+      "role": "previously exposed development lead only",
+      "status": "NOT_QUALIFIED",
+      "provenance": {
+        "permission": "CC BY 4.0 declared by publisher and prior acquisition",
+        "original_ethernet_pcap": "ESTABLISHED_FROM_PRIOR_TLS_QUALIFICATION",
+        "utc_session_joins": "ESTABLISHED_FROM_PRIOR_TLS_QUALIFICATION",
+        "executed_contact_mapping": "NOT_ESTABLISHED",
+        "named_periodic_benign_workload": "NOT_ESTABLISHED",
+        "matched_service_environment": "NOT_ESTABLISHED_FOR_PAIR",
+        "nine_contacts_each": "NOT_ESTABLISHED",
+        "interval_iqr_overlap": "NOT_MEASURED"
+      },
+      "existing_artifact": {
+        "path": "data/raw/tqh-c2-development/D_i300_j30-D_0648.pcap",
+        "sha256": "1846da399b88ebfa16ddbd89bfbc161bb29125cfa5bc87faa572659b1e96ecb1",
+        "verification_scope": "13 October TLS acquisition evidence; no new packet or annotation values read"
+      },
+      "existing_exposed_tls_sessions": {
+        "controlled_c2": 115,
+        "benign": 467,
+        "scope": "historical qualified TLS session cohort, not beacon-contact counts"
+      },
+      "evidence": [
+        "docs/verification/tls-capture-acquisition-20261013/TQH_README_v122.md",
+        "docs/verification/tls-capture-acquisition-20261013/tqh-input-manifest.json",
+        "docs\\verification\\c2-pair-qualification-20261017\\tqh-record.json"
+      ],
+      "finding": "Topology/UID-based flow intent and configured interval/jitter do not establish actual callback positions or a matched periodic benign application."
+    },
+    {
+      "id": "AIT-CAM-LDS",
+      "urls": [
+        "https://zenodo.org/records/18861762"
+      ],
+      "version": "v2 publisher page; pinned record 18861762",
+      "role": "metadata-consulted development lead only",
+      "status": "NOT_QUALIFIED",
+      "provenance": {
+        "permission": "CC BY 4.0 declared in record",
+        "original_ethernet_pcap": "NOT_VERIFIED",
+        "utc_session_joins": "NOT_VERIFIED",
+        "executed_contact_mapping": "NOT_ESTABLISHED",
+        "named_periodic_benign_workload": "ABSENT_NORMAL_USER_SIMULATION_PER_PUBLISHER",
+        "matched_service_environment": "NOT_ESTABLISHED_FOR_PAIR",
+        "nine_contacts_each": "NOT_ESTABLISHED",
+        "interval_iqr_overlap": "NOT_MEASURED"
+      },
+      "evidence": [
+        "docs\\verification\\c2-pair-qualification-20261017\\ait-cam-record.json",
+        "docs\\verification\\c2-pair-qualification-20261017\\ait-lds-record.json"
+      ],
+      "finding": "CAM-LDS has attack-step time ground truth but explicitly no normal user simulation; idle system traffic is not a verified periodic benign run. Related AIT-LDS v2.0 provides normal simulations but no established matched callback-labelled C2 pair in reviewed metadata."
+    },
+    {
+      "id": "TUC-RedTeam30-DeepRed",
+      "urls": [
+        "https://zenodo.org/records/15668685",
+        "https://www.usenix.org/system/files/woot25-hajizadeh.pdf",
+        "https://github.com/Mehrdad-hajizadeh/DeepRed-C2/tree/v1.0"
+      ],
+      "version": "Zenodo record 15668685 / tag v1.0",
+      "repository_commit": "dc3478cf046738111129dca85319f4915c7c7da2",
+      "role": "metadata-consulted development lead only",
+      "status": "NOT_QUALIFIED",
+      "provenance": {
+        "permission": "CC BY 4.0 declared for dataset record",
+        "original_ethernet_pcap": "NOT_VERIFIED",
+        "utc_session_joins": "NOT_VERIFIED",
+        "executed_contact_mapping": "NOT_ESTABLISHED",
+        "named_periodic_benign_workload": "NOT_ESTABLISHED",
+        "matched_service_environment": "NOT_ESTABLISHED_FOR_PAIR",
+        "nine_contacts_each": "NOT_ESTABLISHED",
+        "interval_iqr_overlap": "NOT_MEASURED"
+      },
+      "advertised_raw_archive": {
+        "name": "TUC-RedTeam30-datatset-selected-pcap.tar.gz",
+        "bytes": 14323780868,
+        "downloaded": false,
+        "sha256": null
+      },
+      "evidence": [
+        "docs\\verification\\c2-pair-qualification-20261017\\deepred-record.json",
+        "docs\\verification\\c2-pair-qualification-20261017\\deepred-tag.json",
+        "docs\\verification\\c2-pair-qualification-20261017\\readme-receipts.json"
+      ],
+      "finding": "Representative raw subset and labelled NFStream flows are published. Randomized benign application profiles and attack/scenario labels do not establish a periodic hard-negative run or executed-contact joins. No archive or executable code obtained."
+    },
+    {
+      "id": "ARES2025-Cobalt-Strike",
+      "urls": [
+        "https://github.com/cp-tsp/ares2025-artifacts"
+      ],
+      "version": "pinned Git commit",
+      "repository_commit": "7acfebc6f17fe774df91a1b550c4b23613b90fe9",
+      "role": "previously consulted development lead for C2; existing TLS roles unchanged",
+      "status": "NOT_QUALIFIED",
+      "provenance": {
+        "permission": "CAPTURE_DATA_SCOPE_NOT_ESTABLISHED",
+        "original_ethernet_pcap": "BENIGN_CATALOGUE_PCAPNG_UNSUPPORTED",
+        "utc_session_joins": "NOT_VERIFIED",
+        "executed_contact_mapping": "NOT_ESTABLISHED",
+        "named_periodic_benign_workload": "NOT_ESTABLISHED",
+        "matched_service_environment": "NOT_ESTABLISHED_FOR_PAIR",
+        "nine_contacts_each": "NOT_ESTABLISHED",
+        "interval_iqr_overlap": "NOT_MEASURED"
+      },
+      "evidence": [
+        "docs/ENCRYPTED_VALIDATION_SOURCE_REVIEW.md",
+        "docs\\verification\\c2-pair-qualification-20261017\\ares-commit.json",
+        "docs\\verification\\c2-pair-qualification-20261017\\readme-receipts.json"
+      ],
+      "finding": "README prefix labels are not callback truth; previously catalogued benign captures are PCAPNG and browser controls, not verified periodic health/telemetry runs. Existing author correspondence not checked or extended."
+    }
+  ],
+  "historical_development_counts": {
+    "TP": 3,
+    "TN": 6,
+    "FP": 2,
+    "FN": 3
+  },
+  "quality_gates": {
+    "recall_min": 0.8,
+    "precision_min": 0.95,
+    "benign_scenario_fpr_max": 0.02,
+    "additional": "Early alerts and jitter/non-demo interval/small-rotation coverage unchanged"
+  },
+  "policy": {
+    "training": false,
+    "inference": false,
+    "reserved_data": false,
+    "runtime_changes": false,
+    "new_packet_or_annotation_values_inspected": false,
+    "external_messages": false,
+    "other_detector_partition_changes": false
+  },
+  "retrieval_caveat": "One GitHub commit REST response unexpectedly bundled CSV patches; patch text was not inspected, parsed as CSV, scored or used. Original response quarantined locally outside Git; tracked summary excludes patches. See metadata-receipts.json.",
+  "next_action": "Request producer callback/exchange-to-packet mapping and a named matched periodic benign workload for the existing TQH D_i300_j30 capture; do not send without recipient-specific approval."
+}

@@ -1,0 +1,35 @@
+{
+  "deepred-readme": {
+    "url": "https://raw.githubusercontent.com/Mehrdad-hajizadeh/DeepRed-C2/dc3478cf046738111129dca85319f4915c7c7da2/README.md",
+    "retrieved_at_utc": "2026-10-16T20:20:51.509779+00:00",
+    "scope": "publisher README only",
+    "status": 200,
+    "content_type": "text/plain; charset=utf-8",
+    "bytes": 8784,
+    "sha256": "f7936c9ed93c7ed948312c692f9e55dbeb6dad32baf06861b3e48a41130a2272",
+    "original_file": "data/raw/c2-source-document-cache/deepred-readme-20261017.md",
+    "original_file_git_tracked": false
+  },
+  "ares-readme": {
+    "url": "https://raw.githubusercontent.com/cp-tsp/ares2025-artifacts/7acfebc6f17fe774df91a1b550c4b23613b90fe9/README.md",
+    "retrieved_at_utc": "2026-10-16T20:20:51.510571+00:00",
+    "scope": "publisher README only",
+    "status": 200,
+    "content_type": "text/plain; charset=utf-8",
+    "bytes": 942,
+    "sha256": "58dd6acee4c4fa84bda008d35b91eae2495e9929ee51c2caa855cd44650a3399",
+    "original_file": "data/raw/c2-source-document-cache/ares-readme-20261017.md",
+    "original_file_git_tracked": false
+  },
+  "tqh-readme": {
+    "url": "https://zenodo.org/records/22732327/files/README_v122.md?download=1",
+    "retrieved_at_utc": "2026-10-16T20:20:51.511056+00:00",
+    "scope": "publisher README only",
+    "status": 200,
+    "content_type": "application/octet-stream, application/octet-stream",
+    "bytes": 21373,
+    "sha256": "eed4c1f74bdb5f452389eee141e8a3bc0c530657ffc6f71034a07b6090966f07",
+    "original_file": "data/raw/c2-source-document-cache/tqh-readme-20261017.md",
+    "original_file_git_tracked": false
+  }
+}

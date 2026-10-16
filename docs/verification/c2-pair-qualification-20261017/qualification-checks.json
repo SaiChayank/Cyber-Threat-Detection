@@ -1,0 +1,29 @@
+{
+  "scope": "Manifest/receipt integrity and fail-closed readiness checks only; no contact or packet values evaluated",
+  "checks": {
+    "protocol_sha256_matches_manifest": true,
+    "protocol_sidecar_matches": true,
+    "exactly_four_development_leads": true,
+    "no_qualified_pair_or_invented_contacts": true,
+    "all_leads_unqualified": true,
+    "unchanged_quality_gates": true,
+    "no_prediction_training_runtime_or_partition_change": true,
+    "source_evidence_exists": true,
+    "receipt_hash_tqh-record": true,
+    "receipt_hash_ait-lds-record": true,
+    "receipt_hash_ait-cam-record": true,
+    "receipt_hash_deepred-record": true,
+    "receipt_hash_deepred-tag": true,
+    "receipt_hash_ares-commit": true,
+    "summary_hash_ares-commit": true,
+    "ares_summary_excludes_diffs": true,
+    "readme_hash_deepred-readme": true,
+    "readme_hash_ares-readme": true,
+    "readme_hash_tqh-readme": true,
+    "tqh_readme_matches_existing": true,
+    "protected_files_unchanged": true,
+    "no_new_executable_or_archive_evidence": true
+  },
+  "all_passed": true,
+  "count": 22
+}
