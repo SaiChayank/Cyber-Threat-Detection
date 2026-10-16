@@ -99,17 +99,45 @@ def overlaps(streams, positives):
     return result
 
 
-def analyze():
+def udp_collision_detail(positive, benign):
+    """Compare exposed paired metadata, never infer intent from its port."""
+    if not positive or len(positive) != len(benign):
+        raise ValueError('Collision detail requires nonempty aligned event counts')
+    if any(event.protocol != 17 for stream in (positive, benign) for event in stream):
+        raise ValueError('Collision detail accepts UDP metadata only')
+    left = [event.model_dump(mode='json') for event in positive]
+    right = [event.model_dump(mode='json') for event in benign]
+    differences = sorted({key for a, b in zip(left, right) for key in a if a[key] != b[key]})
+    a_extractor, b_extractor = FeatureExtractor(), FeatureExtractor()
+    a_features = [a_extractor.update(event) for event in positive]
+    b_features = [b_extractor.update(event) for event in benign]
+    return dict(metadata_identical=left == right, different_metadata_fields=differences,
+                differing_values={key:dict(positive=sorted({str(row[key]) for row in left}),
+                                          benign=sorted({str(row[key]) for row in right}))
+                                  for key in differences},
+                complete_runtime_features_identical=a_features == b_features,
+                model_vectors_identical=[vector(row) for row in a_features] ==
+                                        [vector(row) for row in b_features],
+                udp_rate_rule_decisions_identical=
+                    [row['udp_target_packet_rate'] >= 1000 for row in a_features] ==
+                    [row['udp_target_packet_rate'] >= 1000 for row in b_features])
+
+
+def analyze(group=None):
+    if group not in (None, 'UDP'):
+        raise ValueError('Only UDP has a scoped diagnostic selection')
     model_hash = hashlib.sha256(ARTIFACT.read_bytes()).hexdigest()
     modules = []
-    for group, module_name, report_name, target in SOURCES:
+    for selected_group, module_name, report_name, target in SOURCES:
+        if group is not None and selected_group != group:
+            continue
         path = ROOT/f'docs/verification/release-audit/{report_name}.json'
         raw_report = path.read_bytes()
         report = json.loads(raw_report)
         module = importlib.import_module(f'datasets.{module_name}')
         source_name = f'datasets/{module_name}.py'
         if not generator_matches_report((ROOT/source_name).read_bytes(), report['source_sha256'][source_name]):
-            raise ValueError(f'Changed scenario generator: {group}')
+            raise ValueError(f'Changed scenario generator: {selected_group}')
         if 'ml/artifact.json' in report['source_sha256'] and report['source_sha256']['ml/artifact.json'] != model_hash:
             raise ValueError('Historical report uses a different model')
         rows = report.get('scenarios', report.get('rows'))
@@ -120,16 +148,18 @@ def analyze():
         for case_index, case in enumerate(module.CASES):
             name, positive = case[:2]
             row = lookup[name]
-            if group == 'UDP':
+            if selected_group == 'UDP':
+                if row['positive'] is not positive or row['format'] != case[2]:
+                    raise ValueError('UDP labels/format differ from saved development cases')
                 stream = list(module.raw_events(name) if case[2] == 'raw' else module.aggregate_events(name))
-            elif group == 'ENCRYPTED':
+            elif selected_group == 'ENCRYPTED':
                 stream = list(module.events(case, case_index))
             else:
                 stream = list(module.events(*case[2:]))
             digest = stream_digest(stream)
             recorded_digest = row.get('observed_stream_sha256', row.get('stream_sha256'))
             if len(stream) != row['events'] or (recorded_digest and digest != recorded_digest):
-                raise ValueError(f'Changed previously evaluated stream: {group}/{name}')
+                raise ValueError(f'Changed previously evaluated stream: {selected_group}/{name}')
             streams[name], positives[name] = stream, positive
             if row['verdict'] == 'FP':
                 if positive:
@@ -141,10 +171,16 @@ def analyze():
         counts = Counter(row['verdict'] for row in rows)
         if any(counts[key] != value for key, value in report['counts'].items()):
             raise ValueError('Saved counts disagree with saved scenario verdicts')
-        modules.append(dict(group=group, threat_class=target, saved_counts=report['counts'],
+        collisions = overlaps(streams, positives)
+        if selected_group == 'UDP' and group == 'UDP':
+            for collision in collisions:
+                collision['paired_observability'] = [
+                    dict(positive=a, benign=b, **udp_collision_detail(streams[a], streams[b]))
+                    for a in collision['positives'] for b in collision['benign']]
+        modules.append(dict(group=selected_group, threat_class=target, saved_counts=report['counts'],
                             report=path.relative_to(ROOT).as_posix(),
                             report_sha256=hashlib.sha256(raw_report).hexdigest(),
-                            failures=failures, opposite_label_overlaps=overlaps(streams, positives)))
+                            failures=failures, opposite_label_overlaps=collisions))
     fp_sources = Counter(item['first_alert']['detection_source']
                          for module in modules for item in module['failures'] if item['verdict'] == 'FP')
     return dict(scope='Failure analysis of already evaluated development cases; attribution replay, not a new quality evaluation',
@@ -159,8 +195,9 @@ def analyze():
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--output', type=Path, required=True)
+    parser.add_argument('--group', choices=['UDP'], help='Inspect UDP only; default retains the historical all-group diagnostic')
     args = parser.parse_args()
-    report = analyze()
+    report = analyze(group=args.group)
     args.output.parent.mkdir(parents=True, exist_ok=True)
     with args.output.open('x', encoding='utf-8') as file:
         json.dump(report, file, indent=2, allow_nan=False)

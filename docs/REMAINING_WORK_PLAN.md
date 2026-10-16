@@ -104,7 +104,15 @@ verification; the final release still requires its separate post-integration run
 
 ## Phase 2 — close active-baseline quality blockers, one subtype at a time
 
-**T20 — Observability and next-experiment decision. P0; READY TO START.**
+**T20 — Observability and next-experiment decision. P0; COMPLETE FOR UDP (16 October 2026).**
+
+Outcome: [UDP decision](UDP_OBSERVABILITY_DECISION.md), four first-FP HYBRID
+reproductions and exact full-runtime feature collision for flood/video metadata
+that differs only by destination port. Seven new tests; 23 targeted checks pass.
+No runtime/model/threshold change. One same-service matched-load development-pair
+qualification is recommended, not implemented. T21 remains data/visibility blocked;
+no threshold or training experiment is currently justified. This does not complete
+the observability work for other subtypes or accept the UDP detector.
 
 - Problem: baseline failure analysis found exact opposite-label metadata pairs and
   feature-only collisions. Repeated threshold/model trials cannot resolve all of
@@ -288,7 +296,8 @@ expansion are future scope; none substitutes for unresolved mandatory quality.
 
 ## Start here
 
-**Next eligible package: T20, one subtype's observability/experiment decision.**
-T01 tooling and T02 clean-checkout reproduction are complete/frozen. T20 is a scoped
-decision, not authorization to implement its experiment. Do not automatically train candidates or
+**Next incomplete package: T21, qualified same-service UDP development evidence.**
+T01/T02 and the UDP T20 decision are complete/frozen. T21 is data/visibility blocked;
+the proposed qualification experiment has not been implemented. Independent work
+requires its own explicit scope. Do not automatically train candidates or
 manufacture a completion deadline while external data qualification is unresolved.

@@ -1,0 +1,13 @@
+{
+  "first_false_positive_sources": {
+    "HYBRID": 4
+  },
+  "groups": {
+    "UDP": {
+      "TP": 4,
+      "TN": 2,
+      "FP": 4,
+      "FN": 0
+    }
+  }
+}

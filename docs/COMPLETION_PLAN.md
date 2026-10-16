@@ -1,5 +1,14 @@
 # Univect completion plan
 
+**T20 UDP decision completed, 16 October 2026:** [observability decision](UDP_OBSERVABILITY_DECISION.md)
+reproduces all four recorded UDP FPs as HYBRID; the flood/video pair differs only
+by destination port and has identical complete runtime features/model vectors.
+23 targeted tests pass, including seven new diagnostic cases. No runtime/model,
+gate or reserved data changed. Current-feature tuning cannot satisfy the exposed
+four-positive/six-benign matrix; T21 is blocked on one qualified same-service,
+matched-load development pair. That qualification experiment is recommended only,
+not implemented. UDP quality and release blockers remain unresolved.
+
 **T02 completed, 15 October 2026:** [clean-checkout reproduction](CLEAN_CHECKOUT_20261015.md)
 verifies local commit `a12eb48` with fresh Python/npm installations: 443 tests
 pass, two optional research tests skip, TypeScript/build pass, 256-event Monitor
@@ -27,10 +36,10 @@ commit `8f2cf30` is local; remote publication is not established. Historical ent
 below retain their dates and superseded states. No official requirement, frozen
 quality gate or completed behavior is changed by the roadmap.
 
-**T01 scorer tooling and T02 clean-checkout reproduction are complete; next ready
-package: T20 — one subtype's observability/experiment decision.** Independent source tracks remain blocked;
+**T01/T02 are complete; T20 is complete for UDP. Next incomplete package: T21 —
+qualified same-service UDP development evidence (blocked).** Independent source tracks remain blocked;
 no new reserved scoring, training or promotion is permitted. Other eligible work
-while waiting is one scoped baseline observability/experiment decision (T20).
+while waiting requires a separately scoped independent task.
 A source/intent impossibility remains a
 blocker, not permission to tune thresholds or label a failed detector complete.
 

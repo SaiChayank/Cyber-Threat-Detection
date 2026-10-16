@@ -1,0 +1,24 @@
+{
+  "scope": "T20 UDP decision only; no detector acceptance",
+  "baseline_commit": "8950e0b",
+  "tests_passed": 23,
+  "new_diagnostic_tests": 7,
+  "reserved_scoring": false,
+  "candidate_activation": false,
+  "sha256": {
+    "docs/verification/udp-observability-20261016/diagnostic-final.log": "44ee8c4683fece903c7059e7b950d861947a194ae3f9bd2401eb4bcab98eaddd",
+    "docs/verification/udp-observability-20261016/diagnostic.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "docs/verification/udp-observability-20261016/integrity.json": "c7a00f9c8891bc08e90d65b8939fff5a2d429a62578a6997936697531fac6424",
+    "docs/verification/udp-observability-20261016/integrity.log": "49edae710ce44f05b1938c5f2d5d139485764fd45e2c0b4f40caf42da9d9c070",
+    "docs/verification/udp-observability-20261016/PROTOCOL.md": "2b08bfb1348f5f214155a31d504c6cd898fdbafffaef9c47c1e729e3edc9d009",
+    "docs/verification/udp-observability-20261016/report-final.json": "26310e22f14515ae03f8ca9a5db4492c0a25b43e5da584c2945ab6c1cd1828cb",
+    "docs/verification/udp-observability-20261016/tests-final.log": "1c611d23926c6a4318697fa30cf35df9851442c3ad2f96e4cca00c57ffedaaad",
+    "docs/verification/udp-observability-20261016/tests.log": "7eba6ad87e78f81960df074ff6a7d74550a7a24c7ba907f99d04fe60cb2f156a",
+    "docs/verification/udp-observability-20261016/verify_evidence.py": "250a558e18712c1851d661b2849cdc781d1ef6792232a90efa4451655b192444",
+    "datasets/analyze_baseline_failures.py": "5259f0f173b4b9b5919c960f6e5ceb4ea19e96a379ecfac44e63e02a8bac0015",
+    "tests/test_udp_observability.py": "3aae08aa39b3c257d4e20d2d1340f8f27aabb24cd7448e53457c09e955cc3513",
+    "docs/UDP_OBSERVABILITY_DECISION.md": "b1ae5fe0db51b5945cf102c5a5e557782e0ac838ea9f9121e66594db46ba1435",
+    "docs/COMPLETION_PLAN.md": "26c3ec85cb417bf661b736ceba58cc440c07d1a29c9e1ae28cb41289c2d773f3",
+    "docs/REMAINING_WORK_PLAN.md": "88eca191df3e76db57fd01134c31e93c61f189f957fcab0a404d5e8ea44188e7"
+  }
+}

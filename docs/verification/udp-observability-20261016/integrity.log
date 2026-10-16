@@ -1,0 +1,19 @@
+{
+  "scope": "T20 UDP diagnosis only",
+  "baseline_commit": "8950e0b",
+  "decision_DoD": "PASS",
+  "detector_quality": "UNRESOLVED",
+  "targeted_tests_passed": 23,
+  "new_diagnostic_cases": 7,
+  "historical_counts_unchanged": {
+    "TP": 4,
+    "TN": 2,
+    "FP": 4,
+    "FN": 0
+  },
+  "recorded_first_false_positives_reproduced": 4,
+  "reserved_pass_consumed": false,
+  "runtime_changes": false,
+  "training_or_candidate_activation": false,
+  "new_quality_metrics": false
+}
