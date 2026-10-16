@@ -1,0 +1,10 @@
+univect-ps26145@1.0.0 C:\Users\Saich\OneDrive\Desktop\PS26145
+â””â”€â”¬ frontend@0.0.0 -> .\frontend
+  â”œâ”€â”¬ @tailwindcss/postcss@4.3.3
+  â”‚ â”œâ”€â”¬ @tailwindcss/node@4.3.3
+  â”‚ â”‚ â””â”€â”€ source-map-js@1.2.1
+  â”‚ â””â”€â”¬ postcss@8.5.28
+  â”‚   â””â”€â”€ source-map-js@1.2.1 deduped
+  â””â”€â”¬ next@16.3.6
+    â””â”€â”¬ postcss@8.5.23
+      â””â”€â”€ source-map-js@1.2.1 deduped

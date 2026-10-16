@@ -1,0 +1,6 @@
+{
+  "checks": "PASS",
+  "normal_proxy_configuration_restored": true,
+  "test_proxy_absent": true,
+  "env_file_unchanged": true
+}

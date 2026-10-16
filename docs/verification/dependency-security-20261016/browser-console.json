@@ -1,0 +1,8 @@
+[
+  {
+    "level": "warn",
+    "message": "THREE.WebGLProgram: Program Info Log: (210,81-129): warning X4122: sum of 0.996094 and -2.98545e-017 cannot be represented accurately in double precision\n(209,37-61): warning X4122: sum of 1 and -1.49272e-017 cannot be represented accurately in double precision\n(210,82-106): warning X4122: sum of 1 and -1.49272e-017 cannot be represented accurately in double precision\n(209,37-61): warning X4122: sum of 1 and -1.66644e-018 cannot be represented accurately in double precision\n(210,82-106): warning X4122: sum of 1 and -1.66644e-018 cannot be represented accurately in double precision",
+    "timestamp": "2026-10-16T15:22:21.811Z",
+    "url": "http://127.0.0.1:13465/_next/static/chunks/1_6xt38fbr37x.js"
+  }
+]

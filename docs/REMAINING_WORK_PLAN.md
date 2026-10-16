@@ -235,6 +235,11 @@ SOURCE BLOCKED.**
 
 **T50 — Scoped hardening and failure recovery. P1; AFTER FINAL INTEGRATIONS.**
 
+Dependency-only precursor completed 16 October 2026: [triage/fix](DEPENDENCY_SECURITY_TRIAGE_20261016.md)
+resolves the two recorded npm package findings with patch updates, zero current
+npm advisories, 455 backend passes and production proxy/SSE smoke. Freeze that
+scoped result; this does not complete final T50 or clear detector/data blockers.
+
 - Affected: current API/config/upload/error/logging/persistence paths only.
 - Required: confirm loopback binding, upload bounds/temp cleanup, safe path handling,
   input validation, non-leaking errors, model integrity and DB/SSE failure recovery.

@@ -1,0 +1,6 @@
+{
+  "api_port": 18465,
+  "web_port": 13465,
+  "database": "C:\\Users\\Saich\\AppData\\Local\\Temp\\univect-dep-smoke-1adf54aa6f6e4a838cafa00da0b8942e.sqlite3",
+  "launch": "managed foreground terminal sessions"
+}

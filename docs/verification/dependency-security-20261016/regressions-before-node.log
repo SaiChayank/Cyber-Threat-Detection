@@ -1,0 +1,107 @@
+TAP version 13
+# Subtest: indexed source maps reject an excessive section offset before serialization
+not ok 1 - indexed source maps reject an excessive section offset before serialization
+  ---
+  duration_ms: 1.4373
+  location: 'C:\\Users\\Saich\\OneDrive\\Desktop\\PS26145\\scripts\\verify-dependency-security.mjs:15:1'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected exception.'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  operator: 'throws'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Users/Saich/OneDrive/Desktop/PS26145/scripts/verify-dependency-security.mjs:16:10)
+    Test.runInAsyncScope (node:async_hooks:211:14)
+    Test.run (node:internal/test_runner/test:979:25)
+    Test.start (node:internal/test_runner/test:877:17)
+    startSubtestAfterBootstrap (node:internal/test_runner/harness:296:17)
+  ...
+# Subtest: indexed source maps also bound the combined offset of nested sections
+not ok 2 - indexed source maps also bound the combined offset of nested sections
+  ---
+  duration_ms: 0.1904
+  location: 'C:\\Users\\Saich\\OneDrive\\Desktop\\PS26145\\scripts\\verify-dependency-security.mjs:19:1'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected exception.'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  operator: 'throws'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Users/Saich/OneDrive/Desktop/PS26145/scripts/verify-dependency-security.mjs:20:10)
+    Test.runInAsyncScope (node:async_hooks:211:14)
+    Test.run (node:internal/test_runner/test:979:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:677:18)
+    Test.postRun (node:internal/test_runner/test:1090:19)
+    Test.run (node:internal/test_runner/test:1018:12)
+    async startSubtestAfterBootstrap (node:internal/test_runner/harness:296:3)
+  ...
+# Subtest: indexed source maps reject invalid numeric offset classes
+not ok 3 - indexed source maps reject invalid numeric offset classes
+  ---
+  duration_ms: 0.1599
+  location: 'C:\\Users\\Saich\\OneDrive\\Desktop\\PS26145\\scripts\\verify-dependency-security.mjs:23:1'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected exception.'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  operator: 'throws'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Users/Saich/OneDrive/Desktop/PS26145/scripts/verify-dependency-security.mjs:25:12)
+    Test.runInAsyncScope (node:async_hooks:211:14)
+    Test.run (node:internal/test_runner/test:979:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:677:18)
+    Test.postRun (node:internal/test_runner/test:1090:19)
+    Test.run (node:internal/test_runner/test:1018:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:677:7)
+  ...
+# Subtest: valid indexed source maps preserve usable source locations
+not ok 4 - valid indexed source maps preserve usable source locations
+  ---
+  duration_ms: 1.2603
+  location: 'C:\\Users\\Saich\\OneDrive\\Desktop\\PS26145\\scripts\\verify-dependency-security.mjs:29:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly deep-equal:
+    + actual - expected
+
+      {
+    +   column: null,
+    +   line: null,
+    -   column: 0,
+    -   line: 1,
+        name: null,
+    +   source: null
+    -   source: 'input.js'
+      }
+
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+    source: 'input.js'
+    line: 1
+    column: 0
+    name: ~
+  actual:
+    source: ~
+    line: ~
+    column: ~
+    name: ~
+  operator: 'deepStrictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Users/Saich/OneDrive/Desktop/PS26145/scripts/verify-dependency-security.mjs:31:10)
+    Test.runInAsyncScope (node:async_hooks:211:14)
+    Test.run (node:internal/test_runner/test:979:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:677:18)
+    Test.postRun (node:internal/test_runner/test:1090:19)
+    Test.run (node:internal/test_runner/test:1018:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:677:7)
+  ...
+1..4
+# tests 4
+# suites 0
+# pass 0
+# fail 4
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 610.6058

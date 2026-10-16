@@ -1,0 +1,18 @@
+[
+  {
+    "url": "http://127.0.0.1:18465/api/health",
+    "status": 200
+  },
+  {
+    "url": "http://127.0.0.1:13465/",
+    "status": 200
+  },
+  {
+    "url": "http://127.0.0.1:13465/monitor",
+    "status": 200
+  },
+  {
+    "url": "http://127.0.0.1:13465/api/health",
+    "status": 200
+  }
+]

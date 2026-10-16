@@ -1,0 +1,71 @@
+FFF                                                                      [100%]
+================================== FAILURES ===================================
+_________ test_frontend_next_range_excludes_known_vulnerable_versions _________
+
+    def test_frontend_next_range_excludes_known_vulnerable_versions():
+        manifest = json.loads((ROOT / 'frontend/package.json').read_text())
+        declared = manifest['dependencies']['next']
+        match = re.fullmatch(r'\^(\d+)\.(\d+)\.(\d+)', declared)
+        assert match, 'Review the security floor when changing the Next.js range format'
+>       assert tuple(map(int, match.groups())) >= (16, 3, 8), declared
+E       AssertionError: ^16.3.0
+E       assert (16, 3, 0) >= (16, 3, 8)
+E        +  where (16, 3, 0) = tuple(<map object at 0x000001FE359264A0>)
+E        +    where <map object at 0x000001FE359264A0> = map(int, ('16', '3', '0'))
+E        +      where ('16', '3', '0') = <built-in method groups of re.Match object at 0x000001FE34BCFCC0>()
+E        +        where <built-in method groups of re.Match object at 0x000001FE34BCFCC0> = <re.Match object; span=(0, 7), match='^16.3.0'>.groups
+
+tests\test_checkout_setup.py:26: AssertionError
+_____________ test_locked_frontend_security_floors[next-minimum0] _____________
+
+package = 'next', minimum = (16, 3, 8)
+
+    @pytest.mark.parametrize(('package', 'minimum'), [
+        ('next', (16, 3, 8)), ('source-map-js', (1, 2, 2)),
+    ])
+    def test_locked_frontend_security_floors(package, minimum):
+        lock = json.loads((ROOT / 'package-lock.json').read_text())
+        resolved = [entry['version'] for path, entry in lock['packages'].items()
+                    if path.endswith('/node_modules/' + package)
+                    or path == 'node_modules/' + package]
+        assert resolved, f'{package} missing from lockfile'
+        for version in resolved:
+            assert re.fullmatch(r'\d+\.\d+\.\d+', version), version
+>           assert tuple(map(int, version.split('.'))) >= minimum, (package, version)
+E           AssertionError: ('next', '16.3.6')
+E           assert (16, 3, 6) >= (16, 3, 8)
+E            +  where (16, 3, 6) = tuple(<map object at 0x000001FE359A9300>)
+E            +    where <map object at 0x000001FE359A9300> = map(int, ['16', '3', '6'])
+E            +      where ['16', '3', '6'] = <built-in method split of str object at 0x000001FE359B30C0>('.')
+E            +        where <built-in method split of str object at 0x000001FE359B30C0> = '16.3.6'.split
+
+tests\test_checkout_setup.py:40: AssertionError
+________ test_locked_frontend_security_floors[source-map-js-minimum1] _________
+
+package = 'source-map-js', minimum = (1, 2, 2)
+
+    @pytest.mark.parametrize(('package', 'minimum'), [
+        ('next', (16, 3, 8)), ('source-map-js', (1, 2, 2)),
+    ])
+    def test_locked_frontend_security_floors(package, minimum):
+        lock = json.loads((ROOT / 'package-lock.json').read_text())
+        resolved = [entry['version'] for path, entry in lock['packages'].items()
+                    if path.endswith('/node_modules/' + package)
+                    or path == 'node_modules/' + package]
+        assert resolved, f'{package} missing from lockfile'
+        for version in resolved:
+            assert re.fullmatch(r'\d+\.\d+\.\d+', version), version
+>           assert tuple(map(int, version.split('.'))) >= minimum, (package, version)
+E           AssertionError: ('source-map-js', '1.2.1')
+E           assert (1, 2, 1) >= (1, 2, 2)
+E            +  where (1, 2, 1) = tuple(<map object at 0x000001FE359F0370>)
+E            +    where <map object at 0x000001FE359F0370> = map(int, ['1', '2', '1'])
+E            +      where ['1', '2', '1'] = <built-in method split of str object at 0x000001FE359DF930>('.')
+E            +        where <built-in method split of str object at 0x000001FE359DF930> = '1.2.1'.split
+
+tests\test_checkout_setup.py:40: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/test_checkout_setup.py::test_frontend_next_range_excludes_known_vulnerable_versions
+FAILED tests/test_checkout_setup.py::test_locked_frontend_security_floors[next-minimum0]
+FAILED tests/test_checkout_setup.py::test_locked_frontend_security_floors[source-map-js-minimum1]
+3 failed, 6 deselected in 0.52s

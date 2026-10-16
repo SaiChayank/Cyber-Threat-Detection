@@ -1,0 +1,28 @@
+{
+  "scope": "Existing synthetic replay smoke through patched production Next proxy, not detector-quality or performance evaluation",
+  "next_version": "16.3.8",
+  "processed": 256,
+  "alerts": 15,
+  "classes": [
+    "BOTNET_C2",
+    "DATA_EXFILTRATION",
+    "DDOS",
+    "DGA_DOMAINS",
+    "DNS_TUNNELLING",
+    "ENCRYPTED_MALWARE",
+    "RECONNAISSANCE"
+  ],
+  "api_sse_sqlite_exact_match": true,
+  "unique_ids_and_sequences": true,
+  "incremental_api_checkpoint": {
+    "processed": 125,
+    "alerts": 6,
+    "status": "running"
+  },
+  "browser_loaded_signals": 15,
+  "browser_runtime_console_errors": 0,
+  "browser_warnings": 1,
+  "warning_note": "Three.js shader floating-point precision warning, no runtime error; no graphics changes in this scope",
+  "database": "Disposable TEMP database only",
+  "original_history_untouched": "Checked separately by preservation hashes"
+}

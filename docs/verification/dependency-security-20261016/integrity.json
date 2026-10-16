@@ -1,0 +1,35 @@
+{
+  "checks": "PASS",
+  "baseline": "e2a34b9",
+  "protected_files_verified": 124,
+  "runtime_models_contracts_history_unchanged": true,
+  "lockfile_changed_entries": [
+    "frontend",
+    "node_modules/@next/env",
+    "node_modules/@next/swc-darwin-arm64",
+    "node_modules/@next/swc-darwin-x64",
+    "node_modules/@next/swc-linux-arm64-gnu",
+    "node_modules/@next/swc-linux-arm64-musl",
+    "node_modules/@next/swc-linux-x64-gnu",
+    "node_modules/@next/swc-linux-x64-musl",
+    "node_modules/@next/swc-win32-arm64-msvc",
+    "node_modules/@next/swc-win32-x64-msvc",
+    "node_modules/next",
+    "node_modules/source-map-js"
+  ],
+  "no_unrelated_packages_added_removed_or_updated": true,
+  "audit_after_total": 0,
+  "backend_tests_passed": 455,
+  "source_map_node_tests_passed": 4,
+  "packaging_tests_passed": 9,
+  "typecheck_build": "PASS",
+  "next": "Freeze scoped dependency fix; detector/data qualification blockers remain; next separately scoped eligible task is C2 observability diagnosis",
+  "normal_production_config_restored": true,
+  "only_expected_existing_files_changed": [
+    "docs/COMPLETION_PLAN.md",
+    "docs/REMAINING_WORK_PLAN.md",
+    "frontend/package.json",
+    "package-lock.json",
+    "tests/test_checkout_setup.py"
+  ]
+}

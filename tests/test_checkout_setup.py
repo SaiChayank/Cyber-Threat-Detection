@@ -18,6 +18,28 @@ FROZEN_MODELS = (
 )
 
 
+def test_frontend_next_range_excludes_known_vulnerable_versions():
+    manifest = json.loads((ROOT / 'frontend/package.json').read_text())
+    declared = manifest['dependencies']['next']
+    match = re.fullmatch(r'\^(\d+)\.(\d+)\.(\d+)', declared)
+    assert match, 'Review the security floor when changing the Next.js range format'
+    assert tuple(map(int, match.groups())) >= (16, 3, 8), declared
+
+
+@pytest.mark.parametrize(('package', 'minimum'), [
+    ('next', (16, 3, 8)), ('source-map-js', (1, 2, 2)),
+])
+def test_locked_frontend_security_floors(package, minimum):
+    lock = json.loads((ROOT / 'package-lock.json').read_text())
+    resolved = [entry['version'] for path, entry in lock['packages'].items()
+                if path.endswith('/node_modules/' + package)
+                or path == 'node_modules/' + package]
+    assert resolved, f'{package} missing from lockfile'
+    for version in resolved:
+        assert re.fullmatch(r'\d+\.\d+\.\d+', version), version
+        assert tuple(map(int, version.split('.'))) >= minimum, (package, version)
+
+
 def test_locked_typescript_matches_declared_compiler_range():
     """Fresh installs must not silently use another compiler major/minor."""
     manifest = json.loads((ROOT / 'frontend/package.json').read_text())

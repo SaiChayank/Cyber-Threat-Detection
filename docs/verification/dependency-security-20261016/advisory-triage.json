@@ -1,0 +1,78 @@
+{
+  "baseline": "e2a34b9",
+  "scope": "Two known npm packages and their seven advisory entries; no Python/OS/full security audit",
+  "date": "2026-10-16",
+  "triage": [
+    {
+      "package": "next",
+      "ghsa": "GHSA-3w37-wq28-93x7",
+      "registry_severity": "moderate",
+      "affected_range_from_registry": ">=16.3.0 <16.3.8",
+      "publisher_url": "https://github.com/vercel/next.js/security/advisories/GHSA-3w37-wq28-93x7",
+      "application_reachability": "No configured path found",
+      "basis": "No Cache Components/use-cache or Draft Mode preview paths in frontend source/config.",
+      "status": "Resolved by dependency patch; not an application exploit demonstration"
+    },
+    {
+      "package": "next",
+      "ghsa": "GHSA-4jqv-mc3x-m676",
+      "registry_severity": "moderate",
+      "affected_range_from_registry": ">=16.0.0 <16.3.8",
+      "publisher_url": "https://github.com/vercel/next.js/security/advisories/GHSA-4jqv-mc3x-m676",
+      "application_reachability": "No configured path found",
+      "basis": "App Router only; no Pages Router SSG/ISR implementation.",
+      "status": "Resolved by dependency patch; not an application exploit demonstration"
+    },
+    {
+      "package": "next",
+      "ghsa": "GHSA-39w2-rjm5-chcv",
+      "registry_severity": "low",
+      "affected_range_from_registry": ">=16.0.0 <16.3.8",
+      "publisher_url": "https://github.com/vercel/next.js/security/advisories/GHSA-39w2-rjm5-chcv",
+      "application_reachability": "Applicable development surface",
+      "basis": "npm run dev starts Next development server. Loopback binding does not rule out a browser-origin disclosure; production does not expose this development endpoint.",
+      "status": "Resolved by dependency patch; not an application exploit demonstration"
+    },
+    {
+      "package": "next",
+      "ghsa": "GHSA-f87g-xv8r-7p7x",
+      "registry_severity": "moderate",
+      "affected_range_from_registry": ">=16.0.0 <16.3.8",
+      "publisher_url": "https://github.com/vercel/next.js/security/advisories/GHSA-f87g-xv8r-7p7x",
+      "application_reachability": "No configured path found",
+      "basis": "No dynamic metadata-image routes, generateStaticParams/dynamicParams image restrictions or webpack build configured.",
+      "status": "Resolved by dependency patch; not an application exploit demonstration"
+    },
+    {
+      "package": "next",
+      "ghsa": "GHSA-mcj8-r9mp-w47p",
+      "registry_severity": "moderate",
+      "affected_range_from_registry": ">=16.0.0 <16.3.8",
+      "publisher_url": "https://github.com/vercel/next.js/security/advisories/GHSA-mcj8-r9mp-w47p",
+      "application_reachability": "No configured path found",
+      "basis": "Only static / and /monitor app routes; no root catch-all page.",
+      "status": "Resolved by dependency patch; not an application exploit demonstration"
+    },
+    {
+      "package": "next",
+      "ghsa": "GHSA-cjq9-62q9-8jv4",
+      "registry_severity": "high",
+      "affected_range_from_registry": ">=16.0.0 <16.3.8",
+      "publisher_url": "https://github.com/vercel/next.js/security/advisories/GHSA-cjq9-62q9-8jv4",
+      "application_reachability": "Publisher prerequisite absent",
+      "basis": "No images.remotePatterns and no next/image imports. Producer advisory explicitly says no remotePatterns means unaffected by this issue.",
+      "status": "Resolved by dependency patch; not an application exploit demonstration"
+    },
+    {
+      "package": "source-map-js",
+      "ghsa": "GHSA-68fv-2mgg-jv7q",
+      "registry_severity": "high",
+      "affected_range_from_registry": ">=1.0.0 <1.2.2",
+      "publisher_url": "https://github.com/7rulnik/source-map-js/commit/cf76580",
+      "application_reachability": "Transitive build/development risk; application exploit path unproven",
+      "basis": "Tailwind/PostCSS/Next resolve the affected library. No app endpoint accepts source maps; PCAP bytes are not passed to this JavaScript library. No uploaded adversarial map or expensive serialization was run.",
+      "status": "Resolved by dependency patch; not an application exploit demonstration"
+    }
+  ],
+  "version_evidence_note": "Next publisher pages displayed placeholder patch labels 16.3.?; exact 16.3.8 remediation uses npm registry advisory ranges, exact-version registry metadata and post-update audit. Source-map producer release/patch confirms 1.2.2."
+}

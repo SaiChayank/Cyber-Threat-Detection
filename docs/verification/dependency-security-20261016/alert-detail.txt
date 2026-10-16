@@ -1,0 +1,47 @@
+ALERT INVESTIGATION
+
+Data exfiltration
+
+Review the observed connection and supporting metadata. A detection indicates suspicion and requires analyst interpretation.
+
+HIGH
+100.0% confidence score
+HYBRID
+
+Score basis: synthetic-trained model posterior
+
+Observed connection
+10.0.0.10:49152
+198.51.100.20:443
+
+2023-11-14T22:27:50.958Z · captured event time
+
+Supporting evidence
+
+egress_bytes=64225303; observed_byte_ratio=4944.7494; reverse_available=1.0; source_forward_byte_rate_10s=1762289.2; source_byte_window_resolution_ms=1000; egress_basis=observed_source_forward_bytes_60s; observed_byte_ratio_status=finite_observed_ratio; confidence_kind=synthetic-trained model posterior; window_partial=True; behavior consistent with possible exfiltration; content and intent unverified
+
+EGRESS BYTES
+64225303
+OBSERVED BYTE RATIO
+4944.7494
+REVERSE AVAILABLE
+1
+SOURCE FORWARD BYTE RATE 10S
+1762289.2
+SOURCE BYTE WINDOW RESOLUTION MS
+1000
+EGRESS BASIS
+observed_source_forward_bytes_60s
+OBSERVED BYTE RATIO STATUS
+finite_observed_ratio
+CONFIDENCE KIND
+synthetic-trained model posterior
+WINDOW PARTIAL
+true
+Identifiers
+Flow: a82678326ad595f204b795978a8ba900
+Alert: 4c8d721c-0d49-41d8-afba-cf3f9e09c3af
+
+Encrypted content stays opaque. Scores are model estimates or heuristic strengths, without deployment calibration.
+
+Copy JSON

@@ -1,5 +1,16 @@
 # Univect completion plan
 
+**Dependency security triage completed, 16 October 2026:** [report](DEPENDENCY_SECURITY_TRIAGE_20261016.md)
+raises Next.js to 16.3.8 and transitive source-map-js to 1.2.2. Fresh npm audit
+drops from two high-severity packages to zero known findings. Three new packaging
+and four Node checks; nine packaging/four Node tests and all 455 backend tests
+pass, as do TypeScript/build. Production synthetic replay: 256 events/15 alerts,
+exact API/SQLite/proxied-SSE equality, zero browser console errors/one shader
+warning. Original runtime/model/contracts/history hashes preserved. This closes
+the old npm findings only; final T50, detector/source blockers and release remain
+unresolved. Next independently eligible work: C2 observability diagnosis, scoped
+separately; no automatic implementation or model work.
+
 **T21 ORION request sent, 16 October 2026:** user approved the exact prepared
 message. [Sent status](UDP_ORION_RUNBOOK_STATUS.md) verifies Gmail Sent to
 `proenca@uel.br`, displayed 11:04, with recipient/subject/body confirmation and

@@ -1,0 +1,14 @@
+[
+  {
+    "port": 13465,
+    "pid": 6612,
+    "verified": "test Next.js start on selected port",
+    "stopped": true
+  },
+  {
+    "port": 18465,
+    "pid": 40504,
+    "verified": "test uvicorn on selected port",
+    "stopped": true
+  }
+]

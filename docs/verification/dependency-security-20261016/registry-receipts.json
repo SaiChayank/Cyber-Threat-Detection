@@ -1,0 +1,32 @@
+[
+  {
+    "url": "https://registry.npmjs.org/next/16.3.8",
+    "utc": "2026-10-16T15:21:00.032776+00:00",
+    "sha256": "bebe44d750fa24da76f12acc07714e09bc3695c38b64059ce7e3ad27eb70dc70",
+    "version": "16.3.8",
+    "engines": {
+      "node": ">=20.9.0"
+    },
+    "repository": {
+      "url": "git+https://github.com/vercel/next.js.git",
+      "type": "git"
+    },
+    "tarball": "https://registry.npmjs.org/next/-/next-16.3.8.tgz",
+    "integrity": "sha512-U7QEZaTini6wKrb8A8hqLLqYQyCetegKjCpJOyxk642vWoMoU1x5PyZCJFvgYgiptA8xc5j/9xYlZFO7w9Sjmw=="
+  },
+  {
+    "url": "https://registry.npmjs.org/source-map-js/1.2.2",
+    "utc": "2026-10-16T15:21:00.149662+00:00",
+    "sha256": "2a7a225c550e3a0e75f9af72a635e33d7b2e4a0fca4f596679a2775971f53ed6",
+    "version": "1.2.2",
+    "engines": {
+      "node": ">=0.10.0"
+    },
+    "repository": {
+      "url": "git+https://github.com/7rulnik/source-map-js.git",
+      "type": "git"
+    },
+    "tarball": "https://registry.npmjs.org/source-map-js/-/source-map-js-1.2.2.tgz",
+    "integrity": "sha512-KGj/8Y43x35aZVDtt+J4mK1hoLGHULMYfSkODJNQjNDC3oW1PqPoxMwo0pLUsWM/UEGzON/NxeHywEfNXNP3Vw=="
+  }
+]
