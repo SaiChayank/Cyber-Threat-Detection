@@ -1,0 +1,26 @@
+{
+  "python_header_attempt": {
+    "member_index": 0,
+    "exception_type": "NotImplementedError",
+    "message": "That compression method is not supported",
+    "stage": "ZipExtFile decompressor construction, before header bytes",
+    "compression_method": 9
+  },
+  "native_tar_pilot": "Recorded in header-transport-pilot.json; 0 stdout bytes, nonzero exit, no header observation",
+  "no_archive_corruption_diagnosis": "Native damaged-archive message does not establish underlying corruption or format. Original publisher byte hashes still match; no repair attempted.",
+  "header_reads_stopped": true,
+  "new_decoder_or_software_installed": false,
+  "capture_conversion": false,
+  "nested_container_copy": "One opaque inner ZIP copied to fixed ignored workspace and SHA256/CRC checked; no inner data member extracted/read",
+  "not_read": [
+    "train.csv",
+    "test.csv",
+    "__MACOSX resource-fork members",
+    "dga_quantized_model.bin",
+    "all packet records",
+    "all per-query labels/features"
+  ],
+  "first_member_selection_failure": "Recorded explicitly; no unsupported-compression fallback silently installed",
+  "initial_read_commands": "An rg path glob and a guessed ingest/pcap.py path failed before data access; corrected to rg file inventory and ingest/pcap_reader.py",
+  "new_observations_scope": "ZIP metadata and one publisher README only; no raw query rows, packet/header values, model binary or model inference"
+}

@@ -1,5 +1,14 @@
 # Downloaded public datasets and their use
 
+**17 October 2026 qualification update:** the downloaded ZIPs were catalogued
+under a frozen plan. [Qualification decision](DNS_PUBLIC_DATA_QUALIFICATION.md)
+and `data/dns_public_qualification.json` retain both as unqualified research intake.
+Actual contents: DNSTunnel2026 model/README + inner train/test CSVs; UMA 45 nominal
+PCAPNG entries, no bundled sidecar annotations. ZIP method 9 prevents standard
+Python header reads; native tar also returned no bytes. Capture format is not
+certified from filenames. No rows/packet values, model loading, training or scoring;
+no conversion/dependency/runtime change. Data-role assignments remain null.
+
 **17 October 2026 acquisition update:** both open CC BY 4.0 Zenodo archives are
 now saved in `data/raw/dns-public-intake/`: DNSTunnel2026 (497,565,428 bytes) and
 UMA benign captures (6,853,462,196 bytes). Exact publisher MD5 and local SHA256

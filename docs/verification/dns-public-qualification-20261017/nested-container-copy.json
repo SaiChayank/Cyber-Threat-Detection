@@ -1,0 +1,14 @@
+[
+  {
+    "source_id": "zenodo-dnstunnel",
+    "workspace_path": "data/raw/dns-public-qualification-work-20261017/nested-000.zip",
+    "bytes": 450772657,
+    "sha256": "19596672d24eb36c099875a3bca3a003177b4715033329de2852bd953a7cc4a1",
+    "crc32": "22bfe14f",
+    "catalogue": "docs/verification/dns-public-qualification-20261017/nested-000-catalogue.json",
+    "member_count": 4,
+    "entry_payloads_read": false,
+    "parent_member_name": "Archive.zip",
+    "parent_member_index": 0
+  }
+]

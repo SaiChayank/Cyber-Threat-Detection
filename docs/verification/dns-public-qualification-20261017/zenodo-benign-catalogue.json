@@ -1,0 +1,857 @@
+[
+  {
+    "index": 0,
+    "name": "capturaAgenteAdmin15m1.pcapng",
+    "is_directory": false,
+    "file_bytes": 6091440,
+    "compressed_bytes": 3105132,
+    "compression": 9,
+    "crc32": "8de7d593",
+    "flags": 0,
+    "external_attributes": 32,
+    "zip_directory_time": [
+      2026,
+      3,
+      14,
+      12,
+      28,
+      16
+    ]
+  },
+  {
+    "index": 1,
+    "name": "capturaAgenteAdmin15m2.pcapng",
+    "is_directory": false,
+    "file_bytes": 6170192,
+    "compressed_bytes": 3164813,
+    "compression": 9,
+    "crc32": "8df4651a",
+    "flags": 0,
+    "external_attributes": 32,
+    "zip_directory_time": [
+      2026,
+      3,
+      14,
+      12,
+      44,
+      12
+    ]
+  },
+  {
+    "index": 2,
+    "name": "capturaAgenteAdmin15m3.pcapng",
+    "is_directory": false,
+    "file_bytes": 6325348,
+    "compressed_bytes": 3263833,
+    "compression": 9,
+    "crc32": "3bf24dd6",
+    "flags": 0,
+    "external_attributes": 32,
+    "zip_directory_time": [
+      2026,
+      3,
+      14,
+      13,
+      0,
+      42
+    ]
+  },
+  {
+    "index": 3,
+    "name": "capturaAgenteAdmin15m4.pcapng",
+    "is_directory": false,
+    "file_bytes": 6161632,
+    "compressed_bytes": 3213210,
+    "compression": 9,
+    "crc32": "81bff0ee",
+    "flags": 0,
+    "external_attributes": 32,
+    "zip_directory_time": [
+      2026,
+      3,
+      14,
+      13,
+      16,
+      50
+    ]
+  },
+  {
+    "index": 4,
+    "name": "capturaAgenteAdmin15m5.pcapng",
+    "is_directory": false,
+    "file_bytes": 6497580,
+    "compressed_bytes": 3393800,
+    "compression": 9,
+    "crc32": "cb3fca8d",
+    "flags": 0,
+    "external_attributes": 32,
+    "zip_directory_time": [
+      2026,
+      3,
+      14,
+      13,
+      33,
+      44
+    ]
+  },
+  {
+    "index": 5,
+    "name": "capturaAgenteAdmin1h1.pcapng",
+    "is_directory": false,
+    "file_bytes": 26827984,
+    "compressed_bytes": 14233439,
+    "compression": 9,
+    "crc32": "250d77af",
+    "flags": 0,
+    "external_attributes": 32,
+    "zip_directory_time": [
+      2026,
+      3,
+      21,
+      22,
+      55,
+      48
+    ]
+  },
+  {
+    "index": 6,
+    "name": "capturaAgenteAdmin1h2.pcapng",
+    "is_directory": false,
+    "file_bytes": 26560124,
+    "compressed_bytes": 14455902,
+    "compression": 9,
+    "crc32": "6dd56e8d",
+    "flags": 0,
+    "external_attributes": 32,
+    "zip_directory_time": [
+      2026,
+      3,
+      15,
+      11,
+      52,
+      20
+    ]
+  },
+  {
+    "index": 7,
+    "name": "capturaAgenteAdmin1h3.pcapng",
+    "is_directory": false,
+    "file_bytes": 24753412,
+    "compressed_bytes": 12885757,
+    "compression": 9,
+    "crc32": "a3cf8e8f",
+    "flags": 0,
+    "external_attributes": 32,
+    "zip_directory_time": [
+      2026,
+      3,
+      15,
+      12,
+      53,
+      36
+    ]
+  },
+  {
+    "index": 8,
+    "name": "capturaAgenteAdmin1h4.pcapng",
+    "is_directory": false,
+    "file_bytes": 25533328,
+    "compressed_bytes": 13123362,
+    "compression": 9,
+    "crc32": "9494f0d3",
+    "flags": 0,
+    "external_attributes": 32,
+    "zip_directory_time": [
+      2026,
+      3,
+      15,
+      13,
+      54,
+      40
+    ]
+  },
+  {
+    "index": 9,
+    "name": "capturaAgenteAdmin1h5.pcapng",
+    "is_directory": false,
+    "file_bytes": 24268728,
+    "compressed_bytes": 12451049,
+    "compression": 9,
+    "crc32": "4add682b",
+    "flags": 0,
+    "external_attributes": 32,
+    "zip_directory_time": [
+      2026,
+      3,
+      15,
+      14,
+      55,
+      38
+    ]
+  },
+  {
+    "index": 10,
+    "name": "capturaAgenteAdmin5m1.pcapng",
+    "is_directory": false,
+    "file_bytes": 2318476,
+    "compressed_bytes": 1220282,
+    "compression": 9,
+    "crc32": "f39225c5",
+    "flags": 0,
+    "external_attributes": 32,
+    "zip_directory_time": [
+      2026,
+      3,
+      14,
+      11,
+      18,
+      52
+    ]
+  },
+  {
+    "index": 11,
+    "name": "capturaAgenteAdmin5m2.pcapng",
+    "is_directory": false,
+    "file_bytes": 2364060,
+    "compressed_bytes": 1263686,
+    "compression": 9,
+    "crc32": "c15b3b02",
+    "flags": 0,
+    "external_attributes": 32,
+    "zip_directory_time": [
+      2026,
+      3,
+      14,
+      11,
+      26,
+      28
+    ]
+  },
+  {
+    "index": 12,
+    "name": "capturaAgenteAdmin5m3.pcapng",
+    "is_directory": false,
+    "file_bytes": 2430868,
+    "compressed_bytes": 1312882,
+    "compression": 9,
+    "crc32": "83ee399a",
+    "flags": 0,
+    "external_attributes": 32,
+    "zip_directory_time": [
+      2026,
+      3,
+      14,
+      11,
+      33,
+      50
+    ]
+  },
+  {
+    "index": 13,
+    "name": "capturaAgenteAdmin5m4.pcapng",
+    "is_directory": false,
+    "file_bytes": 2319492,
+    "compressed_bytes": 1228290,
+    "compression": 9,
+    "crc32": "108f20eb",
+    "flags": 0,
+    "external_attributes": 32,
+    "zip_directory_time": [
+      2026,
+      3,
+      14,
+      11,
+      45,
+      42
+    ]
+  },
+  {
+    "index": 14,
+    "name": "capturaAgenteAdmin5m5.pcapng",
+    "is_directory": false,
+    "file_bytes": 2217308,
+    "compressed_bytes": 1165733,
+    "compression": 9,
+    "crc32": "f515d5d3",
+    "flags": 0,
+    "external_attributes": 32,
+    "zip_directory_time": [
+      2026,
+      3,
+      14,
+      11,
+      55,
+      12
+    ]
+  },
+  {
+    "index": 15,
+    "name": "capturaAgenteGamer15m1.pcapng",
+    "is_directory": false,
+    "file_bytes": 140926236,
+    "compressed_bytes": 130079331,
+    "compression": 9,
+    "crc32": "402fbb9c",
+    "flags": 0,
+    "external_attributes": 32,
+    "zip_directory_time": [
+      2026,
+      3,
+      15,
+      18,
+      21,
+      16
+    ]
+  },
+  {
+    "index": 16,
+    "name": "capturaAgenteGamer15m2.pcapng",
+    "is_directory": false,
+    "file_bytes": 133082788,
+    "compressed_bytes": 123151683,
+    "compression": 9,
+    "crc32": "e2d0459b",
+    "flags": 0,
+    "external_attributes": 32,
+    "zip_directory_time": [
+      2026,
+      3,
+      15,
+      18,
+      38,
+      22
+    ]
+  },
+  {
+    "index": 17,
+    "name": "capturaAgenteGamer15m3.pcapng",
+    "is_directory": false,
+    "file_bytes": 61863396,
+    "compressed_bytes": 54835186,
+    "compression": 9,
+    "crc32": "d7cf1865",
+    "flags": 0,
+    "external_attributes": 32,
+    "zip_directory_time": [
+      2026,
+      3,
+      15,
+      18,
+      55,
+      26
+    ]
+  },
+  {
+    "index": 18,
+    "name": "capturaAgenteGamer15m4.pcapng",
+    "is_directory": false,
+    "file_bytes": 145457968,
+    "compressed_bytes": 132634678,
+    "compression": 9,
+    "crc32": "caf66bb2",
+    "flags": 0,
+    "external_attributes": 32,
+    "zip_directory_time": [
+      2026,
+      3,
+      15,
+      19,
+      18,
+      40
+    ]
+  },
+  {
+    "index": 19,
+    "name": "capturaAgenteGamer15m5.pcapng",
+    "is_directory": false,
+    "file_bytes": 117459736,
+    "compressed_bytes": 106704328,
+    "compression": 9,
+    "crc32": "4fd18a40",
+    "flags": 0,
+    "external_attributes": 32,
+    "zip_directory_time": [
+      2026,
+      3,
+      15,
+      19,
+      34,
+      34
+    ]
+  },
+  {
+    "index": 20,
+    "name": "capturaAgenteGamer1h1.pcapng",
+    "is_directory": false,
+    "file_bytes": 338971268,
+    "compressed_bytes": 309174592,
+    "compression": 9,
+    "crc32": "1ac3c873",
+    "flags": 0,
+    "external_attributes": 32,
+    "zip_directory_time": [
+      2026,
+      1,
+      11,
+      16,
+      52,
+      52
+    ]
+  },
+  {
+    "index": 21,
+    "name": "capturaAgenteGamer1h2.pcapng",
+    "is_directory": false,
+    "file_bytes": 512711768,
+    "compressed_bytes": 471160976,
+    "compression": 9,
+    "crc32": "c2f5b062",
+    "flags": 0,
+    "external_attributes": 32,
+    "zip_directory_time": [
+      2026,
+      3,
+      19,
+      17,
+      20,
+      18
+    ]
+  },
+  {
+    "index": 22,
+    "name": "capturaAgenteGamer1h3.pcapng",
+    "is_directory": false,
+    "file_bytes": 605120704,
+    "compressed_bytes": 555668222,
+    "compression": 9,
+    "crc32": "6fa56c1a",
+    "flags": 0,
+    "external_attributes": 32,
+    "zip_directory_time": [
+      2026,
+      3,
+      19,
+      18,
+      23,
+      4
+    ]
+  },
+  {
+    "index": 23,
+    "name": "capturaAgenteGamer1h4.pcapng",
+    "is_directory": false,
+    "file_bytes": 677181228,
+    "compressed_bytes": 629898069,
+    "compression": 9,
+    "crc32": "b7b6ee0a",
+    "flags": 0,
+    "external_attributes": 32,
+    "zip_directory_time": [
+      2026,
+      3,
+      19,
+      19,
+      23,
+      58
+    ]
+  },
+  {
+    "index": 24,
+    "name": "capturaAgenteGamer1h5.pcapng",
+    "is_directory": false,
+    "file_bytes": 540099724,
+    "compressed_bytes": 497527388,
+    "compression": 9,
+    "crc32": "d0f59546",
+    "flags": 0,
+    "external_attributes": 32,
+    "zip_directory_time": [
+      2026,
+      3,
+      20,
+      11,
+      25,
+      56
+    ]
+  },
+  {
+    "index": 25,
+    "name": "capturaAgenteGamer5m1.pcapng",
+    "is_directory": false,
+    "file_bytes": 296641288,
+    "compressed_bytes": 277047962,
+    "compression": 9,
+    "crc32": "e0fc185b",
+    "flags": 0,
+    "external_attributes": 32,
+    "zip_directory_time": [
+      2026,
+      3,
+      15,
+      17,
+      21,
+      12
+    ]
+  },
+  {
+    "index": 26,
+    "name": "capturaAgenteGamer5m2.pcapng",
+    "is_directory": false,
+    "file_bytes": 46571996,
+    "compressed_bytes": 42692413,
+    "compression": 9,
+    "crc32": "8b8575c8",
+    "flags": 0,
+    "external_attributes": 32,
+    "zip_directory_time": [
+      2026,
+      3,
+      15,
+      17,
+      27,
+      8
+    ]
+  },
+  {
+    "index": 27,
+    "name": "capturaAgenteGamer5m3.pcapng",
+    "is_directory": false,
+    "file_bytes": 49763888,
+    "compressed_bytes": 45571273,
+    "compression": 9,
+    "crc32": "614571e5",
+    "flags": 0,
+    "external_attributes": 32,
+    "zip_directory_time": [
+      2026,
+      3,
+      15,
+      17,
+      38,
+      50
+    ]
+  },
+  {
+    "index": 28,
+    "name": "capturaAgenteGamer5m4.pcapng",
+    "is_directory": false,
+    "file_bytes": 34190340,
+    "compressed_bytes": 31042300,
+    "compression": 9,
+    "crc32": "8443435d",
+    "flags": 0,
+    "external_attributes": 32,
+    "zip_directory_time": [
+      2026,
+      3,
+      21,
+      22,
+      56,
+      10
+    ]
+  },
+  {
+    "index": 29,
+    "name": "capturaAgenteGamer5m5.pcapng",
+    "is_directory": false,
+    "file_bytes": 49435228,
+    "compressed_bytes": 45088007,
+    "compression": 9,
+    "crc32": "e9fde283",
+    "flags": 0,
+    "external_attributes": 32,
+    "zip_directory_time": [
+      2026,
+      3,
+      15,
+      17,
+      51,
+      58
+    ]
+  },
+  {
+    "index": 30,
+    "name": "capturaAgenteWeb15m1.pcapng",
+    "is_directory": false,
+    "file_bytes": 113753444,
+    "compressed_bytes": 106117512,
+    "compression": 9,
+    "crc32": "a12c2f8c",
+    "flags": 0,
+    "external_attributes": 32,
+    "zip_directory_time": [
+      2026,
+      3,
+      14,
+      18,
+      13,
+      4
+    ]
+  },
+  {
+    "index": 31,
+    "name": "capturaAgenteWeb15m2.pcapng",
+    "is_directory": false,
+    "file_bytes": 92826076,
+    "compressed_bytes": 86008653,
+    "compression": 9,
+    "crc32": "adb5e4b8",
+    "flags": 0,
+    "external_attributes": 32,
+    "zip_directory_time": [
+      2026,
+      3,
+      14,
+      18,
+      46,
+      34
+    ]
+  },
+  {
+    "index": 32,
+    "name": "capturaAgenteWeb15m3.pcapng",
+    "is_directory": false,
+    "file_bytes": 369360912,
+    "compressed_bytes": 347048715,
+    "compression": 9,
+    "crc32": "c374b802",
+    "flags": 0,
+    "external_attributes": 32,
+    "zip_directory_time": [
+      2026,
+      3,
+      14,
+      19,
+      2,
+      32
+    ]
+  },
+  {
+    "index": 33,
+    "name": "capturaAgenteWeb15m4.pcapng",
+    "is_directory": false,
+    "file_bytes": 142839232,
+    "compressed_bytes": 133866457,
+    "compression": 9,
+    "crc32": "fb5ff15e",
+    "flags": 0,
+    "external_attributes": 32,
+    "zip_directory_time": [
+      2026,
+      3,
+      14,
+      19,
+      18,
+      20
+    ]
+  },
+  {
+    "index": 34,
+    "name": "capturaAgenteWeb15m5.pcapng",
+    "is_directory": false,
+    "file_bytes": 75723332,
+    "compressed_bytes": 70260176,
+    "compression": 9,
+    "crc32": "45a86937",
+    "flags": 0,
+    "external_attributes": 32,
+    "zip_directory_time": [
+      2026,
+      3,
+      14,
+      19,
+      33,
+      58
+    ]
+  },
+  {
+    "index": 35,
+    "name": "capturaAgenteWeb1h1.pcapng",
+    "is_directory": false,
+    "file_bytes": 532749140,
+    "compressed_bytes": 494233894,
+    "compression": 9,
+    "crc32": "04884f6d",
+    "flags": 0,
+    "external_attributes": 32,
+    "zip_directory_time": [
+      2026,
+      3,
+      14,
+      21,
+      47,
+      30
+    ]
+  },
+  {
+    "index": 36,
+    "name": "capturaAgenteWeb1h2.pcapng",
+    "is_directory": false,
+    "file_bytes": 496637760,
+    "compressed_bytes": 461453331,
+    "compression": 9,
+    "crc32": "a099783c",
+    "flags": 0,
+    "external_attributes": 32,
+    "zip_directory_time": [
+      2026,
+      3,
+      14,
+      22,
+      49,
+      28
+    ]
+  },
+  {
+    "index": 37,
+    "name": "capturaAgenteWeb1h3.pcapng",
+    "is_directory": false,
+    "file_bytes": 251118760,
+    "compressed_bytes": 231027655,
+    "compression": 9,
+    "crc32": "67fb3b29",
+    "flags": 0,
+    "external_attributes": 32,
+    "zip_directory_time": [
+      2026,
+      3,
+      14,
+      23,
+      56,
+      56
+    ]
+  },
+  {
+    "index": 38,
+    "name": "capturaAgenteWeb1h4.pcapng",
+    "is_directory": false,
+    "file_bytes": 839078120,
+    "compressed_bytes": 783898386,
+    "compression": 9,
+    "crc32": "fb133376",
+    "flags": 0,
+    "external_attributes": 32,
+    "zip_directory_time": [
+      2026,
+      3,
+      15,
+      15,
+      58,
+      54
+    ]
+  },
+  {
+    "index": 39,
+    "name": "capturaAgenteWeb1h5.pcapng",
+    "is_directory": false,
+    "file_bytes": 202188644,
+    "compressed_bytes": 183900771,
+    "compression": 9,
+    "crc32": "68a2323c",
+    "flags": 0,
+    "external_attributes": 32,
+    "zip_directory_time": [
+      2025,
+      12,
+      26,
+      15,
+      57,
+      10
+    ]
+  },
+  {
+    "index": 40,
+    "name": "capturaAgenteWeb5m1.pcapng",
+    "is_directory": false,
+    "file_bytes": 148580568,
+    "compressed_bytes": 138558179,
+    "compression": 9,
+    "crc32": "ec438393",
+    "flags": 0,
+    "external_attributes": 32,
+    "zip_directory_time": [
+      2026,
+      3,
+      14,
+      17,
+      30,
+      20
+    ]
+  },
+  {
+    "index": 41,
+    "name": "capturaAgenteWeb5m2.pcapng",
+    "is_directory": false,
+    "file_bytes": 47325616,
+    "compressed_bytes": 44138103,
+    "compression": 9,
+    "crc32": "42359dd2",
+    "flags": 0,
+    "external_attributes": 32,
+    "zip_directory_time": [
+      2026,
+      3,
+      14,
+      17,
+      36,
+      8
+    ]
+  },
+  {
+    "index": 42,
+    "name": "capturaAgenteWeb5m3.pcapng",
+    "is_directory": false,
+    "file_bytes": 61555616,
+    "compressed_bytes": 57688394,
+    "compression": 9,
+    "crc32": "16918df5",
+    "flags": 0,
+    "external_attributes": 32,
+    "zip_directory_time": [
+      2026,
+      3,
+      14,
+      17,
+      42,
+      48
+    ]
+  },
+  {
+    "index": 43,
+    "name": "capturaAgenteWeb5m4.pcapng",
+    "is_directory": false,
+    "file_bytes": 117530292,
+    "compressed_bytes": 110496594,
+    "compression": 9,
+    "crc32": "a5b7456e",
+    "flags": 0,
+    "external_attributes": 32,
+    "zip_directory_time": [
+      2026,
+      3,
+      14,
+      17,
+      48,
+      26
+    ]
+  },
+  {
+    "index": 44,
+    "name": "capturaAgenteWeb5m5.pcapng",
+    "is_directory": false,
+    "file_bytes": 67515980,
+    "compressed_bytes": 63001682,
+    "compression": 9,
+    "crc32": "143b4440",
+    "flags": 0,
+    "external_attributes": 32,
+    "zip_directory_time": [
+      2026,
+      3,
+      14,
+      17,
+      54,
+      58
+    ]
+  }
+]

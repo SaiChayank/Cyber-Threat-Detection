@@ -1,5 +1,17 @@
 # Univect completion plan
 
+**T30 downloaded-source qualification, 17 October 2026:**
+[decision](DNS_PUBLIC_DATA_QUALIFICATION.md) and `data/dns_public_qualification.json`
+record NOT QUALIFIED under the frozen pre-value plan. DNSTunnel2026 contains a
+model/README and nested train/test CSVs, with no listed original query/session
+bundle. UMA lists 45 nominal PCAPNG members using ZIP compression method 9;
+standard Python and installed tar fail before header bytes. Actual capture format
+and DNS session/category truth remain unverified, no decoder/conversion added.
+No packet/query rows, model contents, fitting or scoring; roles remain null,
+original archives/contracts/runtime unchanged and DNS candidate disabled.
+Inspection decision complete; evaluation-data DoD remains blocked. Next review
+public executed-run/client-log provenance before further capture values.
+
 **T30 public archive acquisition, 17 October 2026:** user explicitly requested
 both open Zenodo datasets. [Acquisition report](DNS_PUBLIC_DATA_ACQUISITION.md)
 and `data/dns_public_acquisition.json` record two original ZIPs, 7,351,027,624

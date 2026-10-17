@@ -1,0 +1,78 @@
+[
+  {
+    "index": 0,
+    "name": "train.csv",
+    "is_directory": false,
+    "file_bytes": 3604938364,
+    "compressed_bytes": 360607433,
+    "compression": 8,
+    "crc32": "4f6a0ca4",
+    "flags": 8,
+    "external_attributes": 2175008768,
+    "zip_directory_time": [
+      2025,
+      8,
+      5,
+      11,
+      12,
+      30
+    ]
+  },
+  {
+    "index": 1,
+    "name": "__MACOSX/._train.csv",
+    "is_directory": false,
+    "file_bytes": 163,
+    "compressed_bytes": 86,
+    "compression": 8,
+    "crc32": "48447454",
+    "flags": 8,
+    "external_attributes": 2175008768,
+    "zip_directory_time": [
+      2025,
+      8,
+      5,
+      11,
+      12,
+      30
+    ]
+  },
+  {
+    "index": 2,
+    "name": "test.csv",
+    "is_directory": false,
+    "file_bytes": 901238480,
+    "compressed_bytes": 90164326,
+    "compression": 8,
+    "crc32": "4d97bb3b",
+    "flags": 8,
+    "external_attributes": 2175008768,
+    "zip_directory_time": [
+      2025,
+      8,
+      5,
+      11,
+      50,
+      22
+    ]
+  },
+  {
+    "index": 3,
+    "name": "__MACOSX/._test.csv",
+    "is_directory": false,
+    "file_bytes": 163,
+    "compressed_bytes": 86,
+    "compression": 8,
+    "crc32": "48447454",
+    "flags": 8,
+    "external_attributes": 2175008768,
+    "zip_directory_time": [
+      2025,
+      8,
+      5,
+      11,
+      50,
+      22
+    ]
+  }
+]

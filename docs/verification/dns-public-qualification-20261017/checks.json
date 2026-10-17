@@ -1,0 +1,107 @@
+{
+  "recorded_utc": "2026-10-17T10:36:21.908051+00:00",
+  "passed": 23,
+  "failed": 0,
+  "protected_file_count": 114,
+  "original_archive_bytes_reverified": 7351027624,
+  "checks": [
+    {
+      "check": "Protocol frozen before catalogues",
+      "passed": true
+    },
+    {
+      "check": "Original SHA256/size unchanged zenodo-dnstunnel",
+      "passed": true
+    },
+    {
+      "check": "Original SHA256/size unchanged zenodo-benign",
+      "passed": true
+    },
+    {
+      "check": "Outer three exact members",
+      "passed": true
+    },
+    {
+      "check": "Inner two data CSVs and two skipped Mac resource forks",
+      "passed": true
+    },
+    {
+      "check": "No nested original capture/log/annotation member listed",
+      "passed": true
+    },
+    {
+      "check": "Nested source index is integer and name/CRC/size match catalogue",
+      "passed": true
+    },
+    {
+      "check": "One bounded nested ZIP and only one extra catalogue level",
+      "passed": true
+    },
+    {
+      "check": "Copied opaque nested container hash unchanged",
+      "passed": true
+    },
+    {
+      "check": "Only selected bounded README content reviewed",
+      "passed": true
+    },
+    {
+      "check": "README selection index/name match original catalogue",
+      "passed": true
+    },
+    {
+      "check": "45 nominal PCAPNGs and no bundled sidecars",
+      "passed": true
+    },
+    {
+      "check": "All nominal captures use ZIP method 9 without encryption flag",
+      "passed": true
+    },
+    {
+      "check": "Header selections fixed for all 45 before attempt",
+      "passed": true
+    },
+    {
+      "check": "Existing native utility pilot failed without header bytes",
+      "passed": true
+    },
+    {
+      "check": "All capture formats left unknown, no packet values read",
+      "passed": true
+    },
+    {
+      "check": "Only first header attempted before capability stop",
+      "passed": true
+    },
+    {
+      "check": "No invented source/data roles or random split",
+      "passed": true
+    },
+    {
+      "check": "Independent sessions unknown, no detector metrics fabricated",
+      "passed": true
+    },
+    {
+      "check": "No rows/model/conversion/training/inference/scoring/promotion/messages",
+      "passed": true
+    },
+    {
+      "check": "Frozen contract hash and false readiness unchanged",
+      "passed": true
+    },
+    {
+      "check": "Protected runtime/models/history/contracts/previous evidence unchanged",
+      "passed": true
+    },
+    {
+      "check": "Qualification failure preserved, not forced pass",
+      "passed": true
+    }
+  ],
+  "application_tests_added": 0,
+  "application_tests_rerun": false,
+  "reason": "Documentation/metadata-only task, no persistent helper/application code or bug fix",
+  "header_inspection_blocked": true,
+  "raw_capture_magic_observed": false,
+  "scoring_run": false
+}

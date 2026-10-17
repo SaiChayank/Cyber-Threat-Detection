@@ -197,6 +197,14 @@ Skip ahead only to independent eligible work when the current package is blocked
 
 ## Phase 3 — resolve the three data-dependent detector tracks
 
+T30 downloaded-source qualification, 17 October 2026: [decision](DNS_PUBLIC_DATA_QUALIFICATION.md)
+records no eligible final set. DNSTunnel2026's actual catalogue is nested
+train/test CSVs plus model/README; original query/run truth is not established.
+UMA has 45 nominal PCAPNGs, no bundled session sidecars; ZIP method 9 is unsupported
+by Python and native tar returned no header bytes. Actual format/visibility remain
+unverified. No installation/conversion, rows, training, role assignment or scoring.
+Next review public executed-run/client-log provenance; T30 remains source-blocked.
+
 T30 acquisition update, 17 October 2026: the two user-approved Zenodo ZIPs are
 downloaded and size/publisher-MD5 verified (7,351,027,624 original bytes total).
 See [acquisition report](DNS_PUBLIC_DATA_ACQUISITION.md) and

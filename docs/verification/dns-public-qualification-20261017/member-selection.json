@@ -1,0 +1,375 @@
+{
+  "documents": [
+    {
+      "source_id": "zenodo-dnstunnel",
+      "member": {
+        "index": 2,
+        "name": "Readme.md",
+        "is_directory": false,
+        "file_bytes": 16617,
+        "compressed_bytes": 5392,
+        "compression": 8,
+        "crc32": "57ec7a45",
+        "flags": 8,
+        "external_attributes": 2176188416,
+        "zip_directory_time": [
+          2026,
+          5,
+          12,
+          13,
+          14,
+          36
+        ]
+      },
+      "max_bytes": 262144
+    }
+  ],
+  "nested_zips": [
+    {
+      "source_id": "zenodo-dnstunnel",
+      "member": {
+        "index": 0,
+        "name": "Archive.zip",
+        "is_directory": false,
+        "file_bytes": 450772657,
+        "compressed_bytes": 450909837,
+        "compression": 8,
+        "crc32": "22bfe14f",
+        "flags": 8,
+        "external_attributes": 2176188416,
+        "zip_directory_time": [
+          2026,
+          5,
+          12,
+          10,
+          14,
+          34
+        ]
+      },
+      "fixed_workspace_path": "data/raw/dns-public-qualification-work-20261017/nested-000.zip",
+      "max_bytes": 629145600
+    }
+  ],
+  "capture_headers": [
+    {
+      "source_id": "zenodo-benign",
+      "index": 0,
+      "name": "capturaAgenteAdmin15m1.pcapng",
+      "initial_bytes": 4,
+      "classic_global_header_bytes_only_if_classic_magic": 24
+    },
+    {
+      "source_id": "zenodo-benign",
+      "index": 1,
+      "name": "capturaAgenteAdmin15m2.pcapng",
+      "initial_bytes": 4,
+      "classic_global_header_bytes_only_if_classic_magic": 24
+    },
+    {
+      "source_id": "zenodo-benign",
+      "index": 2,
+      "name": "capturaAgenteAdmin15m3.pcapng",
+      "initial_bytes": 4,
+      "classic_global_header_bytes_only_if_classic_magic": 24
+    },
+    {
+      "source_id": "zenodo-benign",
+      "index": 3,
+      "name": "capturaAgenteAdmin15m4.pcapng",
+      "initial_bytes": 4,
+      "classic_global_header_bytes_only_if_classic_magic": 24
+    },
+    {
+      "source_id": "zenodo-benign",
+      "index": 4,
+      "name": "capturaAgenteAdmin15m5.pcapng",
+      "initial_bytes": 4,
+      "classic_global_header_bytes_only_if_classic_magic": 24
+    },
+    {
+      "source_id": "zenodo-benign",
+      "index": 5,
+      "name": "capturaAgenteAdmin1h1.pcapng",
+      "initial_bytes": 4,
+      "classic_global_header_bytes_only_if_classic_magic": 24
+    },
+    {
+      "source_id": "zenodo-benign",
+      "index": 6,
+      "name": "capturaAgenteAdmin1h2.pcapng",
+      "initial_bytes": 4,
+      "classic_global_header_bytes_only_if_classic_magic": 24
+    },
+    {
+      "source_id": "zenodo-benign",
+      "index": 7,
+      "name": "capturaAgenteAdmin1h3.pcapng",
+      "initial_bytes": 4,
+      "classic_global_header_bytes_only_if_classic_magic": 24
+    },
+    {
+      "source_id": "zenodo-benign",
+      "index": 8,
+      "name": "capturaAgenteAdmin1h4.pcapng",
+      "initial_bytes": 4,
+      "classic_global_header_bytes_only_if_classic_magic": 24
+    },
+    {
+      "source_id": "zenodo-benign",
+      "index": 9,
+      "name": "capturaAgenteAdmin1h5.pcapng",
+      "initial_bytes": 4,
+      "classic_global_header_bytes_only_if_classic_magic": 24
+    },
+    {
+      "source_id": "zenodo-benign",
+      "index": 10,
+      "name": "capturaAgenteAdmin5m1.pcapng",
+      "initial_bytes": 4,
+      "classic_global_header_bytes_only_if_classic_magic": 24
+    },
+    {
+      "source_id": "zenodo-benign",
+      "index": 11,
+      "name": "capturaAgenteAdmin5m2.pcapng",
+      "initial_bytes": 4,
+      "classic_global_header_bytes_only_if_classic_magic": 24
+    },
+    {
+      "source_id": "zenodo-benign",
+      "index": 12,
+      "name": "capturaAgenteAdmin5m3.pcapng",
+      "initial_bytes": 4,
+      "classic_global_header_bytes_only_if_classic_magic": 24
+    },
+    {
+      "source_id": "zenodo-benign",
+      "index": 13,
+      "name": "capturaAgenteAdmin5m4.pcapng",
+      "initial_bytes": 4,
+      "classic_global_header_bytes_only_if_classic_magic": 24
+    },
+    {
+      "source_id": "zenodo-benign",
+      "index": 14,
+      "name": "capturaAgenteAdmin5m5.pcapng",
+      "initial_bytes": 4,
+      "classic_global_header_bytes_only_if_classic_magic": 24
+    },
+    {
+      "source_id": "zenodo-benign",
+      "index": 15,
+      "name": "capturaAgenteGamer15m1.pcapng",
+      "initial_bytes": 4,
+      "classic_global_header_bytes_only_if_classic_magic": 24
+    },
+    {
+      "source_id": "zenodo-benign",
+      "index": 16,
+      "name": "capturaAgenteGamer15m2.pcapng",
+      "initial_bytes": 4,
+      "classic_global_header_bytes_only_if_classic_magic": 24
+    },
+    {
+      "source_id": "zenodo-benign",
+      "index": 17,
+      "name": "capturaAgenteGamer15m3.pcapng",
+      "initial_bytes": 4,
+      "classic_global_header_bytes_only_if_classic_magic": 24
+    },
+    {
+      "source_id": "zenodo-benign",
+      "index": 18,
+      "name": "capturaAgenteGamer15m4.pcapng",
+      "initial_bytes": 4,
+      "classic_global_header_bytes_only_if_classic_magic": 24
+    },
+    {
+      "source_id": "zenodo-benign",
+      "index": 19,
+      "name": "capturaAgenteGamer15m5.pcapng",
+      "initial_bytes": 4,
+      "classic_global_header_bytes_only_if_classic_magic": 24
+    },
+    {
+      "source_id": "zenodo-benign",
+      "index": 20,
+      "name": "capturaAgenteGamer1h1.pcapng",
+      "initial_bytes": 4,
+      "classic_global_header_bytes_only_if_classic_magic": 24
+    },
+    {
+      "source_id": "zenodo-benign",
+      "index": 21,
+      "name": "capturaAgenteGamer1h2.pcapng",
+      "initial_bytes": 4,
+      "classic_global_header_bytes_only_if_classic_magic": 24
+    },
+    {
+      "source_id": "zenodo-benign",
+      "index": 22,
+      "name": "capturaAgenteGamer1h3.pcapng",
+      "initial_bytes": 4,
+      "classic_global_header_bytes_only_if_classic_magic": 24
+    },
+    {
+      "source_id": "zenodo-benign",
+      "index": 23,
+      "name": "capturaAgenteGamer1h4.pcapng",
+      "initial_bytes": 4,
+      "classic_global_header_bytes_only_if_classic_magic": 24
+    },
+    {
+      "source_id": "zenodo-benign",
+      "index": 24,
+      "name": "capturaAgenteGamer1h5.pcapng",
+      "initial_bytes": 4,
+      "classic_global_header_bytes_only_if_classic_magic": 24
+    },
+    {
+      "source_id": "zenodo-benign",
+      "index": 25,
+      "name": "capturaAgenteGamer5m1.pcapng",
+      "initial_bytes": 4,
+      "classic_global_header_bytes_only_if_classic_magic": 24
+    },
+    {
+      "source_id": "zenodo-benign",
+      "index": 26,
+      "name": "capturaAgenteGamer5m2.pcapng",
+      "initial_bytes": 4,
+      "classic_global_header_bytes_only_if_classic_magic": 24
+    },
+    {
+      "source_id": "zenodo-benign",
+      "index": 27,
+      "name": "capturaAgenteGamer5m3.pcapng",
+      "initial_bytes": 4,
+      "classic_global_header_bytes_only_if_classic_magic": 24
+    },
+    {
+      "source_id": "zenodo-benign",
+      "index": 28,
+      "name": "capturaAgenteGamer5m4.pcapng",
+      "initial_bytes": 4,
+      "classic_global_header_bytes_only_if_classic_magic": 24
+    },
+    {
+      "source_id": "zenodo-benign",
+      "index": 29,
+      "name": "capturaAgenteGamer5m5.pcapng",
+      "initial_bytes": 4,
+      "classic_global_header_bytes_only_if_classic_magic": 24
+    },
+    {
+      "source_id": "zenodo-benign",
+      "index": 30,
+      "name": "capturaAgenteWeb15m1.pcapng",
+      "initial_bytes": 4,
+      "classic_global_header_bytes_only_if_classic_magic": 24
+    },
+    {
+      "source_id": "zenodo-benign",
+      "index": 31,
+      "name": "capturaAgenteWeb15m2.pcapng",
+      "initial_bytes": 4,
+      "classic_global_header_bytes_only_if_classic_magic": 24
+    },
+    {
+      "source_id": "zenodo-benign",
+      "index": 32,
+      "name": "capturaAgenteWeb15m3.pcapng",
+      "initial_bytes": 4,
+      "classic_global_header_bytes_only_if_classic_magic": 24
+    },
+    {
+      "source_id": "zenodo-benign",
+      "index": 33,
+      "name": "capturaAgenteWeb15m4.pcapng",
+      "initial_bytes": 4,
+      "classic_global_header_bytes_only_if_classic_magic": 24
+    },
+    {
+      "source_id": "zenodo-benign",
+      "index": 34,
+      "name": "capturaAgenteWeb15m5.pcapng",
+      "initial_bytes": 4,
+      "classic_global_header_bytes_only_if_classic_magic": 24
+    },
+    {
+      "source_id": "zenodo-benign",
+      "index": 35,
+      "name": "capturaAgenteWeb1h1.pcapng",
+      "initial_bytes": 4,
+      "classic_global_header_bytes_only_if_classic_magic": 24
+    },
+    {
+      "source_id": "zenodo-benign",
+      "index": 36,
+      "name": "capturaAgenteWeb1h2.pcapng",
+      "initial_bytes": 4,
+      "classic_global_header_bytes_only_if_classic_magic": 24
+    },
+    {
+      "source_id": "zenodo-benign",
+      "index": 37,
+      "name": "capturaAgenteWeb1h3.pcapng",
+      "initial_bytes": 4,
+      "classic_global_header_bytes_only_if_classic_magic": 24
+    },
+    {
+      "source_id": "zenodo-benign",
+      "index": 38,
+      "name": "capturaAgenteWeb1h4.pcapng",
+      "initial_bytes": 4,
+      "classic_global_header_bytes_only_if_classic_magic": 24
+    },
+    {
+      "source_id": "zenodo-benign",
+      "index": 39,
+      "name": "capturaAgenteWeb1h5.pcapng",
+      "initial_bytes": 4,
+      "classic_global_header_bytes_only_if_classic_magic": 24
+    },
+    {
+      "source_id": "zenodo-benign",
+      "index": 40,
+      "name": "capturaAgenteWeb5m1.pcapng",
+      "initial_bytes": 4,
+      "classic_global_header_bytes_only_if_classic_magic": 24
+    },
+    {
+      "source_id": "zenodo-benign",
+      "index": 41,
+      "name": "capturaAgenteWeb5m2.pcapng",
+      "initial_bytes": 4,
+      "classic_global_header_bytes_only_if_classic_magic": 24
+    },
+    {
+      "source_id": "zenodo-benign",
+      "index": 42,
+      "name": "capturaAgenteWeb5m3.pcapng",
+      "initial_bytes": 4,
+      "classic_global_header_bytes_only_if_classic_magic": 24
+    },
+    {
+      "source_id": "zenodo-benign",
+      "index": 43,
+      "name": "capturaAgenteWeb5m4.pcapng",
+      "initial_bytes": 4,
+      "classic_global_header_bytes_only_if_classic_magic": 24
+    },
+    {
+      "source_id": "zenodo-benign",
+      "index": 44,
+      "name": "capturaAgenteWeb5m5.pcapng",
+      "initial_bytes": 4,
+      "classic_global_header_bytes_only_if_classic_magic": 24
+    }
+  ],
+  "excluded": [
+    "dga_quantized_model.bin; no binary bytes read",
+    "All CSV/query rows; no headers/rows opened",
+    "All packet records/blocks; no parsing or timestamps"
+  ]
+}

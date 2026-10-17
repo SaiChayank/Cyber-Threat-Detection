@@ -1,0 +1,13 @@
+{
+  "reason": "Python standard zipfile raises NotImplementedError for ZIP compression method 9 before capture bytes; no decoder installed",
+  "utility": "C:/Windows/System32/tar.exe",
+  "selection": {
+    "source_id": "zenodo-benign",
+    "index": 0,
+    "name": "capturaAgenteAdmin15m1.pcapng",
+    "initial_bytes": 4,
+    "classic_global_header_bytes_only_if_classic_magic": 24
+  },
+  "mode": "One pilot: stream named member to stdout, parent reads at most 4 bytes then closes/terminates owned process; no data file extraction or packet parsing",
+  "on_unsupported": "Record blocker and stop header reads; no installation/conversion"
+}

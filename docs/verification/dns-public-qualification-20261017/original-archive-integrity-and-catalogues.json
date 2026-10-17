@@ -1,0 +1,26 @@
+[
+  {
+    "source_id": "zenodo-dnstunnel",
+    "path": "data/raw/dns-public-intake/dnstunnel2026/DNSTunnel2026.zip",
+    "sha256": "0c6eeadc3a55582b99f88cb31ec36b6b89d971a66804bccdce97a37dad401a0d",
+    "bytes": 497565428,
+    "catalogue_file": "docs/verification/dns-public-qualification-20261017/zenodo-dnstunnel-catalogue.json",
+    "member_count": 3,
+    "extension_counts": {
+      ".zip": 1,
+      ".bin": 1,
+      ".md": 1
+    }
+  },
+  {
+    "source_id": "zenodo-benign",
+    "path": "data/raw/dns-public-intake/uma-benign/capturasAgentes.zip",
+    "sha256": "76f7f38dada4cbdb8110691ca981262f10eb55452bc1c2e3e1dc6297b191957d",
+    "bytes": 6853462196,
+    "catalogue_file": "docs/verification/dns-public-qualification-20261017/zenodo-benign-catalogue.json",
+    "member_count": 45,
+    "extension_counts": {
+      ".pcapng": 45
+    }
+  }
+]

@@ -1,0 +1,10 @@
+{
+  "member_index": 0,
+  "member_name": "capturaAgenteAdmin15m1.pcapng",
+  "logical_bytes_read": 0,
+  "header_hex": "",
+  "return_code": 1,
+  "stderr": "tar.exe: Damaged Zip archive\r\ntar.exe: capturaAgenteAdmin15m1.pcapng: Not found in archive\r\ntar.exe: Error exit delayed from previous errors\r\n",
+  "intentional_early_stop": false,
+  "packet_records_read": false
+}

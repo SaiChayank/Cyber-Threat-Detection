@@ -1,0 +1,30 @@
+{
+  "baseline_commit": "b5ad602",
+  "inspection_decision_dod_passed": true,
+  "evaluation_data_qualification_dod_passed": false,
+  "files": {
+    "data/dns_public_qualification.json": "4126f93a8d3d453ff242e1e07259ca3585d2af76eed82ffaead9a220ca192c8a",
+    "docs/DNS_PUBLIC_QUALIFICATION_PROTOCOL.md": "f1cf5e5d2a3989ba242edffb65dff0b906fe714efd34045f42d1bbebbbe48995",
+    "docs/DNS_PUBLIC_DATA_QUALIFICATION.md": "8d95b797cf97802967d99d4c05a64779d3702338bbeed72633c10369075f520a",
+    "docs/COMPLETION_PLAN.md": "90c7654d1071837e2d146583740a77bff77143e67e51176ab2ff1236841012ea",
+    "docs/REMAINING_WORK_PLAN.md": "dbf985cbdf3130ce4d055427f0524817aba746459a48b301a6c40bb28756f9d0",
+    "docs/DATASETS.md": "0e63de344fce3d7670441b3008bf9eef6df08e7075ec8c00f6d457f91e30b657",
+    "docs/verification/dns-public-qualification-20261017/capture-header-results.json": "0804a5d3d5eafb8d68b51b38e05d613f6526aed92927c119094e9a0e6330298d",
+    "docs/verification/dns-public-qualification-20261017/checks.json": "744f3debbdabc6d763bd2a2d647d16da0a99da7551bd2402963809125a2537b9",
+    "docs/verification/dns-public-qualification-20261017/header-transport-pilot.json": "20dd7dcdb48dd1f7e8993948f21af24af37079fc42d876e4abaf0bb623543ee3",
+    "docs/verification/dns-public-qualification-20261017/header-transport-selection.json": "86ae151cefa2ec6ef211ce81600e204051aa05591c374164ef043e6519db2f71",
+    "docs/verification/dns-public-qualification-20261017/inspection-limitations.json": "b8f166f7dab891423ded27c969620b2aa4a1e2b3d893a7b63a1349f7f57ac9d4",
+    "docs/verification/dns-public-qualification-20261017/integrity-after.json": "ec168f75371b2a8fba245d4fe7e0db2f8d3269839915ce82102dc263b579f666",
+    "docs/verification/dns-public-qualification-20261017/integrity-before.json": "ec168f75371b2a8fba245d4fe7e0db2f8d3269839915ce82102dc263b579f666",
+    "docs/verification/dns-public-qualification-20261017/member-selection.json": "77270d66071502320a4ae325474cecbaa8dac0b8129c372974d5f536f5524745",
+    "docs/verification/dns-public-qualification-20261017/nested-000-catalogue.json": "ab331fcf3b6b5a0ee3fbf9e5134d8e50b7edd2c2a892fcc7bbec4465d6b0f4c6",
+    "docs/verification/dns-public-qualification-20261017/nested-container-copy.json": "67bf95fc8980dcc0712aa68bd3e37e45626623c06cc264cfd194fd773008e810",
+    "docs/verification/dns-public-qualification-20261017/original-archive-integrity-after.json": "318df40331004cae50df63e295e68b2379d6bcde8a3feaa43162fa1a300e4466",
+    "docs/verification/dns-public-qualification-20261017/original-archive-integrity-and-catalogues.json": "48a5c5b16db1ffa7b723fa328928fb7b1d029f935d53b1a7eb816532d32768ce",
+    "docs/verification/dns-public-qualification-20261017/protocol.sha256": "40facf78fc1de0e696ccfda9fbbc6fbc4f8280cc0b15c618b6dd77d091aee701",
+    "docs/verification/dns-public-qualification-20261017/reviewed-documents.json": "ac7b65c32b40b9172c5440761bde7d5795ef9ba60a1d320ba8a53c47d7f1da9f",
+    "docs/verification/dns-public-qualification-20261017/zenodo-benign-catalogue.json": "3c85e0fb980f954bc18ede828849625891bef84a6c6089aca48d7d98505a38bf",
+    "docs/verification/dns-public-qualification-20261017/zenodo-dnstunnel-catalogue.json": "07f954c155550b0c601b71a69f86b5591df76dd7d313b5b28ecad9b7654e0a60"
+  },
+  "scope": "Metadata/document-only qualification; unsupported capture-header access explicit, no packet/query/model values, fitting, prediction or reserved scoring"
+}

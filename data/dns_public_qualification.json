@@ -1,0 +1,91 @@
+{
+  "baseline_commit": "b5ad602",
+  "status": "NOT_QUALIFIED_FOR_FROZEN_DNS_EVALUATION",
+  "inspection_decision_complete": true,
+  "evaluation_qualification_dod_passed": false,
+  "protocol": "docs/DNS_PUBLIC_QUALIFICATION_PROTOCOL.md",
+  "protocol_sha256": "f1cf5e5d2a3989ba242edffb65dff0b906fe714efd34045f42d1bbebbbe48995",
+  "frozen_dns_contract": "data/dns_tunnel_evaluation_contract.json",
+  "frozen_dns_contract_sha256": "a30b164f22ed1d9bd61a89d9e8f225ab408fc91df2c06449159f6144ec68208b",
+  "sources": [
+    {
+      "source_id": "zenodo-dnstunnel",
+      "archive": "data/raw/dns-public-intake/dnstunnel2026/DNSTunnel2026.zip",
+      "archive_sha256": "0c6eeadc3a55582b99f88cb31ec36b6b89d971a66804bccdce97a37dad401a0d",
+      "rights": "CC BY 4.0, existing reviewed publisher metadata",
+      "original_archive_integrity": "PASS",
+      "outer_member_count": 3,
+      "outer_catalogue": "docs/verification/dns-public-qualification-20261017/zenodo-dnstunnel-catalogue.json",
+      "nested_member_count": 4,
+      "nested_catalogue": "docs/verification/dns-public-qualification-20261017/nested-000-catalogue.json",
+      "original_question_log_or_capture_listed": false,
+      "session_run_manifest_listed": false,
+      "csv_schema_and_rows": "NOT_READ",
+      "readme_reviewed": true,
+      "tool_provenance": "SmoothFlow described; dnscat2/iodine coverage not established",
+      "independent_session_truth": "NOT_ESTABLISHED",
+      "five_benign_strata": "NOT_ESTABLISHED",
+      "causal_original_source_time_qname_qtype": "NOT_ESTABLISHED",
+      "upstream_split_names": [
+        "train.csv",
+        "test.csv"
+      ],
+      "upstream_split_adopted": false,
+      "project_roles": {
+        "training": null,
+        "validation": null,
+        "reserved": null
+      },
+      "status": "UNQUALIFIED_RESEARCH_INTAKE"
+    },
+    {
+      "source_id": "zenodo-benign",
+      "archive": "data/raw/dns-public-intake/uma-benign/capturasAgentes.zip",
+      "archive_sha256": "76f7f38dada4cbdb8110691ca981262f10eb55452bc1c2e3e1dc6297b191957d",
+      "rights": "CC BY 4.0, existing reviewed publisher metadata",
+      "original_archive_integrity": "PASS",
+      "outer_member_count": 45,
+      "catalogue": "docs/verification/dns-public-qualification-20261017/zenodo-benign-catalogue.json",
+      "nominal_pcapng_members": 45,
+      "zip_compression_methods": [
+        9
+      ],
+      "bundled_annotation_or_query_log_members": 0,
+      "logical_capture_header_bytes_read": 0,
+      "actual_capture_magic": "UNVERIFIED",
+      "runtime_container_compatibility": "UNVERIFIED; PCAPNG filenames not accepted as header observation",
+      "decoder_failure": "Python method 9 unsupported; native tar pilot returned zero bytes/nonzero exit",
+      "independent_session_truth": "NOT_ESTABLISHED",
+      "original_query_timing": "NOT_ESTABLISHED",
+      "full_qname_qtype_visibility": "NOT_ESTABLISHED",
+      "five_benign_strata": "NOT_ESTABLISHED",
+      "file_count_is_session_count": false,
+      "project_roles": {
+        "training": null,
+        "validation": null,
+        "reserved": null
+      },
+      "status": "UNQUALIFIED_RESEARCH_INTAKE"
+    }
+  ],
+  "qualified_independent_positive_sessions": null,
+  "qualified_independent_benign_sessions": null,
+  "assigned_reserved_sessions": 0,
+  "reserved_manifest": null,
+  "whole_run_grouping": "NOT_ESTABLISHED",
+  "cross_role_value_overlap": "NOT_RUN_NO_ASSIGNED_ROLES_OR_VALUE_ACCESS",
+  "runtime_changed": false,
+  "dependencies_added": false,
+  "capture_conversion": false,
+  "model_binary_read": false,
+  "query_rows_read": false,
+  "packet_records_read": false,
+  "training": false,
+  "inference": false,
+  "reserved_scoring": false,
+  "candidate_promoted": false,
+  "new_external_messages": 0,
+  "evaluation_metrics": null,
+  "report": "docs/DNS_PUBLIC_DATA_QUALIFICATION.md",
+  "next_task": "Review publicly available executed-run manifests/original client-query-log exports with source/time/namespace and benign DNS category provenance before further capture values. Stop if that bundle is absent; no decoder installation or protocol expansion in this task."
+}
