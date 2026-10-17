@@ -197,9 +197,68 @@ def spoof_history_detail(stream):
                 diagnostic_feature_sequence_sha256=feature_sequence.hexdigest())
 
 
+def recon_history_detail(stream):
+    """Audit exposed one-packet TCP fan-out against causal prefix references."""
+    from datasets.validate_recon import reference
+
+    if (not stream or any(event.protocol != 6 or event.packets != 1 for event in stream)
+            or len({str(event.src_ip) for event in stream}) != 1
+            or any(b.timestamp < a.timestamp for a, b in zip(stream, stream[1:]))):
+        raise ValueError('Recon history requires ordered single-source one-packet TCP metadata')
+    extractor, seen = FeatureExtractor(), []
+    maximum_hosts = maximum_ports = 0
+    first_guard = first_rule = final = None
+    trace = hashlib.sha256()
+    for index, event in enumerate(stream, 1):
+        seen.append(event)
+        features = extractor.update(event)
+        final = reference(seen, event)
+        if any(features[key] != final[key]
+               for key in ('destination_count', 'port_count', 'syn_fraction')):
+            raise ValueError('Recon causal features disagree with independent reference')
+        maximum_hosts = max(maximum_hosts, final['destination_count'])
+        maximum_ports = max(maximum_ports, final['port_count'])
+        trace.update(json.dumps(final, sort_keys=True, separators=(',', ':')).encode() + b'\n')
+        evidence = dict(event=index, elapsed_seconds=(event.timestamp-stream[0].timestamp)/1000,
+                        reference=final)
+        fanout = max(features['destination_count'], features['port_count'])
+        if first_guard is None and fanout >= 10:
+            first_guard = evidence
+        if first_rule is None and fanout >= 20:
+            first_rule = evidence
+    return dict(max_destination_hosts_ten_seconds=maximum_hosts,
+                max_destination_ports_ten_seconds=maximum_ports,
+                first_model_guard_eligible=first_guard, first_rule_eligible=first_rule,
+                final_reference=final, causal_reference_sequence_sha256=trace.hexdigest())
+
+
+def recon_pair_detail(positive, benign):
+    """Distinguish complete collisions from an identical shorter benign prefix."""
+    if (not positive or not benign or len(positive) < len(benign)
+            or any(event.protocol != 6 or event.packets != 1 for event in positive + benign)
+            or any(b.timestamp < a.timestamp for stream in (positive, benign)
+                   for a, b in zip(stream, stream[1:]))):
+        raise ValueError('Recon pairs require ordered TCP metadata with a nonempty aligned benign prefix')
+    length = len(benign)
+    left = [event.model_dump(mode='json') for event in positive[:length]]
+    right = [event.model_dump(mode='json') for event in benign]
+    a_extractor, b_extractor = FeatureExtractor(), FeatureExtractor()
+    a_features = [a_extractor.update(event) for event in positive[:length]]
+    b_features = [b_extractor.update(event) for event in benign]
+    same_length = len(positive) == length
+    same_vectors = [vector(row) for row in a_features] == [vector(row) for row in b_features]
+    return dict(positive_events=len(positive), benign_events=length,
+                compared_prefix_events=length, metadata_prefix_identical=left == right,
+                complete_metadata_identical=same_length and left == right,
+                runtime_feature_prefix_identical=a_features == b_features,
+                complete_runtime_features_identical=same_length and a_features == b_features,
+                model_vector_prefix_identical=same_vectors,
+                complete_model_vectors_identical=same_length and same_vectors)
+
+
 def analyze(group=None):
-    if group not in (None, 'UDP', 'C2', 'SPOOF'):
-        raise ValueError('Only UDP, C2 and SPOOF have a scoped diagnostic selection')
+    if group not in (None, 'UDP', 'C2', 'SPOOF', 'RECON'):
+        raise ValueError('Only UDP, C2, SPOOF and RECON have a scoped diagnostic selection')
     model_hash = hashlib.sha256(ARTIFACT.read_bytes()).hexdigest()
     if group == 'SPOOF' and model_hash != SPOOF_MODEL_SHA256:
         raise ValueError('Spoof diagnosis requires the unchanged frozen baseline model')
@@ -241,6 +300,8 @@ def analyze(group=None):
                 stream = list(module.events(*case[2:]))
             if selected_group == 'C2' and group == 'C2' and row['ground_truth_c2'] is not positive:
                 raise ValueError('C2 labels differ from saved development cases')
+            if selected_group == 'RECON' and group == 'RECON' and row['ground_truth_unauthorised_scan'] is not positive:
+                raise ValueError('Recon labels differ from saved development cases')
             if group == 'SPOOF' and row['ground_truth_forged'] is not positive:
                 raise ValueError('Spoof labels differ from saved development cases')
             digest = stream_digest(stream)
@@ -268,6 +329,18 @@ def analyze(group=None):
                             report=path.relative_to(ROOT).as_posix(),
                             report_sha256=hashlib.sha256(raw_report).hexdigest(),
                             failures=failures, opposite_label_overlaps=collisions))
+        if selected_group == 'RECON' and group == 'RECON':
+            histories = {name: recon_history_detail(stream) for name, stream in streams.items()}
+            for name, history in histories.items():
+                if any(history[key] != lookup[name][key] for key in
+                       ('max_destination_hosts_ten_seconds', 'max_destination_ports_ten_seconds', 'final_reference')):
+                    raise ValueError('Recon causal history differs from saved development evidence')
+            modules[-1]['causal_histories'] = histories
+            modules[-1]['paired_observability'] = [
+                dict(positive=a, benign=b, **recon_pair_detail(streams[a], streams[b]))
+                for a, b in [('vertical_scan', 'authorised_vulnerability_scanner'),
+                             ('horizontal_scan', 'authorised_asset_inventory'),
+                             ('horizontal_scan', 'service_discovery')]]
         if selected_group == 'C2' and group == 'C2':
             histories = {name: c2_history_detail(stream) for name, stream in streams.items()}
             for name, history in histories.items():
@@ -315,7 +388,7 @@ def analyze(group=None):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--output', type=Path, required=True)
-    parser.add_argument('--group', choices=['UDP', 'C2', 'SPOOF'], help='Inspect one subtype only; default retains the historical all-group diagnostic')
+    parser.add_argument('--group', choices=['UDP', 'C2', 'SPOOF', 'RECON'], help='Inspect one subtype only; default retains the historical all-group diagnostic')
     args = parser.parse_args()
     report = analyze(group=args.group)
     args.output.parent.mkdir(parents=True, exist_ok=True)

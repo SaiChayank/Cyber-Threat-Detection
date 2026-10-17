@@ -85,6 +85,9 @@ def test_scoped_udp_audit_does_not_read_or_import_other_detectors(tmp_path, monk
         diagnostic.analyze(group='UDP')
 
 
-def test_unsupported_scope_is_rejected_before_other_reports_are_opened():
+def test_unsupported_scope_is_rejected_before_other_reports_are_opened(monkeypatch):
+    def forbidden(*args, **kwargs):
+        pytest.fail('An invalid scope must be rejected before file access')
+    monkeypatch.setattr(diagnostic.Path, 'read_bytes', forbidden)
     with pytest.raises(ValueError,match='scoped diagnostic'):
-        diagnostic.analyze(group='RECON')
+        diagnostic.analyze(group='NOT_A_DIAGNOSTIC_SCOPE')

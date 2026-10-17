@@ -2,7 +2,7 @@
   "authorization": "User requested continuous eligible project work while away within the five-hour session window; commit each completed verified package",
   "reference_start_utc": "2026-10-17T18:29:23Z",
   "wall_clock_upper_bound_utc": "2026-10-17T23:29:23Z",
-  "current_task": "T24 reconnaissance observability diagnosis",
+  "current_task": "T25 possible-exfiltration observability diagnosis",
   "completed": [
     {
       "task": "Downloaded DNS qualification",
@@ -13,12 +13,16 @@
       "task": "UMA public provenance follow-up",
       "decision": "BLOCKED; template manifests only, no executed DNS session/control bundle",
       "commit": "See package Git history"
+    },
+    {
+      "task": "T24 reconnaissance observability diagnosis",
+      "decision": "3 first FPs reproduce; two full collisions, one prefix collision; 22 new tests/86 targeted pass; quality gate unchanged and unresolved",
+      "commit": "See package Git history"
     }
   ],
   "remaining_queue": [
-    "T24 reconnaissance observability diagnosis",
     "T25 possible-exfiltration observability diagnosis",
-    "Other independent tasks whose prerequisites are satisfied"
+    "Independent plan tasks with satisfied prerequisites"
   ],
   "constraints": [
     "No gate relaxation",

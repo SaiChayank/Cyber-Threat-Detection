@@ -1,0 +1,23 @@
+{
+  "baseline_commit": "2ac33dd",
+  "diagnostic_dod_passed": true,
+  "quality_dod_passed": false,
+  "files": {
+    "datasets/analyze_baseline_failures.py": "244e3053e9f12fe0c12a01e210529d70e59e75934cbc1991c6b8d7aee225dd4f",
+    "tests/test_recon_observability.py": "8b1092e75de5979fd5d9435d60bf4495d2e60b1719c39df26051e48f2ba3afed",
+    "tests/test_udp_observability.py": "4c4a77f413199ebe75febbe3ae1c991ab8ef102cbf3ff2af2fc2f82f053a40a2",
+    "docs/RECON_OBSERVABILITY_PROTOCOL.md": "60013560092fc0dedd78884993479d962b75a7251cfea9bcdb1dfd120c73febd",
+    "docs/RECON_OBSERVABILITY_DECISION.md": "8164d60d30b896923701ed37793ec0b1fb14ee60bf1c1b889bf5d81db654a18c",
+    "docs/COMPLETION_PLAN.md": "f2ce76aa6d83cdb110e0b5dbab16f281eff6a6936f124759392305c52915a86a",
+    "docs/REMAINING_WORK_PLAN.md": "c7f7e5e6586eaff306b9cf412a5a6446ae601bc89073aa13bb554d3dede0a3ae",
+    "docs/verification/unattended-progress-20261017/progress.json": "895c86cb9411f1b98fd19fd0b5ea1ebd3eef1aa3b955fd9e244f795889afdee7",
+    "docs/verification/recon-observability-20261018/allowed-diagnostic-change.json": "90e24d9f68a7c8416efd7ab96b32cfae48530d7cc9a93b363c1ea3f3f8bd6133",
+    "docs/verification/recon-observability-20261018/checks.json": "d1e1a07332ff911dafbd7a1d8d2d63173ced6aa81a39bfc389517aa0794567d0",
+    "docs/verification/recon-observability-20261018/integrity-after.json": "6f2c9e7ab3146ab7674485a30102e96b436c05b6c91b7f0da4c4176d68f0fdb6",
+    "docs/verification/recon-observability-20261018/integrity-before.json": "6f2c9e7ab3146ab7674485a30102e96b436c05b6c91b7f0da4c4176d68f0fdb6",
+    "docs/verification/recon-observability-20261018/protocol.sha256": "90582d4e0c02cda30420b9cef392c8d86c5fcdbb9565a0ec4e2af1e7c222e600",
+    "docs/verification/recon-observability-20261018/report.json": "e505802b6294b009e535df8dbf43478e3d0a37271e112c575af0f630336c161b",
+    "docs/verification/recon-observability-20261018/tests.log": "13239f3038ce5faca3b80c379394091140ec22ed7da6b2f46ef91897623096e6"
+  },
+  "runtime_model_artifacts_changed": false
+}

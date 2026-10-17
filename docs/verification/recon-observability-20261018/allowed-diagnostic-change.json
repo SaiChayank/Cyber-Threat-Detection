@@ -1,0 +1,13 @@
+{
+  "path": "datasets/analyze_baseline_failures.py",
+  "before_sha256": "1ea7967a72b7ae0af228835da02a0ee63de2440be8198dd6c7f2d9d4657e1a4f",
+  "allowed": "Scoped recon diagnostics only; runtime/generators/artifacts/reports immutable",
+  "after_sha256": "244e3053e9f12fe0c12a01e210529d70e59e75934cbc1991c6b8d7aee225dd4f",
+  "updated_regression": {
+    "path": "tests/test_udp_observability.py",
+    "baseline_commit": "2ac33dd",
+    "baseline_git_blob_sha256": "3aae08aa39b3c257d4e20d2d1340f8f27aabb24cd7448e53457c09e955cc3513",
+    "after_sha256": "4c4a77f413199ebe75febbe3ae1c991ab8ef102cbf3ff2af2fc2f82f053a40a2",
+    "reason": "RECON is now valid; use permanently invalid selector and reject before any read"
+  }
+}

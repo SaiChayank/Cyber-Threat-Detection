@@ -1,5 +1,14 @@
 # Univect completion plan
 
+**T24 recon observability diagnosis, 18 October 2026 IST:**
+[decision](RECON_OBSERVABILITY_DECISION.md) reproduces three ML-only first FPs,
+proves two full authorization-label collisions and distinguishes the 24-event
+service-discovery prefix. Causal reference matches explain the six-host slow miss.
+Twenty-two new diagnostic cases; 86 targeted regressions pass after updating an
+obsolete invalid-scope test. Historical TP4/TN3/FP3/FN1 and all gates/runtime remain
+unchanged. Diagnostic DoD passes; required intent quality remains blocked on
+independent separating context/labels. Next independent package: T25 diagnosis.
+
 **T30 public provenance follow-up, 17 October UTC / 18 October IST:**
 [decision](DNS_UMA_PROVENANCE_DECISION.md) verifies five pinned producer text
 documents. Public manifest files are templates for descriptive capture/window

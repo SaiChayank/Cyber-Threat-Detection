@@ -1,0 +1,62 @@
+{
+  "recorded_utc": "2026-10-17T18:35:17.514524+00:00",
+  "checks": [
+    {
+      "check": "Frozen T24 protocol unchanged",
+      "passed": true
+    },
+    {
+      "check": "Only RECON exposed report, original three FP attribution",
+      "passed": true
+    },
+    {
+      "check": "Historical verdict counts unchanged",
+      "passed": true
+    },
+    {
+      "check": "Three known first positions/sources exact",
+      "passed": true
+    },
+    {
+      "check": "Two complete opposite-label observation/runtime/model collisions",
+      "passed": true
+    },
+    {
+      "check": "24-event prefix never misrepresented as complete-stream equality",
+      "passed": true
+    },
+    {
+      "check": "Slow scan causal max6 below both frozen thresholds",
+      "passed": true
+    },
+    {
+      "check": "Diagnostic fit/tuning/reserve/positive-scoring policies unchanged",
+      "passed": true
+    },
+    {
+      "check": "Source-matching diagnostic identity",
+      "passed": true
+    },
+    {
+      "check": "Model artifact unchanged",
+      "passed": true
+    },
+    {
+      "check": "Protected runtime/model/source/partition/history files unchanged",
+      "passed": true
+    },
+    {
+      "check": "86 targeted tests actually passed",
+      "passed": true
+    }
+  ],
+  "passed": 12,
+  "failed": 0,
+  "protected_file_count": 119,
+  "tests_added": 22,
+  "targeted_tests_passed": 86,
+  "full_backend_rerun": false,
+  "frontend_build_rerun": false,
+  "scope": "Diagnostic only; no shared application behavior changed",
+  "new_quality_metrics": false
+}

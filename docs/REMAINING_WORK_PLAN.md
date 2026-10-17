@@ -146,6 +146,13 @@ the observability work for remaining subtypes or accept the UDP detector.
 
 **T21–T26 — Per-detector quality closure. P0; DEPENDS ON T20.**
 
+T24 diagnosis update, 18 October 2026 IST: [recon decision](RECON_OBSERVABILITY_DECISION.md)
+reproduces three ML-only FPs, two complete opposite-authorization metadata/runtime
+collisions and a distinct service-discovery prefix overlap. Six-host slow-window
+limit verified without prediction. Twenty-two new cases; 86 targeted tests pass.
+No runtime/model/gate change, new quality matrix or reserve. T24 quality remains
+unresolved; next independent eligible package under continuous authorization is T25.
+
 T22 qualification update, 17 October 2026: [source screen](SPOOF_PAIR_QUALIFICATION.md)
 and `data/spoof_pair_qualification.json` record BLOCKED_NOT_QUALIFIED after five
 bounded metadata-only leads. No independently labelled forged/genuine original

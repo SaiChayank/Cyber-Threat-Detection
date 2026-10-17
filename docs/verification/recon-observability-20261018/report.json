@@ -1,0 +1,666 @@
+{
+  "scope": "Failure analysis of already evaluated development cases; attribution replay, not a new quality evaluation",
+  "model_sha256": "4d8e08323374535789e21f9f7cd1ee3f1c84b663ce555e67bb4ced57c95e8010",
+  "modules": [
+    {
+      "group": "RECON",
+      "threat_class": "RECONNAISSANCE",
+      "saved_counts": {
+        "TP": 4,
+        "TN": 3,
+        "FP": 3,
+        "FN": 1
+      },
+      "report": "docs/verification/release-audit/recon_development.json",
+      "report_sha256": "ac04ed435f0cb90e3837bfab16a8df9a4b2b0a41a993f1df2dbf2290944a6306",
+      "failures": [
+        {
+          "scenario": "slow_horizontal_scan",
+          "verdict": "FN",
+          "saved_row": {
+            "scenario": "slow_horizontal_scan",
+            "ground_truth_unauthorised_scan": true,
+            "events": 32,
+            "observed_stream_sha256": "2f479e37a237b414ebaef16ea04f78847d51bf85c7edb9aceff818279ea4561c",
+            "verdict": "FN",
+            "first_alert": null,
+            "alert_count": 0,
+            "max_destination_hosts_ten_seconds": 6,
+            "max_destination_ports_ten_seconds": 1,
+            "final_reference": {
+              "destination_count": 6,
+              "port_count": 1,
+              "syn_fraction": 1.0,
+              "observed_event_rate": 0.6,
+              "events_in_ten_seconds": 6
+            }
+          }
+        },
+        {
+          "scenario": "authorised_vulnerability_scanner",
+          "verdict": "FP",
+          "stream_sha256": "eb061f4b7353d4b6b868ed06899b5103a273e9a3fe9bb45ce0cc19ac4700cd11",
+          "first_alert": {
+            "event": 10,
+            "elapsed_seconds": 0.9,
+            "evidence": {
+              "destination_count": 1,
+              "port_count": 10,
+              "syn_fraction": 1.0,
+              "confidence_kind": "synthetic-trained model posterior",
+              "window_partial": true
+            },
+            "runtime_features": {
+              "packet_rate": 1.0,
+              "byte_rate": 60.0,
+              "source_entropy": 0.0,
+              "syn_fraction": 1.0,
+              "iat_mean": 0,
+              "iat_cv": 0.0,
+              "destination_count": 1,
+              "port_count": 10,
+              "domain_entropy": 0,
+              "domain_length": 0,
+              "domain_digit_ratio": 0.0,
+              "bigram_surprise": 0.0,
+              "txt_record": 0.0,
+              "encrypted": 0.0,
+              "size_cv": 0.0,
+              "egress_bytes": 600,
+              "byte_ratio": 0,
+              "reverse_available": 0.0,
+              "fingerprint_risk": 0.0,
+              "history_count": 1,
+              "dns_query_visible": 0,
+              "dns_label_count": 0,
+              "dns_encoded_max_label_length": 0,
+              "dns_encoded_total_length": 0,
+              "dns_encoded_entropy": 0,
+              "dns_base_queries_10s": 0,
+              "dns_base_unique_ratio_10s": 0,
+              "dns_base_encoded_queries_10s": 0,
+              "observed_byte_ratio": null,
+              "observed_byte_ratio_status": "reverse_unavailable",
+              "source_forward_bytes_60s": 600,
+              "source_forward_byte_rate_10s": 60.0,
+              "source_byte_window_resolution_ms": 1000,
+              "domain_label_length": 0,
+              "domain_vowel_ratio": 0.0,
+              "domain_consonant_run": 0.0,
+              "source_entropy_partial": false,
+              "syn_target_packet_rate": 1.0,
+              "syn_target_fraction": 1.0,
+              "syn_target_source_entropy": 0.0,
+              "syn_target_source_count_lower_bound": 1,
+              "syn_target_entropy_partial": false,
+              "syn_target_fraction_basis": "packet_exact",
+              "udp_target_packet_rate": 0.0,
+              "udp_target_byte_rate": 0.0,
+              "udp_target_source_entropy": 0.0,
+              "udp_target_source_count_lower_bound": 0,
+              "udp_target_entropy_partial": false,
+              "udp_destination_concentration": 0.0,
+              "udp_packet_size_mean": 0.0,
+              "udp_packet_size_cv": 0.0,
+              "udp_packet_size_basis": "not_udp",
+              "rate_window_seconds": 10,
+              "rate_window_resolution_ms": 1000,
+              "window_partial": true,
+              "state_evictions": 0
+            },
+            "detection_source": "ML",
+            "model_label": "RECONNAISSANCE",
+            "model_posterior": 1.0,
+            "target_model_hit": true,
+            "target_rule_hit": false
+          }
+        },
+        {
+          "scenario": "authorised_asset_inventory",
+          "verdict": "FP",
+          "stream_sha256": "4c5d59c73081c56b08470280700c408d4a1e470d039280cfd3aaf76f7dd60472",
+          "first_alert": {
+            "event": 10,
+            "elapsed_seconds": 0.9,
+            "evidence": {
+              "destination_count": 10,
+              "port_count": 1,
+              "syn_fraction": 1.0,
+              "confidence_kind": "synthetic-trained model posterior",
+              "window_partial": true
+            },
+            "runtime_features": {
+              "packet_rate": 1.0,
+              "byte_rate": 60.0,
+              "source_entropy": 0.0,
+              "syn_fraction": 1.0,
+              "iat_mean": 0,
+              "iat_cv": 0.0,
+              "destination_count": 10,
+              "port_count": 1,
+              "domain_entropy": 0,
+              "domain_length": 0,
+              "domain_digit_ratio": 0.0,
+              "bigram_surprise": 0.0,
+              "txt_record": 0.0,
+              "encrypted": 0.0,
+              "size_cv": 0.0,
+              "egress_bytes": 600,
+              "byte_ratio": 0,
+              "reverse_available": 0.0,
+              "fingerprint_risk": 0.0,
+              "history_count": 1,
+              "dns_query_visible": 0,
+              "dns_label_count": 0,
+              "dns_encoded_max_label_length": 0,
+              "dns_encoded_total_length": 0,
+              "dns_encoded_entropy": 0,
+              "dns_base_queries_10s": 0,
+              "dns_base_unique_ratio_10s": 0,
+              "dns_base_encoded_queries_10s": 0,
+              "observed_byte_ratio": null,
+              "observed_byte_ratio_status": "reverse_unavailable",
+              "source_forward_bytes_60s": 600,
+              "source_forward_byte_rate_10s": 60.0,
+              "source_byte_window_resolution_ms": 1000,
+              "domain_label_length": 0,
+              "domain_vowel_ratio": 0.0,
+              "domain_consonant_run": 0.0,
+              "source_entropy_partial": false,
+              "syn_target_packet_rate": 0.1,
+              "syn_target_fraction": 1.0,
+              "syn_target_source_entropy": 0.0,
+              "syn_target_source_count_lower_bound": 1,
+              "syn_target_entropy_partial": false,
+              "syn_target_fraction_basis": "packet_exact",
+              "udp_target_packet_rate": 0.0,
+              "udp_target_byte_rate": 0.0,
+              "udp_target_source_entropy": 0.0,
+              "udp_target_source_count_lower_bound": 0,
+              "udp_target_entropy_partial": false,
+              "udp_destination_concentration": 0.0,
+              "udp_packet_size_mean": 0.0,
+              "udp_packet_size_cv": 0.0,
+              "udp_packet_size_basis": "not_udp",
+              "rate_window_seconds": 10,
+              "rate_window_resolution_ms": 1000,
+              "window_partial": true,
+              "state_evictions": 0
+            },
+            "detection_source": "ML",
+            "model_label": "RECONNAISSANCE",
+            "model_posterior": 1.0,
+            "target_model_hit": true,
+            "target_rule_hit": false
+          }
+        },
+        {
+          "scenario": "service_discovery",
+          "verdict": "FP",
+          "stream_sha256": "62a2372de6d3451b8bc667185680fd1f3395e4780cb34878b40d6bbc50c9f476",
+          "first_alert": {
+            "event": 10,
+            "elapsed_seconds": 0.9,
+            "evidence": {
+              "destination_count": 10,
+              "port_count": 1,
+              "syn_fraction": 1.0,
+              "confidence_kind": "synthetic-trained model posterior",
+              "window_partial": true
+            },
+            "runtime_features": {
+              "packet_rate": 1.0,
+              "byte_rate": 60.0,
+              "source_entropy": 0.0,
+              "syn_fraction": 1.0,
+              "iat_mean": 0,
+              "iat_cv": 0.0,
+              "destination_count": 10,
+              "port_count": 1,
+              "domain_entropy": 0,
+              "domain_length": 0,
+              "domain_digit_ratio": 0.0,
+              "bigram_surprise": 0.0,
+              "txt_record": 0.0,
+              "encrypted": 0.0,
+              "size_cv": 0.0,
+              "egress_bytes": 600,
+              "byte_ratio": 0,
+              "reverse_available": 0.0,
+              "fingerprint_risk": 0.0,
+              "history_count": 1,
+              "dns_query_visible": 0,
+              "dns_label_count": 0,
+              "dns_encoded_max_label_length": 0,
+              "dns_encoded_total_length": 0,
+              "dns_encoded_entropy": 0,
+              "dns_base_queries_10s": 0,
+              "dns_base_unique_ratio_10s": 0,
+              "dns_base_encoded_queries_10s": 0,
+              "observed_byte_ratio": null,
+              "observed_byte_ratio_status": "reverse_unavailable",
+              "source_forward_bytes_60s": 600,
+              "source_forward_byte_rate_10s": 60.0,
+              "source_byte_window_resolution_ms": 1000,
+              "domain_label_length": 0,
+              "domain_vowel_ratio": 0.0,
+              "domain_consonant_run": 0.0,
+              "source_entropy_partial": false,
+              "syn_target_packet_rate": 0.1,
+              "syn_target_fraction": 1.0,
+              "syn_target_source_entropy": 0.0,
+              "syn_target_source_count_lower_bound": 1,
+              "syn_target_entropy_partial": false,
+              "syn_target_fraction_basis": "packet_exact",
+              "udp_target_packet_rate": 0.0,
+              "udp_target_byte_rate": 0.0,
+              "udp_target_source_entropy": 0.0,
+              "udp_target_source_count_lower_bound": 0,
+              "udp_target_entropy_partial": false,
+              "udp_destination_concentration": 0.0,
+              "udp_packet_size_mean": 0.0,
+              "udp_packet_size_cv": 0.0,
+              "udp_packet_size_basis": "not_udp",
+              "rate_window_seconds": 10,
+              "rate_window_resolution_ms": 1000,
+              "window_partial": true,
+              "state_evictions": 0
+            },
+            "detection_source": "ML",
+            "model_label": "RECONNAISSANCE",
+            "model_posterior": 1.0,
+            "target_model_hit": true,
+            "target_rule_hit": false
+          }
+        }
+      ],
+      "opposite_label_overlaps": [
+        {
+          "model_feature_sequence_sha256": "267f75c96085b371b4b42d34e1970f4dc8b037432872804635fafc05bf736809",
+          "positives": [
+            "vertical_scan"
+          ],
+          "benign": [
+            "authorised_vulnerability_scanner"
+          ],
+          "identical_raw_event_pairs": [
+            [
+              "vertical_scan",
+              "authorised_vulnerability_scanner"
+            ]
+          ]
+        },
+        {
+          "model_feature_sequence_sha256": "0e079a5c7c9e90c74be2a379ab29607b54adfcb348084a89bc9920c38954f3f1",
+          "positives": [
+            "horizontal_scan"
+          ],
+          "benign": [
+            "authorised_asset_inventory"
+          ],
+          "identical_raw_event_pairs": [
+            [
+              "horizontal_scan",
+              "authorised_asset_inventory"
+            ]
+          ]
+        }
+      ],
+      "causal_histories": {
+        "vertical_scan": {
+          "max_destination_hosts_ten_seconds": 1,
+          "max_destination_ports_ten_seconds": 32,
+          "first_model_guard_eligible": {
+            "event": 10,
+            "elapsed_seconds": 0.9,
+            "reference": {
+              "destination_count": 1,
+              "port_count": 10,
+              "syn_fraction": 1.0,
+              "observed_event_rate": 1.0,
+              "events_in_ten_seconds": 10
+            }
+          },
+          "first_rule_eligible": {
+            "event": 20,
+            "elapsed_seconds": 1.9,
+            "reference": {
+              "destination_count": 1,
+              "port_count": 20,
+              "syn_fraction": 1.0,
+              "observed_event_rate": 2.0,
+              "events_in_ten_seconds": 20
+            }
+          },
+          "final_reference": {
+            "destination_count": 1,
+            "port_count": 32,
+            "syn_fraction": 1.0,
+            "observed_event_rate": 3.2,
+            "events_in_ten_seconds": 32
+          },
+          "causal_reference_sequence_sha256": "3e64b841187d97337cffa9fed80e5b38004c7a82cb06519819ac17116c03a7a4"
+        },
+        "horizontal_scan": {
+          "max_destination_hosts_ten_seconds": 32,
+          "max_destination_ports_ten_seconds": 1,
+          "first_model_guard_eligible": {
+            "event": 10,
+            "elapsed_seconds": 0.9,
+            "reference": {
+              "destination_count": 10,
+              "port_count": 1,
+              "syn_fraction": 1.0,
+              "observed_event_rate": 1.0,
+              "events_in_ten_seconds": 10
+            }
+          },
+          "first_rule_eligible": {
+            "event": 20,
+            "elapsed_seconds": 1.9,
+            "reference": {
+              "destination_count": 20,
+              "port_count": 1,
+              "syn_fraction": 1.0,
+              "observed_event_rate": 2.0,
+              "events_in_ten_seconds": 20
+            }
+          },
+          "final_reference": {
+            "destination_count": 32,
+            "port_count": 1,
+            "syn_fraction": 1.0,
+            "observed_event_rate": 3.2,
+            "events_in_ten_seconds": 32
+          },
+          "causal_reference_sequence_sha256": "7b32e435df1428c56fa972f57039f10386e8877961a3e45e4cc8f0106d7fb906"
+        },
+        "mixed_scan": {
+          "max_destination_hosts_ten_seconds": 16,
+          "max_destination_ports_ten_seconds": 32,
+          "first_model_guard_eligible": {
+            "event": 10,
+            "elapsed_seconds": 0.9,
+            "reference": {
+              "destination_count": 10,
+              "port_count": 10,
+              "syn_fraction": 1.0,
+              "observed_event_rate": 1.0,
+              "events_in_ten_seconds": 10
+            }
+          },
+          "first_rule_eligible": {
+            "event": 20,
+            "elapsed_seconds": 1.9,
+            "reference": {
+              "destination_count": 16,
+              "port_count": 20,
+              "syn_fraction": 1.0,
+              "observed_event_rate": 2.0,
+              "events_in_ten_seconds": 20
+            }
+          },
+          "final_reference": {
+            "destination_count": 16,
+            "port_count": 32,
+            "syn_fraction": 1.0,
+            "observed_event_rate": 3.2,
+            "events_in_ten_seconds": 32
+          },
+          "causal_reference_sequence_sha256": "2c15b231af6f8630be81448c4c25e9aefe7a9b32358c2459bf487b66363f115e"
+        },
+        "slower_vertical_scan": {
+          "max_destination_hosts_ten_seconds": 1,
+          "max_destination_ports_ten_seconds": 21,
+          "first_model_guard_eligible": {
+            "event": 10,
+            "elapsed_seconds": 4.5,
+            "reference": {
+              "destination_count": 1,
+              "port_count": 10,
+              "syn_fraction": 1.0,
+              "observed_event_rate": 1.0,
+              "events_in_ten_seconds": 10
+            }
+          },
+          "first_rule_eligible": {
+            "event": 20,
+            "elapsed_seconds": 9.5,
+            "reference": {
+              "destination_count": 1,
+              "port_count": 20,
+              "syn_fraction": 1.0,
+              "observed_event_rate": 2.0,
+              "events_in_ten_seconds": 20
+            }
+          },
+          "final_reference": {
+            "destination_count": 1,
+            "port_count": 21,
+            "syn_fraction": 1.0,
+            "observed_event_rate": 2.1,
+            "events_in_ten_seconds": 21
+          },
+          "causal_reference_sequence_sha256": "4297dc509839586cd18f7c8e66380f17047500d62630718dd5d56e3b1085077a"
+        },
+        "slow_horizontal_scan": {
+          "max_destination_hosts_ten_seconds": 6,
+          "max_destination_ports_ten_seconds": 1,
+          "first_model_guard_eligible": null,
+          "first_rule_eligible": null,
+          "final_reference": {
+            "destination_count": 6,
+            "port_count": 1,
+            "syn_fraction": 1.0,
+            "observed_event_rate": 0.6,
+            "events_in_ten_seconds": 6
+          },
+          "causal_reference_sequence_sha256": "f6bebffa8469cf63053b0862a72cd221626dfbfe5526bd0185ddac0f6b63c041"
+        },
+        "authorised_vulnerability_scanner": {
+          "max_destination_hosts_ten_seconds": 1,
+          "max_destination_ports_ten_seconds": 32,
+          "first_model_guard_eligible": {
+            "event": 10,
+            "elapsed_seconds": 0.9,
+            "reference": {
+              "destination_count": 1,
+              "port_count": 10,
+              "syn_fraction": 1.0,
+              "observed_event_rate": 1.0,
+              "events_in_ten_seconds": 10
+            }
+          },
+          "first_rule_eligible": {
+            "event": 20,
+            "elapsed_seconds": 1.9,
+            "reference": {
+              "destination_count": 1,
+              "port_count": 20,
+              "syn_fraction": 1.0,
+              "observed_event_rate": 2.0,
+              "events_in_ten_seconds": 20
+            }
+          },
+          "final_reference": {
+            "destination_count": 1,
+            "port_count": 32,
+            "syn_fraction": 1.0,
+            "observed_event_rate": 3.2,
+            "events_in_ten_seconds": 32
+          },
+          "causal_reference_sequence_sha256": "3e64b841187d97337cffa9fed80e5b38004c7a82cb06519819ac17116c03a7a4"
+        },
+        "authorised_asset_inventory": {
+          "max_destination_hosts_ten_seconds": 32,
+          "max_destination_ports_ten_seconds": 1,
+          "first_model_guard_eligible": {
+            "event": 10,
+            "elapsed_seconds": 0.9,
+            "reference": {
+              "destination_count": 10,
+              "port_count": 1,
+              "syn_fraction": 1.0,
+              "observed_event_rate": 1.0,
+              "events_in_ten_seconds": 10
+            }
+          },
+          "first_rule_eligible": {
+            "event": 20,
+            "elapsed_seconds": 1.9,
+            "reference": {
+              "destination_count": 20,
+              "port_count": 1,
+              "syn_fraction": 1.0,
+              "observed_event_rate": 2.0,
+              "events_in_ten_seconds": 20
+            }
+          },
+          "final_reference": {
+            "destination_count": 32,
+            "port_count": 1,
+            "syn_fraction": 1.0,
+            "observed_event_rate": 3.2,
+            "events_in_ten_seconds": 32
+          },
+          "causal_reference_sequence_sha256": "7b32e435df1428c56fa972f57039f10386e8877961a3e45e4cc8f0106d7fb906"
+        },
+        "service_discovery": {
+          "max_destination_hosts_ten_seconds": 24,
+          "max_destination_ports_ten_seconds": 1,
+          "first_model_guard_eligible": {
+            "event": 10,
+            "elapsed_seconds": 0.9,
+            "reference": {
+              "destination_count": 10,
+              "port_count": 1,
+              "syn_fraction": 1.0,
+              "observed_event_rate": 1.0,
+              "events_in_ten_seconds": 10
+            }
+          },
+          "first_rule_eligible": {
+            "event": 20,
+            "elapsed_seconds": 1.9,
+            "reference": {
+              "destination_count": 20,
+              "port_count": 1,
+              "syn_fraction": 1.0,
+              "observed_event_rate": 2.0,
+              "events_in_ten_seconds": 20
+            }
+          },
+          "final_reference": {
+            "destination_count": 24,
+            "port_count": 1,
+            "syn_fraction": 1.0,
+            "observed_event_rate": 2.4,
+            "events_in_ten_seconds": 24
+          },
+          "causal_reference_sequence_sha256": "7ea42bc3504e70e0e81fb7272b964497eb859506eb7e6fbffde39b79c0675cd8"
+        },
+        "scheduled_monitoring": {
+          "max_destination_hosts_ten_seconds": 6,
+          "max_destination_ports_ten_seconds": 1,
+          "first_model_guard_eligible": null,
+          "first_rule_eligible": null,
+          "final_reference": {
+            "destination_count": 6,
+            "port_count": 1,
+            "syn_fraction": 0.0,
+            "observed_event_rate": 0.6,
+            "events_in_ten_seconds": 6
+          },
+          "causal_reference_sequence_sha256": "4b06b504bfb5b8301d6644da2a0c8dd11b6d0c5f2e19ce9d23c510957adcbc8d"
+        },
+        "administrative_port_check": {
+          "max_destination_hosts_ten_seconds": 1,
+          "max_destination_ports_ten_seconds": 9,
+          "first_model_guard_eligible": null,
+          "first_rule_eligible": null,
+          "final_reference": {
+            "destination_count": 1,
+            "port_count": 9,
+            "syn_fraction": 1.0,
+            "observed_event_rate": 0.9,
+            "events_in_ten_seconds": 9
+          },
+          "causal_reference_sequence_sha256": "77ea285e78d7cd39ac8decea21b6f8277a30c5a02dc5799e5fc8b87659706c89"
+        },
+        "ordinary_browsing": {
+          "max_destination_hosts_ten_seconds": 3,
+          "max_destination_ports_ten_seconds": 2,
+          "first_model_guard_eligible": null,
+          "first_rule_eligible": null,
+          "final_reference": {
+            "destination_count": 3,
+            "port_count": 2,
+            "syn_fraction": 0.0,
+            "observed_event_rate": 1.1,
+            "events_in_ten_seconds": 11
+          },
+          "causal_reference_sequence_sha256": "a7488523623cf458cd0572bba8181ad20553881915dc0858f2768811df2ec346"
+        }
+      },
+      "paired_observability": [
+        {
+          "positive": "vertical_scan",
+          "benign": "authorised_vulnerability_scanner",
+          "positive_events": 32,
+          "benign_events": 32,
+          "compared_prefix_events": 32,
+          "metadata_prefix_identical": true,
+          "complete_metadata_identical": true,
+          "runtime_feature_prefix_identical": true,
+          "complete_runtime_features_identical": true,
+          "model_vector_prefix_identical": true,
+          "complete_model_vectors_identical": true
+        },
+        {
+          "positive": "horizontal_scan",
+          "benign": "authorised_asset_inventory",
+          "positive_events": 32,
+          "benign_events": 32,
+          "compared_prefix_events": 32,
+          "metadata_prefix_identical": true,
+          "complete_metadata_identical": true,
+          "runtime_feature_prefix_identical": true,
+          "complete_runtime_features_identical": true,
+          "model_vector_prefix_identical": true,
+          "complete_model_vectors_identical": true
+        },
+        {
+          "positive": "horizontal_scan",
+          "benign": "service_discovery",
+          "positive_events": 32,
+          "benign_events": 24,
+          "compared_prefix_events": 24,
+          "metadata_prefix_identical": true,
+          "complete_metadata_identical": false,
+          "runtime_feature_prefix_identical": true,
+          "complete_runtime_features_identical": false,
+          "model_vector_prefix_identical": true,
+          "complete_model_vectors_identical": false
+        }
+      ]
+    }
+  ],
+  "first_false_positive_sources": {
+    "ML": 3
+  },
+  "policy": {
+    "fit": false,
+    "tuning": false,
+    "ablation": false,
+    "reserved_data": false,
+    "runtime_changes": false,
+    "positive_quality_replay": false
+  },
+  "current_source_sha256": {
+    "detection/pipeline.py": "4e70bc3e50546e57fa5f0d9432f3a9be969b906897d837f6f3638311c9b54926",
+    "features/extractor.py": "624952f8063464c88466b861c72f121c318be5835a02a3d2a4b24b38b1800ac8",
+    "ml/model.py": "2721a53d667d1ea773154fdebf3d349c5ef221dfdb51e937d5afdba1ffa6f354",
+    "features/rate_window.py": "a0d4542ab56b44bb51bdee88ebd56a7df95e9a9d6a79fc569769a9100b65d683",
+    "datasets/analyze_baseline_failures.py": "244e3053e9f12fe0c12a01e210529d70e59e75934cbc1991c6b8d7aee225dd4f"
+  }
+}
