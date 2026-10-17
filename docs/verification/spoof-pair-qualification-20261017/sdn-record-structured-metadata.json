@@ -1,0 +1,35 @@
+[
+  {
+    "@context": "http://schema.org/",
+    "@type": "Dataset",
+    "name": "SDN UDP Flood Dataset ",
+    "description": "The dataset has been created by simulating a UDP Flood DDOS attack using a Mininet emulator in the SDN Environment. \nThe Dataset contains 84 columns and 1,56,908 rows.",
+    "url": "http://doi.org/10.17632/p3h8r89kc2.1",
+    "sameAs": "https://data.mendeley.com/datasets/p3h8r89kc2/1",
+    "version": "1",
+    "keywords": "Denial-of-Service Attack, Software Defined Network",
+    "publisher": null,
+    "datePublished": "2025-01-27T15:10:51.765Z",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://data.mendeley.com/datasets/p3h8r89kc2/1"
+    },
+    "includedInDataCatalog": "https://data.mendeley.com",
+    "license": {
+      "@type": "CreativeWork",
+      "url": "http://creativecommons.org/licenses/by/4.0",
+      "text": "CC BY 4.0"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Sudesh Kumar"
+    },
+    "citation": {
+      "@type": "CreativeWork",
+      "text": "Kumar, Sudesh; Gupta, Sunanda (2025), 'SDN UDP Flood Dataset ', Mendeley Data, v1, http://doi.org/10.17632/p3h8r89kc2.1",
+      "headline": "SDN UDP Flood Dataset ",
+      "datePublished": "2025-01-27T15:10:51.765Z",
+      "url": "https://data.mendeley.com/datasets/p3h8r89kc2/1"
+    }
+  }
+]

@@ -1,0 +1,18 @@
+{
+  "firecrawl": "Unavailable: app tool required a non-empty link_id; primary-source read-only fallback used",
+  "inaccessible_full_text": [
+    {
+      "url": "https://www.sciencedirect.com/science/article/pii/S2352340920310817",
+      "observed": "HTTP 403; indexed abstract only"
+    },
+    {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7452651/",
+      "observed": "CAPTCHA; full text not read"
+    },
+    {
+      "url": "https://www.scitepress.org/publishedPapers/2026/150336/pdf/index.html",
+      "observed": "HTTP 403; full text not read"
+    }
+  ],
+  "access_control_bypassed": false
+}

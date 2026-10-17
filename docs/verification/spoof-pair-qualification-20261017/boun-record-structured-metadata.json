@@ -1,0 +1,35 @@
+[
+  {
+    "@context": "http://schema.org/",
+    "@type": "Dataset",
+    "name": "Bo\u011fazi\u00e7i University Distributed Denial of Service (BOUN DDoS) Dataset",
+    "description": "We carried out the TCP SYN flood and UDP flood attacks towards a server connected to the campus backbone. Over 4000 active internet user traffic was flowing over the campus router simultaneously to the attack traffic. \n \nWe used the hping3 software installed on 3 computers for attacks. Attack packets contain spoofed source IP addresses. Since the source IP addresses of the attack packets are generated randomly and uniquely, it appears as attacks come from many different sources when viewed from the routers port. In other words, the attack packets in the dataset come from multiple sources.\n \nThe design concept of Network-based intrusion detection systems is detecting attacks from networks end, on the router, or on the backbone switch. This dataset is produced for the evaluation of network-based intrusion detection methods. In the network topology shown in Figure 1, the traffic is taken from campus routers port by mirroring method. The mirroring operation on routers interfaces provides our traffic recording server the exact copies of incoming and outgoing packets flowing through the mirrored interface. Traffic is recorded and converted to .csv file format using Wireshark software.\n",
+    "url": "http://doi.org/10.17632/mfnn9bh42m.1",
+    "sameAs": "https://data.mendeley.com/datasets/mfnn9bh42m/1",
+    "version": "1",
+    "keywords": "Computer Communication Network, Network Security, Denial-of-Service Attack, Intrusion Detection",
+    "publisher": null,
+    "datePublished": "2020-06-06T19:10:13.177Z",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://data.mendeley.com/datasets/mfnn9bh42m/1"
+    },
+    "includedInDataCatalog": "https://data.mendeley.com",
+    "license": {
+      "@type": "CreativeWork",
+      "url": "http://creativecommons.org/licenses/by/4.0",
+      "text": "CC BY 4.0"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Derya Erhan"
+    },
+    "citation": {
+      "@type": "CreativeWork",
+      "text": "Erhan, Derya (2020), 'Bo\u011fazi\u00e7i University Distributed Denial of Service (BOUN DDoS) Dataset', Mendeley Data, v1, http://doi.org/10.17632/mfnn9bh42m.1",
+      "headline": "Bo\u011fazi\u00e7i University Distributed Denial of Service (BOUN DDoS) Dataset",
+      "datePublished": "2020-06-06T19:10:13.177Z",
+      "url": "https://data.mendeley.com/datasets/mfnn9bh42m/1"
+    }
+  }
+]

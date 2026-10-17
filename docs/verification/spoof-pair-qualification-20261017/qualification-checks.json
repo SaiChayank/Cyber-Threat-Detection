@@ -1,0 +1,126 @@
+{
+  "recorded_utc": "2026-10-17T05:42:38.059010+00:00",
+  "checks": [
+    {
+      "check": "All 106 protected runtime/model/partition/history files unchanged",
+      "passed": true
+    },
+    {
+      "check": "Frozen pre-value protocol hash unchanged",
+      "passed": true
+    },
+    {
+      "check": "boun-record document receipt byte count/hash",
+      "passed": true
+    },
+    {
+      "check": "boun-record successful HTTP receipt",
+      "passed": true
+    },
+    {
+      "check": "sdn-record document receipt byte count/hash",
+      "passed": true
+    },
+    {
+      "check": "sdn-record successful HTTP receipt",
+      "passed": true
+    },
+    {
+      "check": "bccc-record document receipt byte count/hash",
+      "passed": true
+    },
+    {
+      "check": "bccc-record successful HTTP receipt",
+      "passed": true
+    },
+    {
+      "check": "shield-ref document receipt byte count/hash",
+      "passed": true
+    },
+    {
+      "check": "shield-ref successful HTTP receipt",
+      "passed": true
+    },
+    {
+      "check": "shield-tree document receipt byte count/hash",
+      "passed": true
+    },
+    {
+      "check": "shield-tree successful HTTP receipt",
+      "passed": true
+    },
+    {
+      "check": "shield-readme document receipt byte count/hash",
+      "passed": true
+    },
+    {
+      "check": "shield-readme successful HTTP receipt",
+      "passed": true
+    },
+    {
+      "check": "Existing ORION metadata data/raw/discovery/udp-pair-20261016/orion.README.md",
+      "passed": true
+    },
+    {
+      "check": "Existing ORION metadata data/raw/discovery/udp-pair-20261016/orion.LICENSE.txt",
+      "passed": true
+    },
+    {
+      "check": "Pinned Git ref/tree and complete catalogue",
+      "passed": true
+    },
+    {
+      "check": "Five catalogue-only sub-header PCAP exclusions",
+      "passed": true
+    },
+    {
+      "check": "boun structured dataset licence/version",
+      "passed": true
+    },
+    {
+      "check": "sdn structured dataset licence/version",
+      "passed": true
+    },
+    {
+      "check": "Bounded five-lead screen with no qualified/selected pair",
+      "passed": true
+    },
+    {
+      "check": "Unmeasured packet counts and overlap remain null",
+      "passed": true
+    },
+    {
+      "check": "No inference/training/reserve/runtime change/activation/messages",
+      "passed": true
+    },
+    {
+      "check": "Gates unchanged",
+      "passed": true
+    },
+    {
+      "check": "Protocol reference matches manifest",
+      "passed": true
+    },
+    {
+      "check": "Each lead references saved receipts",
+      "passed": true
+    },
+    {
+      "check": "New report/plan links resolve",
+      "passed": true
+    }
+  ],
+  "passed": 27,
+  "failed": 0,
+  "protected_file_count": 106,
+  "tests_added": 0,
+  "tests_rerun": false,
+  "scope": "Documentation/metadata integrity only; no packet values, inference or detector quality measurement",
+  "catalogue_exclusions": [
+    "OS-1.pcap",
+    "ddos-from-inside-1.pcap",
+    "ddos-from-outside-1.pcap",
+    "normal-1.pcap",
+    "port-scanning-1.pcap"
+  ]
+}

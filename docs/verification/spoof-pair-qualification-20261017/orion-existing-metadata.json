@@ -1,0 +1,19 @@
+{
+  "scope": "Previously exposed ORION publisher metadata only; no packet values",
+  "files": [
+    {
+      "path": "data/raw/discovery/udp-pair-20261016/orion.README.md",
+      "sha256": "541deec1d0b6ed0f4f1267364ae2e335fff56676f3df10d8664e7f9e418d588c"
+    },
+    {
+      "path": "data/raw/discovery/udp-pair-20261016/orion.LICENSE.txt",
+      "sha256": "f2d6fa0612d7e4d5a462207d2c6d18b57c237135c0fd04587b8cfb85b1a9963f"
+    }
+  ],
+  "source": "https://www.uel.br/grupos/orion/datasets/orion-2026.html",
+  "observations": [
+    "UDP target documented as 10.0.0.3:9090; source IPs 10.0.0.[4-7] with random source ports",
+    "Random source ports do not establish source-address forgery",
+    "No matched authorized UDP-service run, source-ownership mapping, timezone/reordering or inner capture format was established by existing qualification"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "baseline_commit": "949e697",
+  "status": "BLOCKED_NOT_QUALIFIED",
+  "files": {
+    "data/spoof_pair_qualification.json": "87d8a8cb788116fe8c8f497e6acb29007903f8ce2f73b971ba19d80505003d54",
+    "docs/SPOOF_PAIR_QUALIFICATION.md": "d3f3065d56cedf59366bc9b91490e727b42463e09071a079a614215178389eed",
+    "docs/SPOOF_PAIR_QUALIFICATION_PROTOCOL.md": "b2423abf0b23798eacbd5b0553a429e734a8a20ce6f5348cdf851e24e537d28c",
+    "docs/COMPLETION_PLAN.md": "363cdbc5fbcc2e277c3df008ca17f38d3c092d4fc82c75d9c438f8f2075afb3b",
+    "docs/REMAINING_WORK_PLAN.md": "69b6df23399e1c485e62951980897d0609b6f9271214a2fdd4a109ffed8f939b",
+    "docs/verification/spoof-pair-qualification-20261017/access-limitations.json": "44d88975bcecf2e0d6621fdf3eb4ad5272acb8f3a35730d87f64b31a062adc82",
+    "docs/verification/spoof-pair-qualification-20261017/boun-record-structured-metadata.json": "6470f54660e184388794b554fea01c0f4d8b35244fca6181c8a6edb831b27ee2",
+    "docs/verification/spoof-pair-qualification-20261017/integrity-after.json": "5a767d4477a7b534995348163014cdf443ccf080120d3e15be968e08888d7747",
+    "docs/verification/spoof-pair-qualification-20261017/integrity-before.json": "5a767d4477a7b534995348163014cdf443ccf080120d3e15be968e08888d7747",
+    "docs/verification/spoof-pair-qualification-20261017/orion-existing-metadata.json": "402de55be57f9f602f74b69c4944703a34d7af3f6fb81d6de67ab1014ce2b915",
+    "docs/verification/spoof-pair-qualification-20261017/orion-reply-check.json": "da60063fed78701ba43d9e87819d93a54a8d3fb7d9cdec19f3baa143d666e3e1",
+    "docs/verification/spoof-pair-qualification-20261017/protocol.sha256": "aa0682099f5861bff89290c12178dd7820b4175f8e0c187b589a9b7612bb324b",
+    "docs/verification/spoof-pair-qualification-20261017/qualification-checks.json": "4583f07bc3b7629f3d675ef06c2ff0fd8cf1955b4bc20572f14721221671a926",
+    "docs/verification/spoof-pair-qualification-20261017/sdn-record-structured-metadata.json": "76be8ca7898bd930f7d0d9d5ac4cceccb9398e52ed2eccc0857764ae1d4259e7",
+    "docs/verification/spoof-pair-qualification-20261017/shield-ref.json": "f86743cff046124dc09f0ff6bef1f09722d137c2c3617dbde8d5882e1e8b5212",
+    "docs/verification/spoof-pair-qualification-20261017/shield-tree.json": "1966232f7bce7c782006560d1bdb1367c81f3fd939876069e7ba788165957791",
+    "docs/verification/spoof-pair-qualification-20261017/source-receipts.json": "246447990763ae1abf572df61b5d95108359cff8ab5925b5729886c0f4020cb6"
+  },
+  "note": "New source qualification evidence only; frozen detector code/artifacts and previous evidence unchanged."
+}

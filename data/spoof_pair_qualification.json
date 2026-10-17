@@ -1,0 +1,190 @@
+{
+  "protocol_version": "univect-spoof-development-pair-20261017-v1",
+  "baseline_commit": "949e697",
+  "protocol": "docs/SPOOF_PAIR_QUALIFICATION_PROTOCOL.md",
+  "protocol_sha256": "b2423abf0b23798eacbd5b0553a429e734a8a20ce6f5348cdf851e24e537d28c",
+  "status": "BLOCKED_NOT_QUALIFIED",
+  "source_screen_complete": true,
+  "qualification_dod_passed": false,
+  "selected_pair": null,
+  "qualified_pairs": 0,
+  "positive_packet_count": null,
+  "benign_packet_count": null,
+  "load_overlap": null,
+  "source_leads": [
+    {
+      "id": "BOUN-DDoS",
+      "urls": [
+        "https://data.mendeley.com/datasets/mfnn9bh42m/1"
+      ],
+      "version": "1; DOI 10.17632/mfnn9bh42m.1",
+      "role": "metadata-influenced development lead only; not untouched reserve",
+      "status": "NOT_QUALIFIED",
+      "confirmed_publisher_metadata": [
+        "CC BY 4.0 dataset metadata; Derya Erhan",
+        "Explicit random spoofed source IPs from hping3 on three attack computers",
+        "Mirrored campus traffic; described conversion to CSV"
+      ],
+      "missing_or_unverified": {
+        "original_supported_capture_pair": "NOT_ESTABLISHED",
+        "independent_run_emitter_ownership_joins": "NOT_ESTABLISHED",
+        "matched_genuine_distributed_udp_service_and_port": "NOT_ESTABLISHED",
+        "original_time_run_and_clock_mapping": "NOT_ESTABLISHED",
+        "packet_rate_and_size_overlap": "NOT_MEASURED",
+        "exact_observed_source_forgery_mapping": "Producer reports forgery; packet/run/direction joins not independently qualified"
+      },
+      "document_receipt_keys": [
+        "boun-record"
+      ],
+      "selected_capture_artifact": null,
+      "raw_capture_sha256": null
+    },
+    {
+      "id": "SDN-UDP-Flood",
+      "urls": [
+        "https://data.mendeley.com/datasets/p3h8r89kc2/1"
+      ],
+      "version": "1; DOI 10.17632/p3h8r89kc2.1",
+      "role": "metadata-influenced development lead only; not untouched reserve",
+      "status": "NOT_QUALIFIED",
+      "confirmed_publisher_metadata": [
+        "CC BY 4.0 dataset metadata",
+        "Mininet UDP server, hping3 and normal traffic; CICFlowMeter CSV description"
+      ],
+      "missing_or_unverified": {
+        "original_supported_capture_pair": "NOT_ESTABLISHED",
+        "independent_run_emitter_ownership_joins": "NOT_ESTABLISHED",
+        "matched_genuine_distributed_udp_service_and_port": "NOT_ESTABLISHED",
+        "original_time_run_and_clock_mapping": "NOT_ESTABLISHED",
+        "packet_rate_and_size_overlap": "NOT_MEASURED",
+        "deliberate_source_address_forgery": "NOT_ESTABLISHED; hping3 alone insufficient"
+      },
+      "document_receipt_keys": [
+        "sdn-record"
+      ],
+      "selected_capture_artifact": null,
+      "raw_capture_sha256": null
+    },
+    {
+      "id": "BCCC-UDP-QUIC-IDS-2025",
+      "urls": [
+        "https://www.yorku.ca/research/bccc/ucs-technical/cybersecurity-datasets-cds/udp-quic-network-threat-dataset-bccc-udp-quic-ids-2025/"
+      ],
+      "version": "Publisher page labelled 2025; release artifact not acquired",
+      "role": "metadata-influenced development lead only; not untouched reserve",
+      "status": "NOT_QUALIFIED",
+      "confirmed_publisher_metadata": [
+        "Publisher describes cloud UDP attacks, benign traffic, flow reconstruction and timestamp normalization"
+      ],
+      "missing_or_unverified": {
+        "original_supported_capture_pair": "NOT_ESTABLISHED",
+        "independent_run_emitter_ownership_joins": "NOT_ESTABLISHED",
+        "matched_genuine_distributed_udp_service_and_port": "NOT_ESTABLISHED",
+        "original_time_run_and_clock_mapping": "NOT_ESTABLISHED",
+        "packet_rate_and_size_overlap": "NOT_MEASURED",
+        "capture_permission": "NOT_ESTABLISHED",
+        "deliberate_source_address_forgery": "NOT_ESTABLISHED",
+        "capture_placement_and_direction": "NOT_ESTABLISHED"
+      },
+      "document_receipt_keys": [
+        "bccc-record"
+      ],
+      "selected_capture_artifact": null,
+      "raw_capture_sha256": null
+    },
+    {
+      "id": "SHIELD-i46",
+      "urls": [
+        "https://github.com/i46-projects/SHIELD-i46"
+      ],
+      "version": "d96eea3b833c2c6bc218daf31ddc18b6e93d28d7",
+      "role": "metadata-influenced development lead only; not untouched reserve",
+      "status": "NOT_QUALIFIED",
+      "confirmed_publisher_metadata": [
+        "Pinned README/Git-tree only; five nominal PCAP entries have catalogue size 2 bytes",
+        "Research/credit guidance; numbering denotes capture order, sessions/dates may differ"
+      ],
+      "missing_or_unverified": {
+        "original_supported_capture_pair": "NOT_ESTABLISHED",
+        "independent_run_emitter_ownership_joins": "NOT_ESTABLISHED",
+        "matched_genuine_distributed_udp_service_and_port": "NOT_ESTABLISHED",
+        "original_time_run_and_clock_mapping": "NOT_ESTABLISHED",
+        "packet_rate_and_size_overlap": "NOT_MEASURED",
+        "capture_license": "NOT_ESTABLISHED",
+        "deliberate_source_address_forgery": "NOT_ESTABLISHED",
+        "larger_capture_header_compatibility": "UNVERIFIED; no bytes inspected"
+      },
+      "document_receipt_keys": [
+        "shield-ref",
+        "shield-tree",
+        "shield-readme"
+      ],
+      "selected_capture_artifact": null,
+      "raw_capture_sha256": null
+    },
+    {
+      "id": "ORION",
+      "urls": [
+        "https://www.uel.br/grupos/orion/datasets/orion-2026.html"
+      ],
+      "version": "Previously exposed ORION 2026 README/licence only",
+      "role": "metadata-influenced development lead only; not untouched reserve",
+      "status": "NOT_QUALIFIED",
+      "confirmed_publisher_metadata": [
+        "CC BY 4.0 existing licence",
+        "UDP target 10.0.0.3:9090; sources 10.0.0.[4-7] and random source ports",
+        "No matching incoming result in one historical focused reply query"
+      ],
+      "missing_or_unverified": {
+        "original_supported_capture_pair": "NOT_ESTABLISHED",
+        "independent_run_emitter_ownership_joins": "NOT_ESTABLISHED",
+        "matched_genuine_distributed_udp_service_and_port": "NOT_ESTABLISHED",
+        "original_time_run_and_clock_mapping": "NOT_ESTABLISHED",
+        "packet_rate_and_size_overlap": "NOT_MEASURED",
+        "deliberate_source_address_forgery": "NOT_ESTABLISHED; random ports are not forged addresses"
+      },
+      "document_receipt_keys": [],
+      "selected_capture_artifact": null,
+      "raw_capture_sha256": null
+    }
+  ],
+  "source_receipts": "docs/verification/spoof-pair-qualification-20261017/source-receipts.json",
+  "orion_existing_metadata": "docs/verification/spoof-pair-qualification-20261017/orion-existing-metadata.json",
+  "orion_reply_check": "docs/verification/spoof-pair-qualification-20261017/orion-reply-check.json",
+  "load_screen": {
+    "executed": false,
+    "reason": "Pre-value provenance prerequisites unmet",
+    "utc_bin_seconds": 1,
+    "block_seconds": 10,
+    "minimum_blocks_each": 3,
+    "minimum_packets_per_second": 1000,
+    "rate_range_intersection": "positive width",
+    "pooled_ip_length_iqr_intersection": "endpoints inclusive"
+  },
+  "promotion_gate_unchanged": {
+    "recall_min": 0.8,
+    "precision_min": 0.95,
+    "fpr_max": 0.02,
+    "incremental_positive_indications": true,
+    "matched_benign_discrimination": true
+  },
+  "historical_development_only": {
+    "tp": 4,
+    "tn": 2,
+    "fp": 4,
+    "fn": 0,
+    "new_measurement": false
+  },
+  "scope": {
+    "new_capture_or_annotation_values_inspected": false,
+    "capture_downloaded": false,
+    "inference_run": false,
+    "training_run": false,
+    "reserved_scoring_run": false,
+    "runtime_changed": false,
+    "failed_subtype_enabled": false,
+    "new_external_messages": 0,
+    "other_partitions_changed": false
+  },
+  "next_step": "Obtain BOUN producer bundle with original compatible captures, independent forged/genuine emitter/run/capture-direction mapping, matching UDP application/port, permission and original timestamps before value inspection."
+}

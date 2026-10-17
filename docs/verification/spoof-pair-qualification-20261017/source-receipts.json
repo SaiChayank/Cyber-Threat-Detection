@@ -1,0 +1,72 @@
+{
+  "boun-record": {
+    "url": "https://data.mendeley.com/datasets/mfnn9bh42m/1",
+    "retrieved_utc": "2026-10-16T20:38:58.784390+00:00",
+    "scope": "publisher documentation/repository reference only",
+    "status": 200,
+    "final_url": "https://data.mendeley.com/datasets/mfnn9bh42m/1",
+    "content_type": "text/html; charset=utf-8",
+    "file": "data/raw/spoof-source-documents-20261017/boun-record.html",
+    "bytes": 125274,
+    "sha256": "5103a2362d33e0e27732253edc31e0fb39d4ef693eb36b61e8256ccc8bb9a17b",
+    "git_tracked": false
+  },
+  "sdn-record": {
+    "url": "https://data.mendeley.com/datasets/p3h8r89kc2/1",
+    "retrieved_utc": "2026-10-16T20:38:58.784774+00:00",
+    "scope": "publisher documentation/repository reference only",
+    "status": 200,
+    "final_url": "https://data.mendeley.com/datasets/p3h8r89kc2/1",
+    "content_type": "text/html; charset=utf-8",
+    "file": "data/raw/spoof-source-documents-20261017/sdn-record.html",
+    "bytes": 118508,
+    "sha256": "2b23592db307de159faacade8de7a5473d6e9b9f10f64c0df3574738d8248092",
+    "git_tracked": false
+  },
+  "bccc-record": {
+    "url": "https://www.yorku.ca/research/bccc/ucs-technical/cybersecurity-datasets-cds/udp-quic-network-threat-dataset-bccc-udp-quic-ids-2025/",
+    "retrieved_utc": "2026-10-16T20:38:58.785009+00:00",
+    "scope": "publisher documentation/repository reference only",
+    "status": 200,
+    "final_url": "https://www.yorku.ca/research/bccc/ucs-technical/cybersecurity-datasets-cds/udp-quic-network-threat-dataset-bccc-udp-quic-ids-2025/",
+    "content_type": "text/html; charset=UTF-8",
+    "file": "data/raw/spoof-source-documents-20261017/bccc-record.html",
+    "bytes": 65656,
+    "sha256": "b07872130f47819ed9f24bbc65bab46288759c93840be6ddb737edb264d33a03",
+    "git_tracked": false
+  },
+  "shield-ref": {
+    "url": "https://api.github.com/repos/i46-projects/SHIELD-i46/git/ref/heads/main",
+    "retrieved_utc": "2026-10-16T20:38:58.785252+00:00",
+    "scope": "publisher documentation/repository reference only",
+    "status": 200,
+    "final_url": "https://api.github.com/repos/i46-projects/SHIELD-i46/git/ref/heads/main",
+    "content_type": "application/json; charset=utf-8",
+    "file": "docs/verification/spoof-pair-qualification-20261017/shield-ref.json",
+    "bytes": 344,
+    "sha256": "f86743cff046124dc09f0ff6bef1f09722d137c2c3617dbde8d5882e1e8b5212",
+    "git_tracked": true
+  },
+  "shield-tree": {
+    "url": "https://api.github.com/repos/i46-projects/SHIELD-i46/git/trees/d96eea3b833c2c6bc218daf31ddc18b6e93d28d7?recursive=1",
+    "retrieved_utc": "2026-10-16T20:39:59.527673+00:00",
+    "scope": "Git tree catalogue or pinned README only, no file diffs/capture values",
+    "status": 200,
+    "content_type": "application/json; charset=utf-8",
+    "file": "docs/verification/spoof-pair-qualification-20261017/shield-tree.json",
+    "bytes": 3429,
+    "sha256": "1966232f7bce7c782006560d1bdb1367c81f3fd939876069e7ba788165957791",
+    "git_tracked": true
+  },
+  "shield-readme": {
+    "url": "https://raw.githubusercontent.com/i46-projects/SHIELD-i46/d96eea3b833c2c6bc218daf31ddc18b6e93d28d7/README.md",
+    "retrieved_utc": "2026-10-16T20:39:59.528943+00:00",
+    "scope": "Git tree catalogue or pinned README only, no file diffs/capture values",
+    "status": 200,
+    "content_type": "text/plain; charset=utf-8",
+    "file": "data/raw/spoof-source-documents-20261017/shield-readme.md",
+    "bytes": 1925,
+    "sha256": "1e255f623e9337780d3af6af969871f0506d4c19ff051e4974480920d4ffd7a4",
+    "git_tracked": false
+  }
+}

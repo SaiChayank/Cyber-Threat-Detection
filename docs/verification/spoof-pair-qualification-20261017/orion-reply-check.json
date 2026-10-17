@@ -1,0 +1,12 @@
+{
+  "scope": "One focused check of the previously approved ORION request; no monitoring or new message",
+  "reference_time_utc": "2026-10-16T20:41:21Z",
+  "time_precision": "Approximate final-result time referenced to clock immediately before result; not a check at report completion",
+  "reference_time_ist": "2026-10-17 02:11 IST",
+  "account": "saichayank07@gmail.com",
+  "query": "in:anywhere -in:sent -in:drafts {from:proenca@uel.br subject:\"ORION 2026\"}",
+  "observed_result": "No messages matched your search.",
+  "message_opened": false,
+  "message_sent": false,
+  "limitation": "Does not establish delivery, absence of replies outside the query, or current mailbox state."
+}

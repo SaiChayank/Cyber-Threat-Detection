@@ -1,5 +1,15 @@
 # Univect completion plan
 
+**T22 forged/genuine pair source screen, 17 October 2026:**
+[qualification report](SPOOF_PAIR_QUALIFICATION.md) and
+`data/spoof_pair_qualification.json` record BLOCKED_NOT_QUALIFIED after five
+bounded publisher leads. BOUN explicitly describes spoofed attack sources but
+does not establish an original supported capture pair with independently labelled
+genuine clients on the same UDP service/port and original-time provenance.
+No packet/annotation values, overlap measurement, detector change or reserve.
+Failed subtype stays disabled. Next obtain the producer provenance bundle before
+packet inspection; qualification DoD remains unmet. No new message was sent.
+
 **T22 suspected-spoof observability diagnosis completed, 17 October 2026:**
 [decision](SPOOF_OBSERVABILITY_DECISION.md) reproduces four generic-DDOS FPs as
 HYBRID, proves three complete forged/genuine metadata/runtime collisions, and
