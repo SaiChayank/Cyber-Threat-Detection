@@ -1,0 +1,161 @@
+{
+  "baseline_commit": "21f571a",
+  "scope": "Five-source publicly licensed DNS alternative metadata screen only",
+  "status": "OPEN_RIGHTS_LEADS_FOUND_EVALUATION_BLOCKED",
+  "source_screen_complete": true,
+  "qualified_complete_collections": 0,
+  "selected_reserved_manifest": null,
+  "assigned_positive_sessions": null,
+  "assigned_benign_sessions": null,
+  "protocol": "docs/DNS_OPEN_SOURCE_SCREEN_PROTOCOL.md",
+  "protocol_sha256": "7c8458c931d7d232ada80b2d7539a8134a27055fa9278aa708805654ecd3632e",
+  "frozen_evaluation_contract": "data/dns_tunnel_evaluation_contract.json",
+  "frozen_evaluation_contract_sha256": "a30b164f22ed1d9bd61a89d9e8f225ab408fc91df2c06449159f6144ec68208b",
+  "source_leads": [
+    {
+      "id": "zenodo-dnstunnel",
+      "source_url": "https://zenodo.org/records/20137065",
+      "doi": "10.5281/zenodo.20137065",
+      "version": null,
+      "declared_license": {
+        "id": "cc-by-4.0"
+      },
+      "declared_access_right": "open",
+      "rights_from_publisher_metadata": true,
+      "status": "NOT_QUALIFIED_FOR_FROZEN_EVALUATION",
+      "issues": [
+        "Processed company/domain window features do not establish released original client questions/session time boundaries",
+        "SmoothFlow does not establish required dnscat2/iodine tool coverage",
+        "Reputation/behavior-supported labels cannot be presumed independent session truth",
+        "Five benign strata and session independence not verified"
+      ],
+      "listed_artifacts": [
+        {
+          "name": "DNSTunnel2026.zip",
+          "bytes": 497565428,
+          "publisher_checksum": "md5:e2a4c675b480f9c10b8629494d9ae7dc",
+          "local_sha256": null,
+          "downloaded": false
+        }
+      ],
+      "receipt_keys": [
+        "zenodo-dnstunnel"
+      ]
+    },
+    {
+      "id": "zenodo-benign",
+      "source_url": "https://zenodo.org/records/19206234",
+      "doi": "10.5281/zenodo.19206234",
+      "version": null,
+      "declared_license": {
+        "id": "cc-by-4.0"
+      },
+      "declared_access_right": "open",
+      "rights_from_publisher_metadata": true,
+      "status": "NOT_QUALIFIED_FOR_FROZEN_EVALUATION",
+      "issues": [
+        "Producer documentation recommends PCAPNG; original classic Ethernet format unverified, no conversion allowed",
+        "45 expected profile captures are not >=50 verified independent DNS sessions",
+        "Five DNS application categories/source-time question joins unverified",
+        "Run logs/provenance described partly as optional, some appendix policy parameters remain fill"
+      ],
+      "listed_artifacts": [
+        {
+          "name": "capturasAgentes.zip",
+          "bytes": 6853462196,
+          "publisher_checksum": "md5:9ab42d5978237a2b9e613d6b0d0f0440",
+          "local_sha256": null,
+          "downloaded": false
+        }
+      ],
+      "receipt_keys": [
+        "zenodo-benign"
+      ]
+    },
+    {
+      "id": "elastic",
+      "source_url": "https://github.com/elastic/examples",
+      "commit": "6d86454ebb7a850bcd7e80abe86fe683370018a6",
+      "branch_at_lookup": "master",
+      "declared_repository_license": "Apache-2.0",
+      "rights_from_publisher_metadata": "Repository licence only; capture provenance/applicability not independently verified",
+      "status": "NOT_QUALIFIED_FOR_FROZEN_EVALUATION",
+      "issues": [
+        "One catalogue-listed iodine example, not a verified >=20 independent-session collection",
+        "Original source/session/capture attribution and exact boundaries unverified",
+        "Five benign categories not supplied by sample",
+        "No header/packet visibility check performed"
+      ],
+      "receipt_keys": [
+        "elastic-ref",
+        "elastic-catalogue",
+        "elastic-LICENSE",
+        "elastic-README-md",
+        "elastic-dns-README-md"
+      ],
+      "raw_capture_downloaded": false,
+      "raw_capture_sha256": null
+    },
+    {
+      "id": "shanu",
+      "source_url": "https://github.com/shanu0x17/dns-tunnel-detection-lab",
+      "commit": "056f27abaa2540877f42d52cf0f58097ce9c348e",
+      "branch_at_lookup": "main",
+      "declared_repository_license": "MIT",
+      "rights_from_publisher_metadata": "Repository licence only; capture provenance/applicability not independently verified",
+      "status": "NOT_QUALIFIED_FOR_FROZEN_EVALUATION",
+      "issues": [
+        "README describes custom chunk/session protocol, not established dnscat2/iodine",
+        "Small local corpus; independent run/session counts and five benign categories unverified",
+        "MIT repository licence saved; no separately explicit capture-data provenance statement established"
+      ],
+      "receipt_keys": [
+        "shanu-ref",
+        "shanu-tree",
+        "shanu-README-md",
+        "shanu-LICENSE"
+      ],
+      "raw_capture_downloaded": false,
+      "raw_capture_sha256": null
+    },
+    {
+      "id": "cnr",
+      "source_url": "https://github.com/mopamopa/DNS-tunneling",
+      "commit": "f39471e68adef1f58f1efa2899d940ab38900489",
+      "branch_at_lookup": "main",
+      "declared_repository_license": null,
+      "rights_from_publisher_metadata": false,
+      "status": "NOT_QUALIFIED_FOR_FROZEN_EVALUATION",
+      "issues": [
+        "No producer licence established; root LICENSE returned 404",
+        "Statistics and DNS2TCP traffic do not establish required tool/causal lexical query contract",
+        "Linked original text dumps not downloaded; rights, complete fields, labels and controls unverified"
+      ],
+      "receipt_keys": [
+        "cnr-ref",
+        "cnr-tree",
+        "cnr-README-md",
+        "cnr-LICENSE"
+      ],
+      "raw_capture_downloaded": false,
+      "raw_capture_sha256": null
+    }
+  ],
+  "producer_documentation_exposure": "All consulted metadata/README/licence examples are exposed; no new data-role assignment or untouched-reserve claim",
+  "receipts": "docs/verification/dns-open-source-screen-20261017/source-receipts.json",
+  "scope_controls": {
+    "traffic_archives_downloaded": 0,
+    "packet_or_query_rows_inspected": false,
+    "model_binaries_downloaded": 0,
+    "upstream_scripts_executed": false,
+    "training": false,
+    "inference": false,
+    "reserved_scoring": false,
+    "runtime_change": false,
+    "candidate_activation": false,
+    "external_messages": 0
+  },
+  "source_screen_dod": "Metadata/rights suitability review and integrity record; not detector quality",
+  "data_qualification_dod_passed": false,
+  "next_prerequisite": "Openly licensed original dnscat2/iodine client-query/capture release with executed-session/run truth and documented benign-category controls before bounded artifact acquisition."
+}

@@ -197,6 +197,15 @@ Skip ahead only to independent eligible work when the current package is blocked
 
 ## Phase 3 — resolve the three data-dependent detector tracks
 
+T30 alternative-source update, 17 October 2026: user chose publicly licensed data.
+[Five-source DNS screen](DNS_OPEN_SOURCE_ALTERNATIVES.md) verifies two open CC BY
+4.0 releases without needing a reply for their declared rights. Neither they nor
+the other three leads establish the entire frozen original-question/session/tool/
+benign-control contract. No traffic values, archive download, training, runtime
+change or reserve assignment/scoring. T30 remains blocked on qualified evidence;
+the next prerequisite is an original dnscat2/iodine release with executed-session
+annotations plus documented benign categories. Existing requests are not resent.
+
 These can progress as independent research tracks, but each actual implementation
 and reserved evaluation is a separate scoped task. Do not mix/tune their data.
 

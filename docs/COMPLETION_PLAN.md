@@ -1,5 +1,15 @@
 # Univect completion plan
 
+**T30 public-source alternative screen, 17 October 2026:** user selected public
+licence alternatives. [DNS source review](DNS_OPEN_SOURCE_ALTERNATIVES.md) and
+`data/dns_open_source_screen.json` record five bounded metadata-only leads.
+Two Zenodo releases explicitly declare open/CC BY 4.0, but original query-session
+truth, required tool/benign coverage and supported inputs are not collectively
+established. No traffic archive/rows/model binary downloaded, no reserved sessions
+assigned or scored. The frozen DNS contract and disabled candidate are unchanged.
+Next obtain an openly licensed original dnscat2/iodine release with executed
+session annotations and documented benign controls before values; T30 stays blocked.
+
 **T22 forged/genuine pair source screen, 17 October 2026:**
 [qualification report](SPOOF_PAIR_QUALIFICATION.md) and
 `data/spoof_pair_qualification.json` record BLOCKED_NOT_QUALIFIED after five

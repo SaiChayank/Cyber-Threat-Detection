@@ -1,0 +1,10 @@
+{
+  "commit": "c756900b014fb9c5066b437372aba281e1bd320e",
+  "selected_documents": [
+    "Reproducibility Protocol (R=5).md",
+    "appendix.md",
+    "pcaps/README.md"
+  ],
+  "selection_rationale": "Producer run protocol, application appendix and capture-format guidance before traffic values; no derived QC or detector results",
+  "scope": "documentation only; not independent session qualification by filename"
+}

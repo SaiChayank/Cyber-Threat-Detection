@@ -1,0 +1,14 @@
+{
+  "firecrawl": "Missing non-empty link_id routing argument; no result/search id, so no feedback id available",
+  "web_api_open": "Zenodo API URLs unavailable via web tool; public ordinary HTTP API worked without challenge/authentication",
+  "initial_command_failure": "Console cp1252 UnicodeEncodeError while printing already saved README; no data rows affected. Recovered existing receipt timestamps from local file-save times and explicitly marked them; UTF-8 console and incremental receipt saving used thereafter.",
+  "upstream_instructions": "Documentation only; installation, active dig/time-shifting/replay/generation commands not executed",
+  "secondary_index": "CNR CC BY-NC indication treated only as unverified third-party lead",
+  "consulted_primary_urls": [
+    "https://www.elastic.co/blog/detecting_dns_tunnels_with_packetbeat_and_watcher",
+    "https://www.mdpi.com/2073-431X/14/9/375"
+  ],
+  "documentation_examples_exposed": true,
+  "packet_values_exposed": false,
+  "raw_archive_contents_inspected": false
+}

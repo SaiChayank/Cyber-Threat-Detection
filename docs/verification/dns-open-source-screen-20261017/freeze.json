@@ -1,0 +1,31 @@
+{
+  "baseline_commit": "21f571a",
+  "status": "OPEN_RIGHTS_LEADS_FOUND_EVALUATION_BLOCKED",
+  "files": {
+    "data/dns_open_source_screen.json": "cfa360f5c0536240f3fc8e0f69543bc532804ca526e1d4986403cb869d81e597",
+    "docs/COMPLETION_PLAN.md": "439624b44e1a42ab1f11b8b508812fe39e1d8c6b493787af207405c503a0ef6e",
+    "docs/DNS_OPEN_SOURCE_ALTERNATIVES.md": "f804096052e9125ae84d8b1b3ac95e43d973c8d603ad163cbb66941124f6ae7c",
+    "docs/DNS_OPEN_SOURCE_SCREEN_PROTOCOL.md": "7c8458c931d7d232ada80b2d7539a8134a27055fa9278aa708805654ecd3632e",
+    "docs/REMAINING_WORK_PLAN.md": "f2d7ee92de4fe5cb79da10627223489a09d26a0e8f34453fed58f76b2e669d2e",
+    "docs/verification/dns-open-source-screen-20261017/access-and-exposure.json": "bc3e377115ad0d64c36c524b43f40fca5fc65fa6cc7a6f0e618011f194f7c6a5",
+    "docs/verification/dns-open-source-screen-20261017/checks.json": "6994d3da71bb3716d9bc449f3043e44360992cf3f4629897ca9921abbcc1a971",
+    "docs/verification/dns-open-source-screen-20261017/cnr-ref.json": "202032f3a1d8b540f998c8841ea74caf906f270c5b08bf32834f471283392365",
+    "docs/verification/dns-open-source-screen-20261017/cnr-tree.json": "9b77a9cec30b35025e0e620fb463825ce9ee2bb32af93c2fcb6eae79fa155b3b",
+    "docs/verification/dns-open-source-screen-20261017/elastic-catalogue.json": "861882ebbd29d45824d6718a7110b023321442acc2afcbddac2549a99a511185",
+    "docs/verification/dns-open-source-screen-20261017/elastic-ref.json": "a384fe6a3355565fdf5e8b0b75a73a8f340b8281d9551f1d4d04c9736af52005",
+    "docs/verification/dns-open-source-screen-20261017/integrity-after.json": "56cb07049e0d40ea5760459c6733ccaa457f2bb50653b1a4b5a6ffa81a3997d2",
+    "docs/verification/dns-open-source-screen-20261017/integrity-before.json": "56cb07049e0d40ea5760459c6733ccaa457f2bb50653b1a4b5a6ffa81a3997d2",
+    "docs/verification/dns-open-source-screen-20261017/protocol.sha256": "29d16f23c7d83c61b99161ca4b5882ca2f127a3144a7473ac5e90490afbb8f41",
+    "docs/verification/dns-open-source-screen-20261017/publisher-document-bytes.json": "0a7bf99076f7805f2567bc55ef2f830d9cd61fe0343284ce7d9042c05af64dbc",
+    "docs/verification/dns-open-source-screen-20261017/shanu-ref.json": "7c08c93ffc123640a9e0635d8209af79181402156c6a4418895ceefa12d03541",
+    "docs/verification/dns-open-source-screen-20261017/shanu-tree.json": "63afaf2714745f792e5a64e57622bd7765cc33ded45ebb00b0cbaf8125e62ca6",
+    "docs/verification/dns-open-source-screen-20261017/source-receipts.json": "99beae90f44fd66d13db864c2d9e91b9e64135a4b42e3344effb2a36368cd7f3",
+    "docs/verification/dns-open-source-screen-20261017/uma-document-selection.json": "52dcce54f6d06846b42e30fff840db157507b5f454c3b14b209127f9a6fb9abd",
+    "docs/verification/dns-open-source-screen-20261017/uma-ref.json": "a8866f7e7625ec7aa3d9c502c83f471bec92e660234d9b17b2b2ea42d24869be",
+    "docs/verification/dns-open-source-screen-20261017/uma-tree.json": "d01aa3879dd9dfab044e0e523d55c1e9526002f69573a29652655510995681ce",
+    "docs/verification/dns-open-source-screen-20261017/zenodo-benign.json": "f4730ba5ed3dd3867302ac7e33ac91d3911c87422c5b5153d5a8186676897582",
+    "docs/verification/dns-open-source-screen-20261017/zenodo-dnstunnel.json": "60168b30b2686d56683406f7d3cca29703b74bf71f4c5e226384e5bdc05a29e0"
+  },
+  "source_screen_dod_passed": true,
+  "data_qualification_dod_passed": false
+}

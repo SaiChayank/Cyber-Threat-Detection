@@ -1,0 +1,175 @@
+{
+  "recorded_utc": "2026-10-17T06:53:41.132218+00:00",
+  "passed": 41,
+  "failed": 0,
+  "protected_file_count": 109,
+  "checks": [
+    {
+      "check": "Receipt byte hash/size zenodo-dnstunnel",
+      "passed": true
+    },
+    {
+      "check": "Receipt byte hash/size zenodo-benign",
+      "passed": true
+    },
+    {
+      "check": "Receipt byte hash/size cnr-ref",
+      "passed": true
+    },
+    {
+      "check": "Receipt byte hash/size cnr-tree",
+      "passed": true
+    },
+    {
+      "check": "Receipt byte hash/size cnr-README-md",
+      "passed": true
+    },
+    {
+      "check": "Explicit metadata error recorded cnr-LICENSE",
+      "passed": true
+    },
+    {
+      "check": "Receipt byte hash/size shanu-ref",
+      "passed": true
+    },
+    {
+      "check": "Receipt byte hash/size shanu-tree",
+      "passed": true
+    },
+    {
+      "check": "Receipt byte hash/size shanu-README-md",
+      "passed": true
+    },
+    {
+      "check": "Receipt byte hash/size shanu-LICENSE",
+      "passed": true
+    },
+    {
+      "check": "Receipt byte hash/size elastic-ref",
+      "passed": true
+    },
+    {
+      "check": "Receipt byte hash/size elastic-catalogue",
+      "passed": true
+    },
+    {
+      "check": "Receipt byte hash/size elastic-LICENSE",
+      "passed": true
+    },
+    {
+      "check": "Receipt byte hash/size elastic-README-md",
+      "passed": true
+    },
+    {
+      "check": "Receipt byte hash/size elastic-dns-README-md",
+      "passed": true
+    },
+    {
+      "check": "Receipt byte hash/size uma-ref",
+      "passed": true
+    },
+    {
+      "check": "Receipt byte hash/size uma-tree",
+      "passed": true
+    },
+    {
+      "check": "Receipt byte hash/size uma-README-md",
+      "passed": true
+    },
+    {
+      "check": "Receipt byte hash/size uma-selected-0",
+      "passed": true
+    },
+    {
+      "check": "Receipt byte hash/size uma-selected-1",
+      "passed": true
+    },
+    {
+      "check": "Receipt byte hash/size uma-selected-2",
+      "passed": true
+    },
+    {
+      "check": "Pinned complete catalogue cnr",
+      "passed": true
+    },
+    {
+      "check": "Pinned Git document bytes cnr/README.md",
+      "passed": true
+    },
+    {
+      "check": "Pinned complete catalogue shanu",
+      "passed": true
+    },
+    {
+      "check": "Pinned Git document bytes shanu/README.md",
+      "passed": true
+    },
+    {
+      "check": "Pinned Git document bytes shanu/LICENSE",
+      "passed": true
+    },
+    {
+      "check": "Pinned complete catalogue uma",
+      "passed": true
+    },
+    {
+      "check": "Pinned Git document bytes uma/README.md",
+      "passed": true
+    },
+    {
+      "check": "Pinned Git document bytes uma/Reproducibility Protocol (R=5).md",
+      "passed": true
+    },
+    {
+      "check": "Pinned Git document bytes uma/appendix.md",
+      "passed": true
+    },
+    {
+      "check": "Pinned Git document bytes uma/pcaps/README.md",
+      "passed": true
+    },
+    {
+      "check": "Publisher open CC BY 4.0 zenodo-dnstunnel",
+      "passed": true
+    },
+    {
+      "check": "Publisher open CC BY 4.0 zenodo-benign",
+      "passed": true
+    },
+    {
+      "check": "Five source families and no qualified reserved set",
+      "passed": true
+    },
+    {
+      "check": "No new data rows/training/inference/reserve/runtime/activation/messages",
+      "passed": true
+    },
+    {
+      "check": "Frozen source-screen protocol",
+      "passed": true
+    },
+    {
+      "check": "Frozen numerical and timing gates",
+      "passed": true
+    },
+    {
+      "check": "Reserved data remains unready and candidate default off",
+      "passed": true
+    },
+    {
+      "check": "All protected runtime/artifact/partition/history bytes unchanged",
+      "passed": true
+    },
+    {
+      "check": "Publisher byte-preserving base64 copies verify without altering upstream whitespace/encoding",
+      "passed": true
+    },
+    {
+      "check": "All source receipts still match original bytes after document archival packaging",
+      "passed": true
+    }
+  ],
+  "tests_added": 0,
+  "tests_rerun": false,
+  "scope": "Metadata/provenance/integrity only, not detector accuracy/performance"
+}
