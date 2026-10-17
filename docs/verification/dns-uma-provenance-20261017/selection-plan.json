@@ -1,0 +1,39 @@
+{
+  "baseline_commit": "b9dd408",
+  "scope": "Pinned producer text/canonical catalogue only; no traffic/header/CSV/query rows, scripts, tools, inference, training or new source data",
+  "commit": "c756900b014fb9c5066b437372aba281e1bd320e",
+  "catalogue_file": "docs/verification/dns-open-source-screen-20261017/uma-tree.json",
+  "catalogue_sha256": "d01aa3879dd9dfab044e0e523d55c1e9526002f69573a29652655510995681ce",
+  "selected_documents": [
+    {
+      "path": "reproducibility/REPRODUCIBILITY.md",
+      "publisher_blob_sha1": "46dad837bf78aeed3a2044d2482e9923d9938575",
+      "publisher_bytes": 667
+    },
+    {
+      "path": "reproducibility/external_reference/README.md",
+      "publisher_blob_sha1": "4e4ced41a82a12a9b06e27296bc549248264dc76",
+      "publisher_bytes": 2280
+    },
+    {
+      "path": "reproducibility/external_reference/manifests/README.md",
+      "publisher_blob_sha1": "3c1cf009d3a0e6e2593d0df501ec349c3def1c18",
+      "publisher_bytes": 362
+    },
+    {
+      "path": "reproducibility/external_reference/docs/dataset_selection.md",
+      "publisher_blob_sha1": "171c3758197f6220403d57b26e73a3ee987cbf46",
+      "publisher_bytes": 535
+    },
+    {
+      "path": "reproducibility/external_reference/docs/methodology.md",
+      "publisher_blob_sha1": "09a13831cb4d99bb2adc4b6a11db7f47fb7102c1",
+      "publisher_bytes": 688
+    }
+  ],
+  "max_document_bytes": 65536,
+  "max_total_bytes": 262144,
+  "source": "https://github.com/Sergiolopezflores/BehaviorallyGroundedAgent-BasedBenignTrafficGenerationwithLLMVariability",
+  "all_gate_and_role_changes_forbidden": true,
+  "stop": "If actual executed source/time/namespace/category provenance is absent, record blocked and move to independent development diagnosis; no contact or decoder install."
+}

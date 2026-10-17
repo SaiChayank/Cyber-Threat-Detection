@@ -1,5 +1,13 @@
 # Univect completion plan
 
+**T30 public provenance follow-up, 17 October UTC / 18 October IST:**
+[decision](DNS_UMA_PROVENANCE_DECISION.md) verifies five pinned producer text
+documents. Public manifest files are templates for descriptive capture/window
+metrics, not executed DNS session/category annotations. Reproducibility-map paths
+are absent at the pinned revision. No new rows/headers, conversion, software,
+model/contract change or scoring. DNS remains blocked; under the user's continuous
+authorization, proceed to independent T24 development observability diagnosis.
+
 **T30 downloaded-source qualification, 17 October 2026:**
 [decision](DNS_PUBLIC_DATA_QUALIFICATION.md) and `data/dns_public_qualification.json`
 record NOT QUALIFIED under the frozen pre-value plan. DNSTunnel2026 contains a

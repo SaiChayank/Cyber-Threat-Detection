@@ -1,0 +1,56 @@
+{
+  "recorded_utc": "2026-10-17T18:30:55.920949+00:00",
+  "passed": 11,
+  "failed": 0,
+  "protected_file_count": 117,
+  "checks": [
+    {
+      "check": "Pinned selection plan unchanged",
+      "passed": true
+    },
+    {
+      "check": "Complete original pinned catalogue unchanged",
+      "passed": true
+    },
+    {
+      "check": "Publisher text identity reproducibility/REPRODUCIBILITY.md",
+      "passed": true
+    },
+    {
+      "check": "Publisher text identity reproducibility/external_reference/README.md",
+      "passed": true
+    },
+    {
+      "check": "Publisher text identity reproducibility/external_reference/manifests/README.md",
+      "passed": true
+    },
+    {
+      "check": "Publisher text identity reproducibility/external_reference/docs/dataset_selection.md",
+      "passed": true
+    },
+    {
+      "check": "Publisher text identity reproducibility/external_reference/docs/methodology.md",
+      "passed": true
+    },
+    {
+      "check": "Reproducibility-map path gap at pinned revision",
+      "passed": true
+    },
+    {
+      "check": "Producer explicitly describes templates, not executed DNS manifests",
+      "passed": true
+    },
+    {
+      "check": "Exactly selected five text documents within bound",
+      "passed": true
+    },
+    {
+      "check": "All protected source/runtime/model/partition/history hashes unchanged",
+      "passed": true
+    }
+  ],
+  "new_raw_data_access": false,
+  "tests_added": 0,
+  "application_tests_rerun": false,
+  "source_qualification_passed": false
+}

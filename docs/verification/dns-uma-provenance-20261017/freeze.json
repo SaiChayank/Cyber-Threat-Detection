@@ -1,0 +1,17 @@
+{
+  "baseline_commit": "b9dd408",
+  "files": {
+    "docs/DNS_UMA_PROVENANCE_DECISION.md": "9f069504416d4fe7ad3a4e405ae57c6a1fbf6b5c0383febf2c3f06f612dc0136",
+    "docs/COMPLETION_PLAN.md": "db6342a33647914fda76129517c3cbbf0b64a281571c0bce87ff4d9a85d3013e",
+    "docs/REMAINING_WORK_PLAN.md": "366647aa893c5e9145f11485268be3bb9ae80b7b902a6943d9e23ed164c51cd5",
+    "docs/verification/unattended-progress-20261017/progress.json": "d2c7ef7c456ec0eda6f44cc1cca55af11a76126d213ae58e05c868b41210d9f7",
+    "docs/verification/dns-uma-provenance-20261017/checks.json": "fed50c4f4181c060f6792b8e93618f558da9a31ba433073047d529a8b7ffacc8",
+    "docs/verification/dns-uma-provenance-20261017/integrity-after.json": "5cb8ca38c3c3f7a75ad5a080419f3c731fcf70b2ca1ae76ad5a302c3a64db593",
+    "docs/verification/dns-uma-provenance-20261017/integrity-before.json": "5cb8ca38c3c3f7a75ad5a080419f3c731fcf70b2ca1ae76ad5a302c3a64db593",
+    "docs/verification/dns-uma-provenance-20261017/reviewed-publisher-documents.json": "efdf0bff5a83177e9fd19a7ec0ce1a4060210fca104b932eb87d4640f8fa57d2",
+    "docs/verification/dns-uma-provenance-20261017/selection-plan.json": "07b8ba81006c5c382242921397e76398f20ced62b0306ac0afc03a7b61bb2d41",
+    "docs/verification/dns-uma-provenance-20261017/selection-plan.sha256": "10ce4d4202d77970e9afb9d204531a38f8864be017b56bf00f87693eca26a794"
+  },
+  "review_dod_passed": true,
+  "source_qualification_dod_passed": false
+}

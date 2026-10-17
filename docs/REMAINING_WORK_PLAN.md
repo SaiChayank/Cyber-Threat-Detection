@@ -197,6 +197,12 @@ Skip ahead only to independent eligible work when the current package is blocked
 
 ## Phase 3 — resolve the three data-dependent detector tracks
 
+T30 public-provenance follow-up, 17 October UTC / 18 October IST:
+[UMA decision](DNS_UMA_PROVENANCE_DECISION.md) finds only public template manifests
+and descriptive window-comparison instructions, not executed DNS session labels.
+Five pinned text documents verified; no new data rows/headers or source roles.
+Keep T30 blocked; continuous-work authorization permits independent T24 diagnosis.
+
 T30 downloaded-source qualification, 17 October 2026: [decision](DNS_PUBLIC_DATA_QUALIFICATION.md)
 records no eligible final set. DNSTunnel2026's actual catalogue is nested
 train/test CSVs plus model/README; original query/run truth is not established.
