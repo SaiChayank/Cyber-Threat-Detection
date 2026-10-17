@@ -146,6 +146,12 @@ the observability work for remaining subtypes or accept the UDP detector.
 
 **T21–T26 — Per-detector quality closure. P0; DEPENDS ON T20.**
 
+T25 diagnosis update, 18 October 2026 IST: [exfil decision](EXFIL_OBSERVABILITY_DECISION.md)
+reproduces 3 RULE/1 ML first FPs with exact wording, verifies four complete
+opposite-purpose collisions and causal byte/ratio semantics. Twenty-four new
+cases; 121 targeted regressions pass. No runtime/model/gate change or new quality
+evaluation. T25 remains unresolved; next current-baseline full tests/build only.
+
 T24 diagnosis update, 18 October 2026 IST: [recon decision](RECON_OBSERVABILITY_DECISION.md)
 reproduces three ML-only FPs, two complete opposite-authorization metadata/runtime
 collisions and a distinct service-discovery prefix overlap. Six-host slow-window

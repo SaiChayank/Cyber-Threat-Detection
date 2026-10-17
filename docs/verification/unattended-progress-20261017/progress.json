@@ -2,7 +2,7 @@
   "authorization": "User requested continuous eligible project work while away within the five-hour session window; commit each completed verified package",
   "reference_start_utc": "2026-10-17T18:29:23Z",
   "wall_clock_upper_bound_utc": "2026-10-17T23:29:23Z",
-  "current_task": "T25 possible-exfiltration observability diagnosis",
+  "current_task": "Current-baseline full backend regression plus frontend typecheck/build",
   "completed": [
     {
       "task": "Downloaded DNS qualification",
@@ -18,11 +18,16 @@
       "task": "T24 reconnaissance observability diagnosis",
       "decision": "3 first FPs reproduce; two full collisions, one prefix collision; 22 new tests/86 targeted pass; quality gate unchanged and unresolved",
       "commit": "See package Git history"
+    },
+    {
+      "task": "T25 exfil observability diagnosis",
+      "decision": "4 exact first FPs, four full collisions, causal ratio/volume verified; 24 new tests/121 targeted pass; quality unresolved",
+      "commit": "See package Git history"
     }
   ],
   "remaining_queue": [
-    "T25 possible-exfiltration observability diagnosis",
-    "Independent plan tasks with satisfied prerequisites"
+    "Current-baseline regression/typecheck/build",
+    "Other independent plan tasks with satisfied prerequisites"
   ],
   "constraints": [
     "No gate relaxation",

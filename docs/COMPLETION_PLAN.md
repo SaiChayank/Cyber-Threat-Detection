@@ -1,5 +1,14 @@
 # Univect completion plan
 
+**T25 exfil observability diagnosis, 18 October 2026 IST:**
+[decision](EXFIL_OBSERVABILITY_DECISION.md) reproduces four FPs (3 RULE/1 ML),
+including exact qualified evidence text. Four full opposite-purpose metadata/
+runtime/model collisions, strict 20 MB boundary and unavailable-vs-observed-zero
+reverse semantics verified. Twenty-four new cases; 121 targeted regressions pass.
+Historical TP4/TN2/FP4/FN1, runtime, artifact and gates unchanged. Diagnostic DoD
+passes; intent-quality remains blocked on separating passive context/provenance.
+Next: full current-baseline regression/typecheck/build, not final release closure.
+
 **T24 recon observability diagnosis, 18 October 2026 IST:**
 [decision](RECON_OBSERVABILITY_DECISION.md) reproduces three ML-only first FPs,
 proves two full authorization-label collisions and distinguishes the 24-event

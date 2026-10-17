@@ -1,0 +1,61 @@
+{
+  "recorded_utc": "2026-10-17T18:38:49.755439+00:00",
+  "passed": 12,
+  "failed": 0,
+  "protected_file_count": 124,
+  "checks": [
+    {
+      "check": "Frozen T25 protocol",
+      "passed": true
+    },
+    {
+      "check": "Only EXFIL and four exact FP sources",
+      "passed": true
+    },
+    {
+      "check": "Historical counts unchanged",
+      "passed": true
+    },
+    {
+      "check": "All four complete opposite-label observation/runtime/model/rule collisions",
+      "passed": true
+    },
+    {
+      "check": "Qualified actual supporting evidence preserved",
+      "passed": true
+    },
+    {
+      "check": "Slow FN has maximum20MB and never meets strict >20MB rule",
+      "passed": true
+    },
+    {
+      "check": "Unavailable ratio and finite observed40 remain distinct",
+      "passed": true
+    },
+    {
+      "check": "No fit/tuning/ablation/reserve or positive quality replay",
+      "passed": true
+    },
+    {
+      "check": "Current diagnostic source identities",
+      "passed": true
+    },
+    {
+      "check": "Frozen deployed model",
+      "passed": true
+    },
+    {
+      "check": "All protected runtime/model/generator/history/evidence files unchanged",
+      "passed": true
+    },
+    {
+      "check": "121 targeted tests actually passed",
+      "passed": true
+    }
+  ],
+  "tests_added": 24,
+  "targeted_tests_passed": 121,
+  "runtime_changed": false,
+  "full_backend_rerun_in_this_package": false,
+  "new_quality_metrics": false
+}

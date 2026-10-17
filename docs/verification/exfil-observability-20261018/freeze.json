@@ -1,0 +1,22 @@
+{
+  "baseline_commit": "1f99d49",
+  "diagnostic_dod_passed": true,
+  "quality_dod_passed": false,
+  "files": {
+    "datasets/analyze_baseline_failures.py": "c6ff05874322749feff3ce641c3ac6495f7a572fd6dabeeb84383b102eabdde8",
+    "tests/test_exfil_observability.py": "6fbb70ac3545f8887c5d03c4538727eb42f4f0a4deaf2f735eaf7bd554a81c3b",
+    "docs/EXFIL_OBSERVABILITY_PROTOCOL.md": "ab7036dfb14b32e9c0a4960e3ded18e167d126c8a76c866a1df7cf77e14a7cb0",
+    "docs/EXFIL_OBSERVABILITY_DECISION.md": "8caeb14e86c393cefc18606942c5422c4f489f2edf36bc1c17f0c5f3c5cae4d5",
+    "docs/COMPLETION_PLAN.md": "1d8dd429c67470cbfb1572d3fd5117cd73deaa8cb5c9062dc893dd867f0fdfd0",
+    "docs/REMAINING_WORK_PLAN.md": "22d6a0b5dd98b43f90740c43695c1280be7011529b010533d443ba187d55c478",
+    "docs/verification/unattended-progress-20261017/progress.json": "3c3fcafbc86f0a567d728d92ed7e8d74e2268f8a36a101029932fedda3f9fa59",
+    "docs/verification/exfil-observability-20261018/allowed-diagnostic-change.json": "024423ee6bb76bdf00b1aaa203ad7d9ef5842ffd1a92a6a62bdc76a51f839613",
+    "docs/verification/exfil-observability-20261018/checks.json": "73bb14500275871c288f7e8bc218dbac9d69898773cdd062899e4c5a4e0123df",
+    "docs/verification/exfil-observability-20261018/integrity-after.json": "6697ed872079a2aee0687d28563328274ee339769763e41c28e54e6d9db50818",
+    "docs/verification/exfil-observability-20261018/integrity-before.json": "6697ed872079a2aee0687d28563328274ee339769763e41c28e54e6d9db50818",
+    "docs/verification/exfil-observability-20261018/protocol.sha256": "234c7fa7c0866492a1b83f0e5bf2c6837c5f525478aa9916899d0ca8e746556d",
+    "docs/verification/exfil-observability-20261018/report.json": "ab21270029943399513607d0e4d2d6f3d80163d0c19174f7ac77d4c65aed2c98",
+    "docs/verification/exfil-observability-20261018/tests.log": "8e7de8836ab6d822e91784c3a7cf405205700fd8c88079a12b978536a7b1f9ae"
+  },
+  "runtime_model_artifacts_changed": false
+}

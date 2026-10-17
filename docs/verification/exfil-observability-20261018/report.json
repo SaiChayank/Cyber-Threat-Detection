@@ -1,0 +1,774 @@
+{
+  "scope": "Failure analysis of already evaluated development cases; attribution replay, not a new quality evaluation",
+  "model_sha256": "4d8e08323374535789e21f9f7cd1ee3f1c84b663ce555e67bb4ced57c95e8010",
+  "modules": [
+    {
+      "group": "EXFIL",
+      "threat_class": "DATA_EXFILTRATION",
+      "saved_counts": {
+        "TP": 4,
+        "TN": 2,
+        "FP": 4,
+        "FN": 1
+      },
+      "report": "docs/verification/release-audit/exfil_development.json",
+      "report_sha256": "aaf24f7737d8d7e10e7d50a1345cf414ebed6fd115a39b3bbf86928e1a15a754",
+      "failures": [
+        {
+          "scenario": "slow_sustained",
+          "verdict": "FN",
+          "saved_row": {
+            "scenario": "slow_sustained",
+            "ground_truth_exfil_like": true,
+            "events": 8,
+            "observed_stream_sha256": "b004ebf7f50b3fab9517ffee7a01e423f89d804adc8de1d0e8afcbcad990e0a5",
+            "verdict": "FN",
+            "first_alert": null,
+            "final_reference": {
+              "observed_forward_bytes_60s": 20000000,
+              "observed_forward_byte_rate_10s": 400000.0,
+              "reverse_available": 0,
+              "observed_byte_ratio": null,
+              "ratio_status": "reverse_unavailable"
+            }
+          }
+        },
+        {
+          "scenario": "cloud_backup",
+          "verdict": "FP",
+          "stream_sha256": "c45f8df2cbe5990f0432d793cccd169cc37d7100a53976d5b3227562881b4217",
+          "first_alert": {
+            "event": 6,
+            "elapsed_seconds": 25.0,
+            "evidence": {
+              "egress_bytes": 24000000,
+              "observed_byte_ratio": null,
+              "reverse_available": 0.0,
+              "source_forward_byte_rate_10s": 1200000.0,
+              "source_byte_window_resolution_ms": 1000,
+              "egress_basis": "observed_source_forward_bytes_60s",
+              "observed_byte_ratio_status": "reverse_unavailable",
+              "confidence_kind": "heuristic strength",
+              "window_partial": true
+            },
+            "runtime_features": {
+              "packet_rate": 30.0,
+              "byte_rate": 1200000.0,
+              "source_entropy": 0.0,
+              "syn_fraction": 0.0,
+              "iat_mean": 5.0,
+              "iat_cv": 0.0,
+              "destination_count": 1,
+              "port_count": 1,
+              "domain_entropy": 0,
+              "domain_length": 0,
+              "domain_digit_ratio": 0.0,
+              "bigram_surprise": 0.0,
+              "txt_record": 0.0,
+              "encrypted": 1.0,
+              "size_cv": 0.0,
+              "egress_bytes": 24000000,
+              "byte_ratio": 0,
+              "reverse_available": 0.0,
+              "fingerprint_risk": 0.0,
+              "history_count": 6,
+              "dns_query_visible": 0,
+              "dns_label_count": 0,
+              "dns_encoded_max_label_length": 0,
+              "dns_encoded_total_length": 0,
+              "dns_encoded_entropy": 0,
+              "dns_base_queries_10s": 0,
+              "dns_base_unique_ratio_10s": 0,
+              "dns_base_encoded_queries_10s": 0,
+              "observed_byte_ratio": null,
+              "observed_byte_ratio_status": "reverse_unavailable",
+              "source_forward_bytes_60s": 24000000,
+              "source_forward_byte_rate_10s": 1200000.0,
+              "source_byte_window_resolution_ms": 1000,
+              "domain_label_length": 0,
+              "domain_vowel_ratio": 0.0,
+              "domain_consonant_run": 0.0,
+              "source_entropy_partial": false,
+              "syn_target_packet_rate": 30.0,
+              "syn_target_fraction": null,
+              "syn_target_source_entropy": 0.0,
+              "syn_target_source_count_lower_bound": 1,
+              "syn_target_entropy_partial": false,
+              "syn_target_fraction_basis": "unavailable",
+              "udp_target_packet_rate": 0.0,
+              "udp_target_byte_rate": 0.0,
+              "udp_target_source_entropy": 0.0,
+              "udp_target_source_count_lower_bound": 0,
+              "udp_target_entropy_partial": false,
+              "udp_destination_concentration": 0.0,
+              "udp_packet_size_mean": 0.0,
+              "udp_packet_size_cv": 0.0,
+              "udp_packet_size_basis": "not_udp",
+              "rate_window_seconds": 10,
+              "rate_window_resolution_ms": 1000,
+              "window_partial": true,
+              "state_evictions": 0
+            },
+            "detection_source": "RULE",
+            "model_label": "BENIGN",
+            "model_posterior": 0.9999999998223421,
+            "target_model_hit": false,
+            "target_rule_hit": true,
+            "supporting_evidence": "egress_bytes=24000000; observed_byte_ratio=None; reverse_available=0.0; source_forward_byte_rate_10s=1200000.0; source_byte_window_resolution_ms=1000; egress_basis=observed_source_forward_bytes_60s; observed_byte_ratio_status=reverse_unavailable; confidence_kind=heuristic strength; window_partial=True; behavior consistent with possible exfiltration; content and intent unverified; reverse traffic unavailable: volume-only suspicion"
+          }
+        },
+        {
+          "scenario": "legitimate_large_upload",
+          "verdict": "FP",
+          "stream_sha256": "e460ec326c074793018be3a843aeafd57297de12e716d302b5ea5debfec907b4",
+          "first_alert": {
+            "event": 1,
+            "elapsed_seconds": 0.0,
+            "evidence": {
+              "egress_bytes": 25000000,
+              "observed_byte_ratio": null,
+              "reverse_available": 0.0,
+              "source_forward_byte_rate_10s": 2500000.0,
+              "source_byte_window_resolution_ms": 1000,
+              "egress_basis": "observed_source_forward_bytes_60s",
+              "observed_byte_ratio_status": "reverse_unavailable",
+              "confidence_kind": "heuristic strength",
+              "window_partial": true
+            },
+            "runtime_features": {
+              "packet_rate": 10.0,
+              "byte_rate": 2500000.0,
+              "source_entropy": 0.0,
+              "syn_fraction": 0.0,
+              "iat_mean": 0,
+              "iat_cv": 0.0,
+              "destination_count": 1,
+              "port_count": 1,
+              "domain_entropy": 0,
+              "domain_length": 0,
+              "domain_digit_ratio": 0.0,
+              "bigram_surprise": 0.0,
+              "txt_record": 0.0,
+              "encrypted": 1.0,
+              "size_cv": 0.0,
+              "egress_bytes": 25000000,
+              "byte_ratio": 0,
+              "reverse_available": 0.0,
+              "fingerprint_risk": 0.0,
+              "history_count": 1,
+              "dns_query_visible": 0,
+              "dns_label_count": 0,
+              "dns_encoded_max_label_length": 0,
+              "dns_encoded_total_length": 0,
+              "dns_encoded_entropy": 0,
+              "dns_base_queries_10s": 0,
+              "dns_base_unique_ratio_10s": 0,
+              "dns_base_encoded_queries_10s": 0,
+              "observed_byte_ratio": null,
+              "observed_byte_ratio_status": "reverse_unavailable",
+              "source_forward_bytes_60s": 25000000,
+              "source_forward_byte_rate_10s": 2500000.0,
+              "source_byte_window_resolution_ms": 1000,
+              "domain_label_length": 0,
+              "domain_vowel_ratio": 0.0,
+              "domain_consonant_run": 0.0,
+              "source_entropy_partial": false,
+              "syn_target_packet_rate": 10.0,
+              "syn_target_fraction": null,
+              "syn_target_source_entropy": 0.0,
+              "syn_target_source_count_lower_bound": 1,
+              "syn_target_entropy_partial": false,
+              "syn_target_fraction_basis": "unavailable",
+              "udp_target_packet_rate": 0.0,
+              "udp_target_byte_rate": 0.0,
+              "udp_target_source_entropy": 0.0,
+              "udp_target_source_count_lower_bound": 0,
+              "udp_target_entropy_partial": false,
+              "udp_destination_concentration": 0.0,
+              "udp_packet_size_mean": 0.0,
+              "udp_packet_size_cv": 0.0,
+              "udp_packet_size_basis": "not_udp",
+              "rate_window_seconds": 10,
+              "rate_window_resolution_ms": 1000,
+              "window_partial": true,
+              "state_evictions": 0
+            },
+            "detection_source": "RULE",
+            "model_label": "BENIGN",
+            "model_posterior": 0.9999999665167099,
+            "target_model_hit": false,
+            "target_rule_hit": true,
+            "supporting_evidence": "egress_bytes=25000000; observed_byte_ratio=None; reverse_available=0.0; source_forward_byte_rate_10s=2500000.0; source_byte_window_resolution_ms=1000; egress_basis=observed_source_forward_bytes_60s; observed_byte_ratio_status=reverse_unavailable; confidence_kind=heuristic strength; window_partial=True; behavior consistent with possible exfiltration; content and intent unverified; reverse traffic unavailable: volume-only suspicion"
+          }
+        },
+        {
+          "scenario": "synchronization",
+          "verdict": "FP",
+          "stream_sha256": "b515231d5b7eecc3724332a3e7fa183fde53e3abe3dcc1b1c7f2736b2c029aaa",
+          "first_alert": {
+            "event": 1,
+            "elapsed_seconds": 0.0,
+            "evidence": {
+              "egress_bytes": 4000000,
+              "observed_byte_ratio": 40.0,
+              "reverse_available": 1.0,
+              "source_forward_byte_rate_10s": 400000.0,
+              "source_byte_window_resolution_ms": 1000,
+              "egress_basis": "observed_source_forward_bytes_60s",
+              "observed_byte_ratio_status": "finite_observed_ratio",
+              "confidence_kind": "synthetic-trained model posterior",
+              "window_partial": true
+            },
+            "runtime_features": {
+              "packet_rate": 10.0,
+              "byte_rate": 400000.0,
+              "source_entropy": 0.0,
+              "syn_fraction": 0.0,
+              "iat_mean": 0,
+              "iat_cv": 0.0,
+              "destination_count": 1,
+              "port_count": 1,
+              "domain_entropy": 0,
+              "domain_length": 0,
+              "domain_digit_ratio": 0.0,
+              "bigram_surprise": 0.0,
+              "txt_record": 0.0,
+              "encrypted": 1.0,
+              "size_cv": 0.0,
+              "egress_bytes": 4000000,
+              "byte_ratio": 40.0,
+              "reverse_available": 1.0,
+              "fingerprint_risk": 0.0,
+              "history_count": 1,
+              "dns_query_visible": 0,
+              "dns_label_count": 0,
+              "dns_encoded_max_label_length": 0,
+              "dns_encoded_total_length": 0,
+              "dns_encoded_entropy": 0,
+              "dns_base_queries_10s": 0,
+              "dns_base_unique_ratio_10s": 0,
+              "dns_base_encoded_queries_10s": 0,
+              "observed_byte_ratio": 40.0,
+              "observed_byte_ratio_status": "finite_observed_ratio",
+              "source_forward_bytes_60s": 4000000,
+              "source_forward_byte_rate_10s": 400000.0,
+              "source_byte_window_resolution_ms": 1000,
+              "domain_label_length": 0,
+              "domain_vowel_ratio": 0.0,
+              "domain_consonant_run": 0.0,
+              "source_entropy_partial": false,
+              "syn_target_packet_rate": 10.0,
+              "syn_target_fraction": null,
+              "syn_target_source_entropy": 0.0,
+              "syn_target_source_count_lower_bound": 1,
+              "syn_target_entropy_partial": false,
+              "syn_target_fraction_basis": "unavailable",
+              "udp_target_packet_rate": 0.0,
+              "udp_target_byte_rate": 0.0,
+              "udp_target_source_entropy": 0.0,
+              "udp_target_source_count_lower_bound": 0,
+              "udp_target_entropy_partial": false,
+              "udp_destination_concentration": 0.0,
+              "udp_packet_size_mean": 0.0,
+              "udp_packet_size_cv": 0.0,
+              "udp_packet_size_basis": "not_udp",
+              "rate_window_seconds": 10,
+              "rate_window_resolution_ms": 1000,
+              "window_partial": true,
+              "state_evictions": 0
+            },
+            "detection_source": "ML",
+            "model_label": "DATA_EXFILTRATION",
+            "model_posterior": 1.0,
+            "target_model_hit": true,
+            "target_rule_hit": false,
+            "supporting_evidence": "egress_bytes=4000000; observed_byte_ratio=40.0; reverse_available=1.0; source_forward_byte_rate_10s=400000.0; source_byte_window_resolution_ms=1000; egress_basis=observed_source_forward_bytes_60s; observed_byte_ratio_status=finite_observed_ratio; confidence_kind=synthetic-trained model posterior; window_partial=True; behavior consistent with possible exfiltration; content and intent unverified"
+          }
+        },
+        {
+          "scenario": "replication_deployment",
+          "verdict": "FP",
+          "stream_sha256": "e3874ecafaafa832b0699965b0d96efa77a4e2e8c9b21c288c39c443f18a551a",
+          "first_alert": {
+            "event": 5,
+            "elapsed_seconds": 16.0,
+            "evidence": {
+              "egress_bytes": 25000000,
+              "observed_byte_ratio": null,
+              "reverse_available": 0.0,
+              "source_forward_byte_rate_10s": 1500000.0,
+              "source_byte_window_resolution_ms": 1000,
+              "egress_basis": "observed_source_forward_bytes_60s",
+              "observed_byte_ratio_status": "reverse_unavailable",
+              "confidence_kind": "heuristic strength",
+              "window_partial": true
+            },
+            "runtime_features": {
+              "packet_rate": 30.0,
+              "byte_rate": 1500000.0,
+              "source_entropy": 0.0,
+              "syn_fraction": 0.0,
+              "iat_mean": 4.0,
+              "iat_cv": 0.0,
+              "destination_count": 1,
+              "port_count": 1,
+              "domain_entropy": 0,
+              "domain_length": 0,
+              "domain_digit_ratio": 0.0,
+              "bigram_surprise": 0.0,
+              "txt_record": 0.0,
+              "encrypted": 1.0,
+              "size_cv": 0.0,
+              "egress_bytes": 25000000,
+              "byte_ratio": 0,
+              "reverse_available": 0.0,
+              "fingerprint_risk": 0.0,
+              "history_count": 5,
+              "dns_query_visible": 0,
+              "dns_label_count": 0,
+              "dns_encoded_max_label_length": 0,
+              "dns_encoded_total_length": 0,
+              "dns_encoded_entropy": 0,
+              "dns_base_queries_10s": 0,
+              "dns_base_unique_ratio_10s": 0,
+              "dns_base_encoded_queries_10s": 0,
+              "observed_byte_ratio": null,
+              "observed_byte_ratio_status": "reverse_unavailable",
+              "source_forward_bytes_60s": 25000000,
+              "source_forward_byte_rate_10s": 1500000.0,
+              "source_byte_window_resolution_ms": 1000,
+              "domain_label_length": 0,
+              "domain_vowel_ratio": 0.0,
+              "domain_consonant_run": 0.0,
+              "source_entropy_partial": false,
+              "syn_target_packet_rate": 30.0,
+              "syn_target_fraction": null,
+              "syn_target_source_entropy": 0.0,
+              "syn_target_source_count_lower_bound": 1,
+              "syn_target_entropy_partial": false,
+              "syn_target_fraction_basis": "unavailable",
+              "udp_target_packet_rate": 0.0,
+              "udp_target_byte_rate": 0.0,
+              "udp_target_source_entropy": 0.0,
+              "udp_target_source_count_lower_bound": 0,
+              "udp_target_entropy_partial": false,
+              "udp_destination_concentration": 0.0,
+              "udp_packet_size_mean": 0.0,
+              "udp_packet_size_cv": 0.0,
+              "udp_packet_size_basis": "not_udp",
+              "rate_window_seconds": 10,
+              "rate_window_resolution_ms": 1000,
+              "window_partial": true,
+              "state_evictions": 0
+            },
+            "detection_source": "RULE",
+            "model_label": "BENIGN",
+            "model_posterior": 0.9963787151936496,
+            "target_model_hit": false,
+            "target_rule_hit": true,
+            "supporting_evidence": "egress_bytes=25000000; observed_byte_ratio=None; reverse_available=0.0; source_forward_byte_rate_10s=1500000.0; source_byte_window_resolution_ms=1000; egress_basis=observed_source_forward_bytes_60s; observed_byte_ratio_status=reverse_unavailable; confidence_kind=heuristic strength; window_partial=True; behavior consistent with possible exfiltration; content and intent unverified; reverse traffic unavailable: volume-only suspicion"
+          }
+        }
+      ],
+      "opposite_label_overlaps": [
+        {
+          "model_feature_sequence_sha256": "24aa29370e6f1fb984aa1d854d9317bfa2cd29709926658779e56513ec58a313",
+          "positives": [
+            "large_one_way"
+          ],
+          "benign": [
+            "legitimate_large_upload"
+          ],
+          "identical_raw_event_pairs": [
+            [
+              "large_one_way",
+              "legitimate_large_upload"
+            ]
+          ]
+        },
+        {
+          "model_feature_sequence_sha256": "b919f2b4597199bfba1c1d8fbccb7b100963f41a234dc8c154d4b47e3ce25306",
+          "positives": [
+            "sustained_one_way"
+          ],
+          "benign": [
+            "cloud_backup"
+          ],
+          "identical_raw_event_pairs": [
+            [
+              "sustained_one_way",
+              "cloud_backup"
+            ]
+          ]
+        },
+        {
+          "model_feature_sequence_sha256": "6644f7ca9f56665c8dd952c1d096d054d7621343cbbac4cd699b4b51d8dc0a36",
+          "positives": [
+            "sustained_observed_bidir"
+          ],
+          "benign": [
+            "synchronization"
+          ],
+          "identical_raw_event_pairs": [
+            [
+              "sustained_observed_bidir",
+              "synchronization"
+            ]
+          ]
+        },
+        {
+          "model_feature_sequence_sha256": "0a2526a7adc7ebe227e451524318b6fe93610ba0497498c95c07751034e2e365",
+          "positives": [
+            "volume_only_one_way"
+          ],
+          "benign": [
+            "replication_deployment"
+          ],
+          "identical_raw_event_pairs": [
+            [
+              "volume_only_one_way",
+              "replication_deployment"
+            ]
+          ]
+        }
+      ],
+      "causal_histories": {
+        "large_one_way": {
+          "max_source_forward_bytes_60s": 25000000,
+          "max_source_forward_byte_rate_10s": 2500000.0,
+          "first_volume_rule_eligible": {
+            "event": 1,
+            "elapsed_seconds": 0.0,
+            "reference": {
+              "observed_forward_bytes_60s": 25000000,
+              "observed_forward_byte_rate_10s": 2500000.0,
+              "reverse_available": 0,
+              "observed_byte_ratio": null,
+              "ratio_status": "reverse_unavailable"
+            }
+          },
+          "final_reference": {
+            "observed_forward_bytes_60s": 25000000,
+            "observed_forward_byte_rate_10s": 2500000.0,
+            "reverse_available": 0,
+            "observed_byte_ratio": null,
+            "ratio_status": "reverse_unavailable"
+          },
+          "observed_ratio_statuses": [
+            "reverse_unavailable"
+          ],
+          "final_model_egress_bytes": 25000000,
+          "source_byte_window_resolution_ms": 1000,
+          "causal_reference_sequence_sha256": "af5d98e2e313103c685acf5efbfee51aae5c2d32b2bbf2bee622fd0f7c390c6b"
+        },
+        "sustained_one_way": {
+          "max_source_forward_bytes_60s": 32000000,
+          "max_source_forward_byte_rate_10s": 1200000.0,
+          "first_volume_rule_eligible": {
+            "event": 6,
+            "elapsed_seconds": 25.0,
+            "reference": {
+              "observed_forward_bytes_60s": 24000000,
+              "observed_forward_byte_rate_10s": 1200000.0,
+              "reverse_available": 0,
+              "observed_byte_ratio": null,
+              "ratio_status": "reverse_unavailable"
+            }
+          },
+          "final_reference": {
+            "observed_forward_bytes_60s": 32000000,
+            "observed_forward_byte_rate_10s": 1200000.0,
+            "reverse_available": 0,
+            "observed_byte_ratio": null,
+            "ratio_status": "reverse_unavailable"
+          },
+          "observed_ratio_statuses": [
+            "reverse_unavailable"
+          ],
+          "final_model_egress_bytes": 32000000,
+          "source_byte_window_resolution_ms": 1000,
+          "causal_reference_sequence_sha256": "1ccc41f89a247aaccc6d5dba5eebb3f8b25f070c9121a1b17ff8843766c44eda"
+        },
+        "sustained_observed_bidir": {
+          "max_source_forward_bytes_60s": 32000000,
+          "max_source_forward_byte_rate_10s": 1200000.0,
+          "first_volume_rule_eligible": {
+            "event": 6,
+            "elapsed_seconds": 25.0,
+            "reference": {
+              "observed_forward_bytes_60s": 24000000,
+              "observed_forward_byte_rate_10s": 1200000.0,
+              "reverse_available": 1,
+              "observed_byte_ratio": 40.0,
+              "ratio_status": "finite_observed_ratio"
+            }
+          },
+          "final_reference": {
+            "observed_forward_bytes_60s": 32000000,
+            "observed_forward_byte_rate_10s": 1200000.0,
+            "reverse_available": 1,
+            "observed_byte_ratio": 40.0,
+            "ratio_status": "finite_observed_ratio"
+          },
+          "observed_ratio_statuses": [
+            "finite_observed_ratio"
+          ],
+          "final_model_egress_bytes": 32000000,
+          "source_byte_window_resolution_ms": 1000,
+          "causal_reference_sequence_sha256": "53b61b85a9502a5e62785cac7ca73b9087c3133f4e45745d762768d7db5d7495"
+        },
+        "volume_only_one_way": {
+          "max_source_forward_bytes_60s": 30000000,
+          "max_source_forward_byte_rate_10s": 1500000.0,
+          "first_volume_rule_eligible": {
+            "event": 5,
+            "elapsed_seconds": 16.0,
+            "reference": {
+              "observed_forward_bytes_60s": 25000000,
+              "observed_forward_byte_rate_10s": 1500000.0,
+              "reverse_available": 0,
+              "observed_byte_ratio": null,
+              "ratio_status": "reverse_unavailable"
+            }
+          },
+          "final_reference": {
+            "observed_forward_bytes_60s": 30000000,
+            "observed_forward_byte_rate_10s": 1500000.0,
+            "reverse_available": 0,
+            "observed_byte_ratio": null,
+            "ratio_status": "reverse_unavailable"
+          },
+          "observed_ratio_statuses": [
+            "reverse_unavailable"
+          ],
+          "final_model_egress_bytes": 30000000,
+          "source_byte_window_resolution_ms": 1000,
+          "causal_reference_sequence_sha256": "c8238451e3d0226ce9a0a4d54583e37408e3a1d6bfb7aba88d44b2e728047f64"
+        },
+        "slow_sustained": {
+          "max_source_forward_bytes_60s": 20000000,
+          "max_source_forward_byte_rate_10s": 400000.0,
+          "first_volume_rule_eligible": null,
+          "final_reference": {
+            "observed_forward_bytes_60s": 20000000,
+            "observed_forward_byte_rate_10s": 400000.0,
+            "reverse_available": 0,
+            "observed_byte_ratio": null,
+            "ratio_status": "reverse_unavailable"
+          },
+          "observed_ratio_statuses": [
+            "reverse_unavailable"
+          ],
+          "final_model_egress_bytes": 20000000,
+          "source_byte_window_resolution_ms": 1000,
+          "causal_reference_sequence_sha256": "9422f704db1ab16d80e4dcdd1404b888eff571d34f0e0bd41f2a1e49fbd38385"
+        },
+        "cloud_backup": {
+          "max_source_forward_bytes_60s": 32000000,
+          "max_source_forward_byte_rate_10s": 1200000.0,
+          "first_volume_rule_eligible": {
+            "event": 6,
+            "elapsed_seconds": 25.0,
+            "reference": {
+              "observed_forward_bytes_60s": 24000000,
+              "observed_forward_byte_rate_10s": 1200000.0,
+              "reverse_available": 0,
+              "observed_byte_ratio": null,
+              "ratio_status": "reverse_unavailable"
+            }
+          },
+          "final_reference": {
+            "observed_forward_bytes_60s": 32000000,
+            "observed_forward_byte_rate_10s": 1200000.0,
+            "reverse_available": 0,
+            "observed_byte_ratio": null,
+            "ratio_status": "reverse_unavailable"
+          },
+          "observed_ratio_statuses": [
+            "reverse_unavailable"
+          ],
+          "final_model_egress_bytes": 32000000,
+          "source_byte_window_resolution_ms": 1000,
+          "causal_reference_sequence_sha256": "1ccc41f89a247aaccc6d5dba5eebb3f8b25f070c9121a1b17ff8843766c44eda"
+        },
+        "legitimate_large_upload": {
+          "max_source_forward_bytes_60s": 25000000,
+          "max_source_forward_byte_rate_10s": 2500000.0,
+          "first_volume_rule_eligible": {
+            "event": 1,
+            "elapsed_seconds": 0.0,
+            "reference": {
+              "observed_forward_bytes_60s": 25000000,
+              "observed_forward_byte_rate_10s": 2500000.0,
+              "reverse_available": 0,
+              "observed_byte_ratio": null,
+              "ratio_status": "reverse_unavailable"
+            }
+          },
+          "final_reference": {
+            "observed_forward_bytes_60s": 25000000,
+            "observed_forward_byte_rate_10s": 2500000.0,
+            "reverse_available": 0,
+            "observed_byte_ratio": null,
+            "ratio_status": "reverse_unavailable"
+          },
+          "observed_ratio_statuses": [
+            "reverse_unavailable"
+          ],
+          "final_model_egress_bytes": 25000000,
+          "source_byte_window_resolution_ms": 1000,
+          "causal_reference_sequence_sha256": "af5d98e2e313103c685acf5efbfee51aae5c2d32b2bbf2bee622fd0f7c390c6b"
+        },
+        "synchronization": {
+          "max_source_forward_bytes_60s": 32000000,
+          "max_source_forward_byte_rate_10s": 1200000.0,
+          "first_volume_rule_eligible": {
+            "event": 6,
+            "elapsed_seconds": 25.0,
+            "reference": {
+              "observed_forward_bytes_60s": 24000000,
+              "observed_forward_byte_rate_10s": 1200000.0,
+              "reverse_available": 1,
+              "observed_byte_ratio": 40.0,
+              "ratio_status": "finite_observed_ratio"
+            }
+          },
+          "final_reference": {
+            "observed_forward_bytes_60s": 32000000,
+            "observed_forward_byte_rate_10s": 1200000.0,
+            "reverse_available": 1,
+            "observed_byte_ratio": 40.0,
+            "ratio_status": "finite_observed_ratio"
+          },
+          "observed_ratio_statuses": [
+            "finite_observed_ratio"
+          ],
+          "final_model_egress_bytes": 32000000,
+          "source_byte_window_resolution_ms": 1000,
+          "causal_reference_sequence_sha256": "53b61b85a9502a5e62785cac7ca73b9087c3133f4e45745d762768d7db5d7495"
+        },
+        "replication_deployment": {
+          "max_source_forward_bytes_60s": 30000000,
+          "max_source_forward_byte_rate_10s": 1500000.0,
+          "first_volume_rule_eligible": {
+            "event": 5,
+            "elapsed_seconds": 16.0,
+            "reference": {
+              "observed_forward_bytes_60s": 25000000,
+              "observed_forward_byte_rate_10s": 1500000.0,
+              "reverse_available": 0,
+              "observed_byte_ratio": null,
+              "ratio_status": "reverse_unavailable"
+            }
+          },
+          "final_reference": {
+            "observed_forward_bytes_60s": 30000000,
+            "observed_forward_byte_rate_10s": 1500000.0,
+            "reverse_available": 0,
+            "observed_byte_ratio": null,
+            "ratio_status": "reverse_unavailable"
+          },
+          "observed_ratio_statuses": [
+            "reverse_unavailable"
+          ],
+          "final_model_egress_bytes": 30000000,
+          "source_byte_window_resolution_ms": 1000,
+          "causal_reference_sequence_sha256": "c8238451e3d0226ce9a0a4d54583e37408e3a1d6bfb7aba88d44b2e728047f64"
+        },
+        "ordinary_small_transfer": {
+          "max_source_forward_bytes_60s": 8000000,
+          "max_source_forward_byte_rate_10s": 300000.0,
+          "first_volume_rule_eligible": null,
+          "final_reference": {
+            "observed_forward_bytes_60s": 8000000,
+            "observed_forward_byte_rate_10s": 300000.0,
+            "reverse_available": 0,
+            "observed_byte_ratio": null,
+            "ratio_status": "reverse_unavailable"
+          },
+          "observed_ratio_statuses": [
+            "reverse_unavailable"
+          ],
+          "final_model_egress_bytes": 8000000,
+          "source_byte_window_resolution_ms": 1000,
+          "causal_reference_sequence_sha256": "24f3bf5099505b1bbfcbcf98f509e9d942b514b47001f097ac3a6eec0124c4f2"
+        },
+        "inbound_heavy_transfer": {
+          "max_source_forward_bytes_60s": 16000000,
+          "max_source_forward_byte_rate_10s": 600000.0,
+          "first_volume_rule_eligible": null,
+          "final_reference": {
+            "observed_forward_bytes_60s": 16000000,
+            "observed_forward_byte_rate_10s": 600000.0,
+            "reverse_available": 1,
+            "observed_byte_ratio": 0.25,
+            "ratio_status": "finite_observed_ratio"
+          },
+          "observed_ratio_statuses": [
+            "finite_observed_ratio"
+          ],
+          "final_model_egress_bytes": 16000000,
+          "source_byte_window_resolution_ms": 1000,
+          "causal_reference_sequence_sha256": "136641e03b4acbd6b294fd5e4ee9a35de9e060259c35f8e4bdfb769970485563"
+        }
+      },
+      "paired_observability": [
+        {
+          "positive": "large_one_way",
+          "benign": "legitimate_large_upload",
+          "events": 1,
+          "metadata_identical": true,
+          "complete_runtime_features_identical": true,
+          "model_vectors_identical": true,
+          "volume_rule_decisions_identical": true
+        },
+        {
+          "positive": "sustained_one_way",
+          "benign": "cloud_backup",
+          "events": 8,
+          "metadata_identical": true,
+          "complete_runtime_features_identical": true,
+          "model_vectors_identical": true,
+          "volume_rule_decisions_identical": true
+        },
+        {
+          "positive": "sustained_observed_bidir",
+          "benign": "synchronization",
+          "events": 8,
+          "metadata_identical": true,
+          "complete_runtime_features_identical": true,
+          "model_vectors_identical": true,
+          "volume_rule_decisions_identical": true
+        },
+        {
+          "positive": "volume_only_one_way",
+          "benign": "replication_deployment",
+          "events": 6,
+          "metadata_identical": true,
+          "complete_runtime_features_identical": true,
+          "model_vectors_identical": true,
+          "volume_rule_decisions_identical": true
+        }
+      ]
+    }
+  ],
+  "first_false_positive_sources": {
+    "RULE": 3,
+    "ML": 1
+  },
+  "policy": {
+    "fit": false,
+    "tuning": false,
+    "ablation": false,
+    "reserved_data": false,
+    "runtime_changes": false,
+    "positive_quality_replay": false
+  },
+  "current_source_sha256": {
+    "detection/pipeline.py": "4e70bc3e50546e57fa5f0d9432f3a9be969b906897d837f6f3638311c9b54926",
+    "features/extractor.py": "624952f8063464c88466b861c72f121c318be5835a02a3d2a4b24b38b1800ac8",
+    "ml/model.py": "2721a53d667d1ea773154fdebf3d349c5ef221dfdb51e937d5afdba1ffa6f354",
+    "features/rate_window.py": "a0d4542ab56b44bb51bdee88ebd56a7df95e9a9d6a79fc569769a9100b65d683",
+    "datasets/analyze_baseline_failures.py": "c6ff05874322749feff3ce641c3ac6495f7a572fd6dabeeb84383b102eabdde8"
+  }
+}

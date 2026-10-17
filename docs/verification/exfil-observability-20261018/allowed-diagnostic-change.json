@@ -1,0 +1,6 @@
+{
+  "path": "datasets/analyze_baseline_failures.py",
+  "before_sha256": "244e3053e9f12fe0c12a01e210529d70e59e75934cbc1991c6b8d7aee225dd4f",
+  "allowed": "Scoped EXFIL diagnostics only; runtime/generators/artifacts/reports immutable",
+  "after_sha256": "c6ff05874322749feff3ce641c3ac6495f7a572fd6dabeeb84383b102eabdde8"
+}

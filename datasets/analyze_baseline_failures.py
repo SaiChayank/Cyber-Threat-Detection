@@ -51,7 +51,7 @@ def attribution(alert, predicted, posterior, target):
                 target_model_hit=model_hit, target_rule_hit=source in ('RULE', 'HYBRID'))
 
 
-def replay_first(stream, target, saved):
+def replay_first(stream, target, saved, *, verify_supporting=False):
     """Observe actual runtime inputs/predictions, retaining its real decisions."""
     runtime = Pipeline()
     captured = {}
@@ -71,10 +71,15 @@ def replay_first(stream, target, saved):
                 raise ValueError('Current first-alert position/evidence differs from saved evaluation')
             if 'detection_source' in saved and str(alert.detection_source) != saved['detection_source']:
                 raise ValueError('Current attribution differs from saved evaluation')
-            return dict(event=index, elapsed_seconds=(event.timestamp-stream[0].timestamp)/1000,
-                        evidence=alert.raw_evidence_metrics,
-                        runtime_features=captured['features'],
-                        **attribution(alert, captured['label'], captured['posterior'], target))
+            if verify_supporting and alert.supporting_evidence != saved.get('supporting_evidence'):
+                raise ValueError('Current supporting evidence differs from saved evaluation')
+            result = dict(event=index, elapsed_seconds=(event.timestamp-stream[0].timestamp)/1000,
+                          evidence=alert.raw_evidence_metrics,
+                          runtime_features=captured['features'],
+                          **attribution(alert, captured['label'], captured['posterior'], target))
+            if verify_supporting:
+                result['supporting_evidence'] = alert.supporting_evidence
+            return result
     raise ValueError('Recorded false positive no longer reproduces; do not silently relabel it')
 
 
@@ -256,9 +261,65 @@ def recon_pair_detail(positive, benign):
                 complete_model_vectors_identical=same_length and same_vectors)
 
 
+def exfil_history_detail(stream):
+    """Audit existing second-aligned source-forward windows and observed ratios."""
+    from datasets.validate_exfil import reference
+
+    if (not stream or any(event.protocol != 6 or event.timestamp % 1000 for event in stream)
+            or len({str(event.src_ip) for event in stream}) != 1
+            or any(b.timestamp < a.timestamp for a, b in zip(stream, stream[1:]))):
+        raise ValueError('Exfil history requires ordered single-source second-aligned TCP metadata')
+    extractor, seen = FeatureExtractor(), []
+    first_rule = final = None
+    maximum_bytes = maximum_rate = 0
+    statuses, trace = set(), hashlib.sha256()
+    keys = {'source_forward_bytes_60s': 'observed_forward_bytes_60s',
+            'source_forward_byte_rate_10s': 'observed_forward_byte_rate_10s',
+            'reverse_available': 'reverse_available', 'observed_byte_ratio': 'observed_byte_ratio',
+            'observed_byte_ratio_status': 'ratio_status'}
+    for index, event in enumerate(stream, 1):
+        seen.append(event)
+        features = extractor.update(event)
+        final = reference(seen, event)
+        if any(features[key] != final[expected] for key, expected in keys.items()):
+            raise ValueError('Exfil causal features disagree with independent reference')
+        maximum_bytes = max(maximum_bytes, final['observed_forward_bytes_60s'])
+        maximum_rate = max(maximum_rate, final['observed_forward_byte_rate_10s'])
+        statuses.add(final['ratio_status'])
+        trace.update(json.dumps(final, sort_keys=True, separators=(',', ':')).encode() + b'\n')
+        if first_rule is None and features['source_forward_bytes_60s'] > 20_000_000:
+            first_rule = dict(event=index, elapsed_seconds=(event.timestamp-stream[0].timestamp)/1000,
+                              reference=final)
+    return dict(max_source_forward_bytes_60s=maximum_bytes,
+                max_source_forward_byte_rate_10s=maximum_rate,
+                first_volume_rule_eligible=first_rule, final_reference=final,
+                observed_ratio_statuses=sorted(statuses),
+                final_model_egress_bytes=features['egress_bytes'],
+                source_byte_window_resolution_ms=features['source_byte_window_resolution_ms'],
+                causal_reference_sequence_sha256=trace.hexdigest())
+
+
+def exfil_pair_detail(positive, benign):
+    """Compare visible complete transfer sequences without intent predictors."""
+    if (not positive or len(positive) != len(benign)
+            or any(event.protocol != 6 for event in positive + benign)
+            or any(b.timestamp < a.timestamp for stream in (positive, benign)
+                   for a, b in zip(stream, stream[1:]))):
+        raise ValueError('Exfil pairs require nonempty aligned ordered TCP metadata')
+    a_extractor, b_extractor = FeatureExtractor(), FeatureExtractor()
+    left = [a_extractor.update(event) for event in positive]
+    right = [b_extractor.update(event) for event in benign]
+    return dict(events=len(positive), metadata_identical=stream_digest(positive) == stream_digest(benign),
+                complete_runtime_features_identical=left == right,
+                model_vectors_identical=[vector(row) for row in left] == [vector(row) for row in right],
+                volume_rule_decisions_identical=
+                    [row['source_forward_bytes_60s'] > 20_000_000 for row in left] ==
+                    [row['source_forward_bytes_60s'] > 20_000_000 for row in right])
+
+
 def analyze(group=None):
-    if group not in (None, 'UDP', 'C2', 'SPOOF', 'RECON'):
-        raise ValueError('Only UDP, C2, SPOOF and RECON have a scoped diagnostic selection')
+    if group not in (None, 'UDP', 'C2', 'SPOOF', 'RECON', 'EXFIL'):
+        raise ValueError('Only UDP, C2, SPOOF, RECON and EXFIL have a scoped diagnostic selection')
     model_hash = hashlib.sha256(ARTIFACT.read_bytes()).hexdigest()
     if group == 'SPOOF' and model_hash != SPOOF_MODEL_SHA256:
         raise ValueError('Spoof diagnosis requires the unchanged frozen baseline model')
@@ -302,6 +363,8 @@ def analyze(group=None):
                 raise ValueError('C2 labels differ from saved development cases')
             if selected_group == 'RECON' and group == 'RECON' and row['ground_truth_unauthorised_scan'] is not positive:
                 raise ValueError('Recon labels differ from saved development cases')
+            if selected_group == 'EXFIL' and group == 'EXFIL' and row['ground_truth_exfil_like'] is not positive:
+                raise ValueError('Exfil labels differ from saved development cases')
             if group == 'SPOOF' and row['ground_truth_forged'] is not positive:
                 raise ValueError('Spoof labels differ from saved development cases')
             digest = stream_digest(stream)
@@ -313,7 +376,8 @@ def analyze(group=None):
                 if positive:
                     raise ValueError('False positive is not labelled benign')
                 failures.append(dict(scenario=name, verdict='FP', stream_sha256=digest,
-                                     first_alert=replay_first(stream, target, row['first_alert'])))
+                                     first_alert=replay_first(stream, target, row['first_alert'],
+                                                              verify_supporting=group == 'EXFIL')))
             elif row['verdict'] == 'FN':
                 failures.append(dict(scenario=name, verdict='FN', saved_row=row))
         counts = Counter(row['verdict'] for row in rows)
@@ -341,6 +405,18 @@ def analyze(group=None):
                 for a, b in [('vertical_scan', 'authorised_vulnerability_scanner'),
                              ('horizontal_scan', 'authorised_asset_inventory'),
                              ('horizontal_scan', 'service_discovery')]]
+        if selected_group == 'EXFIL' and group == 'EXFIL':
+            histories = {name: exfil_history_detail(stream) for name, stream in streams.items()}
+            if any(history['final_reference'] != lookup[name]['final_reference']
+                   for name, history in histories.items()):
+                raise ValueError('Exfil causal history differs from saved development evidence')
+            modules[-1]['causal_histories'] = histories
+            modules[-1]['paired_observability'] = [
+                dict(positive=a, benign=b, **exfil_pair_detail(streams[a], streams[b]))
+                for a, b in [('large_one_way', 'legitimate_large_upload'),
+                             ('sustained_one_way', 'cloud_backup'),
+                             ('sustained_observed_bidir', 'synchronization'),
+                             ('volume_only_one_way', 'replication_deployment')]]
         if selected_group == 'C2' and group == 'C2':
             histories = {name: c2_history_detail(stream) for name, stream in streams.items()}
             for name, history in histories.items():
@@ -388,7 +464,7 @@ def analyze(group=None):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--output', type=Path, required=True)
-    parser.add_argument('--group', choices=['UDP', 'C2', 'SPOOF', 'RECON'], help='Inspect one subtype only; default retains the historical all-group diagnostic')
+    parser.add_argument('--group', choices=['UDP', 'C2', 'SPOOF', 'RECON', 'EXFIL'], help='Inspect one subtype only; default retains the historical all-group diagnostic')
     args = parser.parse_args()
     report = analyze(group=args.group)
     args.output.parent.mkdir(parents=True, exist_ok=True)
