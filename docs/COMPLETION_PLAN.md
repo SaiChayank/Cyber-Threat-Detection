@@ -1,5 +1,15 @@
 # Univect completion plan
 
+**T30 public archive acquisition, 17 October 2026:** user explicitly requested
+both open Zenodo datasets. [Acquisition report](DNS_PUBLIC_DATA_ACQUISITION.md)
+and `data/dns_public_acquisition.json` record two original ZIPs, 7,351,027,624
+verified bytes, matching publisher MD5 and computed local SHA256. Raw files are
+developer-local/Git-ignored; reproducible acquisition tooling/provenance is saved.
+No extraction, query/packet values, training, scoring or activation. Acquisition
+DoD passes; T30 source/session/format/coverage qualification remains blocked.
+Next qualify original session annotations and compatible input under a pre-value
+inspection plan; preserve the frozen evaluation contract and disabled candidate.
+
 **T30 public-source alternative screen, 17 October 2026:** user selected public
 licence alternatives. [DNS source review](DNS_OPEN_SOURCE_ALTERNATIVES.md) and
 `data/dns_open_source_screen.json` record five bounded metadata-only leads.

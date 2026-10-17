@@ -1,0 +1,28 @@
+{
+  "baseline_commit": "95c65fe",
+  "acquisition_dod_passed": true,
+  "evaluation_qualification_dod_passed": false,
+  "files": {
+    "data/dns_public_acquisition.json": "983c0af8f0764cbcf4f22273d075d29f3cb83d50512574b01b42c7d36ac17660",
+    "docs/DNS_PUBLIC_DATA_ACQUISITION.md": "05d1c5557922902d031f4182756a652ce2892ba2bda5316da5a364988668c227",
+    "docs/DATASETS.md": "851c4dd2cd28c750be797e8b0da5c95c0ca9b75a86a25cab9e64e7adcfff5c51",
+    "docs/COMPLETION_PLAN.md": "6e5e89f1da44b72a8cfb352180ccc9a6ba6531a261db42a2bb004f61661a63b2",
+    "docs/REMAINING_WORK_PLAN.md": "9f05cee3a335eb5abea92057303e1f3e59d59cc5c47402c86038a67d943abcb5",
+    "docs/verification/dns-public-acquisition-20261017/acquisition-plan.json": "92cc82fdf1eba1e8ad1bf7a23e154a5502303b54b3374a187c1c20331b57e43a",
+    "docs/verification/dns-public-acquisition-20261017/acquisition-plan.sha256": "8bdbcd20ece59892d602aa1387ca597b6be3b2492199b60388441804fcee2cfa",
+    "docs/verification/dns-public-acquisition-20261017/checks.json": "9e056e320e04ba4515669da4c540ae61a180fd932d3ac0c8d0d4160d58df561c",
+    "docs/verification/dns-public-acquisition-20261017/download-report.json": "94e0b279d48498c41baf116d73674575e67afcb42d7e3b7c0b21c82152fb0450",
+    "docs/verification/dns-public-acquisition-20261017/download.py": "3de4e4edd1749303d1dd0108aa9f2009b9dae833e6a68d711ba679a04141375b",
+    "docs/verification/dns-public-acquisition-20261017/download_ranges.py": "6cc3aad4bc8f484f68ae0c4192b7f0fcb81c13f38b38c689176047f198541fb9",
+    "docs/verification/dns-public-acquisition-20261017/integrity-after.json": "56cb07049e0d40ea5760459c6733ccaa457f2bb50653b1a4b5a6ffa81a3997d2",
+    "docs/verification/dns-public-acquisition-20261017/integrity-before.json": "56cb07049e0d40ea5760459c6733ccaa457f2bb50653b1a4b5a6ffa81a3997d2",
+    "docs/verification/dns-public-acquisition-20261017/transport-cleanup.json": "b549fd15bd9e8d15ddae8c4a241524e6aa6c59eeba5bc6d0ef8197cfaf5578c5",
+    "docs/verification/dns-public-acquisition-20261017/transport-plan.json": "57d3d7896faf12a715535f7d130a00b9853f682000397d3b5afa6d8d6806df19",
+    "docs/verification/dns-public-acquisition-20261017/transport-plan.sha256": "0595b1b04b9999dc6ce22f4caf3915c431bd192f408410d34ac0bb4cc5fc8d7d",
+    "docs/verification/dns-public-acquisition-20261017/transport-receipts.json": "407bf5498454eddba136f3f586dfe5519d0ab92fa319b196d51c1eb85c14958d",
+    "docs/verification/dns-public-acquisition-20261017/zenodo-benign-receipt.json": "db7b90cc67098ec161d7fa94fd89ab7098f86b31a43760fa397cb98549dac1d9",
+    "docs/verification/dns-public-acquisition-20261017/zenodo-dnstunnel-receipt.json": "6e2e4a3c2c76692245373c931085d7ce9ac1bac92a99d80794b47bb71691f5e3"
+  },
+  "raw_archives": "Two verified developer-local originals, excluded from Git; SHA256 and publisher MD5 recorded in data/dns_public_acquisition.json",
+  "scope": "Acquisition only; no extraction, raw values, inference, training, reserved assignment/scoring or runtime/model/contract change."
+}

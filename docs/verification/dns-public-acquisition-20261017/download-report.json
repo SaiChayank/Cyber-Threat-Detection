@@ -1,0 +1,52 @@
+{
+  "scope": "Archive acquisition/checksums only; no extraction or inference",
+  "files": [
+    {
+      "source_id": "zenodo-dnstunnel",
+      "record_id": "20137065",
+      "source_url": "https://zenodo.org/records/20137065",
+      "doi": "10.5281/zenodo.20137065",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "metadata_file": "docs/verification/dns-open-source-screen-20261017/zenodo-dnstunnel.json",
+      "metadata_sha256": "60168b30b2686d56683406f7d3cca29703b74bf71f4c5e226384e5bdc05a29e0",
+      "url": "https://zenodo.org/api/records/20137065/files/DNSTunnel2026.zip/content",
+      "path": "data/raw/dns-public-intake/dnstunnel2026/DNSTunnel2026.zip",
+      "bytes": 497565428,
+      "publisher_checksum": "md5:e2a4c675b480f9c10b8629494d9ae7dc",
+      "role": "UNQUALIFIED_RESEARCH_INTAKE_NOT_TRAINING_VALIDATION_OR_RESERVE",
+      "downloaded": true,
+      "verified_bytes": 497565428,
+      "publisher_checksum_verified": true,
+      "sha256": "0c6eeadc3a55582b99f88cb31ec36b6b89d971a66804bccdce97a37dad401a0d",
+      "acquired_utc": "2026-10-17T07:18:19.173050+00:00",
+      "extracted": false,
+      "values_inspected": false,
+      "final_evaluation_ready": false
+    },
+    {
+      "source_id": "zenodo-benign",
+      "record_id": "19206234",
+      "source_url": "https://zenodo.org/records/19206234",
+      "doi": "10.5281/zenodo.19206234",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "metadata_file": "docs/verification/dns-open-source-screen-20261017/zenodo-benign.json",
+      "metadata_sha256": "f4730ba5ed3dd3867302ac7e33ac91d3911c87422c5b5153d5a8186676897582",
+      "url": "https://zenodo.org/api/records/19206234/files/capturasAgentes.zip/content",
+      "path": "data/raw/dns-public-intake/uma-benign/capturasAgentes.zip",
+      "bytes": 6853462196,
+      "publisher_checksum": "md5:9ab42d5978237a2b9e613d6b0d0f0440",
+      "role": "UNQUALIFIED_RESEARCH_INTAKE_NOT_TRAINING_VALIDATION_OR_RESERVE",
+      "downloaded": true,
+      "verified_bytes": 6853462196,
+      "publisher_checksum_verified": true,
+      "sha256": "76f7f38dada4cbdb8110691ca981262f10eb55452bc1c2e3e1dc6297b191957d",
+      "acquired_utc": "2026-10-17T07:18:32.157142+00:00",
+      "extracted": false,
+      "values_inspected": false,
+      "final_evaluation_ready": false
+    }
+  ],
+  "final_evaluation_ready": false
+}

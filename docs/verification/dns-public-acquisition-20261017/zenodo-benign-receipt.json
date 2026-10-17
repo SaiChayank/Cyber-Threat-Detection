@@ -1,0 +1,45 @@
+{
+  "source_id": "zenodo-benign",
+  "record_id": "19206234",
+  "source_url": "https://zenodo.org/records/19206234",
+  "doi": "10.5281/zenodo.19206234",
+  "license": "CC-BY-4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "metadata_file": "docs/verification/dns-open-source-screen-20261017/zenodo-benign.json",
+  "metadata_sha256": "f4730ba5ed3dd3867302ac7e33ac91d3911c87422c5b5153d5a8186676897582",
+  "url": "https://zenodo.org/api/records/19206234/files/capturasAgentes.zip/content",
+  "path": "data/raw/dns-public-intake/uma-benign/capturasAgentes.zip",
+  "bytes": 6853462196,
+  "publisher_checksum": "md5:9ab42d5978237a2b9e613d6b0d0f0440",
+  "role": "UNQUALIFIED_RESEARCH_INTAKE_NOT_TRAINING_VALIDATION_OR_RESERVE",
+  "downloaded": true,
+  "verified_bytes": 6853462196,
+  "publisher_checksum_verified": true,
+  "sha256": "76f7f38dada4cbdb8110691ca981262f10eb55452bc1c2e3e1dc6297b191957d",
+  "acquired_utc": "2026-10-17T07:18:32.157142+00:00",
+  "extracted": false,
+  "values_inspected": false,
+  "final_evaluation_ready": false,
+  "creators": [
+    {
+      "name": "Mu\u00f1oz, Antonio",
+      "affiliation": "University of M\u00e1laga",
+      "orcid": "0000-0002-6751-0625"
+    },
+    {
+      "name": "L\u00f3pez Flores, Sergio",
+      "affiliation": "Universidad de M\u00e1laga",
+      "orcid": "0009-0000-2655-6718"
+    },
+    {
+      "name": "Juan Carlos, Jim\u00e9nez Ariza",
+      "affiliation": "Malaga University"
+    }
+  ],
+  "publisher_release_metadata_file": "data/raw/dns-public-intake/uma-benign/release.json",
+  "publisher_release_metadata_sha256": "f4730ba5ed3dd3867302ac7e33ac91d3911c87422c5b5153d5a8186676897582",
+  "runtime_integrated": false,
+  "training_assigned": false,
+  "validation_assigned": false,
+  "reserved_assigned": false
+}

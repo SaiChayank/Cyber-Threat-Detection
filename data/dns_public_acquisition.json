@@ -1,0 +1,113 @@
+{
+  "status": "DOWNLOADED_VERIFIED_UNQUALIFIED_RESEARCH_INTAKE",
+  "baseline_commit": "95c65fe",
+  "recorded_utc": "2026-10-17T07:19:38.467977+00:00",
+  "scope": "Two original open Zenodo ZIPs acquired only; no extraction/member/query-row/packet-value inspection, inference or training",
+  "files": [
+    {
+      "source_id": "zenodo-dnstunnel",
+      "record_id": "20137065",
+      "source_url": "https://zenodo.org/records/20137065",
+      "doi": "10.5281/zenodo.20137065",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "metadata_file": "docs/verification/dns-open-source-screen-20261017/zenodo-dnstunnel.json",
+      "metadata_sha256": "60168b30b2686d56683406f7d3cca29703b74bf71f4c5e226384e5bdc05a29e0",
+      "url": "https://zenodo.org/api/records/20137065/files/DNSTunnel2026.zip/content",
+      "path": "data/raw/dns-public-intake/dnstunnel2026/DNSTunnel2026.zip",
+      "bytes": 497565428,
+      "publisher_checksum": "md5:e2a4c675b480f9c10b8629494d9ae7dc",
+      "role": "UNQUALIFIED_RESEARCH_INTAKE_NOT_TRAINING_VALIDATION_OR_RESERVE",
+      "downloaded": true,
+      "verified_bytes": 497565428,
+      "publisher_checksum_verified": true,
+      "sha256": "0c6eeadc3a55582b99f88cb31ec36b6b89d971a66804bccdce97a37dad401a0d",
+      "acquired_utc": "2026-10-17T07:18:19.173050+00:00",
+      "extracted": false,
+      "values_inspected": false,
+      "final_evaluation_ready": false,
+      "creators": [
+        {
+          "name": "Buber, Ebubekir",
+          "affiliation": "Y\u0131ld\u0131z Technic University",
+          "orcid": "0000-0002-0586-7514"
+        },
+        {
+          "name": "Kugu, Emin",
+          "affiliation": "TED University",
+          "orcid": "0000-0001-7829-8087"
+        },
+        {
+          "name": "Sahingoz, Ozgur Koray",
+          "affiliation": "Biruni University",
+          "orcid": "0000-0002-1588-8220"
+        }
+      ],
+      "publisher_release_metadata_file": "data/raw/dns-public-intake/dnstunnel2026/release.json",
+      "publisher_release_metadata_sha256": "60168b30b2686d56683406f7d3cca29703b74bf71f4c5e226384e5bdc05a29e0",
+      "runtime_integrated": false,
+      "training_assigned": false,
+      "validation_assigned": false,
+      "reserved_assigned": false
+    },
+    {
+      "source_id": "zenodo-benign",
+      "record_id": "19206234",
+      "source_url": "https://zenodo.org/records/19206234",
+      "doi": "10.5281/zenodo.19206234",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "metadata_file": "docs/verification/dns-open-source-screen-20261017/zenodo-benign.json",
+      "metadata_sha256": "f4730ba5ed3dd3867302ac7e33ac91d3911c87422c5b5153d5a8186676897582",
+      "url": "https://zenodo.org/api/records/19206234/files/capturasAgentes.zip/content",
+      "path": "data/raw/dns-public-intake/uma-benign/capturasAgentes.zip",
+      "bytes": 6853462196,
+      "publisher_checksum": "md5:9ab42d5978237a2b9e613d6b0d0f0440",
+      "role": "UNQUALIFIED_RESEARCH_INTAKE_NOT_TRAINING_VALIDATION_OR_RESERVE",
+      "downloaded": true,
+      "verified_bytes": 6853462196,
+      "publisher_checksum_verified": true,
+      "sha256": "76f7f38dada4cbdb8110691ca981262f10eb55452bc1c2e3e1dc6297b191957d",
+      "acquired_utc": "2026-10-17T07:18:32.157142+00:00",
+      "extracted": false,
+      "values_inspected": false,
+      "final_evaluation_ready": false,
+      "creators": [
+        {
+          "name": "Mu\u00f1oz, Antonio",
+          "affiliation": "University of M\u00e1laga",
+          "orcid": "0000-0002-6751-0625"
+        },
+        {
+          "name": "L\u00f3pez Flores, Sergio",
+          "affiliation": "Universidad de M\u00e1laga",
+          "orcid": "0009-0000-2655-6718"
+        },
+        {
+          "name": "Juan Carlos, Jim\u00e9nez Ariza",
+          "affiliation": "Malaga University"
+        }
+      ],
+      "publisher_release_metadata_file": "data/raw/dns-public-intake/uma-benign/release.json",
+      "publisher_release_metadata_sha256": "f4730ba5ed3dd3867302ac7e33ac91d3911c87422c5b5153d5a8186676897582",
+      "runtime_integrated": false,
+      "training_assigned": false,
+      "validation_assigned": false,
+      "reserved_assigned": false
+    }
+  ],
+  "total_verified_bytes": 7351027624,
+  "acquisition_dod_passed": true,
+  "evaluation_qualification_dod_passed": false,
+  "qualified_independent_positive_sessions": null,
+  "qualified_independent_benign_sessions": null,
+  "reserved_manifest": null,
+  "runtime_changed": false,
+  "candidate_promoted": false,
+  "frozen_dns_contract_sha256": "a30b164f22ed1d9bd61a89d9e8f225ab408fc91df2c06449159f6144ec68208b",
+  "report": "docs/DNS_PUBLIC_DATA_ACQUISITION.md",
+  "acquisition_plan": "docs/verification/dns-public-acquisition-20261017/acquisition-plan.json",
+  "acquisition_plan_sha256": "92cc82fdf1eba1e8ad1bf7a23e154a5502303b54b3374a187c1c20331b57e43a",
+  "reproduction_command": ".venv/Scripts/python.exe docs/verification/dns-public-acquisition-20261017/download.py",
+  "next_task": "Qualify original input format, session/run annotations and benign-category coverage under a separately frozen pre-value inspection plan; no scoring or activation yet."
+}

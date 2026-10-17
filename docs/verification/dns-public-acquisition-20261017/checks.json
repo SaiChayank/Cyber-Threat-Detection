@@ -1,0 +1,318 @@
+{
+  "recorded_utc": "2026-10-17T07:19:38.587431+00:00",
+  "passed": 76,
+  "failed": 0,
+  "protected_file_count": 109,
+  "checks": [
+    {
+      "check": "Two admitted complete downloads",
+      "passed": true
+    },
+    {
+      "check": "Pinned acquisition plan",
+      "passed": true
+    },
+    {
+      "check": "Pinned transport plan",
+      "passed": true
+    },
+    {
+      "check": "Transport prefix/source join zenodo-dnstunnel",
+      "passed": true
+    },
+    {
+      "check": "Verified original exists before cleanup zenodo-dnstunnel",
+      "passed": true
+    },
+    {
+      "check": "Verified range identity zenodo-dnstunnel/0",
+      "passed": true
+    },
+    {
+      "check": "Cleanup owns transport payload 000.bin",
+      "passed": true
+    },
+    {
+      "check": "Verified range identity zenodo-dnstunnel/1",
+      "passed": true
+    },
+    {
+      "check": "Cleanup owns transport payload 001.bin",
+      "passed": true
+    },
+    {
+      "check": "Cleanup prefix is pinned transport only zenodo-dnstunnel",
+      "passed": true
+    },
+    {
+      "check": "Transport prefix/source join zenodo-benign",
+      "passed": true
+    },
+    {
+      "check": "Verified original exists before cleanup zenodo-benign",
+      "passed": true
+    },
+    {
+      "check": "Verified range identity zenodo-benign/0",
+      "passed": true
+    },
+    {
+      "check": "Cleanup owns transport payload 000.bin",
+      "passed": true
+    },
+    {
+      "check": "Verified range identity zenodo-benign/1",
+      "passed": true
+    },
+    {
+      "check": "Cleanup owns transport payload 001.bin",
+      "passed": true
+    },
+    {
+      "check": "Verified range identity zenodo-benign/2",
+      "passed": true
+    },
+    {
+      "check": "Cleanup owns transport payload 002.bin",
+      "passed": true
+    },
+    {
+      "check": "Verified range identity zenodo-benign/3",
+      "passed": true
+    },
+    {
+      "check": "Cleanup owns transport payload 003.bin",
+      "passed": true
+    },
+    {
+      "check": "Verified range identity zenodo-benign/4",
+      "passed": true
+    },
+    {
+      "check": "Cleanup owns transport payload 004.bin",
+      "passed": true
+    },
+    {
+      "check": "Verified range identity zenodo-benign/5",
+      "passed": true
+    },
+    {
+      "check": "Cleanup owns transport payload 005.bin",
+      "passed": true
+    },
+    {
+      "check": "Verified range identity zenodo-benign/6",
+      "passed": true
+    },
+    {
+      "check": "Cleanup owns transport payload 006.bin",
+      "passed": true
+    },
+    {
+      "check": "Verified range identity zenodo-benign/7",
+      "passed": true
+    },
+    {
+      "check": "Cleanup owns transport payload 007.bin",
+      "passed": true
+    },
+    {
+      "check": "Verified range identity zenodo-benign/8",
+      "passed": true
+    },
+    {
+      "check": "Cleanup owns transport payload 008.bin",
+      "passed": true
+    },
+    {
+      "check": "Verified range identity zenodo-benign/9",
+      "passed": true
+    },
+    {
+      "check": "Cleanup owns transport payload 009.bin",
+      "passed": true
+    },
+    {
+      "check": "Verified range identity zenodo-benign/10",
+      "passed": true
+    },
+    {
+      "check": "Cleanup owns transport payload 010.bin",
+      "passed": true
+    },
+    {
+      "check": "Verified range identity zenodo-benign/11",
+      "passed": true
+    },
+    {
+      "check": "Cleanup owns transport payload 011.bin",
+      "passed": true
+    },
+    {
+      "check": "Verified range identity zenodo-benign/12",
+      "passed": true
+    },
+    {
+      "check": "Cleanup owns transport payload 012.bin",
+      "passed": true
+    },
+    {
+      "check": "Verified range identity zenodo-benign/13",
+      "passed": true
+    },
+    {
+      "check": "Cleanup owns transport payload 013.bin",
+      "passed": true
+    },
+    {
+      "check": "Verified range identity zenodo-benign/14",
+      "passed": true
+    },
+    {
+      "check": "Cleanup owns transport payload 014.bin",
+      "passed": true
+    },
+    {
+      "check": "Verified range identity zenodo-benign/15",
+      "passed": true
+    },
+    {
+      "check": "Cleanup owns transport payload 015.bin",
+      "passed": true
+    },
+    {
+      "check": "Verified range identity zenodo-benign/16",
+      "passed": true
+    },
+    {
+      "check": "Cleanup owns transport payload 016.bin",
+      "passed": true
+    },
+    {
+      "check": "Verified range identity zenodo-benign/17",
+      "passed": true
+    },
+    {
+      "check": "Cleanup owns transport payload 017.bin",
+      "passed": true
+    },
+    {
+      "check": "Verified range identity zenodo-benign/18",
+      "passed": true
+    },
+    {
+      "check": "Cleanup owns transport payload 018.bin",
+      "passed": true
+    },
+    {
+      "check": "Verified range identity zenodo-benign/19",
+      "passed": true
+    },
+    {
+      "check": "Cleanup owns transport payload 019.bin",
+      "passed": true
+    },
+    {
+      "check": "Verified range identity zenodo-benign/20",
+      "passed": true
+    },
+    {
+      "check": "Cleanup owns transport payload 020.bin",
+      "passed": true
+    },
+    {
+      "check": "Verified range identity zenodo-benign/21",
+      "passed": true
+    },
+    {
+      "check": "Cleanup owns transport payload 021.bin",
+      "passed": true
+    },
+    {
+      "check": "Verified range identity zenodo-benign/22",
+      "passed": true
+    },
+    {
+      "check": "Cleanup owns transport payload 022.bin",
+      "passed": true
+    },
+    {
+      "check": "Verified range identity zenodo-benign/23",
+      "passed": true
+    },
+    {
+      "check": "Cleanup owns transport payload 023.bin",
+      "passed": true
+    },
+    {
+      "check": "Verified range identity zenodo-benign/24",
+      "passed": true
+    },
+    {
+      "check": "Cleanup owns transport payload 024.bin",
+      "passed": true
+    },
+    {
+      "check": "Verified range identity zenodo-benign/25",
+      "passed": true
+    },
+    {
+      "check": "Cleanup owns transport payload 025.bin",
+      "passed": true
+    },
+    {
+      "check": "Cleanup prefix is pinned transport only zenodo-benign",
+      "passed": true
+    },
+    {
+      "check": "Independent final publisher size/MD5 and SHA256 zenodo-dnstunnel",
+      "passed": true
+    },
+    {
+      "check": "Current official open CC BY 4.0 zenodo-dnstunnel",
+      "passed": true
+    },
+    {
+      "check": "Raw archive remains ignored zenodo-dnstunnel",
+      "passed": true
+    },
+    {
+      "check": "Independent final publisher size/MD5 and SHA256 zenodo-benign",
+      "passed": true
+    },
+    {
+      "check": "Current official open CC BY 4.0 zenodo-benign",
+      "passed": true
+    },
+    {
+      "check": "Raw archive remains ignored zenodo-benign",
+      "passed": true
+    },
+    {
+      "check": "Download tool compiles download.py",
+      "passed": true
+    },
+    {
+      "check": "Download tool compiles download_ranges.py",
+      "passed": true
+    },
+    {
+      "check": "All 109 protected runtime/model/contract/history bytes unchanged",
+      "passed": true
+    },
+    {
+      "check": "Exact 7351027624-byte intake total",
+      "passed": true
+    },
+    {
+      "check": "Frozen DNS evaluation contract unchanged",
+      "passed": true
+    }
+  ],
+  "tests_added": 0,
+  "backend_frontend_tests_rerun": false,
+  "reason": "Archive acquisition/provenance tooling only; no shared runtime/dependency changes",
+  "archives_extracted": false,
+  "data_values_inspected": false,
+  "fresh_detector_metrics": null
+}

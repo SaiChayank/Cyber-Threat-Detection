@@ -1,0 +1,198 @@
+{
+  "scope": "Standard HTTP byte-range transport only; original archive bytes unchanged; initial sequential partials retained",
+  "parent_plan_sha256": "92cc82fdf1eba1e8ad1bf7a23e154a5502303b54b3374a187c1c20331b57e43a",
+  "range_support_verified": {
+    "status": 206,
+    "content_range": "bytes 0-0/6853462196",
+    "bytes_received": 1
+  },
+  "parallel_max": 12,
+  "chunk_bytes": 268435456,
+  "files": [
+    {
+      "source_id": "zenodo-dnstunnel",
+      "prefix_path": "data/raw/dns-public-intake/dnstunnel2026/DNSTunnel2026.zip.part",
+      "prefix_bytes": 123482112,
+      "prefix_sha256": "093ca808db64e3bf53ccf2a7e800d5bd71edf6a3f5262edaff835c1ce3d5fbab",
+      "chunks": [
+        {
+          "index": 0,
+          "start": 123482112,
+          "end": 391917567,
+          "bytes": 268435456
+        },
+        {
+          "index": 1,
+          "start": 391917568,
+          "end": 497565427,
+          "bytes": 105647860
+        }
+      ]
+    },
+    {
+      "source_id": "zenodo-benign",
+      "prefix_path": "data/raw/dns-public-intake/uma-benign/capturasAgentes.zip.part",
+      "prefix_bytes": 57352192,
+      "prefix_sha256": "7eaa50008da870c8c98365d29fa299b300ce2af1306591aaaad97cf5c4b25c09",
+      "chunks": [
+        {
+          "index": 0,
+          "start": 57352192,
+          "end": 325787647,
+          "bytes": 268435456
+        },
+        {
+          "index": 1,
+          "start": 325787648,
+          "end": 594223103,
+          "bytes": 268435456
+        },
+        {
+          "index": 2,
+          "start": 594223104,
+          "end": 862658559,
+          "bytes": 268435456
+        },
+        {
+          "index": 3,
+          "start": 862658560,
+          "end": 1131094015,
+          "bytes": 268435456
+        },
+        {
+          "index": 4,
+          "start": 1131094016,
+          "end": 1399529471,
+          "bytes": 268435456
+        },
+        {
+          "index": 5,
+          "start": 1399529472,
+          "end": 1667964927,
+          "bytes": 268435456
+        },
+        {
+          "index": 6,
+          "start": 1667964928,
+          "end": 1936400383,
+          "bytes": 268435456
+        },
+        {
+          "index": 7,
+          "start": 1936400384,
+          "end": 2204835839,
+          "bytes": 268435456
+        },
+        {
+          "index": 8,
+          "start": 2204835840,
+          "end": 2473271295,
+          "bytes": 268435456
+        },
+        {
+          "index": 9,
+          "start": 2473271296,
+          "end": 2741706751,
+          "bytes": 268435456
+        },
+        {
+          "index": 10,
+          "start": 2741706752,
+          "end": 3010142207,
+          "bytes": 268435456
+        },
+        {
+          "index": 11,
+          "start": 3010142208,
+          "end": 3278577663,
+          "bytes": 268435456
+        },
+        {
+          "index": 12,
+          "start": 3278577664,
+          "end": 3547013119,
+          "bytes": 268435456
+        },
+        {
+          "index": 13,
+          "start": 3547013120,
+          "end": 3815448575,
+          "bytes": 268435456
+        },
+        {
+          "index": 14,
+          "start": 3815448576,
+          "end": 4083884031,
+          "bytes": 268435456
+        },
+        {
+          "index": 15,
+          "start": 4083884032,
+          "end": 4352319487,
+          "bytes": 268435456
+        },
+        {
+          "index": 16,
+          "start": 4352319488,
+          "end": 4620754943,
+          "bytes": 268435456
+        },
+        {
+          "index": 17,
+          "start": 4620754944,
+          "end": 4889190399,
+          "bytes": 268435456
+        },
+        {
+          "index": 18,
+          "start": 4889190400,
+          "end": 5157625855,
+          "bytes": 268435456
+        },
+        {
+          "index": 19,
+          "start": 5157625856,
+          "end": 5426061311,
+          "bytes": 268435456
+        },
+        {
+          "index": 20,
+          "start": 5426061312,
+          "end": 5694496767,
+          "bytes": 268435456
+        },
+        {
+          "index": 21,
+          "start": 5694496768,
+          "end": 5962932223,
+          "bytes": 268435456
+        },
+        {
+          "index": 22,
+          "start": 5962932224,
+          "end": 6231367679,
+          "bytes": 268435456
+        },
+        {
+          "index": 23,
+          "start": 6231367680,
+          "end": 6499803135,
+          "bytes": 268435456
+        },
+        {
+          "index": 24,
+          "start": 6499803136,
+          "end": 6768238591,
+          "bytes": 268435456
+        },
+        {
+          "index": 25,
+          "start": 6768238592,
+          "end": 6853462195,
+          "bytes": 85223604
+        }
+      ]
+    }
+  ],
+  "archive_inspection_allowed": false
+}

@@ -1,5 +1,14 @@
 # Downloaded public datasets and their use
 
+**17 October 2026 acquisition update:** both open CC BY 4.0 Zenodo archives are
+now saved in `data/raw/dns-public-intake/`: DNSTunnel2026 (497,565,428 bytes) and
+UMA benign captures (6,853,462,196 bytes). Exact publisher MD5 and local SHA256
+are verified in `data/dns_public_acquisition.json` and the
+[acquisition report](DNS_PUBLIC_DATA_ACQUISITION.md). These are unextracted,
+unqualified research inputs, not training/validation/reserved sets or runtime
+replay presets. Existing DNS gate/contract and disabled candidate are unchanged.
+The older totals and dated audits below are historical and exclude this intake.
+
 Audited **2 October 2026**. The initial 28 September download recorded
 **413,142,899 bytes (413.1 MB)** of source files and
 the selected DDoS CSV are saved under `data/raw/`. Extracted DNS PCAPs occupy

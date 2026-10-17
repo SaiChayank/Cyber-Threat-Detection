@@ -1,0 +1,156 @@
+{
+  "scope": "Only task-owned duplicate prefix/range payloads removed after whole-original checksum verification; originals and small transport receipts/logs retained",
+  "files_removed": [
+    {
+      "path": "C:/Users/Saich/OneDrive/Desktop/PS26145/data/raw/dns-public-intake/dnstunnel2026/archive-byte-parts/000.bin",
+      "bytes": 268435456,
+      "sha256": "a49df64d6f67e4cc6c501c6a5ca40bd4e82df5d114b26be82f675ba29f523110"
+    },
+    {
+      "path": "C:/Users/Saich/OneDrive/Desktop/PS26145/data/raw/dns-public-intake/dnstunnel2026/archive-byte-parts/001.bin",
+      "bytes": 105647860,
+      "sha256": "3905522f8554e4c9235ad8efafbdc9d82921545e95786779fa5e2c98b75637dd"
+    },
+    {
+      "path": "data/raw/dns-public-intake/dnstunnel2026/DNSTunnel2026.zip.part",
+      "bytes": 123482112,
+      "sha256": "093ca808db64e3bf53ccf2a7e800d5bd71edf6a3f5262edaff835c1ce3d5fbab"
+    },
+    {
+      "path": "C:/Users/Saich/OneDrive/Desktop/PS26145/data/raw/dns-public-intake/uma-benign/archive-byte-parts/000.bin",
+      "bytes": 268435456,
+      "sha256": "c5451f195f5f815d980489ff015aef0a0a67ba0b4234707f716faf6ce1b7ca86"
+    },
+    {
+      "path": "C:/Users/Saich/OneDrive/Desktop/PS26145/data/raw/dns-public-intake/uma-benign/archive-byte-parts/001.bin",
+      "bytes": 268435456,
+      "sha256": "9ebc1a51b87ba809946d10d3f8885e3e87322d835971bb11090fe67b95093c76"
+    },
+    {
+      "path": "C:/Users/Saich/OneDrive/Desktop/PS26145/data/raw/dns-public-intake/uma-benign/archive-byte-parts/002.bin",
+      "bytes": 268435456,
+      "sha256": "be44365d8420c442b85dfb44ccdfea6776873ae7984154455a0e958d14dd20a4"
+    },
+    {
+      "path": "C:/Users/Saich/OneDrive/Desktop/PS26145/data/raw/dns-public-intake/uma-benign/archive-byte-parts/003.bin",
+      "bytes": 268435456,
+      "sha256": "2b805209fc7a6714d1ce4631b052dd49428198a1762f918782b1f03e5be63704"
+    },
+    {
+      "path": "C:/Users/Saich/OneDrive/Desktop/PS26145/data/raw/dns-public-intake/uma-benign/archive-byte-parts/004.bin",
+      "bytes": 268435456,
+      "sha256": "1eeb3b0250d509cd3a2505c548ec072f958b4ec0e4927051d61e055229089eeb"
+    },
+    {
+      "path": "C:/Users/Saich/OneDrive/Desktop/PS26145/data/raw/dns-public-intake/uma-benign/archive-byte-parts/005.bin",
+      "bytes": 268435456,
+      "sha256": "9f8395df26d0b54097686f9dabb6ca5c3547fb59861758bd536f7b99d0a0d0c0"
+    },
+    {
+      "path": "C:/Users/Saich/OneDrive/Desktop/PS26145/data/raw/dns-public-intake/uma-benign/archive-byte-parts/006.bin",
+      "bytes": 268435456,
+      "sha256": "940fdf08da480ed35bc28bd25d9af3117d632ebe58d3d9dda788d78279ce7796"
+    },
+    {
+      "path": "C:/Users/Saich/OneDrive/Desktop/PS26145/data/raw/dns-public-intake/uma-benign/archive-byte-parts/007.bin",
+      "bytes": 268435456,
+      "sha256": "d794cf9d20de30a9c84b406a9c41e22762700f870bf418bd25d9537e9d7e1423"
+    },
+    {
+      "path": "C:/Users/Saich/OneDrive/Desktop/PS26145/data/raw/dns-public-intake/uma-benign/archive-byte-parts/008.bin",
+      "bytes": 268435456,
+      "sha256": "75be9b6113936792fae1bfef11e7d6c6274bb92d95f3ad2e2398f0fa3334422e"
+    },
+    {
+      "path": "C:/Users/Saich/OneDrive/Desktop/PS26145/data/raw/dns-public-intake/uma-benign/archive-byte-parts/009.bin",
+      "bytes": 268435456,
+      "sha256": "33ce0a735cd7f589d45d08747fe1d4ca5f7998ad410728a472265922dab9c218"
+    },
+    {
+      "path": "C:/Users/Saich/OneDrive/Desktop/PS26145/data/raw/dns-public-intake/uma-benign/archive-byte-parts/010.bin",
+      "bytes": 268435456,
+      "sha256": "ab23d788f2433a87b593cee13d0005fa316a954c88eb8d3c6de62600b1953553"
+    },
+    {
+      "path": "C:/Users/Saich/OneDrive/Desktop/PS26145/data/raw/dns-public-intake/uma-benign/archive-byte-parts/011.bin",
+      "bytes": 268435456,
+      "sha256": "433f68c862b13bfc96cd5b85d8745a7acee6d644cd9404553f1076a89b3ef54f"
+    },
+    {
+      "path": "C:/Users/Saich/OneDrive/Desktop/PS26145/data/raw/dns-public-intake/uma-benign/archive-byte-parts/012.bin",
+      "bytes": 268435456,
+      "sha256": "1de5ef0e1f9c630251f3d72a017b9293192621425553675a04340dea771252a9"
+    },
+    {
+      "path": "C:/Users/Saich/OneDrive/Desktop/PS26145/data/raw/dns-public-intake/uma-benign/archive-byte-parts/013.bin",
+      "bytes": 268435456,
+      "sha256": "e6d9745d74bf872d61285aa24d67f85bce0f4992ae4fc1fcebf74a2986e5a4cd"
+    },
+    {
+      "path": "C:/Users/Saich/OneDrive/Desktop/PS26145/data/raw/dns-public-intake/uma-benign/archive-byte-parts/014.bin",
+      "bytes": 268435456,
+      "sha256": "445dfe72345177c9b7190b2d23e76ca334c52698dd32f9ddc5f4faab629847d5"
+    },
+    {
+      "path": "C:/Users/Saich/OneDrive/Desktop/PS26145/data/raw/dns-public-intake/uma-benign/archive-byte-parts/015.bin",
+      "bytes": 268435456,
+      "sha256": "8ebf638cd12876e3c914af745f95e2270183bbc04f6ec0516551a3aaf090c993"
+    },
+    {
+      "path": "C:/Users/Saich/OneDrive/Desktop/PS26145/data/raw/dns-public-intake/uma-benign/archive-byte-parts/016.bin",
+      "bytes": 268435456,
+      "sha256": "03ac4a41564e6188bbc3a5fc63e6b52ce951bd19d56a06e186adc783c45bf4c0"
+    },
+    {
+      "path": "C:/Users/Saich/OneDrive/Desktop/PS26145/data/raw/dns-public-intake/uma-benign/archive-byte-parts/017.bin",
+      "bytes": 268435456,
+      "sha256": "83f5652953d94a62c2e3d3feddb8315f55d04fd039f3c0be585994671979bdb0"
+    },
+    {
+      "path": "C:/Users/Saich/OneDrive/Desktop/PS26145/data/raw/dns-public-intake/uma-benign/archive-byte-parts/018.bin",
+      "bytes": 268435456,
+      "sha256": "6eb8172c2a46bac99bf4163a43f64fb329ef1ab0bc67635eafb205adf0042275"
+    },
+    {
+      "path": "C:/Users/Saich/OneDrive/Desktop/PS26145/data/raw/dns-public-intake/uma-benign/archive-byte-parts/019.bin",
+      "bytes": 268435456,
+      "sha256": "9c3ed78e82b82f7328ae9ba82edeb455d9666aa660cac0c458ce691d914c4668"
+    },
+    {
+      "path": "C:/Users/Saich/OneDrive/Desktop/PS26145/data/raw/dns-public-intake/uma-benign/archive-byte-parts/020.bin",
+      "bytes": 268435456,
+      "sha256": "200c380b5680264d4de64add435aa4ea372770b2c499d35374e26f95714ffe6b"
+    },
+    {
+      "path": "C:/Users/Saich/OneDrive/Desktop/PS26145/data/raw/dns-public-intake/uma-benign/archive-byte-parts/021.bin",
+      "bytes": 268435456,
+      "sha256": "0133a2405d8dca449c42014b8d261c47c9050f580897ef21018e5d4522d0cbc3"
+    },
+    {
+      "path": "C:/Users/Saich/OneDrive/Desktop/PS26145/data/raw/dns-public-intake/uma-benign/archive-byte-parts/022.bin",
+      "bytes": 268435456,
+      "sha256": "977e4794d1b5ea592dccb3659b3964e71353055571ee935908374e6a675d3597"
+    },
+    {
+      "path": "C:/Users/Saich/OneDrive/Desktop/PS26145/data/raw/dns-public-intake/uma-benign/archive-byte-parts/023.bin",
+      "bytes": 268435456,
+      "sha256": "dddeacda89e432aa10a653819481e464caeb574f97fd545c2bc3bb4947fc772d"
+    },
+    {
+      "path": "C:/Users/Saich/OneDrive/Desktop/PS26145/data/raw/dns-public-intake/uma-benign/archive-byte-parts/024.bin",
+      "bytes": 268435456,
+      "sha256": "35ec4a161d965b85e65485068deacb6b231fe3421b6c9be0931e73e8233d8413"
+    },
+    {
+      "path": "C:/Users/Saich/OneDrive/Desktop/PS26145/data/raw/dns-public-intake/uma-benign/archive-byte-parts/025.bin",
+      "bytes": 85223604,
+      "sha256": "14e1163e33e6b81cd073bbab7ef0dde3eeef822156a34cff53f36120aed1cfbc"
+    },
+    {
+      "path": "data/raw/dns-public-intake/uma-benign/capturasAgentes.zip.part",
+      "bytes": 57352192,
+      "sha256": "7eaa50008da870c8c98365d29fa299b300ce2af1306591aaaad97cf5c4b25c09"
+    }
+  ],
+  "bytes_removed": 7351027624
+}

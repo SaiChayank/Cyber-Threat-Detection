@@ -197,6 +197,14 @@ Skip ahead only to independent eligible work when the current package is blocked
 
 ## Phase 3 — resolve the three data-dependent detector tracks
 
+T30 acquisition update, 17 October 2026: the two user-approved Zenodo ZIPs are
+downloaded and size/publisher-MD5 verified (7,351,027,624 original bytes total).
+See [acquisition report](DNS_PUBLIC_DATA_ACQUISITION.md) and
+`data/dns_public_acquisition.json` for local paths, SHA256 and reproduction.
+Acquisition DoD passes; no extraction/data rows, runtime integration, training,
+reserved assignment/scoring or candidate activation. Source/label/format/coverage
+qualification remains required before use; the T30 final quality blocker remains.
+
 T30 alternative-source update, 17 October 2026: user chose publicly licensed data.
 [Five-source DNS screen](DNS_OPEN_SOURCE_ALTERNATIVES.md) verifies two open CC BY
 4.0 releases without needing a reply for their declared rights. Neither they nor

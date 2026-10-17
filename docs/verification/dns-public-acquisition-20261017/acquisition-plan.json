@@ -1,0 +1,44 @@
+{
+  "baseline_commit": "95c65fe",
+  "authorization": "User explicitly requested downloading both datasets and adding them to project on 17 October 2026",
+  "scope": "Acquire exact two original publisher ZIP archives and compute hashes only; no extraction, archive-member/row/packet inspection, training, scoring or activation",
+  "files": [
+    {
+      "source_id": "zenodo-dnstunnel",
+      "record_id": "20137065",
+      "source_url": "https://zenodo.org/records/20137065",
+      "doi": "10.5281/zenodo.20137065",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "metadata_file": "docs/verification/dns-open-source-screen-20261017/zenodo-dnstunnel.json",
+      "metadata_sha256": "60168b30b2686d56683406f7d3cca29703b74bf71f4c5e226384e5bdc05a29e0",
+      "url": "https://zenodo.org/api/records/20137065/files/DNSTunnel2026.zip/content",
+      "path": "data/raw/dns-public-intake/dnstunnel2026/DNSTunnel2026.zip",
+      "bytes": 497565428,
+      "publisher_checksum": "md5:e2a4c675b480f9c10b8629494d9ae7dc",
+      "role": "UNQUALIFIED_RESEARCH_INTAKE_NOT_TRAINING_VALIDATION_OR_RESERVE"
+    },
+    {
+      "source_id": "zenodo-benign",
+      "record_id": "19206234",
+      "source_url": "https://zenodo.org/records/19206234",
+      "doi": "10.5281/zenodo.19206234",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "metadata_file": "docs/verification/dns-open-source-screen-20261017/zenodo-benign.json",
+      "metadata_sha256": "f4730ba5ed3dd3867302ac7e33ac91d3911c87422c5b5153d5a8186676897582",
+      "url": "https://zenodo.org/api/records/19206234/files/capturasAgentes.zip/content",
+      "path": "data/raw/dns-public-intake/uma-benign/capturasAgentes.zip",
+      "bytes": 6853462196,
+      "publisher_checksum": "md5:9ab42d5978237a2b9e613d6b0d0f0440",
+      "role": "UNQUALIFIED_RESEARCH_INTAKE_NOT_TRAINING_VALIDATION_OR_RESERVE"
+    }
+  ],
+  "total_bytes": 7351027624,
+  "runtime_change_allowed": false,
+  "frozen_evaluation_contract_change_allowed": false,
+  "reserved_assignment_allowed": false,
+  "training_allowed": false,
+  "archive_extraction_allowed": false,
+  "archive_member_inspection_allowed": false
+}
