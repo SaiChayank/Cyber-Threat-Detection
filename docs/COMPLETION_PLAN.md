@@ -1,5 +1,12 @@
 # Univect completion plan
 
+**Current baseline verified, 18 October 2026 IST:**
+[regression record](BASELINE_REGRESSION_20261018.md) for `ee8f72d` reports 533 backend
+tests passing/one existing deprecation warning, plus root typecheck and production
+build passing. No application/dependency/model/contract change. This verifies the
+current diagnostic-integrated baseline, not final release or independent detector
+quality. Next independent work: bounded existing-decoder archive header check.
+
 **T25 exfil observability diagnosis, 18 October 2026 IST:**
 [decision](EXFIL_OBSERVABILITY_DECISION.md) reproduces four FPs (3 RULE/1 ML),
 including exact qualified evidence text. Four full opposite-purpose metadata/

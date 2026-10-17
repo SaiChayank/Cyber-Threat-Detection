@@ -1,0 +1,14 @@
+{
+  "baseline_commit": "ee8f72d93c599453b9dc4f70a7708e3e1161083d",
+  "recorded_utc": "2026-10-17T18:39:41.797210+00:00",
+  "scope": "Current-baseline regression after 46 new diagnostic tests; not final release certification or fresh independent detector quality",
+  "commands": [
+    ".venv/Scripts/python.exe -B -m pytest -q -p no:cacheprovider",
+    "npm run typecheck (root workspace forwarding)",
+    "npm run build (root documented build wrapper)"
+  ],
+  "preserve": "Original raw data, alert SQLite/WAL/SHM, source protocols/models/gates",
+  "runtime_changes_allowed": "Only fixes for a reproduced real defect with targeted regression first; no speculative refactor",
+  "reserved_or_training_allowed": false,
+  "initial_setup_command_corrections": "Discovered root workspace package-lock.json and backend/application.py via rg inventory; guessed frontend lockfile/config paths were absent. No application failure or file mutation."
+}

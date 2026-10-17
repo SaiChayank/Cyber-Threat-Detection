@@ -1,0 +1,31 @@
+{
+  "recorded_utc": "2026-10-17T18:43:48.418230+00:00",
+  "passed": 4,
+  "failed": 0,
+  "protected_file_count": 130,
+  "checks": [
+    {
+      "check": "533 backend tests passed, one warning",
+      "passed": true
+    },
+    {
+      "check": "Root typecheck invoked frontend compiler",
+      "passed": true
+    },
+    {
+      "check": "Production build successful and Monitor generated",
+      "passed": true
+    },
+    {
+      "check": "Protected runtime/model/history/protocol/package bytes unchanged",
+      "passed": true
+    }
+  ],
+  "backend_tests_passed": 533,
+  "warnings": 1,
+  "typecheck_passed": true,
+  "production_build_passed": true,
+  "browser_tested": false,
+  "release_ready": false,
+  "runtime_changed": false
+}

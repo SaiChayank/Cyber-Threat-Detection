@@ -2,7 +2,7 @@
   "authorization": "User requested continuous eligible project work while away within the five-hour session window; commit each completed verified package",
   "reference_start_utc": "2026-10-17T18:29:23Z",
   "wall_clock_upper_bound_utc": "2026-10-17T23:29:23Z",
-  "current_task": "Current-baseline full backend regression plus frontend typecheck/build",
+  "current_task": "Bounded archive header-only transport using installed decoder",
   "completed": [
     {
       "task": "Downloaded DNS qualification",
@@ -23,11 +23,17 @@
       "task": "T25 exfil observability diagnosis",
       "decision": "4 exact first FPs, four full collisions, causal ratio/volume verified; 24 new tests/121 targeted pass; quality unresolved",
       "commit": "See package Git history"
+    },
+    {
+      "task": "Full current-baseline regression/typecheck/build",
+      "decision": "533 backend tests pass/one existing warning; typecheck/build pass; no product changes",
+      "commit": "See package Git history"
     }
   ],
   "remaining_queue": [
-    "Current-baseline regression/typecheck/build",
-    "Other independent plan tasks with satisfied prerequisites"
+    "Existing decoder header check",
+    "Current clean-checkout reproduction if meaningful prerequisites allow",
+    "Other independent eligible plan tasks"
   ],
   "constraints": [
     "No gate relaxation",

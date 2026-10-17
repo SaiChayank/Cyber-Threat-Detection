@@ -1,0 +1,18 @@
+{
+  "baseline_commit": "ee8f72d",
+  "verification_dod_passed": true,
+  "release_ready": false,
+  "files": {
+    "docs/BASELINE_REGRESSION_20261018.md": "a8431f9b1fedf8dd09d048ce327d606410a4174d69d659c25333cf2e0a095e84",
+    "docs/COMPLETION_PLAN.md": "1e9cd569ae5c57f2d6f897c9424cba87633b1f1a1dc65249fd6226bd1fe50304",
+    "docs/verification/unattended-progress-20261017/progress.json": "1642f5e3634420f3c1b7d886613a939ffe014f021b15fce2ef063ace4eb76e4b",
+    "docs/verification/baseline-regression-20261018/backend-tests.log": "df1b02ef9a71c7d380904370d7eae13ed426fa89f626a3835a0537ef37920826",
+    "docs/verification/baseline-regression-20261018/checks.json": "795caca11847d21946abae88548c961339f89cf50ab1438fb498e6c796ecce7b",
+    "docs/verification/baseline-regression-20261018/environment.json": "21ab85216f0c15d75ef8d37200e0010ca84b871f437aa57da9c3261e4c6a3349",
+    "docs/verification/baseline-regression-20261018/frontend-build.log": "be67287af96781007803ea41ace46900ef21387e414e35971785abc3b3c67a52",
+    "docs/verification/baseline-regression-20261018/integrity-after.json": "edda8076132eb7cdf3fc1ac7c268d00010b5ecc0475ae1637584c1caa0303556",
+    "docs/verification/baseline-regression-20261018/integrity-before.json": "edda8076132eb7cdf3fc1ac7c268d00010b5ecc0475ae1637584c1caa0303556",
+    "docs/verification/baseline-regression-20261018/plan.json": "9589308bf3c64138701771afb4cf15190651ab8c124d65a4b7160ed07df4fbeb",
+    "docs/verification/baseline-regression-20261018/typecheck.log": "410c2ef63e4e63344438e02b7fd76c70eac2c4a17b316d634e93c962c3d841b8"
+  }
+}
