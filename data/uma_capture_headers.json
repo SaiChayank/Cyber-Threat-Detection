@@ -1,0 +1,15 @@
+{
+  "source": "10.5281/zenodo.19206234",
+  "archive_sha256": "76f7f38dada4cbdb8110691ca981262f10eb55452bc1c2e3e1dc6297b191957d",
+  "member_count": 45,
+  "signature": "0a0d0d0a",
+  "classification": "PCAPNG_SIGNATURE_RUNTIME_UNSUPPORTED",
+  "full_member_integrity_verified": false,
+  "packet_values_inspected": false,
+  "dns_session_labels_verified": false,
+  "training_role": null,
+  "validation_role": null,
+  "reserved_evaluation_role": null,
+  "report": "docs/UMA_HEADER_TRANSPORT_DECISION.md",
+  "results": "docs/verification/uma-header-transport-20261018/results.json"
+}

@@ -1,0 +1,470 @@
+{
+  "baseline_commit": "5f23a7d",
+  "archive": "data/raw/dns-public-intake/uma-benign/capturasAgentes.zip",
+  "archive_bytes": 6853462196,
+  "archive_sha256": "76f7f38dada4cbdb8110691ca981262f10eb55452bc1c2e3e1dc6297b191957d",
+  "entries": [
+    {
+      "index": 0,
+      "name": "capturaAgenteAdmin15m1.pcapng",
+      "file_bytes": 6091440,
+      "compressed_bytes": 3105132,
+      "crc32": "8de7d593",
+      "method": 9,
+      "flags": 0,
+      "local_header_offset": 0
+    },
+    {
+      "index": 1,
+      "name": "capturaAgenteAdmin15m2.pcapng",
+      "file_bytes": 6170192,
+      "compressed_bytes": 3164813,
+      "crc32": "8df4651a",
+      "method": 9,
+      "flags": 0,
+      "local_header_offset": 3105191
+    },
+    {
+      "index": 2,
+      "name": "capturaAgenteAdmin15m3.pcapng",
+      "file_bytes": 6325348,
+      "compressed_bytes": 3263833,
+      "crc32": "3bf24dd6",
+      "method": 9,
+      "flags": 0,
+      "local_header_offset": 6270063
+    },
+    {
+      "index": 3,
+      "name": "capturaAgenteAdmin15m4.pcapng",
+      "file_bytes": 6161632,
+      "compressed_bytes": 3213210,
+      "crc32": "81bff0ee",
+      "method": 9,
+      "flags": 0,
+      "local_header_offset": 9533955
+    },
+    {
+      "index": 4,
+      "name": "capturaAgenteAdmin15m5.pcapng",
+      "file_bytes": 6497580,
+      "compressed_bytes": 3393800,
+      "crc32": "cb3fca8d",
+      "method": 9,
+      "flags": 0,
+      "local_header_offset": 12747224
+    },
+    {
+      "index": 5,
+      "name": "capturaAgenteAdmin1h1.pcapng",
+      "file_bytes": 26827984,
+      "compressed_bytes": 14233439,
+      "crc32": "250d77af",
+      "method": 9,
+      "flags": 0,
+      "local_header_offset": 16141083
+    },
+    {
+      "index": 6,
+      "name": "capturaAgenteAdmin1h2.pcapng",
+      "file_bytes": 26560124,
+      "compressed_bytes": 14455902,
+      "crc32": "6dd56e8d",
+      "method": 9,
+      "flags": 0,
+      "local_header_offset": 30374580
+    },
+    {
+      "index": 7,
+      "name": "capturaAgenteAdmin1h3.pcapng",
+      "file_bytes": 24753412,
+      "compressed_bytes": 12885757,
+      "crc32": "a3cf8e8f",
+      "method": 9,
+      "flags": 0,
+      "local_header_offset": 44830540
+    },
+    {
+      "index": 8,
+      "name": "capturaAgenteAdmin1h4.pcapng",
+      "file_bytes": 25533328,
+      "compressed_bytes": 13123362,
+      "crc32": "9494f0d3",
+      "method": 9,
+      "flags": 0,
+      "local_header_offset": 57716355
+    },
+    {
+      "index": 9,
+      "name": "capturaAgenteAdmin1h5.pcapng",
+      "file_bytes": 24268728,
+      "compressed_bytes": 12451049,
+      "crc32": "4add682b",
+      "method": 9,
+      "flags": 0,
+      "local_header_offset": 70839775
+    },
+    {
+      "index": 10,
+      "name": "capturaAgenteAdmin5m1.pcapng",
+      "file_bytes": 2318476,
+      "compressed_bytes": 1220282,
+      "crc32": "f39225c5",
+      "method": 9,
+      "flags": 0,
+      "local_header_offset": 83290882
+    },
+    {
+      "index": 11,
+      "name": "capturaAgenteAdmin5m2.pcapng",
+      "file_bytes": 2364060,
+      "compressed_bytes": 1263686,
+      "crc32": "c15b3b02",
+      "method": 9,
+      "flags": 0,
+      "local_header_offset": 84511222
+    },
+    {
+      "index": 12,
+      "name": "capturaAgenteAdmin5m3.pcapng",
+      "file_bytes": 2430868,
+      "compressed_bytes": 1312882,
+      "crc32": "83ee399a",
+      "method": 9,
+      "flags": 0,
+      "local_header_offset": 85774966
+    },
+    {
+      "index": 13,
+      "name": "capturaAgenteAdmin5m4.pcapng",
+      "file_bytes": 2319492,
+      "compressed_bytes": 1228290,
+      "crc32": "108f20eb",
+      "method": 9,
+      "flags": 0,
+      "local_header_offset": 87087906
+    },
+    {
+      "index": 14,
+      "name": "capturaAgenteAdmin5m5.pcapng",
+      "file_bytes": 2217308,
+      "compressed_bytes": 1165733,
+      "crc32": "f515d5d3",
+      "method": 9,
+      "flags": 0,
+      "local_header_offset": 88316254
+    },
+    {
+      "index": 15,
+      "name": "capturaAgenteGamer15m1.pcapng",
+      "file_bytes": 140926236,
+      "compressed_bytes": 130079331,
+      "crc32": "402fbb9c",
+      "method": 9,
+      "flags": 0,
+      "local_header_offset": 89482045
+    },
+    {
+      "index": 16,
+      "name": "capturaAgenteGamer15m2.pcapng",
+      "file_bytes": 133082788,
+      "compressed_bytes": 123151683,
+      "crc32": "e2d0459b",
+      "method": 9,
+      "flags": 0,
+      "local_header_offset": 219561435
+    },
+    {
+      "index": 17,
+      "name": "capturaAgenteGamer15m3.pcapng",
+      "file_bytes": 61863396,
+      "compressed_bytes": 54835186,
+      "crc32": "d7cf1865",
+      "method": 9,
+      "flags": 0,
+      "local_header_offset": 342713177
+    },
+    {
+      "index": 18,
+      "name": "capturaAgenteGamer15m4.pcapng",
+      "file_bytes": 145457968,
+      "compressed_bytes": 132634678,
+      "crc32": "caf66bb2",
+      "method": 9,
+      "flags": 0,
+      "local_header_offset": 397548422
+    },
+    {
+      "index": 19,
+      "name": "capturaAgenteGamer15m5.pcapng",
+      "file_bytes": 117459736,
+      "compressed_bytes": 106704328,
+      "crc32": "4fd18a40",
+      "method": 9,
+      "flags": 0,
+      "local_header_offset": 530183159
+    },
+    {
+      "index": 20,
+      "name": "capturaAgenteGamer1h1.pcapng",
+      "file_bytes": 338971268,
+      "compressed_bytes": 309174592,
+      "crc32": "1ac3c873",
+      "method": 9,
+      "flags": 0,
+      "local_header_offset": 636887546
+    },
+    {
+      "index": 21,
+      "name": "capturaAgenteGamer1h2.pcapng",
+      "file_bytes": 512711768,
+      "compressed_bytes": 471160976,
+      "crc32": "c2f5b062",
+      "method": 9,
+      "flags": 0,
+      "local_header_offset": 946062196
+    },
+    {
+      "index": 22,
+      "name": "capturaAgenteGamer1h3.pcapng",
+      "file_bytes": 605120704,
+      "compressed_bytes": 555668222,
+      "crc32": "6fa56c1a",
+      "method": 9,
+      "flags": 0,
+      "local_header_offset": 1417223230
+    },
+    {
+      "index": 23,
+      "name": "capturaAgenteGamer1h4.pcapng",
+      "file_bytes": 677181228,
+      "compressed_bytes": 629898069,
+      "crc32": "b7b6ee0a",
+      "method": 9,
+      "flags": 0,
+      "local_header_offset": 1972891510
+    },
+    {
+      "index": 24,
+      "name": "capturaAgenteGamer1h5.pcapng",
+      "file_bytes": 540099724,
+      "compressed_bytes": 497527388,
+      "crc32": "d0f59546",
+      "method": 9,
+      "flags": 0,
+      "local_header_offset": 2602789637
+    },
+    {
+      "index": 25,
+      "name": "capturaAgenteGamer5m1.pcapng",
+      "file_bytes": 296641288,
+      "compressed_bytes": 277047962,
+      "crc32": "e0fc185b",
+      "method": 9,
+      "flags": 0,
+      "local_header_offset": 3100317083
+    },
+    {
+      "index": 26,
+      "name": "capturaAgenteGamer5m2.pcapng",
+      "file_bytes": 46571996,
+      "compressed_bytes": 42692413,
+      "crc32": "8b8575c8",
+      "method": 9,
+      "flags": 0,
+      "local_header_offset": 3377365103
+    },
+    {
+      "index": 27,
+      "name": "capturaAgenteGamer5m3.pcapng",
+      "file_bytes": 49763888,
+      "compressed_bytes": 45571273,
+      "crc32": "614571e5",
+      "method": 9,
+      "flags": 0,
+      "local_header_offset": 3420057574
+    },
+    {
+      "index": 28,
+      "name": "capturaAgenteGamer5m4.pcapng",
+      "file_bytes": 34190340,
+      "compressed_bytes": 31042300,
+      "crc32": "8443435d",
+      "method": 9,
+      "flags": 0,
+      "local_header_offset": 3465628905
+    },
+    {
+      "index": 29,
+      "name": "capturaAgenteGamer5m5.pcapng",
+      "file_bytes": 49435228,
+      "compressed_bytes": 45088007,
+      "crc32": "e9fde283",
+      "method": 9,
+      "flags": 0,
+      "local_header_offset": 3496671263
+    },
+    {
+      "index": 30,
+      "name": "capturaAgenteWeb15m1.pcapng",
+      "file_bytes": 113753444,
+      "compressed_bytes": 106117512,
+      "crc32": "a12c2f8c",
+      "method": 9,
+      "flags": 0,
+      "local_header_offset": 3541759328
+    },
+    {
+      "index": 31,
+      "name": "capturaAgenteWeb15m2.pcapng",
+      "file_bytes": 92826076,
+      "compressed_bytes": 86008653,
+      "crc32": "adb5e4b8",
+      "method": 9,
+      "flags": 0,
+      "local_header_offset": 3647876897
+    },
+    {
+      "index": 32,
+      "name": "capturaAgenteWeb15m3.pcapng",
+      "file_bytes": 369360912,
+      "compressed_bytes": 347048715,
+      "crc32": "c374b802",
+      "method": 9,
+      "flags": 0,
+      "local_header_offset": 3733885607
+    },
+    {
+      "index": 33,
+      "name": "capturaAgenteWeb15m4.pcapng",
+      "file_bytes": 142839232,
+      "compressed_bytes": 133866457,
+      "crc32": "fb5ff15e",
+      "method": 9,
+      "flags": 0,
+      "local_header_offset": 4080934379
+    },
+    {
+      "index": 34,
+      "name": "capturaAgenteWeb15m5.pcapng",
+      "file_bytes": 75723332,
+      "compressed_bytes": 70260176,
+      "crc32": "45a86937",
+      "method": 9,
+      "flags": 0,
+      "local_header_offset": 4214800893
+    },
+    {
+      "index": 35,
+      "name": "capturaAgenteWeb1h1.pcapng",
+      "file_bytes": 532749140,
+      "compressed_bytes": 494233894,
+      "crc32": "04884f6d",
+      "method": 9,
+      "flags": 0,
+      "local_header_offset": 4285061126
+    },
+    {
+      "index": 36,
+      "name": "capturaAgenteWeb1h2.pcapng",
+      "file_bytes": 496637760,
+      "compressed_bytes": 461453331,
+      "crc32": "a099783c",
+      "method": 9,
+      "flags": 0,
+      "local_header_offset": 4779295076
+    },
+    {
+      "index": 37,
+      "name": "capturaAgenteWeb1h3.pcapng",
+      "file_bytes": 251118760,
+      "compressed_bytes": 231027655,
+      "crc32": "67fb3b29",
+      "method": 9,
+      "flags": 0,
+      "local_header_offset": 5240748463
+    },
+    {
+      "index": 38,
+      "name": "capturaAgenteWeb1h4.pcapng",
+      "file_bytes": 839078120,
+      "compressed_bytes": 783898386,
+      "crc32": "fb133376",
+      "method": 9,
+      "flags": 0,
+      "local_header_offset": 5471776174
+    },
+    {
+      "index": 39,
+      "name": "capturaAgenteWeb1h5.pcapng",
+      "file_bytes": 202188644,
+      "compressed_bytes": 183900771,
+      "crc32": "68a2323c",
+      "method": 9,
+      "flags": 0,
+      "local_header_offset": 6255674616
+    },
+    {
+      "index": 40,
+      "name": "capturaAgenteWeb5m1.pcapng",
+      "file_bytes": 148580568,
+      "compressed_bytes": 138558179,
+      "crc32": "ec438393",
+      "method": 9,
+      "flags": 0,
+      "local_header_offset": 6439575443
+    },
+    {
+      "index": 41,
+      "name": "capturaAgenteWeb5m2.pcapng",
+      "file_bytes": 47325616,
+      "compressed_bytes": 44138103,
+      "crc32": "42359dd2",
+      "method": 9,
+      "flags": 0,
+      "local_header_offset": 6578133678
+    },
+    {
+      "index": 42,
+      "name": "capturaAgenteWeb5m3.pcapng",
+      "file_bytes": 61555616,
+      "compressed_bytes": 57688394,
+      "crc32": "16918df5",
+      "method": 9,
+      "flags": 0,
+      "local_header_offset": 6622271837
+    },
+    {
+      "index": 43,
+      "name": "capturaAgenteWeb5m4.pcapng",
+      "file_bytes": 117530292,
+      "compressed_bytes": 110496594,
+      "crc32": "a5b7456e",
+      "method": 9,
+      "flags": 0,
+      "local_header_offset": 6679960287
+    },
+    {
+      "index": 44,
+      "name": "capturaAgenteWeb5m5.pcapng",
+      "file_bytes": 67515980,
+      "compressed_bytes": 63001682,
+      "crc32": "143b4440",
+      "method": 9,
+      "flags": 0,
+      "local_header_offset": 6790456937
+    }
+  ],
+  "decoder": {
+    "distribution": "stream-inflate",
+    "version": "0.0.43",
+    "file": "C:\\Users\\Saich\\OneDrive\\Desktop\\PS26145\\.venv\\Lib\\site-packages\\stream_inflate.cp313-win_amd64.pyd",
+    "sha256": "2103b0287bfe756638ccb7f155671e0609034c95fbbe86001017271e38fff5f4"
+  },
+  "output_bytes_per_member": 4,
+  "max_compressed_bytes_per_member": 1048576,
+  "runtime_changes_allowed": false,
+  "packet_block_or_query_parsing_allowed": false,
+  "member_extraction_allowed": false,
+  "archive_conversion_allowed": false
+}

@@ -1,0 +1,9 @@
+{
+  "attempts": 45,
+  "only_four_bytes_per_member": true,
+  "compressed_input_bounded": true,
+  "tests_passed": 8,
+  "protected_files_unchanged": 130,
+  "diagnostic_dod_passed": true,
+  "dns_evaluation_qualified": false
+}

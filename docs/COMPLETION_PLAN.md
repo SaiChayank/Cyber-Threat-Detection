@@ -463,3 +463,11 @@ and applicable capture-data licence scope is not established. Git-object duplica
 do not count as independent runs. No data values, candidates or parser changes.
 Exact next prerequisite: obtain its publisher/steward qualification bundle resolving
 those gaps; no author contact or acquisition was performed or automatically started.
+
+**UMA signature supplement, 18 October 2026 IST:**
+[Bounded header decision](UMA_HEADER_TRANSPORT_DECISION.md) confirms all 45 members
+have the PCAPNG signature using an already installed decoder: only four bytes per
+member, no packet parsing/conversion or dependency change. Eight transport tests
+pass. Runtime format support and independently labelled DNS-control coverage remain
+missing; roles/gates/candidate state unchanged. This supplements the earlier
+header-unverified record without rewriting its frozen historical evidence.

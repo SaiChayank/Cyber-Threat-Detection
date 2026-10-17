@@ -1,0 +1,20 @@
+{
+  "baseline_commit": "5f23a7d",
+  "files": {
+    "docs/verification/uma-header-transport-20261018/checks.json": "bf525e4d13240866fe78893769ffd859886202218b0b703db3cf659c2327b6c9",
+    "docs/verification/uma-header-transport-20261018/integrity-after.json": "edda8076132eb7cdf3fc1ac7c268d00010b5ecc0475ae1637584c1caa0303556",
+    "docs/verification/uma-header-transport-20261018/integrity-before.json": "edda8076132eb7cdf3fc1ac7c268d00010b5ecc0475ae1637584c1caa0303556",
+    "docs/verification/uma-header-transport-20261018/protocol.sha256": "9af0365a827d6d12cf244470a48992c0b607a40e68f32d71bf6aa6651ad992da",
+    "docs/verification/uma-header-transport-20261018/read_prefix.py": "bf9178d002f9d117f538a57e97cf8ef3721cc9d257b7a805094c60f02bc26e42",
+    "docs/verification/uma-header-transport-20261018/results.json": "589c87c2435b49fe5d9c75726cdc5a0416f33faf46426ce1c9c19e964ec43a7d",
+    "docs/verification/uma-header-transport-20261018/run_check.py": "dfff4eaff7f12e0693d3d8024b3f7e1d0de182c160cdb927d1051b4625956e72",
+    "docs/verification/uma-header-transport-20261018/selection-plan.json": "31e79ffc5718ceb126eb7c4bee3fd151386b8fb0eae47c0300d33bb67a7a1e3b",
+    "docs/verification/uma-header-transport-20261018/selection-plan.sha256": "e7b66e0d4f7f6b33e5048ab3119a6e6d9517c62ef75913795e2b09888d530547",
+    "docs/UMA_HEADER_TRANSPORT_PROTOCOL.md": "e4ee988946cd1bcbc0327379900672a41fe8611033c661daaf9c590a84acb4d2",
+    "docs/UMA_HEADER_TRANSPORT_DECISION.md": "b20f3e794258ed220a0530770b52adb22ec13807cc121a55964c868858f7d20a",
+    "tests/test_uma_header_transport.py": "a80fbbdef60a209f7b7df82cedcf41c4885819db0bd25776b967f04d19c32f41",
+    "data/uma_capture_headers.json": "0c28102b2a470f851086cad80d195389dc53adc7132a68551f307eb5918f33d7"
+  },
+  "diagnostic_dod_passed": true,
+  "release_ready": false
+}

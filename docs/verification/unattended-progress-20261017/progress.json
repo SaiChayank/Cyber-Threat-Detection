@@ -2,7 +2,7 @@
   "authorization": "User requested continuous eligible project work while away within the five-hour session window; commit each completed verified package",
   "reference_start_utc": "2026-10-17T18:29:23Z",
   "wall_clock_upper_bound_utc": "2026-10-17T23:29:23Z",
-  "current_task": "Bounded archive header-only transport using installed decoder",
+  "current_task": "Current clean-checkout baseline reproduction",
   "completed": [
     {
       "task": "Downloaded DNS qualification",
@@ -28,11 +28,15 @@
       "task": "Full current-baseline regression/typecheck/build",
       "decision": "533 backend tests pass/one existing warning; typecheck/build pass; no product changes",
       "commit": "See package Git history"
+    },
+    {
+      "task": "Bounded UMA capture signature transport",
+      "decision": "45 PCAPNG signatures; only 180 decompressed bytes, 8 tests pass; DNS qualification still blocked",
+      "commit": "See package Git history"
     }
   ],
   "remaining_queue": [
-    "Existing decoder header check",
-    "Current clean-checkout reproduction if meaningful prerequisites allow",
+    "Current clean-checkout baseline reproduction",
     "Other independent eligible plan tasks"
   ],
   "constraints": [

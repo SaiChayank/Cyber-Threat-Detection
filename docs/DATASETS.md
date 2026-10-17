@@ -276,3 +276,11 @@ unavailable). Three files total 369,005,656 bytes under ignored
 approved final evaluation data. Algorithm aliases, legitimate service strata and
 independent benign-DNS truth/counts remain unresolved; no training/scoring/promotion.
 
+
+**UMA signature supplement, 18 October 2026 IST:**
+[Bounded header decision](UMA_HEADER_TRANSPORT_DECISION.md) confirms all 45 members
+have the PCAPNG signature using an already installed decoder: only four bytes per
+member, no packet parsing/conversion or dependency change. Eight transport tests
+pass. Runtime format support and independently labelled DNS-control coverage remain
+missing; roles/gates/candidate state unchanged. This supplements the earlier
+header-unverified record without rewriting its frozen historical evidence.
