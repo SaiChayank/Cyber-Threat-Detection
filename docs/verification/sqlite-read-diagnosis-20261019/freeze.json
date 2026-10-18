@@ -1,0 +1,12 @@
+{
+  "baseline": "09e97ff",
+  "diagnostic_dod_passed": true,
+  "repair_applied": false,
+  "release_ready": false,
+  "files": {
+    "docs/verification/sqlite-read-diagnosis-20261019/PROTOCOL.md": "3936be9d21b35f445eb8c26d1023b29cb5d5eb99e5afe08bc1ca6534ee0b6be9",
+    "docs/verification/sqlite-read-diagnosis-20261019/reproduce.py": "e491b78e97b52a59234a1fadb83314e97bd5c3302b17613c34aeba273d0d1170",
+    "docs/verification/sqlite-read-diagnosis-20261019/result.json": "4c6538a4e9f49810961f8e20d32e2b88a8f0ed676f929f7d30125ccb52067b4e",
+    "docs/SQLITE_READ_DIAGNOSIS_20261019.md": "e99bf86188ff44441ae3cd61566ff3f9874aa0c9ce982d19e2759344b06d0571"
+  }
+}

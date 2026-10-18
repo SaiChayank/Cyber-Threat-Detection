@@ -27,9 +27,14 @@
       "task": "Monitor real upload error/retry integration",
       "decision": "Real API statuses 503/200/422/200; desktop/tablet/mobile no overflow, same-file retry works; zero console errors; 130 protected originals unchanged",
       "commit": "See package Git history"
+    },
+    {
+      "task": "Runtime SQLite read-error diagnosis",
+      "decision": "Controlled failures: alerts/telemetry 500, initial SSE 200 then failure; exact prior alert recovers; no production fix started",
+      "commit": "See package Git history"
     }
   ],
-  "current_task": "Runtime SQLite read-error response verification",
+  "current_task": "NEXT: narrowly repair SQLite read error API/SSE boundaries with regressions",
   "constraints": [
     "No frozen gate changes",
     "No reserved values or failed-candidate activation",
@@ -37,5 +42,13 @@
     "No new external messages or push",
     "No unrelated refactor of passed code"
   ],
-  "release_ready": false
+  "release_ready": false,
+  "checkpointed_near_usage_limit": true,
+  "last_checked_primary_used_percent": 95,
+  "ordinary_usage_allowed_at_last_check": true,
+  "remaining_queue": [
+    "Runtime SQLite read error response/reconnect correction",
+    "Data-qualified detector experiments only when prerequisites satisfied",
+    "Conditional promotions and final security/performance/reproducibility/release checks"
+  ]
 }

@@ -1,5 +1,12 @@
 # Remaining implementation sequence
 
+**Execution checkpoint, 19 October:** cursor validation and PCAP staging-storage
+recovery are fixed and verified; Monitor feedback/retry passes desktop/tablet/
+mobile. Latest source: 557 tests, TypeScript/build/demo pass. Next independent
+hardening task: [SQLite read-error repair](SQLITE_READ_DIAGNOSIS_20261019.md),
+diagnosed but not started near the session cap. Dataset prerequisites were checked
+once and remain blocked. This supplements, not replaces, the sequence below.
+
 18 October 2026 IST. Baseline `49855bc`; execution supplement to
 `REMAINING_WORK_PLAN.md` and the frozen per-detector protocols. The approximate
 7/10 rating is an engineering judgement, not a measured completion percentage.

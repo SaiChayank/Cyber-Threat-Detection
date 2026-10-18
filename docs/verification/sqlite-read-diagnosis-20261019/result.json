@@ -1,0 +1,32 @@
+{
+  "scope": "Controlled SQLite read exceptions only, not physical disk corruption",
+  "baseline": "09e97ff",
+  "cases": [
+    {
+      "route": "/api/alerts",
+      "injected_error": "OperationalError",
+      "response_status": 500,
+      "successful_sse_headers_before_failure": false,
+      "original_alert_recovers_unchanged": true
+    },
+    {
+      "route": "/api/telemetry",
+      "injected_error": "OperationalError",
+      "response_status": 500,
+      "successful_sse_headers_before_failure": false,
+      "original_alert_recovers_unchanged": true
+    },
+    {
+      "route": "/api/stream",
+      "injected_error": "OperationalError",
+      "response_status": 200,
+      "successful_sse_headers_before_failure": true,
+      "original_alert_recovers_unchanged": true
+    }
+  ],
+  "diagnostic_dod_passed": true,
+  "implementation_fix_applied": false,
+  "protected_files_unchanged": 130,
+  "source_api_sha256": "9569998dfb35d30705f8e263cf8af396c147441ca829d70268eb0628d963ec0d",
+  "release_ready": false
+}

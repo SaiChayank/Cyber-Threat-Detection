@@ -522,3 +522,12 @@ desktop/tablet/mobile sizes. Zero console errors/page overflow; all 130 protecte
 originals unchanged. No frontend or detector change; normal production proxy build
 restored after isolated testing. Next independent package: SQLite read-error API
 response verification. Data-dependent quality and release gates remain blocked.
+
+**Next hardening checkpoint, 19 October 2026 IST:**
+[Read-error diagnosis](SQLITE_READ_DIAGNOSIS_20261019.md) reproduces controlled
+SQLite read failures: alerts/telemetry 500 and initial SSE 200 then failure.
+Original fixture records recover unchanged; all 130 protected originals preserved.
+No production repair started near the session cap. Exact next task is narrow
+503/read-boundary and deterministic SSE recovery with regressions. Latest completed
+source remains 557 passing tests, TS/build/demo and delivery checks. All required
+data/intent-quality blockers remain; no promotion or release declaration.
