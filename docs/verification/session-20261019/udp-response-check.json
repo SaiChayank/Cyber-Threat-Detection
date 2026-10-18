@@ -1,0 +1,12 @@
+{
+  "date_ist": "2026-10-19",
+  "account_verified": "saichayank07@gmail.com",
+  "query": "in:anywhere -in:sent -in:drafts {from:proenca@uel.br subject:\"ORION 2026\"}",
+  "visible_result": "No messages matched your search",
+  "runbook_received": false,
+  "delivery_established": false,
+  "qualification": "BLOCKED_NOT_QUALIFIED",
+  "new_message_sent": false,
+  "packet_values_inspected": false,
+  "scope": "One point-in-time focused query; not proof no possible reply exists; no monitoring"
+}

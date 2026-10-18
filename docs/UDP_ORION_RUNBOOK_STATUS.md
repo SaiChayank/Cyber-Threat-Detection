@@ -82,3 +82,14 @@ plan pointer, adding the scoped Sent receipt, screenshot and preservation checks
 The approved request, frozen qualification protocol/manifest and runtime artifacts
 are unchanged. Dispatch DoD passes. No tests added or rerun, no bug fix, no new
 performance/accuracy metric and no detector/model or data-processing change.
+
+## Bounded response follow-up — 19 October 2026 IST
+
+The verified account's single incoming sender/subject search, including Spam/Trash,
+returned no matching message. [Receipt](verification/session-20261019/udp-response-check.json)
+records the query/result only, without unrelated mailbox contents. This is not
+delivery proof or an exhaustive absence claim. No runbook, matching benign service,
+independent labels or original-time qualification is established; packet values
+remain uninspected and T21 BLOCKED. No resend, new message, monitoring, model/data/
+runtime change, new tests or metric. Prerequisite-check DoD passes; qualification
+DoD does not. Next independent work is narrow API/SSE failure-input verification.
