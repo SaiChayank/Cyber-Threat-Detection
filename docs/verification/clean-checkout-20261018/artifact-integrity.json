@@ -1,0 +1,16 @@
+{
+  "models": {
+    "artifact.json": "4d8e08323374535789e21f9f7cd1ee3f1c84b663ce555e67bb4ced57c95e8010",
+    "dga_oof_candidate.json": "266b80bc7edac63dda815b61ef6ef162d2af9b919e70bfa168958133431b730b",
+    "dga_v2.json": "c0314dd5f1fe360db11e2494326fd6e99f267d6e920fa091f6c9fcebc796996e",
+    "dga_weighted_candidate.json": "e81821f753d1e1b71fb5a08ff446467165941db996929767edec008c01c130ca",
+    "public_cic.json": "2c49c360d5745d6f050b12189c16db0a79c51f79b644d4243c81b3910810e7ae",
+    "public_dga.json": "a5766baa18463d25a5329596a8373849d4a41093c8625d694cd8dfe79e8ce7ad",
+    "public_tls.json": "39241b3e9defdf42f6ad5e786666fe724bf9b74239ebea456e673c23456b2c1e"
+  },
+  "contracts": {
+    "data/dns_tunnel_evaluation_contract.json": "a30b164f22ed1d9bd61a89d9e8f225ab408fc91df2c06449159f6144ec68208b",
+    "data/dga_evaluation_protocol.json": "2bcf5534437fb55045d40be8f0558734184ea4d687abd97f9a5d10e8df79c763"
+  },
+  "models_verified": 7
+}

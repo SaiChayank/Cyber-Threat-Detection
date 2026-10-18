@@ -1,0 +1,11 @@
+{
+  "command": [
+    "C:\\Users\\Saich\\AppData\\Local\\Temp\\univect-clean-20261018-4e92b3b\\.venv\\Scripts\\python.exe",
+    "-m",
+    "pytest",
+    "-q"
+  ],
+  "cwd": "C:\\Users\\Saich\\AppData\\Local\\Temp\\univect-clean-20261018-4e92b3b",
+  "exit_code": 0,
+  "elapsed_seconds": 146.9104262999972
+}

@@ -1,0 +1,10 @@
+{
+  "command": [
+    "C:\\Program Files\\nodejs\\npm.cmd",
+    "run",
+    "build"
+  ],
+  "cwd": "C:\\Users\\Saich\\AppData\\Local\\Temp\\univect-clean-20261018-4e92b3b",
+  "exit_code": 0,
+  "elapsed_seconds": 20.278328899999906
+}

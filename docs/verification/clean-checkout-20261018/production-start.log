@@ -1,0 +1,122 @@
+NORMALIZED LOG EXCERPT: first 80 and last 40 lines; full normalized log in production-start.log.gz
+
+> univect-ps26145@1.0.0 start
+> node scripts/run-local.mjs start
+
+INFO:     Started server process [34304]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:18418 (Press CTRL+C to quit)
+INFO:     127.0.0.1:61245 - "GET /api/health HTTP/1.1" 200 OK
+Univect: http://localhost:13418
+INFO:     127.0.0.1:61241 - "GET /api/health HTTP/1.1" 200 OK
+▲ Next.js 16.3.8
+- Local:         http://127.0.0.1:13418
+- Network:       http://127.0.0.1:13418
+✓ Ready in 260ms
+✓ Running next.config.ts took 51ms
+INFO:     127.0.0.1:56358 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56358 - "GET /api/benchmark HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50786 - "GET /api/alerts?newest=true&limit=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50787 - "GET /api/datasets HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50788 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50788 - "GET /api/stream?after=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50787 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50787 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50787 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50787 - "GET /api/alerts HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50787 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58504 - "GET /api/stream HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50787 - "GET /api/alerts HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50787 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50787 - "GET /api/alerts HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50787 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50787 - "GET /api/alerts HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50787 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50787 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50787 - "GET /api/alerts HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50787 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50787 - "GET /api/alerts HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50787 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50787 - "GET /api/alerts HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50787 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50787 - "GET /api/alerts HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50787 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50787 - "GET /api/alerts HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50787 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50787 - "GET /api/alerts HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50787 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50787 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50787 - "GET /api/alerts HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50787 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50787 - "GET /api/alerts HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50787 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50787 - "GET /api/alerts HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50787 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50787 - "GET /api/alerts HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50787 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50787 - "GET /api/alerts HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50787 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50787 - "GET /api/alerts HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50787 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50787 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50787 - "GET /api/alerts HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50787 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50787 - "GET /api/alerts HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50787 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50787 - "GET /api/alerts HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50787 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50787 - "GET /api/alerts HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50787 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50787 - "GET /api/alerts HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50787 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50787 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50787 - "GET /api/alerts HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50787 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50787 - "GET /api/alerts HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50787 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50787 - "GET /api/alerts HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50787 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50787 - "GET /api/alerts HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50787 - "GET /api/telemetry HTTP/1.1" 200 OK
+[... repeated polling omitted from excerpt ...]
+INFO:     127.0.0.1:50090 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50090 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50090 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50090 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50090 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50090 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50090 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50090 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50090 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50090 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50090 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50090 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50090 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50090 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50090 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50090 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50090 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50090 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50090 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50090 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50090 - "GET /api/alerts HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58390 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58391 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58391 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58391 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58391 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58391 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58391 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58391 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58391 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58391 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58391 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58391 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58391 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58391 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58391 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58391 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58391 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58391 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58391 - "GET /api/telemetry HTTP/1.1" 200 OK

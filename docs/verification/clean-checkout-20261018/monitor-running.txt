@@ -1,0 +1,32 @@
+Browser tab: 1, Title: "Threat monitor · Univect", URL: "http://127.0.0.1:13418/monitor".
+The following is a diff from the previous accessibility tree with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.
+Removed element IDs: 77
+~				20 heading Traffic replay Idle, Value: 2
+~					21 text Traffic replay Idle
+~					25 pop up button (disabled, collapsed, settable) Scenario, Value: All threat scenarios, ID: scenario, Secondary Actions: Expand
+~					43 pop up button (disabled, collapsed, settable) Replay speed, Value: 20× speed, ID: speed, Secondary Actions: Expand
+~					49 button (disabled) Start replay
+~					50 button Stop
+~					51 button (disabled) Replay a PCAP capture
++				187 container
++					188 text Replay started. Alerts appear as events are processed.
++					189 button Dismiss replay notification
+~					58 text 1 Current replay · incremental inference
+~					66 text 0.62 ms Feature extraction + inference
+~					70 text 3 events/s 1 active sources · running
+~			75 text 3 events / sec
++				190 container
++					191 text 18:55:02
++					192 text 18:55:05
++					193 text 18:55:08
++					194 text 18:55:11
++					195 text 18:55:14
++					196 text 18:55:17
++					197 text 0
++					198 text 1
++					199 text 2
++					200 text 3
++					201 text 4
+~			78 text Replay state:  Running Packet records and flow summaries are different units.
+~				89 text 1
+The focused UI element is 1 AXWebArea Threat monitor · Univect, URL: 127.0.0.1:13418/monitor

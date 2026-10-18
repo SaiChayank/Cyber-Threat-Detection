@@ -1,0 +1,9 @@
+{
+  "command": [
+    "C:\\Program Files\\nodejs\\npm.cmd",
+    "install"
+  ],
+  "cwd": "C:\\Users\\Saich\\AppData\\Local\\Temp\\univect-clean-20261018-4e92b3b",
+  "exit_code": 0,
+  "elapsed_seconds": 26.35281959999702
+}

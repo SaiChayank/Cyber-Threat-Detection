@@ -1,0 +1,13 @@
+{
+  "command": [
+    "C:\\Users\\Saich\\AppData\\Local\\Temp\\univect-clean-20261018-4e92b3b\\.venv\\Scripts\\python.exe",
+    "-m",
+    "replay.cli",
+    "data/demo/all.jsonl",
+    "--speed",
+    "20"
+  ],
+  "cwd": "C:\\Users\\Saich\\AppData\\Local\\Temp\\univect-clean-20261018-4e92b3b",
+  "exit_code": 0,
+  "elapsed_seconds": 44.27046330000303
+}

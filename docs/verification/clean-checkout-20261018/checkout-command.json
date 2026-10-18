@@ -1,0 +1,13 @@
+{
+  "command": [
+    "git",
+    "-c",
+    "core.autocrlf=true",
+    "checkout",
+    "--detach",
+    "4e92b3b"
+  ],
+  "cwd": "C:\\Users\\Saich\\AppData\\Local\\Temp\\univect-clean-20261018-4e92b3b",
+  "exit_code": 0,
+  "elapsed_seconds": 0.7246315999946091
+}

@@ -1,0 +1,21 @@
+{
+  "baseline": "4e92b3b",
+  "installation_pass": true,
+  "backend_passed": 531,
+  "optional_skipped": 3,
+  "warnings": 1,
+  "models_verified": 7,
+  "typecheck_pass": true,
+  "build_pass": true,
+  "controlled_events": 256,
+  "controlled_alerts": 15,
+  "controlled_classes": 7,
+  "api_sse_sqlite_equal": true,
+  "later_history_records": 30,
+  "later_run_actor": "UNATTRIBUTED",
+  "restart_repeated": false,
+  "full_rehearsal_dod": "PARTIAL",
+  "release_ready": false,
+  "protected_files_unchanged": 130,
+  "log_storage": "UTF-8 LF with terminal trailing whitespace trimmed"
+}

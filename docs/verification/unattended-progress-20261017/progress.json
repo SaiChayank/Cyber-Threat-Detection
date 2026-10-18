@@ -2,7 +2,7 @@
   "authorization": "User requested continuous eligible project work while away within the five-hour session window; commit each completed verified package",
   "reference_start_utc": "2026-10-17T18:29:23Z",
   "wall_clock_upper_bound_utc": "2026-10-17T23:29:23Z",
-  "current_task": "Current clean-checkout baseline reproduction",
+  "current_task": "Await next authorized work period: isolated restart check remains",
   "completed": [
     {
       "task": "Downloaded DNS qualification",
@@ -33,11 +33,16 @@
       "task": "Bounded UMA capture signature transport",
       "decision": "45 PCAPNG signatures; only 180 decompressed bytes, 8 tests pass; DNS qualification still blocked",
       "commit": "See package Git history"
+    },
+    {
+      "task": "Current clean-checkout executed checkpoint",
+      "decision": "531 pass/3 optional skips, TS/build/install/demo and scoped benchmarks pass; full rehearsal PARTIAL because restart not repeated",
+      "commit": "See package Git history"
     }
   ],
   "remaining_queue": [
-    "Current clean-checkout baseline reproduction",
-    "Other independent eligible plan tasks"
+    "Isolated restart comparison against saved 30-record snapshot",
+    "Qualified independent detector data and separating observability prerequisites"
   ],
   "constraints": [
     "No gate relaxation",
@@ -47,5 +52,6 @@
     "No new infrastructure/capture formats",
     "No refactor of passed features without real integration defect"
   ],
-  "release_ready": false
+  "release_ready": false,
+  "unattended_window_elapsed": true
 }

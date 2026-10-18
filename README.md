@@ -1,5 +1,13 @@
 # Univect — Passive Threat Intelligence · PS26145
 
+**Current reproduction checkpoint, 18 October 2026:** fresh local commit `4e92b3b`
+passes installation, 531 backend tests (three optional research-tool skips),
+TypeScript, production build and incremental demo. Installer reports zero npm
+vulnerabilities, superseding the older dated advisory status below. Full current
+rehearsal is partial: restart was not repeated. Detector-quality blockers remain.
+See [the dated checkpoint](docs/CLEAN_CHECKOUT_20261018.md); these local changes
+have not been pushed.
+
 Working local NTRO / SIH prototype: read-only input → causal features → trained model
 and rules → structured alerts → replay dashboard. The project owner's four supplied
 screenshots govern the requirements, including encrypted-session malware detection.

@@ -1,0 +1,10 @@
+{
+  "command": [
+    "C:\\Users\\Saich\\AppData\\Local\\Temp\\univect-clean-20261018-4e92b3b\\.venv\\Scripts\\python.exe",
+    "-m",
+    "replay.demo_pack"
+  ],
+  "cwd": "C:\\Users\\Saich\\AppData\\Local\\Temp\\univect-clean-20261018-4e92b3b",
+  "exit_code": 0,
+  "elapsed_seconds": 0.8731985000049463
+}

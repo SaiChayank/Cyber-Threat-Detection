@@ -1,0 +1,396 @@
+Browser tab: 1, Title: "Threat monitor · Univect", URL: "http://127.0.0.1:13418/monitor".
+1 AXWebArea Threat monitor · Univect, URL: 127.0.0.1:13418/monitor
+	2 container
+		3 link Description: Skip to content, Value: 127.0.0.1:13418/monitor#main-content
+		4 text Threat monitor · Univect
+		5 container
+			6 link Description: Univect home, Value: 127.0.0.1:13418/
+			7 link Description: Back to platform, Value: 127.0.0.1:13418/
+			8 button (collapsed) Description: Open menu, Secondary Actions: Expand
+			9 text UNIVECT  / MONITOR Passive sensor Read-only · Metadata only · No response path
+		10 container main-content
+			11 container overview
+				12 text OBSERVATION WORKSPACE
+				13 heading Your network, in view., Value: 1
+					14 text Your network, in view .
+				15 text Set the stream. Follow the activity. Investigate the evidence.
+				16 container
+					17 text Stream connected / LOCAL ENCLAVE
+			18 container replay
+				19 text CONTROLLED TESTING
+				20 heading Traffic replay Complete, Value: 2
+					21 text Traffic replay Complete
+				22 text Run a scenario or inspect a passive capture.
+				23 container
+					24 text Scenario
+					25 pop up button (collapsed, settable) Scenario, Value: All threat scenarios, ID: scenario, Secondary Actions: Expand
+						26 menu
+							27 container Synthetic metadata scenarios
+								28 (disabled) All threat scenarios
+								29 (disabled) Benign baseline
+								30 (disabled) DDoS & floods
+								31 (disabled) Botnet beaconing
+								32 (disabled) DGA domains
+								33 (disabled) DNS tunnelling
+								34 (disabled) Encrypted sessions
+								35 (disabled) Reconnaissance
+								36 (disabled) Data exfiltration
+							37 container Public-source replay presets
+								38 (disabled) CIC DNS: benign capture (not downloaded)
+								39 (disabled) CIC DNS: light exfiltration capture (not downloaded)
+								40 (disabled) CIC DNS: heavy exfiltration capture (not downloaded)
+								41 (disabled) UMUDGA: real domain strings, simulated DNS stream (not downloaded)
+					42 text Replay speed
+					43 pop up button (collapsed, settable) Replay speed, Value: 100× speed, ID: speed, Secondary Actions: Expand
+						44 menu
+							45 (disabled) 1× speed
+							46 (disabled) 20× speed
+							47 (disabled) 100× speed
+							48 (disabled) 1000× speed
+					49 button Start replay
+					50 button (disabled) Stop
+					51 button Replay a PCAP capture
+					52 text PCAP
+				53 text 0  public-source presets ready Classic Ethernet PCAP · 16 MiB maximum Replay speed scales recorded event intervals
+			54 container Live telemetry
+				55 container
+					56 text EVENTS PROCESSED
+					57 button About events processed
+					58 text 256 Current replay · incremental inference
+				59 container
+					60 text ALERTS RECORDED
+					61 button About alerts recorded
+					62 text 30 Persistent history · all replay runs
+				63 container
+					64 text PROCESSING P95
+					65 button About processing p95
+					66 text 0.69 ms Feature extraction + inference
+				67 container
+					68 text OBSERVED RATE
+					69 button About observed rate
+					70 text 0 events/s 33 active sources · complete
+			71 text INGEST TELEMETRY
+			72 heading Observed event rate, Value: 2
+				73 text Observed event rate
+			74 text 24 recent samples · local UTC clock
+			75 text 0 events / sec
+			76 container Observed event rate chart
+				77 container
+					78 text 16:22:08
+					79 text 16:22:14
+					80 text 16:22:20
+					81 text 16:22:26
+					82 text 16:22:32
+					83 text 16:22:40
+					84 text 0
+					85 text 1
+					86 text 2
+					87 text 3
+					88 text 4
+			89 text Replay state:  Complete Packet records and flow summaries are different units.
+			90 text COLLECTION BOUNDARY
+			91 text LAB PROTOTYPE
+			92 heading Passive by design., Value: 2
+				93 text Passive by design.
+			94 text Mirror feed
+			95 text Read-only input
+			96 text Enclave
+			97 definition list
+				98 container Active sources
+					99 text Active sources
+				100 text 33
+				101 container Late events dropped
+					102 text Late events dropped
+				103 text 0
+				104 container State evictions
+					105 text State evictions
+				106 text 0
+			107 text Metadata only. No payload decryption, path to the source or network actions.
+			108 container
+				109 text INVESTIGATION QUEUE
+				110 heading Alert stream LIVE, Value: 2
+					111 text Alert stream LIVE
+				112 text Inspect a detection to follow its observed evidence. 30 loaded signals
+				113 checkbox Hold queue, Value: 0
+				114 button Export JSON
+				115 search text field (settable) Search alerts
+				116 pop up button (collapsed, settable) Description: Filter threat class, Value: All threats, Secondary Actions: Expand
+					117 menu
+						118 (selected) All threats
+						119 DDoS & floods
+						120 Botnet beaconing
+						121 DGA domains
+						122 DNS tunnelling
+						123 Encrypted sessions
+						124 Reconnaissance
+						125 Data exfiltration
+				126 pop up button (collapsed, settable) Description: Filter severity, Value: All severities, Secondary Actions: Expand
+					127 menu
+						128 (selected) All severities
+						129 CRITICAL
+						130 HIGH
+						131 MEDIUM
+						132 LOW
+				133 pop up button (collapsed, settable) Description: Filter detection engine, Value: All engines, Secondary Actions: Expand
+					134 menu
+						135 (selected) All engines
+						136 HYBRID
+						137 ML
+						138 RULE
+				139 container Alert results
+					140 table Newest recorded detections with observed event time, threat, connection, severity, confidence and detection engine. Use Inspect to view evidence.
+						141 text Newest recorded detections with observed event time, threat, connection, severity, confidence and detection engine. Use Inspect to view evidence.
+						142 row
+							143 cell
+								144 text OBSERVED TIME (UTC)
+							145 cell
+								146 text THREAT
+							147 cell
+								148 text SOURCE → DESTINATION
+							149 cell
+								150 text SEVERITY
+							151 cell
+								152 text CONFIDENCE
+							153 cell
+								154 text ENGINE
+							155 cell
+								156 text Investigation
+						157 row
+							158 cell
+								159 text 22:27:50 2023-11-14
+							160 cell
+								161 text Data exfiltration
+							162 cell
+								163 text 10.0.0.10 198.51.100.20
+							164 cell
+								165 text HIGH
+							166 cell
+								167 container
+									168 text 100.0
+									169 text %
+							170 cell
+								171 text HYBRID
+							172 cell
+								173 button Inspect Data exfiltration alert 30
+									174 text Inspect
+						175 row
+							176 cell
+								177 text 22:27:20 2023-11-14
+							178 cell
+								179 text Data exfiltration
+							180 cell
+								181 text 10.0.0.10 198.51.100.20
+							182 cell
+								183 text HIGH
+							184 cell
+								185 container
+									186 text 100.0
+									187 text %
+							188 cell
+								189 text ML
+							190 cell
+								191 button Inspect Data exfiltration alert 29
+									192 text Inspect
+						193 row
+							194 cell
+								195 text 22:25:36 2023-11-14
+							196 cell
+								197 text Reconnaissance
+							198 cell
+								199 text 10.0.0.10 198.51.100.14
+							200 cell
+								201 text MEDIUM
+							202 cell
+								203 container
+									204 text 100.0
+									205 text %
+							206 cell
+								207 text ML
+							208 cell
+								209 button Inspect Reconnaissance alert 28
+									210 text Inspect
+						211 row
+							212 cell
+								213 text 22:23:53 2023-11-14
+							214 cell
+								215 text Encrypted sessions
+							216 cell
+								217 text 10.0.0.10 198.51.100.20
+							218 cell
+								219 text HIGH
+							220 cell
+								221 container
+									222 text 100.0
+									223 text %
+							224 cell
+								225 text HYBRID
+							226 cell
+								227 button Inspect Encrypted sessions alert 27
+									228 text Inspect
+						229 row
+							230 cell
+								231 text 22:23:22 2023-11-14
+							232 cell
+								233 text Encrypted sessions
+							234 cell
+								235 text 10.0.0.10 198.51.100.20
+							236 cell
+								237 text HIGH
+							238 cell
+								239 container
+									240 text 89.4
+									241 text %
+							242 cell
+								243 text HYBRID
+							244 cell
+								245 button Inspect Encrypted sessions alert 26
+									246 text Inspect
+						247 row
+							248 cell
+								249 text 22:21:52 2023-11-14
+							250 cell
+								251 text DGA domains
+							252 cell
+								253 text 10.0.0.10 198.51.100.20
+							254 cell
+								255 text MEDIUM
+							256 cell
+								257 container
+									258 text 80.0
+									259 text %
+							260 cell
+								261 text RULE
+							262 cell
+								263 button Inspect DGA domains alert 25
+									264 text Inspect
+						265 row
+							266 cell
+								267 text 22:21:52 2023-11-14
+							268 cell
+								269 text DNS tunnelling
+							270 cell
+								271 text 10.0.0.10 198.51.100.20
+							272 cell
+								273 text MEDIUM
+							274 cell
+								275 container
+									276 text 100.0
+									277 text %
+							278 cell
+								279 text HYBRID
+							280 cell
+								281 button Inspect DNS tunnelling alert 24
+									282 text Inspect
+						283 row
+							284 cell
+								285 text 22:21:21 2023-11-14
+							286 cell
+								287 text DGA domains
+							288 cell
+								289 text 10.0.0.10 198.51.100.20
+							290 cell
+								291 text MEDIUM
+							292 cell
+								293 container
+									294 text 80.0
+									295 text %
+							296 cell
+								297 text RULE
+							298 cell
+								299 button Inspect DGA domains alert 23
+									300 text Inspect
+						301 row
+							302 cell
+								303 text 22:21:21 2023-11-14
+							304 cell
+								305 text DNS tunnelling
+							306 cell
+								307 text 10.0.0.10 198.51.100.20
+							308 cell
+								309 text MEDIUM
+							310 cell
+								311 container
+									312 text 100.0
+									313 text %
+							314 cell
+								315 text HYBRID
+							316 cell
+								317 button Inspect DNS tunnelling alert 22
+									318 text Inspect
+						319 row
+							320 cell
+								321 text 22:19:52 2023-11-14
+							322 cell
+								323 text DGA domains
+							324 cell
+								325 text 10.0.0.10 198.51.100.20
+							326 cell
+								327 text MEDIUM
+							328 cell
+								329 container
+									330 text 100.0
+									331 text %
+							332 cell
+								333 text HYBRID
+							334 cell
+								335 button Inspect DGA domains alert 21
+									336 text Inspect
+				337 text Scroll the table horizontally to view every column and inspect an alert. 30  matching /  30  loaded · Latest 200  · Newest first 0  late events dropped
+				338 button (disabled) Previous alert page
+				339 text 1  /  3
+				340 button Next alert page
+			341 container coverage
+				342 text DETECTION ENGINES
+				343 heading Threat coverage, Value: 2
+					344 text Threat coverage
+				345 text 7 detection modules DDoS & floods
+				346 text 4
+				347 text Botnet beaconing
+				348 text 4
+				349 text DGA domains
+				350 text 8
+				351 text DNS tunnelling
+				352 text 4
+				353 text Encrypted sessions
+				354 text 4
+				355 text Reconnaissance
+				356 text 2
+				357 text Data exfiltration
+				358 text 4
+				359 text Six required categories. Bars show each module’s share of recorded alerts, not accuracy. Coverage describes implementation, without implying validated real-world performance.
+				360 button (collapsed) Public-source dataset readiness 0/4 ready, Secondary Actions: Expand
+					361 text Public-source dataset readiness
+					362 text 0/4 ready
+			363 text SAVED BENCHMARK · SYNTHETIC WORKLOAD
+			364 heading Performance, with context., Value: 2
+				365 text Performance, with context.
+			366 container
+				367 text Measured processing + persistence 3,474 events/s
+			368 text Processing + persistence p95
+			369 container
+				370 text 0.99 ms
+			371 text Stated test target
+			372 container
+				373 text 2,000 events/s
+			374 text Throughput and latency targets met
+			375 container
+				376 text 20,000  events ·  5.76  seconds · Python  3.13.5
+				377 text Repeated eight-class synthetic metadata sessions with SQLite alert commits .  Core event processing + persistence; excludes capture, HTTP, SSE and rendering . This saved result does not measure browser delivery or real deployment capacity.
+			378 text Model scores and heuristic strengths are not calibrated probabilities of compromise. Public-source validation remains limited, including incomplete DGA coverage and unvalidated encrypted-malware detection. Evidence and analyst review are essential.
+		379 container
+			380 link Description: Univect home, Value: 127.0.0.1:13418/
+			381 text One-way traffic. Deeper insight.
+			382 text Passive threat intelligence with evidence at its core. PS26145 · Research prototype
+			383 container Footer navigation
+				384 text EXPLORE
+				385 link Description: Platform, Value: 127.0.0.1:13418/#platform
+				386 link Description: Detection, Value: 127.0.0.1:13418/#detection
+				387 link Description: How it works, Value: 127.0.0.1:13418/#architecture
+				388 link Description: Threat monitor, Value: 127.0.0.1:13418/monitor
+			389 text PROJECT & RESOURCES
+			390 link Description: Source repository, Value: github.com/SaiChayank/Cyber-Threat-Detection
+			391 link Description: API reference, Value: 127.0.0.1:13418/docs
+			392 link Description: Report an issue, Value: github.com/SaiChayank/Cyber-Threat-Detection/issues
+			393 text ©  2026  Univect · Project by SaiChayank Read-only observation · No inline blocking · No payload decryption
+
+The focused UI element is 1 AXWebArea Threat monitor · Univect, URL: 127.0.0.1:13418/monitor

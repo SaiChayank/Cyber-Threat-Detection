@@ -401,3 +401,13 @@ member, no packet parsing/conversion or dependency change. Eight transport tests
 pass. Runtime format support and independently labelled DNS-control coverage remain
 missing; roles/gates/candidate state unchanged. This supplements the earlier
 header-unverified record without rewriting its frozen historical evidence.
+
+**Clean-checkout checkpoint, 18 October 2026 IST:**
+[Current report](CLEAN_CHECKOUT_20261018.md) verifies local `4e92b3b`: fresh install,
+531 backend tests/three optional research skips, typecheck/build, nine-fixture
+preflight and controlled incremental 256-event/15-alert/seven-class browser replay
+pass. Core 3,473.57 metadata events/sec/p95 0.9922 ms; 100/100 loopback deliveries,
+p95 245.8072 ms. Original history/artifacts untouched. Full rehearsal remains
+PARTIAL because restart was not repeated before the unattended window elapsed.
+Next: isolated restart check using saved actual 30-record history; all detector
+quality gates and release blockers remain unchanged.
