@@ -1,0 +1,106 @@
+INFO:     Started server process [48304]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:18519 (Press CTRL+C to quit)
+INFO:     127.0.0.1:59086 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59090 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53021 - "GET /api/benchmark HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53022 - "GET /api/alerts?newest=true&limit=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53023 - "GET /api/datasets HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53024 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53023 - "GET /api/stream?after=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53022 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53022 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53022 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53022 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53022 - "GET /api/telemetry HTTP/1.1" 200 OK
+PCAP upload temporary storage failed
+Traceback (most recent call last):
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\backend\application.py", line 193, in pcap
+    with tempfile.NamedTemporaryFile(suffix='.pcap', delete=False) as file:
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\docs\verification\monitor-feedback-20261019\fault_server.py", line 31, in test_temporary_file
+    raise OSError(errno.ENOSPC, 'Controlled test storage error', '/private/test/staging')
+OSError: [Errno 28] Controlled test storage error: '/private/test/staging'
+INFO:     127.0.0.1:53022 - "POST /api/replay/pcap?speed=100 HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:53022 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53022 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53022 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53022 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53022 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53022 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53022 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53022 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53022 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53022 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53022 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53022 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53022 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53022 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53022 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53022 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53022 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53022 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53022 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53022 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53022 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53022 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53022 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53022 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53022 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53022 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53022 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53022 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53022 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53022 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53022 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53022 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53022 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53022 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53022 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53022 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53022 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53022 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53022 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53022 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53022 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53022 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53022 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53022 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53022 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53022 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53022 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53022 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53022 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53022 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53022 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53022 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53022 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53022 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53022 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53022 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53022 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53022 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53022 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53022 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53022 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53022 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53022 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53022 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53022 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53022 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53022 - "POST /api/replay/pcap?speed=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53022 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53022 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53022 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53022 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53022 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53022 - "POST /api/replay/pcap?speed=100 HTTP/1.1" 422 Unprocessable Content
+INFO:     127.0.0.1:53022 - "POST /api/replay/pcap?speed=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52715 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52715 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52715 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52715 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52715 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52715 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58871 - "GET /api/alerts HTTP/1.1" 200 OK

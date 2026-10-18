@@ -1,0 +1,23 @@
+[
+  {
+    "name": "desktop",
+    "height": 1000,
+    "scrollWidth": 1430,
+    "width": 1440,
+    "retryEnabled": true
+  },
+  {
+    "name": "tablet",
+    "height": 1024,
+    "scrollWidth": 758,
+    "width": 768,
+    "retryEnabled": true
+  },
+  {
+    "name": "mobile",
+    "height": 844,
+    "scrollWidth": 380,
+    "width": 390,
+    "retryEnabled": true
+  }
+]

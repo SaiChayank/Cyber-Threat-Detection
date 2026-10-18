@@ -1,0 +1,197 @@
+Browser tab: 5, Title: "Threat monitor · Univect", URL: "http://127.0.0.1:13519/monitor".
+0 AXWebArea Threat monitor · Univect, URL: 127.0.0.1:13519/monitor
+	1 link Description: Skip to content, Value: 127.0.0.1:13519/monitor#main-content
+	2 container
+		3 link Description: Univect home, Value: 127.0.0.1:13519/
+		223 button (collapsed) Description: Open menu, Secondary Actions: Expand
+		11 text UNIVECT  / MONITOR Passive sensor Read-only · Metadata only · No response path
+		12 container main-content
+			13 container overview
+				14 text OBSERVATION WORKSPACE
+				15 heading Your network, in view., Value: 1
+					16 text Your network, in view .
+				17 text Set the stream. Follow the activity. Investigate the evidence.
+				18 container
+					19 text Stream connected / LOCAL ENCLAVE
+			20 container replay
+				21 text CONTROLLED TESTING
+				22 heading Traffic replay Complete, Value: 2
+					23 text Traffic replay Complete
+				24 text Run a scenario or inspect a passive capture.
+				25 container
+					26 text Scenario
+					27 pop up button (collapsed, settable) Scenario, Value: All threat scenarios, ID: scenario, Secondary Actions: Expand
+						28 menu
+							29 container Synthetic metadata scenarios
+								30 (selected) All threat scenarios
+								31 Benign baseline
+								32 DDoS & floods
+								33 Botnet beaconing
+								34 DGA domains
+								35 DNS tunnelling
+								36 Encrypted sessions
+								37 Reconnaissance
+								38 Data exfiltration
+							170 container Public-source replay presets
+								171 CIC DNS: benign capture
+								172 CIC DNS: light exfiltration capture
+								173 CIC DNS: heavy exfiltration capture
+								174 UMUDGA: real domain strings, simulated DNS stream
+					39 text Replay speed
+					40 pop up button (collapsed, settable) Replay speed, Value: 100× speed, ID: speed, Secondary Actions: Expand
+						41 menu
+							42 (disabled) 1× speed
+							43 (disabled) 20× speed
+							44 (disabled) 100× speed
+							45 (disabled) 1000× speed
+					46 button Start replay
+					47 button (disabled) Stop
+					48 button Replay a PCAP capture
+					49 text PCAP
+				50 text 4  public-source presets ready Classic Ethernet PCAP · 16 MiB maximum Replay speed scales recorded event intervals
+				220 container
+					222 text valid.pcap accepted for metadata-only replay.
+					221 button Dismiss replay notification
+			51 container Live telemetry
+				52 container
+					53 text EVENTS PROCESSED
+					54 button About events processed
+					175 text 1 Current replay · incremental inference
+				56 container
+					57 text ALERTS RECORDED
+					58 button About alerts recorded
+					176 text 0 Persistent history · all replay runs
+				60 container
+					61 text PROCESSING P95
+					62 button About processing p95
+					177 text 1.18 ms Feature extraction + inference
+				64 container
+					65 text OBSERVED RATE
+					66 button About observed rate
+					178 text 5 events/s 1 active sources · complete
+			68 text INGEST TELEMETRY
+			69 heading Observed event rate, Value: 2
+				70 text Observed event rate
+			71 text 24 recent samples · local UTC clock
+			72 text 5 events / sec
+			73 container Observed event rate chart
+				179 container
+					228 text 22:50:21
+					229 text 22:50:34
+					230 text 22:50:48
+					227 text 0
+					231 text 2
+					232 text 4
+					233 text 6
+					234 text 8
+			74 text Replay state:  Complete Packet records and flow summaries are different units.
+			75 text COLLECTION BOUNDARY
+			76 text LAB PROTOTYPE
+			77 heading Passive by design., Value: 2
+				78 text Passive by design.
+			79 text Mirror feed
+			80 text Read-only input
+			81 text Enclave
+			82 definition list
+				83 container Active sources
+					84 text Active sources
+				189 text 1
+				85 container Late events dropped
+					86 text Late events dropped
+				190 text 0
+				87 container State evictions
+					88 text State evictions
+				191 text 0
+			89 text Metadata only. No payload decryption, path to the source or network actions.
+			90 container alerts
+				91 text INVESTIGATION QUEUE
+				92 heading Alert stream LIVE, Value: 2
+					93 text Alert stream LIVE
+				94 text Inspect a detection to follow its observed evidence.
+				96 checkbox (disabled) Hold queue, Value: 0
+				97 button (disabled) Export JSON
+				98 search text field (settable) Search alerts
+				99 pop up button (collapsed, settable) Description: Filter threat class, Value: All threats, Secondary Actions: Expand
+					100 menu
+						101 (selected) All threats
+						102 DDoS & floods
+						103 Botnet beaconing
+						104 DGA domains
+						105 DNS tunnelling
+						106 Encrypted sessions
+						107 Reconnaissance
+						108 Data exfiltration
+				109 pop up button (collapsed, settable) Description: Filter severity, Value: All severities, Secondary Actions: Expand
+					110 menu
+						111 (selected) All severities
+						112 CRITICAL
+						113 HIGH
+						114 MEDIUM
+						115 LOW
+				116 pop up button (collapsed, settable) Description: Filter detection engine, Value: All engines, Secondary Actions: Expand
+					117 menu
+						118 (selected) All engines
+				119 container Alert results
+					192 heading Ready to observe., Value: 3
+						193 text Ready to observe.
+					194 text Start a traffic replay to see detections and supporting evidence.
+				137 text 0  matching /  0  loaded · Latest 200  · Newest first 0  late events dropped
+				138 button (disabled) Previous alert page
+				139 text 1  /  1
+				140 button (disabled) Next alert page
+			141 container coverage
+				142 text DETECTION ENGINES
+				143 heading Threat coverage, Value: 2
+					144 text Threat coverage
+				145 text 7 detection modules DDoS & floods
+				195 text 0
+				196 text Botnet beaconing
+				197 text 0
+				198 text DGA domains
+				199 text 0
+				200 text DNS tunnelling
+				201 text 0
+				202 text Encrypted sessions
+				203 text 0
+				204 text Reconnaissance
+				205 text 0
+				206 text Data exfiltration
+				207 text 0
+				146 text Six required categories. Bars show each module’s share of recorded alerts, not accuracy. Coverage describes implementation, without implying validated real-world performance.
+				147 button (collapsed) Public-source dataset readiness 4/4 ready, Secondary Actions: Expand
+					148 text Public-source dataset readiness
+					149 text 4/4 ready
+			150 text SAVED BENCHMARK · SYNTHETIC WORKLOAD
+			151 heading Performance, with context., Value: 2
+				152 text Performance, with context.
+			208 container
+				209 text Measured processing + persistence 5,650 events/s
+			210 text Processing + persistence p95
+			211 container
+				212 text 0.84 ms
+			213 text Stated test target
+			214 container
+				215 text 2,000 events/s
+			216 text Throughput and latency targets met
+			217 container
+				218 text 20,000  events ·  3.54  seconds · Python  3.13.5
+				219 text Repeated eight-class synthetic metadata sessions with SQLite alert commits .  Core event processing + persistence; excludes capture, HTTP, SSE and rendering . This saved result does not measure browser delivery or real deployment capacity.
+			153 text Model scores and heuristic strengths are not calibrated probabilities of compromise. Public-source validation remains limited, including incomplete DGA coverage and unvalidated encrypted-malware detection. Evidence and analyst review are essential.
+		154 link Description: Univect home, Value: 127.0.0.1:13519/
+		155 container
+			156 text One-way traffic. Deeper insight.
+			157 text Passive threat intelligence with evidence at its core.
+		158 text PS26145 · Research prototype
+		159 container Footer navigation
+			160 text EXPLORE
+			161 link Description: Platform, Value: 127.0.0.1:13519/#platform
+			162 link Description: Detection, Value: 127.0.0.1:13519/#detection
+			163 link Description: How it works, Value: 127.0.0.1:13519/#architecture
+			164 link Description: Threat monitor, Value: 127.0.0.1:13519/monitor
+		165 text PROJECT & RESOURCES
+		166 link Description: Source repository, Value: github.com/SaiChayank/Cyber-Threat-Detection
+		167 link Description: API reference, Value: 127.0.0.1:13519/docs
+		168 link Description: Report an issue, Value: github.com/SaiChayank/Cyber-Threat-Detection/issues
+		169 text ©  2026  Univect · Project by SaiChayank Read-only observation · No inline blocking · No payload decryption
+
+The focused UI element is 0 AXWebArea Threat monitor · Univect, URL: 127.0.0.1:13519/monitor

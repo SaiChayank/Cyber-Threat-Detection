@@ -1,0 +1,5 @@
+{
+  "command": "npm run build",
+  "exit_code": 0,
+  "reason": "Restore normal .env/default proxy build after isolated-port verification"
+}

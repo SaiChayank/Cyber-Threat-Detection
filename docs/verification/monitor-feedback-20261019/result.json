@@ -1,0 +1,47 @@
+{
+  "api_status_sequence": [
+    503,
+    200,
+    422,
+    200
+  ],
+  "actual_api_ui_sqlite": true,
+  "one_controlled_enospc_injection": true,
+  "mock_routes_added": false,
+  "new_product_test_mode": false,
+  "source_code_changed": false,
+  "same_file_retry_success": true,
+  "malformed_recovery_success": true,
+  "final_processed": 1,
+  "final_alerts": 0,
+  "staged_files_remaining": 0,
+  "viewports": [
+    {
+      "name": "desktop",
+      "height": 1000,
+      "scrollWidth": 1430,
+      "width": 1440,
+      "retryEnabled": true
+    },
+    {
+      "name": "tablet",
+      "height": 1024,
+      "scrollWidth": 758,
+      "width": 768,
+      "retryEnabled": true
+    },
+    {
+      "name": "mobile",
+      "height": 844,
+      "scrollWidth": 380,
+      "width": 390,
+      "retryEnabled": true
+    }
+  ],
+  "console_warnings": 0,
+  "console_errors": 0,
+  "protected_files_unchanged": 130,
+  "scoped_dod_passed": true,
+  "release_ready": false,
+  "normal_default_proxy_build_restored": true
+}

@@ -444,3 +444,11 @@ existing DGA/C2/TLS request query; DNS Issue #3 is open with zero comments. No n
 qualified provenance bundle, data, scoring, model change or outgoing message.
 Source-dependent tasks remain BLOCKED. Next independent task: Monitor verification
 of the newly fixed upload-storage feedback/recovery with isolated test injection.
+
+**Monitor upload integration, 19 October 2026 IST:**
+[Scoped verification](MONITOR_UPLOAD_FEEDBACK_20261019.md) confirms real storage
+503/error feedback, same-file retry, malformed 422 and subsequent recovery at
+desktop/tablet/mobile sizes. Zero console errors/page overflow; all 130 protected
+originals unchanged. No frontend or detector change; normal production proxy build
+restored after isolated testing. Next independent package: SQLite read-error API
+response verification. Data-dependent quality and release gates remain blocked.

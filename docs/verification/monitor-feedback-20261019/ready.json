@@ -1,0 +1,8 @@
+{
+  "url": "http://127.0.0.1:13519/monitor",
+  "pids": [
+    24068,
+    2776
+  ],
+  "fault": "One allocation ENOSPC only"
+}

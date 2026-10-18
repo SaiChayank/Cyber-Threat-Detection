@@ -22,9 +22,14 @@
       "task": "Remaining DGA/C2/TLS and DNS response prerequisite review",
       "decision": "Verified focused incoming query has no match; DNS issue open/zero comments; no qualification bundle obtained",
       "commit": "See package Git history"
+    },
+    {
+      "task": "Monitor real upload error/retry integration",
+      "decision": "Real API statuses 503/200/422/200; desktop/tablet/mobile no overflow, same-file retry works; zero console errors; 130 protected originals unchanged",
+      "commit": "See package Git history"
     }
   ],
-  "current_task": "Current Monitor integration verification of upload storage error and recovery",
+  "current_task": "Runtime SQLite read-error response verification",
   "constraints": [
     "No frozen gate changes",
     "No reserved values or failed-candidate activation",

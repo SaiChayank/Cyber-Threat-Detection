@@ -1,0 +1,6 @@
+{
+  "valid": "C:\\Users\\Saich\\AppData\\Local\\Temp\\univect-feedback-20261019-d7_ihvrv\\valid.pcap",
+  "invalid": "C:\\Users\\Saich\\AppData\\Local\\Temp\\univect-feedback-20261019-d7_ihvrv\\invalid.pcap",
+  "database": "C:\\Users\\Saich\\AppData\\Local\\Temp\\univect-feedback-20261019-d7_ihvrv\\alerts.sqlite3",
+  "fixture_scope": "Generated transport unit fixtures, not detector evaluation"
+}
