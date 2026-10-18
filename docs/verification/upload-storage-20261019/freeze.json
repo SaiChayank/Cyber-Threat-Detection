@@ -1,0 +1,32 @@
+{
+  "baseline": "5302020",
+  "scoped_dod_passed": true,
+  "release_ready": false,
+  "files": {
+    "docs/verification/upload-storage-20261019/backend-tests-command.json": "a876bb3cb33e6cbc010c5bb205d7774452c0fc102850b1badbc4cd07a0c40a34",
+    "docs/verification/upload-storage-20261019/backend-tests.log": "641e0c712c5d53557e16667f163016e4d3c32b91f8c1f4d7e54744e6b63a3917",
+    "docs/verification/upload-storage-20261019/before-tests.log": "9e502d6be312668f193aeb4293f3e2d560724ceb0e87639c771e742eae7aca41",
+    "docs/verification/upload-storage-20261019/checks.json": "3d717996acc740f18eaa52d1de488630e4416ff1a2a9f10eb7112e159919daa7",
+    "docs/verification/upload-storage-20261019/delivery-command.json": "91a9ff7db9d63bda98ff96a2b54cac4fe65f09f190717f3b8fe24a020d191fd2",
+    "docs/verification/upload-storage-20261019/delivery.json": "71972f25b422f3ba0b59fdac4b846e0707962e05465170c979633c2a3d99655c",
+    "docs/verification/upload-storage-20261019/delivery.log": "71972f25b422f3ba0b59fdac4b846e0707962e05465170c979633c2a3d99655c",
+    "docs/verification/upload-storage-20261019/demo-preflight-command.json": "af9c2c7f3edf52bf18907e95d09670612123fff4a6bdcb568bd4bc9be98b348f",
+    "docs/verification/upload-storage-20261019/demo-preflight.log": "086ab630eb0f1d1e75540ae5b0909d28971b481e5509521676cd85b5d8fd3e7c",
+    "docs/verification/upload-storage-20261019/demo-provenance-update.json": "1ffec50b2f3642f6a854af37a5a1d522e9e0a4941be088a64f573d9f2925bb4c",
+    "docs/verification/upload-storage-20261019/integrity-after.json": "a051d8c5d9794a530359b53d910715eb89e5751db97d615c264f4fe20d6fe645",
+    "docs/verification/upload-storage-20261019/integrity-before.json": "06faf56347b67f9e0664b989c7c4b12e6e7312b6784632e4363409764a003ef2",
+    "docs/verification/upload-storage-20261019/production-build-command.json": "5b4dc9686a772fdbce0bce763f925dc8d481570befc87f65892d5e0c5f5bded3",
+    "docs/verification/upload-storage-20261019/production-build.log": "9564feee3e55d21492801a9a93a6a12061f678d16f51260ca499a32c0a0d4107",
+    "docs/verification/upload-storage-20261019/PROTOCOL.md": "3bb752c28322d6b08b056736fe36962cfcbdcabbdf89b115e0aa4512aa2130fa",
+    "docs/verification/upload-storage-20261019/run_checks.py": "5aecd86371015fb5359ee12d445ee5b0b25741af3c9972946797186c896d0c8b",
+    "docs/verification/upload-storage-20261019/targeted-tests-command.json": "cbde6e82f0d4b234ffaa85fe4d81b0818cd3b3af03a4e51cf5d0b645873c29fb",
+    "docs/verification/upload-storage-20261019/targeted-tests.log": "49ef21580eac9f01a27aef5a94b80ec8b8e17e07a73fcc71e947d9337cd57596",
+    "docs/verification/upload-storage-20261019/typecheck-command.json": "aa5d1494e6c193bd189d7864a9dc7544ea622fc757c5591012c0f3aaf5bf40da",
+    "docs/verification/upload-storage-20261019/typecheck.log": "80cbcc4362c377cb590a8c49e6f7deceb83f41186ae5b66fbf11bd49b513facc",
+    "backend/application.py": "9569998dfb35d30705f8e263cf8af396c147441ca829d70268eb0628d963ec0d",
+    "tests/test_upload_storage_failures.py": "2db6da42bf3c86a92c22f41c14d5eb1c413532da42db86d8e83b780e6b2dcfe1",
+    "docs/UPLOAD_STORAGE_RECOVERY_20261019.md": "71d69ac47ed2b74dae540b2b61467cea1bfcedbc1336ad04b50dcd8c2df00498",
+    "data/demo/manifest.json": "63f5405d6b0cbcf85d1e6dcd2ac96b74c7284004162601f1675d2ebf49606fa9",
+    "data/demo/manifest.sha256": "8ed6f24fdd025daf68d27f257b1b93f801d868541b9767889cd9eeca9a87ea14"
+  }
+}

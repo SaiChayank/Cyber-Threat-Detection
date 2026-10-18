@@ -188,19 +188,23 @@ async def stop():
 async def pcap(request: Request, speed: float = Query(20, ge=.1, le=10000)):
     if app.state.replay_status == 'running':
         raise HTTPException(409, 'A replay is already running')
-    with tempfile.NamedTemporaryFile(suffix='.pcap', delete=False) as file:
-        path = Path(file.name)
-        size = 0
-        try:
+    path = None
+    try:
+        with tempfile.NamedTemporaryFile(suffix='.pcap', delete=False) as file:
+            path = Path(file.name)
+            size = 0
             async for chunk in request.stream():
                 size += len(chunk)
                 if size > 16 * 1024 * 1024:
                     raise HTTPException(413, 'PCAP upload limit is 16 MiB')
                 file.write(chunk)
-        except BaseException:
-            file.close()
+    except BaseException as exc:
+        if path is not None:
             path.unlink(missing_ok=True)
-            raise
+        if isinstance(exc, OSError):
+            logging.getLogger(__name__).exception('PCAP upload temporary storage failed')
+            raise HTTPException(503, 'Temporary capture storage unavailable; retry after storage recovery') from exc
+        raise
     def records():
         try:
             reader = PcapReader()

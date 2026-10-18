@@ -1,0 +1,19 @@
+{
+  "before_storage_fault_cases_failed": 6,
+  "new_cases": 8,
+  "targeted_passed": 41,
+  "backend_passed": 557,
+  "backend_warning": 1,
+  "typecheck_pass": true,
+  "build_pass": true,
+  "nine_demo_traces_unchanged": true,
+  "protected_files_unchanged": 128,
+  "changed_provenance_only": [
+    "data/demo/manifest.json",
+    "data/demo/manifest.sha256"
+  ],
+  "delivery_success": 100,
+  "delivery_p95_ms": 244.6922000090126,
+  "scoped_dod_passed": true,
+  "release_ready": false
+}

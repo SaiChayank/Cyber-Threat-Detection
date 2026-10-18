@@ -1,5 +1,13 @@
 # Univect — Passive Threat Intelligence · PS26145
 
+**Application hardening, 19 October 2026:** oversized alert cursors are rejected
+before SQLite/SSE access, and PCAP staging storage failures return a recoverable
+error with cleanup. Latest source run: 557 backend tests pass, TypeScript/build
+pass, all nine frozen demo traces unchanged. Loopback delivery: 100/100 records,
+p95 244.69 ms. See [cursor fix](docs/API_CURSOR_VALIDATION_20261019.md) and
+[upload recovery](docs/UPLOAD_STORAGE_RECOVERY_20261019.md). Required detector
+quality remains unresolved; this is not a new clean-checkout or release acceptance.
+
 **Restart follow-up, 18 October 2026:** two production lifetimes preserve all
 30 retained alerts, sequence-resumed SSE and Monitor recovery pass, and five
 existing restart/resume tests pass. This closes the earlier checkpoint's restart

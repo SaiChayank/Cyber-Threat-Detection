@@ -1,0 +1,17 @@
+{
+  "command": [
+    "C:\\Users\\Saich\\OneDrive\\Desktop\\PS26145\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-m",
+    "pytest",
+    "tests/test_upload_storage_failures.py",
+    "tests/test_pcap_upload.py",
+    "tests/test_replay_controls.py",
+    "tests/test_event_recovery.py",
+    "-q",
+    "-p",
+    "no:cacheprovider"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 16.359483799984446
+}

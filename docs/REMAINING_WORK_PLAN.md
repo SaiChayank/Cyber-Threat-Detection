@@ -428,3 +428,12 @@ cases; 549 backend tests, typecheck/build/demo pass. All nine expected demo trac
 unchanged; only API source provenance/checksum refreshed. Fresh direct loopback
 delivery 100/100, p95 246.01 ms. Models/research gates/history unchanged. This is a
 T50 precursor, not final release closure. Next: bounded upload-storage failure check.
+
+**Upload storage recovery, 19 October 2026 IST:**
+[Fix](UPLOAD_STORAGE_RECOVERY_20261019.md) covers staging allocation/write/close
+failures with cleanup and generic HTTP 503; interrupted uploads and existing
+history remain intact. Eight new cases; 41 targeted/557 full backend tests,
+TypeScript/build/demo pass. Frozen nine expected traces unchanged, only API demo
+source provenance refreshed. Direct delivery 100/100, p95 244.69 ms. Independent
+T50 precursor only; model/data gates unchanged. Next: bounded outstanding-source
+clarification review; no outgoing message or automatic training/promotion.
