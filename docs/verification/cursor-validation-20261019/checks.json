@@ -1,0 +1,29 @@
+{
+  "protocol_unchanged": true,
+  "invalid_status_before": [
+    500,
+    200,
+    200
+  ],
+  "invalid_status_after": [
+    422,
+    422,
+    422
+  ],
+  "new_tests": 8,
+  "full_backend_passed": 549,
+  "full_backend_warnings": 1,
+  "typecheck_pass": true,
+  "production_build_pass": true,
+  "demo_all_nine_traces_unchanged": true,
+  "changed_protected_files": [
+    "data/demo/manifest.json",
+    "data/demo/manifest.sha256"
+  ],
+  "other_protected_files_unchanged": 128,
+  "research_contracts_and_models_unchanged": true,
+  "delivery_success_count": 100,
+  "delivery_p95_ms": 246.006600005785,
+  "scoped_dod_passed": true,
+  "release_ready": false
+}

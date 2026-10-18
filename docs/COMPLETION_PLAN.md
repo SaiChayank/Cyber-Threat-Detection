@@ -490,3 +490,11 @@ regressions pass. No runtime/model change; 130 protected originals unchanged.
 [Execution sequence](COMPLETION_EXECUTION_20261018.md) records remaining priorities,
 dependencies and acceptance. Next is T21 source qualification, still provenance/
 visibility blocked. Final detector quality, final T60 and release remain unresolved.
+
+**API cursor validation, 19 October 2026 IST:**
+[Correction](API_CURSOR_VALIDATION_20261019.md) prevents oversized query/header
+cursors reaching SQLite or starting a broken SSE response. Eight new regression
+cases; 549 backend tests, typecheck/build/demo pass. All nine expected demo traces
+unchanged; only API source provenance/checksum refreshed. Fresh direct loopback
+delivery 100/100, p95 246.01 ms. Models/research gates/history unchanged. This is a
+T50 precursor, not final release closure. Next: bounded upload-storage failure check.

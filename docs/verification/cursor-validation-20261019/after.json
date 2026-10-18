@@ -1,0 +1,12 @@
+{
+  "statuses": {
+    "alerts": 422,
+    "stream_query": 422,
+    "stream_header": 422
+  },
+  "api_sha256": "c81b4d02cb1285d9d1fcc7460b28919a6d8944fd38be56a9fe4e6724d60a64bc",
+  "targeted_tests_passed": 13,
+  "targeted_pytest_seconds": 10.83,
+  "new_regression_cases": 8,
+  "analyst_history_untouched": true
+}

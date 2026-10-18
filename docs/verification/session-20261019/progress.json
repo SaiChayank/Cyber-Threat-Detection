@@ -7,9 +7,14 @@
     {
       "task": "T21 producer response prerequisite check",
       "result": "No incoming match in verified account; runbook/pair remain unqualified; no packet values/new message"
+    },
+    {
+      "task": "API/SSE oversized cursor validation",
+      "decision": "Eight new cases; six red first; 549 full tests, TS/build/demo pass; delivery 100/100 p95 246.01ms; only API demo source provenance refreshed",
+      "commit": "See package Git history"
     }
   ],
-  "current_task": "Independent T50 precursor: API/SSE input failure reproduction",
+  "current_task": "Independent T50 precursor: upload temporary-storage failure reproduction",
   "constraints": [
     "No frozen gate changes",
     "No reserved values or failed-candidate activation",

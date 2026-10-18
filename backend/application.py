@@ -18,6 +18,9 @@ from replay.scenarios import CLASSES, mixed_demo, scenario
 from schemas.traffic_event import TrafficEvent
 from datasets.replay import PRESETS, available, records as public_records
 
+# SQLite INTEGER PRIMARY KEY sequences are signed 64-bit values.
+MAX_ALERT_SEQUENCE = (1 << 63) - 1
+
 @asynccontextmanager
 async def lifespan(app):
     app.state.pipeline = Pipeline()
@@ -59,7 +62,7 @@ async def telemetry():
     return app.state.pipeline.telemetry() | dict(replay_status=app.state.replay_status, replay_error=app.state.replay_error, alerts_by_class=app.state.store.summary(), throughput_target=2000, confidence_note='Model score or heuristic strength; not real-world calibrated')
 
 @app.get('/api/alerts')
-async def alerts(after: int = Query(0, ge=0), limit: int = Query(200, ge=1, le=1000), threat: str | None = None, newest: bool = False):
+async def alerts(after: int = Query(0, ge=0, le=MAX_ALERT_SEQUENCE), limit: int = Query(200, ge=1, le=1000), threat: str | None = None, newest: bool = False):
     return app.state.store.list(after, limit, threat, newest)
 
 @app.post('/api/events')
@@ -73,9 +76,12 @@ async def events(event: TrafficEvent):
         raise HTTPException(503, 'Event processing failed; retry the same event after recovery') from exc
 
 @app.get('/api/stream')
-async def stream(request: Request, after: int = Query(0, ge=0)):
+async def stream(request: Request, after: int = Query(0, ge=0, le=MAX_ALERT_SEQUENCE)):
     try:
-        after = max(after, int(request.headers.get('last-event-id', '0')))
+        last_id = int(request.headers.get('last-event-id', '0'))
+        if last_id > MAX_ALERT_SEQUENCE:
+            raise HTTPException(422, 'Last-Event-ID exceeds the supported alert sequence range')
+        after = max(after, last_id)
     except ValueError:
         pass
     async def generate():
