@@ -1,0 +1,11 @@
+{
+  "report_sha256": "b9ff3801439d9175c7c90726e35fce6ab0d4db86c89956b3f039202003325481",
+  "receipts": {
+    "udp-response-check.json": "851a3eaf75bb294e72062206b32121248427fa4d5d34f3383a5e7e00a61e75b0",
+    "remaining-response-check.json": "fef8f4d2a494647a041622b96f231fa9ea38dca25b32c8e195b8c3cb2a47b5ef",
+    "dns-issue-check.json": "8afb012d29f4076a6747c7ed5c48ec7d3f95f681833902971d5205f247a42d11"
+  },
+  "review_dod_passed": true,
+  "data_qualified": false,
+  "release_ready": false
+}

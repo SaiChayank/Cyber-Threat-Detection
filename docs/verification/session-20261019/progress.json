@@ -17,9 +17,14 @@
       "task": "PCAP upload staging storage recovery",
       "decision": "Six pre-fix failures; eight new cases; 41 targeted/557 backend passes, TS/build/demo pass; delivery 100/100 p95 244.69ms",
       "commit": "See package Git history"
+    },
+    {
+      "task": "Remaining DGA/C2/TLS and DNS response prerequisite review",
+      "decision": "Verified focused incoming query has no match; DNS issue open/zero comments; no qualification bundle obtained",
+      "commit": "See package Git history"
     }
   ],
-  "current_task": "Bounded remaining producer-response and DNS-issue prerequisite review",
+  "current_task": "Current Monitor integration verification of upload storage error and recovery",
   "constraints": [
     "No frozen gate changes",
     "No reserved values or failed-candidate activation",

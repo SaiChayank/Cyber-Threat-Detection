@@ -1,0 +1,16 @@
+{
+  "date_ist": "2026-10-19",
+  "account_verified": "saichayank07@gmail.com",
+  "query": "in:anywhere -in:sent -in:drafts {from:claudioms@ipvc.pt from:dejeon@stud.assist.ac.kr from:olivier.levillain@telecom-sudparis.eu subject:\"DNS dataset v5\" subject:\"TQH-C2\" subject:\"ARES Cobalt Strike dataset\"}",
+  "query_confirmed_in_search_field": true,
+  "visible_result": "No messages matched your search",
+  "tracks": [
+    "DGA",
+    "C2",
+    "TLS alternate contact"
+  ],
+  "qualification_bundle_obtained": false,
+  "delivery_established": false,
+  "external_messages_sent": false,
+  "scope": "One focused point-in-time check; no unrelated mailbox content retained, no exhaustive absence claim, no monitoring"
+}
