@@ -1,0 +1,5 @@
+{
+  "lifetime": "second-restart",
+  "url": "http://127.0.0.1:13418/monitor",
+  "records": 30
+}

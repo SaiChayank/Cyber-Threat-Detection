@@ -1,0 +1,12 @@
+{
+  "restart_dod_passed": true,
+  "preserved_records": 30,
+  "production_lifetimes_checked": 2,
+  "full_record_equality": true,
+  "resumed_records": 15,
+  "duplicate_resume_records": 0,
+  "original_files_unchanged": 130,
+  "new_ingest_events": 0,
+  "detector_quality_reevaluated": false,
+  "release_ready": false
+}

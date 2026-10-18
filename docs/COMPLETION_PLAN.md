@@ -481,3 +481,12 @@ p95 245.8072 ms. Original history/artifacts untouched. Full rehearsal remains
 PARTIAL because restart was not repeated before the unattended window elapsed.
 Next: isolated restart check using saved actual 30-record history; all detector
 quality gates and release blockers remain unchanged.
+
+**Restart completion, 18 October 2026 IST:**
+[Verification](RESTART_COMPLETION_20261018.md) closes the interrupted current
+clean-checkout restart task: two production lifetimes preserve all 30 records,
+15-record SSE catch-up has zero duplicates, Monitor reconnects and five existing
+regressions pass. No runtime/model change; 130 protected originals unchanged.
+[Execution sequence](COMPLETION_EXECUTION_20261018.md) records remaining priorities,
+dependencies and acceptance. Next is T21 source qualification, still provenance/
+visibility blocked. Final detector quality, final T60 and release remain unresolved.

@@ -2,7 +2,7 @@
   "authorization": "User requested continuous eligible project work while away within the five-hour session window; commit each completed verified package",
   "reference_start_utc": "2026-10-17T18:29:23Z",
   "wall_clock_upper_bound_utc": "2026-10-17T23:29:23Z",
-  "current_task": "Await next authorized work period: isolated restart check remains",
+  "current_task": "T21 same-service labelled UDP pair qualification: provenance/visibility blocked",
   "completed": [
     {
       "task": "Downloaded DNS qualification",
@@ -38,11 +38,17 @@
       "task": "Current clean-checkout executed checkpoint",
       "decision": "531 pass/3 optional skips, TS/build/install/demo and scoped benchmarks pass; full rehearsal PARTIAL because restart not repeated",
       "commit": "See package Git history"
+    },
+    {
+      "task": "Retained clean-checkout restart completion",
+      "decision": "Two lifetimes preserve 30 records, SSE catch-up exact 15/zero duplicates, Monitor recovery and 5 targeted tests pass",
+      "commit": "See package Git history"
     }
   ],
   "remaining_queue": [
-    "Isolated restart comparison against saved 30-record snapshot",
-    "Qualified independent detector data and separating observability prerequisites"
+    "T21 independent producer-labelled same-service UDP pair",
+    "Other qualified independent detector data/context prerequisites",
+    "Conditional experiments/promotion then final integrations and release checks"
   ],
   "constraints": [
     "No gate relaxation",
@@ -53,5 +59,6 @@
     "No refactor of passed features without real integration defect"
   ],
   "release_ready": false,
-  "unattended_window_elapsed": true
+  "unattended_window_elapsed": true,
+  "latest_user_authorization": "18 October 2026: structure remaining tasks and start implementation; first unblocked restart package completed"
 }

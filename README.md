@@ -1,5 +1,11 @@
 # Univect — Passive Threat Intelligence · PS26145
 
+**Restart follow-up, 18 October 2026:** two production lifetimes preserve all
+30 retained alerts, sequence-resumed SSE and Monitor recovery pass, and five
+existing restart/resume tests pass. This closes the earlier checkpoint's restart
+gap. Detector-quality blockers remain. See [verification](docs/RESTART_COMPLETION_20261018.md)
+and [the remaining execution plan](docs/COMPLETION_EXECUTION_20261018.md).
+
 **Current reproduction checkpoint, 18 October 2026:** fresh local commit `4e92b3b`
 passes installation, 531 backend tests (three optional research-tool skips),
 TypeScript, production build and incremental demo. Installer reports zero npm

@@ -1,0 +1,10 @@
+{
+  "command": "C:/Users/Saich/AppData/Local/Temp/univect-clean-20261018-4e92b3b/.venv/Scripts/python.exe -m pytest tests/test_sqlite_restart.py tests/test_sse_resume.py -q -p no:cacheprovider",
+  "cwd": "C:/Users/Saich/AppData/Local/Temp/univect-clean-20261018-4e92b3b",
+  "exit_code": 0,
+  "passed": 5,
+  "warnings": 1,
+  "warning": "Existing Starlette/httpx TestClient deprecation",
+  "pytest_elapsed_seconds": 7.42,
+  "new_application_tests": 0
+}

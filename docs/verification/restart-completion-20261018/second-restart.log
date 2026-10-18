@@ -1,0 +1,50 @@
+
+> univect-ps26145@1.0.0 start
+> node scripts/run-local.mjs start
+
+INFO:     Started server process [48104]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:18418 (Press CTRL+C to quit)
+INFO:     127.0.0.1:62466 - "GET /api/health HTTP/1.1" 200 OK
+Univect: http://localhost:13418
+▲ Next.js 16.3.8
+- Local:         http://127.0.0.1:13418
+- Network:       http://127.0.0.1:13418
+✓ Ready in 389ms
+✓ Running next.config.ts took 69ms
+INFO:     127.0.0.1:51013 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51013 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51013 - "GET /api/alerts?limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51013 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51013 - "GET /api/alerts?limit=7&after=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51013 - "GET /api/alerts?limit=7&after=7 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51013 - "GET /api/alerts?limit=7&after=14 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51013 - "GET /api/alerts?limit=7&after=21 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51013 - "GET /api/alerts?limit=7&after=28 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51013 - "GET /api/alerts?limit=7&after=30 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51013 - "GET /api/alerts?newest=true&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51013 - "GET /api/alerts?threat=BOTNET_C2&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51013 - "GET /api/alerts?threat=DATA_EXFILTRATION&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51013 - "GET /api/alerts?threat=DDOS&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51013 - "GET /api/alerts?threat=DGA_DOMAINS&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51013 - "GET /api/alerts?threat=DNS_TUNNELLING&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51013 - "GET /api/alerts?threat=ENCRYPTED_MALWARE&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51013 - "GET /api/alerts?threat=RECONNAISSANCE&limit=1000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51013 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51013 - "GET /api/stream?after=30 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51543 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51543 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51543 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51543 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51543 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51543 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51543 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51543 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51543 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51543 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51543 - "GET /api/benchmark HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64636 - "GET /api/alerts?newest=true&limit=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64637 - "GET /api/datasets HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64638 - "GET /api/telemetry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64638 - "GET /api/stream?after=30 HTTP/1.1" 200 OK
