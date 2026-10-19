@@ -1,0 +1,14 @@
+{
+  "scope": "Correspondence/documentation only; no application behavior changes",
+  "receipt_check": "PASS",
+  "protected_originals_checked": 130,
+  "protected_originals_changed": 0,
+  "git_diff_check": "PASS",
+  "application_tests_added": 0,
+  "application_tests_rerun": false,
+  "build_rerun": false,
+  "metrics_remeasured": false,
+  "dispatch_dod": "PASS",
+  "qualification_dod": "BLOCKED_NOT_MET",
+  "next": "Verify producer service/run/label/time and capture format/integrity evidence before packet values; public datasets only"
+}

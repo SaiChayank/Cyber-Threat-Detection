@@ -511,3 +511,16 @@ cases plus 12 UDP regressions pass, all 130 protected originals unchanged. A pre
 NetsLab clarification draft is prepared NOT SENT; new-recipient approval or an
 explicit isolated-lab collection scope is needed next. No runtime/model/gate/data
 change, packet values, training, scoring, new external message or promotion.
+
+## T21 NetsLab dispatch and public-only route — 20 October 2026 IST
+
+The user approved the exact prepared request to the NetsLab corresponding author
+and selected **public datasets only**. [Dispatch verified](UDP_NETSLAB_RUNBOOK_STATUS.md):
+one Send click, Gmail Message sent and opened Sent envelope/body match; no CC/BCC
+or attachments. The historical prepared file is preserved unchanged. This
+supersedes the pending-send/lab-option next action in the dated 19 October entry.
+Delivery/reply and pair qualification remain unverified. T21 stays BLOCKED / NOT
+QUALIFIED; no packet values, detector experiment or gate change. Next: verify
+original producer service/run/label/timestamp and format/integrity evidence before
+packet inspection and the frozen original-time overlap screen. If no public
+source meets the prerequisites, record the blocker without substituting lab data.

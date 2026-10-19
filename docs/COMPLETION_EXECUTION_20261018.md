@@ -12,7 +12,10 @@ still found no incoming ORION match; qualification remains blocked without verif
 source evidence. [Alternative acquisition](UDP_ALTERNATIVE_SOURCES_20261019.md)
 identified public NetsLab iPerf/UDP-flood capture members and verified their ZIP
 directory metadata, but matching service/run/timing evidence is still missing.
-A precise clarification is prepared, not sent. No packet values or experiment.
+A precise clarification was prepared on 19 October. On 20 October the user approved
+and Gmail verified the [NetsLab request dispatch](UDP_NETSLAB_RUNBOOK_STATUS.md).
+The user selected public datasets only; isolated-lab collection is not the route.
+T21 remains unqualified pending producer evidence. No packet values or experiment.
 This supplements the sequence below; detector/research gates unchanged.
 
 18 October 2026 IST. Baseline `49855bc`; execution supplement to

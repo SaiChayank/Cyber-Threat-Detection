@@ -1,0 +1,40 @@
+{
+  "task": "T21 approved NetsLab clarification dispatch only",
+  "client_date": "2026-10-20",
+  "client_timezone": "Asia/Calcutta",
+  "collected_utc": "2026-10-19T20:00:16.505Z",
+  "send_clicked_utc": "2026-10-19T19:59:48.269Z",
+  "authorization": "User explicitly approved the exact prepared request and selected public datasets only",
+  "from": "saichayank07@gmail.com",
+  "to": [
+    "abeysinghe.sandeepa@ucdconnect.ie"
+  ],
+  "cc": [],
+  "bcc": [],
+  "attachments": [],
+  "subject": "NetsLab-5GORAN-IDD: original runbook for matching benign iPerf and UDP flood captures",
+  "request_file": "docs/UDP_NETSLAB_RUNBOOK_REQUEST.md",
+  "request_sha256": "41c248479b21a1cb0cbac995a258059f752c810e361d417ac4af795a98caec75",
+  "approved_body_sha256": "35c3ee7e58027956be157848077d9e1a5903099f6513114839c20889689e8d0f",
+  "duplicate_checks": {
+    "sent_query": "in:sent to:abeysinghe.sandeepa@ucdconnect.ie subject:\"NetsLab-5GORAN-IDD: original runbook for matching benign iPerf and UDP flood captures\"",
+    "draft_query": "in:drafts to:abeysinghe.sandeepa@ucdconnect.ie subject:\"NetsLab-5GORAN-IDD: original runbook for matching benign iPerf and UDP flood captures\"",
+    "both_results": "No messages matched your search"
+  },
+  "send_clicks": 1,
+  "gmail_confirmation": "Message sent",
+  "sent_url": "https://mail.google.com/mail/u/0/#sent/KtbxLxgRNrnNsMKRThhhLjSwxJmPGmBLLq",
+  "gmail_displayed_date": "20 Oct 2026, 01:29",
+  "gmail_displayed_timezone": "not shown",
+  "pre_send_body_match": true,
+  "sent_body_match": true,
+  "comparison_normalization": "NBSP to ASCII space; CRLF to LF; trim outer whitespace only",
+  "screenshot": "docs/verification/udp-netslab-dispatch-20261020/sent-request.png",
+  "screenshot_sha256": "a2c17e6a726c9bb009679f823d4ce1b5115b8b42eec87cb027628ecb6dc7a49d",
+  "delivery_confirmed": false,
+  "reply_confirmed": false,
+  "public_datasets_only": true,
+  "qualification_status": "BLOCKED_NOT_QUALIFIED",
+  "packet_values_inspected": false,
+  "detector_changes": false
+}

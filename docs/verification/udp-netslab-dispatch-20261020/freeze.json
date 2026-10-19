@@ -1,0 +1,12 @@
+{
+  "docs/UDP_NETSLAB_RUNBOOK_REQUEST.md": "41c248479b21a1cb0cbac995a258059f752c810e361d417ac4af795a98caec75",
+  "docs/UDP_NETSLAB_RUNBOOK_STATUS.md": "9e41cb52105cd889d269a5903aa21938ce1a11fe0f00411a6af15d8f706d3db5",
+  "docs/COMPLETION_EXECUTION_20261018.md": "dd1e769eefdd17839dccc8ca53ab734d3af49c98bedf70608d003aef91f9efbe",
+  "docs/COMPLETION_PLAN.md": "e4699ecf25a2f703b58984c0113bf683c6a41bf1a86098c8faa33f5257670cd3",
+  "docs/REMAINING_WORK_PLAN.md": "b0757e643a3d6e96c94dd059495f04337349e9f034317ab495797b38523b6c5d",
+  "docs/verification/session-20261019/progress.json": "278f8a0d64dd332a61d2939af14addd23625257419b0ce3f3c03b600fd3192f1",
+  "docs/verification/udp-netslab-dispatch-20261020/receipt.json": "ae2fc8e58343763573cfcc6ad5e714095120e64f27bd71df1464c0f476710cee",
+  "docs/verification/udp-netslab-dispatch-20261020/check_receipt.py": "bee7574397823b177a91b3bea5ac1574eecd99f717d08df78828b5306fa8fe1a",
+  "docs/verification/udp-netslab-dispatch-20261020/checks.json": "2fdbb6591ceb53faa649efd7379f0408210874afbdedaf30c98e55baaadc8d6f",
+  "docs/verification/udp-netslab-dispatch-20261020/sent-request.png": "a2c17e6a726c9bb009679f823d4ce1b5115b8b42eec87cb027628ecb6dc7a49d"
+}
