@@ -1,0 +1,82 @@
+{
+  "version": "public-only-source-route-20261020-v1",
+  "baseline_commit": "42f0be3",
+  "policy": {
+    "public_direct_download_only": true,
+    "email_gated_sources_skipped": true,
+    "new_messages": false,
+    "institutional_details_required": false,
+    "lab_collection": false,
+    "training": false,
+    "scoring": false,
+    "promotion": false,
+    "reserved_data_access": false,
+    "frozen_gates_changed": false
+  },
+  "new_leads": [
+    {
+      "id": "beacon-hunter",
+      "url": "https://github.com/mrcord77/beacon-hunter",
+      "commit": "135718735698c5e62aaf9a8b100fdfd99ad86bb3",
+      "repository_license": "AGPL-3.0",
+      "status": "NOT_QUALIFIED_MATCHED_PERIODIC_BENIGN_CONTACT_TRUTH_MISSING",
+      "data_downloaded": false,
+      "role": null
+    },
+    {
+      "id": "domainator",
+      "url": "https://github.com/dreamingdust/domainator-dataset",
+      "commit": "4a4f9cfb9c5488dd6c99fa3734ac722cb3139fb9",
+      "repository_license": null,
+      "status": "SKIP_PCAPNG_ADVERTISED_DATA_PERMISSION_AND_CONTROLS_UNESTABLISHED",
+      "data_downloaded": false,
+      "role": null
+    },
+    {
+      "id": "stockholm-dns-json",
+      "url": "https://api.figshare.com/v2/articles/4229399",
+      "doi": "10.17045/sthlmuni.4229399.v1",
+      "license": "CC BY 4.0",
+      "public_download_disabled": false,
+      "advertised_file": "DNS-Tunneling-JSON-4-Classes.zip",
+      "advertised_bytes": 71604945,
+      "publisher_md5": "5fadb437eeead56f36b569aaf6c38193",
+      "local_archive_sha256": null,
+      "status": "NOT_QUALIFIED_ORIGINAL_CAUSAL_HISTORY_AND_CONTROLS_UNESTABLISHED",
+      "data_downloaded": false,
+      "role": null
+    },
+    {
+      "id": "moe-wordlist-dga",
+      "url": "https://github.com/reypapin/MoE-word-list-dga-detection",
+      "commit": "eeb2725ced88e3d10620f40440002a5d6fcee34a",
+      "repository_license": null,
+      "status": "SKIP_SOURCE_OVERLAP_AND_MISSING_BENIGN_DNS_PROVENANCE",
+      "data_downloaded": false,
+      "role": null
+    }
+  ],
+  "documentation_first_label_exposures": [
+    "google",
+    "secure-login-check",
+    "example-banking-portal"
+  ],
+  "existing_public_inputs_retained": [
+    "DRIFT-2025: existing provenance-only intake; no new role",
+    "TQH-C2-v1.2.2: existing qualified TLS development cohort only",
+    "DNSTunnel2026: existing unqualified intake",
+    "UMA-benign: existing unqualified intake",
+    "NetsLab: metadata lead only; no selected UDP pair"
+  ],
+  "clarification_dependent_routes_skipped": [
+    "TQH supplemental C2 contact/control records",
+    "Mendeley DNS raw-name/provenance clarification",
+    "Korving capture-data permission/session/control clarification",
+    "ARES capture-data permission/session/control clarification",
+    "ORION, NetsLab and BOUN unmatched-run clarification routes"
+  ],
+  "new_qualified_replacements": 0,
+  "runtime_integrations": 0,
+  "qualified_final_role": null,
+  "status": "PUBLIC_ROUTE_APPLIED_REPLACEMENT_QUALIFICATION_UNRESOLVED"
+}

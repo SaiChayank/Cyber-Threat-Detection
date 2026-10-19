@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "new_leads": 4,
+  "qualified_replacements": 0,
+  "receipt_count": 16,
+  "local_receipts_verified": 16,
+  "protected_originals": 130,
+  "protected_changes": 0,
+  "application_tests_rerun": false,
+  "build_rerun": false,
+  "source_screen_dod": "PASS",
+  "replacement_qualification_dod": "NOT_MET",
+  "document_git_blob_identities_verified": 6,
+  "git_diff_check": "PASS",
+  "firecrawl_result": "Routing failed before search result: non-empty link_id required; built-in web/public metadata fallback used"
+}

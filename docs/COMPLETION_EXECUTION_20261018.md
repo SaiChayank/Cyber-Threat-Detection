@@ -1,5 +1,12 @@
 # Remaining implementation sequence
 
+**20 October public-source-only steering:** [Current route](PUBLIC_DATA_ROUTE_20261020.md)
+skips email-gated dataset/supplement requests; no institutional details or further
+mail are needed. Existing public inputs and frozen roles remain intact. Four
+additional public leads were screened without data rows; none qualifies as a
+replacement for the missing evidence. Do not keep email-response checks as the
+default next task or infer labels to unblock T21/T23. No model/gate change.
+
 **Execution checkpoint, 19 October:** cursor validation, PCAP staging-storage and
 [SQLite read recovery](SQLITE_READ_RECOVERY_20261019.md) are fixed and verified.
 Latest source: 574 backend tests, TypeScript/build/nine-scenario demo pass; direct

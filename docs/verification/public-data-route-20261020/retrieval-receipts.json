@@ -1,0 +1,146 @@
+[
+  {
+    "url": "https://api.github.com/repos/mrcord77/beacon-hunter",
+    "final_url": "https://api.github.com/repos/mrcord77/beacon-hunter",
+    "status": 200,
+    "path": "docs/verification/public-data-route-20261020/beacon-repository.json",
+    "bytes": 5436,
+    "sha256": "bbfea8e03421da12598eb1a3c9b3b1993d25cfa203c5c8bd3aa0f615ab09e599",
+    "retrieved_utc": "2026-10-19T20:06:21.414720+00:00"
+  },
+  {
+    "url": "https://api.github.com/repos/mrcord77/beacon-hunter/git/ref/heads/main",
+    "final_url": "https://api.github.com/repos/mrcord77/beacon-hunter/git/ref/heads/main",
+    "status": 200,
+    "path": "docs/verification/public-data-route-20261020/beacon-ref.json",
+    "bytes": 342,
+    "sha256": "ba12c5ae95dd5a520200291a053452905ce20b8c81bc16208ce37de6051c09ea",
+    "retrieved_utc": "2026-10-19T20:06:21.831563+00:00"
+  },
+  {
+    "url": "https://api.github.com/repos/mrcord77/beacon-hunter/git/trees/135718735698c5e62aaf9a8b100fdfd99ad86bb3?recursive=1",
+    "final_url": "https://api.github.com/repos/mrcord77/beacon-hunter/git/trees/135718735698c5e62aaf9a8b100fdfd99ad86bb3?recursive=1",
+    "status": 200,
+    "path": "docs/verification/public-data-route-20261020/beacon-tree.json",
+    "bytes": 17592,
+    "sha256": "006de986727871af81706ccabc52f46b1c4dfdfed830486c81cbad9c9e8dd0ce",
+    "retrieved_utc": "2026-10-19T20:06:22.334324+00:00"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/mrcord77/beacon-hunter/135718735698c5e62aaf9a8b100fdfd99ad86bb3/LICENSE",
+    "final_url": "https://raw.githubusercontent.com/mrcord77/beacon-hunter/135718735698c5e62aaf9a8b100fdfd99ad86bb3/LICENSE",
+    "status": 200,
+    "path": "data/raw/public-source-documents-20261020/beacon-document-0.txt",
+    "bytes": 34519,
+    "sha256": "65c4a1bf0211c8904c39670e5ec91b2c317901c59716b7a9acb4f123e9bebd28",
+    "retrieved_utc": "2026-10-19T20:06:22.763597+00:00"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/mrcord77/beacon-hunter/135718735698c5e62aaf9a8b100fdfd99ad86bb3/README.md",
+    "final_url": "https://raw.githubusercontent.com/mrcord77/beacon-hunter/135718735698c5e62aaf9a8b100fdfd99ad86bb3/README.md",
+    "status": 200,
+    "path": "data/raw/public-source-documents-20261020/beacon-document-1.txt",
+    "bytes": 8365,
+    "sha256": "062d22de05349c775f65257f7a3e311d4bfeefa3b1a7d2142ff8e9527df60a05",
+    "retrieved_utc": "2026-10-19T20:06:23.152903+00:00"
+  },
+  {
+    "url": "https://api.github.com/repos/dreamingdust/domainator-dataset",
+    "final_url": "https://api.github.com/repos/dreamingdust/domainator-dataset",
+    "status": 200,
+    "path": "docs/verification/public-data-route-20261020/domainator-repository.json",
+    "bytes": 5630,
+    "sha256": "d55535353f6503e5c16abcb95982a988a8e5660a67de723ab2ac37c93b0b0c84",
+    "retrieved_utc": "2026-10-19T20:06:23.596181+00:00"
+  },
+  {
+    "url": "https://api.github.com/repos/dreamingdust/domainator-dataset/git/ref/heads/main",
+    "final_url": "https://api.github.com/repos/dreamingdust/domainator-dataset/git/ref/heads/main",
+    "status": 200,
+    "path": "docs/verification/public-data-route-20261020/domainator-ref.json",
+    "bytes": 360,
+    "sha256": "f4e5406b45542a236577a16a25f91a06861a85b1412c8608cdd88a3186cc1159",
+    "retrieved_utc": "2026-10-19T20:06:24.048243+00:00"
+  },
+  {
+    "url": "https://api.github.com/repos/dreamingdust/domainator-dataset/git/trees/4a4f9cfb9c5488dd6c99fa3734ac722cb3139fb9?recursive=1",
+    "final_url": "https://api.github.com/repos/dreamingdust/domainator-dataset/git/trees/4a4f9cfb9c5488dd6c99fa3734ac722cb3139fb9?recursive=1",
+    "status": 200,
+    "path": "docs/verification/public-data-route-20261020/domainator-tree.json",
+    "bytes": 33476,
+    "sha256": "4ed3a03c9128213b6b70aedfd80437447d8b3509c31d1cb6efb3e01b8002ca78",
+    "retrieved_utc": "2026-10-19T20:06:24.557445+00:00"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/dreamingdust/domainator-dataset/4a4f9cfb9c5488dd6c99fa3734ac722cb3139fb9/CITATION.cff",
+    "final_url": "https://raw.githubusercontent.com/dreamingdust/domainator-dataset/4a4f9cfb9c5488dd6c99fa3734ac722cb3139fb9/CITATION.cff",
+    "status": 200,
+    "path": "data/raw/public-source-documents-20261020/domainator-document-0.txt",
+    "bytes": 1262,
+    "sha256": "2761c4bd12da17aabe4e037e626d06e2c015c73da0bf3a65c02e401b32a362e0",
+    "retrieved_utc": "2026-10-19T20:06:24.929040+00:00"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/dreamingdust/domainator-dataset/4a4f9cfb9c5488dd6c99fa3734ac722cb3139fb9/README.md",
+    "final_url": "https://raw.githubusercontent.com/dreamingdust/domainator-dataset/4a4f9cfb9c5488dd6c99fa3734ac722cb3139fb9/README.md",
+    "status": 200,
+    "path": "data/raw/public-source-documents-20261020/domainator-document-1.txt",
+    "bytes": 1105,
+    "sha256": "13d0f23c655245a9a03d48393652387f5f3dcc2d9c9ca458b9554216231a0778",
+    "retrieved_utc": "2026-10-19T20:06:25.282148+00:00"
+  },
+  {
+    "url": "https://api.github.com/repos/reypapin/MoE-word-list-dga-detection",
+    "final_url": "https://api.github.com/repos/reypapin/MoE-word-list-dga-detection",
+    "status": 200,
+    "path": "docs/verification/public-data-route-20261020/moe-repository.json",
+    "bytes": 5814,
+    "sha256": "c6298e9ca93d6ea86aa301aada60dd27f2085f9a8ffad74f5715fd1d45e1f9ba",
+    "retrieved_utc": "2026-10-19T20:06:25.671740+00:00"
+  },
+  {
+    "url": "https://api.github.com/repos/reypapin/MoE-word-list-dga-detection/git/ref/heads/main",
+    "final_url": "https://api.github.com/repos/reypapin/MoE-word-list-dga-detection/git/ref/heads/main",
+    "status": 200,
+    "path": "docs/verification/public-data-route-20261020/moe-ref.json",
+    "bytes": 370,
+    "sha256": "291549ee8b973729b48df74b9abb3cc482ecb6a9beb81d74f65b70b8737f2929",
+    "retrieved_utc": "2026-10-19T20:06:26.080821+00:00"
+  },
+  {
+    "url": "https://api.github.com/repos/reypapin/MoE-word-list-dga-detection/git/trees/eeb2725ced88e3d10620f40440002a5d6fcee34a?recursive=1",
+    "final_url": "https://api.github.com/repos/reypapin/MoE-word-list-dga-detection/git/trees/eeb2725ced88e3d10620f40440002a5d6fcee34a?recursive=1",
+    "status": 200,
+    "path": "docs/verification/public-data-route-20261020/moe-tree.json",
+    "bytes": 820996,
+    "sha256": "2e15befcc76f81fbbc9442dc2b83be1f906387ba201745329a698ef9f29cee30",
+    "retrieved_utc": "2026-10-19T20:06:26.939890+00:00"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/reypapin/MoE-word-list-dga-detection/eeb2725ced88e3d10620f40440002a5d6fcee34a/Dataset/README.md",
+    "final_url": "https://raw.githubusercontent.com/reypapin/MoE-word-list-dga-detection/eeb2725ced88e3d10620f40440002a5d6fcee34a/Dataset/README.md",
+    "status": 200,
+    "path": "data/raw/public-source-documents-20261020/moe-document-0.txt",
+    "bytes": 18088,
+    "sha256": "0758cabfa8cf992aaa87c159ebe0e17611fae7aef67b7eb8b79eeb311ab97d9e",
+    "retrieved_utc": "2026-10-19T20:06:27.326123+00:00"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/reypapin/MoE-word-list-dga-detection/eeb2725ced88e3d10620f40440002a5d6fcee34a/README.md",
+    "final_url": "https://raw.githubusercontent.com/reypapin/MoE-word-list-dga-detection/eeb2725ced88e3d10620f40440002a5d6fcee34a/README.md",
+    "status": 200,
+    "path": "data/raw/public-source-documents-20261020/moe-document-1.txt",
+    "bytes": 14360,
+    "sha256": "a989c90533bef65adf1e4196254db8e2c6f10d73ef5e72c679fa0193b37f0783",
+    "retrieved_utc": "2026-10-19T20:06:27.694840+00:00"
+  },
+  {
+    "url": "https://api.figshare.com/v2/articles/4229399",
+    "final_url": "https://api.figshare.com/v2/articles/4229399",
+    "status": 200,
+    "path": "docs/verification/public-data-route-20261020/stockholm-article.json",
+    "bytes": 4200,
+    "sha256": "04ea26240870702126d1b9080381ee3a2f7aea66e84c1851a23402e9c75ce3b2",
+    "retrieved_utc": "2026-10-19T20:06:29.116065+00:00"
+  }
+]

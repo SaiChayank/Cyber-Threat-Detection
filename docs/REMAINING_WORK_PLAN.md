@@ -524,3 +524,14 @@ QUALIFIED; no packet values, detector experiment or gate change. Next: verify
 original producer service/run/label/timestamp and format/integrity evidence before
 packet inspection and the frozen original-time overlap screen. If no public
 source meets the prerequisites, record the blocker without substituting lab data.
+
+## Public-only acquisition route — 20 October 2026 IST
+
+The user instructs skipping email-gated sources and supplemental annotations.
+[New route and source screen](PUBLIC_DATA_ROUTE_20261020.md) preserves all prior
+public inputs/roles; no further mail, institutional details or lab collection.
+Four additional public leads were metadata-screened; zero qualify as missing
+C2/DNS/DGA evaluation replacements. No raw data rows, scoring, training, runtime
+change or relaxed gate. Earlier pending-response next actions are superseded;
+source qualification must be established from published records. Existing quality
+blockers remain unresolved; no release READY. See data/public_source_route.json.

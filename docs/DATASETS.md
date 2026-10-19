@@ -1,5 +1,10 @@
 # Downloaded public datasets and their use
 
+**20 October 2026 access-policy update:** [Public-only route](PUBLIC_DATA_ROUTE_20261020.md)
+skips email-gated sources/supplements. Four new metadata-screened alternatives
+do not qualify for missing frozen roles; no new raw dataset or runtime input was
+added. Existing public downloads, permissions, roles and limitations remain intact.
+
 **17 October 2026 qualification update:** the downloaded ZIPs were catalogued
 under a frozen plan. [Qualification decision](DNS_PUBLIC_DATA_QUALIFICATION.md)
 and `data/dns_public_qualification.json` retain both as unqualified research intake.

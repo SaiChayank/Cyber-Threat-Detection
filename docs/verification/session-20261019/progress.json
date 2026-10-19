@@ -57,23 +57,29 @@
       "task": "Approved NetsLab runbook request dispatch, 20 October 2026 IST",
       "decision": "Gmail confirms sent once; exact approved body/envelope verified; public datasets only; T21 remains unqualified",
       "evidence": "docs/verification/udp-netslab-dispatch-20261020/receipt.json"
+    },
+    {
+      "task": "Public-only source-route replacement screen, 20 October 2026 IST",
+      "decision": "Skip email-gated data/supplements; four new metadata leads screened, zero qualified replacements; no data rows or model change",
+      "evidence": "docs/PUBLIC_DATA_ROUTE_20261020.md"
     }
   ],
-  "current_task": "T21 awaits verified NetsLab producer provenance; approved request sent; public datasets only",
+  "current_task": "Public-only source qualification remains unresolved; no waiting-mail or institutional-details dependency",
   "constraints": [
     "No frozen gate changes",
     "No reserved values or failed-candidate activation",
     "Preserve original datasets/history/artifacts",
     "No additional external messages without specific approval; no push",
     "No unrelated refactor of passed code",
-    "Public datasets only; no isolated-lab collection"
+    "Public datasets only; no isolated-lab collection",
+    "Skip email-gated datasets/supplements; no further author follow-ups or institutional-details request"
   ],
   "release_ready": false,
   "checkpointed_near_usage_limit": false,
   "last_checked_primary_used_percent": 32,
   "ordinary_usage_allowed_at_last_check": true,
   "remaining_queue": [
-    "T21 verified public-source runbook for exact NetsLab members; no packet values before provenance; if unavailable record blocker",
+    "Find publicly documented compatible run/session/contact annotations and required benign controls; no packet values before provenance",
     "Data-qualified detector experiments only when prerequisites satisfied",
     "Conditional promotions and final security/performance/reproducibility/release checks"
   ],

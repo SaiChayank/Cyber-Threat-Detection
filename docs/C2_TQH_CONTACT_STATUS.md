@@ -1,5 +1,13 @@
 # TQH-C2 producer clarification — dispatch status
 
+**20 October 2026 superseding route:** a focused correspondence check verified a
+producer response, but no executed-contact or matched-benign records were supplied.
+Some requested supplemental records are not in the public release. The user now
+instructs skipping email-gated data; no institutional details, reply or follow-up
+will be sought. Use [the public-only route](PUBLIC_DATA_ROUTE_20261020.md).
+Historical dispatch evidence below remains unchanged. The existing public TLS
+development cohort is retained; C2 qualification remains unresolved.
+
 17 October 2026; baseline `ba225cd`.
 **Approved request SENT and verified. Request-dispatch DoD: PASS.**
 **Producer evidence not obtained; C2 pair qualification remains BLOCKED.**
