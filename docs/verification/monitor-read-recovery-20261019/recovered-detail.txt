@@ -1,0 +1,61 @@
+ALERT INVESTIGATION
+
+DDoS & floods
+
+Review the observed connection and supporting metadata. A detection indicates suspicion and requires analyst interpretation.
+
+CRITICAL
+100.0% confidence score
+HYBRID
+
+Score basis: synthetic-trained model posterior
+
+Observed connection
+192.0.2.8:0
+198.51.100.1:443
+
+2023-11-14T22:16:57.000Z · captured event time
+
+Supporting evidence
+
+packet_rate=1200.0; byte_rate=72000.0; source_entropy=0.0; syn_fraction=0.0; source_entropy_partial=False; rate_window_seconds=10; rate_window_resolution_ms=1000; global_packet_rate=1200.0; source_count_lower_bound=1; destination_concentration=1.0; mean_packet_bytes=60.0; packet_size_cv=0.0; packet_size_basis=summary_mean_proxy; udp_target=destination_udp; confidence_kind=synthetic-trained model posterior; window_partial=True; high-rate UDP pattern; passive metadata cannot verify reflection or amplification
+
+PACKET RATE
+1200
+BYTE RATE
+72000
+SOURCE ENTROPY
+0
+SYN FRACTION
+0
+SOURCE ENTROPY PARTIAL
+false
+RATE WINDOW SECONDS
+10
+RATE WINDOW RESOLUTION MS
+1000
+GLOBAL PACKET RATE
+1200
+SOURCE COUNT LOWER BOUND
+1
+DESTINATION CONCENTRATION
+1
+MEAN PACKET BYTES
+60
+PACKET SIZE CV
+0
+PACKET SIZE BASIS
+summary_mean_proxy
+UDP TARGET
+destination_udp
+CONFIDENCE KIND
+synthetic-trained model posterior
+WINDOW PARTIAL
+true
+Identifiers
+Flow: sse-resume-7
+Alert: 8df81dd1-1ff1-4a04-aad0-9db83a4f7b60
+
+Encrypted content stays opaque. Scores are model estimates or heuristic strengths, without deployment calibration.
+
+Copy JSON

@@ -1,0 +1,7 @@
+
+> univect-ps26145@1.0.0 typecheck
+> npm run typecheck --workspace frontend
+
+
+> frontend@0.0.0 typecheck
+> tsc --noEmit

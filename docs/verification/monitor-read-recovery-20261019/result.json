@@ -1,0 +1,53 @@
+{
+  "baseline": "135218f",
+  "scoped_dod_passed": true,
+  "release_ready": false,
+  "runtime_changes": false,
+  "unit_tests_added": 0,
+  "existing_targeted_tests_passed": 30,
+  "typecheck_passed": true,
+  "configured_production_build_passed": true,
+  "default_build_restored": true,
+  "viewports": [
+    [
+      1440,
+      1000
+    ],
+    [
+      768,
+      1024
+    ],
+    [
+      390,
+      844
+    ]
+  ],
+  "outage_cycles": 3,
+  "retained_counts": [
+    2,
+    4,
+    6
+  ],
+  "recovered_counts": [
+    4,
+    6,
+    8
+  ],
+  "actual_sse_catchup_sequences": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "duplicates": 0,
+  "final_durable_alerts": 8,
+  "initial_page_load_recovery_passed": true,
+  "recovered_detail_matches_persistence": true,
+  "browser_console_warnings_or_errors": 0,
+  "protected_originals_unchanged": 130,
+  "clipboard_content_verification": "UNVERIFIED: browser clipboard capability returned no data",
+  "no_accuracy_or_latency_benchmark_claim": true,
+  "next_task": "T21 producer-runbook/pair qualification; blocked until independent metadata prerequisites verified"
+}

@@ -1,0 +1,11 @@
+
+> univect-ps26145@1.0.0 start
+> node scripts/run-local.mjs start
+
+Using the running Univect API at http://127.0.0.1:18529
+Univect: http://localhost:13529
+▲ Next.js 16.3.8
+- Local:         http://127.0.0.1:13529
+- Network:       http://127.0.0.1:13529
+✓ Ready in 250ms
+✓ Running next.config.ts took 51ms

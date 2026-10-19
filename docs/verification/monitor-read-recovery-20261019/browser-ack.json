@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "three_viewports": true,
+  "exact_display_sequences": true,
+  "replayed_sse_sequences": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "duplicates": 0,
+  "initial_load_recovery": true,
+  "detail_ids_and_evidence_match": true,
+  "clipboard_content_verification": "UNVERIFIED: browser clipboard capability returned empty despite Copied UI",
+  "captured_console_warnings_or_errors": 0
+}

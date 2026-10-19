@@ -1,0 +1,7 @@
+{
+  "uiFeedback": "Copied",
+  "browserClipboardReadCharacters": 0,
+  "exactClipboardContentsVerified": false,
+  "classification": "Browser clipboard capability returned no data; not proof of a product defect",
+  "scope": "Optional probe outside required storage-recovery gates"
+}

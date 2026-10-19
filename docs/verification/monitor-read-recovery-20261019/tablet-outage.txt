@@ -1,0 +1,326 @@
+- link "Skip to content":
+  - /url: "#main-content"
+- banner:
+  - link "Univect home":
+    - /url: /
+    - generic: univect.
+  - link "Back to platform":
+    - /url: /
+    - text: Back to platform
+  - button "Open menu":
+  - generic: UNIVECT / MONITOR
+  - generic: Passive sensor
+  - generic: Read-only · Metadata only · No response path
+- main:
+  - paragraph:
+    - text: Observation workspace
+  - heading "Your network, in view." [level=1]
+  - paragraph: Set the stream. Follow the activity. Investigate the evidence.
+  - status:
+    - text: Reconnecting
+    - generic: /
+    - generic: LOCAL ENCLAVE
+  - alert:
+    - paragraph: Local API unavailable or incompatible. Alert history temporarily unavailable; retry after storage recovery Showing the last received data.
+    - button "Retry connection":
+      - text: Retry connection
+  - paragraph: Controlled testing
+  - heading "Traffic replay idle" [level=2]:
+    - text: Traffic replay
+    - generic: idle
+  - paragraph: Run a scenario or inspect a passive capture.
+  - generic: Scenario
+  - combobox "Scenario" [disabled]:
+    - option "All threat scenarios" [selected]
+    - option "Benign baseline"
+    - option "DDoS & floods"
+    - option "Botnet beaconing"
+    - option "DGA domains"
+    - option "DNS tunnelling"
+    - option "Encrypted sessions"
+    - option "Reconnaissance"
+    - option "Data exfiltration"
+    - 'option "CIC DNS: benign capture"'
+    - 'option "CIC DNS: light exfiltration capture"'
+    - 'option "CIC DNS: heavy exfiltration capture"'
+    - 'option "UMUDGA: real domain strings, simulated DNS stream"'
+  - generic: Replay speed
+  - combobox "Replay speed" [disabled]:
+    - option "1× speed"
+    - option "20× speed"
+    - option "100× speed" [selected]
+    - option "1000× speed"
+  - button "Start replay" [disabled]:
+    - text: Start replay
+  - button "Stop" [disabled]:
+    - text: Stop
+  - button "Replay a PCAP capture" [disabled]
+  - text: PCAP
+  - text: 4 public-source presets ready
+  - generic: Classic Ethernet PCAP · 16 MiB maximum
+  - generic: Replay speed scales recorded event intervals
+  - region "Live telemetry":
+    - paragraph: EVENTS PROCESSED
+    - button "About events processed":
+    - strong:
+      - generic: "4"
+      - text: "4"
+    - text: Current replay · incremental inference
+    - paragraph: ALERTS RECORDED
+    - button "About alerts recorded":
+    - strong:
+      - generic: "4"
+      - text: "4"
+    - text: Persistent history · all replay runs
+    - paragraph: PROCESSING P95
+    - button "About processing p95":
+    - strong:
+      - generic: "0.65"
+      - text: "0.65"
+    - generic: ms
+    - text: Feature extraction + inference
+    - paragraph: OBSERVED RATE
+    - button "About observed rate":
+    - strong:
+      - generic: "0"
+      - text: "0"
+    - generic: events/s
+    - text: 4 active sources · idle
+  - paragraph:
+    - text: Ingest telemetry
+  - heading "Observed event rate" [level=2]
+  - paragraph: 24 recent samples · local UTC clock
+  - generic: "0"
+  - text: "0"
+  - generic: events / sec
+  - generic "Observed event rate chart":
+    - application:
+      - generic: 05:46:30
+      - generic: 05:46:33
+      - generic: 05:46:58
+      - generic: 05:47:02
+      - generic: 05:47:05
+      - generic: "0"
+      - generic: "1"
+      - generic: "2"
+      - generic: "3"
+      - generic: "4"
+  - generic: "Replay state: idle"
+  - generic: Packet records and flow summaries are different units.
+  - paragraph: Collection boundary
+  - generic: LAB PROTOTYPE
+  - heading "Passive by design." [level=2]
+  - paragraph: Mirror feed
+  - paragraph: Read-only input
+  - generic: Enclave
+  - term:
+    - text: Active sources
+  - definition:
+    - generic: "4"
+    - text: "4"
+  - term:
+    - text: Late events dropped
+  - definition:
+    - generic: "0"
+    - text: "0"
+  - term:
+    - text: State evictions
+  - definition:
+    - generic: "0"
+    - text: "0"
+  - paragraph: Metadata only. No payload decryption, path to the source or network actions.
+  - paragraph: Investigation queue
+  - heading "Alert stream RECONNECTING" [level=2]:
+    - text: Alert stream
+    - generic: RECONNECTING
+  - paragraph: Inspect a detection to follow its observed evidence.
+  - generic: "4"
+  - text: "4"
+  - generic: loaded signals
+  - button "Hold queue":
+    - text: Hold queue
+  - button "Export JSON":
+    - text: Export JSON
+  - searchbox "Search alerts"
+  - combobox "Filter threat class":
+    - option "All threats" [selected]
+    - option "DDoS & floods"
+    - option "Botnet beaconing"
+    - option "DGA domains"
+    - option "DNS tunnelling"
+    - option "Encrypted sessions"
+    - option "Reconnaissance"
+    - option "Data exfiltration"
+  - combobox "Filter severity":
+    - option "All severities" [selected]
+    - option "CRITICAL"
+    - option "HIGH"
+    - option "MEDIUM"
+    - option "LOW"
+  - combobox "Filter detection engine":
+    - option "All engines" [selected]
+    - option "HYBRID"
+  - region "Alert results":
+    - table "Newest recorded detections with observed event time, threat, connection, severity, confidence and detection engine. Use Inspect to view evidence.":
+      - caption: Newest recorded detections with observed event time, threat, connection, severity, confidence and detection engine. Use Inspect to view evidence.
+      - rowgroup:
+        - row "OBSERVED TIME (UTC) THREAT SOURCE → DESTINATION SEVERITY CONFIDENCE ENGINE Investigation":
+          - columnheader "OBSERVED TIME (UTC)"
+          - columnheader "THREAT"
+          - columnheader "SOURCE → DESTINATION"
+          - columnheader "SEVERITY"
+          - columnheader "CONFIDENCE"
+          - columnheader "ENGINE"
+          - columnheader "Investigation":
+            - generic: Investigation
+      - rowgroup:
+        - row "22:14:53 2023-11-14 DDoS & floods 192.0.2.4 198.51.100.1 CRITICAL 100.0% HYBRID Inspect DDoS & floods alert 4":
+          - cell "22:14:53 2023-11-14":
+            - text: 22:14:53
+            - generic: 2023-11-14
+          - cell "DDoS & floods"
+          - cell "192.0.2.4 198.51.100.1":
+            - text: 192.0.2.4
+            - text: 198.51.100.1
+          - cell "CRITICAL":
+            - generic: CRITICAL
+          - cell "100.0%":
+            - generic: 100.0%
+          - cell "HYBRID"
+          - cell "Inspect DDoS & floods alert 4":
+            - button "Inspect DDoS & floods alert 4":
+              - text: Inspect
+        - row "22:14:22 2023-11-14 DDoS & floods 192.0.2.3 198.51.100.1 CRITICAL 100.0% HYBRID Inspect DDoS & floods alert 3":
+          - cell "22:14:22 2023-11-14":
+            - text: 22:14:22
+            - generic: 2023-11-14
+          - cell "DDoS & floods"
+          - cell "192.0.2.3 198.51.100.1":
+            - text: 192.0.2.3
+            - text: 198.51.100.1
+          - cell "CRITICAL":
+            - generic: CRITICAL
+          - cell "100.0%":
+            - generic: 100.0%
+          - cell "HYBRID"
+          - cell "Inspect DDoS & floods alert 3":
+            - button "Inspect DDoS & floods alert 3":
+              - text: Inspect
+        - row "22:13:51 2023-11-14 DDoS & floods 192.0.2.2 198.51.100.1 CRITICAL 100.0% HYBRID Inspect DDoS & floods alert 2":
+          - cell "22:13:51 2023-11-14":
+            - text: 22:13:51
+            - generic: 2023-11-14
+          - cell "DDoS & floods"
+          - cell "192.0.2.2 198.51.100.1":
+            - text: 192.0.2.2
+            - text: 198.51.100.1
+          - cell "CRITICAL":
+            - generic: CRITICAL
+          - cell "100.0%":
+            - generic: 100.0%
+          - cell "HYBRID"
+          - cell "Inspect DDoS & floods alert 2":
+            - button "Inspect DDoS & floods alert 2":
+              - text: Inspect
+        - row "22:13:20 2023-11-14 DDoS & floods 192.0.2.1 198.51.100.1 CRITICAL 100.0% HYBRID Inspect DDoS & floods alert 1":
+          - cell "22:13:20 2023-11-14":
+            - text: 22:13:20
+            - generic: 2023-11-14
+          - cell "DDoS & floods"
+          - cell "192.0.2.1 198.51.100.1":
+            - text: 192.0.2.1
+            - text: 198.51.100.1
+          - cell "CRITICAL":
+            - generic: CRITICAL
+          - cell "100.0%":
+            - generic: 100.0%
+          - cell "HYBRID"
+          - cell "Inspect DDoS & floods alert 1":
+            - button "Inspect DDoS & floods alert 1":
+              - text: Inspect
+  - paragraph: Scroll the table horizontally to view every column and inspect an alert.
+  - generic: 4 matching / 4 loaded · Latest 200 · Newest first
+  - generic: 0 late events dropped
+  - button "Previous alert page" [disabled]:
+  - generic: 1 / 1
+  - button "Next alert page" [disabled]:
+  - paragraph: Detection engines
+  - heading "Threat coverage" [level=2]
+  - generic: 7 detection modules
+  - generic: DDoS & floods
+  - strong:
+    - generic: "4"
+    - text: "4"
+  - generic: Botnet beaconing
+  - strong:
+    - generic: "0"
+    - text: "0"
+  - generic: DGA domains
+  - strong:
+    - generic: "0"
+    - text: "0"
+  - generic: DNS tunnelling
+  - strong:
+    - generic: "0"
+    - text: "0"
+  - generic: Encrypted sessions
+  - strong:
+    - generic: "0"
+    - text: "0"
+  - generic: Reconnaissance
+  - strong:
+    - generic: "0"
+    - text: "0"
+  - generic: Data exfiltration
+  - strong:
+    - generic: "0"
+    - text: "0"
+  - paragraph: Six required categories. Bars show each module’s share of recorded alerts, not accuracy. Coverage describes implementation, without implying validated real-world performance.
+  - button "Public-source dataset readiness 4/4 ready":
+    - generic: Public-source dataset readiness
+    - generic: 4/4 ready
+  - paragraph: Saved benchmark · synthetic workload
+  - heading "Performance, with context." [level=2]
+  - paragraph: Measured processing + persistence
+  - paragraph: 5,650events/s
+  - paragraph: Processing + persistence p95
+  - paragraph: 0.84ms
+  - paragraph: Stated test target
+  - paragraph: 2,000events/s
+  - paragraph: Throughput and latency targets met
+  - paragraph:
+    - text: 20,000 events · 3.54 seconds · Python 3.13.5
+    - text: Repeated eight-class synthetic metadata sessions with SQLite alert commits. Core event processing + persistence; excludes capture, HTTP, SSE and rendering. This saved result does not measure browser delivery or real deployment capacity.
+  - paragraph: Model scores and heuristic strengths are not calibrated probabilities of compromise. Public-source validation remains limited, including incomplete DGA coverage and unvalidated encrypted-malware detection. Evidence and analyst review are essential.
+- contentinfo:
+  - link "Univect home":
+    - /url: /
+    - generic: univect.
+  - paragraph:
+    - text: One-way traffic. Deeper insight.
+    - text: Passive threat intelligence with evidence at its core.
+  - text: PS26145 · Research prototype
+  - navigation "Footer navigation":
+    - paragraph: Explore
+    - link "Platform":
+      - /url: /#platform
+    - link "Detection":
+      - /url: /#detection
+    - link "How it works":
+      - /url: /#architecture
+    - link "Threat monitor":
+      - /url: /monitor
+  - paragraph: Project & resources
+  - link "Source repository":
+    - /url: https://github.com/SaiChayank/Cyber-Threat-Detection
+    - text: Source repository
+  - link "API reference":
+    - /url: /docs
+    - text: API reference
+  - link "Report an issue":
+    - /url: https://github.com/SaiChayank/Cyber-Threat-Detection/issues
+    - text: Report an issue
+  - generic: © 2026 Univect · Project by SaiChayank
+  - generic: Read-only observation · No inline blocking · No payload decryption
+- alert
+- generic: 05:47:05

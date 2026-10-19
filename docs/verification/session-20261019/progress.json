@@ -37,9 +37,14 @@
       "task": "SQLite history read API/SSE recovery",
       "decision": "17 new cases; 46 targeted/574 full venv passes; TS/build/9 demos; real HTTP fault/resume; delivery100/100 p95 252.68ms",
       "commit": "See package Git history"
+    },
+    {
+      "task": "Monitor SQLite read outage/reconnect integration",
+      "decision": "Three viewports; exact 3..8 SSE catch-up; initial reload and evidence pass; 30 regressions/TS/build; 130 original hashes unchanged",
+      "commit": "See package Git history"
     }
   ],
-  "current_task": "Completed SQLite read-error repair; next scoped Monitor DB-read error/reconnect integration",
+  "current_task": "Monitor read recovery complete and frozen; T21 pair qualification blocked pending verified producer runbook",
   "constraints": [
     "No frozen gate changes",
     "No reserved values or failed-candidate activation",
@@ -52,7 +57,7 @@
   "last_checked_primary_used_percent": 32,
   "ordinary_usage_allowed_at_last_check": true,
   "remaining_queue": [
-    "Monitor database-read 503/reconnect integration on isolated history",
+    "T21 verified source/runbook qualification before packet values (BLOCKED)",
     "Data-qualified detector experiments only when prerequisites satisfied",
     "Conditional promotions and final security/performance/reproducibility/release checks"
   ],

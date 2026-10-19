@@ -1,0 +1,23 @@
+{
+  "controls": [
+    {
+      "disabled": false,
+      "text": "Start replay"
+    }
+  ],
+  "errors": [],
+  "height": 1024,
+  "scrollWidth": 758,
+  "sequences": [
+    6,
+    5,
+    4,
+    3,
+    2,
+    1
+  ],
+  "statuses": [
+    "Stream connected/LOCAL ENCLAVE"
+  ],
+  "width": 768
+}

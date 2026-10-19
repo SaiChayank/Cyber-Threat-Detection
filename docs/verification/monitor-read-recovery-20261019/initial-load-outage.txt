@@ -1,0 +1,214 @@
+- link "Skip to content":
+  - /url: "#main-content"
+- banner:
+  - link "Univect home":
+    - /url: /
+    - generic: univect.
+  - button "Open menu":
+  - generic: UNIVECT / MONITOR
+  - generic: Passive sensor
+  - generic: Read-only · Metadata only · No response path
+- main:
+  - paragraph:
+    - text: Observation workspace
+  - heading "Your network, in view." [level=1]
+  - paragraph: Set the stream. Follow the activity. Investigate the evidence.
+  - status:
+    - text: Reconnecting
+    - generic: /
+    - generic: LOCAL ENCLAVE
+  - alert:
+    - paragraph: Local API unavailable or incompatible. Alert history temporarily unavailable; retry after storage recovery
+    - button "Retry connection":
+      - text: Retry connection
+  - paragraph: Controlled testing
+  - heading "Traffic replay offline" [level=2]:
+    - text: Traffic replay
+    - generic: offline
+  - paragraph: Run a scenario or inspect a passive capture.
+  - generic: Scenario
+  - combobox "Scenario" [disabled]:
+    - option "All threat scenarios" [selected]
+    - option "Benign baseline"
+    - option "DDoS & floods"
+    - option "Botnet beaconing"
+    - option "DGA domains"
+    - option "DNS tunnelling"
+    - option "Encrypted sessions"
+    - option "Reconnaissance"
+    - option "Data exfiltration"
+  - generic: Replay speed
+  - combobox "Replay speed" [disabled]:
+    - option "1× speed"
+    - option "20× speed"
+    - option "100× speed" [selected]
+    - option "1000× speed"
+  - button "Start replay" [disabled]:
+    - text: Start replay
+  - button "Stop" [disabled]:
+    - text: Stop
+  - button "Replay a PCAP capture" [disabled]
+  - text: PCAP
+  - text: 0 public-source presets ready
+  - generic: Classic Ethernet PCAP · 16 MiB maximum
+  - generic: Replay speed scales recorded event intervals
+  - region "Live telemetry":
+    - paragraph: EVENTS PROCESSED
+    - button "About events processed":
+    - strong: —
+    - text: Current replay · incremental inference
+    - paragraph: ALERTS RECORDED
+    - button "About alerts recorded":
+    - strong: —
+    - text: Persistent history · all replay runs
+    - paragraph: PROCESSING P95
+    - button "About processing p95":
+    - strong: —
+    - generic: ms
+    - text: Feature extraction + inference
+    - paragraph: OBSERVED RATE
+    - button "About observed rate":
+    - strong: —
+    - generic: events/s
+    - text: 0 active sources · connecting
+  - paragraph:
+    - text: Ingest telemetry
+  - heading "Observed event rate" [level=2]
+  - paragraph: 24 recent samples · local UTC clock
+  - generic: "0"
+  - text: "0"
+  - generic: events / sec
+  - generic "Observed event rate chart":
+    - generic: Collecting telemetry samples…
+  - generic: "Replay state: connecting"
+  - generic: Packet records and flow summaries are different units.
+  - paragraph: Collection boundary
+  - generic: LAB PROTOTYPE
+  - heading "Passive by design." [level=2]
+  - paragraph: Mirror feed
+  - paragraph: Read-only input
+  - generic: Enclave
+  - term:
+    - text: Active sources
+  - definition: —
+  - term:
+    - text: Late events dropped
+  - definition: —
+  - term:
+    - text: State evictions
+  - definition: —
+  - paragraph: Metadata only. No payload decryption, path to the source or network actions.
+  - paragraph: Investigation queue
+  - heading "Alert stream RECONNECTING" [level=2]:
+    - text: Alert stream
+    - generic: RECONNECTING
+  - paragraph: Inspect a detection to follow its observed evidence.
+  - button "Hold queue" [disabled]:
+    - text: Hold queue
+  - button "Export JSON" [disabled]:
+    - text: Export JSON
+  - searchbox "Search alerts"
+  - combobox "Filter threat class":
+    - option "All threats" [selected]
+    - option "DDoS & floods"
+    - option "Botnet beaconing"
+    - option "DGA domains"
+    - option "DNS tunnelling"
+    - option "Encrypted sessions"
+    - option "Reconnaissance"
+    - option "Data exfiltration"
+  - combobox "Filter severity":
+    - option "All severities" [selected]
+    - option "CRITICAL"
+    - option "HIGH"
+    - option "MEDIUM"
+    - option "LOW"
+  - combobox "Filter detection engine":
+    - option "All engines" [selected]
+  - region "Alert results":
+    - heading "Waiting for the local API." [level=3]
+    - paragraph: Reconnect the API to load saved alerts and enable replay.
+  - generic: 0 matching / 0 loaded · Latest 200 · Newest first
+  - generic: 0 late events dropped
+  - button "Previous alert page" [disabled]:
+  - generic: 1 / 1
+  - button "Next alert page" [disabled]:
+  - paragraph: Detection engines
+  - heading "Threat coverage" [level=2]
+  - generic: 7 detection modules
+  - generic: DDoS & floods
+  - strong:
+    - generic: "0"
+    - text: "0"
+  - generic: Botnet beaconing
+  - strong:
+    - generic: "0"
+    - text: "0"
+  - generic: DGA domains
+  - strong:
+    - generic: "0"
+    - text: "0"
+  - generic: DNS tunnelling
+  - strong:
+    - generic: "0"
+    - text: "0"
+  - generic: Encrypted sessions
+  - strong:
+    - generic: "0"
+    - text: "0"
+  - generic: Reconnaissance
+  - strong:
+    - generic: "0"
+    - text: "0"
+  - generic: Data exfiltration
+  - strong:
+    - generic: "0"
+    - text: "0"
+  - paragraph: Six required categories. Bars show each module’s share of recorded alerts, not accuracy. Coverage describes implementation, without implying validated real-world performance.
+  - button "Public-source dataset readiness 0/0 ready":
+    - generic: Public-source dataset readiness
+    - generic: 0/0 ready
+  - paragraph: Saved benchmark · synthetic workload
+  - heading "Performance, with context." [level=2]
+  - paragraph: Measured processing + persistence
+  - paragraph: 5,650events/s
+  - paragraph: Processing + persistence p95
+  - paragraph: 0.84ms
+  - paragraph: Stated test target
+  - paragraph: 2,000events/s
+  - paragraph: Throughput and latency targets met
+  - paragraph:
+    - text: 20,000 events · 3.54 seconds · Python 3.13.5
+    - text: Repeated eight-class synthetic metadata sessions with SQLite alert commits. Core event processing + persistence; excludes capture, HTTP, SSE and rendering. This saved result does not measure browser delivery or real deployment capacity.
+  - paragraph: Model scores and heuristic strengths are not calibrated probabilities of compromise. Public-source validation remains limited, including incomplete DGA coverage and unvalidated encrypted-malware detection. Evidence and analyst review are essential.
+- contentinfo:
+  - link "Univect home":
+    - /url: /
+    - generic: univect.
+  - paragraph:
+    - text: One-way traffic. Deeper insight.
+    - text: Passive threat intelligence with evidence at its core.
+  - text: PS26145 · Research prototype
+  - navigation "Footer navigation":
+    - paragraph: Explore
+    - link "Platform":
+      - /url: /#platform
+    - link "Detection":
+      - /url: /#detection
+    - link "How it works":
+      - /url: /#architecture
+    - link "Threat monitor":
+      - /url: /monitor
+  - paragraph: Project & resources
+  - link "Source repository":
+    - /url: https://github.com/SaiChayank/Cyber-Threat-Detection
+    - text: Source repository
+  - link "API reference":
+    - /url: /docs
+    - text: API reference
+  - link "Report an issue":
+    - /url: https://github.com/SaiChayank/Cyber-Threat-Detection/issues
+    - text: Report an issue
+  - generic: © 2026 Univect · Project by SaiChayank
+  - generic: Read-only observation · No inline blocking · No payload decryption
+- alert

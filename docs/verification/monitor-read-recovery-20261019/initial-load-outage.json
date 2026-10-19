@@ -1,0 +1,11 @@
+{
+  "error": [
+    "Local API unavailable or incompatible. Alert history temporarily unavailable; retry after storage recovery Retry connection"
+  ],
+  "scrollWidth": 380,
+  "sequences": [],
+  "status": [
+    "Reconnecting/LOCAL ENCLAVE"
+  ],
+  "width": 390
+}

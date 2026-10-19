@@ -544,3 +544,14 @@ global-Python 566-pass/one-module-skip run is retained; the .venv rerun has no s
 DoD PASS; behavior/tests/metrics/limitations frozen. Next: isolated Monitor storage-
 read error/reconnect integration, preserving its existing design. No training,
 reserved scoring, model promotion, new external request or release READY.
+
+**Monitor history-read recovery, 19 October 2026 IST:**
+[Production-proxy verification](MONITOR_READ_RECOVERY_20261019.md) passes desktop,
+tablet and mobile outages: retained queues 2/4/6, recovered queues 4/6/8, SSE
+catch-up sequences 3..8 exactly once. Fresh-load recovery and recovered alert ID/
+flow/evidence match pass. Thirty existing regressions, typecheck and configured/
+restored-default builds pass; 130 protected originals unchanged. No product/test
+suite/model/gate/provenance change. Optional clipboard contents remain unverified
+because the browser capability returned empty despite UI feedback. Freeze scoped
+DoD PASS. Next incomplete T21 qualification remains blocked on a verified producer
+runbook; no new message/mail check, packet values, scoring, promotion or READY.

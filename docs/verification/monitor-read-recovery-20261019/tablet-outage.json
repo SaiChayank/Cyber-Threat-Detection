@@ -1,0 +1,27 @@
+{
+  "controls": [
+    {
+      "disabled": false,
+      "text": "Retry connection"
+    },
+    {
+      "disabled": true,
+      "text": "Start replay"
+    }
+  ],
+  "errors": [
+    "Local API unavailable or incompatible. Alert history temporarily unavailable; retry after storage recovery Showing the last received data. Retry connection"
+  ],
+  "height": 1024,
+  "scrollWidth": 758,
+  "sequences": [
+    4,
+    3,
+    2,
+    1
+  ],
+  "statuses": [
+    "Reconnecting/LOCAL ENCLAVE"
+  ],
+  "width": 768
+}

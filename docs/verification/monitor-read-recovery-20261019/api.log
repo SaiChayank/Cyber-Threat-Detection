@@ -1,0 +1,441 @@
+Alert history read failed
+Traceback (most recent call last):
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\backend\application.py", line 45, in read_alert_history
+    return read(*args)
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\docs\verification\monitor-read-recovery-20261019\fault_server.py", line 28, in controlled_read
+    raise sqlite3.OperationalError('Controlled read fault /private/test/history.sqlite3')
+sqlite3.OperationalError: Controlled read fault /private/test/history.sqlite3
+Alert history read failed
+Traceback (most recent call last):
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\backend\application.py", line 45, in read_alert_history
+    return read(*args)
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\docs\verification\monitor-read-recovery-20261019\fault_server.py", line 28, in controlled_read
+    raise sqlite3.OperationalError('Controlled read fault /private/test/history.sqlite3')
+sqlite3.OperationalError: Controlled read fault /private/test/history.sqlite3
+Alert history read failed
+Traceback (most recent call last):
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\backend\application.py", line 45, in read_alert_history
+    return read(*args)
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\docs\verification\monitor-read-recovery-20261019\fault_server.py", line 28, in controlled_read
+    raise sqlite3.OperationalError('Controlled read fault /private/test/history.sqlite3')
+sqlite3.OperationalError: Controlled read fault /private/test/history.sqlite3
+Alert stream history read failed; closing for resume
+Traceback (most recent call last):
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\backend\application.py", line 108, in generate
+    rows = app.state.store.list(cursor, 100)
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\docs\verification\monitor-read-recovery-20261019\fault_server.py", line 28, in controlled_read
+    raise sqlite3.OperationalError('Controlled read fault /private/test/history.sqlite3')
+sqlite3.OperationalError: Controlled read fault /private/test/history.sqlite3
+Alert history read failed
+Traceback (most recent call last):
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\backend\application.py", line 45, in read_alert_history
+    return read(*args)
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\docs\verification\monitor-read-recovery-20261019\fault_server.py", line 28, in controlled_read
+    raise sqlite3.OperationalError('Controlled read fault /private/test/history.sqlite3')
+sqlite3.OperationalError: Controlled read fault /private/test/history.sqlite3
+Alert history read failed
+Traceback (most recent call last):
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\backend\application.py", line 45, in read_alert_history
+    return read(*args)
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\docs\verification\monitor-read-recovery-20261019\fault_server.py", line 28, in controlled_read
+    raise sqlite3.OperationalError('Controlled read fault /private/test/history.sqlite3')
+sqlite3.OperationalError: Controlled read fault /private/test/history.sqlite3
+Alert history read failed
+Traceback (most recent call last):
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\backend\application.py", line 45, in read_alert_history
+    return read(*args)
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\docs\verification\monitor-read-recovery-20261019\fault_server.py", line 28, in controlled_read
+    raise sqlite3.OperationalError('Controlled read fault /private/test/history.sqlite3')
+sqlite3.OperationalError: Controlled read fault /private/test/history.sqlite3
+Alert history read failed
+Traceback (most recent call last):
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\backend\application.py", line 45, in read_alert_history
+    return read(*args)
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\docs\verification\monitor-read-recovery-20261019\fault_server.py", line 28, in controlled_read
+    raise sqlite3.OperationalError('Controlled read fault /private/test/history.sqlite3')
+sqlite3.OperationalError: Controlled read fault /private/test/history.sqlite3
+Alert history read failed
+Traceback (most recent call last):
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\backend\application.py", line 45, in read_alert_history
+    return read(*args)
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\docs\verification\monitor-read-recovery-20261019\fault_server.py", line 28, in controlled_read
+    raise sqlite3.OperationalError('Controlled read fault /private/test/history.sqlite3')
+sqlite3.OperationalError: Controlled read fault /private/test/history.sqlite3
+Alert history read failed
+Traceback (most recent call last):
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\backend\application.py", line 45, in read_alert_history
+    return read(*args)
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\docs\verification\monitor-read-recovery-20261019\fault_server.py", line 28, in controlled_read
+    raise sqlite3.OperationalError('Controlled read fault /private/test/history.sqlite3')
+sqlite3.OperationalError: Controlled read fault /private/test/history.sqlite3
+Alert history read failed
+Traceback (most recent call last):
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\backend\application.py", line 45, in read_alert_history
+    return read(*args)
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\docs\verification\monitor-read-recovery-20261019\fault_server.py", line 28, in controlled_read
+    raise sqlite3.OperationalError('Controlled read fault /private/test/history.sqlite3')
+sqlite3.OperationalError: Controlled read fault /private/test/history.sqlite3
+Alert history read failed
+Traceback (most recent call last):
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\backend\application.py", line 45, in read_alert_history
+    return read(*args)
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\docs\verification\monitor-read-recovery-20261019\fault_server.py", line 28, in controlled_read
+    raise sqlite3.OperationalError('Controlled read fault /private/test/history.sqlite3')
+sqlite3.OperationalError: Controlled read fault /private/test/history.sqlite3
+Alert history read failed
+Traceback (most recent call last):
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\backend\application.py", line 45, in read_alert_history
+    return read(*args)
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\docs\verification\monitor-read-recovery-20261019\fault_server.py", line 28, in controlled_read
+    raise sqlite3.OperationalError('Controlled read fault /private/test/history.sqlite3')
+sqlite3.OperationalError: Controlled read fault /private/test/history.sqlite3
+Alert history read failed
+Traceback (most recent call last):
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\backend\application.py", line 45, in read_alert_history
+    return read(*args)
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\docs\verification\monitor-read-recovery-20261019\fault_server.py", line 28, in controlled_read
+    raise sqlite3.OperationalError('Controlled read fault /private/test/history.sqlite3')
+sqlite3.OperationalError: Controlled read fault /private/test/history.sqlite3
+Alert history read failed
+Traceback (most recent call last):
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\backend\application.py", line 45, in read_alert_history
+    return read(*args)
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\docs\verification\monitor-read-recovery-20261019\fault_server.py", line 28, in controlled_read
+    raise sqlite3.OperationalError('Controlled read fault /private/test/history.sqlite3')
+sqlite3.OperationalError: Controlled read fault /private/test/history.sqlite3
+Alert history read failed
+Traceback (most recent call last):
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\backend\application.py", line 45, in read_alert_history
+    return read(*args)
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\docs\verification\monitor-read-recovery-20261019\fault_server.py", line 28, in controlled_read
+    raise sqlite3.OperationalError('Controlled read fault /private/test/history.sqlite3')
+sqlite3.OperationalError: Controlled read fault /private/test/history.sqlite3
+Alert history read failed
+Traceback (most recent call last):
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\backend\application.py", line 45, in read_alert_history
+    return read(*args)
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\docs\verification\monitor-read-recovery-20261019\fault_server.py", line 28, in controlled_read
+    raise sqlite3.OperationalError('Controlled read fault /private/test/history.sqlite3')
+sqlite3.OperationalError: Controlled read fault /private/test/history.sqlite3
+Alert history read failed
+Traceback (most recent call last):
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\backend\application.py", line 45, in read_alert_history
+    return read(*args)
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\docs\verification\monitor-read-recovery-20261019\fault_server.py", line 28, in controlled_read
+    raise sqlite3.OperationalError('Controlled read fault /private/test/history.sqlite3')
+sqlite3.OperationalError: Controlled read fault /private/test/history.sqlite3
+Alert history read failed
+Traceback (most recent call last):
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\backend\application.py", line 45, in read_alert_history
+    return read(*args)
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\docs\verification\monitor-read-recovery-20261019\fault_server.py", line 28, in controlled_read
+    raise sqlite3.OperationalError('Controlled read fault /private/test/history.sqlite3')
+sqlite3.OperationalError: Controlled read fault /private/test/history.sqlite3
+Alert history read failed
+Traceback (most recent call last):
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\backend\application.py", line 45, in read_alert_history
+    return read(*args)
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\docs\verification\monitor-read-recovery-20261019\fault_server.py", line 28, in controlled_read
+    raise sqlite3.OperationalError('Controlled read fault /private/test/history.sqlite3')
+sqlite3.OperationalError: Controlled read fault /private/test/history.sqlite3
+Alert history read failed
+Traceback (most recent call last):
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\backend\application.py", line 45, in read_alert_history
+    return read(*args)
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\docs\verification\monitor-read-recovery-20261019\fault_server.py", line 28, in controlled_read
+    raise sqlite3.OperationalError('Controlled read fault /private/test/history.sqlite3')
+sqlite3.OperationalError: Controlled read fault /private/test/history.sqlite3
+Alert history read failed
+Traceback (most recent call last):
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\backend\application.py", line 45, in read_alert_history
+    return read(*args)
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\docs\verification\monitor-read-recovery-20261019\fault_server.py", line 28, in controlled_read
+    raise sqlite3.OperationalError('Controlled read fault /private/test/history.sqlite3')
+sqlite3.OperationalError: Controlled read fault /private/test/history.sqlite3
+Alert history read failed
+Traceback (most recent call last):
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\backend\application.py", line 45, in read_alert_history
+    return read(*args)
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\docs\verification\monitor-read-recovery-20261019\fault_server.py", line 28, in controlled_read
+    raise sqlite3.OperationalError('Controlled read fault /private/test/history.sqlite3')
+sqlite3.OperationalError: Controlled read fault /private/test/history.sqlite3
+Alert history read failed
+Traceback (most recent call last):
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\backend\application.py", line 45, in read_alert_history
+    return read(*args)
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\docs\verification\monitor-read-recovery-20261019\fault_server.py", line 28, in controlled_read
+    raise sqlite3.OperationalError('Controlled read fault /private/test/history.sqlite3')
+sqlite3.OperationalError: Controlled read fault /private/test/history.sqlite3
+Alert stream history read failed; closing for resume
+Traceback (most recent call last):
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\backend\application.py", line 108, in generate
+    rows = app.state.store.list(cursor, 100)
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\docs\verification\monitor-read-recovery-20261019\fault_server.py", line 28, in controlled_read
+    raise sqlite3.OperationalError('Controlled read fault /private/test/history.sqlite3')
+sqlite3.OperationalError: Controlled read fault /private/test/history.sqlite3
+Alert history read failed
+Traceback (most recent call last):
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\backend\application.py", line 45, in read_alert_history
+    return read(*args)
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\docs\verification\monitor-read-recovery-20261019\fault_server.py", line 28, in controlled_read
+    raise sqlite3.OperationalError('Controlled read fault /private/test/history.sqlite3')
+sqlite3.OperationalError: Controlled read fault /private/test/history.sqlite3
+Alert history read failed
+Traceback (most recent call last):
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\backend\application.py", line 45, in read_alert_history
+    return read(*args)
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\docs\verification\monitor-read-recovery-20261019\fault_server.py", line 28, in controlled_read
+    raise sqlite3.OperationalError('Controlled read fault /private/test/history.sqlite3')
+sqlite3.OperationalError: Controlled read fault /private/test/history.sqlite3
+Alert history read failed
+Traceback (most recent call last):
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\backend\application.py", line 45, in read_alert_history
+    return read(*args)
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\docs\verification\monitor-read-recovery-20261019\fault_server.py", line 28, in controlled_read
+    raise sqlite3.OperationalError('Controlled read fault /private/test/history.sqlite3')
+sqlite3.OperationalError: Controlled read fault /private/test/history.sqlite3
+Alert history read failed
+Traceback (most recent call last):
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\backend\application.py", line 45, in read_alert_history
+    return read(*args)
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\docs\verification\monitor-read-recovery-20261019\fault_server.py", line 28, in controlled_read
+    raise sqlite3.OperationalError('Controlled read fault /private/test/history.sqlite3')
+sqlite3.OperationalError: Controlled read fault /private/test/history.sqlite3
+Alert history read failed
+Traceback (most recent call last):
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\backend\application.py", line 45, in read_alert_history
+    return read(*args)
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\docs\verification\monitor-read-recovery-20261019\fault_server.py", line 28, in controlled_read
+    raise sqlite3.OperationalError('Controlled read fault /private/test/history.sqlite3')
+sqlite3.OperationalError: Controlled read fault /private/test/history.sqlite3
+Alert history read failed
+Traceback (most recent call last):
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\backend\application.py", line 45, in read_alert_history
+    return read(*args)
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\docs\verification\monitor-read-recovery-20261019\fault_server.py", line 28, in controlled_read
+    raise sqlite3.OperationalError('Controlled read fault /private/test/history.sqlite3')
+sqlite3.OperationalError: Controlled read fault /private/test/history.sqlite3
+Alert history read failed
+Traceback (most recent call last):
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\backend\application.py", line 45, in read_alert_history
+    return read(*args)
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\docs\verification\monitor-read-recovery-20261019\fault_server.py", line 28, in controlled_read
+    raise sqlite3.OperationalError('Controlled read fault /private/test/history.sqlite3')
+sqlite3.OperationalError: Controlled read fault /private/test/history.sqlite3
+Alert history read failed
+Traceback (most recent call last):
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\backend\application.py", line 45, in read_alert_history
+    return read(*args)
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\docs\verification\monitor-read-recovery-20261019\fault_server.py", line 28, in controlled_read
+    raise sqlite3.OperationalError('Controlled read fault /private/test/history.sqlite3')
+sqlite3.OperationalError: Controlled read fault /private/test/history.sqlite3
+Alert history read failed
+Traceback (most recent call last):
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\backend\application.py", line 45, in read_alert_history
+    return read(*args)
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\docs\verification\monitor-read-recovery-20261019\fault_server.py", line 28, in controlled_read
+    raise sqlite3.OperationalError('Controlled read fault /private/test/history.sqlite3')
+sqlite3.OperationalError: Controlled read fault /private/test/history.sqlite3
+Alert history read failed
+Traceback (most recent call last):
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\backend\application.py", line 45, in read_alert_history
+    return read(*args)
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\docs\verification\monitor-read-recovery-20261019\fault_server.py", line 28, in controlled_read
+    raise sqlite3.OperationalError('Controlled read fault /private/test/history.sqlite3')
+sqlite3.OperationalError: Controlled read fault /private/test/history.sqlite3
+Alert history read failed
+Traceback (most recent call last):
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\backend\application.py", line 45, in read_alert_history
+    return read(*args)
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\docs\verification\monitor-read-recovery-20261019\fault_server.py", line 28, in controlled_read
+    raise sqlite3.OperationalError('Controlled read fault /private/test/history.sqlite3')
+sqlite3.OperationalError: Controlled read fault /private/test/history.sqlite3
+Alert history read failed
+Traceback (most recent call last):
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\backend\application.py", line 45, in read_alert_history
+    return read(*args)
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\docs\verification\monitor-read-recovery-20261019\fault_server.py", line 28, in controlled_read
+    raise sqlite3.OperationalError('Controlled read fault /private/test/history.sqlite3')
+sqlite3.OperationalError: Controlled read fault /private/test/history.sqlite3
+Alert history read failed
+Traceback (most recent call last):
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\backend\application.py", line 45, in read_alert_history
+    return read(*args)
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\docs\verification\monitor-read-recovery-20261019\fault_server.py", line 28, in controlled_read
+    raise sqlite3.OperationalError('Controlled read fault /private/test/history.sqlite3')
+sqlite3.OperationalError: Controlled read fault /private/test/history.sqlite3
+Alert history read failed
+Traceback (most recent call last):
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\backend\application.py", line 45, in read_alert_history
+    return read(*args)
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\docs\verification\monitor-read-recovery-20261019\fault_server.py", line 28, in controlled_read
+    raise sqlite3.OperationalError('Controlled read fault /private/test/history.sqlite3')
+sqlite3.OperationalError: Controlled read fault /private/test/history.sqlite3
+Alert history read failed
+Traceback (most recent call last):
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\backend\application.py", line 45, in read_alert_history
+    return read(*args)
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\docs\verification\monitor-read-recovery-20261019\fault_server.py", line 28, in controlled_read
+    raise sqlite3.OperationalError('Controlled read fault /private/test/history.sqlite3')
+sqlite3.OperationalError: Controlled read fault /private/test/history.sqlite3
+Alert stream history read failed; closing for resume
+Traceback (most recent call last):
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\backend\application.py", line 108, in generate
+    rows = app.state.store.list(cursor, 100)
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\docs\verification\monitor-read-recovery-20261019\fault_server.py", line 28, in controlled_read
+    raise sqlite3.OperationalError('Controlled read fault /private/test/history.sqlite3')
+sqlite3.OperationalError: Controlled read fault /private/test/history.sqlite3
+Alert history read failed
+Traceback (most recent call last):
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\backend\application.py", line 45, in read_alert_history
+    return read(*args)
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\docs\verification\monitor-read-recovery-20261019\fault_server.py", line 28, in controlled_read
+    raise sqlite3.OperationalError('Controlled read fault /private/test/history.sqlite3')
+sqlite3.OperationalError: Controlled read fault /private/test/history.sqlite3
+Alert history read failed
+Traceback (most recent call last):
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\backend\application.py", line 45, in read_alert_history
+    return read(*args)
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\docs\verification\monitor-read-recovery-20261019\fault_server.py", line 28, in controlled_read
+    raise sqlite3.OperationalError('Controlled read fault /private/test/history.sqlite3')
+sqlite3.OperationalError: Controlled read fault /private/test/history.sqlite3
+Alert history read failed
+Traceback (most recent call last):
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\backend\application.py", line 45, in read_alert_history
+    return read(*args)
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\docs\verification\monitor-read-recovery-20261019\fault_server.py", line 28, in controlled_read
+    raise sqlite3.OperationalError('Controlled read fault /private/test/history.sqlite3')
+sqlite3.OperationalError: Controlled read fault /private/test/history.sqlite3
+Alert history read failed
+Traceback (most recent call last):
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\backend\application.py", line 45, in read_alert_history
+    return read(*args)
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\docs\verification\monitor-read-recovery-20261019\fault_server.py", line 28, in controlled_read
+    raise sqlite3.OperationalError('Controlled read fault /private/test/history.sqlite3')
+sqlite3.OperationalError: Controlled read fault /private/test/history.sqlite3
+Alert history read failed
+Traceback (most recent call last):
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\backend\application.py", line 45, in read_alert_history
+    return read(*args)
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\docs\verification\monitor-read-recovery-20261019\fault_server.py", line 28, in controlled_read
+    raise sqlite3.OperationalError('Controlled read fault /private/test/history.sqlite3')
+sqlite3.OperationalError: Controlled read fault /private/test/history.sqlite3
+Alert history read failed
+Traceback (most recent call last):
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\backend\application.py", line 45, in read_alert_history
+    return read(*args)
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\docs\verification\monitor-read-recovery-20261019\fault_server.py", line 28, in controlled_read
+    raise sqlite3.OperationalError('Controlled read fault /private/test/history.sqlite3')
+sqlite3.OperationalError: Controlled read fault /private/test/history.sqlite3
+Alert history read failed
+Traceback (most recent call last):
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\backend\application.py", line 45, in read_alert_history
+    return read(*args)
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\docs\verification\monitor-read-recovery-20261019\fault_server.py", line 28, in controlled_read
+    raise sqlite3.OperationalError('Controlled read fault /private/test/history.sqlite3')
+sqlite3.OperationalError: Controlled read fault /private/test/history.sqlite3
+Alert history read failed
+Traceback (most recent call last):
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\backend\application.py", line 45, in read_alert_history
+    return read(*args)
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\docs\verification\monitor-read-recovery-20261019\fault_server.py", line 28, in controlled_read
+    raise sqlite3.OperationalError('Controlled read fault /private/test/history.sqlite3')
+sqlite3.OperationalError: Controlled read fault /private/test/history.sqlite3
+Alert history read failed
+Traceback (most recent call last):
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\backend\application.py", line 45, in read_alert_history
+    return read(*args)
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\docs\verification\monitor-read-recovery-20261019\fault_server.py", line 28, in controlled_read
+    raise sqlite3.OperationalError('Controlled read fault /private/test/history.sqlite3')
+sqlite3.OperationalError: Controlled read fault /private/test/history.sqlite3
+Alert stream history read failed; closing for resume
+Traceback (most recent call last):
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\backend\application.py", line 108, in generate
+    rows = app.state.store.list(cursor, 100)
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\docs\verification\monitor-read-recovery-20261019\fault_server.py", line 28, in controlled_read
+    raise sqlite3.OperationalError('Controlled read fault /private/test/history.sqlite3')
+sqlite3.OperationalError: Controlled read fault /private/test/history.sqlite3
+Alert history read failed
+Traceback (most recent call last):
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\backend\application.py", line 45, in read_alert_history
+    return read(*args)
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\docs\verification\monitor-read-recovery-20261019\fault_server.py", line 28, in controlled_read
+    raise sqlite3.OperationalError('Controlled read fault /private/test/history.sqlite3')
+sqlite3.OperationalError: Controlled read fault /private/test/history.sqlite3
+Alert history read failed
+Traceback (most recent call last):
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\backend\application.py", line 45, in read_alert_history
+    return read(*args)
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\docs\verification\monitor-read-recovery-20261019\fault_server.py", line 28, in controlled_read
+    raise sqlite3.OperationalError('Controlled read fault /private/test/history.sqlite3')
+sqlite3.OperationalError: Controlled read fault /private/test/history.sqlite3
+Alert history read failed
+Traceback (most recent call last):
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\backend\application.py", line 45, in read_alert_history
+    return read(*args)
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\docs\verification\monitor-read-recovery-20261019\fault_server.py", line 28, in controlled_read
+    raise sqlite3.OperationalError('Controlled read fault /private/test/history.sqlite3')
+sqlite3.OperationalError: Controlled read fault /private/test/history.sqlite3
+Alert history read failed
+Traceback (most recent call last):
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\backend\application.py", line 45, in read_alert_history
+    return read(*args)
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\docs\verification\monitor-read-recovery-20261019\fault_server.py", line 28, in controlled_read
+    raise sqlite3.OperationalError('Controlled read fault /private/test/history.sqlite3')
+sqlite3.OperationalError: Controlled read fault /private/test/history.sqlite3
+Alert history read failed
+Traceback (most recent call last):
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\backend\application.py", line 45, in read_alert_history
+    return read(*args)
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\docs\verification\monitor-read-recovery-20261019\fault_server.py", line 28, in controlled_read
+    raise sqlite3.OperationalError('Controlled read fault /private/test/history.sqlite3')
+sqlite3.OperationalError: Controlled read fault /private/test/history.sqlite3
+Alert history read failed
+Traceback (most recent call last):
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\backend\application.py", line 45, in read_alert_history
+    return read(*args)
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\docs\verification\monitor-read-recovery-20261019\fault_server.py", line 28, in controlled_read
+    raise sqlite3.OperationalError('Controlled read fault /private/test/history.sqlite3')
+sqlite3.OperationalError: Controlled read fault /private/test/history.sqlite3
+Alert history read failed
+Traceback (most recent call last):
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\backend\application.py", line 45, in read_alert_history
+    return read(*args)
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\docs\verification\monitor-read-recovery-20261019\fault_server.py", line 28, in controlled_read
+    raise sqlite3.OperationalError('Controlled read fault /private/test/history.sqlite3')
+sqlite3.OperationalError: Controlled read fault /private/test/history.sqlite3
+Alert history read failed
+Traceback (most recent call last):
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\backend\application.py", line 45, in read_alert_history
+    return read(*args)
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\docs\verification\monitor-read-recovery-20261019\fault_server.py", line 28, in controlled_read
+    raise sqlite3.OperationalError('Controlled read fault /private/test/history.sqlite3')
+sqlite3.OperationalError: Controlled read fault /private/test/history.sqlite3
+Alert history read failed
+Traceback (most recent call last):
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\backend\application.py", line 45, in read_alert_history
+    return read(*args)
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\docs\verification\monitor-read-recovery-20261019\fault_server.py", line 28, in controlled_read
+    raise sqlite3.OperationalError('Controlled read fault /private/test/history.sqlite3')
+sqlite3.OperationalError: Controlled read fault /private/test/history.sqlite3
+Alert history read failed
+Traceback (most recent call last):
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\backend\application.py", line 45, in read_alert_history
+    return read(*args)
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\docs\verification\monitor-read-recovery-20261019\fault_server.py", line 28, in controlled_read
+    raise sqlite3.OperationalError('Controlled read fault /private/test/history.sqlite3')
+sqlite3.OperationalError: Controlled read fault /private/test/history.sqlite3
+Alert history read failed
+Traceback (most recent call last):
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\backend\application.py", line 45, in read_alert_history
+    return read(*args)
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\docs\verification\monitor-read-recovery-20261019\fault_server.py", line 28, in controlled_read
+    raise sqlite3.OperationalError('Controlled read fault /private/test/history.sqlite3')
+sqlite3.OperationalError: Controlled read fault /private/test/history.sqlite3
+Alert history read failed
+Traceback (most recent call last):
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\backend\application.py", line 45, in read_alert_history
+    return read(*args)
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\docs\verification\monitor-read-recovery-20261019\fault_server.py", line 28, in controlled_read
+    raise sqlite3.OperationalError('Controlled read fault /private/test/history.sqlite3')
+sqlite3.OperationalError: Controlled read fault /private/test/history.sqlite3

@@ -1,0 +1,184 @@
+[
+  {
+    "phase": "desktop-outage",
+    "controls": [
+      {
+        "disabled": false,
+        "text": "Retry connection"
+      },
+      {
+        "disabled": true,
+        "text": "Start replay"
+      }
+    ],
+    "errors": [
+      "Local API unavailable or incompatible. Alert history temporarily unavailable; retry after storage recovery Showing the last received data. Retry connection"
+    ],
+    "height": 1000,
+    "scrollWidth": 1430,
+    "sequences": [
+      2,
+      1
+    ],
+    "statuses": [
+      "Reconnecting/LOCAL ENCLAVE"
+    ],
+    "width": 1440
+  },
+  {
+    "phase": "desktop-recovered",
+    "controls": [
+      {
+        "disabled": false,
+        "text": "Start replay"
+      }
+    ],
+    "errors": [],
+    "height": 1000,
+    "scrollWidth": 1430,
+    "sequences": [
+      4,
+      3,
+      2,
+      1
+    ],
+    "statuses": [
+      "Stream connected/LOCAL ENCLAVE"
+    ],
+    "width": 1440
+  },
+  {
+    "phase": "tablet-outage",
+    "controls": [
+      {
+        "disabled": false,
+        "text": "Retry connection"
+      },
+      {
+        "disabled": true,
+        "text": "Start replay"
+      }
+    ],
+    "errors": [
+      "Local API unavailable or incompatible. Alert history temporarily unavailable; retry after storage recovery Showing the last received data. Retry connection"
+    ],
+    "height": 1024,
+    "scrollWidth": 758,
+    "sequences": [
+      4,
+      3,
+      2,
+      1
+    ],
+    "statuses": [
+      "Reconnecting/LOCAL ENCLAVE"
+    ],
+    "width": 768
+  },
+  {
+    "phase": "tablet-recovered",
+    "controls": [
+      {
+        "disabled": false,
+        "text": "Start replay"
+      }
+    ],
+    "errors": [],
+    "height": 1024,
+    "scrollWidth": 758,
+    "sequences": [
+      6,
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "statuses": [
+      "Stream connected/LOCAL ENCLAVE"
+    ],
+    "width": 768
+  },
+  {
+    "phase": "mobile-outage",
+    "controls": [
+      {
+        "disabled": false,
+        "text": "Retry connection"
+      },
+      {
+        "disabled": true,
+        "text": "Start replay"
+      }
+    ],
+    "errors": [
+      "Local API unavailable or incompatible. Alert history temporarily unavailable; retry after storage recovery Showing the last received data. Retry connection"
+    ],
+    "height": 844,
+    "scrollWidth": 380,
+    "sequences": [
+      6,
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "statuses": [
+      "Reconnecting/LOCAL ENCLAVE"
+    ],
+    "width": 390
+  },
+  {
+    "phase": "mobile-recovered",
+    "controls": [
+      {
+        "disabled": false,
+        "text": "Start replay"
+      }
+    ],
+    "errors": [],
+    "height": 844,
+    "scrollWidth": 380,
+    "sequences": [
+      8,
+      7,
+      6,
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "statuses": [
+      "Stream connected/LOCAL ENCLAVE"
+    ],
+    "width": 390
+  },
+  {
+    "phase": "initial-load-recovered",
+    "controls": [
+      {
+        "disabled": false,
+        "text": "Start replay"
+      }
+    ],
+    "errors": [],
+    "height": 844,
+    "scrollWidth": 380,
+    "sequences": [
+      8,
+      7,
+      6,
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "statuses": [
+      "Stream connected/LOCAL ENCLAVE"
+    ],
+    "width": 390
+  }
+]

@@ -1,0 +1,10 @@
+{
+  "url": "http://127.0.0.1:13529/monitor",
+  "database": "C:\\Users\\Saich\\AppData\\Local\\Temp\\univect-monitor-read-wxxdulrt\\history.sqlite3",
+  "marker": "C:\\Users\\Saich\\AppData\\Local\\Temp\\univect-monitor-read-wxxdulrt\\read-fault",
+  "pids": [
+    2628,
+    43564
+  ],
+  "initial_alerts": 2
+}

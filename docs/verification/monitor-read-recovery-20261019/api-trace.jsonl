@@ -1,0 +1,243 @@
+{"kind": "http_status", "status": 200, "path": "/api/health", "query": "", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/health", "query": "", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/events", "query": "", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/events", "query": "", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/benchmark", "query": "", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/alerts", "query": "newest=true&limit=200", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/datasets", "query": "", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/stream", "query": "after=2", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "injected_read_error", "operation": "list"}
+{"kind": "http_status", "status": 503, "path": "/api/alerts", "query": "", "last_event_id": ""}
+{"kind": "injected_read_error", "operation": "summary"}
+{"kind": "http_status", "status": 503, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "injected_read_error", "operation": "list"}
+{"kind": "http_status", "status": 503, "path": "/api/stream", "query": "", "last_event_id": ""}
+{"kind": "sse_eof", "path": "/api/stream", "query": "", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/events", "query": "", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/events", "query": "", "last_event_id": ""}
+{"kind": "injected_read_error", "operation": "list"}
+{"kind": "sse_eof", "path": "/api/stream", "query": "after=2", "last_event_id": ""}
+{"kind": "injected_read_error", "operation": "summary"}
+{"kind": "http_status", "status": 503, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "injected_read_error", "operation": "summary"}
+{"kind": "http_status", "status": 503, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "injected_read_error", "operation": "list"}
+{"kind": "http_status", "status": 503, "path": "/api/stream", "query": "after=2", "last_event_id": ""}
+{"kind": "sse_eof", "path": "/api/stream", "query": "after=2", "last_event_id": ""}
+{"kind": "injected_read_error", "operation": "summary"}
+{"kind": "http_status", "status": 503, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "injected_read_error", "operation": "summary"}
+{"kind": "http_status", "status": 503, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "injected_read_error", "operation": "summary"}
+{"kind": "http_status", "status": 503, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "injected_read_error", "operation": "summary"}
+{"kind": "http_status", "status": 503, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "injected_read_error", "operation": "summary"}
+{"kind": "http_status", "status": 503, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "injected_read_error", "operation": "summary"}
+{"kind": "http_status", "status": 503, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "injected_read_error", "operation": "summary"}
+{"kind": "http_status", "status": 503, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "injected_read_error", "operation": "summary"}
+{"kind": "http_status", "status": 503, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "injected_read_error", "operation": "summary"}
+{"kind": "http_status", "status": 503, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "injected_read_error", "operation": "summary"}
+{"kind": "http_status", "status": 503, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "injected_read_error", "operation": "summary"}
+{"kind": "http_status", "status": 503, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "injected_read_error", "operation": "summary"}
+{"kind": "http_status", "status": 503, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "injected_read_error", "operation": "summary"}
+{"kind": "http_status", "status": 503, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "injected_read_error", "operation": "summary"}
+{"kind": "http_status", "status": 503, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/alerts", "query": "", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/stream", "query": "after=2", "last_event_id": ""}
+{"kind": "sse_record", "sequence": 3, "alert_id": "741f2efd-c1e9-4bac-b063-46ddf6b58395", "path": "/api/stream", "query": "after=2", "last_event_id": ""}
+{"kind": "sse_record", "sequence": 4, "alert_id": "770e1282-3a5a-41f6-9e6b-5d16ecaab18d", "path": "/api/stream", "query": "after=2", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "injected_read_error", "operation": "list"}
+{"kind": "http_status", "status": 503, "path": "/api/alerts", "query": "", "last_event_id": ""}
+{"kind": "injected_read_error", "operation": "summary"}
+{"kind": "http_status", "status": 503, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "injected_read_error", "operation": "list"}
+{"kind": "http_status", "status": 503, "path": "/api/stream", "query": "", "last_event_id": ""}
+{"kind": "sse_eof", "path": "/api/stream", "query": "", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/events", "query": "", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/events", "query": "", "last_event_id": ""}
+{"kind": "injected_read_error", "operation": "list"}
+{"kind": "sse_eof", "path": "/api/stream", "query": "after=2", "last_event_id": ""}
+{"kind": "injected_read_error", "operation": "summary"}
+{"kind": "http_status", "status": 503, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "injected_read_error", "operation": "summary"}
+{"kind": "http_status", "status": 503, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "injected_read_error", "operation": "list"}
+{"kind": "http_status", "status": 503, "path": "/api/stream", "query": "after=2", "last_event_id": "4"}
+{"kind": "sse_eof", "path": "/api/stream", "query": "after=2", "last_event_id": "4"}
+{"kind": "injected_read_error", "operation": "summary"}
+{"kind": "http_status", "status": 503, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "injected_read_error", "operation": "summary"}
+{"kind": "http_status", "status": 503, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "injected_read_error", "operation": "summary"}
+{"kind": "http_status", "status": 503, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "injected_read_error", "operation": "summary"}
+{"kind": "http_status", "status": 503, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "injected_read_error", "operation": "summary"}
+{"kind": "http_status", "status": 503, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "injected_read_error", "operation": "summary"}
+{"kind": "http_status", "status": 503, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "injected_read_error", "operation": "summary"}
+{"kind": "http_status", "status": 503, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "injected_read_error", "operation": "summary"}
+{"kind": "http_status", "status": 503, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "injected_read_error", "operation": "summary"}
+{"kind": "http_status", "status": 503, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/alerts", "query": "", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/stream", "query": "after=4", "last_event_id": ""}
+{"kind": "sse_record", "sequence": 5, "alert_id": "ea41e363-bb4f-41c7-aeae-c9eac27b7b69", "path": "/api/stream", "query": "after=4", "last_event_id": ""}
+{"kind": "sse_record", "sequence": 6, "alert_id": "807181c4-168f-47b0-9b44-a443013417c8", "path": "/api/stream", "query": "after=4", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "injected_read_error", "operation": "list"}
+{"kind": "http_status", "status": 503, "path": "/api/alerts", "query": "", "last_event_id": ""}
+{"kind": "injected_read_error", "operation": "summary"}
+{"kind": "http_status", "status": 503, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "injected_read_error", "operation": "list"}
+{"kind": "http_status", "status": 503, "path": "/api/stream", "query": "", "last_event_id": ""}
+{"kind": "sse_eof", "path": "/api/stream", "query": "", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/events", "query": "", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/events", "query": "", "last_event_id": ""}
+{"kind": "injected_read_error", "operation": "list"}
+{"kind": "sse_eof", "path": "/api/stream", "query": "after=4", "last_event_id": ""}
+{"kind": "injected_read_error", "operation": "summary"}
+{"kind": "http_status", "status": 503, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "injected_read_error", "operation": "summary"}
+{"kind": "http_status", "status": 503, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "injected_read_error", "operation": "list"}
+{"kind": "http_status", "status": 503, "path": "/api/stream", "query": "after=4", "last_event_id": "6"}
+{"kind": "sse_eof", "path": "/api/stream", "query": "after=4", "last_event_id": "6"}
+{"kind": "injected_read_error", "operation": "summary"}
+{"kind": "http_status", "status": 503, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "injected_read_error", "operation": "summary"}
+{"kind": "http_status", "status": 503, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "injected_read_error", "operation": "summary"}
+{"kind": "http_status", "status": 503, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/alerts", "query": "", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/stream", "query": "after=6", "last_event_id": ""}
+{"kind": "sse_record", "sequence": 7, "alert_id": "b3b617f5-6c1c-4e57-b571-d4527175049d", "path": "/api/stream", "query": "after=6", "last_event_id": ""}
+{"kind": "sse_record", "sequence": 8, "alert_id": "8df81dd1-1ff1-4a04-aad0-9db83a4f7b60", "path": "/api/stream", "query": "after=6", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "injected_read_error", "operation": "list"}
+{"kind": "http_status", "status": 503, "path": "/api/alerts", "query": "", "last_event_id": ""}
+{"kind": "injected_read_error", "operation": "summary"}
+{"kind": "http_status", "status": 503, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "injected_read_error", "operation": "list"}
+{"kind": "http_status", "status": 503, "path": "/api/stream", "query": "", "last_event_id": ""}
+{"kind": "sse_eof", "path": "/api/stream", "query": "", "last_event_id": ""}
+{"kind": "injected_read_error", "operation": "list"}
+{"kind": "sse_eof", "path": "/api/stream", "query": "after=6", "last_event_id": ""}
+{"kind": "injected_read_error", "operation": "summary"}
+{"kind": "http_status", "status": 503, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "injected_read_error", "operation": "summary"}
+{"kind": "http_status", "status": 503, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "injected_read_error", "operation": "list"}
+{"kind": "http_status", "status": 503, "path": "/api/stream", "query": "after=6", "last_event_id": "8"}
+{"kind": "sse_eof", "path": "/api/stream", "query": "after=6", "last_event_id": "8"}
+{"kind": "injected_read_error", "operation": "summary"}
+{"kind": "http_status", "status": 503, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/benchmark", "query": "", "last_event_id": ""}
+{"kind": "injected_read_error", "operation": "list"}
+{"kind": "http_status", "status": 503, "path": "/api/alerts", "query": "newest=true&limit=200", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/datasets", "query": "", "last_event_id": ""}
+{"kind": "injected_read_error", "operation": "summary"}
+{"kind": "http_status", "status": 503, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "injected_read_error", "operation": "list"}
+{"kind": "http_status", "status": 503, "path": "/api/alerts", "query": "newest=true&limit=200", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/datasets", "query": "", "last_event_id": ""}
+{"kind": "injected_read_error", "operation": "summary"}
+{"kind": "http_status", "status": 503, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "injected_read_error", "operation": "list"}
+{"kind": "http_status", "status": 503, "path": "/api/alerts", "query": "newest=true&limit=200", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/datasets", "query": "", "last_event_id": ""}
+{"kind": "injected_read_error", "operation": "summary"}
+{"kind": "http_status", "status": 503, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "injected_read_error", "operation": "list"}
+{"kind": "http_status", "status": 503, "path": "/api/alerts", "query": "newest=true&limit=200", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/datasets", "query": "", "last_event_id": ""}
+{"kind": "injected_read_error", "operation": "summary"}
+{"kind": "http_status", "status": 503, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/alerts", "query": "", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/alerts", "query": "newest=true&limit=200", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/datasets", "query": "", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/stream", "query": "after=8", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/telemetry", "query": "", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/alerts", "query": "", "last_event_id": ""}
+{"kind": "http_status", "status": 200, "path": "/api/telemetry", "query": "", "last_event_id": ""}
