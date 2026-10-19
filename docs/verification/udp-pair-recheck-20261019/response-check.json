@@ -1,0 +1,15 @@
+{
+  "baseline": "b02a8de",
+  "checked_at_utc": "2026-10-19T06:16:22.021Z",
+  "account_verified": "saichayank07@gmail.com",
+  "query": "in:anywhere -in:sent -in:drafts {from:proenca@uel.br subject:\"ORION 2026\"}",
+  "search_field_normalization": "Trailing whitespace only",
+  "url": "https://mail.google.com/mail/u/0/#search/in%3Aanywhere+-in%3Asent+-in%3Adrafts+%7Bfrom%3Aproenca%40uel.br+subject%3A%22ORION+2026%22%7D",
+  "visible_result": "No messages matched your search. Try using search options such as sender, date, size and more.",
+  "scope": "Single focused incoming ORION query including Spam/Trash; not delivery proof or an exhaustive absence claim",
+  "runbook_received": false,
+  "qualification": "BLOCKED_NOT_QUALIFIED",
+  "packet_values_inspected": false,
+  "new_message_sent": false,
+  "unrelated_messages_opened": false
+}

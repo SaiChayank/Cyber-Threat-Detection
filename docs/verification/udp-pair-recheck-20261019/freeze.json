@@ -1,0 +1,24 @@
+{
+  "baseline": "b02a8de",
+  "prerequisite_review_completed": true,
+  "qualification_dod_passed": false,
+  "release_ready": false,
+  "files": {
+    "data/udp_pair_qualification.json": "d457bdd13fc9a14f79380f8b7d2263dde72cdafff84f5be0f3a2483accdf289f",
+    "docs/COMPLETION_EXECUTION_20261018.md": "0185f9f0aee2ad5870a8075d77c79ed59691e81c59b47ed7f82433e999e96301",
+    "docs/COMPLETION_PLAN.md": "147b914c35833f59c08cb7b0bb6f2da37b0b24f4aef36a909b3463fea96ca3b8",
+    "docs/REMAINING_WORK_PLAN.md": "75a3478793af8c0dee1d2bc3b8b1033792547e625670f4e6efc3d43c7e7762b8",
+    "docs/UDP_ORION_RUNBOOK_STATUS.md": "643c8117d6f3165c55b9f493b035f2f239625811e11716cefcab0311f7465e21",
+    "docs/UDP_PAIR_QUALIFICATION_PROTOCOL.md": "0c440df7b2f445045ff68331dfebc010b1363b608b3f468c650f64f9e6a50ca9",
+    "docs/UDP_PAIR_RECHECK_20261019.md": "1656829927cdbfe03dcb36275900ed7867b292d394533734040123ed224a3c9d",
+    "docs/verification/session-20261019/progress.json": "7ba4d6c6e0c84ab954a6b9afdad5131f88e76196bdb56eec69219bfc461f5494",
+    "docs/verification/udp-pair-recheck-20261019/integrity.json": "d1aa19952df09c39d95ffa2a8cdca207214b86a556b21f3aaa352ed8caab0b22",
+    "docs/verification/udp-pair-recheck-20261019/protected-hashes.json": "6bc000dbf5eb37ca19b34301c889afb3c03fd70dc2e14f14ba2d9878d0962644",
+    "docs/verification/udp-pair-recheck-20261019/response-check.json": "0f696ab194017c17c7e3d2b6e3e3b771026979daa1a32393ca30a5052869b5f7",
+    "docs/verification/udp-pair-recheck-20261019/result.json": "07074e0fbff2dd6fba9c34a6d9c1684baf6da1d8dee685e8975a23b8adbe1135",
+    "docs/verification/udp-pair-recheck-20261019/search-result.png": "bebb450f92407304aa3a2a5df9ff46d9464c889cb1481cd4572dafdbabe0861f",
+    "docs/verification/udp-pair-recheck-20261019/udp-tests-command.json": "36c381396f3f8a4693b4c2efe46216d3285327917c100f3ff54f2416d46e73ce",
+    "docs/verification/udp-pair-recheck-20261019/udp-tests.log": "52b24c598c5e3a7fc8cfa80151b93345c253110d41273f844e75d56c8d0f326d",
+    "docs/verification/udp-pair-recheck-20261019/verify.py": "000ad386990bd044bc7cbef139e9105c43858775cf81352ce4eac2b0efbec63f"
+  }
+}

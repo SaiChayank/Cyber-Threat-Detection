@@ -555,3 +555,16 @@ suite/model/gate/provenance change. Optional clipboard contents remain unverifie
 because the browser capability returned empty despite UI feedback. Freeze scoped
 DoD PASS. Next incomplete T21 qualification remains blocked on a verified producer
 runbook; no new message/mail check, packet values, scoring, promotion or READY.
+
+## T21 qualification follow-up — 19 October 2026 IST, 11:46
+
+[Scoped recheck](UDP_PAIR_RECHECK_20261019.md) against `b02a8de` verified the exact
+incoming ORION query/account and a settled "No messages matched your search"
+result. This is a point-in-time search, not proof of delivery or exhaustive absence.
+The producer runbook, matching benign application/service, independent paired-run
+labels and original-time provenance remain unverified. T21 qualification DoD is
+NOT MET / BLOCKED, with no selected pair, packet inspection or detector experiment.
+The frozen protocol/manifest and 130 protected original files are unchanged;
+12 existing UDP regressions pass. No message/resend/monitoring, download, reserved
+scoring, training or promotion. Next T21 action: verify actual producer evidence
+before the already frozen packet-format/load-overlap qualification can start.

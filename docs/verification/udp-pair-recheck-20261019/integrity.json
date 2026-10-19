@@ -1,0 +1,18 @@
+{
+  "checks": "PASS",
+  "baseline": "b02a8de",
+  "qualification": "BLOCKED_NOT_QUALIFIED",
+  "qualification_dod_passed": false,
+  "selected_pair": null,
+  "protocol_sha256": "0c440df7b2f445045ff68331dfebc010b1363b608b3f468c650f64f9e6a50ca9",
+  "unchanged_protected_files": 130,
+  "local_metadata_snapshots_verified": [
+    "dataset_orion_2026_pcap/LICENSE.txt",
+    "dataset_orion_2026_pcap/README.md"
+  ],
+  "packet_values_read": false,
+  "detector_experiment": false,
+  "training": false,
+  "reserved_evaluation": false,
+  "quality_gates_changed": false
+}

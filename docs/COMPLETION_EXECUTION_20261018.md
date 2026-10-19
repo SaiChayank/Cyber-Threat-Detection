@@ -7,8 +7,10 @@ delivery 100/100, p95 252.68 ms. [Monitor database-read recovery](MONITOR_READ_R
 now passes three viewports through the production proxy: retained rows, six exact
 catch-up deliveries, initial-load recovery; no product change. Thirty targeted
 regressions/typecheck/build pass, all 130 original hashes unchanged. Next incomplete
-task: T21 producer-runbook/pair qualification, blocked without verified source
-evidence. This supplements the sequence below; detector/research gates unchanged.
+task: T21 producer-runbook/pair qualification. A [focused response recheck](UDP_PAIR_RECHECK_20261019.md)
+still found no incoming ORION match; qualification remains blocked without verified
+source evidence. No packet values or experiment. This supplements the sequence
+below; detector/research gates unchanged.
 
 18 October 2026 IST. Baseline `49855bc`; execution supplement to
 `REMAINING_WORK_PLAN.md` and the frozen per-detector protocols. The approximate

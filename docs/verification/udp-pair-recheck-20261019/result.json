@@ -1,0 +1,22 @@
+{
+  "baseline": "b02a8de",
+  "prerequisite_review_completed": true,
+  "qualification_dod_passed": false,
+  "qualification": "BLOCKED_NOT_QUALIFIED",
+  "selected_pair": null,
+  "existing_udp_tests_passed": 12,
+  "new_tests_added": 0,
+  "protected_original_files_unchanged": 130,
+  "new_capture_values_read": false,
+  "new_flow_rows_read": false,
+  "load_overlap_measured": false,
+  "detector_scoring": false,
+  "training": false,
+  "reserved_evaluation": false,
+  "runtime_change": false,
+  "gate_change": false,
+  "new_message_sent": false,
+  "monitoring_created": false,
+  "next_t21_action": "Verify actual producer runbook before any packet-format/load-overlap inspection",
+  "limitation": "One incoming query is not exhaustive absence or delivery proof"
+}
