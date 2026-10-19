@@ -1,0 +1,35 @@
+F                                                                        [100%]
+================================== FAILURES ===================================
+____ test_publisher_last_modified_guards_ranges_when_etag_is_not_supplied _____
+
+    def test_publisher_last_modified_guards_ranges_when_etag_is_not_supplied():
+        raw=archive();client=Client(raw,'last-modified')
+>       result=catalogue_module.catalogue(client,item(raw))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_udp_archive_catalogue.py:112:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+docs\verification\udp-alternative-sources-20261019\catalogue_netslab.py:34: in catalogue
+    tail=fetch(max(0,size-65557),min(size,65557))
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+start = 0, length = 320
+
+    def fetch(start,length):
+        nonlocal etag
+        assert 0<=start<size and 0<length<=1048576 and start+length<=size
+        headers={'Range':f'bytes={start}-{start+length-1}','Accept-Encoding':'identity'}
+        if etag:headers['If-Match']=etag
+        with client.stream('GET',url,headers=headers) as response:
+            assert response.status_code==206, 'Refuse an unbounded/full-file response'
+            assert response.headers.get('content-range')==f'bytes {start}-{start+length-1}/{size}'
+            current=response.headers.get('etag')
+>           assert current, 'Refuse metadata from a source without an ETag'
+                   ^^^^^^^
+E           AssertionError: Refuse metadata from a source without an ETag
+
+docs\verification\udp-alternative-sources-20261019\catalogue_netslab.py:24: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/test_udp_archive_catalogue.py::test_publisher_last_modified_guards_ranges_when_etag_is_not_supplied
+1 failed in 0.30s

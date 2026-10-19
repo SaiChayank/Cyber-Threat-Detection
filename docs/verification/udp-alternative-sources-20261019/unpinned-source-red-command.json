@@ -1,0 +1,14 @@
+{
+  "command": [
+    "C:\\Users\\Saich\\OneDrive\\Desktop\\PS26145\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-m",
+    "pytest",
+    "tests/test_udp_archive_catalogue.py::test_missing_etag_is_rejected_before_reading_an_unpinned_source",
+    "-q",
+    "-p",
+    "no:cacheprovider"
+  ],
+  "exit_code": 1,
+  "elapsed_seconds": 0.9210720999981277
+}

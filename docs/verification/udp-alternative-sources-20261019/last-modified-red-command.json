@@ -1,0 +1,14 @@
+{
+  "command": [
+    "C:\\Users\\Saich\\OneDrive\\Desktop\\PS26145\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-m",
+    "pytest",
+    "tests/test_udp_archive_catalogue.py::test_publisher_last_modified_guards_ranges_when_etag_is_not_supplied",
+    "-q",
+    "-p",
+    "no:cacheprovider"
+  ],
+  "exit_code": 1,
+  "elapsed_seconds": 0.8785342999908607
+}

@@ -1,0 +1,64 @@
+[
+  {
+    "name": "orion-runbook",
+    "id": "01a1546b-b756-700e-91d3-63583cc7620e",
+    "scope": "Search results are discovery only; no qualification from excerpts",
+    "urls": [
+      "https://www.uel.br/grupos/orion/datasets/orion-2026.html",
+      "https://www.researchgate.net/publication/414918197_Orion_2026_An_IP_Flow_Dataset_for_Network_Traffic_Analysis_and_DDoS_Intrusion_Detection",
+      "https://www.frontiersin.org/journals/computer-science/articles/10.3389/fcomp.2026.1803271/full",
+      "https://www.yorku.ca/research/bccc/tag/dataset/"
+    ]
+  },
+  {
+    "name": "udp-iperf-general",
+    "id": "01a1546b-b3a0-775f-a128-2a1a16cc70ef",
+    "scope": "Search results are discovery only; no qualification from excerpts",
+    "urls": [
+      "https://iperf.fr/iperf-doc.php",
+      "https://ieee-dataport.org/keywords/ddos",
+      "https://www.usenix.org/system/files/conference/leet12/leet12-final25.pdf",
+      "https://netbeez.net/blog/how-to-use-iperf/",
+      "https://data.mendeley.com/datasets/hkjbp67rsc/1",
+      "https://github.com/esnet/iperf/discussions/1722"
+    ]
+  },
+  {
+    "name": "udp-iperf-capture",
+    "id": "01a1546d-59d3-7003-bf2a-72391ea4e81a",
+    "scope": "Search results are discovery only; no qualification from excerpts",
+    "urls": [
+      "https://zenodo.org/records/14811122/files/ReadMe.pdf",
+      "https://ant.isi.edu/datasets/all.html",
+      "https://nancy-project.eu/wp-content/uploads/2024/10/NANCY_D6.7_Greek_in-lab_testbed_dataset_2_v1.0.pdf",
+      "https://arxiv.org/html/2502.06688v1",
+      "https://ieeexplore.ieee.org/iel8/10347231/10841822/11181093.pdf",
+      "https://www.mdpi.com/2078-2489/15/4/195",
+      "https://www.researchgate.net/publication/395895879_Descriptor_5G_Open_Radio_Access_Network_Multi-Modal_Intrusion_Detection_Dataset_NetsLab-5GORAN-IDD"
+    ]
+  },
+  {
+    "name": "dns-matched-load",
+    "id": "01a1546d-5793-718a-98c2-cd2dc89440c1",
+    "scope": "Search results are discovery only; no qualification from excerpts",
+    "urls": [
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC9168479/",
+      "https://www.usenix.org/system/files/conference/leet12/leet12-final25.pdf",
+      "https://www.sciencedirect.com/science/article/pii/S2352711026005443",
+      "https://data.mendeley.com/datasets/9jp6r68y98",
+      "https://www.akamai.com/glossary/what-is-udp-flood-ddos-attack"
+    ]
+  },
+  {
+    "name": "netslab-producer",
+    "id": "01a1546e-5b78-716a-8002-0058d2d27267",
+    "scope": "Search results are discovery only; no qualification from excerpts",
+    "urls": [
+      "https://zenodo.org/records/18923275",
+      "https://www.researchgate.net/publication/395895879_Descriptor_5G_Open_Radio_Access_Network_Multi-Modal_Intrusion_Detection_Dataset_NetsLab-5GORAN-IDD",
+      "https://ieeexplore.ieee.org/iel8/10347231/10841822/11181093.pdf",
+      "https://www.kaggle.com/datasets/netslabdemo/netslab-5g-oran-idd/data",
+      "https://www.techrxiv.org/doi/pdf/10.36227/techrxiv.175606222.20740292/v1?onload=true"
+    ]
+  }
+]

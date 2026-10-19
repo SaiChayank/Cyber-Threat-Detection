@@ -1,0 +1,456 @@
+{
+  "record": "https://zenodo.org/api/records/18923275",
+  "record_metadata_sha256": "f2e5f32ab80014ed1c07c9f2fa2721b5f56e5e996f7928a41798e6b25ae1ee0d",
+  "licence": {
+    "id": "cc-by-4.0"
+  },
+  "record_files": [
+    {
+      "key": "Lower_Layer_Data.db",
+      "size": 5402624,
+      "checksum": "md5:c3af05f535b12c547a4dbaf858a25458"
+    },
+    {
+      "key": "Web.zip",
+      "size": 593817121,
+      "checksum": "md5:a625b34f04f794f6ed7873b75a88a267"
+    },
+    {
+      "key": "DoS.zip",
+      "size": 3465315751,
+      "checksum": "md5:820fe83843ada0ce75360aa2df8ec586"
+    },
+    {
+      "key": "DDOS.zip",
+      "size": 3086450284,
+      "checksum": "md5:04e0cf80eb5513a98853806a9c35d6a4"
+    },
+    {
+      "key": "BruteForce.zip",
+      "size": 3321014643,
+      "checksum": "md5:655ef2932b4939871b19de0a4e3ef9cc"
+    },
+    {
+      "key": "Benign.zip",
+      "size": 5936426197,
+      "checksum": "md5:3739c67aab617d0937629ac29633992b"
+    },
+    {
+      "key": "Network_Dataset.db",
+      "size": 210690048,
+      "checksum": "md5:03a235bd089cc2e7c01f96f82b14f065"
+    },
+    {
+      "key": "Network_Dataset.csv",
+      "size": 227184406,
+      "checksum": "md5:68d0a0c964a1134aca5bd1a287170315"
+    }
+  ],
+  "catalogues": [
+    {
+      "archive": "Benign.zip",
+      "archive_bytes": 5936426197,
+      "publisher_checksum": "md5:3739c67aab617d0937629ac29633992b",
+      "full_checksum_locally_verified": false,
+      "url": "https://zenodo.org/api/records/18923275/files/Benign.zip/content",
+      "etag": null,
+      "ranges": [
+        {
+          "start": 5936360640,
+          "length": 65557,
+          "sha256": "01cf1f772819922d07e3ced5b21813598717e60dd513e982d63839506cdb9846"
+        },
+        {
+          "start": 5936426099,
+          "length": 56,
+          "sha256": "03472ff919f76d562c15bd016f8581075a339a02f05941fabbf0e30f33673fac"
+        },
+        {
+          "start": 5936423759,
+          "length": 2340,
+          "sha256": "d77ea044d70e5a387edeccd25b604fbcb22dcae7d1e08113f16d2bbdc7474e03"
+        }
+      ],
+      "members": [
+        {
+          "name": "Benign/",
+          "compression": 0,
+          "crc32": "00000000",
+          "compressed_size_32bit": 0,
+          "uncompressed_size_32bit": 0,
+          "zip64_sizes_require_extra_fields": false
+        },
+        {
+          "name": "Benign/Lower_Layer/",
+          "compression": 0,
+          "crc32": "00000000",
+          "compressed_size_32bit": 0,
+          "uncompressed_size_32bit": 0,
+          "zip64_sizes_require_extra_fields": false
+        },
+        {
+          "name": "Benign/Lower_Layer/benign.txt",
+          "compression": 8,
+          "crc32": "adc8d7cd",
+          "compressed_size_32bit": 69581,
+          "uncompressed_size_32bit": 844614,
+          "zip64_sizes_require_extra_fields": false
+        },
+        {
+          "name": "Benign/Lower_Layer/benign_1.txt",
+          "compression": 8,
+          "crc32": "7348801b",
+          "compressed_size_32bit": 20330,
+          "uncompressed_size_32bit": 313924,
+          "zip64_sizes_require_extra_fields": false
+        },
+        {
+          "name": "Benign/Lower_Layer/benign_10.txt",
+          "compression": 8,
+          "crc32": "c4b6ccb9",
+          "compressed_size_32bit": 28786,
+          "uncompressed_size_32bit": 244346,
+          "zip64_sizes_require_extra_fields": false
+        },
+        {
+          "name": "Benign/Lower_Layer/benign_2.txt",
+          "compression": 8,
+          "crc32": "93aa63ab",
+          "compressed_size_32bit": 22439,
+          "uncompressed_size_32bit": 304799,
+          "zip64_sizes_require_extra_fields": false
+        },
+        {
+          "name": "Benign/Lower_Layer/benign_3.txt",
+          "compression": 8,
+          "crc32": "aeb2f7e4",
+          "compressed_size_32bit": 13815,
+          "uncompressed_size_32bit": 138159,
+          "zip64_sizes_require_extra_fields": false
+        },
+        {
+          "name": "Benign/Lower_Layer/benign_4.txt",
+          "compression": 8,
+          "crc32": "fdb6ada7",
+          "compressed_size_32bit": 17432,
+          "uncompressed_size_32bit": 319770,
+          "zip64_sizes_require_extra_fields": false
+        },
+        {
+          "name": "Benign/Lower_Layer/benign_5.txt",
+          "compression": 8,
+          "crc32": "a72a61aa",
+          "compressed_size_32bit": 20030,
+          "uncompressed_size_32bit": 304403,
+          "zip64_sizes_require_extra_fields": false
+        },
+        {
+          "name": "Benign/Lower_Layer/benign_6.txt",
+          "compression": 8,
+          "crc32": "35ffce4e",
+          "compressed_size_32bit": 24277,
+          "uncompressed_size_32bit": 314442,
+          "zip64_sizes_require_extra_fields": false
+        },
+        {
+          "name": "Benign/Lower_Layer/benign_7.txt",
+          "compression": 8,
+          "crc32": "5803fa61",
+          "compressed_size_32bit": 26980,
+          "uncompressed_size_32bit": 333602,
+          "zip64_sizes_require_extra_fields": false
+        },
+        {
+          "name": "Benign/Lower_Layer/benign_8.txt",
+          "compression": 8,
+          "crc32": "f88cb082",
+          "compressed_size_32bit": 41895,
+          "uncompressed_size_32bit": 528889,
+          "zip64_sizes_require_extra_fields": false
+        },
+        {
+          "name": "Benign/Lower_Layer/benign_9.txt",
+          "compression": 8,
+          "crc32": "d9a1bc9a",
+          "compressed_size_32bit": 29207,
+          "uncompressed_size_32bit": 313626,
+          "zip64_sizes_require_extra_fields": false
+        },
+        {
+          "name": "Benign/Lower_Layer/benign_test.txt",
+          "compression": 8,
+          "crc32": "1f8b33e0",
+          "compressed_size_32bit": 1421,
+          "uncompressed_size_32bit": 9198,
+          "zip64_sizes_require_extra_fields": false
+        },
+        {
+          "name": "Benign/Network_data/",
+          "compression": 0,
+          "crc32": "00000000",
+          "compressed_size_32bit": 0,
+          "uncompressed_size_32bit": 0,
+          "zip64_sizes_require_extra_fields": false
+        },
+        {
+          "name": "Benign/Network_data/benign.pcap",
+          "compression": 8,
+          "crc32": "48aae514",
+          "compressed_size_32bit": 16565520,
+          "uncompressed_size_32bit": 71108907,
+          "zip64_sizes_require_extra_fields": false
+        },
+        {
+          "name": "Benign/Network_data/benign_1.pcap",
+          "compression": 8,
+          "crc32": "bc657420",
+          "compressed_size_32bit": 359208686,
+          "uncompressed_size_32bit": 1964331146,
+          "zip64_sizes_require_extra_fields": false
+        },
+        {
+          "name": "Benign/Network_data/benign_2.pcap",
+          "compression": 8,
+          "crc32": "ef872710",
+          "compressed_size_32bit": 940998652,
+          "uncompressed_size_32bit": 4294967295,
+          "zip64_sizes_require_extra_fields": true
+        },
+        {
+          "name": "Benign/Network_data/benign_3.pcap",
+          "compression": 8,
+          "crc32": "3618b4b0",
+          "compressed_size_32bit": 91874331,
+          "uncompressed_size_32bit": 479048096,
+          "zip64_sizes_require_extra_fields": false
+        },
+        {
+          "name": "Benign/Network_data/benign_4.pcap",
+          "compression": 8,
+          "crc32": "dc6c9604",
+          "compressed_size_32bit": 1376108475,
+          "uncompressed_size_32bit": 4294967295,
+          "zip64_sizes_require_extra_fields": true
+        },
+        {
+          "name": "Benign/Network_data/benign_5.pcap",
+          "compression": 8,
+          "crc32": "a9b1dc34",
+          "compressed_size_32bit": 973900068,
+          "uncompressed_size_32bit": 4160108153,
+          "zip64_sizes_require_extra_fields": false
+        },
+        {
+          "name": "Benign/Network_data/benign_6.pcap",
+          "compression": 8,
+          "crc32": "3e117e03",
+          "compressed_size_32bit": 799382958,
+          "uncompressed_size_32bit": 4086276674,
+          "zip64_sizes_require_extra_fields": false
+        },
+        {
+          "name": "Benign/Network_data/iperf_benign.pcap",
+          "compression": 8,
+          "crc32": "3d4f242b",
+          "compressed_size_32bit": 1378066408,
+          "uncompressed_size_32bit": 4294967295,
+          "zip64_sizes_require_extra_fields": true
+        }
+      ],
+      "traffic_members_decompressed": 0,
+      "packet_values_read": false
+    },
+    {
+      "archive": "DDOS.zip",
+      "archive_bytes": 3086450284,
+      "publisher_checksum": "md5:04e0cf80eb5513a98853806a9c35d6a4",
+      "full_checksum_locally_verified": false,
+      "url": "https://zenodo.org/api/records/18923275/files/DDOS.zip/content",
+      "etag": null,
+      "ranges": [
+        {
+          "start": 3086384727,
+          "length": 65557,
+          "sha256": "039454745afe989099f014c011c8d13bbf3dd8085fea8597c6673b18b96c5a49"
+        },
+        {
+          "start": 3086448082,
+          "length": 2180,
+          "sha256": "d4b44a1e047daa9925d1b755190a0be11d777ad3bfcf8c0c646a1815b0669b7c"
+        }
+      ],
+      "members": [
+        {
+          "name": "DDOS/",
+          "compression": 0,
+          "crc32": "00000000",
+          "compressed_size_32bit": 0,
+          "uncompressed_size_32bit": 0,
+          "zip64_sizes_require_extra_fields": false
+        },
+        {
+          "name": "DDOS/Lower_Layer/",
+          "compression": 0,
+          "crc32": "00000000",
+          "compressed_size_32bit": 0,
+          "uncompressed_size_32bit": 0,
+          "zip64_sizes_require_extra_fields": false
+        },
+        {
+          "name": "DDOS/Lower_Layer/ddos_ack_hping3.txt",
+          "compression": 8,
+          "crc32": "45e24165",
+          "compressed_size_32bit": 33366,
+          "uncompressed_size_32bit": 307145,
+          "zip64_sizes_require_extra_fields": false
+        },
+        {
+          "name": "DDOS/Lower_Layer/ddos_ack_nping.txt",
+          "compression": 8,
+          "crc32": "823d8abf",
+          "compressed_size_32bit": 38456,
+          "uncompressed_size_32bit": 385117,
+          "zip64_sizes_require_extra_fields": false
+        },
+        {
+          "name": "DDOS/Lower_Layer/ddos_icmp_hping3.txt",
+          "compression": 8,
+          "crc32": "a02f3809",
+          "compressed_size_32bit": 54429,
+          "uncompressed_size_32bit": 535875,
+          "zip64_sizes_require_extra_fields": false
+        },
+        {
+          "name": "DDOS/Lower_Layer/ddos_icmp_nping.txt",
+          "compression": 8,
+          "crc32": "1fa6d157",
+          "compressed_size_32bit": 63346,
+          "uncompressed_size_32bit": 642249,
+          "zip64_sizes_require_extra_fields": false
+        },
+        {
+          "name": "DDOS/Lower_Layer/ddos_slowloris.txt",
+          "compression": 8,
+          "crc32": "32b7eecf",
+          "compressed_size_32bit": 64291,
+          "uncompressed_size_32bit": 654026,
+          "zip64_sizes_require_extra_fields": false
+        },
+        {
+          "name": "DDOS/Lower_Layer/ddos_syn_hping3.txt",
+          "compression": 8,
+          "crc32": "0f17e37d",
+          "compressed_size_32bit": 76711,
+          "uncompressed_size_32bit": 841090,
+          "zip64_sizes_require_extra_fields": false
+        },
+        {
+          "name": "DDOS/Lower_Layer/ddos_syn_nping.txt",
+          "compression": 8,
+          "crc32": "3baba21e",
+          "compressed_size_32bit": 43437,
+          "uncompressed_size_32bit": 428831,
+          "zip64_sizes_require_extra_fields": false
+        },
+        {
+          "name": "DDOS/Lower_Layer/ddos_udp_hping3.txt",
+          "compression": 8,
+          "crc32": "0abebf66",
+          "compressed_size_32bit": 84526,
+          "uncompressed_size_32bit": 907798,
+          "zip64_sizes_require_extra_fields": false
+        },
+        {
+          "name": "DDOS/Lower_Layer/ddos_udp_nping.txt",
+          "compression": 8,
+          "crc32": "b32dd83d",
+          "compressed_size_32bit": 67210,
+          "uncompressed_size_32bit": 675357,
+          "zip64_sizes_require_extra_fields": false
+        },
+        {
+          "name": "DDOS/Network_Layer/",
+          "compression": 0,
+          "crc32": "00000000",
+          "compressed_size_32bit": 0,
+          "uncompressed_size_32bit": 0,
+          "zip64_sizes_require_extra_fields": false
+        },
+        {
+          "name": "DDOS/Network_Layer/ddos_ack_hping3.pcap",
+          "compression": 8,
+          "crc32": "5cd88e62",
+          "compressed_size_32bit": 544316784,
+          "uncompressed_size_32bit": 3165568763,
+          "zip64_sizes_require_extra_fields": false
+        },
+        {
+          "name": "DDOS/Network_Layer/ddos_ack_nping.pcap",
+          "compression": 8,
+          "crc32": "9799e13d",
+          "compressed_size_32bit": 409006138,
+          "uncompressed_size_32bit": 2500388040,
+          "zip64_sizes_require_extra_fields": false
+        },
+        {
+          "name": "DDOS/Network_Layer/ddos_icmp_hping3.pcap",
+          "compression": 8,
+          "crc32": "a747a13f",
+          "compressed_size_32bit": 47574199,
+          "uncompressed_size_32bit": 224211674,
+          "zip64_sizes_require_extra_fields": false
+        },
+        {
+          "name": "DDOS/Network_Layer/ddos_icmp_nping.pcap",
+          "compression": 8,
+          "crc32": "8ff2a85e",
+          "compressed_size_32bit": 483720120,
+          "uncompressed_size_32bit": 2578141215,
+          "zip64_sizes_require_extra_fields": false
+        },
+        {
+          "name": "DDOS/Network_Layer/ddos_slowloris.pcap",
+          "compression": 8,
+          "crc32": "0f03a4c1",
+          "compressed_size_32bit": 418635233,
+          "uncompressed_size_32bit": 2042120309,
+          "zip64_sizes_require_extra_fields": false
+        },
+        {
+          "name": "DDOS/Network_Layer/ddos_syn_hping3.pcap",
+          "compression": 8,
+          "crc32": "43ab37d3",
+          "compressed_size_32bit": 241657923,
+          "uncompressed_size_32bit": 1452547341,
+          "zip64_sizes_require_extra_fields": false
+        },
+        {
+          "name": "DDOS/Network_Layer/ddos_syn_nping.pcap",
+          "compression": 8,
+          "crc32": "b5c41b40",
+          "compressed_size_32bit": 344879910,
+          "uncompressed_size_32bit": 1809936928,
+          "zip64_sizes_require_extra_fields": false
+        },
+        {
+          "name": "DDOS/Network_Layer/ddos_udp_hping3.pcap",
+          "compression": 8,
+          "crc32": "169448e2",
+          "compressed_size_32bit": 101104414,
+          "uncompressed_size_32bit": 446950202,
+          "zip64_sizes_require_extra_fields": false
+        },
+        {
+          "name": "DDOS/Network_Layer/ddos_udp_nping.pcap",
+          "compression": 8,
+          "crc32": "43f8cbb3",
+          "compressed_size_32bit": 495025289,
+          "uncompressed_size_32bit": 2598537066,
+          "zip64_sizes_require_extra_fields": false
+        }
+      ],
+      "traffic_members_decompressed": 0,
+      "packet_values_read": false
+    }
+  ]
+}

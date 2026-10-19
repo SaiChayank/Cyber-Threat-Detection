@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\docs\verification\udp-alternative-sources-20261019\catalogue_netslab.py", line 85, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\docs\verification\udp-alternative-sources-20261019\catalogue_netslab.py", line 80, in main
+    result=catalogue(client,entries[name]); output['catalogues'].append(result)
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\docs\verification\udp-alternative-sources-20261019\catalogue_netslab.py", line 37, in catalogue
+    tail=fetch(max(0,size-65557),min(size,65557))
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\docs\verification\udp-alternative-sources-20261019\catalogue_netslab.py", line 26, in fetch
+    assert current or current_modified, 'Refuse ranges without a source identity guard'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Refuse ranges without a source identity guard

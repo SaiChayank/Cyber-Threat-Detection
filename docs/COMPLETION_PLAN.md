@@ -568,3 +568,16 @@ The frozen protocol/manifest and 130 protected original files are unchanged;
 12 existing UDP regressions pass. No message/resend/monitoring, download, reserved
 scoring, training or promotion. Next T21 action: verify actual producer evidence
 before the already frozen packet-format/load-overlap qualification can start.
+
+## T21 alternative-source acquisition — 19 October 2026 IST
+
+[Bounded screening](UDP_ALTERNATIVE_SOURCES_20261019.md) identified NetsLab iPerf
+benign/two UDP-flood capture names under a producer CC BY 4.0 deposit. Two bounded
+metadata passes agree on names/directory hashes; no traffic members decompressed.
+Service/run/timing evidence and full capture integrity remain unverified, so the
+pair remains NOT QUALIFIED. Missing HTTP identity headers are explicitly recorded,
+not imposed as a new T21 gate; stricter draft failures are retained. Ten new tool
+cases plus 12 UDP regressions pass, all 130 protected originals unchanged. A precise
+NetsLab clarification draft is prepared NOT SENT; new-recipient approval or an
+explicit isolated-lab collection scope is needed next. No runtime/model/gate/data
+change, packet values, training, scoring, new external message or promotion.

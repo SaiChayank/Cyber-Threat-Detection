@@ -47,9 +47,14 @@
       "task": "T21 incoming-response and qualification prerequisite recheck",
       "decision": "No ORION incoming match at 2026-10-19T06:16:22Z; metadata integrity/12 UDP regressions pass; qualification remains BLOCKED; no packet values",
       "commit": "See package Git history"
+    },
+    {
+      "task": "T21 public alternative-source metadata screening",
+      "decision": "NetsLab possible members observed; 22 tool/UDP tests and 130 original hashes pass; no packet values; pair remains unqualified",
+      "commit": "See package Git history"
     }
   ],
-  "current_task": "T21 prerequisite check recorded; pair qualification remains BLOCKED pending producer runbook",
+  "current_task": "T21 NetsLab lead awaits service/run/timing evidence; clarification draft prepared, not sent",
   "constraints": [
     "No frozen gate changes",
     "No reserved values or failed-candidate activation",
@@ -62,7 +67,7 @@
   "last_checked_primary_used_percent": 32,
   "ordinary_usage_allowed_at_last_check": true,
   "remaining_queue": [
-    "T21 verified source/runbook qualification before packet values (BLOCKED)",
+    "T21 verified runbook for exact NetsLab members, or separately authorized isolated-lab collection; no packet values before provenance",
     "Data-qualified detector experiments only when prerequisites satisfied",
     "Conditional promotions and final security/performance/reproducibility/release checks"
   ],

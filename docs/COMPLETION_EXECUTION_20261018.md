@@ -9,8 +9,11 @@ catch-up deliveries, initial-load recovery; no product change. Thirty targeted
 regressions/typecheck/build pass, all 130 original hashes unchanged. Next incomplete
 task: T21 producer-runbook/pair qualification. A [focused response recheck](UDP_PAIR_RECHECK_20261019.md)
 still found no incoming ORION match; qualification remains blocked without verified
-source evidence. No packet values or experiment. This supplements the sequence
-below; detector/research gates unchanged.
+source evidence. [Alternative acquisition](UDP_ALTERNATIVE_SOURCES_20261019.md)
+identified public NetsLab iPerf/UDP-flood capture members and verified their ZIP
+directory metadata, but matching service/run/timing evidence is still missing.
+A precise clarification is prepared, not sent. No packet values or experiment.
+This supplements the sequence below; detector/research gates unchanged.
 
 18 October 2026 IST. Baseline `49855bc`; execution supplement to
 `REMAINING_WORK_PLAN.md` and the frozen per-detector protocols. The approximate

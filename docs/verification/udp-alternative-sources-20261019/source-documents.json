@@ -1,0 +1,112 @@
+[
+  {
+    "name": "orion-publisher",
+    "path": "data/raw/discovery/udp-alternative-sources-20261019/orion-publisher.json",
+    "url": "https://www.uel.br/grupos/orion/datasets/orion-2026.html",
+    "scrape_id": "01a1546b-d26c-707a-a4c9-b840743a185f",
+    "scope": "Publisher documentation only; no traffic records",
+    "local_snapshot_sha256": "fc9cd6de93dcfd23b6b4205ab0599f763f62b8fcb456153eef35b9f5f31fe487",
+    "snapshot_bytes": 4615,
+    "ships_with_clean_checkout": false
+  },
+  {
+    "name": "trustlab-paper",
+    "path": "data/raw/discovery/udp-alternative-sources-20261019/trustlab-paper.json",
+    "url": "https://www.frontiersin.org/journals/computer-science/articles/10.3389/fcomp.2026.1803271/full",
+    "scrape_id": "01a1546c-6d5a-7389-9fc7-d991d676577c",
+    "scope": "Publisher documentation only; no traffic records",
+    "local_snapshot_sha256": "980ccfdfadaf628ef2b33adb97eac1a03410d52878e1dfc37ade4f2e4c7a1e4c",
+    "snapshot_bytes": 154842,
+    "ships_with_clean_checkout": false
+  },
+  {
+    "name": "mendeley-sdn",
+    "path": "data/raw/discovery/udp-alternative-sources-20261019/mendeley-sdn.json",
+    "url": "https://data.mendeley.com/datasets/hkjbp67rsc/1",
+    "scrape_id": "01a1546c-8842-730b-bd9d-7585f7d0d9f2",
+    "scope": "Publisher documentation only; no traffic records",
+    "local_snapshot_sha256": "e4a6034d2f170b734a01f182eb387c5294799a0e6230f699213ee4acfb8e2a7e",
+    "snapshot_bytes": 3605,
+    "ships_with_clean_checkout": false
+  },
+  {
+    "name": "bccc-udp-quic",
+    "path": "data/raw/discovery/udp-alternative-sources-20261019/bccc-udp-quic.json",
+    "url": "https://www.yorku.ca/research/bccc/ucs-technical/cybersecurity-datasets-cds/udp-quic-network-threat-dataset-bccc-udp-quic-ids-2025/",
+    "scrape_id": "01a1546c-bcff-7244-ae07-4a8ce817038f",
+    "scope": "Publisher documentation only; no traffic records",
+    "local_snapshot_sha256": "ef3467dbe8aac62889bdc82086a10e20e4b6fb4d2003e70cb6907f647725ebd7",
+    "snapshot_bytes": 7180,
+    "ships_with_clean_checkout": false
+  },
+  {
+    "name": "bccc-request",
+    "path": "data/raw/discovery/udp-alternative-sources-20261019/bccc-request.json",
+    "url": "https://www.yorku.ca/research/bccc/ucs-technical/cybersecurity-datasets-cds/dataset-request/",
+    "scrape_id": "01a1546d-6a6d-7111-8d2b-1a18a1bdc04a",
+    "scope": "Publisher documentation only; no traffic records",
+    "local_snapshot_sha256": "c07df54f60db4438187ed41568768da94e1471596827f95fb8159766d29002cd",
+    "snapshot_bytes": 3126,
+    "ships_with_clean_checkout": false
+  },
+  {
+    "name": "nancy-oran-readme",
+    "path": "data/raw/discovery/udp-alternative-sources-20261019/nancy-oran-readme.json",
+    "url": "https://zenodo.org/records/14811122/files/ReadMe.pdf",
+    "scrape_id": "01a1546d-b078-7381-a65f-fc52a4e6f1ef",
+    "scope": "Publisher documentation only; no traffic records",
+    "local_snapshot_sha256": "10315df5f97bf8e4852e6cfde6008fc10c3f2f16f256e35feaa1db5adf53325d",
+    "snapshot_bytes": 14770,
+    "ships_with_clean_checkout": false
+  },
+  {
+    "name": "bccc-cloud-paper",
+    "path": "data/raw/discovery/udp-alternative-sources-20261019/bccc-cloud-paper.json",
+    "url": "https://www.mdpi.com/2078-2489/15/4/195",
+    "scrape_id": "01a1546d-ce29-740f-8387-e51c5dacd206",
+    "scope": "Publisher documentation only; no traffic records",
+    "local_snapshot_sha256": "4654d62f282c26ed284aba6189ae0768bc5a375ac43204db825e5f43f51a6756",
+    "snapshot_bytes": 166197,
+    "ships_with_clean_checkout": false
+  },
+  {
+    "name": "adddosdn",
+    "path": "data/raw/discovery/udp-alternative-sources-20261019/adddosdn.json",
+    "url": "https://data.mendeley.com/datasets/9jp6r68y98",
+    "scrape_id": "01a1546d-e835-74e7-8775-66abe481093b",
+    "scope": "Publisher documentation only; no traffic records",
+    "local_snapshot_sha256": "ff3caa345e1191fe1d993d6405770823185daf3a26d6e8d91ddbaa61b5864f6a",
+    "snapshot_bytes": 15225,
+    "ships_with_clean_checkout": false
+  },
+  {
+    "name": "netslab-record",
+    "path": "data/raw/discovery/udp-alternative-sources-20261019/netslab-record.json",
+    "url": "https://zenodo.org/records/18923275",
+    "scrape_id": "01a1546e-a3e6-75c6-9428-8d9e38ef84de",
+    "scope": "Publisher documentation only; no traffic records",
+    "local_snapshot_sha256": "31b95c1ee54612913f5ce83467e3d54e28aa38c24bc6ff642bb6d4e6f5950a3e",
+    "snapshot_bytes": 23745,
+    "ships_with_clean_checkout": false
+  },
+  {
+    "name": "netslab-paper",
+    "path": "data/raw/discovery/udp-alternative-sources-20261019/netslab-paper.json",
+    "url": "https://www.techrxiv.org/doi/pdf/10.36227/techrxiv.175606222.20740292/v1?onload=true",
+    "scrape_id": "01a1546e-c015-756a-8892-a1e47130b814",
+    "scope": "Publisher documentation only; no traffic records",
+    "local_snapshot_sha256": "fd02ca76c1d9062c860f98742cf8409d7bfbc646361d3e19eccadb78b65409dc",
+    "snapshot_bytes": 54580,
+    "ships_with_clean_checkout": false
+  },
+  {
+    "name": "netslab-repo",
+    "path": "data/raw/discovery/udp-alternative-sources-20261019/netslab-repo.json",
+    "url": "https://github.com/NetsLab-Demo/NetsLab-Demo-Netslab-5G-ORAN-IDD",
+    "scrape_id": "01a15470-8a49-71d9-8978-bac5007df263",
+    "scope": "Publisher documentation only; no traffic records",
+    "local_snapshot_sha256": "9273f82ab55292d3c974dc647f22f4390edb452e130c47ea8e879362ed415992",
+    "snapshot_bytes": 14185,
+    "ships_with_clean_checkout": false
+  }
+]

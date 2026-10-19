@@ -1,0 +1,14 @@
+F                                                                        [100%]
+================================== FAILURES ===================================
+_______ test_missing_etag_is_rejected_before_reading_an_unpinned_source _______
+
+    def test_missing_etag_is_rejected_before_reading_an_unpinned_source():
+        raw=archive();client=Client(raw,'missing-etag')
+>       with pytest.raises(AssertionError):catalogue_module.catalogue(client,item(raw))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE AssertionError
+
+tests\test_udp_archive_catalogue.py:90: Failed
+=========================== short test summary info ===========================
+FAILED tests/test_udp_archive_catalogue.py::test_missing_etag_is_rejected_before_reading_an_unpinned_source
+1 failed in 0.29s

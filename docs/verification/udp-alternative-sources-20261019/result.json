@@ -1,0 +1,41 @@
+{
+  "baseline": "4769d03",
+  "metadata_tool_tests_passed": true,
+  "qualification_dod_passed": false,
+  "qualification": "BLOCKED_NOT_QUALIFIED",
+  "selected_pair": null,
+  "promising_lead": "NetsLab-5GORAN-IDD Zenodo18923275",
+  "candidate_member_names": [
+    "Benign/Network_data/iperf_benign.pcap",
+    "DDOS/Network_Layer/ddos_udp_hping3.pcap",
+    "DDOS/Network_Layer/ddos_udp_nping.pcap"
+  ],
+  "missing_prerequisites": [
+    "matching actual UDP application and service port",
+    "independent executed-run boundaries and original clock/timezone provenance",
+    "supported complete capture format and member SHA256",
+    "original-time rate/size overlap only after provenance passes"
+  ],
+  "final_archive_metadata_range_bytes": 135690,
+  "total_successful_range_bytes_two_passes": 271380,
+  "initial_and_final_member_directory_hashes_match": true,
+  "optional_conditional_identity_headers_available": false,
+  "traffic_members_decompressed": 0,
+  "packet_values_read": false,
+  "existing_udp_regressions_passed": 12,
+  "new_catalogue_cases_passed": 10,
+  "targeted_total_passed": 22,
+  "failed_draft_experiments_retained": [
+    "Missing-ETag refusal was an unnecessary extra requirement",
+    "Last-Modified fallback unit case initially failed",
+    "API/download strict-identity route failures"
+  ],
+  "protected_original_files_unchanged": 130,
+  "runtime_or_model_changes": false,
+  "threshold_or_gate_changes": false,
+  "training": false,
+  "reserved_scoring": false,
+  "new_email_sent": false,
+  "lab_workload_executed": false,
+  "next_action": "Approve prepared NetsLab runbook clarification, or specify an available isolated-lab collection environment"
+}

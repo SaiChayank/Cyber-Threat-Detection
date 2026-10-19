@@ -1,0 +1,9 @@
+{
+  "command": [
+    "C:\\Users\\Saich\\OneDrive\\Desktop\\PS26145\\.venv\\Scripts\\python.exe",
+    "-B",
+    "C:\\Users\\Saich\\OneDrive\\Desktop\\PS26145\\docs\\verification\\udp-alternative-sources-20261019\\catalogue_netslab.py"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 3.464128100022208
+}
