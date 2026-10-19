@@ -36,7 +36,7 @@
       "newline_normalized": true
     },
     "backend/application.py": {
-      "sha256": "9569998dfb35d30705f8e263cf8af396c147441ca829d70268eb0628d963ec0d",
+      "sha256": "c6ee9ce919e8fc483d163d280e20fe532e852c31f59300ac5ea3a28a1a3bb0fd",
       "newline_normalized": true
     },
     "detection/pipeline.py": {

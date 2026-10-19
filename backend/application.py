@@ -3,6 +3,7 @@ import asyncio
 import json
 import logging
 import os
+import sqlite3
 import tempfile
 from contextlib import asynccontextmanager
 from pathlib import Path
@@ -39,6 +40,13 @@ app.add_middleware(CORSMiddleware, allow_origins=['http://localhost:3000', 'http
 def consume(event):
     return app.state.pipeline.process(event, persist=app.state.store.append_many)
 
+def read_alert_history(read, *args):
+    try:
+        return read(*args)
+    except sqlite3.Error as exc:
+        logging.getLogger(__name__).exception('Alert history read failed')
+        raise HTTPException(503, 'Alert history temporarily unavailable; retry after storage recovery') from exc
+
 @app.get('/api/health')
 async def health():
     return dict(status='online', architecture='unidirectional-passive-monitoring', threat_classes=CLASSES[1:])
@@ -59,11 +67,11 @@ async def benchmark():
 
 @app.get('/api/telemetry')
 async def telemetry():
-    return app.state.pipeline.telemetry() | dict(replay_status=app.state.replay_status, replay_error=app.state.replay_error, alerts_by_class=app.state.store.summary(), throughput_target=2000, confidence_note='Model score or heuristic strength; not real-world calibrated')
+    return app.state.pipeline.telemetry() | dict(replay_status=app.state.replay_status, replay_error=app.state.replay_error, alerts_by_class=read_alert_history(app.state.store.summary), throughput_target=2000, confidence_note='Model score or heuristic strength; not real-world calibrated')
 
 @app.get('/api/alerts')
 async def alerts(after: int = Query(0, ge=0, le=MAX_ALERT_SEQUENCE), limit: int = Query(200, ge=1, le=1000), threat: str | None = None, newest: bool = False):
-    return app.state.store.list(after, limit, threat, newest)
+    return read_alert_history(app.state.store.list, after, limit, threat, newest)
 
 @app.post('/api/events')
 async def events(event: TrafficEvent):
@@ -84,16 +92,25 @@ async def stream(request: Request, after: int = Query(0, ge=0, le=MAX_ALERT_SEQU
         after = max(after, last_id)
     except ValueError:
         pass
+    # Fail before successful SSE headers if durable history cannot be read.
+    initial_rows = read_alert_history(app.state.store.list, after, 100)
     async def generate():
         cursor = after
+        rows = initial_rows
         while not await request.is_disconnected():
-            rows = app.state.store.list(cursor, 100)
             for row in rows:
                 cursor = row['sequence']
                 yield f'id: {cursor}\ndata: {json.dumps(row)}\n\n'
             if not rows:
                 yield ': heartbeat\n\n'
             await asyncio.sleep(.25)
+            try:
+                rows = app.state.store.list(cursor, 100)
+            except sqlite3.Error:
+                # Headers have started: close so EventSource can resume from its
+                # last delivered ID. SQLite remains the source of truth.
+                logging.getLogger(__name__).exception('Alert stream history read failed; closing for resume')
+                return
     return StreamingResponse(generate(), media_type='text/event-stream', headers={'Cache-Control': 'no-cache, no-transform', 'X-Accel-Buffering': 'no'})
 
 class ReplayConfig(BaseModel):

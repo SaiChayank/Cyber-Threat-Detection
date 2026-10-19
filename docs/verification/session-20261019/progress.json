@@ -32,9 +32,14 @@
       "task": "Runtime SQLite read-error diagnosis",
       "decision": "Controlled failures: alerts/telemetry 500, initial SSE 200 then failure; exact prior alert recovers; no production fix started",
       "commit": "See package Git history"
+    },
+    {
+      "task": "SQLite history read API/SSE recovery",
+      "decision": "17 new cases; 46 targeted/574 full venv passes; TS/build/9 demos; real HTTP fault/resume; delivery100/100 p95 252.68ms",
+      "commit": "See package Git history"
     }
   ],
-  "current_task": "NEXT: narrowly repair SQLite read error API/SSE boundaries with regressions",
+  "current_task": "Completed SQLite read-error repair; next scoped Monitor DB-read error/reconnect integration",
   "constraints": [
     "No frozen gate changes",
     "No reserved values or failed-candidate activation",
@@ -43,12 +48,15 @@
     "No unrelated refactor of passed code"
   ],
   "release_ready": false,
-  "checkpointed_near_usage_limit": true,
-  "last_checked_primary_used_percent": 95,
+  "checkpointed_near_usage_limit": false,
+  "last_checked_primary_used_percent": 32,
   "ordinary_usage_allowed_at_last_check": true,
   "remaining_queue": [
-    "Runtime SQLite read error response/reconnect correction",
+    "Monitor database-read 503/reconnect integration on isolated history",
     "Data-qualified detector experiments only when prerequisites satisfied",
     "Conditional promotions and final security/performance/reproducibility/release checks"
-  ]
+  ],
+  "last_usage_check_utc": "2026-10-19T05:34:54Z",
+  "resumed_by_user_on_utc": "2026-10-19",
+  "previous_window_is_historical": true
 }

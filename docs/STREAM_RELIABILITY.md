@@ -1,5 +1,12 @@
 # Streaming reliability: current semantics and historical checks
 
+**Scoped follow-up, 19 October 2026:** [SQLite read recovery](SQLITE_READ_RECOVERY_20261019.md)
+adds safe alert/telemetry/initial-SSE 503 responses and clean late-storage-fault SSE
+closure/resume. Canonical 574 backend tests and typecheck/build/demo pass; 100/100
+direct delivery p95 252.68 ms, excluding capture/proxy/browser. Original history,
+detectors and models are preserved. This supersedes read-error handling and scoped
+delivery evidence only; older benchmark/evaluation statements below remain dated.
+
 Audited **2 October 2026**. The 29 September results below are a historical
 implementation record, not the latest benchmark, capture regression, test suite or
 deployed-model evaluation. The old classifier/capture runtime hashes differ from

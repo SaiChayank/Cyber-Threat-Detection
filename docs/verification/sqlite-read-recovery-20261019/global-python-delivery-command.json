@@ -1,0 +1,14 @@
+{
+  "command": [
+    "C:\\Users\\Saich\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+    "-B",
+    "-m",
+    "benchmarks.delivery",
+    "--events",
+    "100",
+    "--output",
+    "C:\\Users\\Saich\\OneDrive\\Desktop\\PS26145\\docs\\verification\\sqlite-read-recovery-20261019\\delivery.json"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 2.3425037000270095
+}

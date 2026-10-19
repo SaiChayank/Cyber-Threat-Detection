@@ -1,0 +1,28 @@
+Alert stream history read failed; closing for resume
+Traceback (most recent call last):
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\backend\application.py", line 108, in generate
+    rows = app.state.store.list(cursor, 100)
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\docs\verification\sqlite-read-recovery-20261019\verify_loopback_faults.py", line 26, in controlled_read
+    raise sqlite3.OperationalError('controlled temporary storage read failure')
+sqlite3.OperationalError: controlled temporary storage read failure
+Alert history read failed
+Traceback (most recent call last):
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\backend\application.py", line 45, in read_alert_history
+    return read(*args)
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\docs\verification\sqlite-read-recovery-20261019\verify_loopback_faults.py", line 26, in controlled_read
+    raise sqlite3.OperationalError('controlled temporary storage read failure')
+sqlite3.OperationalError: controlled temporary storage read failure
+Alert history read failed
+Traceback (most recent call last):
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\backend\application.py", line 45, in read_alert_history
+    return read(*args)
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\docs\verification\sqlite-read-recovery-20261019\verify_loopback_faults.py", line 26, in controlled_read
+    raise sqlite3.OperationalError('controlled temporary storage read failure')
+sqlite3.OperationalError: controlled temporary storage read failure
+Alert history read failed
+Traceback (most recent call last):
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\backend\application.py", line 45, in read_alert_history
+    return read(*args)
+  File "C:\Users\Saich\OneDrive\Desktop\PS26145\docs\verification\sqlite-read-recovery-20261019\verify_loopback_faults.py", line 26, in controlled_read
+    raise sqlite3.OperationalError('controlled temporary storage read failure')
+sqlite3.OperationalError: controlled temporary storage read failure

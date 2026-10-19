@@ -1,11 +1,12 @@
 # Remaining implementation sequence
 
-**Execution checkpoint, 19 October:** cursor validation and PCAP staging-storage
-recovery are fixed and verified; Monitor feedback/retry passes desktop/tablet/
-mobile. Latest source: 557 tests, TypeScript/build/demo pass. Next independent
-hardening task: [SQLite read-error repair](SQLITE_READ_DIAGNOSIS_20261019.md),
-diagnosed but not started near the session cap. Dataset prerequisites were checked
-once and remain blocked. This supplements, not replaces, the sequence below.
+**Execution checkpoint, 19 October:** cursor validation, PCAP staging-storage and
+[SQLite read recovery](SQLITE_READ_RECOVERY_20261019.md) are fixed and verified.
+Latest source: 574 backend tests, TypeScript/build/nine-scenario demo pass; direct
+delivery 100/100, p95 252.68 ms. Upload Monitor feedback/retry already passes three
+viewports. Next: isolated Monitor database-read 503/reconnect recovery through the
+existing proxy. Dataset prerequisites remain blocked. This supplements, not
+replaces, the sequence below; no detector/model/research gate changed.
 
 18 October 2026 IST. Baseline `49855bc`; execution supplement to
 `REMAINING_WORK_PLAN.md` and the frozen per-detector protocols. The approximate

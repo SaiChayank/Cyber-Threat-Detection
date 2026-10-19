@@ -1,0 +1,10 @@
+{
+  "command": [
+    "C:\\Users\\Saich\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+    "-B",
+    "-m",
+    "replay.demo_pack"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 0.875614399992628
+}

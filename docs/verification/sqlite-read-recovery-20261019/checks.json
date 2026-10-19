@@ -1,0 +1,40 @@
+{
+  "baseline": "47a09f6",
+  "generated_at_utc": "2026-10-19T05:35:46.493293+00:00",
+  "scoped_dod_passed": true,
+  "release_ready": false,
+  "new_regression_cases": 17,
+  "red_global_python": {
+    "failed": 15,
+    "passed": 2
+  },
+  "targeted_project_venv_passed": 46,
+  "backend_project_venv": {
+    "passed": 574,
+    "skipped": 0,
+    "warnings": 1
+  },
+  "supplementary_global_python": {
+    "passed": 566,
+    "skipped_modules": 1,
+    "optional_tests_not_collected": 8
+  },
+  "typecheck_passed": true,
+  "production_build_passed": true,
+  "demo_scenarios_unchanged": 9,
+  "direct_api_to_sse": {
+    "success_count": 100,
+    "p50_ms": 161.97750001447275,
+    "p95_ms": 252.67580000218004,
+    "p99_ms": 259.85450000735,
+    "gate_passed": true
+  },
+  "protected_unchanged": 128,
+  "scoped_provenance_changes": [
+    "data/demo/manifest.json",
+    "data/demo/manifest.sha256"
+  ],
+  "detector_model_gate_changes": false,
+  "reserved_scoring": false,
+  "next_task": "Isolated Monitor database-read 503 and SSE reconnect recovery through existing proxy"
+}

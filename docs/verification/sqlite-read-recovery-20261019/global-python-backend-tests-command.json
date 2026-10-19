@@ -1,0 +1,13 @@
+{
+  "command": [
+    "C:\\Users\\Saich\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+    "-B",
+    "-m",
+    "pytest",
+    "-q",
+    "-p",
+    "no:cacheprovider"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 149.33103920001304
+}

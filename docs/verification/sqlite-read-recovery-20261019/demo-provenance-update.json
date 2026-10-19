@@ -1,0 +1,56 @@
+{
+  "reason": "SQLite read-boundary error repair; frozen detector outputs preserved",
+  "previous_git_reference": "47a09f6:data/demo/manifest.json",
+  "before_manifest_sha256": "63f5405d6b0cbcf85d1e6dcd2ac96b74c7284004162601f1675d2ebf49606fa9",
+  "after_manifest_sha256": "8246b5d72160a480b9c6290fe3ef3e10f5c5fd8de6c8fa2057df79ab2b39dd8c",
+  "old_api_source_sha256": "9569998dfb35d30705f8e263cf8af396c147441ca829d70268eb0628d963ec0d",
+  "new_api_source_sha256": "c6ee9ce919e8fc483d163d280e20fe532e852c31f59300ac5ea3a28a1a3bb0fd",
+  "only_api_source_pin_changed": true,
+  "all_nine_traces_unchanged": [
+    {
+      "preset": "BENIGN",
+      "expected_unchanged": true,
+      "trace_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "preset": "DDOS",
+      "expected_unchanged": true,
+      "trace_sha256": "a47fe0af8effbc3ce3f7af7c199dc1abbc35d5d75b193b1c3d19707a736d206a"
+    },
+    {
+      "preset": "BOTNET_C2",
+      "expected_unchanged": true,
+      "trace_sha256": "d4130e7e577eb8cfc57b349ee92314643cb8f2d778a291892b9cd3c7cbcec9a5"
+    },
+    {
+      "preset": "DGA_DOMAINS",
+      "expected_unchanged": true,
+      "trace_sha256": "d14ff3881e3b134c215a4c8bb1a0f6e0f745f99c65fe52266ea89e8dce138a68"
+    },
+    {
+      "preset": "DNS_TUNNELLING",
+      "expected_unchanged": true,
+      "trace_sha256": "5e5d4a6bfce3ea00e0895a213a214945903ac0226701e66cbb1a9e8dfb441c68"
+    },
+    {
+      "preset": "ENCRYPTED_MALWARE",
+      "expected_unchanged": true,
+      "trace_sha256": "fc71244d4aa2175fb09636f0f7f4611cbebb513e515bfb17425f61e72bac0fe0"
+    },
+    {
+      "preset": "RECONNAISSANCE",
+      "expected_unchanged": true,
+      "trace_sha256": "b1941a1f9cc90d18fb59057055dbcbf12de721b06e342598c98b85fb437d4abf"
+    },
+    {
+      "preset": "DATA_EXFILTRATION",
+      "expected_unchanged": true,
+      "trace_sha256": "16bab74df645aa5d02c2fbcbad7232e93927c9fba94accdc19f6b521329c97dd"
+    },
+    {
+      "preset": "ALL",
+      "expected_unchanged": true,
+      "trace_sha256": "ae0603f4c1d3317fc20e0c3709abc7fd05eb2a95a744df8325474b414f4d6cc1"
+    }
+  ]
+}

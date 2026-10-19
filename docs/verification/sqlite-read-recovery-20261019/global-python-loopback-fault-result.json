@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "scope": "Real loopback HTTP/SSE with isolated controlled SQLite read faults",
+  "initial_alert_received": true,
+  "late_fault_clean_eof": true,
+  "initial_fault_statuses": {
+    "/api/alerts": 503,
+    "/api/telemetry": 503,
+    "/api/stream": 503
+  },
+  "records_durable_during_disconnect": 2,
+  "exact_resumed_records": 2,
+  "persisted_total": 3,
+  "duplicates": 0,
+  "history_unchanged_after_process_exit": true,
+  "persisted_records_sha256": "54c425e9f07ed2a5dccf8b8dc23c798383f8e93489d9c5724c5591b21a00e984",
+  "production_fault_switch_added": false,
+  "physical_corruption_repair_tested": false
+}

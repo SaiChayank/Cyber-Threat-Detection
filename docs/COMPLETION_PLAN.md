@@ -531,3 +531,16 @@ No production repair started near the session cap. Exact next task is narrow
 503/read-boundary and deterministic SSE recovery with regressions. Latest completed
 source remains 557 passing tests, TS/build/demo and delivery checks. All required
 data/intent-quality blockers remain; no promotion or release declaration.
+
+**SQLite read recovery, 19 October 2026 IST:**
+[Verified repair](SQLITE_READ_RECOVERY_20261019.md) returns safe alert/telemetry/
+initial-SSE 503 for SQLite read failures; late stream faults close cleanly for
+sequence resume. Seventeen new regressions, 46 targeted and 574 canonical backend
+passes (one existing warning), TypeScript/build/nine demo scenarios pass. Real
+loopback fault/resume preserves three records, two caught up with no duplicate;
+fresh 100-alert delivery p95 252.68 ms. Only API demo source pin/checksum refreshed
+after unchanged traces; 128 other protected originals unchanged. Supplementary
+global-Python 566-pass/one-module-skip run is retained; the .venv rerun has no skips.
+DoD PASS; behavior/tests/metrics/limitations frozen. Next: isolated Monitor storage-
+read error/reconnect integration, preserving its existing design. No training,
+reserved scoring, model promotion, new external request or release READY.
