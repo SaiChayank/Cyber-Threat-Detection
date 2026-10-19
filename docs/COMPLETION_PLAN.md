@@ -605,3 +605,13 @@ C2/DNS/DGA evaluation replacements. No raw data rows, scoring, training, runtime
 change or relaxed gate. Earlier pending-response next actions are superseded;
 source qualification must be established from published records. Existing quality
 blockers remain unresolved; no release READY. See data/public_source_route.json.
+
+## Replay error safety — 20 October 2026 IST
+
+[Verified correction](REPLAY_ERROR_SAFETY_20261020.md) removes private exception
+text from replay/cleanup telemetry and unexpected upload-header responses, retains
+fixed PCAP diagnostics and logs full errors server-side. Nine new red-first cases;
+34 targeted/593 full backend tests, typecheck/build/nine unchanged demo traces
+pass. Direct delivery 100/100, p95 243.91 ms; no capture/proxy/browser scope claim.
+128 protected originals unchanged, two demo provenance pins intentionally refreshed.
+DoD PASS; detector/model/gates unchanged. Next: Monitor replay-error/retry integration.

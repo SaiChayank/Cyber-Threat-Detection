@@ -1,0 +1,324 @@
+FFFFFFFFF                                                                [100%]
+================================== FAILURES ===================================
+_ test_runtime_failure_keeps_private_diagnostics_in_logs_and_history_recovers[RuntimeError] _
+
+tmp_path = WindowsPath('C:/Users/Saich/AppData/Local/Temp/pytest-of-Saich/pytest-351/test_runtime_failure_keeps_pri0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000029596A30E90>
+caplog = <_pytest.logging.LogCaptureFixture object at 0x0000029596937380>
+error_type = <class 'RuntimeError'>
+
+    @pytest.mark.parametrize('error_type', [RuntimeError, ValueError, FileNotFoundError, sqlite3.OperationalError])
+    def test_runtime_failure_keeps_private_diagnostics_in_logs_and_history_recovers(
+            tmp_path, monkeypatch, caplog, error_type):
+        monkeypatch.setenv('ALERT_DB', str(tmp_path / 'runtime.sqlite3'))
+        with TestClient(application.app) as client:
+            original = client.post('/api/events', json=alert_event(0)).json()
+
+            def broken(*args, **kwargs):
+                from schemas.traffic_event import TrafficEvent
+                yield TrafficEvent(**alert_event(1))
+                raise error_type(PRIVATE)
+
+            with monkeypatch.context() as patch, caplog.at_level(logging.ERROR, logger='backend.application'):
+                patch.setattr(application, 'scenario', broken)
+                assert client.post('/api/replay/start', json={'scenario': 'BENIGN', 'speed': 10000}).status_code == 200
+                failed = await_replay(client)
+            assert failed['replay_status'] == 'failed'
+>           assert failed['replay_error'] and PRIVATE not in failed['replay_error']
+E           AssertionError: assert ('private-runbook-token C:/private/analyst/capture.pcap' and 'private-run...capture.pcap' not in 'private-run...capture.pcap'
+E
+E             'private-runbook-to...nalyst/capture.pcap' is contained here:
+E               private-runbook-token C:/private/analyst/capture.pcap)
+
+tests\test_replay_error_safety.py:35: AssertionError
+_ test_runtime_failure_keeps_private_diagnostics_in_logs_and_history_recovers[ValueError] _
+
+tmp_path = WindowsPath('C:/Users/Saich/AppData/Local/Temp/pytest-of-Saich/pytest-351/test_runtime_failure_keeps_pri1')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000029596A484D0>
+caplog = <_pytest.logging.LogCaptureFixture object at 0x0000029596A45450>
+error_type = <class 'ValueError'>
+
+    @pytest.mark.parametrize('error_type', [RuntimeError, ValueError, FileNotFoundError, sqlite3.OperationalError])
+    def test_runtime_failure_keeps_private_diagnostics_in_logs_and_history_recovers(
+            tmp_path, monkeypatch, caplog, error_type):
+        monkeypatch.setenv('ALERT_DB', str(tmp_path / 'runtime.sqlite3'))
+        with TestClient(application.app) as client:
+            original = client.post('/api/events', json=alert_event(0)).json()
+
+            def broken(*args, **kwargs):
+                from schemas.traffic_event import TrafficEvent
+                yield TrafficEvent(**alert_event(1))
+                raise error_type(PRIVATE)
+
+            with monkeypatch.context() as patch, caplog.at_level(logging.ERROR, logger='backend.application'):
+                patch.setattr(application, 'scenario', broken)
+                assert client.post('/api/replay/start', json={'scenario': 'BENIGN', 'speed': 10000}).status_code == 200
+                failed = await_replay(client)
+            assert failed['replay_status'] == 'failed'
+>           assert failed['replay_error'] and PRIVATE not in failed['replay_error']
+E           AssertionError: assert ('private-runbook-token C:/private/analyst/capture.pcap' and 'private-run...capture.pcap' not in 'private-run...capture.pcap'
+E
+E             'private-runbook-to...nalyst/capture.pcap' is contained here:
+E               private-runbook-token C:/private/analyst/capture.pcap)
+
+tests\test_replay_error_safety.py:35: AssertionError
+_ test_runtime_failure_keeps_private_diagnostics_in_logs_and_history_recovers[FileNotFoundError] _
+
+tmp_path = WindowsPath('C:/Users/Saich/AppData/Local/Temp/pytest-of-Saich/pytest-351/test_runtime_failure_keeps_pri2')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000029596A199D0>
+caplog = <_pytest.logging.LogCaptureFixture object at 0x0000029596A47390>
+error_type = <class 'FileNotFoundError'>
+
+    @pytest.mark.parametrize('error_type', [RuntimeError, ValueError, FileNotFoundError, sqlite3.OperationalError])
+    def test_runtime_failure_keeps_private_diagnostics_in_logs_and_history_recovers(
+            tmp_path, monkeypatch, caplog, error_type):
+        monkeypatch.setenv('ALERT_DB', str(tmp_path / 'runtime.sqlite3'))
+        with TestClient(application.app) as client:
+            original = client.post('/api/events', json=alert_event(0)).json()
+
+            def broken(*args, **kwargs):
+                from schemas.traffic_event import TrafficEvent
+                yield TrafficEvent(**alert_event(1))
+                raise error_type(PRIVATE)
+
+            with monkeypatch.context() as patch, caplog.at_level(logging.ERROR, logger='backend.application'):
+                patch.setattr(application, 'scenario', broken)
+                assert client.post('/api/replay/start', json={'scenario': 'BENIGN', 'speed': 10000}).status_code == 200
+                failed = await_replay(client)
+            assert failed['replay_status'] == 'failed'
+>           assert failed['replay_error'] and PRIVATE not in failed['replay_error']
+E           AssertionError: assert ('private-runbook-token C:/private/analyst/capture.pcap' and 'private-run...capture.pcap' not in 'private-run...capture.pcap'
+E
+E             'private-runbook-to...nalyst/capture.pcap' is contained here:
+E               private-runbook-token C:/private/analyst/capture.pcap)
+
+tests\test_replay_error_safety.py:35: AssertionError
+_ test_runtime_failure_keeps_private_diagnostics_in_logs_and_history_recovers[OperationalError] _
+
+tmp_path = WindowsPath('C:/Users/Saich/AppData/Local/Temp/pytest-of-Saich/pytest-351/test_runtime_failure_keeps_pri3')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000002959CD14050>
+caplog = <_pytest.logging.LogCaptureFixture object at 0x0000029596A32D70>
+error_type = <class 'sqlite3.OperationalError'>
+
+    @pytest.mark.parametrize('error_type', [RuntimeError, ValueError, FileNotFoundError, sqlite3.OperationalError])
+    def test_runtime_failure_keeps_private_diagnostics_in_logs_and_history_recovers(
+            tmp_path, monkeypatch, caplog, error_type):
+        monkeypatch.setenv('ALERT_DB', str(tmp_path / 'runtime.sqlite3'))
+        with TestClient(application.app) as client:
+            original = client.post('/api/events', json=alert_event(0)).json()
+
+            def broken(*args, **kwargs):
+                from schemas.traffic_event import TrafficEvent
+                yield TrafficEvent(**alert_event(1))
+                raise error_type(PRIVATE)
+
+            with monkeypatch.context() as patch, caplog.at_level(logging.ERROR, logger='backend.application'):
+                patch.setattr(application, 'scenario', broken)
+                assert client.post('/api/replay/start', json={'scenario': 'BENIGN', 'speed': 10000}).status_code == 200
+                failed = await_replay(client)
+            assert failed['replay_status'] == 'failed'
+>           assert failed['replay_error'] and PRIVATE not in failed['replay_error']
+E           AssertionError: assert ('private-runbook-token C:/private/analyst/capture.pcap' and 'private-run...capture.pcap' not in 'private-run...capture.pcap'
+E
+E             'private-runbook-to...nalyst/capture.pcap' is contained here:
+E               private-runbook-token C:/private/analyst/capture.pcap)
+
+tests\test_replay_error_safety.py:35: AssertionError
+______________ test_cleanup_errors_are_safe_and_logged[complete] ______________
+
+tmp_path = WindowsPath('C:/Users/Saich/AppData/Local/Temp/pytest-of-Saich/pytest-351/test_cleanup_errors_are_safe_a0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000029598C85040>
+caplog = <_pytest.logging.LogCaptureFixture object at 0x0000029596A33230>
+mode = 'complete'
+
+    @pytest.mark.parametrize('mode', ['complete', 'processing_failure', 'immediate_stop'])
+    def test_cleanup_errors_are_safe_and_logged(tmp_path, monkeypatch, caplog, mode):
+        monkeypatch.setenv('ALERT_DB', str(tmp_path / 'cleanup.sqlite3'))
+
+        class BrokenSource:
+            def __iter__(self):
+                if mode == 'processing_failure':
+                    raise RuntimeError(PRIVATE)
+                return iter(())
+
+            def close(self):
+                raise OSError(PRIVATE)
+
+        async def exercise():
+            cleaned = []
+            application.start_replay(BrokenSource(), 10000, lambda: cleaned.append(True))
+            if mode == 'immediate_stop':
+                await application.stop()
+            else:
+                await application.app.state.replay_task
+            return cleaned
+
+        with TestClient(application.app) as client, caplog.at_level(logging.ERROR, logger='backend.application'):
+            saved = client.post('/api/events', json=alert_event(0)).json()
+            assert client.portal.call(exercise) == [True]
+            state = client.get('/api/telemetry').json()
+            assert state['replay_status'] == 'failed'
+>           assert 'cleanup' in state['replay_error'].lower() and PRIVATE not in state['replay_error']
+E           AssertionError: assert ('cleanup' in 'replay cleanup failed: private-runbook-token c:/private/analyst/capture.pcap' and 'private-run...capture.pcap' not in 'Replay clea...capture.pcap'
+E            +  where 'replay cleanup failed: private-runbook-token c:/private/analyst/capture.pcap' = <built-in method lower of str object at 0x000002959C074D30>()
+E            +    where <built-in method lower of str object at 0x000002959C074D30> = 'Replay cleanup failed: private-runbook-token C:/private/analyst/capture.pcap'.lower
+E
+E             'private-runbook-to...nalyst/capture.pcap' is contained here:
+E               Replay cleanup failed: private-runbook-token C:/private/analyst/capture.pcap)
+
+tests\test_replay_error_safety.py:72: AssertionError
+_________ test_cleanup_errors_are_safe_and_logged[processing_failure] _________
+
+tmp_path = WindowsPath('C:/Users/Saich/AppData/Local/Temp/pytest-of-Saich/pytest-351/test_cleanup_errors_are_safe_a1')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000029596A175B0>
+caplog = <_pytest.logging.LogCaptureFixture object at 0x0000029596A49370>
+mode = 'processing_failure'
+
+    @pytest.mark.parametrize('mode', ['complete', 'processing_failure', 'immediate_stop'])
+    def test_cleanup_errors_are_safe_and_logged(tmp_path, monkeypatch, caplog, mode):
+        monkeypatch.setenv('ALERT_DB', str(tmp_path / 'cleanup.sqlite3'))
+
+        class BrokenSource:
+            def __iter__(self):
+                if mode == 'processing_failure':
+                    raise RuntimeError(PRIVATE)
+                return iter(())
+
+            def close(self):
+                raise OSError(PRIVATE)
+
+        async def exercise():
+            cleaned = []
+            application.start_replay(BrokenSource(), 10000, lambda: cleaned.append(True))
+            if mode == 'immediate_stop':
+                await application.stop()
+            else:
+                await application.app.state.replay_task
+            return cleaned
+
+        with TestClient(application.app) as client, caplog.at_level(logging.ERROR, logger='backend.application'):
+            saved = client.post('/api/events', json=alert_event(0)).json()
+            assert client.portal.call(exercise) == [True]
+            state = client.get('/api/telemetry').json()
+            assert state['replay_status'] == 'failed'
+>           assert 'cleanup' in state['replay_error'].lower() and PRIVATE not in state['replay_error']
+E           AssertionError: assert ('cleanup' in 'private-runbook-token c:/private/analyst/capture.pcap; replay cleanup failed: private-runbook-token c:/private/analyst/capture.pcap' and 'private-run...capture.pcap' not in 'private-run...capture.pcap'
+E            +  where 'private-runbook-token c:/private/analyst/capture.pcap; replay cleanup failed: private-runbook-token c:/private/analyst/capture.pcap' = <built-in method lower of str object at 0x00000295969CE1E0>()
+E            +    where <built-in method lower of str object at 0x00000295969CE1E0> = 'private-runbook-token C:/private/analyst/capture.pcap; Replay cleanup failed: private-runbook-token C:/private/analyst/capture.pcap'.lower
+E
+E             'private-runbook-to...nalyst/capture.pcap' is contained here:
+E               private-runbook-token C:/private/analyst/capture.pcap; Replay cleanup failed: private-runbook-token C:/private/analyst/capture.pcap)
+
+tests\test_replay_error_safety.py:72: AssertionError
+___________ test_cleanup_errors_are_safe_and_logged[immediate_stop] ___________
+
+tmp_path = WindowsPath('C:/Users/Saich/AppData/Local/Temp/pytest-of-Saich/pytest-351/test_cleanup_errors_are_safe_a2')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000029596A16EB0>
+caplog = <_pytest.logging.LogCaptureFixture object at 0x0000029596A1B020>
+mode = 'immediate_stop'
+
+    @pytest.mark.parametrize('mode', ['complete', 'processing_failure', 'immediate_stop'])
+    def test_cleanup_errors_are_safe_and_logged(tmp_path, monkeypatch, caplog, mode):
+        monkeypatch.setenv('ALERT_DB', str(tmp_path / 'cleanup.sqlite3'))
+
+        class BrokenSource:
+            def __iter__(self):
+                if mode == 'processing_failure':
+                    raise RuntimeError(PRIVATE)
+                return iter(())
+
+            def close(self):
+                raise OSError(PRIVATE)
+
+        async def exercise():
+            cleaned = []
+            application.start_replay(BrokenSource(), 10000, lambda: cleaned.append(True))
+            if mode == 'immediate_stop':
+                await application.stop()
+            else:
+                await application.app.state.replay_task
+            return cleaned
+
+        with TestClient(application.app) as client, caplog.at_level(logging.ERROR, logger='backend.application'):
+            saved = client.post('/api/events', json=alert_event(0)).json()
+            assert client.portal.call(exercise) == [True]
+            state = client.get('/api/telemetry').json()
+            assert state['replay_status'] == 'failed'
+>           assert 'cleanup' in state['replay_error'].lower() and PRIVATE not in state['replay_error']
+E           AssertionError: assert ('cleanup' in 'replay cleanup failed: private-runbook-token c:/private/analyst/capture.pcap' and 'private-run...capture.pcap' not in 'Replay clea...capture.pcap'
+E            +  where 'replay cleanup failed: private-runbook-token c:/private/analyst/capture.pcap' = <built-in method lower of str object at 0x000002959A2D53B0>()
+E            +    where <built-in method lower of str object at 0x000002959A2D53B0> = 'Replay cleanup failed: private-runbook-token C:/private/analyst/capture.pcap'.lower
+E
+E             'private-runbook-to...nalyst/capture.pcap' is contained here:
+E               Replay cleanup failed: private-runbook-token C:/private/analyst/capture.pcap)
+
+tests\test_replay_error_safety.py:72: AssertionError
+__ test_header_read_failure_is_safe_and_staged_file_removed[PermissionError] __
+
+uploaded_paths = [WindowsPath('C:/Users/Saich/AppData/Local/Temp/pytest-of-Saich/pytest-351/test_header_read_failure_is_sa0/tmp_3iazc4p.pcap')]
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000029596A64E20>
+caplog = <_pytest.logging.LogCaptureFixture object at 0x000002959E994380>
+error_type = <class 'PermissionError'>
+
+    @pytest.mark.parametrize('error_type', [PermissionError, ValueError])
+    def test_header_read_failure_is_safe_and_staged_file_removed(uploaded_paths, monkeypatch, caplog, error_type):
+        real_open = Path.open
+
+        def broken_open(path, *args, **kwargs):
+            if path in uploaded_paths:
+                raise error_type(PRIVATE)
+            return real_open(path, *args, **kwargs)
+
+        with TestClient(application.app, raise_server_exceptions=False) as client:
+            saved = client.post('/api/events', json=alert_event(0)).json()
+            with monkeypatch.context() as patch, caplog.at_level(logging.ERROR, logger='backend.application'):
+                patch.setattr(Path, 'open', broken_open)
+                response = client.post('/api/replay/pcap', content=capture(tcp_syn_packet()))
+>           assert response.status_code == 503
+E           assert 422 == 503
+E            +  where 422 = <Response [422 Unprocessable Entity]>.status_code
+
+tests\test_replay_error_safety.py:93: AssertionError
+____ test_header_read_failure_is_safe_and_staged_file_removed[ValueError] _____
+
+uploaded_paths = [WindowsPath('C:/Users/Saich/AppData/Local/Temp/pytest-of-Saich/pytest-351/test_header_read_failure_is_sa1/tmp57b2v768.pcap')]
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000029596959E50>
+caplog = <_pytest.logging.LogCaptureFixture object at 0x000002959CD14D50>
+error_type = <class 'ValueError'>
+
+    @pytest.mark.parametrize('error_type', [PermissionError, ValueError])
+    def test_header_read_failure_is_safe_and_staged_file_removed(uploaded_paths, monkeypatch, caplog, error_type):
+        real_open = Path.open
+
+        def broken_open(path, *args, **kwargs):
+            if path in uploaded_paths:
+                raise error_type(PRIVATE)
+            return real_open(path, *args, **kwargs)
+
+        with TestClient(application.app, raise_server_exceptions=False) as client:
+            saved = client.post('/api/events', json=alert_event(0)).json()
+            with monkeypatch.context() as patch, caplog.at_level(logging.ERROR, logger='backend.application'):
+                patch.setattr(Path, 'open', broken_open)
+                response = client.post('/api/replay/pcap', content=capture(tcp_syn_packet()))
+>           assert response.status_code == 503
+E           assert 422 == 503
+E            +  where 422 = <Response [422 Unprocessable Entity]>.status_code
+
+tests\test_replay_error_safety.py:93: AssertionError
+============================== warnings summary ===============================
+.venv\Lib\site-packages\fastapi\testclient.py:1
+  C:\Users\Saich\OneDrive\Desktop\PS26145\.venv\Lib\site-packages\fastapi\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+    from starlette.testclient import TestClient as TestClient  # noqa
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED tests/test_replay_error_safety.py::test_runtime_failure_keeps_private_diagnostics_in_logs_and_history_recovers[RuntimeError]
+FAILED tests/test_replay_error_safety.py::test_runtime_failure_keeps_private_diagnostics_in_logs_and_history_recovers[ValueError]
+FAILED tests/test_replay_error_safety.py::test_runtime_failure_keeps_private_diagnostics_in_logs_and_history_recovers[FileNotFoundError]
+FAILED tests/test_replay_error_safety.py::test_runtime_failure_keeps_private_diagnostics_in_logs_and_history_recovers[OperationalError]
+FAILED tests/test_replay_error_safety.py::test_cleanup_errors_are_safe_and_logged[complete]
+FAILED tests/test_replay_error_safety.py::test_cleanup_errors_are_safe_and_logged[processing_failure]
+FAILED tests/test_replay_error_safety.py::test_cleanup_errors_are_safe_and_logged[immediate_stop]
+FAILED tests/test_replay_error_safety.py::test_header_read_failure_is_safe_and_staged_file_removed[PermissionError]
+FAILED tests/test_replay_error_safety.py::test_header_read_failure_is_safe_and_staged_file_removed[ValueError]
+9 failed, 1 warning in 1.71s

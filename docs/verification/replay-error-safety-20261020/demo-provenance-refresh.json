@@ -1,0 +1,55 @@
+{
+  "reason": "Only API replay error reporting changed; nine complete expected traces verified unchanged before refreshing one source pin",
+  "source": "backend/application.py",
+  "before": "c6ee9ce919e8fc483d163d280e20fe532e852c31f59300ac5ea3a28a1a3bb0fd",
+  "after": "54175d3d3dba219514ddf0b370f16a01af8bd614da6cee9b3243ba6ba3b8bbc0",
+  "manifest_before": "8246b5d72160a480b9c6290fe3ef3e10f5c5fd8de6c8fa2057df79ab2b39dd8c",
+  "manifest_after": "01f9d824dda063df5f9a485d56e0e454e14a618b592f3448e0440b31f7ade203",
+  "traces": [
+    {
+      "preset": "BENIGN",
+      "stable_alert_trace_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "unchanged": true
+    },
+    {
+      "preset": "DDOS",
+      "stable_alert_trace_sha256": "a47fe0af8effbc3ce3f7af7c199dc1abbc35d5d75b193b1c3d19707a736d206a",
+      "unchanged": true
+    },
+    {
+      "preset": "BOTNET_C2",
+      "stable_alert_trace_sha256": "d4130e7e577eb8cfc57b349ee92314643cb8f2d778a291892b9cd3c7cbcec9a5",
+      "unchanged": true
+    },
+    {
+      "preset": "DGA_DOMAINS",
+      "stable_alert_trace_sha256": "d14ff3881e3b134c215a4c8bb1a0f6e0f745f99c65fe52266ea89e8dce138a68",
+      "unchanged": true
+    },
+    {
+      "preset": "DNS_TUNNELLING",
+      "stable_alert_trace_sha256": "5e5d4a6bfce3ea00e0895a213a214945903ac0226701e66cbb1a9e8dfb441c68",
+      "unchanged": true
+    },
+    {
+      "preset": "ENCRYPTED_MALWARE",
+      "stable_alert_trace_sha256": "fc71244d4aa2175fb09636f0f7f4611cbebb513e515bfb17425f61e72bac0fe0",
+      "unchanged": true
+    },
+    {
+      "preset": "RECONNAISSANCE",
+      "stable_alert_trace_sha256": "b1941a1f9cc90d18fb59057055dbcbf12de721b06e342598c98b85fb437d4abf",
+      "unchanged": true
+    },
+    {
+      "preset": "DATA_EXFILTRATION",
+      "stable_alert_trace_sha256": "16bab74df645aa5d02c2fbcbad7232e93927c9fba94accdc19f6b521329c97dd",
+      "unchanged": true
+    },
+    {
+      "preset": "ALL",
+      "stable_alert_trace_sha256": "ae0603f4c1d3317fc20e0c3709abc7fd05eb2a95a744df8325474b414f4d6cc1",
+      "unchanged": true
+    }
+  ]
+}

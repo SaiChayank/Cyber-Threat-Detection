@@ -117,7 +117,7 @@ def test_runtime_failure_keeps_committed_alerts_and_next_replay_starts_cleanly(t
             assert client.post('/api/replay/start', json={'scenario': 'BENIGN', 'speed': 10000}).status_code == 200
             failed = await_replay(client)
         assert failed['replay_status'] == 'failed'
-        assert failed['replay_error'] == 'controlled replay source failure'
+        assert failed['replay_error'] == 'Replay processing failed; check backend logs and retry'
         assert failed['processed'] == 1
         saved = client.get('/api/alerts').json()
         assert len(saved) == 2 and saved[0] == original
@@ -189,6 +189,6 @@ def test_cleanup_exception_is_reported_and_runs_remaining_cleanup():
         await application.run_replay(BrokenClose(), 1, lambda: cleaned.append(True))
         assert cleaned == [True]
         assert application.app.state.replay_status == 'failed'
-        assert 'controlled source close failure' in application.app.state.replay_error
+        assert application.app.state.replay_error == 'Replay cleanup failed; check backend logs before retrying'
 
     asyncio.run(exercise())

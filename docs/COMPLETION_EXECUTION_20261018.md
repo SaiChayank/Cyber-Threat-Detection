@@ -1,5 +1,12 @@
 # Remaining implementation sequence
 
+**20 October application follow-up:** [Replay error safety](REPLAY_ERROR_SAFETY_20261020.md)
+fixes raw exception disclosure with nine red-first regressions. All 593 backend
+tests, typecheck/build/nine unchanged demo traces pass; direct delivery 100/100,
+p95 243.91 ms. Original datasets/history/models/gates unchanged. Next independent
+task: actual Monitor replay-error/retry integration; research qualification remains
+blocked and no failed candidate is activated.
+
 **20 October public-source-only steering:** [Current route](PUBLIC_DATA_ROUTE_20261020.md)
 skips email-gated dataset/supplement requests; no institutional details or further
 mail are needed. Existing public inputs and frozen roles remain intact. Four

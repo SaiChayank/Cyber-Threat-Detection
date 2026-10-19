@@ -1,0 +1,13 @@
+{
+  "scoped_dod": "PASS",
+  "red_cases": 9,
+  "targeted_passes": 34,
+  "full_backend_passes": 593,
+  "backend_skips": 0,
+  "typecheck": "PASS",
+  "production_build": "PASS",
+  "demo_traces_unchanged": 9,
+  "delivery_p95_ms": 243.91010002000257,
+  "runtime_models_gates_unchanged": true,
+  "browser_integration": "NEXT_TASK"
+}

@@ -1,0 +1,60 @@
+{
+  "scope": "Deterministic controlled synthetic functional replay; no independent detection-quality or production accuracy claim.",
+  "results": [
+    {
+      "preset": "BENIGN",
+      "events": 32,
+      "alert_count": 0,
+      "verified": true
+    },
+    {
+      "preset": "DDOS",
+      "events": 32,
+      "alert_count": 2,
+      "verified": true
+    },
+    {
+      "preset": "BOTNET_C2",
+      "events": 32,
+      "alert_count": 2,
+      "verified": true
+    },
+    {
+      "preset": "DGA_DOMAINS",
+      "events": 32,
+      "alert_count": 2,
+      "verified": true
+    },
+    {
+      "preset": "DNS_TUNNELLING",
+      "events": 32,
+      "alert_count": 4,
+      "verified": true
+    },
+    {
+      "preset": "ENCRYPTED_MALWARE",
+      "events": 32,
+      "alert_count": 2,
+      "verified": true
+    },
+    {
+      "preset": "RECONNAISSANCE",
+      "events": 32,
+      "alert_count": 1,
+      "verified": true
+    },
+    {
+      "preset": "DATA_EXFILTRATION",
+      "events": 32,
+      "alert_count": 2,
+      "verified": true
+    },
+    {
+      "preset": "ALL",
+      "events": 256,
+      "alert_count": 15,
+      "verified": true
+    }
+  ],
+  "passed": true
+}

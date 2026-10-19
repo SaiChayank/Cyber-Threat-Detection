@@ -1,0 +1,35 @@
+{
+  "authorization": "20 October: user authorizes eligible implementation tasks sequentially, with checks and commits until session usage limit",
+  "baseline": "47885f4",
+  "completed": [
+    {
+      "task": "Replay error safety",
+      "dod": "PASS",
+      "report": "docs/REPLAY_ERROR_SAFETY_20261020.md",
+      "backend_tests": 593,
+      "targeted_tests": 34,
+      "new_tests": 9,
+      "typecheck": "PASS",
+      "build": "PASS",
+      "demo_traces": 9,
+      "delivery_success": 100,
+      "delivery_p95_ms": 243.91010002000257
+    }
+  ],
+  "current_task": "Monitor replay-error/retry integration",
+  "constraints": [
+    "Public datasets only; skip email-gated supplements and author follow-ups",
+    "No reserved tuning, gate changes, training or failed-candidate activation",
+    "Preserve original raw data/history/models; disposable integration stores only",
+    "Commit each verified work package; no push"
+  ],
+  "release_ready": false,
+  "checkpointed_near_usage_limit": false,
+  "last_checked_primary_used_percent": 69,
+  "ordinary_usage_allowed_at_last_check": true,
+  "next_queue": [
+    "Monitor replay-error/retry integration",
+    "Eligible dependency/security or failure-recovery work supported by measured evidence",
+    "Current scoped performance/reproducibility evidence; no final READY while quality blockers remain"
+  ]
+}

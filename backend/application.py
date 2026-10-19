@@ -127,9 +127,35 @@ def cleanup_replay_source(records, cleanup):
             cleanup()
 
 
+PUBLIC_CAPTURE_ERRORS = frozenset({
+    'PCAP requires a complete 24-byte header',
+    'Unsupported capture format; upload classic Ethernet PCAP',
+    'Only PCAP v2.4 Ethernet captures are supported',
+    'Invalid PCAP snap length',
+    'Truncated PCAP packet header',
+    'Invalid PCAP packet length',
+    'Uploaded capture contains a truncated packet',
+    'Public capture contains a truncated packet',
+})
+
+
+def public_replay_error(exc):
+    # Only these fixed parser diagnostics are intended for analyst display.
+    # Arbitrary ValueError text (including validation objects) is still private.
+    if type(exc) is ValueError and str(exc) in PUBLIC_CAPTURE_ERRORS:
+        return str(exc)
+    if isinstance(exc, sqlite3.Error):
+        return 'Replay storage unavailable; retry after storage recovery'
+    if isinstance(exc, OSError):
+        return 'Replay source unavailable; check local storage and retry'
+    return 'Replay processing failed; check backend logs and retry'
+
+
 def report_replay_cleanup_error(exc):
+    logging.getLogger(__name__).error('Replay source cleanup failed',
+                                    exc_info=(type(exc), exc, exc.__traceback__))
     app.state.replay_status = 'failed'
-    detail = f'Replay cleanup failed: {exc}'
+    detail = 'Replay cleanup failed; check backend logs before retrying'
     app.state.replay_error = f'{app.state.replay_error}; {detail}' if app.state.replay_error else detail
 
 
@@ -149,8 +175,9 @@ async def run_replay(records, speed, cleanup=None):
         app.state.replay_status = 'stopped'
         raise
     except Exception as exc:
+        logging.getLogger(__name__).exception('Replay processing failed')
         app.state.replay_status = 'failed'
-        app.state.replay_error = str(exc)
+        app.state.replay_error = public_replay_error(exc)
     finally:
         try:
             cleanup_replay_source(records, cleanup)
@@ -238,7 +265,9 @@ async def pcap(request: Request, speed: float = Query(20, ge=.1, le=10000)):
         return start_replay(records(), speed, lambda: path.unlink(missing_ok=True))
     except (ValueError, OSError) as exc:
         path.unlink(missing_ok=True)
-        raise HTTPException(422, str(exc)) from exc
+        logging.getLogger(__name__).exception('Uploaded capture validation failed')
+        status = 422 if type(exc) is ValueError and str(exc) in PUBLIC_CAPTURE_ERRORS else 503
+        raise HTTPException(status, public_replay_error(exc)) from exc
     except BaseException:
         path.unlink(missing_ok=True)
         raise
