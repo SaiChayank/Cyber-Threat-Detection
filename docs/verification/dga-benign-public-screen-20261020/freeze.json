@@ -1,0 +1,51 @@
+{
+  "date": "2026-10-20",
+  "baseline": "fe5d4c4",
+  "status": "METADATA_SCREEN_COMPLETE_FINAL_DATA_BLOCKED",
+  "files": [
+    {
+      "path": "docs/DGA_BENIGN_PUBLIC_SCREEN_20261020.md",
+      "sha256": "4fa73ac4ea9079885ed8ca39d4eb6d452642251bfb538898ee399bf7983e5cff"
+    },
+    {
+      "path": "docs/verification/dga-benign-public-screen-20261020/check_metadata.py",
+      "sha256": "d37b5836e6ccaa098e319d987878dafa9b861accb72687888f6e5f50a7a265bf"
+    },
+    {
+      "path": "docs/verification/dga-benign-public-screen-20261020/checks.json",
+      "sha256": "43fb00bebc0f842b56d8d343dbf3d9ddebd98eec946f466241bb5401cb87773d"
+    },
+    {
+      "path": "docs/verification/dga-benign-public-screen-20261020/document-identities.json",
+      "sha256": "1ad889d4157eb0a3e895fecbb098cb125e37f288278330c57f19d0f5f48d18b7"
+    },
+    {
+      "path": "docs/verification/dga-benign-public-screen-20261020/documentation-exclusions.json",
+      "sha256": "37912b33dd65041a0c88abd8cf8e3bc3b8d5fb9981b858a62ff56a4700954114"
+    },
+    {
+      "path": "docs/verification/dga-benign-public-screen-20261020/metadata-check-command.json",
+      "sha256": "453b247eb3a20bee7c29bf8e62e0c06e5ebd851b4249eb086cb10960aae1e315"
+    },
+    {
+      "path": "docs/verification/dga-benign-public-screen-20261020/metadata-check.log",
+      "sha256": "35b92e3a2a981cca5f55a20411be5cdc7e1080a2b640237a6f8017658677b1b8"
+    },
+    {
+      "path": "docs/verification/dga-benign-public-screen-20261020/PROTOCOL.md",
+      "sha256": "bbc26c6dcbba45812f8acc851c8e60177682fbdb2c5175823ba8fc46d764b64d"
+    },
+    {
+      "path": "docs/verification/dga-benign-public-screen-20261020/repository-identity.json",
+      "sha256": "81d6096f7a4a8358d59e5413b33365d3af54633e3806f352841d8fd0fbd1d2a6"
+    },
+    {
+      "path": "docs/verification/dga-benign-public-screen-20261020/retrievals.json",
+      "sha256": "43c5c5c7dddd7c296a07fe772efd10f04fbf676e543ae9ab74b646df67846fb9"
+    },
+    {
+      "path": "docs/verification/dga-benign-public-screen-20261020/retrieve_metadata.py",
+      "sha256": "28fbb31e53d379d757871c963d0268bcf7d7babaa7771e2135fc7f0e487a4a81"
+    }
+  ]
+}

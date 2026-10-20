@@ -1,5 +1,13 @@
 # Remaining implementation sequence
 
+**20 October public benign-DNS screen:** [Three new leads](DGA_BENIGN_PUBLIC_SCREEN_20261020.md)
+yield zero qualified reserved roles. CESNET is SNI-derived, user fingerprints
+lack a clean benign cohort, and UFU Do53 remains an archive/run/format/count lead.
+Thirteen document receipts, six Git blobs and 130 protected hashes verify; no
+dataset values, training or scoring. Stop this research track at its data blocker.
+Next independent task: fresh-checkout rehearsal for the current runtime fixes,
+without claiming final release or completing the unqualified detector gates.
+
 **20 October DGA pointer reconciliation:** [Existing evidence verified](DGA_STATUS_RECONCILIATION_20261020.md)
 shows alias review and provisional positive counts already completed on 14 October.
 The stale next-task pointer below is superseded. All 130 current protected hashes

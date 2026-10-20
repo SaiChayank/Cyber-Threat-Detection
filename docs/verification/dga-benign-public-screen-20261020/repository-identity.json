@@ -1,0 +1,40 @@
+{
+  "repository": "CborgesUFU/DNS-360-Dataset",
+  "revision": "1b3e59ffc3d14f41ccbf143be155cf791eb5e7ae",
+  "tree_truncated": false,
+  "documents": [
+    {
+      "path": "License. md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "104a784f8a30281d9e2ff145315c4e5059899def",
+      "size": 2755,
+      "url": "https://api.github.com/repos/CborgesUFU/DNS-360-Dataset/git/blobs/104a784f8a30281d9e2ff145315c4e5059899def"
+    },
+    {
+      "path": "Pipe/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1f35dd8a5c1a1203f52639f5d739f836654938fb",
+      "size": 6922,
+      "url": "https://api.github.com/repos/CborgesUFU/DNS-360-Dataset/git/blobs/1f35dd8a5c1a1203f52639f5d739f836654938fb"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "437fec2b28b65bf6ee3ede0a23f715e02c2fd6d5",
+      "size": 12789,
+      "url": "https://api.github.com/repos/CborgesUFU/DNS-360-Dataset/git/blobs/437fec2b28b65bf6ee3ede0a23f715e02c2fd6d5"
+    },
+    {
+      "path": "data/PCAP/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4cb5ecdea58ca1267a14dd3698b14f4b0b038f8b",
+      "size": 1939,
+      "url": "https://api.github.com/repos/CborgesUFU/DNS-360-Dataset/git/blobs/4cb5ecdea58ca1267a14dd3698b14f4b0b038f8b"
+    }
+  ],
+  "tree_entries": 657
+}

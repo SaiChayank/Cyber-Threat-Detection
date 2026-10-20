@@ -46,9 +46,26 @@
       "report": "docs/STORED_JSON_RECOVERY_20261020.md",
       "new_tests": 23,
       "backend_passes": 616
+    },
+    {
+      "task": "DGA prerequisite pointer reconciliation",
+      "dod": "PASS_WITH_DISCLOSED_HISTORICAL_CONTACT_DOCUMENT_MISMATCH",
+      "report": "docs/DGA_STATUS_RECONCILIATION_20261020.md",
+      "targeted_tests": 38,
+      "current_protected_files_matching": 130
+    },
+    {
+      "task": "Bounded public benign-DNS source screen",
+      "dod": "METADATA_SCREEN_PASS_FINAL_DATA_REQUIREMENT_NOT_MET",
+      "report": "docs/DGA_BENIGN_PUBLIC_SCREEN_20261020.md",
+      "leads": 3,
+      "qualified_reserved_roles": 0,
+      "retrievals_verified": 13,
+      "git_blobs_verified": 6,
+      "dataset_values_opened": false
     }
   ],
-  "current_task": "DGA public benign-client DNS and five-stratum provenance qualification (data blocked)",
+  "current_task": "Fresh-checkout reproducibility rehearsal of current committed runtime fixes",
   "last_task": {
     "task": "DGA task-pointer and historical prerequisite reconciliation",
     "report": "docs/DGA_STATUS_RECONCILIATION_20261020.md",
@@ -69,12 +86,13 @@
   ],
   "release_ready": false,
   "checkpointed_near_usage_limit": false,
-  "last_checked_primary_used_percent": 90,
+  "last_checked_primary_used_percent": 19,
   "ordinary_usage_allowed_at_last_check": true,
   "usage_limit_interruption_pending": false,
   "blocked_by_data_not_usage_limits": true,
+  "research_track_disposition": "DGA and other unqualified research roles stay data/provenance blocked; independent application rehearsal may proceed",
   "next_queue": [
-    "Public original-name benign-client DNS and legitimate-stratum provenance before data values; skip email-gated supplements",
+    "Current-source fresh checkout, isolated installation and README demo rehearsal",
     "Only data-qualified next steps; no training/scoring or failed activation"
   ]
 }

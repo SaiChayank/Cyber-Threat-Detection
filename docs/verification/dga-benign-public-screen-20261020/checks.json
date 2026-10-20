@@ -1,0 +1,12 @@
+{
+  "status": "PASS_METADATA_IDENTITY_AND_PRESERVATION",
+  "retrievals_verified": 13,
+  "git_document_identities_verified": 6,
+  "current_protected_files_matching": 130,
+  "dataset_values_opened": false,
+  "bulk_datasets_downloaded": 0,
+  "new_evaluation_or_training": false,
+  "qualified_reserved_roles": 0,
+  "final_dga_ready": false,
+  "exposure_limit": "Global historical/dynamic and prior cached-search completeness remains unresolved"
+}

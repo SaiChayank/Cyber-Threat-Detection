@@ -1,0 +1,9 @@
+{
+  "command": [
+    "C:\\Users\\Saich\\OneDrive\\Desktop\\PS26145\\.venv\\Scripts\\python.exe",
+    "-B",
+    "C:\\Users\\Saich\\OneDrive\\Desktop\\PS26145\\docs\\verification\\dga-benign-public-screen-20261020\\check_metadata.py"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 0.17554170000221347
+}
