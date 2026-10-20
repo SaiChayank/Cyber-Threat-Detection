@@ -1,0 +1,12 @@
+{
+  "command": [
+    "C:\\Users\\Saich\\AppData\\Local\\Temp\\univect-clean-20261020-f380837\\.venv\\Scripts\\python.exe",
+    "-m",
+    "benchmarks.run",
+    "--events",
+    "20000"
+  ],
+  "cwd": "C:\\Users\\Saich\\AppData\\Local\\Temp\\univect-clean-20261020-f380837",
+  "exit_code": 0,
+  "elapsed_seconds": 5.168224199998804
+}

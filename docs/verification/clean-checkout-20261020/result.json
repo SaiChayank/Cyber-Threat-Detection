@@ -1,0 +1,25 @@
+{
+  "status": "PASS_CURRENT_SOURCE_REPRODUCTION_REHEARSAL",
+  "baseline": "f380837",
+  "clean_backend_passes": 606,
+  "optional_skip_reports": 3,
+  "source_full_suite_passes_previously": 616,
+  "typecheck": true,
+  "production_build": true,
+  "model_hashes": 7,
+  "demo_records": 15,
+  "demo_classes": 7,
+  "first_observed_alert_position": {
+    "processed": 39,
+    "status": "running",
+    "alerts": 1
+  },
+  "restart_exact_records": 15,
+  "resumed_records": 8,
+  "console_errors": 0,
+  "console_warnings": 0,
+  "undocumented_setup_steps": [],
+  "code_or_dependency_changes": false,
+  "release_ready": false,
+  "limitation": "Windows/Python 3.13.5/Node 22.14.0 rehearsal; research data and detector quality gates remain unqualified"
+}

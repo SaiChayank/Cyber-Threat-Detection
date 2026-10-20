@@ -1,0 +1,14 @@
+{
+  "command": [
+    "git",
+    "clone",
+    "--no-local",
+    "--no-hardlinks",
+    "--no-checkout",
+    "C:\\Users\\Saich\\OneDrive\\Desktop\\PS26145",
+    "C:\\Users\\Saich\\AppData\\Local\\Temp\\univect-clean-20261020-f380837"
+  ],
+  "cwd": "C:\\Users\\Saich\\OneDrive\\Desktop\\PS26145",
+  "exit_code": 0,
+  "elapsed_seconds": 5.301412099997833
+}

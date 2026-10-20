@@ -1,5 +1,14 @@
 # Remaining implementation sequence
 
+**20 October current-source reproduction:** [Fresh checkout `f380837`](CLEAN_CHECKOUT_20261020.md)
+passes installation, 606 base backend tests/three optional skip reports,
+typecheck/build/nine demo traces and actual Monitor replay. Fifteen exact alerts
+survive restart; resume after 7 returns eight exact records. Core 4,256.97/sec,
+p95 0.8938 ms; direct delivery 100/100/p95 246.11 ms; all 130 current pins match.
+No setup defect or runtime change. Next: frontend malformed-alert contract
+integration, changing passed code only if a real boundary defect is demonstrated.
+Research data gates and final release remain unresolved.
+
 **20 October public benign-DNS screen:** [Three new leads](DGA_BENIGN_PUBLIC_SCREEN_20261020.md)
 yield zero qualified reserved roles. CESNET is SNI-derived, user fingerprints
 lack a clean benign cohort, and UFU Do53 remains an archive/run/format/count lead.

@@ -1,0 +1,13 @@
+{
+  "owned_development_pid": 20768,
+  "owned_production_pid": 30632,
+  "owned_restart_pid": 15084,
+  "owned_ports_released": [
+    18420,
+    13420
+  ],
+  "owned_tab_closed": true,
+  "retained_checkout": "C:\\Users\\Saich\\AppData\\Local\\Temp\\univect-clean-20261020-f380837",
+  "retained_history": true,
+  "unrelated_services_stopped": false
+}

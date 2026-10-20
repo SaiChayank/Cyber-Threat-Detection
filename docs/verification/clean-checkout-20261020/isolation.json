@@ -1,0 +1,12 @@
+{
+  "checkout": "C:\\Users\\Saich\\AppData\\Local\\Temp\\univect-clean-20261020-f380837",
+  "baseline": "f380837",
+  "initially_absent": [
+    ".venv",
+    "node_modules",
+    ".env",
+    "data/alerts.sqlite3",
+    "data/raw"
+  ],
+  "copied_developer_environment": false
+}

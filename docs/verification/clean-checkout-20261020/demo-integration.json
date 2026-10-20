@@ -1,0 +1,1192 @@
+{
+  "telemetry": {
+    "processed": 256,
+    "late_events": 0,
+    "state_evictions": 0,
+    "active_sources": 33,
+    "dga_detector": "conservative-lexical-guard",
+    "dga_candidate_enabled": false,
+    "dns_tunnel_candidate_enabled": false,
+    "rate_window_resolution_ms": 1000,
+    "source_entropy_partial": false,
+    "processing_p95_ms": 0.6442999983846676,
+    "replay_status": "complete",
+    "replay_error": null,
+    "alerts_by_class": {
+      "BOTNET_C2": 2,
+      "DATA_EXFILTRATION": 2,
+      "DDOS": 2,
+      "DGA_DOMAINS": 4,
+      "DNS_TUNNELLING": 2,
+      "ENCRYPTED_MALWARE": 2,
+      "RECONNAISSANCE": 1
+    },
+    "throughput_target": 2000,
+    "confidence_note": "Model score or heuristic strength; not real-world calibrated"
+  },
+  "alerts": [
+    {
+      "timestamp": 1700000126530.026,
+      "flow_id": "f391a8e471f890e1ef39b3b96a0fffdb",
+      "threat_class": "DDOS",
+      "confidence_score": 1.0,
+      "severity": "CRITICAL",
+      "supporting_evidence": "packet_rate=2019.3; byte_rate=91913.3; source_entropy=2.2634; syn_fraction=0.7167; source_entropy_partial=False; rate_window_seconds=10; rate_window_resolution_ms=1000; global_packet_rate=2019.3; syn_fraction_basis=declared_summary_counts; source_count_lower_bound=5; syn_target=destination_tcp; confidence_kind=synthetic-trained model posterior; window_partial=True",
+      "alert_id": "4c3af3aa-be48-40ce-a7e2-e92fed89f069",
+      "src_ip": "10.1.0.5",
+      "dst_ip": "198.51.100.20",
+      "src_port": 49152,
+      "dst_port": 443,
+      "protocol": 6,
+      "detection_source": "HYBRID",
+      "occurrence_count": 1,
+      "created_at_ms": 1792496937129.8862,
+      "raw_evidence_metrics": {
+        "packet_rate": 2019.3,
+        "byte_rate": 91913.3,
+        "source_entropy": 2.2634224781673495,
+        "syn_fraction": 0.7167335215173575,
+        "source_entropy_partial": false,
+        "rate_window_seconds": 10,
+        "rate_window_resolution_ms": 1000,
+        "global_packet_rate": 2019.3,
+        "syn_fraction_basis": "declared_summary_counts",
+        "source_count_lower_bound": 5,
+        "syn_target": "destination_tcp",
+        "confidence_kind": "synthetic-trained model posterior",
+        "window_partial": true
+      },
+      "sequence": 1
+    },
+    {
+      "timestamp": 1700000156766.8416,
+      "flow_id": "8652f1fa4f4326b1bec21fd534f76a69",
+      "threat_class": "DDOS",
+      "confidence_score": 1.0,
+      "severity": "CRITICAL",
+      "supporting_evidence": "packet_rate=3681.5; byte_rate=190416.3; source_entropy=3.4134; syn_fraction=0.9085; source_entropy_partial=False; rate_window_seconds=10; rate_window_resolution_ms=1000; global_packet_rate=3681.5; syn_fraction_basis=declared_summary_counts; source_count_lower_bound=11; syn_target=destination_tcp; confidence_kind=synthetic-trained model posterior; window_partial=True",
+      "alert_id": "1c2daeeb-92e6-41ef-b98c-bfa4c4019254",
+      "src_ip": "10.1.3.32",
+      "dst_ip": "198.51.100.20",
+      "src_port": 49152,
+      "dst_port": 443,
+      "protocol": 6,
+      "detection_source": "HYBRID",
+      "occurrence_count": 1,
+      "created_at_ms": 1792496938866.3542,
+      "raw_evidence_metrics": {
+        "packet_rate": 3681.5,
+        "byte_rate": 190416.3,
+        "source_entropy": 3.4134196077105567,
+        "syn_fraction": 0.9084883878853728,
+        "source_entropy_partial": false,
+        "rate_window_seconds": 10,
+        "rate_window_resolution_ms": 1000,
+        "global_packet_rate": 3681.5,
+        "syn_fraction_basis": "declared_summary_counts",
+        "source_count_lower_bound": 11,
+        "syn_target": "destination_tcp",
+        "confidence_kind": "synthetic-trained model posterior",
+        "window_partial": true
+      },
+      "sequence": 2
+    },
+    {
+      "timestamp": 1700000260007.266,
+      "flow_id": "71d366ce822238cd3adf5587b9d54f86",
+      "threat_class": "BOTNET_C2",
+      "confidence_score": 1.0,
+      "severity": "HIGH",
+      "supporting_evidence": "iat_mean=2.5023; iat_cv=0.007; history_count=8; destination_count=1; confidence_kind=synthetic-trained model posterior; window_partial=True",
+      "alert_id": "cce317d7-9148-472a-9f8d-ec823a78a502",
+      "src_ip": "10.0.0.10",
+      "dst_ip": "198.51.100.20",
+      "src_port": 49152,
+      "dst_port": 443,
+      "protocol": 6,
+      "detection_source": "HYBRID",
+      "occurrence_count": 1,
+      "created_at_ms": 1792496944107.2085,
+      "raw_evidence_metrics": {
+        "iat_mean": 2.5022531040736604,
+        "iat_cv": 0.007015435659248617,
+        "history_count": 8,
+        "destination_count": 1,
+        "confidence_kind": "synthetic-trained model posterior",
+        "window_partial": true
+      },
+      "sequence": 3
+    },
+    {
+      "timestamp": 1700000290026.6443,
+      "flow_id": "71d366ce822238cd3adf5587b9d54f86",
+      "threat_class": "BOTNET_C2",
+      "confidence_score": 1.0,
+      "severity": "HIGH",
+      "supporting_evidence": "iat_mean=2.5018; iat_cv=0.0082; history_count=20; destination_count=1; confidence_kind=synthetic-trained model posterior; window_partial=True",
+      "alert_id": "9b481d7a-1d68-4f3b-bd3b-55fe1bd418a2",
+      "src_ip": "10.0.0.10",
+      "dst_ip": "198.51.100.20",
+      "src_port": 49152,
+      "dst_port": 443,
+      "protocol": 6,
+      "detection_source": "HYBRID",
+      "occurrence_count": 1,
+      "created_at_ms": 1792496945721.3613,
+      "raw_evidence_metrics": {
+        "iat_mean": 2.5018499948601973,
+        "iat_cv": 0.00822944492000567,
+        "history_count": 20,
+        "destination_count": 1,
+        "confidence_kind": "synthetic-trained model posterior",
+        "window_partial": true
+      },
+      "sequence": 4
+    },
+    {
+      "timestamp": 1700000361960.1953,
+      "flow_id": "681b46e77ac7cf0072ac02c94978cd67",
+      "threat_class": "DGA_DOMAINS",
+      "confidence_score": 1.0,
+      "severity": "MEDIUM",
+      "supporting_evidence": "domain_entropy=4.2084; domain_length=32; domain_label_length=27; bigram_surprise=0.8846; confidence_kind=synthetic-trained model posterior; observed_dns_name=nehy3vh5fiobcogi7sl00opfxmn.test; window_partial=True",
+      "alert_id": "0fa34917-bd87-467b-a077-4f15fb9f050f",
+      "src_ip": "10.0.0.10",
+      "dst_ip": "198.51.100.20",
+      "src_port": 49152,
+      "dst_port": 53,
+      "protocol": 17,
+      "detection_source": "HYBRID",
+      "occurrence_count": 1,
+      "created_at_ms": 1792496949454.5408,
+      "raw_evidence_metrics": {
+        "domain_entropy": 4.208410187268525,
+        "domain_length": 32,
+        "domain_label_length": 27,
+        "bigram_surprise": 0.8846153846153846,
+        "confidence_kind": "synthetic-trained model posterior",
+        "observed_dns_name": "nehy3vh5fiobcogi7sl00opfxmn.test",
+        "window_partial": true
+      },
+      "sequence": 5
+    },
+    {
+      "timestamp": 1700000392020.969,
+      "flow_id": "681b46e77ac7cf0072ac02c94978cd67",
+      "threat_class": "DGA_DOMAINS",
+      "confidence_score": 1.0,
+      "severity": "MEDIUM",
+      "supporting_evidence": "domain_entropy=3.8492; domain_length=28; domain_label_length=23; bigram_surprise=0.8182; confidence_kind=synthetic-trained model posterior; observed_dns_name=bcvze3esisscfuajf9eaolk.test; window_partial=True",
+      "alert_id": "fdef9c3d-5dad-4b89-8aff-3b1814f6f19f",
+      "src_ip": "10.0.0.10",
+      "dst_ip": "198.51.100.20",
+      "src_port": 49152,
+      "dst_port": 53,
+      "protocol": 17,
+      "detection_source": "HYBRID",
+      "occurrence_count": 1,
+      "created_at_ms": 1792496951156.8115,
+      "raw_evidence_metrics": {
+        "domain_entropy": 3.8492239123906247,
+        "domain_length": 28,
+        "domain_label_length": 23,
+        "bigram_surprise": 0.8181818181818182,
+        "confidence_kind": "synthetic-trained model posterior",
+        "observed_dns_name": "bcvze3esisscfuajf9eaolk.test",
+        "window_partial": true
+      },
+      "sequence": 6
+    },
+    {
+      "timestamp": 1700000481923.9258,
+      "flow_id": "2c13dbc296b5d132aa2d06bcf146e345",
+      "threat_class": "DNS_TUNNELLING",
+      "confidence_score": 1.0,
+      "severity": "MEDIUM",
+      "supporting_evidence": "domain_length=64; domain_label_length=52; domain_entropy=3.7767; txt_record=1.0; confidence_kind=synthetic-trained model posterior; window_partial=True",
+      "alert_id": "fb5ee968-8438-4578-a678-1cab6b9be683",
+      "src_ip": "10.0.0.10",
+      "dst_ip": "198.51.100.20",
+      "src_port": 49152,
+      "dst_port": 53,
+      "protocol": 17,
+      "detection_source": "HYBRID",
+      "occurrence_count": 1,
+      "created_at_ms": 1792496955712.1316,
+      "raw_evidence_metrics": {
+        "domain_length": 64,
+        "domain_label_length": 52,
+        "domain_entropy": 3.776746932333265,
+        "txt_record": 1.0,
+        "confidence_kind": "synthetic-trained model posterior",
+        "window_partial": true
+      },
+      "sequence": 7
+    },
+    {
+      "timestamp": 1700000481923.9258,
+      "flow_id": "2c13dbc296b5d132aa2d06bcf146e345",
+      "threat_class": "DGA_DOMAINS",
+      "confidence_score": 0.8,
+      "severity": "MEDIUM",
+      "supporting_evidence": "domain_entropy=3.7767; domain_length=64; domain_label_length=52; bigram_surprise=0.9216; confidence_kind=heuristic strength; observed_dns_name=64aeafdedc45b0264f37b8812fbdbdf274c50db89e1effb6be8f.tunnel.test; window_partial=True",
+      "alert_id": "3b227320-6962-4b5a-8241-91cec533aa91",
+      "src_ip": "10.0.0.10",
+      "dst_ip": "198.51.100.20",
+      "src_port": 49152,
+      "dst_port": 53,
+      "protocol": 17,
+      "detection_source": "RULE",
+      "occurrence_count": 1,
+      "created_at_ms": 1792496955712.1516,
+      "raw_evidence_metrics": {
+        "domain_entropy": 3.776746932333265,
+        "domain_length": 64,
+        "domain_label_length": 52,
+        "bigram_surprise": 0.9215686274509803,
+        "confidence_kind": "heuristic strength",
+        "observed_dns_name": "64aeafdedc45b0264f37b8812fbdbdf274c50db89e1effb6be8f.tunnel.test",
+        "window_partial": true
+      },
+      "sequence": 8
+    },
+    {
+      "timestamp": 1700000512032.6365,
+      "flow_id": "2c13dbc296b5d132aa2d06bcf146e345",
+      "threat_class": "DNS_TUNNELLING",
+      "confidence_score": 1.0,
+      "severity": "MEDIUM",
+      "supporting_evidence": "domain_length=64; domain_label_length=52; domain_entropy=3.7803; txt_record=1.0; confidence_kind=synthetic-trained model posterior; window_partial=True",
+      "alert_id": "2972fabe-3854-4cf4-a4b4-50c0415e23ed",
+      "src_ip": "10.0.0.10",
+      "dst_ip": "198.51.100.20",
+      "src_port": 49152,
+      "dst_port": 53,
+      "protocol": 17,
+      "detection_source": "HYBRID",
+      "occurrence_count": 1,
+      "created_at_ms": 1792496957448.6753,
+      "raw_evidence_metrics": {
+        "domain_length": 64,
+        "domain_label_length": 52,
+        "domain_entropy": 3.7802768059879326,
+        "txt_record": 1.0,
+        "confidence_kind": "synthetic-trained model posterior",
+        "window_partial": true
+      },
+      "sequence": 9
+    },
+    {
+      "timestamp": 1700000512032.6365,
+      "flow_id": "2c13dbc296b5d132aa2d06bcf146e345",
+      "threat_class": "DGA_DOMAINS",
+      "confidence_score": 0.8,
+      "severity": "MEDIUM",
+      "supporting_evidence": "domain_entropy=3.7803; domain_length=64; domain_label_length=52; bigram_surprise=0.9804; confidence_kind=heuristic strength; observed_dns_name=ecce88fc8d9eff2781f3a74a6e7a1d85331b15bb3b6321717c69.tunnel.test; window_partial=True",
+      "alert_id": "36d7d503-35ba-4621-8439-fb4440f99e28",
+      "src_ip": "10.0.0.10",
+      "dst_ip": "198.51.100.20",
+      "src_port": 49152,
+      "dst_port": 53,
+      "protocol": 17,
+      "detection_source": "RULE",
+      "occurrence_count": 1,
+      "created_at_ms": 1792496957448.6995,
+      "raw_evidence_metrics": {
+        "domain_entropy": 3.7802768059879326,
+        "domain_length": 64,
+        "domain_label_length": 52,
+        "bigram_surprise": 0.9803921568627451,
+        "confidence_kind": "heuristic strength",
+        "observed_dns_name": "ecce88fc8d9eff2781f3a74a6e7a1d85331b15bb3b6321717c69.tunnel.test",
+        "window_partial": true
+      },
+      "sequence": 10
+    },
+    {
+      "timestamp": 1700000602864.0586,
+      "flow_id": "1b7e584df3b6d80a735b707a9c0a8167",
+      "threat_class": "ENCRYPTED_MALWARE",
+      "confidence_score": 0.894,
+      "severity": "HIGH",
+      "supporting_evidence": "encrypted=1.0; fingerprint_risk=1.0; size_cv=0.0019; iat_cv=0.0; confidence_kind=synthetic-trained model posterior; window_partial=True; metadata-only suspicion; lab fingerprint, not proof of malware",
+      "alert_id": "a750d0c1-1960-4255-9735-9400f473a43f",
+      "src_ip": "10.0.0.10",
+      "dst_ip": "198.51.100.20",
+      "src_port": 49152,
+      "dst_port": 443,
+      "protocol": 6,
+      "detection_source": "HYBRID",
+      "occurrence_count": 1,
+      "created_at_ms": 1792496962037.3547,
+      "raw_evidence_metrics": {
+        "encrypted": 1.0,
+        "fingerprint_risk": 1.0,
+        "size_cv": 0.0019230769230769232,
+        "iat_cv": 0.0,
+        "confidence_kind": "synthetic-trained model posterior",
+        "window_partial": true
+      },
+      "sequence": 11
+    },
+    {
+      "timestamp": 1700000633888.1648,
+      "flow_id": "1b7e584df3b6d80a735b707a9c0a8167",
+      "threat_class": "ENCRYPTED_MALWARE",
+      "confidence_score": 1.0,
+      "severity": "HIGH",
+      "supporting_evidence": "encrypted=1.0; fingerprint_risk=1.0; size_cv=0.0124; iat_cv=0.4653; confidence_kind=synthetic-trained model posterior; window_partial=True; metadata-only suspicion; lab fingerprint, not proof of malware",
+      "alert_id": "eb5947d2-6f87-40eb-8305-f5e55669e567",
+      "src_ip": "10.0.0.10",
+      "dst_ip": "198.51.100.20",
+      "src_port": 49152,
+      "dst_port": 443,
+      "protocol": 6,
+      "detection_source": "HYBRID",
+      "occurrence_count": 1,
+      "created_at_ms": 1792496963808.9456,
+      "raw_evidence_metrics": {
+        "encrypted": 1.0,
+        "fingerprint_risk": 1.0,
+        "size_cv": 0.012429880740533151,
+        "iat_cv": 0.4653164245711866,
+        "confidence_kind": "synthetic-trained model posterior",
+        "window_partial": true
+      },
+      "sequence": 12
+    },
+    {
+      "timestamp": 1700000736243.0278,
+      "flow_id": "2a820cefcc5451caf90d39d4d7283f68",
+      "threat_class": "RECONNAISSANCE",
+      "confidence_score": 1.0,
+      "severity": "MEDIUM",
+      "supporting_evidence": "destination_count=10; port_count=10; syn_fraction=1.0; confidence_kind=synthetic-trained model posterior; window_partial=True",
+      "alert_id": "9f6efadc-8b13-4eee-aad2-112855e2e9e4",
+      "src_ip": "10.0.0.10",
+      "dst_ip": "198.51.100.14",
+      "src_port": 49152,
+      "dst_port": 1013,
+      "protocol": 6,
+      "detection_source": "ML",
+      "occurrence_count": 1,
+      "created_at_ms": 1792496969096.9277,
+      "raw_evidence_metrics": {
+        "destination_count": 10,
+        "port_count": 10,
+        "syn_fraction": 1.0,
+        "confidence_kind": "synthetic-trained model posterior",
+        "window_partial": true
+      },
+      "sequence": 13
+    },
+    {
+      "timestamp": 1700000840568.3157,
+      "flow_id": "a82678326ad595f204b795978a8ba900",
+      "threat_class": "DATA_EXFILTRATION",
+      "confidence_score": 1.0,
+      "severity": "HIGH",
+      "supporting_evidence": "egress_bytes=2607107; observed_byte_ratio=5523.5318; reverse_available=1.0; source_forward_byte_rate_10s=260710.7; source_byte_window_resolution_ms=1000; egress_basis=observed_source_forward_bytes_60s; observed_byte_ratio_status=finite_observed_ratio; confidence_kind=synthetic-trained model posterior; window_partial=True; behavior consistent with possible exfiltration; content and intent unverified",
+      "alert_id": "1adad771-a75c-4c34-ac39-fb9dbd787db9",
+      "src_ip": "10.0.0.10",
+      "dst_ip": "198.51.100.20",
+      "src_port": 49152,
+      "dst_port": 443,
+      "protocol": 6,
+      "detection_source": "ML",
+      "occurrence_count": 1,
+      "created_at_ms": 1792496974464.6536,
+      "raw_evidence_metrics": {
+        "egress_bytes": 2607107,
+        "observed_byte_ratio": 5523.531779661017,
+        "reverse_available": 1.0,
+        "source_forward_byte_rate_10s": 260710.7,
+        "source_byte_window_resolution_ms": 1000,
+        "egress_basis": "observed_source_forward_bytes_60s",
+        "observed_byte_ratio_status": "finite_observed_ratio",
+        "confidence_kind": "synthetic-trained model posterior",
+        "window_partial": true
+      },
+      "sequence": 14
+    },
+    {
+      "timestamp": 1700000870958.7927,
+      "flow_id": "a82678326ad595f204b795978a8ba900",
+      "threat_class": "DATA_EXFILTRATION",
+      "confidence_score": 1.0,
+      "severity": "HIGH",
+      "supporting_evidence": "egress_bytes=64225303; observed_byte_ratio=4944.7494; reverse_available=1.0; source_forward_byte_rate_10s=1762289.2; source_byte_window_resolution_ms=1000; egress_basis=observed_source_forward_bytes_60s; observed_byte_ratio_status=finite_observed_ratio; confidence_kind=synthetic-trained model posterior; window_partial=True; behavior consistent with possible exfiltration; content and intent unverified",
+      "alert_id": "6a7ff079-218a-4f51-92a7-fa292795e912",
+      "src_ip": "10.0.0.10",
+      "dst_ip": "198.51.100.20",
+      "src_port": 49152,
+      "dst_port": 443,
+      "protocol": 6,
+      "detection_source": "HYBRID",
+      "occurrence_count": 1,
+      "created_at_ms": 1792496976244.3572,
+      "raw_evidence_metrics": {
+        "egress_bytes": 64225303,
+        "observed_byte_ratio": 4944.7494356659145,
+        "reverse_available": 1.0,
+        "source_forward_byte_rate_10s": 1762289.2,
+        "source_byte_window_resolution_ms": 1000,
+        "egress_basis": "observed_source_forward_bytes_60s",
+        "observed_byte_ratio_status": "finite_observed_ratio",
+        "confidence_kind": "synthetic-trained model posterior",
+        "window_partial": true
+      },
+      "sequence": 15
+    }
+  ],
+  "sse_matches_api_and_sqlite": true,
+  "unique_alert_ids": 15,
+  "incremental_positions": [
+    {
+      "processed": 39,
+      "status": "running",
+      "alerts": 1
+    },
+    {
+      "processed": 43,
+      "status": "running",
+      "alerts": 1
+    },
+    {
+      "processed": 47,
+      "status": "running",
+      "alerts": 1
+    },
+    {
+      "processed": 50,
+      "status": "running",
+      "alerts": 1
+    },
+    {
+      "processed": 54,
+      "status": "running",
+      "alerts": 1
+    },
+    {
+      "processed": 58,
+      "status": "running",
+      "alerts": 1
+    },
+    {
+      "processed": 63,
+      "status": "running",
+      "alerts": 1
+    },
+    {
+      "processed": 64,
+      "status": "running",
+      "alerts": 2
+    },
+    {
+      "processed": 64,
+      "status": "running",
+      "alerts": 2
+    },
+    {
+      "processed": 64,
+      "status": "running",
+      "alerts": 2
+    },
+    {
+      "processed": 64,
+      "status": "running",
+      "alerts": 2
+    },
+    {
+      "processed": 64,
+      "status": "running",
+      "alerts": 2
+    },
+    {
+      "processed": 64,
+      "status": "running",
+      "alerts": 2
+    },
+    {
+      "processed": 64,
+      "status": "running",
+      "alerts": 2
+    },
+    {
+      "processed": 64,
+      "status": "running",
+      "alerts": 2
+    },
+    {
+      "processed": 64,
+      "status": "running",
+      "alerts": 2
+    },
+    {
+      "processed": 64,
+      "status": "running",
+      "alerts": 2
+    },
+    {
+      "processed": 64,
+      "status": "running",
+      "alerts": 2
+    },
+    {
+      "processed": 64,
+      "status": "running",
+      "alerts": 2
+    },
+    {
+      "processed": 64,
+      "status": "running",
+      "alerts": 2
+    },
+    {
+      "processed": 64,
+      "status": "running",
+      "alerts": 2
+    },
+    {
+      "processed": 64,
+      "status": "running",
+      "alerts": 2
+    },
+    {
+      "processed": 64,
+      "status": "running",
+      "alerts": 2
+    },
+    {
+      "processed": 66,
+      "status": "running",
+      "alerts": 2
+    },
+    {
+      "processed": 68,
+      "status": "running",
+      "alerts": 2
+    },
+    {
+      "processed": 70,
+      "status": "running",
+      "alerts": 2
+    },
+    {
+      "processed": 72,
+      "status": "running",
+      "alerts": 3
+    },
+    {
+      "processed": 74,
+      "status": "running",
+      "alerts": 3
+    },
+    {
+      "processed": 76,
+      "status": "running",
+      "alerts": 3
+    },
+    {
+      "processed": 78,
+      "status": "running",
+      "alerts": 3
+    },
+    {
+      "processed": 80,
+      "status": "running",
+      "alerts": 3
+    },
+    {
+      "processed": 82,
+      "status": "running",
+      "alerts": 3
+    },
+    {
+      "processed": 84,
+      "status": "running",
+      "alerts": 4
+    },
+    {
+      "processed": 86,
+      "status": "running",
+      "alerts": 4
+    },
+    {
+      "processed": 88,
+      "status": "running",
+      "alerts": 4
+    },
+    {
+      "processed": 90,
+      "status": "running",
+      "alerts": 4
+    },
+    {
+      "processed": 92,
+      "status": "running",
+      "alerts": 4
+    },
+    {
+      "processed": 94,
+      "status": "running",
+      "alerts": 4
+    },
+    {
+      "processed": 96,
+      "status": "running",
+      "alerts": 4
+    },
+    {
+      "processed": 96,
+      "status": "running",
+      "alerts": 4
+    },
+    {
+      "processed": 96,
+      "status": "running",
+      "alerts": 4
+    },
+    {
+      "processed": 96,
+      "status": "running",
+      "alerts": 4
+    },
+    {
+      "processed": 96,
+      "status": "running",
+      "alerts": 4
+    },
+    {
+      "processed": 96,
+      "status": "running",
+      "alerts": 4
+    },
+    {
+      "processed": 96,
+      "status": "running",
+      "alerts": 4
+    },
+    {
+      "processed": 96,
+      "status": "running",
+      "alerts": 4
+    },
+    {
+      "processed": 97,
+      "status": "running",
+      "alerts": 5
+    },
+    {
+      "processed": 102,
+      "status": "running",
+      "alerts": 5
+    },
+    {
+      "processed": 105,
+      "status": "running",
+      "alerts": 5
+    },
+    {
+      "processed": 110,
+      "status": "running",
+      "alerts": 5
+    },
+    {
+      "processed": 114,
+      "status": "running",
+      "alerts": 5
+    },
+    {
+      "processed": 117,
+      "status": "running",
+      "alerts": 5
+    },
+    {
+      "processed": 121,
+      "status": "running",
+      "alerts": 5
+    },
+    {
+      "processed": 124,
+      "status": "running",
+      "alerts": 6
+    },
+    {
+      "processed": 128,
+      "status": "running",
+      "alerts": 6
+    },
+    {
+      "processed": 128,
+      "status": "running",
+      "alerts": 6
+    },
+    {
+      "processed": 128,
+      "status": "running",
+      "alerts": 6
+    },
+    {
+      "processed": 128,
+      "status": "running",
+      "alerts": 6
+    },
+    {
+      "processed": 128,
+      "status": "running",
+      "alerts": 6
+    },
+    {
+      "processed": 128,
+      "status": "running",
+      "alerts": 6
+    },
+    {
+      "processed": 128,
+      "status": "running",
+      "alerts": 6
+    },
+    {
+      "processed": 128,
+      "status": "running",
+      "alerts": 6
+    },
+    {
+      "processed": 128,
+      "status": "running",
+      "alerts": 6
+    },
+    {
+      "processed": 128,
+      "status": "running",
+      "alerts": 6
+    },
+    {
+      "processed": 128,
+      "status": "running",
+      "alerts": 6
+    },
+    {
+      "processed": 128,
+      "status": "running",
+      "alerts": 6
+    },
+    {
+      "processed": 128,
+      "status": "running",
+      "alerts": 6
+    },
+    {
+      "processed": 128,
+      "status": "running",
+      "alerts": 6
+    },
+    {
+      "processed": 128,
+      "status": "running",
+      "alerts": 6
+    },
+    {
+      "processed": 128,
+      "status": "running",
+      "alerts": 6
+    },
+    {
+      "processed": 132,
+      "status": "running",
+      "alerts": 8
+    },
+    {
+      "processed": 136,
+      "status": "running",
+      "alerts": 8
+    },
+    {
+      "processed": 140,
+      "status": "running",
+      "alerts": 8
+    },
+    {
+      "processed": 144,
+      "status": "running",
+      "alerts": 8
+    },
+    {
+      "processed": 149,
+      "status": "running",
+      "alerts": 8
+    },
+    {
+      "processed": 153,
+      "status": "running",
+      "alerts": 8
+    },
+    {
+      "processed": 157,
+      "status": "running",
+      "alerts": 10
+    },
+    {
+      "processed": 160,
+      "status": "running",
+      "alerts": 10
+    },
+    {
+      "processed": 160,
+      "status": "running",
+      "alerts": 10
+    },
+    {
+      "processed": 160,
+      "status": "running",
+      "alerts": 10
+    },
+    {
+      "processed": 160,
+      "status": "running",
+      "alerts": 10
+    },
+    {
+      "processed": 160,
+      "status": "running",
+      "alerts": 10
+    },
+    {
+      "processed": 160,
+      "status": "running",
+      "alerts": 10
+    },
+    {
+      "processed": 160,
+      "status": "running",
+      "alerts": 10
+    },
+    {
+      "processed": 160,
+      "status": "running",
+      "alerts": 10
+    },
+    {
+      "processed": 160,
+      "status": "running",
+      "alerts": 10
+    },
+    {
+      "processed": 160,
+      "status": "running",
+      "alerts": 10
+    },
+    {
+      "processed": 160,
+      "status": "running",
+      "alerts": 10
+    },
+    {
+      "processed": 160,
+      "status": "running",
+      "alerts": 10
+    },
+    {
+      "processed": 160,
+      "status": "running",
+      "alerts": 10
+    },
+    {
+      "processed": 160,
+      "status": "running",
+      "alerts": 10
+    },
+    {
+      "processed": 160,
+      "status": "running",
+      "alerts": 10
+    },
+    {
+      "processed": 160,
+      "status": "running",
+      "alerts": 10
+    },
+    {
+      "processed": 161,
+      "status": "running",
+      "alerts": 10
+    },
+    {
+      "processed": 165,
+      "status": "running",
+      "alerts": 11
+    },
+    {
+      "processed": 167,
+      "status": "running",
+      "alerts": 11
+    },
+    {
+      "processed": 172,
+      "status": "running",
+      "alerts": 11
+    },
+    {
+      "processed": 176,
+      "status": "running",
+      "alerts": 11
+    },
+    {
+      "processed": 181,
+      "status": "running",
+      "alerts": 11
+    },
+    {
+      "processed": 186,
+      "status": "running",
+      "alerts": 11
+    },
+    {
+      "processed": 190,
+      "status": "running",
+      "alerts": 12
+    },
+    {
+      "processed": 192,
+      "status": "running",
+      "alerts": 12
+    },
+    {
+      "processed": 192,
+      "status": "running",
+      "alerts": 12
+    },
+    {
+      "processed": 192,
+      "status": "running",
+      "alerts": 12
+    },
+    {
+      "processed": 192,
+      "status": "running",
+      "alerts": 12
+    },
+    {
+      "processed": 192,
+      "status": "running",
+      "alerts": 12
+    },
+    {
+      "processed": 192,
+      "status": "running",
+      "alerts": 12
+    },
+    {
+      "processed": 192,
+      "status": "running",
+      "alerts": 12
+    },
+    {
+      "processed": 192,
+      "status": "running",
+      "alerts": 12
+    },
+    {
+      "processed": 192,
+      "status": "running",
+      "alerts": 12
+    },
+    {
+      "processed": 192,
+      "status": "running",
+      "alerts": 12
+    },
+    {
+      "processed": 192,
+      "status": "running",
+      "alerts": 12
+    },
+    {
+      "processed": 192,
+      "status": "running",
+      "alerts": 12
+    },
+    {
+      "processed": 192,
+      "status": "running",
+      "alerts": 12
+    },
+    {
+      "processed": 192,
+      "status": "running",
+      "alerts": 12
+    },
+    {
+      "processed": 192,
+      "status": "running",
+      "alerts": 12
+    },
+    {
+      "processed": 192,
+      "status": "running",
+      "alerts": 12
+    },
+    {
+      "processed": 195,
+      "status": "running",
+      "alerts": 12
+    },
+    {
+      "processed": 199,
+      "status": "running",
+      "alerts": 12
+    },
+    {
+      "processed": 202,
+      "status": "running",
+      "alerts": 12
+    },
+    {
+      "processed": 209,
+      "status": "running",
+      "alerts": 13
+    },
+    {
+      "processed": 214,
+      "status": "running",
+      "alerts": 13
+    },
+    {
+      "processed": 219,
+      "status": "running",
+      "alerts": 13
+    },
+    {
+      "processed": 223,
+      "status": "running",
+      "alerts": 13
+    },
+    {
+      "processed": 224,
+      "status": "running",
+      "alerts": 13
+    },
+    {
+      "processed": 224,
+      "status": "running",
+      "alerts": 13
+    },
+    {
+      "processed": 224,
+      "status": "running",
+      "alerts": 13
+    },
+    {
+      "processed": 224,
+      "status": "running",
+      "alerts": 13
+    },
+    {
+      "processed": 224,
+      "status": "running",
+      "alerts": 13
+    },
+    {
+      "processed": 224,
+      "status": "running",
+      "alerts": 13
+    },
+    {
+      "processed": 224,
+      "status": "running",
+      "alerts": 13
+    },
+    {
+      "processed": 224,
+      "status": "running",
+      "alerts": 13
+    },
+    {
+      "processed": 224,
+      "status": "running",
+      "alerts": 13
+    },
+    {
+      "processed": 224,
+      "status": "running",
+      "alerts": 13
+    },
+    {
+      "processed": 224,
+      "status": "running",
+      "alerts": 13
+    },
+    {
+      "processed": 224,
+      "status": "running",
+      "alerts": 13
+    },
+    {
+      "processed": 224,
+      "status": "running",
+      "alerts": 13
+    },
+    {
+      "processed": 224,
+      "status": "running",
+      "alerts": 13
+    },
+    {
+      "processed": 224,
+      "status": "running",
+      "alerts": 13
+    },
+    {
+      "processed": 224,
+      "status": "running",
+      "alerts": 13
+    },
+    {
+      "processed": 226,
+      "status": "running",
+      "alerts": 14
+    },
+    {
+      "processed": 230,
+      "status": "running",
+      "alerts": 14
+    },
+    {
+      "processed": 236,
+      "status": "running",
+      "alerts": 14
+    },
+    {
+      "processed": 240,
+      "status": "running",
+      "alerts": 14
+    },
+    {
+      "processed": 245,
+      "status": "running",
+      "alerts": 14
+    },
+    {
+      "processed": 248,
+      "status": "running",
+      "alerts": 14
+    },
+    {
+      "processed": 252,
+      "status": "running",
+      "alerts": 14
+    },
+    {
+      "processed": 255,
+      "status": "running",
+      "alerts": 15
+    },
+    {
+      "processed": 256,
+      "status": "complete",
+      "alerts": 15
+    }
+  ],
+  "scope": "UI-triggered replay, Next proxy API/SSE, read-only SQLite comparison; no browser latency measurement"
+}

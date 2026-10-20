@@ -1,0 +1,10 @@
+{
+  "command": [
+    "C:\\Users\\Saich\\AppData\\Local\\Temp\\univect-clean-20261020-f380837\\.venv\\Scripts\\python.exe",
+    "-c",
+    "import sys,json,platform; print(json.dumps(dict(python=sys.version,prefix=sys.prefix,base_prefix=sys.base_prefix,platform=platform.platform())))"
+  ],
+  "cwd": "C:\\Users\\Saich\\AppData\\Local\\Temp\\univect-clean-20261020-f380837",
+  "exit_code": 0,
+  "elapsed_seconds": 0.1436530999999377
+}

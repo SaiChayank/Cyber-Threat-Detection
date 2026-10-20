@@ -63,9 +63,25 @@
       "retrievals_verified": 13,
       "git_blobs_verified": 6,
       "dataset_values_opened": false
+    },
+    {
+      "task": "Current-runtime fresh-checkout rehearsal",
+      "dod": "PASS_REHEARSAL_ONLY",
+      "report": "docs/CLEAN_CHECKOUT_20261020.md",
+      "baseline": "f380837",
+      "base_backend_tests_passed": 606,
+      "optional_skip_reports": 3,
+      "typecheck": "PASS",
+      "production_build": "PASS",
+      "demo_alerts": 15,
+      "restart_exact_records": 15,
+      "resumed_records": 8,
+      "core_events_per_second": 4256.969585100927,
+      "delivery_success_count": 100,
+      "delivery_p95_ms": 246.11409999852185
     }
   ],
-  "current_task": "Fresh-checkout reproducibility rehearsal of current committed runtime fixes",
+  "current_task": "Frontend malformed-alert contract integration diagnosis using disposable state",
   "last_task": {
     "task": "DGA task-pointer and historical prerequisite reconciliation",
     "report": "docs/DGA_STATUS_RECONCILIATION_20261020.md",
@@ -89,10 +105,11 @@
   "last_checked_primary_used_percent": 19,
   "ordinary_usage_allowed_at_last_check": true,
   "usage_limit_interruption_pending": false,
-  "blocked_by_data_not_usage_limits": true,
-  "research_track_disposition": "DGA and other unqualified research roles stay data/provenance blocked; independent application rehearsal may proceed",
+  "blocked_by_data_not_usage_limits": false,
+  "research_data_blocked": true,
+  "research_track_disposition": "DGA and other unqualified research roles stay data/provenance blocked; independent application integration diagnosis may proceed",
   "next_queue": [
-    "Current-source fresh checkout, isolated installation and README demo rehearsal",
+    "Inspect current alert schemas/handlers and test malformed stored-alert shapes through Monitor; change code only on a demonstrated defect",
     "Only data-qualified next steps; no training/scoring or failed activation"
   ]
 }

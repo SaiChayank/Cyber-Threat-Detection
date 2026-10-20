@@ -1,5 +1,17 @@
 # Univect — Passive Threat Intelligence · PS26145
 
+**Current clean-checkout rehearsal, 20 October 2026:** local commit `f380837`
+passes isolated installation, 606 base-environment backend tests (three optional
+research-tool skip reports), TypeScript, production build, incremental Monitor
+replay and restart/resume with 15 unchanged alerts. All seven model hashes match.
+Scoped core: 4,256.97 metadata events/sec, processing + SQLite p95 0.8938 ms;
+direct loopback API-to-SSE: 100/100, p95 246.11 ms. These exclude capture/browser
+throughput. No setup patch was needed; local updates remain unpushed. See
+[current reproduction evidence](docs/CLEAN_CHECKOUT_20261020.md) and
+[the current execution plan](docs/COMPLETION_EXECUTION_20261018.md).
+Required detector-quality gates remain unresolved: **final release NOT READY**.
+Earlier dated checkpoints below retain their historical counts and limitations.
+
 **Application hardening, 19 October 2026:** oversized alert cursors are rejected
 before SQLite/SSE access, and PCAP staging storage failures return a recoverable
 error with cleanup. Latest source run: 557 backend tests pass, TypeScript/build

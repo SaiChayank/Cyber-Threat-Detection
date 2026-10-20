@@ -1,0 +1,33 @@
+{
+  "records": 15,
+  "records_identical": true,
+  "fresh_idle_telemetry": {
+    "processed": 0,
+    "late_events": 0,
+    "state_evictions": 0,
+    "active_sources": 0,
+    "dga_detector": "conservative-lexical-guard",
+    "dga_candidate_enabled": false,
+    "dns_tunnel_candidate_enabled": false,
+    "rate_window_resolution_ms": 1000,
+    "source_entropy_partial": false,
+    "processing_p95_ms": 0,
+    "replay_status": "idle",
+    "replay_error": null,
+    "alerts_by_class": {
+      "BOTNET_C2": 2,
+      "DATA_EXFILTRATION": 2,
+      "DDOS": 2,
+      "DGA_DOMAINS": 4,
+      "DNS_TUNNELLING": 2,
+      "ENCRYPTED_MALWARE": 2,
+      "RECONNAISSANCE": 1
+    },
+    "throughput_target": 2000,
+    "confidence_note": "Model score or heuristic strength; not real-world calibrated"
+  },
+  "resumed_after_sequence": 7,
+  "exact_resumed_records": 8,
+  "no_duplicate_records": true,
+  "scope": "Production restart, proxy API/SSE and read-only isolated SQLite"
+}
