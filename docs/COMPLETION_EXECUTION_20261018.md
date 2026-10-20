@@ -1,5 +1,11 @@
 # Remaining implementation sequence
 
+**20 October measured performance:** [Scoped refresh](PERFORMANCE_REFRESH_20261020.md)
+passes 20,000-event core/SQLite gates at 3,797.43/sec/p95 1.0117 ms and 100/100
+direct delivery at p95 245.94 ms. Canonical latest reports/API are updated, prior
+bytes preserved, 130 current originals unchanged. Next eligible task: malformed
+stored-alert JSON failure/recovery; no dataset/model/gate change.
+
 **20 October dependency follow-up:** [Installed backend scan](PYTHON_DEPENDENCY_SECURITY_20261020.md)
 checks 22 exact releases against OSV and PyPI, with zero returned advisories;
 pip check/130 current hashes pass. No upgrade or behavior change. Next eligible

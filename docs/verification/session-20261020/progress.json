@@ -30,9 +30,18 @@
       "packages_scanned": 22,
       "known_advisory_ids": 0,
       "runtime_changed": false
+    },
+    {
+      "task": "Current scoped core/SQLite and direct delivery benchmark refresh",
+      "dod": "PASS",
+      "report": "docs/PERFORMANCE_REFRESH_20261020.md",
+      "core_events_per_second": 3797.428385273157,
+      "core_p95_ms": 1.011700020171702,
+      "delivery_matching_records": 100,
+      "delivery_p95_ms": 245.94259995501488
     }
   ],
-  "current_task": "Scoped core/SQLite and direct API-to-SSE benchmark refresh",
+  "current_task": "Malformed stored-alert JSON read/recovery verification",
   "constraints": [
     "Public datasets only; skip email-gated supplements and author follow-ups",
     "No reserved tuning, gate changes, training or failed-candidate activation",
@@ -44,7 +53,7 @@
   "last_checked_primary_used_percent": 24,
   "ordinary_usage_allowed_at_last_check": true,
   "next_queue": [
-    "Scoped core and delivery benchmark refresh",
-    "Additional evidence-supported independent work; data-gated models remain blocked"
+    "Reproduce malformed stored-alert JSON response behavior; minimal fix only if observed",
+    "Other demonstrated application gaps; preserve public-only data/quality constraints"
   ]
 }

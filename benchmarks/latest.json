@@ -1,12 +1,12 @@
 {
-  "generated_at_utc": "2026-10-01T12:10:58.190131+00:00",
+  "generated_at_utc": "2026-10-20T04:36:27.624126+00:00",
   "runtime_source_sha256": {
-    "detection/pipeline.py": "d5c9623e63ab7d143fe2e5f041b23a3ccbf5d114e1c0f0b349962f861a014d5b",
-    "features/extractor.py": "27a5155f8f9bc4a0c6b4d7828c1960d4954705d37d1b67e5e5eca5fa36d8c88d",
-    "features/rate_window.py": "8fde1be3af18ee1ad6f3d8911afb214432676669406010a01f0603995ff62a11",
+    "detection/pipeline.py": "4e70bc3e50546e57fa5f0d9432f3a9be969b906897d837f6f3638311c9b54926",
+    "features/extractor.py": "624952f8063464c88466b861c72f121c318be5835a02a3d2a4b24b38b1800ac8",
+    "features/rate_window.py": "a0d4542ab56b44bb51bdee88ebd56a7df95e9a9d6a79fc569769a9100b65d683",
     "ml/model.py": "2721a53d667d1ea773154fdebf3d349c5ef221dfdb51e937d5afdba1ffa6f354",
     "ml/dga.py": "0a03098bf4cc22d8f5b7ff5fe3bd75d82d735479730e1890a7f99bedb9d6c0b7",
-    "persistence/store.py": "56bdc7cbb9d25ec0ceedf0fb2fc9e2169ee53bb54fc2731d1e034f4156e1a490",
+    "persistence/store.py": "f89559c94049211086d0e8720c9f369e00c2109b34e997c43ff2781690e7da02",
     "detection/dga_rules.py": "2d6ea804a0ecf0e4ac9e16ee884e477581e975b767241c4486c3297b07ddee59",
     "detection/dns_tunnel_candidate.py": "c1713f2a8bbc59753bbad586054e5b103082f4d67bf5c9cfa617383965540a9a",
     "features/dns_tunnel.py": "8ded37ba73c2d605f22baf4571f80842791f7b2b1584ce0230ddc365466605eb",
@@ -17,18 +17,18 @@
     "replay/scenarios.py": "e24b4dbb24b729fc4fa98faaf7de83554e3beac58e243a17d56ed38b3234ed2d"
   },
   "benchmark_source_sha256": {
-    "benchmarks/run.py": "af396a4cce77e8bc6b549634c62fe20c5bab1b98df2917bb09fdf9cd15d88802",
+    "benchmarks/run.py": "ff4673495e853a152285c35cc584fce1731d4b3efac764e6fc196143c079d2d7",
     "benchmarks/environment.py": "f9d1012bc5b4823aea70bc1298fae7e5fea73dd08c840816d7f0ee73ac06fe6c"
   },
   "model_sha256": "4d8e08323374535789e21f9f7cd1ee3f1c84b663ce555e67bb4ced57c95e8010",
   "events": 20000,
   "alerts": 1170,
-  "elapsed_seconds": 3.5398787999993147,
-  "metadata_events_per_second": 5649.910951754583,
+  "elapsed_seconds": 5.266722100030165,
+  "metadata_events_per_second": 3797.428385273157,
   "throughput_target": 2000,
   "throughput_pass": true,
-  "processing_and_persistence_p50_ms": 0.09709999994811369,
-  "processing_and_persistence_p95_ms": 0.8415999991484568,
+  "processing_and_persistence_p50_ms": 0.18619996262714267,
+  "processing_and_persistence_p95_ms": 1.011700020171702,
   "latency_target_ms": 50,
   "latency_pass": true,
   "percentile_method": "Sorted zero-based index floor(n * fraction); unchanged core convention",
@@ -52,6 +52,6 @@
     "dns_tunnel_candidate_enabled": false,
     "rate_window_resolution_ms": 1000,
     "source_entropy_partial": false,
-    "processing_p95_ms": 0.18960000033985125
+    "processing_p95_ms": 0.352799950633198
   }
 }

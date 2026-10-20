@@ -1,0 +1,12 @@
+{
+  "command": [
+    "C:\\Users\\Saich\\OneDrive\\Desktop\\PS26145\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-m",
+    "benchmarks.run",
+    "--events",
+    "20000"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 5.9791029000189155
+}

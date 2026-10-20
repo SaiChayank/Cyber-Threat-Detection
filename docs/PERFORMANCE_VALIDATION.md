@@ -1,5 +1,13 @@
 # Final performance evidence
 
+**20 October 2026 scoped refresh:** [Current measured evidence](PERFORMANCE_REFRESH_20261020.md)
+records 20,000 events/1,170 commits, 3,797.43 metadata events/sec, core + SQLite
+p50 0.1862 ms/p95 1.0117 ms; direct API/SQLite/SSE 100/100, p50 143.02 ms,
+p95 245.94 ms/p99 259.30 ms. All declared gates pass in their original scopes.
+Canonical latest reports are refreshed; previous exact bytes are retained. This
+supersedes performance currency only, not required detector-quality blockers or
+final release acceptance. Historical sections below retain their original dates.
+
 **3 October 2026 recovery follow-up:** current shared runtime measurements are in
 [event recovery validation](EVENT_RECOVERY_VALIDATION.md): core 4,072.43 events/s,
 processing+SQLite p95 0.9228 ms; API-to-SSE 100/100, p95 248.92 ms. Gates pass with

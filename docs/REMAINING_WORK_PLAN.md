@@ -563,3 +563,12 @@ requirements-closure packages, 22 complete OSV results, zero advisory IDs and
 Scoped DoD PASS; no upgrade/source/dependency change or broader security claim.
 Optional research packages/OS/interpreter and all allowed historical versions are
 outside scope. Next: current scoped core/SQLite and direct delivery benchmarks.
+
+## Current scoped benchmark refresh — 20 October 2026 IST
+
+[Actual fresh runs](PERFORMANCE_REFRESH_20261020.md): 20,000 metadata events,
+1,170 commits, 3,797.43/sec, processing + SQLite p95 1.0117 ms; direct API/SSE
+100/100, p95 245.94 ms. All scoped gates pass, report/model/source hashes match,
+benchmark API equals current saved report, 130 current originals unchanged.
+Old canonical bytes retained exactly in base64/SHA evidence. No capture/proxy/
+browser or independent accuracy claim. DoD PASS. Next: stored-alert JSON recovery.

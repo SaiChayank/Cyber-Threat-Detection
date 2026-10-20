@@ -1,0 +1,12 @@
+{
+  "benchmarks/latest.json": {
+    "raw_generated_sha256": "10738c77bd1bcd1fdcec53340b7d66e953079d7c59e8da8f3e0bbc1891118a94",
+    "committed_lf_sha256": "23a1be02b282052a6f325ae0b88dab47a38ebd734ac3caecf23c924bb652e30f",
+    "normalization": "CRLF to LF only; numerical values unchanged"
+  },
+  "benchmarks/delivery_latest.json": {
+    "raw_generated_sha256": "7a84141b660a4eefad7cb4b3ff3d2eb2ddd83f1822ad3da1b2f3b4686f2f4667",
+    "committed_lf_sha256": "168e5d8267128c41d91e5cfff14ab685a4434eaf4025f110f75fdf7c981609b7",
+    "normalization": "CRLF to LF only; numerical values unchanged"
+  }
+}

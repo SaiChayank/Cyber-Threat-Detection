@@ -106,3 +106,10 @@ No payload decryption, external reputation/DNS query, source probe, active addre
 verification or inline response is implemented. See [expected solution](EXPECTED_SOLUTION.md)
 and [completion plan](COMPLETION_PLAN.md) for the distinction between working
 prototype infrastructure and unresolved detection-quality acceptance.
+# 20 October 2026 performance currency supplement
+
+[Current scoped refresh](PERFORMANCE_REFRESH_20261020.md): 20,000 metadata events,
+3,797.43/sec, processing + SQLite p95 1.0117 ms; direct API-to-SSE 100/100 complete
+matching records, p95 245.94 ms. Gates pass; capture/proxy/browser excluded as
+specified. Latest JSON reports now reflect these actual runs; earlier sections
+are historical. No new detector accuracy or final release decision.

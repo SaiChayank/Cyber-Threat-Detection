@@ -1,0 +1,15 @@
+{
+  "docs/verification/performance-refresh-20261020/checks.json": "46ce3e542a04b25cabf999d661667e69fe4f37dfd01bce29b6ec90b33335bb5a",
+  "docs/verification/performance-refresh-20261020/core-command.json": "67af8891e71afba9975999102f5ac58ba5b5f75515d2b5c18b8f4dfb4a5d0f85",
+  "docs/verification/performance-refresh-20261020/core.log": "34778ff7eba08e9fc610b4c40619c278f769d3ad7f4395d731272e6fa986f0c0",
+  "docs/verification/performance-refresh-20261020/delivery-command.json": "3fa0511d43fd2eba8b57287074ab53355b1880191760a5335c64b489e049a860",
+  "docs/verification/performance-refresh-20261020/delivery.log": "262c742699ae7971b19d1e630f4ef2ae5184cea0bd1d8011366ee0cb30c47019",
+  "docs/verification/performance-refresh-20261020/previous-report-hashes.json": "3f2c432ff8177844a724b33e8e3897c39449dbdc65770c442f62528aba1dd3a3",
+  "docs/verification/performance-refresh-20261020/previous-reports.json": "1c39198378aa0bbd218794c43d305eb093846ebad71e5e6e40728f2368004298",
+  "docs/verification/performance-refresh-20261020/PROTOCOL.md": "6843cb6ba5eddf96fcb62dfc3ff2e6617ab034690edfdf0fbc54ad7102e2f0e6",
+  "docs/verification/performance-refresh-20261020/report-normalization.json": "0bdc3038bcd56cbdf1b08e595f5c9b84463dad85a4181f8412a57f51ee64d924",
+  "docs/verification/performance-refresh-20261020/run.py": "561a2535b57f16cb12caf3c26837152565970e9ddcb269e437219493bc7c3f92",
+  "docs/PERFORMANCE_REFRESH_20261020.md": "960652b1f5d46865fd6965963f48da9ccbf5741bc52cc14aa5cb199cdfffd510",
+  "benchmarks/latest.json": "23a1be02b282052a6f325ae0b88dab47a38ebd734ac3caecf23c924bb652e30f",
+  "benchmarks/delivery_latest.json": "168e5d8267128c41d91e5cfff14ab685a4434eaf4025f110f75fdf7c981609b7"
+}

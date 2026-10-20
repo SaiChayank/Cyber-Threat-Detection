@@ -1,0 +1,13 @@
+{
+  "dod": "PASS",
+  "core_events": 20000,
+  "committed_core_alerts": 1170,
+  "core_gate": "PASS",
+  "delivery_records_matching": 100,
+  "delivery_gate": "PASS",
+  "api_benchmark_equals_saved_report": true,
+  "model_and_source_hashes_match": true,
+  "current_protected_files_unchanged": 130,
+  "previous_reports_exact_bytes_preserved_base64": true,
+  "application_code_changed": false
+}
