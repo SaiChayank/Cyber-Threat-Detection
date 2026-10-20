@@ -1,0 +1,9 @@
+{
+  "command": [
+    "C:\\Users\\Saich\\OneDrive\\Desktop\\PS26145\\.venv\\Scripts\\python.exe",
+    "-B",
+    "C:\\Users\\Saich\\OneDrive\\Desktop\\PS26145\\docs\\verification\\dga-cursor-reconciliation-20261020\\verify.py"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 0.37519339995924383
+}

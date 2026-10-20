@@ -48,7 +48,19 @@
       "backend_passes": 616
     }
   ],
-  "current_task": "Public DGA shortlisted-family provenance/alias review",
+  "current_task": "DGA public benign-client DNS and five-stratum provenance qualification (data blocked)",
+  "last_task": {
+    "task": "DGA task-pointer and historical prerequisite reconciliation",
+    "report": "docs/DGA_STATUS_RECONCILIATION_20261020.md",
+    "status": "RECONCILED_WITH_HISTORICAL_CONTACT_DOCUMENT_MISMATCH",
+    "targeted_tests": 38,
+    "current_protected_files_matching": 130,
+    "prior_alias_review_and_positive_count_already_complete": true,
+    "historical_freeze_file_references": 22,
+    "historical_matching_file_references": 21,
+    "reserved_values_opened": false,
+    "new_training_or_scoring": false
+  },
   "constraints": [
     "Public datasets only; skip email-gated supplements and author follow-ups",
     "No reserved tuning, gate changes, training or failed-candidate activation",
@@ -57,10 +69,12 @@
   ],
   "release_ready": false,
   "checkpointed_near_usage_limit": false,
-  "last_checked_primary_used_percent": 24,
+  "last_checked_primary_used_percent": 90,
   "ordinary_usage_allowed_at_last_check": true,
+  "usage_limit_interruption_pending": false,
+  "blocked_by_data_not_usage_limits": true,
   "next_queue": [
-    "Public DGA family provenance/alias review without domain values",
+    "Public original-name benign-client DNS and legitimate-stratum provenance before data values; skip email-gated supplements",
     "Only data-qualified next steps; no training/scoring or failed activation"
   ]
 }

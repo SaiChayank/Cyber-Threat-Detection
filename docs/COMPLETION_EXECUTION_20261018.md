@@ -1,5 +1,13 @@
 # Remaining implementation sequence
 
+**20 October DGA pointer reconciliation:** [Existing evidence verified](DGA_STATUS_RECONCILIATION_20261020.md)
+shows alias review and provisional positive counts already completed on 14 October.
+The stale next-task pointer below is superseded. All 130 current protected hashes
+match, 38 targeted DGA checks pass; one historical draft-to-sent documentation
+hash mismatch is disclosed without rewriting the old freeze. No new values,
+training/scoring or model change. Next: public original-name benign client-DNS
+provenance and five legitimate strata; final evaluation remains data-blocked.
+
 **20 October saved-alert JSON recovery:** [Minimal storage fix](STORED_JSON_RECOVERY_20261020.md)
 passes 23 new red-first cases, 61 targeted/616 backend tests, typecheck/build and
 nine unchanged demo traces. Fresh core 3,955.74/sec/p95 0.9790 ms; direct delivery

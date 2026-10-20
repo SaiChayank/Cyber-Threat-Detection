@@ -1,0 +1,43 @@
+{
+  "date": "2026-10-20",
+  "baseline": "a1fcbb0",
+  "status": "RECONCILIATION_COMPLETE_FINAL_DATA_BLOCKED",
+  "files": [
+    {
+      "path": "docs/DGA_STATUS_RECONCILIATION_20261020.md",
+      "sha256": "793568cdf482d96468ed739506edb5cc0c8683f7a1ed6a71268c9bb42a084d41"
+    },
+    {
+      "path": "docs/verification/dga-cursor-reconciliation-20261020/checks.json",
+      "sha256": "24eeb31379c1850e1511c5af5b932562254d5eeee50b967bc1ee55bdd91bcca4"
+    },
+    {
+      "path": "docs/verification/dga-cursor-reconciliation-20261020/integrity-check-command.json",
+      "sha256": "18230f6c377e92d788e7ab3b029e9366b9c30d4604c503bcd69294d210947854"
+    },
+    {
+      "path": "docs/verification/dga-cursor-reconciliation-20261020/integrity-check.log",
+      "sha256": "9afb98953197a746d53ded4bbd087777b1fe9db6cd4625101a482b9a153e73e8"
+    },
+    {
+      "path": "docs/verification/dga-cursor-reconciliation-20261020/integrity.json",
+      "sha256": "73bbff59d1f2bdd4912d266a426d1dd167c51a06eeed5c3089c7bea42b75a700"
+    },
+    {
+      "path": "docs/verification/dga-cursor-reconciliation-20261020/run_checks.py",
+      "sha256": "f367448cc725f93257e64315fecf03f197828e4d8bb8a6796138675595d0e131"
+    },
+    {
+      "path": "docs/verification/dga-cursor-reconciliation-20261020/targeted-tests-command.json",
+      "sha256": "37a47c99e76f126ea03d3144e29560111095400bee136b7b47180c83da5d216a"
+    },
+    {
+      "path": "docs/verification/dga-cursor-reconciliation-20261020/targeted-tests.log",
+      "sha256": "c81a9ea87355921e5a3d92eee3bba29cc5e3a92e72ede7d7e495a0949f1aa22a"
+    },
+    {
+      "path": "docs/verification/dga-cursor-reconciliation-20261020/verify.py",
+      "sha256": "7f85ea7f9ab48946c36533a3a20f934e27198792706e38291d5d11e98e230052"
+    }
+  ]
+}

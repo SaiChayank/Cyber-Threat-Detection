@@ -1,0 +1,17 @@
+{
+  "command": [
+    "C:\\Users\\Saich\\OneDrive\\Desktop\\PS26145\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-m",
+    "pytest",
+    "tests/test_dga_positive_intake.py",
+    "tests/test_dga_source_acquisition.py",
+    "tests/test_dga_candidate.py",
+    "tests/test_dga_diagnostic.py",
+    "-q",
+    "-p",
+    "no:cacheprovider"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 1.3564774000551552
+}

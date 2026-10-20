@@ -1,0 +1,63 @@
+{
+  "status": "RECONCILED_WITH_HISTORICAL_CONTACT_DOCUMENT_MISMATCH",
+  "protected_files": 130,
+  "historical_freezes": {
+    "docs/verification/dga-alias-review-20261014/freeze.json": {
+      "sha256": "66e51acbaab21a2728d71842a0d689aab2465fb13da2fe63d7b3f3fb255bee29",
+      "files_checked": 8,
+      "files_matching": 8
+    },
+    "docs/verification/dga-positive-intake-20261014/freeze.json": {
+      "sha256": "3ef7e7b821dbf9f2f8462e4a7b76b63c4f473b846b215e841d46adc7a0164599",
+      "files_checked": 10,
+      "files_matching": 10
+    },
+    "docs/verification/dga-benign-source-review-20261014/freeze.json": {
+      "sha256": "23c843e782d1efc57937237cdc8c41d0c509f1fbfce67dc26944dac1f4fe3b62",
+      "files_checked": 4,
+      "files_matching": 3
+    }
+  },
+  "historical_all_files_match": false,
+  "historical_mismatches": [
+    {
+      "path": "docs/DGA_BENIGN_DATA_REQUEST.md",
+      "frozen_sha256": "c4b8bede627ef9d7598c69eb3de782ad48a20a552603138ccedd62706bf78470",
+      "current_sha256": "e1a96a906aeda85ef7e9a7996e3c24ad4c6f149ff20afdfa7221165eda1cb2ee"
+    }
+  ],
+  "model_artifacts": {
+    "ml/public_dga.json": {
+      "sha256": "a5766baa18463d25a5329596a8373849d4a41093c8625d694cd8dfe79e8ce7ad",
+      "activation_field": "production_enabled",
+      "enabled": false
+    },
+    "ml/dga_v2.json": {
+      "sha256": "c0314dd5f1fe360db11e2494326fd6e99f267d6e920fa091f6c9fcebc796996e",
+      "activation_field": "runtime_enabled",
+      "enabled": false
+    },
+    "ml/dga_weighted_candidate.json": {
+      "sha256": "e81821f753d1e1b71fb5a08ff446467165941db996929767edec008c01c130ca",
+      "activation_field": "runtime_enabled",
+      "enabled": false
+    },
+    "ml/dga_oof_candidate.json": {
+      "sha256": "266b80bc7edac63dda815b61ef6ef162d2af9b919e70bfa168958133431b730b",
+      "activation_field": "runtime_enabled",
+      "enabled": false
+    }
+  },
+  "historical_provisional_eligible_counts": {
+    "bumblebee": 3100,
+    "qsnatch": 3218690,
+    "sharkbot": 1154
+  },
+  "counts_recomputed": false,
+  "dataset_rows_opened": false,
+  "new_evaluation_performed": false,
+  "scoring_or_training_performed": false,
+  "final_materialization_exists": false,
+  "final_dga_ready": false,
+  "blocker": "Missing qualified benign strata, independent benign DNS and complete current exposure exclusions"
+}
