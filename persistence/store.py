@@ -35,7 +35,18 @@ class AlertStore:
         params.append(limit)
         order = 'DESC' if newest else 'ASC'
         rows = self.connection.execute(f'SELECT sequence, body FROM alerts WHERE {condition} ORDER BY sequence {order} LIMIT ?', params).fetchall()
-        return [json.loads(body) | {'sequence': seq} for seq, body in rows]
+        records = []
+        for seq, body in rows:
+            try:
+                record = json.loads(body)
+                if not isinstance(record, dict):
+                    raise ValueError('Stored alert body must be a JSON object')
+            except (ValueError, TypeError) as exc:
+                # Treat unreadable durable data like other storage read failures.
+                # Never return a partial batch, discard a row or fabricate data.
+                raise sqlite3.DatabaseError('Stored alert data is unreadable') from exc
+            records.append(record | {'sequence': seq})
+        return records
 
     def summary(self):
         return dict(self.connection.execute('SELECT threat, COUNT(*) FROM alerts GROUP BY threat').fetchall())

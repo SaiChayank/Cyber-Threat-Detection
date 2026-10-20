@@ -1,12 +1,12 @@
 {
-  "generated_at_utc": "2026-10-20T04:36:27.624126+00:00",
+  "generated_at_utc": "2026-10-20T04:43:14.091956+00:00",
   "runtime_source_sha256": {
     "detection/pipeline.py": "4e70bc3e50546e57fa5f0d9432f3a9be969b906897d837f6f3638311c9b54926",
     "features/extractor.py": "624952f8063464c88466b861c72f121c318be5835a02a3d2a4b24b38b1800ac8",
     "features/rate_window.py": "a0d4542ab56b44bb51bdee88ebd56a7df95e9a9d6a79fc569769a9100b65d683",
     "ml/model.py": "2721a53d667d1ea773154fdebf3d349c5ef221dfdb51e937d5afdba1ffa6f354",
     "ml/dga.py": "0a03098bf4cc22d8f5b7ff5fe3bd75d82d735479730e1890a7f99bedb9d6c0b7",
-    "persistence/store.py": "f89559c94049211086d0e8720c9f369e00c2109b34e997c43ff2781690e7da02",
+    "persistence/store.py": "bb19902ee0d0ca66c54f8dc60888cd0749dd8e16a3ceaeb8d42f0a1c74c1d0f3",
     "detection/dga_rules.py": "2d6ea804a0ecf0e4ac9e16ee884e477581e975b767241c4486c3297b07ddee59",
     "detection/dns_tunnel_candidate.py": "c1713f2a8bbc59753bbad586054e5b103082f4d67bf5c9cfa617383965540a9a",
     "features/dns_tunnel.py": "8ded37ba73c2d605f22baf4571f80842791f7b2b1584ce0230ddc365466605eb",
@@ -23,12 +23,12 @@
   "model_sha256": "4d8e08323374535789e21f9f7cd1ee3f1c84b663ce555e67bb4ced57c95e8010",
   "events": 20000,
   "alerts": 1170,
-  "elapsed_seconds": 5.266722100030165,
-  "metadata_events_per_second": 3797.428385273157,
+  "elapsed_seconds": 5.055941200000234,
+  "metadata_events_per_second": 3955.742206811874,
   "throughput_target": 2000,
   "throughput_pass": true,
-  "processing_and_persistence_p50_ms": 0.18619996262714267,
-  "processing_and_persistence_p95_ms": 1.011700020171702,
+  "processing_and_persistence_p50_ms": 0.17040001694113016,
+  "processing_and_persistence_p95_ms": 0.9790000040084124,
   "latency_target_ms": 50,
   "latency_pass": true,
   "percentile_method": "Sorted zero-based index floor(n * fraction); unchanged core convention",
@@ -52,6 +52,6 @@
     "dns_tunnel_candidate_enabled": false,
     "rate_window_resolution_ms": 1000,
     "source_entropy_partial": false,
-    "processing_p95_ms": 0.352799950633198
+    "processing_p95_ms": 0.3415999817661941
   }
 }

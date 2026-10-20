@@ -1,5 +1,11 @@
 # Remaining implementation sequence
 
+**20 October saved-alert JSON recovery:** [Minimal storage fix](STORED_JSON_RECOVERY_20261020.md)
+passes 23 new red-first cases, 61 targeted/616 backend tests, typecheck/build and
+nine unchanged demo traces. Fresh core 3,955.74/sec/p95 0.9790 ms; direct delivery
+100/100/p95 249.29 ms; 130 current originals unchanged. Next eligible research
+task: shortlisted DGA family provenance/alias review, without new domain values.
+
 **20 October measured performance:** [Scoped refresh](PERFORMANCE_REFRESH_20261020.md)
 passes 20,000-event core/SQLite gates at 3,797.43/sec/p95 1.0117 ms and 100/100
 direct delivery at p95 245.94 ms. Canonical latest reports/API are updated, prior

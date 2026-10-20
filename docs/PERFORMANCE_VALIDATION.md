@@ -1,5 +1,10 @@
 # Final performance evidence
 
+**20 October stored-JSON recovery follow-up:** [Latest source-matching runs](STORED_JSON_RECOVERY_20261020.md)
+measure 3,955.74 metadata events/sec, core + SQLite p95 0.9790 ms; direct delivery
+100/100/p95 249.29 ms. Both scopes pass unchanged gates. Canonical reports reflect
+these runs; the earlier 20 October refresh remains preserved at its prior source.
+
 **20 October 2026 scoped refresh:** [Current measured evidence](PERFORMANCE_REFRESH_20261020.md)
 records 20,000 events/1,170 commits, 3,797.43 metadata events/sec, core + SQLite
 p50 0.1862 ms/p95 1.0117 ms; direct API/SQLite/SSE 100/100, p50 143.02 ms,

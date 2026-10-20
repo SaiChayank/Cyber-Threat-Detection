@@ -1,0 +1,14 @@
+{
+  "command": [
+    "C:\\Users\\Saich\\OneDrive\\Desktop\\PS26145\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-m",
+    "pytest",
+    "tests/test_stored_json_recovery.py",
+    "-q",
+    "-p",
+    "no:cacheprovider"
+  ],
+  "exit_code": 1,
+  "elapsed_seconds": 4.57110450003529
+}

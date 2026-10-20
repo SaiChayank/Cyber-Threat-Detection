@@ -572,3 +572,13 @@ outside scope. Next: current scoped core/SQLite and direct delivery benchmarks.
 benchmark API equals current saved report, 130 current originals unchanged.
 Old canonical bytes retained exactly in base64/SHA evidence. No capture/proxy/
 browser or independent accuracy claim. DoD PASS. Next: stored-alert JSON recovery.
+
+## Stored-alert JSON recovery — 20 October 2026 IST
+
+[Verified minimal correction](STORED_JSON_RECOVERY_20261020.md) wraps malformed/
+non-object durable bodies as storage-read errors: existing safe 503 or SSE EOF
+with next-sequence resume after controlled repair. No row deletion or repair logic.
+23 red-first cases, 61 targeted/616 backend tests, typecheck/build/nine unchanged
+traces pass. Core 3,955.74/sec/p95 0.9790 ms, direct delivery 100/100/p95 249.29 ms;
+latest report pointers updated with previous bytes preserved. All 130 current
+protected originals unchanged. DoD PASS. Next: public DGA family alias/provenance.

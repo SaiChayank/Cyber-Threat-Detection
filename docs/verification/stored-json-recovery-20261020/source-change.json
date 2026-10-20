@@ -1,0 +1,7 @@
+{
+  "file": "persistence/store.py",
+  "baseline_commit": "517d685",
+  "before_sha256": "f89559c94049211086d0e8720c9f369e00c2109b34e997c43ff2781690e7da02",
+  "after_sha256": "bb19902ee0d0ca66c54f8dc60888cd0749dd8e16a3ceaeb8d42f0a1c74c1d0f3",
+  "scope": "Stored-alert JSON read deserialization only; no schema/writer/sequence change"
+}

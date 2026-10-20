@@ -1,0 +1,20 @@
+{
+  "dod": "PASS",
+  "red_failures": 23,
+  "targeted_passes": 61,
+  "full_backend_passes": 616,
+  "backend_skips": 0,
+  "typecheck": "PASS",
+  "build": "PASS",
+  "demo_traces_unchanged": 9,
+  "current_protected_originals_unchanged": 130,
+  "core_events_per_second": 3955.742206811874,
+  "core_p95_ms": 0.9790000040084124,
+  "delivery_matching_records": 100,
+  "delivery_p95_ms": 249.28629997884855,
+  "known_limits": [
+    "No automatic repair",
+    "JSON object shape only, not complete alert-field/schema validation",
+    "No detector quality inference"
+  ]
+}

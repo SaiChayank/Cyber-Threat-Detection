@@ -1,0 +1,10 @@
+{
+  "command": [
+    "C:\\Users\\Saich\\OneDrive\\Desktop\\PS26145\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-m",
+    "replay.demo_pack"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 0.8815036999876611
+}

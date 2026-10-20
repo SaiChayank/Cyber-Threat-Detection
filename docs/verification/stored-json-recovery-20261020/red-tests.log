@@ -1,0 +1,810 @@
+FFFFFFFFFFFFFFFFFFFFFFF                                                  [100%]
+================================== FAILURES ===================================
+_ test_bad_stored_body_is_storage_error_without_partial_results_or_modification[{private-json-sentinel] _
+
+tmp_path = WindowsPath('C:/Users/Saich/AppData/Local/Temp/pytest-of-Saich/pytest-365/test_bad_stored_body_is_storag0')
+body = '{private-json-sentinel'
+
+    @pytest.mark.parametrize('body', BAD_BODIES)
+    def test_bad_stored_body_is_storage_error_without_partial_results_or_modification(tmp_path, body):
+        store = AlertStore(tmp_path/'bad-body.sqlite3')
+        try:
+            first = store.append(stored_alert('valid-first'))
+            second = store.append(stored_alert('corrupt-second'))
+            original = corrupt(store, second['sequence'], body)
+            rows = store.connection.execute('SELECT sequence,alert_id,threat,body FROM alerts ORDER BY sequence').fetchall()
+            with pytest.raises(sqlite3.DatabaseError, match='Stored alert data is unreadable'):
+>               store.list()
+
+tests\test_stored_json_recovery.py:34:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+persistence\store.py:38: in list
+    return [json.loads(body) | {'sequence': seq} for seq, body in rows]
+            ^^^^^^^^^^^^^^^^
+..\..\..\AppData\Local\Programs\Python\Python313\Lib\json\__init__.py:346: in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\AppData\Local\Programs\Python\Python313\Lib\json\decoder.py:345: in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <json.decoder.JSONDecoder object at 0x0000021C38D4F4D0>
+s = '{private-json-sentinel', idx = 0
+
+    def raw_decode(self, s, idx=0):
+        """Decode a JSON document from ``s`` (a ``str`` beginning with
+        a JSON document) and return a 2-tuple of the Python
+        representation and the index in ``s`` where the document ended.
+
+        This can be used to decode a JSON document from a string that may
+        have extraneous data at the end.
+
+        """
+        try:
+>           obj, end = self.scan_once(s, idx)
+                       ^^^^^^^^^^^^^^^^^^^^^^
+E           json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+
+..\..\..\AppData\Local\Programs\Python\Python313\Lib\json\decoder.py:361: JSONDecodeError
+_ test_bad_stored_body_is_storage_error_without_partial_results_or_modification[[]] _
+
+tmp_path = WindowsPath('C:/Users/Saich/AppData/Local/Temp/pytest-of-Saich/pytest-365/test_bad_stored_body_is_storag1')
+body = '[]'
+
+    @pytest.mark.parametrize('body', BAD_BODIES)
+    def test_bad_stored_body_is_storage_error_without_partial_results_or_modification(tmp_path, body):
+        store = AlertStore(tmp_path/'bad-body.sqlite3')
+        try:
+            first = store.append(stored_alert('valid-first'))
+            second = store.append(stored_alert('corrupt-second'))
+            original = corrupt(store, second['sequence'], body)
+            rows = store.connection.execute('SELECT sequence,alert_id,threat,body FROM alerts ORDER BY sequence').fetchall()
+            with pytest.raises(sqlite3.DatabaseError, match='Stored alert data is unreadable'):
+>               store.list()
+
+tests\test_stored_json_recovery.py:34:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <persistence.store.AlertStore object at 0x0000021C3D5D8550>, after = 0
+limit = 200, threat = None, newest = False
+
+    def list(self, after=0, limit=200, threat=None, newest=False):
+        condition = 'sequence > ?'
+        params = [after]
+        if threat:
+            condition += ' AND threat = ?'
+            params.append(threat)
+        params.append(limit)
+        order = 'DESC' if newest else 'ASC'
+        rows = self.connection.execute(f'SELECT sequence, body FROM alerts WHERE {condition} ORDER BY sequence {order} LIMIT ?', params).fetchall()
+>       return [json.loads(body) | {'sequence': seq} for seq, body in rows]
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: unsupported operand type(s) for |: 'list' and 'dict'
+
+persistence\store.py:38: TypeError
+_ test_bad_stored_body_is_storage_error_without_partial_results_or_modification[null] _
+
+tmp_path = WindowsPath('C:/Users/Saich/AppData/Local/Temp/pytest-of-Saich/pytest-365/test_bad_stored_body_is_storag2')
+body = 'null'
+
+    @pytest.mark.parametrize('body', BAD_BODIES)
+    def test_bad_stored_body_is_storage_error_without_partial_results_or_modification(tmp_path, body):
+        store = AlertStore(tmp_path/'bad-body.sqlite3')
+        try:
+            first = store.append(stored_alert('valid-first'))
+            second = store.append(stored_alert('corrupt-second'))
+            original = corrupt(store, second['sequence'], body)
+            rows = store.connection.execute('SELECT sequence,alert_id,threat,body FROM alerts ORDER BY sequence').fetchall()
+            with pytest.raises(sqlite3.DatabaseError, match='Stored alert data is unreadable'):
+>               store.list()
+
+tests\test_stored_json_recovery.py:34:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <persistence.store.AlertStore object at 0x0000021C3D5D8690>, after = 0
+limit = 200, threat = None, newest = False
+
+    def list(self, after=0, limit=200, threat=None, newest=False):
+        condition = 'sequence > ?'
+        params = [after]
+        if threat:
+            condition += ' AND threat = ?'
+            params.append(threat)
+        params.append(limit)
+        order = 'DESC' if newest else 'ASC'
+        rows = self.connection.execute(f'SELECT sequence, body FROM alerts WHERE {condition} ORDER BY sequence {order} LIMIT ?', params).fetchall()
+>       return [json.loads(body) | {'sequence': seq} for seq, body in rows]
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: unsupported operand type(s) for |: 'NoneType' and 'dict'
+
+persistence\store.py:38: TypeError
+_ test_bad_stored_body_is_storage_error_without_partial_results_or_modification["private-json-sentinel"] _
+
+tmp_path = WindowsPath('C:/Users/Saich/AppData/Local/Temp/pytest-of-Saich/pytest-365/test_bad_stored_body_is_storag3')
+body = '"private-json-sentinel"'
+
+    @pytest.mark.parametrize('body', BAD_BODIES)
+    def test_bad_stored_body_is_storage_error_without_partial_results_or_modification(tmp_path, body):
+        store = AlertStore(tmp_path/'bad-body.sqlite3')
+        try:
+            first = store.append(stored_alert('valid-first'))
+            second = store.append(stored_alert('corrupt-second'))
+            original = corrupt(store, second['sequence'], body)
+            rows = store.connection.execute('SELECT sequence,alert_id,threat,body FROM alerts ORDER BY sequence').fetchall()
+            with pytest.raises(sqlite3.DatabaseError, match='Stored alert data is unreadable'):
+>               store.list()
+
+tests\test_stored_json_recovery.py:34:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <persistence.store.AlertStore object at 0x0000021C3C4EDE00>, after = 0
+limit = 200, threat = None, newest = False
+
+    def list(self, after=0, limit=200, threat=None, newest=False):
+        condition = 'sequence > ?'
+        params = [after]
+        if threat:
+            condition += ' AND threat = ?'
+            params.append(threat)
+        params.append(limit)
+        order = 'DESC' if newest else 'ASC'
+        rows = self.connection.execute(f'SELECT sequence, body FROM alerts WHERE {condition} ORDER BY sequence {order} LIMIT ?', params).fetchall()
+>       return [json.loads(body) | {'sequence': seq} for seq, body in rows]
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: unsupported operand type(s) for |: 'str' and 'dict'
+
+persistence\store.py:38: TypeError
+_ test_bad_stored_body_is_storage_error_without_partial_results_or_modification[NaN] _
+
+tmp_path = WindowsPath('C:/Users/Saich/AppData/Local/Temp/pytest-of-Saich/pytest-365/test_bad_stored_body_is_storag4')
+body = 'NaN'
+
+    @pytest.mark.parametrize('body', BAD_BODIES)
+    def test_bad_stored_body_is_storage_error_without_partial_results_or_modification(tmp_path, body):
+        store = AlertStore(tmp_path/'bad-body.sqlite3')
+        try:
+            first = store.append(stored_alert('valid-first'))
+            second = store.append(stored_alert('corrupt-second'))
+            original = corrupt(store, second['sequence'], body)
+            rows = store.connection.execute('SELECT sequence,alert_id,threat,body FROM alerts ORDER BY sequence').fetchall()
+            with pytest.raises(sqlite3.DatabaseError, match='Stored alert data is unreadable'):
+>               store.list()
+
+tests\test_stored_json_recovery.py:34:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <persistence.store.AlertStore object at 0x0000021C3C4EE190>, after = 0
+limit = 200, threat = None, newest = False
+
+    def list(self, after=0, limit=200, threat=None, newest=False):
+        condition = 'sequence > ?'
+        params = [after]
+        if threat:
+            condition += ' AND threat = ?'
+            params.append(threat)
+        params.append(limit)
+        order = 'DESC' if newest else 'ASC'
+        rows = self.connection.execute(f'SELECT sequence, body FROM alerts WHERE {condition} ORDER BY sequence {order} LIMIT ?', params).fetchall()
+>       return [json.loads(body) | {'sequence': seq} for seq, body in rows]
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: unsupported operand type(s) for |: 'float' and 'dict'
+
+persistence\store.py:38: TypeError
+_ test_bad_stored_body_is_storage_error_without_partial_results_or_modification[\xff] _
+
+tmp_path = WindowsPath('C:/Users/Saich/AppData/Local/Temp/pytest-of-Saich/pytest-365/test_bad_stored_body_is_storag5')
+body = b'\xff'
+
+    @pytest.mark.parametrize('body', BAD_BODIES)
+    def test_bad_stored_body_is_storage_error_without_partial_results_or_modification(tmp_path, body):
+        store = AlertStore(tmp_path/'bad-body.sqlite3')
+        try:
+            first = store.append(stored_alert('valid-first'))
+            second = store.append(stored_alert('corrupt-second'))
+            original = corrupt(store, second['sequence'], body)
+            rows = store.connection.execute('SELECT sequence,alert_id,threat,body FROM alerts ORDER BY sequence').fetchall()
+            with pytest.raises(sqlite3.DatabaseError, match='Stored alert data is unreadable'):
+>               store.list()
+
+tests\test_stored_json_recovery.py:34:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+persistence\store.py:38: in list
+    return [json.loads(body) | {'sequence': seq} for seq, body in rows]
+            ^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+s = b'\xff', cls = None, object_hook = None, parse_float = None
+parse_int = None, parse_constant = None, object_pairs_hook = None, kw = {}
+
+    def loads(s, *, cls=None, object_hook=None, parse_float=None,
+            parse_int=None, parse_constant=None, object_pairs_hook=None, **kw):
+        """Deserialize ``s`` (a ``str``, ``bytes`` or ``bytearray`` instance
+        containing a JSON document) to a Python object.
+
+        ``object_hook`` is an optional function that will be called with the
+        result of any object literal decode (a ``dict``). The return value of
+        ``object_hook`` will be used instead of the ``dict``. This feature
+        can be used to implement custom decoders (e.g. JSON-RPC class hinting).
+
+        ``object_pairs_hook`` is an optional function that will be called with the
+        result of any object literal decoded with an ordered list of pairs.  The
+        return value of ``object_pairs_hook`` will be used instead of the ``dict``.
+        This feature can be used to implement custom decoders.  If ``object_hook``
+        is also defined, the ``object_pairs_hook`` takes priority.
+
+        ``parse_float``, if specified, will be called with the string
+        of every JSON float to be decoded. By default this is equivalent to
+        float(num_str). This can be used to use another datatype or parser
+        for JSON floats (e.g. decimal.Decimal).
+
+        ``parse_int``, if specified, will be called with the string
+        of every JSON int to be decoded. By default this is equivalent to
+        int(num_str). This can be used to use another datatype or parser
+        for JSON integers (e.g. float).
+
+        ``parse_constant``, if specified, will be called with one of the
+        following strings: -Infinity, Infinity, NaN.
+        This can be used to raise an exception if invalid JSON numbers
+        are encountered.
+
+        To use a custom ``JSONDecoder`` subclass, specify it with the ``cls``
+        kwarg; otherwise ``JSONDecoder`` is used.
+        """
+        if isinstance(s, str):
+            if s.startswith('\ufeff'):
+                raise JSONDecodeError("Unexpected UTF-8 BOM (decode using utf-8-sig)",
+                                      s, 0)
+        else:
+            if not isinstance(s, (bytes, bytearray)):
+                raise TypeError(f'the JSON object must be str, bytes or bytearray, '
+                                f'not {s.__class__.__name__}')
+>           s = s.decode(detect_encoding(s), 'surrogatepass')
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte
+
+..\..\..\AppData\Local\Programs\Python\Python313\Lib\json\__init__.py:341: UnicodeDecodeError
+_ test_bad_stored_body_is_storage_error_without_partial_results_or_modification[None] _
+
+tmp_path = WindowsPath('C:/Users/Saich/AppData/Local/Temp/pytest-of-Saich/pytest-365/test_bad_stored_body_is_storag6')
+body = None
+
+    @pytest.mark.parametrize('body', BAD_BODIES)
+    def test_bad_stored_body_is_storage_error_without_partial_results_or_modification(tmp_path, body):
+        store = AlertStore(tmp_path/'bad-body.sqlite3')
+        try:
+            first = store.append(stored_alert('valid-first'))
+            second = store.append(stored_alert('corrupt-second'))
+            original = corrupt(store, second['sequence'], body)
+            rows = store.connection.execute('SELECT sequence,alert_id,threat,body FROM alerts ORDER BY sequence').fetchall()
+            with pytest.raises(sqlite3.DatabaseError, match='Stored alert data is unreadable'):
+>               store.list()
+
+tests\test_stored_json_recovery.py:34:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+persistence\store.py:38: in list
+    return [json.loads(body) | {'sequence': seq} for seq, body in rows]
+            ^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+s = None, cls = None, object_hook = None, parse_float = None, parse_int = None
+parse_constant = None, object_pairs_hook = None, kw = {}
+
+    def loads(s, *, cls=None, object_hook=None, parse_float=None,
+            parse_int=None, parse_constant=None, object_pairs_hook=None, **kw):
+        """Deserialize ``s`` (a ``str``, ``bytes`` or ``bytearray`` instance
+        containing a JSON document) to a Python object.
+
+        ``object_hook`` is an optional function that will be called with the
+        result of any object literal decode (a ``dict``). The return value of
+        ``object_hook`` will be used instead of the ``dict``. This feature
+        can be used to implement custom decoders (e.g. JSON-RPC class hinting).
+
+        ``object_pairs_hook`` is an optional function that will be called with the
+        result of any object literal decoded with an ordered list of pairs.  The
+        return value of ``object_pairs_hook`` will be used instead of the ``dict``.
+        This feature can be used to implement custom decoders.  If ``object_hook``
+        is also defined, the ``object_pairs_hook`` takes priority.
+
+        ``parse_float``, if specified, will be called with the string
+        of every JSON float to be decoded. By default this is equivalent to
+        float(num_str). This can be used to use another datatype or parser
+        for JSON floats (e.g. decimal.Decimal).
+
+        ``parse_int``, if specified, will be called with the string
+        of every JSON int to be decoded. By default this is equivalent to
+        int(num_str). This can be used to use another datatype or parser
+        for JSON integers (e.g. float).
+
+        ``parse_constant``, if specified, will be called with one of the
+        following strings: -Infinity, Infinity, NaN.
+        This can be used to raise an exception if invalid JSON numbers
+        are encountered.
+
+        To use a custom ``JSONDecoder`` subclass, specify it with the ``cls``
+        kwarg; otherwise ``JSONDecoder`` is used.
+        """
+        if isinstance(s, str):
+            if s.startswith('\ufeff'):
+                raise JSONDecodeError("Unexpected UTF-8 BOM (decode using utf-8-sig)",
+                                      s, 0)
+        else:
+            if not isinstance(s, (bytes, bytearray)):
+>               raise TypeError(f'the JSON object must be str, bytes or bytearray, '
+                                f'not {s.__class__.__name__}')
+E               TypeError: the JSON object must be str, bytes or bytearray, not NoneType
+
+..\..\..\AppData\Local\Programs\Python\Python313\Lib\json\__init__.py:339: TypeError
+_ test_bad_stored_body_uses_existing_safe_read_503_then_recovers[{private-json-sentinel-/api/alerts] _
+
+tmp_path = WindowsPath('C:/Users/Saich/AppData/Local/Temp/pytest-of-Saich/pytest-365/test_bad_stored_body_uses_exis0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000021C3C4EE650>
+route = '/api/alerts', body = '{private-json-sentinel'
+
+    @pytest.mark.parametrize('route', ['/api/alerts','/api/stream'])
+    @pytest.mark.parametrize('body', BAD_BODIES)
+    def test_bad_stored_body_uses_existing_safe_read_503_then_recovers(tmp_path, monkeypatch, route, body):
+        monkeypatch.setenv('ALERT_DB', str(tmp_path/'api-body.sqlite3'))
+        with TestClient(application.app, raise_server_exceptions=False) as client:
+            store = application.app.state.store
+            saved = [store.append(stored_alert('first')), store.append(stored_alert('second'))]
+            original = corrupt(store, 2, body)
+            response = client.get(route)
+>           assert response.status_code == 503
+E           assert 500 == 503
+E            +  where 500 = <Response [500 Internal Server Error]>.status_code
+
+tests\test_stored_json_recovery.py:52: AssertionError
+_ test_bad_stored_body_uses_existing_safe_read_503_then_recovers[{private-json-sentinel-/api/stream] _
+
+tmp_path = WindowsPath('C:/Users/Saich/AppData/Local/Temp/pytest-of-Saich/pytest-365/test_bad_stored_body_uses_exis1')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000021C3C4EE060>
+route = '/api/stream', body = '{private-json-sentinel'
+
+    @pytest.mark.parametrize('route', ['/api/alerts','/api/stream'])
+    @pytest.mark.parametrize('body', BAD_BODIES)
+    def test_bad_stored_body_uses_existing_safe_read_503_then_recovers(tmp_path, monkeypatch, route, body):
+        monkeypatch.setenv('ALERT_DB', str(tmp_path/'api-body.sqlite3'))
+        with TestClient(application.app, raise_server_exceptions=False) as client:
+            store = application.app.state.store
+            saved = [store.append(stored_alert('first')), store.append(stored_alert('second'))]
+            original = corrupt(store, 2, body)
+            response = client.get(route)
+>           assert response.status_code == 503
+E           assert 500 == 503
+E            +  where 500 = <Response [500 Internal Server Error]>.status_code
+
+tests\test_stored_json_recovery.py:52: AssertionError
+_ test_bad_stored_body_uses_existing_safe_read_503_then_recovers[[]-/api/alerts] _
+
+tmp_path = WindowsPath('C:/Users/Saich/AppData/Local/Temp/pytest-of-Saich/pytest-365/test_bad_stored_body_uses_exis2')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000021C3C51A330>
+route = '/api/alerts', body = '[]'
+
+    @pytest.mark.parametrize('route', ['/api/alerts','/api/stream'])
+    @pytest.mark.parametrize('body', BAD_BODIES)
+    def test_bad_stored_body_uses_existing_safe_read_503_then_recovers(tmp_path, monkeypatch, route, body):
+        monkeypatch.setenv('ALERT_DB', str(tmp_path/'api-body.sqlite3'))
+        with TestClient(application.app, raise_server_exceptions=False) as client:
+            store = application.app.state.store
+            saved = [store.append(stored_alert('first')), store.append(stored_alert('second'))]
+            original = corrupt(store, 2, body)
+            response = client.get(route)
+>           assert response.status_code == 503
+E           assert 500 == 503
+E            +  where 500 = <Response [500 Internal Server Error]>.status_code
+
+tests\test_stored_json_recovery.py:52: AssertionError
+_ test_bad_stored_body_uses_existing_safe_read_503_then_recovers[[]-/api/stream] _
+
+tmp_path = WindowsPath('C:/Users/Saich/AppData/Local/Temp/pytest-of-Saich/pytest-365/test_bad_stored_body_uses_exis3')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000021C3C4F18C0>
+route = '/api/stream', body = '[]'
+
+    @pytest.mark.parametrize('route', ['/api/alerts','/api/stream'])
+    @pytest.mark.parametrize('body', BAD_BODIES)
+    def test_bad_stored_body_uses_existing_safe_read_503_then_recovers(tmp_path, monkeypatch, route, body):
+        monkeypatch.setenv('ALERT_DB', str(tmp_path/'api-body.sqlite3'))
+        with TestClient(application.app, raise_server_exceptions=False) as client:
+            store = application.app.state.store
+            saved = [store.append(stored_alert('first')), store.append(stored_alert('second'))]
+            original = corrupt(store, 2, body)
+            response = client.get(route)
+>           assert response.status_code == 503
+E           assert 500 == 503
+E            +  where 500 = <Response [500 Internal Server Error]>.status_code
+
+tests\test_stored_json_recovery.py:52: AssertionError
+_ test_bad_stored_body_uses_existing_safe_read_503_then_recovers[null-/api/alerts] _
+
+tmp_path = WindowsPath('C:/Users/Saich/AppData/Local/Temp/pytest-of-Saich/pytest-365/test_bad_stored_body_uses_exis4')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000021C3C4F3F00>
+route = '/api/alerts', body = 'null'
+
+    @pytest.mark.parametrize('route', ['/api/alerts','/api/stream'])
+    @pytest.mark.parametrize('body', BAD_BODIES)
+    def test_bad_stored_body_uses_existing_safe_read_503_then_recovers(tmp_path, monkeypatch, route, body):
+        monkeypatch.setenv('ALERT_DB', str(tmp_path/'api-body.sqlite3'))
+        with TestClient(application.app, raise_server_exceptions=False) as client:
+            store = application.app.state.store
+            saved = [store.append(stored_alert('first')), store.append(stored_alert('second'))]
+            original = corrupt(store, 2, body)
+            response = client.get(route)
+>           assert response.status_code == 503
+E           assert 500 == 503
+E            +  where 500 = <Response [500 Internal Server Error]>.status_code
+
+tests\test_stored_json_recovery.py:52: AssertionError
+_ test_bad_stored_body_uses_existing_safe_read_503_then_recovers[null-/api/stream] _
+
+tmp_path = WindowsPath('C:/Users/Saich/AppData/Local/Temp/pytest-of-Saich/pytest-365/test_bad_stored_body_uses_exis5')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000021C3D5B2350>
+route = '/api/stream', body = 'null'
+
+    @pytest.mark.parametrize('route', ['/api/alerts','/api/stream'])
+    @pytest.mark.parametrize('body', BAD_BODIES)
+    def test_bad_stored_body_uses_existing_safe_read_503_then_recovers(tmp_path, monkeypatch, route, body):
+        monkeypatch.setenv('ALERT_DB', str(tmp_path/'api-body.sqlite3'))
+        with TestClient(application.app, raise_server_exceptions=False) as client:
+            store = application.app.state.store
+            saved = [store.append(stored_alert('first')), store.append(stored_alert('second'))]
+            original = corrupt(store, 2, body)
+            response = client.get(route)
+>           assert response.status_code == 503
+E           assert 500 == 503
+E            +  where 500 = <Response [500 Internal Server Error]>.status_code
+
+tests\test_stored_json_recovery.py:52: AssertionError
+_ test_bad_stored_body_uses_existing_safe_read_503_then_recovers["private-json-sentinel"-/api/alerts] _
+
+tmp_path = WindowsPath('C:/Users/Saich/AppData/Local/Temp/pytest-of-Saich/pytest-365/test_bad_stored_body_uses_exis6')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000021C3D5B0A50>
+route = '/api/alerts', body = '"private-json-sentinel"'
+
+    @pytest.mark.parametrize('route', ['/api/alerts','/api/stream'])
+    @pytest.mark.parametrize('body', BAD_BODIES)
+    def test_bad_stored_body_uses_existing_safe_read_503_then_recovers(tmp_path, monkeypatch, route, body):
+        monkeypatch.setenv('ALERT_DB', str(tmp_path/'api-body.sqlite3'))
+        with TestClient(application.app, raise_server_exceptions=False) as client:
+            store = application.app.state.store
+            saved = [store.append(stored_alert('first')), store.append(stored_alert('second'))]
+            original = corrupt(store, 2, body)
+            response = client.get(route)
+>           assert response.status_code == 503
+E           assert 500 == 503
+E            +  where 500 = <Response [500 Internal Server Error]>.status_code
+
+tests\test_stored_json_recovery.py:52: AssertionError
+_ test_bad_stored_body_uses_existing_safe_read_503_then_recovers["private-json-sentinel"-/api/stream] _
+
+tmp_path = WindowsPath('C:/Users/Saich/AppData/Local/Temp/pytest-of-Saich/pytest-365/test_bad_stored_body_uses_exis7')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000021C3C47A6C0>
+route = '/api/stream', body = '"private-json-sentinel"'
+
+    @pytest.mark.parametrize('route', ['/api/alerts','/api/stream'])
+    @pytest.mark.parametrize('body', BAD_BODIES)
+    def test_bad_stored_body_uses_existing_safe_read_503_then_recovers(tmp_path, monkeypatch, route, body):
+        monkeypatch.setenv('ALERT_DB', str(tmp_path/'api-body.sqlite3'))
+        with TestClient(application.app, raise_server_exceptions=False) as client:
+            store = application.app.state.store
+            saved = [store.append(stored_alert('first')), store.append(stored_alert('second'))]
+            original = corrupt(store, 2, body)
+            response = client.get(route)
+>           assert response.status_code == 503
+E           assert 500 == 503
+E            +  where 500 = <Response [500 Internal Server Error]>.status_code
+
+tests\test_stored_json_recovery.py:52: AssertionError
+_ test_bad_stored_body_uses_existing_safe_read_503_then_recovers[NaN-/api/alerts] _
+
+tmp_path = WindowsPath('C:/Users/Saich/AppData/Local/Temp/pytest-of-Saich/pytest-365/test_bad_stored_body_uses_exis8')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000021C3D5D4B90>
+route = '/api/alerts', body = 'NaN'
+
+    @pytest.mark.parametrize('route', ['/api/alerts','/api/stream'])
+    @pytest.mark.parametrize('body', BAD_BODIES)
+    def test_bad_stored_body_uses_existing_safe_read_503_then_recovers(tmp_path, monkeypatch, route, body):
+        monkeypatch.setenv('ALERT_DB', str(tmp_path/'api-body.sqlite3'))
+        with TestClient(application.app, raise_server_exceptions=False) as client:
+            store = application.app.state.store
+            saved = [store.append(stored_alert('first')), store.append(stored_alert('second'))]
+            original = corrupt(store, 2, body)
+            response = client.get(route)
+>           assert response.status_code == 503
+E           assert 500 == 503
+E            +  where 500 = <Response [500 Internal Server Error]>.status_code
+
+tests\test_stored_json_recovery.py:52: AssertionError
+_ test_bad_stored_body_uses_existing_safe_read_503_then_recovers[NaN-/api/stream] _
+
+tmp_path = WindowsPath('C:/Users/Saich/AppData/Local/Temp/pytest-of-Saich/pytest-365/test_bad_stored_body_uses_exis9')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000021C3C532C10>
+route = '/api/stream', body = 'NaN'
+
+    @pytest.mark.parametrize('route', ['/api/alerts','/api/stream'])
+    @pytest.mark.parametrize('body', BAD_BODIES)
+    def test_bad_stored_body_uses_existing_safe_read_503_then_recovers(tmp_path, monkeypatch, route, body):
+        monkeypatch.setenv('ALERT_DB', str(tmp_path/'api-body.sqlite3'))
+        with TestClient(application.app, raise_server_exceptions=False) as client:
+            store = application.app.state.store
+            saved = [store.append(stored_alert('first')), store.append(stored_alert('second'))]
+            original = corrupt(store, 2, body)
+            response = client.get(route)
+>           assert response.status_code == 503
+E           assert 500 == 503
+E            +  where 500 = <Response [500 Internal Server Error]>.status_code
+
+tests\test_stored_json_recovery.py:52: AssertionError
+_ test_bad_stored_body_uses_existing_safe_read_503_then_recovers[\xff-/api/alerts] _
+
+tmp_path = WindowsPath('C:/Users/Saich/AppData/Local/Temp/pytest-of-Saich/pytest-365/test_bad_stored_body_uses_exis10')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000021C3C531710>
+route = '/api/alerts', body = b'\xff'
+
+    @pytest.mark.parametrize('route', ['/api/alerts','/api/stream'])
+    @pytest.mark.parametrize('body', BAD_BODIES)
+    def test_bad_stored_body_uses_existing_safe_read_503_then_recovers(tmp_path, monkeypatch, route, body):
+        monkeypatch.setenv('ALERT_DB', str(tmp_path/'api-body.sqlite3'))
+        with TestClient(application.app, raise_server_exceptions=False) as client:
+            store = application.app.state.store
+            saved = [store.append(stored_alert('first')), store.append(stored_alert('second'))]
+            original = corrupt(store, 2, body)
+            response = client.get(route)
+>           assert response.status_code == 503
+E           assert 500 == 503
+E            +  where 500 = <Response [500 Internal Server Error]>.status_code
+
+tests\test_stored_json_recovery.py:52: AssertionError
+_ test_bad_stored_body_uses_existing_safe_read_503_then_recovers[\xff-/api/stream] _
+
+tmp_path = WindowsPath('C:/Users/Saich/AppData/Local/Temp/pytest-of-Saich/pytest-365/test_bad_stored_body_uses_exis11')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000021C3C521BF0>
+route = '/api/stream', body = b'\xff'
+
+    @pytest.mark.parametrize('route', ['/api/alerts','/api/stream'])
+    @pytest.mark.parametrize('body', BAD_BODIES)
+    def test_bad_stored_body_uses_existing_safe_read_503_then_recovers(tmp_path, monkeypatch, route, body):
+        monkeypatch.setenv('ALERT_DB', str(tmp_path/'api-body.sqlite3'))
+        with TestClient(application.app, raise_server_exceptions=False) as client:
+            store = application.app.state.store
+            saved = [store.append(stored_alert('first')), store.append(stored_alert('second'))]
+            original = corrupt(store, 2, body)
+            response = client.get(route)
+>           assert response.status_code == 503
+E           assert 500 == 503
+E            +  where 500 = <Response [500 Internal Server Error]>.status_code
+
+tests\test_stored_json_recovery.py:52: AssertionError
+_ test_bad_stored_body_uses_existing_safe_read_503_then_recovers[None-/api/alerts] _
+
+tmp_path = WindowsPath('C:/Users/Saich/AppData/Local/Temp/pytest-of-Saich/pytest-365/test_bad_stored_body_uses_exis12')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000021C3C42B350>
+route = '/api/alerts', body = None
+
+    @pytest.mark.parametrize('route', ['/api/alerts','/api/stream'])
+    @pytest.mark.parametrize('body', BAD_BODIES)
+    def test_bad_stored_body_uses_existing_safe_read_503_then_recovers(tmp_path, monkeypatch, route, body):
+        monkeypatch.setenv('ALERT_DB', str(tmp_path/'api-body.sqlite3'))
+        with TestClient(application.app, raise_server_exceptions=False) as client:
+            store = application.app.state.store
+            saved = [store.append(stored_alert('first')), store.append(stored_alert('second'))]
+            original = corrupt(store, 2, body)
+            response = client.get(route)
+>           assert response.status_code == 503
+E           assert 500 == 503
+E            +  where 500 = <Response [500 Internal Server Error]>.status_code
+
+tests\test_stored_json_recovery.py:52: AssertionError
+_ test_bad_stored_body_uses_existing_safe_read_503_then_recovers[None-/api/stream] _
+
+tmp_path = WindowsPath('C:/Users/Saich/AppData/Local/Temp/pytest-of-Saich/pytest-365/test_bad_stored_body_uses_exis13')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000021C3C429910>
+route = '/api/stream', body = None
+
+    @pytest.mark.parametrize('route', ['/api/alerts','/api/stream'])
+    @pytest.mark.parametrize('body', BAD_BODIES)
+    def test_bad_stored_body_uses_existing_safe_read_503_then_recovers(tmp_path, monkeypatch, route, body):
+        monkeypatch.setenv('ALERT_DB', str(tmp_path/'api-body.sqlite3'))
+        with TestClient(application.app, raise_server_exceptions=False) as client:
+            store = application.app.state.store
+            saved = [store.append(stored_alert('first')), store.append(stored_alert('second'))]
+            original = corrupt(store, 2, body)
+            response = client.get(route)
+>           assert response.status_code == 503
+E           assert 500 == 503
+E            +  where 500 = <Response [500 Internal Server Error]>.status_code
+
+tests\test_stored_json_recovery.py:52: AssertionError
+_ test_late_body_corruption_ends_stream_and_recovers_next_durable_sequence[False] _
+
+tmp_path = WindowsPath('C:/Users/Saich/AppData/Local/Temp/pytest-of-Saich/pytest-365/test_late_body_corruption_ends0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000021C40E38470>
+initial_alert = False
+
+    @pytest.mark.parametrize('initial_alert', [False, True])
+    def test_late_body_corruption_ends_stream_and_recovers_next_durable_sequence(tmp_path, monkeypatch, initial_alert):
+        monkeypatch.setenv('ALERT_DB', str(tmp_path/'late-body.sqlite3'))
+        with TestClient(application.app):
+            store = application.app.state.store
+            first = store.append(stored_alert('before')) if initial_alert else None
+
+            async def exercise():
+                response = await application.stream(ConnectedRequest(),after=0)
+                frame = await asyncio.wait_for(anext(response.body_iterator),timeout=2)
+                delivered = [parse_frame(frame)] if initial_alert else []
+                assert delivered == ([first] if initial_alert else [])
+                missed = [store.append(stored_alert('missed-one')),store.append(stored_alert('missed-two'))]
+                original = corrupt(store, missed[0]['sequence'], '{private-json-sentinel')
+                with pytest.raises(StopAsyncIteration):
+                    await asyncio.wait_for(anext(response.body_iterator),timeout=2)
+                corrupt(store, missed[0]['sequence'], original)
+                cursor = first['sequence'] if first else 0
+                resumed = await application.stream(ConnectedRequest(str(cursor)),after=0)
+                try:
+                    recovered = [parse_frame(await asyncio.wait_for(anext(resumed.body_iterator),timeout=2)) for _ in missed]
+                    assert recovered == missed and delivered+recovered == store.list()
+                    assert len({row['alert_id'] for row in delivered+recovered}) == len(delivered+recovered)
+                finally:
+                    await resumed.body_iterator.aclose()
+>           asyncio.run(exercise())
+
+tests\test_stored_json_recovery.py:86:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\..\..\AppData\Local\Programs\Python\Python313\Lib\asyncio\runners.py:195: in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+..\..\..\AppData\Local\Programs\Python\Python313\Lib\asyncio\runners.py:118: in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py:725: in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+tests\test_stored_json_recovery.py:76: in exercise
+    await asyncio.wait_for(anext(response.body_iterator),timeout=2)
+..\..\..\AppData\Local\Programs\Python\Python313\Lib\asyncio\tasks.py:507: in wait_for
+    return await fut
+           ^^^^^^^^^
+backend\application.py:108: in generate
+    rows = app.state.store.list(cursor, 100)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+persistence\store.py:38: in list
+    return [json.loads(body) | {'sequence': seq} for seq, body in rows]
+            ^^^^^^^^^^^^^^^^
+..\..\..\AppData\Local\Programs\Python\Python313\Lib\json\__init__.py:346: in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\AppData\Local\Programs\Python\Python313\Lib\json\decoder.py:345: in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <json.decoder.JSONDecoder object at 0x0000021C38D4F4D0>
+s = '{private-json-sentinel', idx = 0
+
+    def raw_decode(self, s, idx=0):
+        """Decode a JSON document from ``s`` (a ``str`` beginning with
+        a JSON document) and return a 2-tuple of the Python
+        representation and the index in ``s`` where the document ended.
+
+        This can be used to decode a JSON document from a string that may
+        have extraneous data at the end.
+
+        """
+        try:
+>           obj, end = self.scan_once(s, idx)
+                       ^^^^^^^^^^^^^^^^^^^^^^
+E           json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+
+..\..\..\AppData\Local\Programs\Python\Python313\Lib\json\decoder.py:361: JSONDecodeError
+_ test_late_body_corruption_ends_stream_and_recovers_next_durable_sequence[True] _
+
+tmp_path = WindowsPath('C:/Users/Saich/AppData/Local/Temp/pytest-of-Saich/pytest-365/test_late_body_corruption_ends1')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000021C40E39180>
+initial_alert = True
+
+    @pytest.mark.parametrize('initial_alert', [False, True])
+    def test_late_body_corruption_ends_stream_and_recovers_next_durable_sequence(tmp_path, monkeypatch, initial_alert):
+        monkeypatch.setenv('ALERT_DB', str(tmp_path/'late-body.sqlite3'))
+        with TestClient(application.app):
+            store = application.app.state.store
+            first = store.append(stored_alert('before')) if initial_alert else None
+
+            async def exercise():
+                response = await application.stream(ConnectedRequest(),after=0)
+                frame = await asyncio.wait_for(anext(response.body_iterator),timeout=2)
+                delivered = [parse_frame(frame)] if initial_alert else []
+                assert delivered == ([first] if initial_alert else [])
+                missed = [store.append(stored_alert('missed-one')),store.append(stored_alert('missed-two'))]
+                original = corrupt(store, missed[0]['sequence'], '{private-json-sentinel')
+                with pytest.raises(StopAsyncIteration):
+                    await asyncio.wait_for(anext(response.body_iterator),timeout=2)
+                corrupt(store, missed[0]['sequence'], original)
+                cursor = first['sequence'] if first else 0
+                resumed = await application.stream(ConnectedRequest(str(cursor)),after=0)
+                try:
+                    recovered = [parse_frame(await asyncio.wait_for(anext(resumed.body_iterator),timeout=2)) for _ in missed]
+                    assert recovered == missed and delivered+recovered == store.list()
+                    assert len({row['alert_id'] for row in delivered+recovered}) == len(delivered+recovered)
+                finally:
+                    await resumed.body_iterator.aclose()
+>           asyncio.run(exercise())
+
+tests\test_stored_json_recovery.py:86:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\..\..\AppData\Local\Programs\Python\Python313\Lib\asyncio\runners.py:195: in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+..\..\..\AppData\Local\Programs\Python\Python313\Lib\asyncio\runners.py:118: in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py:725: in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+tests\test_stored_json_recovery.py:76: in exercise
+    await asyncio.wait_for(anext(response.body_iterator),timeout=2)
+..\..\..\AppData\Local\Programs\Python\Python313\Lib\asyncio\tasks.py:507: in wait_for
+    return await fut
+           ^^^^^^^^^
+backend\application.py:108: in generate
+    rows = app.state.store.list(cursor, 100)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+persistence\store.py:38: in list
+    return [json.loads(body) | {'sequence': seq} for seq, body in rows]
+            ^^^^^^^^^^^^^^^^
+..\..\..\AppData\Local\Programs\Python\Python313\Lib\json\__init__.py:346: in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\AppData\Local\Programs\Python\Python313\Lib\json\decoder.py:345: in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <json.decoder.JSONDecoder object at 0x0000021C38D4F4D0>
+s = '{private-json-sentinel', idx = 0
+
+    def raw_decode(self, s, idx=0):
+        """Decode a JSON document from ``s`` (a ``str`` beginning with
+        a JSON document) and return a 2-tuple of the Python
+        representation and the index in ``s`` where the document ended.
+
+        This can be used to decode a JSON document from a string that may
+        have extraneous data at the end.
+
+        """
+        try:
+>           obj, end = self.scan_once(s, idx)
+                       ^^^^^^^^^^^^^^^^^^^^^^
+E           json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+
+..\..\..\AppData\Local\Programs\Python\Python313\Lib\json\decoder.py:361: JSONDecodeError
+============================== warnings summary ===============================
+.venv\Lib\site-packages\fastapi\testclient.py:1
+  C:\Users\Saich\OneDrive\Desktop\PS26145\.venv\Lib\site-packages\fastapi\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+    from starlette.testclient import TestClient as TestClient  # noqa
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED tests/test_stored_json_recovery.py::test_bad_stored_body_is_storage_error_without_partial_results_or_modification[{private-json-sentinel]
+FAILED tests/test_stored_json_recovery.py::test_bad_stored_body_is_storage_error_without_partial_results_or_modification[[]]
+FAILED tests/test_stored_json_recovery.py::test_bad_stored_body_is_storage_error_without_partial_results_or_modification[null]
+FAILED tests/test_stored_json_recovery.py::test_bad_stored_body_is_storage_error_without_partial_results_or_modification["private-json-sentinel"]
+FAILED tests/test_stored_json_recovery.py::test_bad_stored_body_is_storage_error_without_partial_results_or_modification[NaN]
+FAILED tests/test_stored_json_recovery.py::test_bad_stored_body_is_storage_error_without_partial_results_or_modification[\xff]
+FAILED tests/test_stored_json_recovery.py::test_bad_stored_body_is_storage_error_without_partial_results_or_modification[None]
+FAILED tests/test_stored_json_recovery.py::test_bad_stored_body_uses_existing_safe_read_503_then_recovers[{private-json-sentinel-/api/alerts]
+FAILED tests/test_stored_json_recovery.py::test_bad_stored_body_uses_existing_safe_read_503_then_recovers[{private-json-sentinel-/api/stream]
+FAILED tests/test_stored_json_recovery.py::test_bad_stored_body_uses_existing_safe_read_503_then_recovers[[]-/api/alerts]
+FAILED tests/test_stored_json_recovery.py::test_bad_stored_body_uses_existing_safe_read_503_then_recovers[[]-/api/stream]
+FAILED tests/test_stored_json_recovery.py::test_bad_stored_body_uses_existing_safe_read_503_then_recovers[null-/api/alerts]
+FAILED tests/test_stored_json_recovery.py::test_bad_stored_body_uses_existing_safe_read_503_then_recovers[null-/api/stream]
+FAILED tests/test_stored_json_recovery.py::test_bad_stored_body_uses_existing_safe_read_503_then_recovers["private-json-sentinel"-/api/alerts]
+FAILED tests/test_stored_json_recovery.py::test_bad_stored_body_uses_existing_safe_read_503_then_recovers["private-json-sentinel"-/api/stream]
+FAILED tests/test_stored_json_recovery.py::test_bad_stored_body_uses_existing_safe_read_503_then_recovers[NaN-/api/alerts]
+FAILED tests/test_stored_json_recovery.py::test_bad_stored_body_uses_existing_safe_read_503_then_recovers[NaN-/api/stream]
+FAILED tests/test_stored_json_recovery.py::test_bad_stored_body_uses_existing_safe_read_503_then_recovers[\xff-/api/alerts]
+FAILED tests/test_stored_json_recovery.py::test_bad_stored_body_uses_existing_safe_read_503_then_recovers[\xff-/api/stream]
+FAILED tests/test_stored_json_recovery.py::test_bad_stored_body_uses_existing_safe_read_503_then_recovers[None-/api/alerts]
+FAILED tests/test_stored_json_recovery.py::test_bad_stored_body_uses_existing_safe_read_503_then_recovers[None-/api/stream]
+FAILED tests/test_stored_json_recovery.py::test_late_body_corruption_ends_stream_and_recovers_next_durable_sequence[False]
+FAILED tests/test_stored_json_recovery.py::test_late_body_corruption_ends_stream_and_recovers_next_durable_sequence[True]
+23 failed, 1 warning in 3.49s

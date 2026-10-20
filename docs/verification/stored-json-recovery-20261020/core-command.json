@@ -1,0 +1,14 @@
+{
+  "command": [
+    "C:\\Users\\Saich\\OneDrive\\Desktop\\PS26145\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-m",
+    "benchmarks.run",
+    "--events",
+    "20000",
+    "--output",
+    "C:\\Users\\Saich\\OneDrive\\Desktop\\PS26145\\docs\\verification\\stored-json-recovery-20261020\\core.json"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 5.565921899979003
+}

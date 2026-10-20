@@ -1,0 +1,6 @@
+{
+  "passed": true,
+  "traces_unchanged": 9,
+  "manifest_changed": false,
+  "note": "Initial diagnostic helper assumed a persistence source pin existed and stopped with KeyError before any writes; the existing demo manifest does not pin persistence/store.py. Normal full preflight passes without changes."
+}

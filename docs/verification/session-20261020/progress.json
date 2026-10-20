@@ -39,9 +39,16 @@
       "core_p95_ms": 1.011700020171702,
       "delivery_matching_records": 100,
       "delivery_p95_ms": 245.94259995501488
+    },
+    {
+      "task": "Malformed stored-alert JSON read/recovery",
+      "dod": "PASS",
+      "report": "docs/STORED_JSON_RECOVERY_20261020.md",
+      "new_tests": 23,
+      "backend_passes": 616
     }
   ],
-  "current_task": "Malformed stored-alert JSON read/recovery verification",
+  "current_task": "Public DGA shortlisted-family provenance/alias review",
   "constraints": [
     "Public datasets only; skip email-gated supplements and author follow-ups",
     "No reserved tuning, gate changes, training or failed-candidate activation",
@@ -53,7 +60,7 @@
   "last_checked_primary_used_percent": 24,
   "ordinary_usage_allowed_at_last_check": true,
   "next_queue": [
-    "Reproduce malformed stored-alert JSON response behavior; minimal fix only if observed",
-    "Other demonstrated application gaps; preserve public-only data/quality constraints"
+    "Public DGA family provenance/alias review without domain values",
+    "Only data-qualified next steps; no training/scoring or failed activation"
   ]
 }
