@@ -1,0 +1,9 @@
+{
+  "command": [
+    "C:\\Program Files\\nodejs\\npm.cmd",
+    "run",
+    "typecheck"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 4.649144500002876
+}

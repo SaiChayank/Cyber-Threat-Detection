@@ -1,5 +1,12 @@
 # Univect — Passive Threat Intelligence · PS26145
 
+**Monitor recovery, finalized 21 October 2026:** malformed SSE alerts now trigger
+durable-history reconciliation, preventing a later valid message from hiding a
+missing repaired record. Three frontend regressions, 616 backend tests,
+typecheck/production build and a real proxy/SSE/Monitor fault-recovery check pass.
+No detector/model/gate change. See [the correction](docs/MONITOR_ALERT_CONTRACT_20261021.md)
+and [the current completion sequence](docs/COMPLETION_EXECUTION_20261018.md).
+
 **Current clean-checkout rehearsal, 20 October 2026:** local commit `f380837`
 passes isolated installation, 606 base-environment backend tests (three optional
 research-tool skip reports), TypeScript, production build, incremental Monitor
@@ -179,6 +186,7 @@ the expanded dataset, reproducible training and limitations.
 
 ```powershell
 .venv/Scripts/python.exe -m pytest -q
+node --test tests/frontend/monitor-alert-recovery.test.cjs
 .venv/Scripts/python.exe -m replay.demo_pack
 .venv/Scripts/python.exe -m benchmarks.run --events 20000
 .venv/Scripts/python.exe -m benchmarks.delivery --events 100

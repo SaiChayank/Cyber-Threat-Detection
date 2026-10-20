@@ -1,5 +1,123 @@
 # Remaining implementation sequence
 
+## Current completion sequence — 21 October 2026
+
+**Engineering assessment: 7/10 overall.** This is a judgement of the working
+prototype, not a measured completion percentage or production-accuracy score.
+FastAPI/SQLite/SSE, replay/upload, the Monitor and bundled deterministic demos
+work; scoped performance gates pass. Several required detector-quality gates
+have failed or remain unestablished, preventing final SIH release acceptance.
+Keep the existing architecture, working UI and all passed behavior.
+
+**Latest completed task:** [malformed-alert recovery](MONITOR_ALERT_CONTRACT_20261021.md).
+Three frontend regressions, 616 backend tests, typecheck/build/nine frozen demo
+traces and real proxy/SSE/Monitor recovery pass. All 130 current protected hashes
+match. Valid queue retained through a malformed stored alert; all three records
+return after repair without reload. Freeze this correction; no more refactoring
+unless a later integration reveals a real defect. The earlier fresh-checkout
+rehearsal remains valid for commit `f380837`, not relabelled as this new client fix.
+
+### 1. Qualify missing public evidence — P0
+
+Work one track at a time; permission-gated sources/supplements are skipped.
+Metadata, provenance, source/family roles and original chronology come before
+values. Downloads alone never qualify an evaluation role.
+
+- DGA T31: retain completed alias review/provisional positive counts. Obtain five
+  source-supported legitimate strata of 600 eligible labels each and a separate
+  benign client-DNS reference with >=2,500 unique eligible labels; complete current
+  exposure exclusions and disjointness. Do not count ranking names as all strata.
+- DNS tunnelling T30: original compatible query observations with executed session
+  truth, >=20 positive/>=50 benign independent sessions, required dnscat2/iodine
+  coverage and five benign categories. Mixed filenames are not per-session labels.
+- UDP/spoof T21/T22: producer-labelled matching-service/load flood/benign or
+  independently forged/genuine runs. Passive source diversity is not proof of
+  reflection or forgery. Preserve all original pairing/load/overlap requirements.
+- C2 T23: actual contact-to-session timing plus a matched periodic benign app;
+  never treat every packet as a beacon callback.
+- Encrypted T32: source/family/framework-separated TLS sessions with verified
+  intent/handshake timing and browser/updater/API/normal-app controls. No decryption
+  or unsupported raw-QUIC fingerprint claim; training remains blocked.
+
+DoD: public permission, pinned raw identities, independently supported labels,
+compatible runtime observations, sufficient post-exclusion counts and frozen
+disjoint roles all verified. Otherwise keep that track BLOCKED, not "complete".
+
+**Smallest next action, not started:** inspect the public UFU Do53 archive's
+published member/run inventory and native format/link-type evidence, without
+packet values. Current metadata supports a possible lead only. If those facts
+are absent, retain NOT QUALIFIED; no bulk acquisition or new parser is justified.
+Even a successful DNS-reference qualification does not fill all five DGA strata
+or automatically qualify DNS-tunnelling sessions.
+
+### 2. Resolve visibility limits, then run one justified experiment — P0
+
+Dependencies: qualified development data from phase 1, plus genuinely separating
+passive observations. Recon T24 and possible exfil T25 have opposite-intent
+metadata collisions; C2/UDP/spoof have related limitations. More model complexity
+cannot separate identical inputs with opposite hidden labels. Seek published
+passive context or leave an explicit blocker; do not fit source/filename exceptions,
+rename labels, weaken gates or imply authorized activity can be inferred perfectly.
+
+Use the existing extractor/rules/lightweight models. Modify only the active
+detector, preserve training/runtime feature parity and causal history, retain hard
+negatives and add exact regressions. DoD: one predeclared development experiment
+with honest per-family/scenario errors, or a documented unresolved observability
+decision. No deep-learning/infrastructure detour or automatic multi-model search.
+
+### 3. Freeze choices and perform independent evaluation — P0
+
+Dependencies: all frozen data prerequisites, exposure/overlap checks and final
+artifact/threshold choices. Tune only on training/validation; score the reserved
+cohort once under its existing protocol. DGA remains recall >=80%, precision >=95%,
+domain FPR <=2%, separate benign-DNS FPR <=2%; all other frozen detector/session/
+timing gates remain unchanged. Report TP/TN/FP/FN, precision/recall/F1/FPR, family
+or scenario errors and incremental positions with the correct measurement unit.
+
+DoD: every required detector has a gate-backed decision. A failed candidate stays
+disabled; record FP/FN analysis and ONE next experiment recommendation, without
+implementing it in the failure-analysis step. Missing evaluation is not a pass.
+
+### 4. Promote only accepted changes and verify integration — P1
+
+Dependencies: passed frozen gates and the applicable promotion authorization.
+Reference the old artifact, verify the approved SHA256 before activation, retain
+the alert contract/evidence and incremental emission. Run detector regressions,
+benign/public replay checks, full backend tests, frontend contract regressions,
+typecheck/build and relevant real Monitor paths.
+
+DoD: approved changes integrate without unrelated regressions; failed/unassessed
+candidates remain disabled. Do not add authentication, a new database, broker,
+capture format or frontend redesign as a substitute for detector quality.
+
+### 5. Repeat final demonstration and scoped benchmarks — P1
+
+Dependencies: accepted runtime changes finished. Repeat core >=2,000 metadata
+events/sec and processing+SQLite p95 <50ms; direct loopback API-to-SSE p95 <1,000ms,
+with hardware/version/event/alert counts and exact scope. These do not measure
+raw-capture-to-browser capacity. Verify default/multiple threat demos, read-only
+PCAP errors, persistence/restart, SSE resume, desktop/tablet/mobile Monitor and
+failure recovery. Every required threat retains a deterministic replay fallback.
+
+DoD: a new clean directory reproduces installation/build/tests/live incremental
+demo/restart without developer caches or undocumented fixes. Preserve original
+analyst history. Synthetic success remains functional evidence, not public-data
+accuracy or proof of all required malicious intent.
+
+### 6. Close documentation and release audit — P1
+
+Dependencies: phases 1-5 and no unresolved required-quality blocker. Refresh only
+reports actually rerun; align README, expected solution, model/dataset/streaming
+documentation and this plan with deployed and disabled artifact versions. Retain
+hashes, provenance, failed results and known visibility limits.
+
+DoD: requirement-by-requirement SIH audit has no BLOCKER. Only then use
+`FINAL SIH RELEASE STATUS: READY`. Commit verified work packages; push only when
+requested. Cosmetic polish is P2 and must not delay or replace these acceptance
+conditions. Until then, call the project a functional research prototype.
+
+The dated checkpoints below remain historical evidence.
+
 **20 October current-source reproduction:** [Fresh checkout `f380837`](CLEAN_CHECKOUT_20261020.md)
 passes installation, 606 base backend tests/three optional skip reports,
 typecheck/build/nine demo traces and actual Monitor replay. Fifteen exact alerts

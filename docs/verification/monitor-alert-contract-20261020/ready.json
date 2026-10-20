@@ -1,0 +1,31 @@
+{
+  "database": "C:\\Users\\Saich\\AppData\\Local\\Temp\\univect-alert-contract-0nvowf6h\\alerts.sqlite3",
+  "api_pid": 15632,
+  "web_pid": 29932,
+  "api_port": 18422,
+  "web_port": 13422,
+  "initial": [
+    {
+      "timestamp": 1700000000000,
+      "flow_id": "flow-contract-live-1",
+      "threat_class": "DDOS",
+      "confidence_score": 0.8,
+      "severity": "HIGH",
+      "supporting_evidence": "observed metadata",
+      "alert_id": "contract-live-1",
+      "src_ip": "192.0.2.1",
+      "dst_ip": "198.51.100.1",
+      "src_port": 49152,
+      "dst_port": 443,
+      "protocol": 17,
+      "detection_source": "RULE",
+      "occurrence_count": 1,
+      "created_at_ms": 1792497548381.6685,
+      "raw_evidence_metrics": {
+        "packet_rate": 1200
+      },
+      "sequence": 1
+    }
+  ],
+  "scope": "Test-only stored alert fixtures; not detector quality"
+}

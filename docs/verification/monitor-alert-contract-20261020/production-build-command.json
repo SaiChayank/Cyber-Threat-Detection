@@ -1,0 +1,9 @@
+{
+  "command": [
+    "C:\\Program Files\\nodejs\\npm.cmd",
+    "run",
+    "build"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 9.7431574000002
+}

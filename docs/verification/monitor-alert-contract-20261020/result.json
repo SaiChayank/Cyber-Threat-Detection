@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "node_tests": 3,
+  "red_failures_before_fix": 2,
+  "backend_tests": 616,
+  "typecheck": true,
+  "production_build": true,
+  "restored_production_build": true,
+  "demo_traces": 9,
+  "recovered_rows": 3,
+  "reload_required": false,
+  "browser_console_errors": 0,
+  "browser_console_warnings": 0,
+  "protected_files_matching": 130,
+  "source_hook_sha256": "9738f4533999129141e1681de1aaef21b0e2cf9c1a9336e029d7165cbbe73bd0",
+  "scope": "Actual hook regression adapter plus real store/API/SSE/proxy/Monitor fault recovery; no new model metrics"
+}

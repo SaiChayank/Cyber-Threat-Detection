@@ -1,0 +1,70 @@
+{
+  "expected": [
+    {
+      "timestamp": 1700000000000,
+      "flow_id": "flow-contract-live-1",
+      "threat_class": "DDOS",
+      "confidence_score": 0.8,
+      "severity": "HIGH",
+      "supporting_evidence": "observed metadata",
+      "alert_id": "contract-live-1",
+      "src_ip": "192.0.2.1",
+      "dst_ip": "198.51.100.1",
+      "src_port": 49152,
+      "dst_port": 443,
+      "protocol": 17,
+      "detection_source": "RULE",
+      "occurrence_count": 1,
+      "created_at_ms": 1792497548381.6685,
+      "raw_evidence_metrics": {
+        "packet_rate": 1200
+      },
+      "sequence": 1
+    },
+    {
+      "timestamp": 1700000000000,
+      "flow_id": "flow-contract-live-2",
+      "threat_class": "DDOS",
+      "confidence_score": 0.8,
+      "severity": "HIGH",
+      "supporting_evidence": "observed metadata",
+      "alert_id": "contract-live-2",
+      "src_ip": "192.0.2.1",
+      "dst_ip": "198.51.100.1",
+      "src_port": 49152,
+      "dst_port": 443,
+      "protocol": 17,
+      "detection_source": "RULE",
+      "occurrence_count": 1,
+      "created_at_ms": 1792497591902.134,
+      "raw_evidence_metrics": {
+        "packet_rate": 1200
+      },
+      "sequence": 2
+    },
+    {
+      "timestamp": 1700000000000,
+      "flow_id": "flow-contract-live-3",
+      "threat_class": "DDOS",
+      "confidence_score": 0.8,
+      "severity": "HIGH",
+      "supporting_evidence": "observed metadata",
+      "alert_id": "contract-live-3",
+      "src_ip": "192.0.2.1",
+      "dst_ip": "198.51.100.1",
+      "src_port": 49152,
+      "dst_port": 443,
+      "protocol": 17,
+      "detection_source": "RULE",
+      "occurrence_count": 1,
+      "created_at_ms": 1792497591902.1665,
+      "raw_evidence_metrics": {
+        "packet_rate": 1200
+      },
+      "sequence": 3
+    }
+  ],
+  "exact_api_match": true,
+  "no_rows_deleted": true,
+  "repaired_only_disposable_second_record": true
+}

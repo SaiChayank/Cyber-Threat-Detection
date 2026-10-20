@@ -1,0 +1,10 @@
+{
+  "command": [
+    "node",
+    "--test",
+    "tests/frontend/monitor-alert-recovery.test.cjs"
+  ],
+  "exit_code": 1,
+  "expected_exit_code": 1,
+  "hook_sha256": "08e990a72b68b0a7439d0c7c9d9b36f906fd8ee87a63937bc802da2cb865341b"
+}

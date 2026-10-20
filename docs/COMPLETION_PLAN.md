@@ -1,5 +1,14 @@
 # Univect completion plan
 
+**Current execution pointer, 21 October 2026:**
+[Current sequence and acceptance conditions](COMPLETION_EXECUTION_20261018.md)
+supersede older "next task" entries below. Monitor malformed-alert recovery is
+[fixed and frozen](MONITOR_ALERT_CONTRACT_20261021.md): three frontend regressions,
+616 backend tests, typecheck/build and real automatic three-record recovery pass.
+The 20 October clean rehearsal is separately scoped to its earlier commit.
+Public-only data/quality blockers remain; final release is NOT READY. No current
+permission-dependent request, reserved tuning or failed-candidate activation.
+
 **Current baseline verified, 18 October 2026 IST:**
 [regression record](BASELINE_REGRESSION_20261018.md) for `ee8f72d` reports 533 backend
 tests passing/one existing deprecation warning, plus root typecheck and production

@@ -46,13 +46,23 @@ export function useMonitor() {
 
     function connect() {
       if (!alive() || source) return
-      source = new EventSource(`/api/stream?after=${cursor}`)
+      const activeSource = new EventSource(`/api/stream?after=${cursor}`)
+      source = activeSource
+      function reconcileHistory(message: string) {
+        initialized = false
+        apiAvailable = false
+        activeSource.close()
+        source = null
+        setStreamError(message)
+        updateConnection()
+      }
       source.onopen = () => {
+        if (!alive() || source !== activeSource) return
         hasConnected = true
         updateConnection()
       }
       source.onerror = () => {
-        if (!alive()) return
+        if (!alive() || source !== activeSource) return
         // A non-200 proxy response can permanently close native EventSource.
         // The next successful telemetry poll reopens it from the persisted cursor.
         if (source?.readyState === EventSource.CLOSED) {
@@ -62,11 +72,11 @@ export function useMonitor() {
         updateConnection()
       }
       source.onmessage = (event) => {
-        if (!alive()) return
+        if (!alive() || source !== activeSource) return
         try {
           const parsed = alertSchema.safeParse(JSON.parse(event.data))
           if (!parsed.success) {
-            setStreamError('An alert did not match the expected API schema.')
+            reconcileHistory('An alert did not match the expected API schema. Rechecking saved history.')
             return
           }
           const row = parsed.data
@@ -78,7 +88,7 @@ export function useMonitor() {
               : [row, ...current].sort((a, b) => b.sequence - a.sequence).slice(0, 200),
           )
         } catch {
-          setStreamError('The stream delivered an unreadable alert. Retrying on the next update.')
+          reconcileHistory('The stream delivered an unreadable alert. Rechecking saved history.')
         }
       }
     }
@@ -99,6 +109,7 @@ export function useMonitor() {
           cursor = rows.reduce((max, row) => Math.max(max, row.sequence), 0)
           previous = { at: Date.now(), processed: nextTelemetry.processed }
           initialized = true
+          setStreamError(null)
         } else {
           const next = await api.telemetry(controller.signal)
           if (!alive()) return

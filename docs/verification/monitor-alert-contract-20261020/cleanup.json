@@ -1,0 +1,12 @@
+{
+  "verified_owned_api_pid": 15632,
+  "verified_owned_web_pid": 29932,
+  "ports_released": [
+    18422,
+    13422
+  ],
+  "owned_tab_closed": true,
+  "retained_database": "C:\\Users\\Saich\\AppData\\Local\\Temp\\univect-alert-contract-0nvowf6h\\alerts.sqlite3",
+  "original_history_modified": false,
+  "default_production_build_restored": true
+}

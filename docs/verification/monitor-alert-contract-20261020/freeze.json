@@ -1,0 +1,160 @@
+{
+  "finalized_client_date": "2026-10-21",
+  "started": "2026-10-20",
+  "baseline": "7adccf4",
+  "status": "PASS_MONITOR_ALERT_RECOVERY_NOT_FINAL_RELEASE",
+  "files": [
+    {
+      "path": "docs/MONITOR_ALERT_CONTRACT_20261021.md",
+      "sha256": "be9cd75ee76be0531bba361d5a844adcdebf7a8967724ed882734206a4c07b33"
+    },
+    {
+      "path": "frontend/src/hooks/use-monitor.ts",
+      "sha256": "9738f4533999129141e1681de1aaef21b0e2cf9c1a9336e029d7165cbbe73bd0"
+    },
+    {
+      "path": "tests/frontend/monitor-alert-recovery.test.cjs",
+      "sha256": "574a504d394a0a92a53da5003b0e3b7d9e77d14c20c1e5ae6d360e0a8ed6d585"
+    },
+    {
+      "path": "docs/verification/monitor-alert-contract-20261020/api-log-storage.json",
+      "sha256": "b9d80b03831860bc765e4c3ecf9ceb1a13f75c61cf2a702f49d7894be165df73"
+    },
+    {
+      "path": "docs/verification/monitor-alert-contract-20261020/api.log.gz",
+      "sha256": "ae19a308af9043a8e129e4de35280010f9816361fa449869b8f2128d6d7204be"
+    },
+    {
+      "path": "docs/verification/monitor-alert-contract-20261020/backend-tests-command.json",
+      "sha256": "fb2c8f1af9ee8f3b039d4f570c44e66d15a3a8f66e95db23fff2035f02ca0ee0"
+    },
+    {
+      "path": "docs/verification/monitor-alert-contract-20261020/backend-tests.log",
+      "sha256": "ce6813a7dda00be797878185c574a6439cdbb030b9375fab82df54de5a34c495"
+    },
+    {
+      "path": "docs/verification/monitor-alert-contract-20261020/before-fault.txt",
+      "sha256": "836ecc9dac9ae6878f12b78797e663e6b5d4fa81237a4ea8bdc90cdd302ae966"
+    },
+    {
+      "path": "docs/verification/monitor-alert-contract-20261020/browser-console.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "path": "docs/verification/monitor-alert-contract-20261020/cleanup.json",
+      "sha256": "18735df7dfb87336832bb7775d431e7b65c369f8bf29aa6fa53857b27084f9ee"
+    },
+    {
+      "path": "docs/verification/monitor-alert-contract-20261020/demo-preflight-command.json",
+      "sha256": "688df33c143c8ceb485801f41e72f974f7b7c0ef74d8a5b434603bb68b7584dc"
+    },
+    {
+      "path": "docs/verification/monitor-alert-contract-20261020/demo-preflight.log",
+      "sha256": "086ab630eb0f1d1e75540ae5b0909d28971b481e5509521676cd85b5d8fd3e7c"
+    },
+    {
+      "path": "docs/verification/monitor-alert-contract-20261020/fault.json",
+      "sha256": "29ccfc01b5349e0a52de22801deb1b1d26a38aa39d6cec69e92fb62ce183ad58"
+    },
+    {
+      "path": "docs/verification/monitor-alert-contract-20261020/fault.png",
+      "sha256": "7db235eabee556e044ff77417333bab46476b0bcca9d14f398042210f75d0a9c"
+    },
+    {
+      "path": "docs/verification/monitor-alert-contract-20261020/fault.txt",
+      "sha256": "b7fb7fb94d41040f8bdebf0ef85511d2b1144a4d1b695b60a8d37f399b1bd8c3"
+    },
+    {
+      "path": "docs/verification/monitor-alert-contract-20261020/finalize.py",
+      "sha256": "7c2cc6b83903e39aac349510d070e485a11a916c80221a6ed8fc64b5eae263ef"
+    },
+    {
+      "path": "docs/verification/monitor-alert-contract-20261020/green-tests-command.json",
+      "sha256": "3a79ab47d3c05675f1deefcae186c4ece122db319fcab8d47a2211eefa6ff88d"
+    },
+    {
+      "path": "docs/verification/monitor-alert-contract-20261020/green-tests.log",
+      "sha256": "ee8c4b169632d644903a33c133ea47a6a69c05d794921bf951b17742e2b6fb2d"
+    },
+    {
+      "path": "docs/verification/monitor-alert-contract-20261020/integrity-after.json",
+      "sha256": "73bbff59d1f2bdd4912d266a426d1dd167c51a06eeed5c3089c7bea42b75a700"
+    },
+    {
+      "path": "docs/verification/monitor-alert-contract-20261020/live_case.py",
+      "sha256": "01b73d8cf185496112cffc573b9fbf8adf0a66c0274e324bf7d55d2486db15ce"
+    },
+    {
+      "path": "docs/verification/monitor-alert-contract-20261020/original-receipt-hashes.json",
+      "sha256": "387647b37b4a2028b854d32ffcaf8e8ad941445f12f99592ae9997587b9a11f1"
+    },
+    {
+      "path": "docs/verification/monitor-alert-contract-20261020/production-build-command.json",
+      "sha256": "938bb0f63f818885b1017699c80f86c44b2aba1e41a76b94bd7f420a3696808c"
+    },
+    {
+      "path": "docs/verification/monitor-alert-contract-20261020/production-build.log",
+      "sha256": "6adf9ca1f39c728b97ee1ec72bfa627b9e8b669cb5e15cad706374b4afc638e8"
+    },
+    {
+      "path": "docs/verification/monitor-alert-contract-20261020/PROTOCOL.md",
+      "sha256": "1946e8ed9d612000a5acbae7b0d371274432c697f0a1ea7b68f8b907fc5de11f"
+    },
+    {
+      "path": "docs/verification/monitor-alert-contract-20261020/ready.json",
+      "sha256": "0954dcf3f4cdbf286c72cd71c65298b8e7f34b46bdcc0628033e5145de0bad0d"
+    },
+    {
+      "path": "docs/verification/monitor-alert-contract-20261020/recovered-dom.json",
+      "sha256": "8e18cb6462f780f6b21df9b428b12e274431c6484d37ec3ad6c27732afd39387"
+    },
+    {
+      "path": "docs/verification/monitor-alert-contract-20261020/recovered.png",
+      "sha256": "ccb8ceae706d33cc9f9898e2d5383c5695d18b77bc99d16d5f3142ffa03386db"
+    },
+    {
+      "path": "docs/verification/monitor-alert-contract-20261020/recovered.txt",
+      "sha256": "09d2bdd23cf146b73c9ae4609ea18fe45af7e684c33b6e6c9f5d31474d081fd8"
+    },
+    {
+      "path": "docs/verification/monitor-alert-contract-20261020/red-command.json",
+      "sha256": "744aac37abe655fa40eccf75b31d73a49f4d382cef326deed094e8664829724a"
+    },
+    {
+      "path": "docs/verification/monitor-alert-contract-20261020/red-tests.log",
+      "sha256": "943aee1d26cd7cdbbb9c3fd675ec159e3b0ed327796aed5d13215e9731bf92d0"
+    },
+    {
+      "path": "docs/verification/monitor-alert-contract-20261020/repaired.json",
+      "sha256": "59a6bab1fda8f957f676c033545dd0078368fee6d123de3291349445dbe7799f"
+    },
+    {
+      "path": "docs/verification/monitor-alert-contract-20261020/restored-production-build-command.json",
+      "sha256": "a71f2d343fddc2de6504e155527337a58c949952975b1bb0df0f1be2c77b3ae1"
+    },
+    {
+      "path": "docs/verification/monitor-alert-contract-20261020/restored-production-build.log",
+      "sha256": "3595e28810587db22dadd41b37398aa51095f9cab74f01343efcc83d1dcd0879"
+    },
+    {
+      "path": "docs/verification/monitor-alert-contract-20261020/result.json",
+      "sha256": "82eb85775e641e6ce96dec90a1fce82441cdfcdbc6402aa8e0350d019c5f001b"
+    },
+    {
+      "path": "docs/verification/monitor-alert-contract-20261020/run_checks.py",
+      "sha256": "5b252d05b1e04bbf11943d10f34268559c40168b70df7d4a0e07a54055121497"
+    },
+    {
+      "path": "docs/verification/monitor-alert-contract-20261020/typecheck-command.json",
+      "sha256": "ea085fa71a2385b1deb1614f8fd765558a07765701e657d1b38118d51d25700a"
+    },
+    {
+      "path": "docs/verification/monitor-alert-contract-20261020/typecheck.log",
+      "sha256": "80cbcc4362c377cb590a8c49e6f7deceb83f41186ae5b66fbf11bd49b513facc"
+    },
+    {
+      "path": "docs/verification/monitor-alert-contract-20261020/web.log",
+      "sha256": "0c20c91d353a136ff14b9de222b01bfe2bc208b98478950485e1ec2eca8d5eb1"
+    }
+  ]
+}

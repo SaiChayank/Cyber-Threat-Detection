@@ -1,0 +1,16 @@
+
+> univect-ps26145@1.0.0 dev
+> node scripts/run-local.mjs dev
+
+Using the running Univect API at http://127.0.0.1:18422
+Univect: http://localhost:13422
+▲ Next.js 16.3.8 (Turbopack)
+- Local:         http://127.0.0.1:13422
+- Network:       http://127.0.0.1:13422
+✓ Ready in 667ms
+✓ Running next.config.ts took 62ms
+- Experiments (use with caution):
+  · proxyClientMaxBodySize: "20mb"
+
+ GET /monitor 200 in 3.8s (next.js: 3.2s, application-code: 593ms)
+ GET /monitor 200 in 77ms (next.js: 12ms, application-code: 65ms)

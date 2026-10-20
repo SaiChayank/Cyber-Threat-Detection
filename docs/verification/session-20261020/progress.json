@@ -79,18 +79,32 @@
       "core_events_per_second": 4256.969585100927,
       "delivery_success_count": 100,
       "delivery_p95_ms": 246.11409999852185
+    },
+    {
+      "task": "Monitor malformed-alert durable-history recovery",
+      "completed_client_date": "2026-10-21",
+      "dod": "PASS",
+      "report": "docs/MONITOR_ALERT_CONTRACT_20261021.md",
+      "frontend_regressions": 3,
+      "red_failures_before_fix": 2,
+      "backend_tests": 616,
+      "typecheck": "PASS",
+      "production_build": "PASS",
+      "real_recovered_rows": 3,
+      "reload_required": false,
+      "current_protected_files_matching": 130
     }
   ],
-  "current_task": "Frontend malformed-alert contract integration diagnosis using disposable state",
+  "current_task": "Active recovery task completed; remaining completion plan prepared; next implementation not started",
+  "work_running": false,
+  "stopping_reason": "Latest user request asks to finish the active task, rate the project and lay out remaining work",
   "last_task": {
-    "task": "DGA task-pointer and historical prerequisite reconciliation",
-    "report": "docs/DGA_STATUS_RECONCILIATION_20261020.md",
-    "status": "RECONCILED_WITH_HISTORICAL_CONTACT_DOCUMENT_MISMATCH",
-    "targeted_tests": 38,
+    "task": "Monitor malformed-alert durable-history recovery",
+    "report": "docs/MONITOR_ALERT_CONTRACT_20261021.md",
+    "status": "PASS",
+    "frontend_regressions": 3,
+    "backend_tests": 616,
     "current_protected_files_matching": 130,
-    "prior_alias_review_and_positive_count_already_complete": true,
-    "historical_freeze_file_references": 22,
-    "historical_matching_file_references": 21,
     "reserved_values_opened": false,
     "new_training_or_scoring": false
   },
@@ -102,14 +116,14 @@
   ],
   "release_ready": false,
   "checkpointed_near_usage_limit": false,
-  "last_checked_primary_used_percent": 19,
+  "last_checked_primary_used_percent": 76,
   "ordinary_usage_allowed_at_last_check": true,
   "usage_limit_interruption_pending": false,
   "blocked_by_data_not_usage_limits": false,
   "research_data_blocked": true,
-  "research_track_disposition": "DGA and other unqualified research roles stay data/provenance blocked; independent application integration diagnosis may proceed",
+  "research_track_disposition": "DGA and other unqualified research roles stay data/provenance blocked; passed application fixes are frozen",
   "next_queue": [
-    "Inspect current alert schemas/handlers and test malformed stored-alert shapes through Monitor; change code only on a demonstrated defect",
+    "Public UFU Do53 published member/run inventory and native capture-format qualification before packet values; not started",
     "Only data-qualified next steps; no training/scoring or failed activation"
   ]
 }

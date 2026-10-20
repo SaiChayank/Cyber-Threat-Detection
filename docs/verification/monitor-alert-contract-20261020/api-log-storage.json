@@ -1,0 +1,8 @@
+{
+  "readable_log_sha256": "9466b3102ac3232f5933cc90bf716f2761e5a2db5657970434d609fc64edaea6",
+  "gzip_sha256": "ae19a308af9043a8e129e4de35280010f9816361fa449869b8f2128d6d7204be",
+  "readable_log_bytes": 583555,
+  "gzip_bytes": 2421,
+  "exact_original_receipt_preserved": "data/raw/monitor-alert-contract-originals-20261021/api.log",
+  "compression_only_no_content_removed": true
+}

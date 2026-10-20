@@ -1,0 +1,9 @@
+{
+  "command": [
+    "node",
+    "--test",
+    "tests/frontend/monitor-alert-recovery.test.cjs"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 0.5051533999976527
+}
