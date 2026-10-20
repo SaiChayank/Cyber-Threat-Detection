@@ -22,9 +22,17 @@
       "viewports": 3,
       "durable_alerts": 5,
       "console_errors": 0
+    },
+    {
+      "task": "Installed backend dependency security triage",
+      "dod": "PASS",
+      "report": "docs/PYTHON_DEPENDENCY_SECURITY_20261020.md",
+      "packages_scanned": 22,
+      "known_advisory_ids": 0,
+      "runtime_changed": false
     }
   ],
-  "current_task": "Backend runtime dependency security triage",
+  "current_task": "Scoped core/SQLite and direct API-to-SSE benchmark refresh",
   "constraints": [
     "Public datasets only; skip email-gated supplements and author follow-ups",
     "No reserved tuning, gate changes, training or failed-candidate activation",
@@ -36,7 +44,7 @@
   "last_checked_primary_used_percent": 24,
   "ordinary_usage_allowed_at_last_check": true,
   "next_queue": [
-    "Backend runtime dependency security triage",
-    "Eligible failure-recovery or scoped performance/reproducibility work"
+    "Scoped core and delivery benchmark refresh",
+    "Additional evidence-supported independent work; data-gated models remain blocked"
   ]
 }

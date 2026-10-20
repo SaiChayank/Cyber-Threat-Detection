@@ -1,0 +1,288 @@
+{
+  "generated_at_utc": "2026-10-20T04:34:59.803157+00:00",
+  "python": "3.13.5",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "requirements_sha256": "012c08156e13e1163725c13438bfc2885302cdfab58a499fe90fb10ac4d93ef5",
+  "roots": [
+    "fastapi<1,>=0.110.0",
+    "uvicorn<1,>=0.28.0",
+    "pydantic<3,>=2.6.0",
+    "httpx<1,>=0.27.0",
+    "pytest<10,>=8.0.0"
+  ],
+  "packages": [
+    {
+      "name": "annotated-doc",
+      "version": "0.0.5",
+      "requires_python": ">=3.9"
+    },
+    {
+      "name": "annotated-types",
+      "version": "0.8.0",
+      "requires_python": ">=3.10"
+    },
+    {
+      "name": "anyio",
+      "version": "4.15.1",
+      "requires_python": ">=3.10"
+    },
+    {
+      "name": "certifi",
+      "version": "2026.7.22",
+      "requires_python": ">=3.7"
+    },
+    {
+      "name": "click",
+      "version": "8.5.0",
+      "requires_python": ">=3.10"
+    },
+    {
+      "name": "colorama",
+      "version": "0.4.6",
+      "requires_python": "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,!=3.5.*,!=3.6.*,>=2.7"
+    },
+    {
+      "name": "fastapi",
+      "version": "0.141.1",
+      "requires_python": ">=3.10"
+    },
+    {
+      "name": "h11",
+      "version": "0.16.0",
+      "requires_python": ">=3.8"
+    },
+    {
+      "name": "httpcore",
+      "version": "1.0.9",
+      "requires_python": ">=3.8"
+    },
+    {
+      "name": "httpx",
+      "version": "0.28.1",
+      "requires_python": ">=3.8"
+    },
+    {
+      "name": "idna",
+      "version": "3.20",
+      "requires_python": ">=3.9"
+    },
+    {
+      "name": "iniconfig",
+      "version": "2.3.0",
+      "requires_python": ">=3.10"
+    },
+    {
+      "name": "packaging",
+      "version": "26.3",
+      "requires_python": ">=3.9"
+    },
+    {
+      "name": "pluggy",
+      "version": "1.6.0",
+      "requires_python": ">=3.9"
+    },
+    {
+      "name": "pydantic",
+      "version": "2.13.5",
+      "requires_python": ">=3.9"
+    },
+    {
+      "name": "pydantic-core",
+      "version": "2.46.5",
+      "requires_python": ">=3.9"
+    },
+    {
+      "name": "pygments",
+      "version": "2.21.0",
+      "requires_python": ">=3.9"
+    },
+    {
+      "name": "pytest",
+      "version": "9.1.1",
+      "requires_python": ">=3.10"
+    },
+    {
+      "name": "starlette",
+      "version": "1.7.0",
+      "requires_python": ">=3.10"
+    },
+    {
+      "name": "typing-extensions",
+      "version": "4.16.0",
+      "requires_python": ">=3.9"
+    },
+    {
+      "name": "typing-inspection",
+      "version": "0.4.4",
+      "requires_python": ">=3.10"
+    },
+    {
+      "name": "uvicorn",
+      "version": "0.54.0",
+      "requires_python": ">=3.10"
+    }
+  ],
+  "edges": [
+    {
+      "parent": "requirements.txt",
+      "requirement": "pytest<10,>=8.0.0",
+      "resolved": "pytest"
+    },
+    {
+      "parent": "pytest",
+      "requirement": "pygments>=2.7.2",
+      "resolved": "pygments"
+    },
+    {
+      "parent": "pytest",
+      "requirement": "pluggy<2,>=1.5",
+      "resolved": "pluggy"
+    },
+    {
+      "parent": "pytest",
+      "requirement": "packaging>=22",
+      "resolved": "packaging"
+    },
+    {
+      "parent": "pytest",
+      "requirement": "iniconfig>=1.0.1",
+      "resolved": "iniconfig"
+    },
+    {
+      "parent": "pytest",
+      "requirement": "colorama>=0.4; sys_platform == \"win32\"",
+      "resolved": "colorama"
+    },
+    {
+      "parent": "requirements.txt",
+      "requirement": "httpx<1,>=0.27.0",
+      "resolved": "httpx"
+    },
+    {
+      "parent": "httpx",
+      "requirement": "idna",
+      "resolved": "idna"
+    },
+    {
+      "parent": "httpx",
+      "requirement": "httpcore==1.*",
+      "resolved": "httpcore"
+    },
+    {
+      "parent": "httpcore",
+      "requirement": "h11>=0.16",
+      "resolved": "h11"
+    },
+    {
+      "parent": "httpcore",
+      "requirement": "certifi",
+      "resolved": "certifi"
+    },
+    {
+      "parent": "httpx",
+      "requirement": "certifi",
+      "resolved": "certifi"
+    },
+    {
+      "parent": "httpx",
+      "requirement": "anyio",
+      "resolved": "anyio"
+    },
+    {
+      "parent": "anyio",
+      "requirement": "typing_extensions>=4.16.0; python_version < \"3.15\"",
+      "resolved": "typing-extensions"
+    },
+    {
+      "parent": "anyio",
+      "requirement": "idna>=2.8",
+      "resolved": "idna"
+    },
+    {
+      "parent": "requirements.txt",
+      "requirement": "pydantic<3,>=2.6.0",
+      "resolved": "pydantic"
+    },
+    {
+      "parent": "pydantic",
+      "requirement": "typing-inspection>=0.4.2",
+      "resolved": "typing-inspection"
+    },
+    {
+      "parent": "typing-inspection",
+      "requirement": "typing-extensions>=4.15.0",
+      "resolved": "typing-extensions"
+    },
+    {
+      "parent": "pydantic",
+      "requirement": "typing-extensions>=4.14.1",
+      "resolved": "typing-extensions"
+    },
+    {
+      "parent": "pydantic",
+      "requirement": "pydantic-core==2.46.5",
+      "resolved": "pydantic-core"
+    },
+    {
+      "parent": "pydantic-core",
+      "requirement": "typing-extensions>=4.14.1",
+      "resolved": "typing-extensions"
+    },
+    {
+      "parent": "pydantic",
+      "requirement": "annotated-types>=0.6.0",
+      "resolved": "annotated-types"
+    },
+    {
+      "parent": "requirements.txt",
+      "requirement": "uvicorn<1,>=0.28.0",
+      "resolved": "uvicorn"
+    },
+    {
+      "parent": "uvicorn",
+      "requirement": "h11>=0.8",
+      "resolved": "h11"
+    },
+    {
+      "parent": "uvicorn",
+      "requirement": "click>=7.0",
+      "resolved": "click"
+    },
+    {
+      "parent": "requirements.txt",
+      "requirement": "fastapi<1,>=0.110.0",
+      "resolved": "fastapi"
+    },
+    {
+      "parent": "fastapi",
+      "requirement": "annotated-doc>=0.0.2",
+      "resolved": "annotated-doc"
+    },
+    {
+      "parent": "fastapi",
+      "requirement": "typing-inspection>=0.4.2",
+      "resolved": "typing-inspection"
+    },
+    {
+      "parent": "fastapi",
+      "requirement": "typing-extensions>=4.8.0",
+      "resolved": "typing-extensions"
+    },
+    {
+      "parent": "fastapi",
+      "requirement": "pydantic>=2.9.0",
+      "resolved": "pydantic"
+    },
+    {
+      "parent": "fastapi",
+      "requirement": "starlette>=0.46.0",
+      "resolved": "starlette"
+    },
+    {
+      "parent": "starlette",
+      "requirement": "anyio<5,>=4.0.0",
+      "resolved": "anyio"
+    }
+  ],
+  "scope": "Installed requirements.txt closure, including pytest and its dependencies; no optional research packages or OS scan"
+}

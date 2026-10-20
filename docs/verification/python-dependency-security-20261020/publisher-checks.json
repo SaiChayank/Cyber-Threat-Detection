@@ -1,0 +1,222 @@
+[
+  {
+    "url": "https://pypi.org/pypi/annotated-doc/0.0.5/json",
+    "name": "annotated-doc",
+    "version": "0.0.5",
+    "response_sha256": "1aab691a5f37dd292e6d93ab53f7da5d839f56ba605345f017022ec75eb643af",
+    "distribution_count": 2,
+    "publisher_advisories": [],
+    "all_distributions_yanked": false,
+    "checked_utc": "2026-10-20T04:35:26.267483+00:00"
+  },
+  {
+    "url": "https://pypi.org/pypi/annotated-types/0.8.0/json",
+    "name": "annotated-types",
+    "version": "0.8.0",
+    "response_sha256": "a6e8e5b10c8fd2f596bba53e015cd37f6279fb5cec26ce0c5e9968625be4fefa",
+    "distribution_count": 2,
+    "publisher_advisories": [],
+    "all_distributions_yanked": false,
+    "checked_utc": "2026-10-20T04:35:26.532017+00:00"
+  },
+  {
+    "url": "https://pypi.org/pypi/anyio/4.15.1/json",
+    "name": "anyio",
+    "version": "4.15.1",
+    "response_sha256": "e2ee22fad2fab3e66be503cba9b41945607d3076c9b7aa49b6e2f95ac323efab",
+    "distribution_count": 2,
+    "publisher_advisories": [],
+    "all_distributions_yanked": false,
+    "checked_utc": "2026-10-20T04:35:26.516104+00:00"
+  },
+  {
+    "url": "https://pypi.org/pypi/certifi/2026.7.22/json",
+    "name": "certifi",
+    "version": "2026.7.22",
+    "response_sha256": "70cdc8aff4d05c4c21aa7aa82ee5220d78eac2137e82b9568233b5be7d1a23ee",
+    "distribution_count": 2,
+    "publisher_advisories": [],
+    "all_distributions_yanked": false,
+    "checked_utc": "2026-10-20T04:35:26.255878+00:00"
+  },
+  {
+    "url": "https://pypi.org/pypi/click/8.5.0/json",
+    "name": "click",
+    "version": "8.5.0",
+    "response_sha256": "4e36adc9b46f837e10ce801b7a478f9146fefdfb287292b7668fc64b1474e41d",
+    "distribution_count": 2,
+    "publisher_advisories": [],
+    "all_distributions_yanked": false,
+    "checked_utc": "2026-10-20T04:35:26.532465+00:00"
+  },
+  {
+    "url": "https://pypi.org/pypi/colorama/0.4.6/json",
+    "name": "colorama",
+    "version": "0.4.6",
+    "response_sha256": "43fb351344384a44c2b7d7fff1c63496b89ac830aea714301525c1f3718addd1",
+    "distribution_count": 2,
+    "publisher_advisories": [],
+    "all_distributions_yanked": false,
+    "checked_utc": "2026-10-20T04:35:26.560596+00:00"
+  },
+  {
+    "url": "https://pypi.org/pypi/fastapi/0.141.1/json",
+    "name": "fastapi",
+    "version": "0.141.1",
+    "response_sha256": "871784b62df6bfc6ebfb60e54854683123710bfdf77d5dc8b6b047aa74a2796f",
+    "distribution_count": 2,
+    "publisher_advisories": [],
+    "all_distributions_yanked": false,
+    "checked_utc": "2026-10-20T04:35:26.560180+00:00"
+  },
+  {
+    "url": "https://pypi.org/pypi/h11/0.16.0/json",
+    "name": "h11",
+    "version": "0.16.0",
+    "response_sha256": "97f4efb9cc00826f0408076983adc1a1e48e8f2cabf403aaf250f724e081440d",
+    "distribution_count": 2,
+    "publisher_advisories": [],
+    "all_distributions_yanked": false,
+    "checked_utc": "2026-10-20T04:35:26.812418+00:00"
+  },
+  {
+    "url": "https://pypi.org/pypi/httpcore/1.0.9/json",
+    "name": "httpcore",
+    "version": "1.0.9",
+    "response_sha256": "e26eca5c3d288fe9e6446af9bcbca1038ba688629d5c8a2886c47d74718d87a2",
+    "distribution_count": 2,
+    "publisher_advisories": [],
+    "all_distributions_yanked": false,
+    "checked_utc": "2026-10-20T04:35:27.295714+00:00"
+  },
+  {
+    "url": "https://pypi.org/pypi/httpx/0.28.1/json",
+    "name": "httpx",
+    "version": "0.28.1",
+    "response_sha256": "293bfab7bf587fcd0825f1bd8eed8e6303285ba14801b15659853827cbe30796",
+    "distribution_count": 2,
+    "publisher_advisories": [],
+    "all_distributions_yanked": false,
+    "checked_utc": "2026-10-20T04:35:26.589791+00:00"
+  },
+  {
+    "url": "https://pypi.org/pypi/idna/3.20/json",
+    "name": "idna",
+    "version": "3.20",
+    "response_sha256": "e7cbd26e23ce60f6cb3a151d2adf3b1b087bb8f10ac2d9d6db70fdccbf3bb041",
+    "distribution_count": 2,
+    "publisher_advisories": [],
+    "all_distributions_yanked": false,
+    "checked_utc": "2026-10-20T04:35:26.589662+00:00"
+  },
+  {
+    "url": "https://pypi.org/pypi/iniconfig/2.3.0/json",
+    "name": "iniconfig",
+    "version": "2.3.0",
+    "response_sha256": "10a4699a386b2309a98d4c368b6696e80562cefebe20107610337447d7f13f65",
+    "distribution_count": 2,
+    "publisher_advisories": [],
+    "all_distributions_yanked": false,
+    "checked_utc": "2026-10-20T04:35:26.856355+00:00"
+  },
+  {
+    "url": "https://pypi.org/pypi/packaging/26.3/json",
+    "name": "packaging",
+    "version": "26.3",
+    "response_sha256": "4f190d2f0b312b3086058cee64ab4333bf3ce67fb78b4c2bdb43899049b29f4d",
+    "distribution_count": 2,
+    "publisher_advisories": [],
+    "all_distributions_yanked": false,
+    "checked_utc": "2026-10-20T04:35:26.861200+00:00"
+  },
+  {
+    "url": "https://pypi.org/pypi/pluggy/1.6.0/json",
+    "name": "pluggy",
+    "version": "1.6.0",
+    "response_sha256": "597beede1e3bfb71dcf93f583c52f9b6ff64c7aca4c7cddcf365f0c6d5c0ade8",
+    "distribution_count": 2,
+    "publisher_advisories": [],
+    "all_distributions_yanked": false,
+    "checked_utc": "2026-10-20T04:35:27.097869+00:00"
+  },
+  {
+    "url": "https://pypi.org/pypi/pydantic/2.13.5/json",
+    "name": "pydantic",
+    "version": "2.13.5",
+    "response_sha256": "20a994795e3341324a7da30ae19b815669c2bf1722c5077089cfdc379215009d",
+    "distribution_count": 2,
+    "publisher_advisories": [],
+    "all_distributions_yanked": false,
+    "checked_utc": "2026-10-20T04:35:27.167728+00:00"
+  },
+  {
+    "url": "https://pypi.org/pypi/pydantic-core/2.46.5/json",
+    "name": "pydantic_core",
+    "version": "2.46.5",
+    "response_sha256": "6cbd39a49f9c7e2dfc8b96f6955d9b9b275ba6f36cacab0e9a863937e99fd8ac",
+    "distribution_count": 120,
+    "publisher_advisories": [],
+    "all_distributions_yanked": false,
+    "checked_utc": "2026-10-20T04:35:26.911529+00:00"
+  },
+  {
+    "url": "https://pypi.org/pypi/pygments/2.21.0/json",
+    "name": "Pygments",
+    "version": "2.21.0",
+    "response_sha256": "330104a10adc8a587e3f98f4e207557125ca0c1d489e129334da5acb2b813a03",
+    "distribution_count": 2,
+    "publisher_advisories": [],
+    "all_distributions_yanked": false,
+    "checked_utc": "2026-10-20T04:35:26.967460+00:00"
+  },
+  {
+    "url": "https://pypi.org/pypi/pytest/9.1.1/json",
+    "name": "pytest",
+    "version": "9.1.1",
+    "response_sha256": "8ed48304ba7fd0ae974a041f117487b499d553b40e5ce55a9ece677e946f68dd",
+    "distribution_count": 2,
+    "publisher_advisories": [],
+    "all_distributions_yanked": false,
+    "checked_utc": "2026-10-20T04:35:27.257355+00:00"
+  },
+  {
+    "url": "https://pypi.org/pypi/starlette/1.7.0/json",
+    "name": "starlette",
+    "version": "1.7.0",
+    "response_sha256": "a23802836271b26febd16a0d51d3d7d788a694efae31acf23240333a582464c6",
+    "distribution_count": 2,
+    "publisher_advisories": [],
+    "all_distributions_yanked": false,
+    "checked_utc": "2026-10-20T04:35:27.375030+00:00"
+  },
+  {
+    "url": "https://pypi.org/pypi/typing-extensions/4.16.0/json",
+    "name": "typing-extensions",
+    "version": "4.16.0",
+    "response_sha256": "2140da00d62dde967f52d0be0ae28444f1d6a3fe603f52c83c23988c32122d5a",
+    "distribution_count": 2,
+    "publisher_advisories": [],
+    "all_distributions_yanked": false,
+    "checked_utc": "2026-10-20T04:35:27.220535+00:00"
+  },
+  {
+    "url": "https://pypi.org/pypi/typing-inspection/0.4.4/json",
+    "name": "typing-inspection",
+    "version": "0.4.4",
+    "response_sha256": "0605416f2f37f2df04e45360cf5ce4ca5eeca6d414bb6ddb1ec5a9893c62ac30",
+    "distribution_count": 2,
+    "publisher_advisories": [],
+    "all_distributions_yanked": false,
+    "checked_utc": "2026-10-20T04:35:27.249394+00:00"
+  },
+  {
+    "url": "https://pypi.org/pypi/uvicorn/0.54.0/json",
+    "name": "uvicorn",
+    "version": "0.54.0",
+    "response_sha256": "65378bebfff63d5a58ba9b6ff6ff1ae5047721da28e27802e2aafa19fece8444",
+    "distribution_count": 2,
+    "publisher_advisories": [],
+    "all_distributions_yanked": false,
+    "checked_utc": "2026-10-20T04:35:27.551882+00:00"
+  }
+]

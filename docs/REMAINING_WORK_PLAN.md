@@ -554,3 +554,12 @@ mobile controlled failure and retry, safe wording/no private sentinel, queues
 console diagnostics; isolated/restored-default builds and all 130 current hashes
 pass. No product/test/detector/model changes. Earlier interrupted timeout remains
 separate. Scoped DoD PASS; next: backend dependency security triage.
+
+## Installed Python dependency triage — 20 October 2026 IST
+
+[Current exact-version scan](PYTHON_DEPENDENCY_SECURITY_20261020.md): 22 installed
+requirements-closure packages, 22 complete OSV results, zero advisory IDs and
+22 PyPI release/advisory cross-checks. Pip check and 130 current hashes pass.
+Scoped DoD PASS; no upgrade/source/dependency change or broader security claim.
+Optional research packages/OS/interpreter and all allowed historical versions are
+outside scope. Next: current scoped core/SQLite and direct delivery benchmarks.

@@ -1,0 +1,14 @@
+{
+  "dod": "PASS",
+  "queried_packages": 22,
+  "complete_osv_results": 22,
+  "osv_advisory_ids": 0,
+  "publisher_release_checks": 22,
+  "pip_check": "PASS",
+  "current_protected_originals_unchanged": 130,
+  "product_changes": false,
+  "application_tests_added": 0,
+  "application_tests_rerun": false,
+  "build_rerun": false,
+  "next": "Scoped core and delivery benchmark refresh"
+}

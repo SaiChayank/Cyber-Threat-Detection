@@ -1,0 +1,9 @@
+{
+  "package_count": 22,
+  "complete_query_results": 22,
+  "advisory_ids": [],
+  "pip_check_exit_code": 0,
+  "status": "NO_KNOWN_ADVISORIES_IN_QUERIED_VERSIONS",
+  "runtime_changed": false,
+  "scope": "Installed requirements.txt closure, including pytest and its dependencies; no optional research packages or OS scan"
+}

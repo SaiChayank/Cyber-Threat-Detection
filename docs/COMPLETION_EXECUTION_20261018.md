@@ -1,5 +1,10 @@
 # Remaining implementation sequence
 
+**20 October dependency follow-up:** [Installed backend scan](PYTHON_DEPENDENCY_SECURITY_20261020.md)
+checks 22 exact releases against OSV and PyPI, with zero returned advisories;
+pip check/130 current hashes pass. No upgrade or behavior change. Next eligible
+task: current scoped core/SQLite and direct API-to-SSE benchmark refresh.
+
 **20 October Monitor integration:** [Replay failure/retry](MONITOR_REPLAY_ERROR_20261020.md)
 passes desktop/tablet/mobile with retained queues 3/4/5, safe failure wording,
 successful 32-event retries, zero console diagnostics and exact five-record

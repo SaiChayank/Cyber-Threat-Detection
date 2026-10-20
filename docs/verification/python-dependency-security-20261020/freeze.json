@@ -1,0 +1,13 @@
+{
+  "docs/verification/python-dependency-security-20261020/audit.py": "d7fe00180890fc270496af2dd9194ab60b52c4623cf888292bfdbfe704f8f843",
+  "docs/verification/python-dependency-security-20261020/checks.json": "59183d746d9fa9a1edd462eeca1ffda72be871ccde16ddebd1452fe2624da389",
+  "docs/verification/python-dependency-security-20261020/inventory.json": "fe28cb075c9be8e636b363946346c368e0b425cee2dae0f2226018df23786489",
+  "docs/verification/python-dependency-security-20261020/osv-query.json": "e4bd491cbd11b9b276391f2a945c17a0b39f299218b5cc639406fd9144e5694c",
+  "docs/verification/python-dependency-security-20261020/osv-response.json": "cdc2a5185a7d767267cec8d7859484d4fd8a27e1b1a6c5368ac0ba10220619f4",
+  "docs/verification/python-dependency-security-20261020/pip-check.json": "1a2749a9e4011ed51633c3e7f6e4ca4cf91cbbe845955ec7cce3beefa93fbb9e",
+  "docs/verification/python-dependency-security-20261020/PROTOCOL.md": "406eaf2dc951ec92010be14d22e1941e62324a42b2e9639e68a8d045eb8396f4",
+  "docs/verification/python-dependency-security-20261020/publisher-checks.json": "0c3ad8d9d2d93ba533433e80e8c734ae99b9ccab8b79cb205f2406fbc25764b0",
+  "docs/verification/python-dependency-security-20261020/result.json": "86e1b38b941e0790ab858e93475e31e258aa8eb1ce511d7ff876d7b10a54e93f",
+  "docs/verification/python-dependency-security-20261020/verify_publishers.py": "962510a4ad7acc350e9620a1e82e2a88c4f14ec93c52410bf1d020e00a351649",
+  "docs/PYTHON_DEPENDENCY_SECURITY_20261020.md": "e020814b91e981029494a8aa3cb72764c3cc7ae70bfb60416eeec90e7cf63ca9"
+}
