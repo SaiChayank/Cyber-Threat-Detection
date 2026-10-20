@@ -1,0 +1,46 @@
+{
+  "baseline": "843bd4a",
+  "dod": "PASS",
+  "viewports": [
+    {
+      "viewport": "desktop",
+      "stage": "failed",
+      "pass": true
+    },
+    {
+      "viewport": "desktop",
+      "stage": "recovered",
+      "pass": true
+    },
+    {
+      "viewport": "tablet",
+      "stage": "failed",
+      "pass": true
+    },
+    {
+      "viewport": "tablet",
+      "stage": "recovered",
+      "pass": true
+    },
+    {
+      "viewport": "mobile",
+      "stage": "failed",
+      "pass": true
+    },
+    {
+      "viewport": "mobile",
+      "stage": "recovered",
+      "pass": true
+    }
+  ],
+  "durable_alerts": 5,
+  "console_errors": 0,
+  "console_warnings": 0,
+  "unchanged_current_protected_files": 130,
+  "product_changes": false,
+  "limitations": [
+    "Controlled source fault, not all physical storage failures",
+    "No fresh detector accuracy or benchmark"
+  ],
+  "next": "Backend runtime dependency security triage"
+}

@@ -1,0 +1,14 @@
+{
+  "desktop": true,
+  "tablet": true,
+  "mobile": true,
+  "rows": [
+    3,
+    4,
+    5
+  ],
+  "retry_enabled": true,
+  "private_text_absent": true,
+  "error_cleared_on_retry": true,
+  "overflow": false
+}

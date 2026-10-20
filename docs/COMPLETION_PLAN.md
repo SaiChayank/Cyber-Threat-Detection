@@ -615,3 +615,12 @@ fixed PCAP diagnostics and logs full errors server-side. Nine new red-first case
 pass. Direct delivery 100/100, p95 243.91 ms; no capture/proxy/browser scope claim.
 128 protected originals unchanged, two demo provenance pins intentionally refreshed.
 DoD PASS; detector/model/gates unchanged. Next: Monitor replay-error/retry integration.
+
+## Monitor replay error/retry — 20 October 2026 IST
+
+[Verified production flow](MONITOR_REPLAY_ERROR_20261020.md) passes desktop/tablet/
+mobile controlled failure and retry, safe wording/no private sentinel, queues
+3/4/5, original records retained and exact five-record durable state. Zero browser
+console diagnostics; isolated/restored-default builds and all 130 current hashes
+pass. No product/test/detector/model changes. Earlier interrupted timeout remains
+separate. Scoped DoD PASS; next: backend dependency security triage.

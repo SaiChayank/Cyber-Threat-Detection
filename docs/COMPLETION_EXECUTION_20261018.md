@@ -1,5 +1,11 @@
 # Remaining implementation sequence
 
+**20 October Monitor integration:** [Replay failure/retry](MONITOR_REPLAY_ERROR_20261020.md)
+passes desktop/tablet/mobile with retained queues 3/4/5, safe failure wording,
+successful 32-event retries, zero console diagnostics and exact five-record
+durability. Both builds and 130 current hashes pass; no product change. Next
+eligible independent task: backend dependency security triage.
+
 **20 October application follow-up:** [Replay error safety](REPLAY_ERROR_SAFETY_20261020.md)
 fixes raw exception disclosure with nine red-first regressions. All 593 backend
 tests, typecheck/build/nine unchanged demo traces pass; direct delivery 100/100,

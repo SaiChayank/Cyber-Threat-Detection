@@ -14,9 +14,17 @@
       "demo_traces": 9,
       "delivery_success": 100,
       "delivery_p95_ms": 243.91010002000257
+    },
+    {
+      "task": "Monitor replay-error/retry integration",
+      "dod": "PASS",
+      "report": "docs/MONITOR_REPLAY_ERROR_20261020.md",
+      "viewports": 3,
+      "durable_alerts": 5,
+      "console_errors": 0
     }
   ],
-  "current_task": "Monitor replay-error/retry integration",
+  "current_task": "Backend runtime dependency security triage",
   "constraints": [
     "Public datasets only; skip email-gated supplements and author follow-ups",
     "No reserved tuning, gate changes, training or failed-candidate activation",
@@ -25,11 +33,10 @@
   ],
   "release_ready": false,
   "checkpointed_near_usage_limit": false,
-  "last_checked_primary_used_percent": 69,
+  "last_checked_primary_used_percent": 24,
   "ordinary_usage_allowed_at_last_check": true,
   "next_queue": [
-    "Monitor replay-error/retry integration",
-    "Eligible dependency/security or failure-recovery work supported by measured evidence",
-    "Current scoped performance/reproducibility evidence; no final READY while quality blockers remain"
+    "Backend runtime dependency security triage",
+    "Eligible failure-recovery or scoped performance/reproducibility work"
   ]
 }
