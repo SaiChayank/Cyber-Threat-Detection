@@ -1,0 +1,25 @@
+[
+  {
+    "name": "burgos-archive",
+    "url": "https://riubu.ubu.es/bitstream/handle/10259/11037/Martinez-Raw_Network%20Traffic_Captures_for_IoT-Dataset_2025.zip?sequence=1&isAllowed=y",
+    "final_url": "https://riubu.ubu.es/bitstream/handle/10259/11037/Martinez-Raw_Network%20Traffic_Captures_for_IoT-Dataset_2025.zip?sequence=1&isAllowed=y",
+    "status": 200,
+    "headers": {
+      "Last-Modified": "Fri, 07 Nov 2025 12:30:49 GMT",
+      "Content-Length": "1269092760",
+      "Content-Type": "application/zip"
+    }
+  },
+  {
+    "name": "ac-hour",
+    "url": "https://www.dropbox.com/scl/fi/gm9yvhhbghwviz44in1r8/dnscat2_dns_tunneling_1hr.pcap?rlkey=t2w4vejnxc695zg3d1eyzg9f6&dl=1",
+    "final_url": "https://dl.dropboxusercontent.com/[ephemeral-public-redirect-path-omitted]",
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json",
+      "Accept-Ranges": "bytes",
+      "Etag": "1630002246534063d",
+      "Content-Length": "2462756"
+    }
+  }
+]

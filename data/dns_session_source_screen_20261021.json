@@ -1,0 +1,133 @@
+{
+  "date": "2026-10-21",
+  "baseline": "6aa53b4",
+  "status": "PARTIAL_SOURCE_PROVENANCE_NO_FORMAL_ROLE",
+  "report": "docs/DNS_PUBLIC_SESSION_SCREEN_20261021.md",
+  "protocol": "docs/verification/dns-public-session-screen-20261021/PROTOCOL.md",
+  "frozen_dns_contract": "data/dns_tunnel_evaluation_contract.json",
+  "runtime_changed": false,
+  "candidate_scored": false,
+  "promoted": false,
+  "reserved_ready": false,
+  "sources": [
+    {
+      "id": "active-countermeasures-dnscat2",
+      "producer_url": "https://www.activecountermeasures.com/malware-of-the-day-dnscat2-dns-tunneling/",
+      "permission": "Producer explicitly invites download and local detection analysis; redistribution not established",
+      "artifact": "data/raw/dns-public-session-intake-20261021/dnscat2_dns_tunneling_1hr.pcap",
+      "bytes": 2462756,
+      "sha256": "b1056baaa15c441aa9fadd23885818db069f3cc5b560dc4f8a184d3494f3d3bd",
+      "publisher_sha256_matches": true,
+      "native_header": {
+        "format": "classic PCAP v2.4",
+        "linktype": 1,
+        "snaplen": 262144,
+        "timestamp_resolution": "microseconds"
+      },
+      "truth": "Producer-documented executed dnscat2 lab, host and controlled namespace; not every query is assigned a malicious label",
+      "session_count": null,
+      "session_time_join_verified": false,
+      "related_exports": [
+        "one-hour",
+        "24-hour"
+      ],
+      "independence_policy": "Keep related exports grouped; do not count exports as independent sessions",
+      "roles": {
+        "training": null,
+        "validation": null,
+        "reserved": null
+      },
+      "decision": "SUPPORTED_HEADER_ONLY_SESSION_QUALIFICATION_PENDING"
+    },
+    {
+      "id": "burgos-dgza-t550",
+      "doi": "10.71486/dgza-t550",
+      "licence": "CC BY 4.0",
+      "producer_url": "https://riubu.ubu.es/handle/10259/11037",
+      "archive_url": "https://riubu.ubu.es/bitstream/handle/10259/11037/Martinez-Raw_Network%20Traffic_Captures_for_IoT-Dataset_2025.zip?sequence=1&isAllowed=y",
+      "archive_bytes": 1269092760,
+      "whole_archive_sha256": null,
+      "conditional_directory_identity_verified": true,
+      "members": [
+        {
+          "name": "benign_first_cap.pcap",
+          "compression": 8,
+          "crc32": "5bd6ba90",
+          "compressed_size_32bit": 8021093,
+          "uncompressed_size_32bit": 8852172,
+          "zip64_sizes_require_extra_fields": false
+        },
+        {
+          "name": "benign_second_cap.pcap",
+          "compression": 8,
+          "crc32": "9a9ebb26",
+          "compressed_size_32bit": 1134329730,
+          "uncompressed_size_32bit": 1188515374,
+          "zip64_sizes_require_extra_fields": false
+        },
+        {
+          "name": "malicious_DoS_cap.pcap",
+          "compression": 8,
+          "crc32": "90094ba2",
+          "compressed_size_32bit": 126741449,
+          "uncompressed_size_32bit": 221801525,
+          "zip64_sizes_require_extra_fields": false
+        }
+      ],
+      "producer_documented_benign_capture_runs": 2,
+      "qualified_dns_sessions": null,
+      "native_headers_verified": false,
+      "categories_verified": [],
+      "label_scope": "Producer capture-level benign/DoS runs; no per-query application or independently enumerated DNS sessions certified",
+      "limitations": [
+        "First benign approximate packet-count claim conflicts with classic-PCAP minimum record-header size bound",
+        "Original timestamp semantics and native link types not yet verified",
+        "Required five DNS benign categories not established"
+      ],
+      "roles": {
+        "training": null,
+        "validation": null,
+        "reserved": null
+      },
+      "decision": "BENIGN_RUN_PROVENANCE_AND_DIRECTORY_ONLY"
+    },
+    {
+      "id": "ziza",
+      "doi": "10.17632/c4n7fckkz3.3",
+      "version": 3,
+      "licence": "CC BY 4.0",
+      "producer_url": "https://data.mendeley.com/datasets/c4n7fckkz3/3",
+      "documented_original_fields": [
+        "user_ip",
+        "timestamp",
+        "request",
+        "attack"
+      ],
+      "documented_qtype": false,
+      "raw_data_downloaded": false,
+      "session_time_join_verified": false,
+      "roles": {
+        "training": null,
+        "validation": null,
+        "reserved": null
+      },
+      "decision": "SCHEMA_QTYPE_AND_SESSION_GAPS_NO_DATA_VALUES"
+    },
+    {
+      "id": "netrack-learn",
+      "producer_url": "https://github.com/netrack/learn",
+      "revision": "b19ea986df5517bd8ad89efd2e16bbf302e2ac03",
+      "root_licence": "Apache-2.0",
+      "raw_data_downloaded": false,
+      "executed_session_manifest_verified": false,
+      "roles": {
+        "training": null,
+        "validation": null,
+        "reserved": null
+      },
+      "decision": "PUBLIC_SAMPLE_METADATA_ONLY_NO_JOINED_RUN_TRUTH"
+    }
+  ],
+  "next_action": "Freeze bounded Burgos first-benign member identity/CRC/native-header qualification before any DNS values",
+  "qualified_reserved_roles": 0
+}

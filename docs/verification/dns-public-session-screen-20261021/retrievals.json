@@ -1,0 +1,92 @@
+[
+  {
+    "name": "ziza-record.json",
+    "requested_url": "https://data.mendeley.com/public-api/datasets/c4n7fckkz3",
+    "retrieved_utc": "2026-10-21T06:05:46.890968+00:00",
+    "status": 200,
+    "final_url": "https://data.mendeley.com/public-api/datasets/c4n7fckkz3",
+    "content_type": "application/json; charset=utf-8",
+    "bytes": 6782,
+    "sha256": "048372bf3252601c7c7c6855b3ecc818371c40e432a1e9733f350b239223b87d"
+  },
+  {
+    "name": "ac-dnscat2.html",
+    "requested_url": "https://www.activecountermeasures.com/malware-of-the-day-dnscat2-dns-tunneling/",
+    "retrieved_utc": "2026-10-21T06:05:46.891870+00:00",
+    "status": 200,
+    "final_url": "https://www.activecountermeasures.com/malware-of-the-day-dnscat2-dns-tunneling/",
+    "content_type": "text/html; charset=UTF-8",
+    "bytes": 176741,
+    "sha256": "4d721879531b64a7e2acac8bce1f77a4a4e0348eb30babb30d6df126cd20588c"
+  },
+  {
+    "name": "burgos-record.html",
+    "requested_url": "https://riubu.ubu.es/handle/10259/11037",
+    "retrieved_utc": "2026-10-21T06:05:46.892408+00:00",
+    "status": 200,
+    "final_url": "https://riubu.ubu.es/handle/10259/11037",
+    "content_type": "text/html;charset=utf-8",
+    "bytes": 41339,
+    "sha256": "296aa68b25a37d3f9ea87ae0bfbe3fedec02224614f00e6fd762ff34336173db"
+  },
+  {
+    "name": "burgos-readme.txt",
+    "requested_url": "https://riubu.ubu.es/bitstream/10259/11037/4/readme.txt",
+    "retrieved_utc": "2026-10-21T06:05:46.892912+00:00",
+    "status": 200,
+    "final_url": "https://riubu.ubu.es/bitstream/handle/10259/11037/readme.txt;jsessionid=047D7A13C4DE16F5F92B1CD53C27DF77?sequence=4",
+    "content_type": "text/plain",
+    "bytes": 6531,
+    "sha256": "100aad4964db9bd3078db8cd14bfdd96f20a9b419049c2c034082adccf37f14a"
+  },
+  {
+    "name": "netrack-ref.json",
+    "requested_url": "https://api.github.com/repos/netrack/learn/git/ref/heads/master",
+    "retrieved_utc": "2026-10-21T06:05:46.893364+00:00",
+    "status": 200,
+    "final_url": "https://api.github.com/repos/netrack/learn/git/ref/heads/master",
+    "content_type": "application/json; charset=utf-8",
+    "bytes": 337,
+    "sha256": "e167d2643c317c5c67ab16bdc303f014e921cce4900a1a6f00457516ecb1ab19"
+  },
+  {
+    "name": "ziza-description.txt",
+    "requested_url": "https://data.mendeley.com/public-files/datasets/c4n7fckkz3/files/a72f51ed-40d0-46be-b8bb-df330f26efc2/file_downloaded",
+    "retrieved_utc": "2026-10-21T06:06:29.459182+00:00",
+    "status": 200,
+    "final_url": "https://prod-dcd-datasets-public-files-eu-west-1.s3.eu-west-1.amazonaws.com/dfc16150-bf3a-4492-be23-42e37d958ca7",
+    "content_type": "text/plain",
+    "bytes": 1628,
+    "sha256": "73d6ab1b930429bdd4dadf2204099578d26e103ef34cc804f80595ac4faf2902"
+  },
+  {
+    "name": "netrack-tree.json",
+    "requested_url": "https://api.github.com/repos/netrack/learn/git/trees/b19ea986df5517bd8ad89efd2e16bbf302e2ac03?recursive=1",
+    "retrieved_utc": "2026-10-21T06:06:30.375488+00:00",
+    "status": 200,
+    "final_url": "https://api.github.com/repos/netrack/learn/git/trees/b19ea986df5517bd8ad89efd2e16bbf302e2ac03?recursive=1",
+    "content_type": "application/json; charset=utf-8",
+    "bytes": 9939,
+    "sha256": "8accdee1c83cb49ef73e3d6e20a7a05d52f55276e674580b3f523a3894cc91c9"
+  },
+  {
+    "name": "netrack-readme.txt",
+    "requested_url": "https://raw.githubusercontent.com/netrack/learn/b19ea986df5517bd8ad89efd2e16bbf302e2ac03/README.md",
+    "retrieved_utc": "2026-10-21T06:06:30.781371+00:00",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/netrack/learn/b19ea986df5517bd8ad89efd2e16bbf302e2ac03/README.md",
+    "content_type": "text/plain; charset=utf-8",
+    "bytes": 24,
+    "sha256": "46a4d2eaae7f6b07110b29a9c08146634fa9744ae45ffc0f32e815d8c2287f1a"
+  },
+  {
+    "name": "netrack-license.txt",
+    "requested_url": "https://raw.githubusercontent.com/netrack/learn/b19ea986df5517bd8ad89efd2e16bbf302e2ac03/LICENSE",
+    "retrieved_utc": "2026-10-21T06:06:31.171068+00:00",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/netrack/learn/b19ea986df5517bd8ad89efd2e16bbf302e2ac03/LICENSE",
+    "content_type": "text/plain; charset=utf-8",
+    "bytes": 11357,
+    "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+  }
+]

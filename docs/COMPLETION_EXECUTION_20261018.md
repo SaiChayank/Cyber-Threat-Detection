@@ -54,6 +54,18 @@ BLOCKED. Exactly next: a public source with actual member/header/run evidence,
 then category/role qualification before any values. A new download alone cannot
 fill the five DGA strata or certify DNS-tunnelling sessions.
 
+**21 October next public-source screen/intake completed:** [Four-source follow-up](DNS_PUBLIC_SESSION_SCREEN_20261021.md)
+acquires one 2,462,756-byte producer-checksummed dnscat2 capture with a verified
+classic Ethernet header. Burgos publisher documentation and an actual bounded
+ZIP directory identify two benign runs; their native headers/category joins
+remain unverified. Ziza lacks documented QTYPE/session joins; netrack lacks run
+provenance. Six new acquisition regressions/83 targeted tests and all 130 protected
+hashes pass. No queries/scoring/model or runtime change; reserved roles remain
+zero. **Exactly next:** separately freeze and qualify only the small Burgos first
+benign member's native header/CRC, without acquiring the >1 GB second member or
+opening DNS values. This executable partial-source step does not clear the full
+DNS/DGA coverage gates, and failed/unassessed candidates remain disabled.
+
 ### 2. Resolve visibility limits, then run one justified experiment — P0
 
 Dependencies: qualified development data from phase 1, plus genuinely separating

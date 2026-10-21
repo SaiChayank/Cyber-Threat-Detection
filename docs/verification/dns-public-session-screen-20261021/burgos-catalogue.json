@@ -1,0 +1,52 @@
+{
+  "archive": "Martinez-Raw_Network Traffic_Captures_for_IoT-Dataset_2025.zip",
+  "archive_bytes": 1269092760,
+  "publisher_checksum": "not_published_in_reviewed_metadata",
+  "full_checksum_locally_verified": false,
+  "conditional_identity_verified": true,
+  "qualification_evidence_complete": false,
+  "url": "https://riubu.ubu.es/bitstream/handle/10259/11037/Martinez-Raw_Network%20Traffic_Captures_for_IoT-Dataset_2025.zip?sequence=1&isAllowed=y",
+  "etag": null,
+  "last_modified": "Fri, 07 Nov 2025 12:30:49 GMT",
+  "ranges": [
+    {
+      "start": 1269027203,
+      "length": 65557,
+      "sha256": "5b036d98512e6a262db423cdd82cf3f6ad58c915405fbcc8aa3ac747f0582d14"
+    },
+    {
+      "start": 1269092427,
+      "length": 311,
+      "sha256": "b0e8df4a6177c9111c6ca24ca33709626f1fd6e5eed66d5a8b280861fa756887"
+    }
+  ],
+  "members": [
+    {
+      "name": "benign_first_cap.pcap",
+      "compression": 8,
+      "crc32": "5bd6ba90",
+      "compressed_size_32bit": 8021093,
+      "uncompressed_size_32bit": 8852172,
+      "zip64_sizes_require_extra_fields": false
+    },
+    {
+      "name": "benign_second_cap.pcap",
+      "compression": 8,
+      "crc32": "9a9ebb26",
+      "compressed_size_32bit": 1134329730,
+      "uncompressed_size_32bit": 1188515374,
+      "zip64_sizes_require_extra_fields": false
+    },
+    {
+      "name": "malicious_DoS_cap.pcap",
+      "compression": 8,
+      "crc32": "90094ba2",
+      "compressed_size_32bit": 126741449,
+      "uncompressed_size_32bit": 221801525,
+      "zip64_sizes_require_extra_fields": false
+    }
+  ],
+  "traffic_members_decompressed": 0,
+  "packet_values_read": false,
+  "reused_catalogue_source_sha256": "d84ad820c21b7ac12422197094f13cc911c11b0c58b1fd8b0d42ce33e4a95872"
+}

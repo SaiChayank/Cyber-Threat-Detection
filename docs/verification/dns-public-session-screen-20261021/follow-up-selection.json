@@ -1,0 +1,18 @@
+[
+  [
+    "ziza-description.txt",
+    "https://data.mendeley.com/public-files/datasets/c4n7fckkz3/files/a72f51ed-40d0-46be-b8bb-df330f26efc2/file_downloaded"
+  ],
+  [
+    "netrack-tree.json",
+    "https://api.github.com/repos/netrack/learn/git/trees/b19ea986df5517bd8ad89efd2e16bbf302e2ac03?recursive=1"
+  ],
+  [
+    "netrack-readme.txt",
+    "https://raw.githubusercontent.com/netrack/learn/b19ea986df5517bd8ad89efd2e16bbf302e2ac03/README.md"
+  ],
+  [
+    "netrack-license.txt",
+    "https://raw.githubusercontent.com/netrack/learn/b19ea986df5517bd8ad89efd2e16bbf302e2ac03/LICENSE"
+  ]
+]

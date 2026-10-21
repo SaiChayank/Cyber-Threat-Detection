@@ -1,0 +1,20 @@
+{
+  "source": "Active Countermeasures",
+  "requested_url": "https://www.dropbox.com/scl/fi/gm9yvhhbghwviz44in1r8/dnscat2_dns_tunneling_1hr.pcap?rlkey=t2w4vejnxc695zg3d1eyzg9f6&dl=1",
+  "expected_sha256": "b1056baaa15c441aa9fadd23885818db069f3cc5b560dc4f8a184d3494f3d3bd",
+  "artifact": "data/raw/dns-public-session-intake-20261021/dnscat2_dns_tunneling_1hr.pcap",
+  "max_bytes": 3145728,
+  "header_bytes_read": 24,
+  "packet_records_parsed": 0,
+  "candidate_scored": false,
+  "role": null,
+  "status": 200,
+  "content_type": "application/binary",
+  "bytes": 2462756,
+  "sha256": "b1056baaa15c441aa9fadd23885818db069f3cc5b560dc4f8a184d3494f3d3bd",
+  "header_hex": "d4c3b2a10200040000000000000000000000040001000000",
+  "snaplen": 262144,
+  "linktype": 1,
+  "timestamp_resolution": "microseconds",
+  "qualification": "SUPPORTED_NATIVE_HEADER_ONLY_SESSION_ANNOTATIONS_UNVERIFIED"
+}

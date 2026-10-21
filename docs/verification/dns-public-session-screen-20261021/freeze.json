@@ -1,0 +1,24 @@
+{
+  "baseline": "6aa53b4",
+  "scope": "Source-screen and selected native-header metadata only; no gate replacement or model promotion",
+  "files": {
+    "data/dns_session_source_screen_20261021.json": "2caf277bc960d3fbe0aba10f4259219cdd550e6f7d8948749962e0497063398f",
+    "docs/DNS_PUBLIC_SESSION_SCREEN_20261021.md": "75f59aba15807aabe4cc593bc53c781fccf547ce69ce7bca9ba27aaaba0e0046",
+    "docs/verification/dns-public-session-screen-20261021/ac-header.json": "3becb33d61797fc5c343af286f0bd2779e464f4fee9e7d6f1314fc58ac485636",
+    "docs/verification/dns-public-session-screen-20261021/acquire_selected_metadata.py": "6df3b5b7c60ccb0f5020e1438da46728646d50b35023ffb31967818ded2627e0",
+    "docs/verification/dns-public-session-screen-20261021/artifact-heads.json": "788361d01c4b58854e7694f9ba8a8984283a4890ad15dda5165758426e963ba4",
+    "docs/verification/dns-public-session-screen-20261021/burgos-catalogue.json": "ebce377b09f3501db7fae7beec061d44c74e80924c6eb1b01c64b0b8453342b5",
+    "docs/verification/dns-public-session-screen-20261021/check_evidence.py": "1851ae68715d2084a1cf43f3350ccc2eb2ecf763f4eae474e1f2c7eaa4f0931e",
+    "docs/verification/dns-public-session-screen-20261021/checks.json": "24c6c350de2f65094e7eb9201862bea5077ae5d86dc6995b8a8f1613ea32aba3",
+    "docs/verification/dns-public-session-screen-20261021/documentation-exclusions.json": "640d5da76677c808d0aab16d7d43a3dbf58bdb07e7a92d551990acc60863a8dc",
+    "docs/verification/dns-public-session-screen-20261021/follow-up-selection.json": "fac201167f8ca0498b74d0f5b6fb75c4a028d761741a3033de5bf759b56b23b6",
+    "docs/verification/dns-public-session-screen-20261021/header-selection.sha256": "dd7aa878d1aefbf9d6a80699deb95e020a172c3e99228a73d2567c4ce4548473",
+    "docs/verification/dns-public-session-screen-20261021/HEADER_SELECTION.md": "ed106eeff2eb7bb0a588303f190ff86a32ffbf472982d8a73142b460ba59be0a",
+    "docs/verification/dns-public-session-screen-20261021/integrity-after.json": "73bbff59d1f2bdd4912d266a426d1dd167c51a06eeed5c3089c7bea42b75a700",
+    "docs/verification/dns-public-session-screen-20261021/PROTOCOL.md": "d7f071606e8a7377885f2ce745ab985016d1422cc6045095402d21f72248b6ff",
+    "docs/verification/dns-public-session-screen-20261021/retrievals.json": "d82dfc5d587d43600da83c7c548946d21781eaba405450ab338ffe4619013b10",
+    "docs/verification/dns-public-session-screen-20261021/retrieve_documents.py": "780cc95abc9f4b02a102eef3378eb4e12df95f40a2a97f5e16247f9b43295614",
+    "docs/verification/dns-public-session-screen-20261021/tests.log": "c27f09eaa33d68deec4dbbd4aaf3e94e4ba148da3093dc2d213ad757ddc11b0c",
+    "tests/test_dns_source_intake.py": "c8696af5f02449553d47b7be81f38475f3972eadef863c50a12335deb804aaf7"
+  }
+}

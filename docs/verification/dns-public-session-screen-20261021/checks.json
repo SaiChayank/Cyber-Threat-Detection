@@ -1,0 +1,23 @@
+{
+  "status": "PASS_BOUNDED_SOURCE_SCREEN_ONLY",
+  "sources_screened": 4,
+  "document_receipts": 9,
+  "publisher_document_checksum_verified": true,
+  "pinned_git_documents": 2,
+  "protected_originals_matching": 130,
+  "capture_downloads": 1,
+  "capture_bytes": 2462756,
+  "capture_publisher_sha256_verified": true,
+  "supported_native_headers": 1,
+  "archive_members_inventoried": 3,
+  "archive_metadata_range_bytes": 65868,
+  "benign_runs_documented": 2,
+  "benign_native_headers_verified": 0,
+  "first_benign_claimed_packets": 1087920,
+  "first_benign_classic_header_only_record_upper_bound": 553259,
+  "candidate_scored": false,
+  "packet_records_parsed": 0,
+  "qualified_reserved_roles": 0,
+  "reserved_ready": false,
+  "release_ready": false
+}

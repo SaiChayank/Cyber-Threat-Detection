@@ -1,0 +1,11 @@
+Command:
+.venv/Scripts/python.exe -B -m pytest -q -p no:cacheprovider tests/test_dns_source_intake.py tests/test_udp_archive_catalogue.py tests/test_dns_tunnel_evaluation_contract.py tests/test_dns_tunnel_scorer.py
+
+Captured result, 21 October 2026:
+........................................................................ [ 86%]
+...........                                                              [100%]
+83 passed in 3.00s
+Exit code: 0
+
+Six new acquisition tests; no product behavior changed. Existing scorer tests
+use their established controlled fixtures, not the newly acquired capture.

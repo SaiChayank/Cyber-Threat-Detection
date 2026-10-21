@@ -103,18 +103,32 @@
       "new_receipts": 5,
       "qualified_evaluation_roles": 0,
       "current_protected_files_matching": 130
+    },
+    {
+      "task": "Four-source public DNS session screen and bounded real-tool capture intake",
+      "completed_client_date": "2026-10-21",
+      "dod": "SOURCE_SCREEN_INTAKE_PASS_FORMAL_DATA_BLOCKED",
+      "report": "docs/DNS_PUBLIC_SESSION_SCREEN_20261021.md",
+      "new_tests": 6,
+      "targeted_tests": 83,
+      "publisher_checksummed_supported_captures": 1,
+      "producer_documented_benign_runs": 2,
+      "qualified_reserved_roles": 0,
+      "current_protected_files_matching": 130
     }
   ],
-  "current_task": "UFU Do53 pre-value capture/run qualification completed; required evaluation roles remain unqualified",
+  "current_task": "Public DNS source screen and bounded capture intake completed; next Burgos native-header qualification not started",
   "work_running": false,
-  "stopping_reason": "The planned public UFU source check supplies no native capture headers/member-to-executed-session/time joins or required benign coverage; record the data/provenance blocker rather than changing frozen detectors",
+  "stopping_reason": "Current bounded next-step source screen/intake completed; stop before the separately frozen Burgos native-header task. Full evaluation coverage remains blocked",
   "last_task": {
-    "task": "Public UFU Do53 capture/run qualification",
-    "report": "docs/UFU_DO53_QUALIFICATION_20261021.md",
-    "status": "METADATA_CHECK_PASS_REQUIRED_DATA_BLOCKED",
-    "targeted_tests": 88,
-    "new_receipts": 5,
+    "task": "Public DNS source screen and bounded capture intake",
+    "report": "docs/DNS_PUBLIC_SESSION_SCREEN_20261021.md",
+    "status": "SOURCE_SCREEN_INTAKE_PASS_FORMAL_DATA_BLOCKED",
+    "new_tests": 6,
+    "targeted_tests": 83,
+    "new_receipts": 9,
     "qualified_evaluation_roles": 0,
+    "publisher_checksummed_supported_captures": 1,
     "current_protected_files_matching": 130,
     "reserved_values_opened": false,
     "new_training_or_scoring": false
@@ -134,7 +148,7 @@
   "research_data_blocked": true,
   "research_track_disposition": "DGA and other unqualified research roles stay data/provenance blocked; passed application fixes are frozen",
   "next_queue": [
-    "Qualify a public source with native capture/member inventory and independently executed session/time annotations, then verify required benign coverage before packet values; UFU remains NOT QUALIFIED unless new source evidence appears",
+    "Separately freeze and qualify only the Burgos benign_first_cap.pcap native global header and selected-member CRC/identity, without query values, full bulk archive acquisition or the >1 GB second member",
     "Only data-qualified next steps; no training/scoring or failed activation"
   ]
 }
