@@ -101,6 +101,16 @@ decision. No deep-learning/infrastructure detour or automatic multi-model search
 
 ### 3. Freeze choices and perform independent evaluation — P0
 
+**21 October controlled DNS accuracy request checked:** [Scoped current results](DNS_ACCURACY_CHECK_20261021.md)
+reproduce candidate validation 5TP/5TN/0FP/0FN and baseline rule-only
+0TP/4TN/1FP/5FN on the already exposed synthetic cases. All candidate attacks
+alert at query 5/12, 3.8–7.2 seconds of simulated time. 115 targeted tests pass;
+all 130 protected originals/two acquired captures/prior frozen packages match.
+Reserved-mode readiness refuses without output/receipt or consuming the single
+pass. These are development regression counts, not independent/public accuracy
+or completed phase 3. Formal metrics remain NOT ESTABLISHED, candidate disabled;
+the unchanged next dependency is genuine session/category/role qualification.
+
 Dependencies: all frozen data prerequisites, exposure/overlap checks and final
 artifact/threshold choices. Tune only on training/validation; score the reserved
 cohort once under its existing protocol. DGA remains recall >=80%, precision >=95%,

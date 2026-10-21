@@ -1,0 +1,504 @@
+{
+  "scope": "Already exposed synthetic rule-only baseline; model forced BENIGN identically to candidate arm; not full deployed hybrid or independent accuracy",
+  "comparison_source_sha256": "c7653918b525f10af23932a851aaf7ecbb2c69fdc9711bcff280b4194802c1cc",
+  "source_pins": {
+    "detection/pipeline.py": "4e70bc3e50546e57fa5f0d9432f3a9be969b906897d837f6f3638311c9b54926",
+    "detection/dns_tunnel_candidate.py": "c1713f2a8bbc59753bbad586054e5b103082f4d67bf5c9cfa617383965540a9a",
+    "features/extractor.py": "624952f8063464c88466b861c72f121c318be5835a02a3d2a4b24b38b1800ac8",
+    "features/dns_tunnel.py": "8ded37ba73c2d605f22baf4571f80842791f7b2b1584ce0230ddc365466605eb",
+    "features/rate_window.py": "a0d4542ab56b44bb51bdee88ebd56a7df95e9a9d6a79fc569769a9100b65d683",
+    "ingest/metadata.py": "e0f26334b4102928f9ac98a76de44e3ca204f53ed0104e17b1ca51031213eed6",
+    "ingest/pcap_reader.py": "591b09c0f6fc8cf2aab791d6aa52506a9e10adf80f9a4dc72850d78dc4e50157",
+    "ingest/protocol_parsers.py": "cf8cda0df2a543e85f1ad822d0634a2e417c049d2df2b56fd23a23890c56a6cd",
+    "ingest/dead_letter.py": "d8e0912dab5537be9ba0f65d129c297732e9702a83ed75e54407fd2e17e8bc6b",
+    "schemas/traffic_event.py": "e5be7daf5689e39e2cbe877b6972a81b947d70176dd2aed23a30620f5c3ae7a4",
+    "schemas/flow_record.py": "026d07266e98a14c53631e81c676ec9d1a0314feae959611c7ca3e3664ce1d24",
+    "schemas/dns_record.py": "bf3670d063025c481b851fdf60e30331744993cca7f88fc970eeaa59ed44ea8e",
+    "schemas/tls_metadata.py": "5aa0ecd0b7f33e5d0c4ea9e0103caa9d0f9567dab0db2ef2b0d2cafaa5a09237",
+    "schemas/alert.py": "334362e24535863247903d82c0f6ba60e0f21aaa4d3a2f263f7bdf2a81c695f2",
+    "schemas/enums.py": "8b8f820eea9af47d7d9cdb05d6963e2245fb44e7b0e641a620a4d0e6b4e2b576",
+    "ml/model.py": "2721a53d667d1ea773154fdebf3d349c5ef221dfdb51e937d5afdba1ffa6f354",
+    "ml/dga.py": "0a03098bf4cc22d8f5b7ff5fe3bd75d82d735479730e1890a7f99bedb9d6c0b7",
+    "detection/dga_rules.py": "2d6ea804a0ecf0e4ac9e16ee884e477581e975b767241c4486c3297b07ddee59",
+    "ml/artifact.json": "4d8e08323374535789e21f9f7cd1ee3f1c84b663ce555e67bb4ced57c95e8010",
+    "ml/artifact.sha256": "81e4ef2dc7bdff28a82225e803c3e5ab675f3a3979b273a0ac3bef34241c284b",
+    "ml/dga_v2.json": "c0314dd5f1fe360db11e2494326fd6e99f267d6e920fa091f6c9fcebc796996e",
+    "ml/dga_v2.sha256": "fb134985e6fd255935bb80fa4f77a73fc490957c0b669afd6bf290f9271ae080",
+    "datasets/dns_tunnel_development.py": "3156b012b2a0c9c71321c36ec3d036e1c2510529c9bfc71918c7abc4088520f6"
+  },
+  "runtime_changed": false,
+  "public_capture_scored": false,
+  "reserved_pass_consumed": false,
+  "sessions": [
+    {
+      "session_id": "train_long_a",
+      "positive": true,
+      "tool": "synthetic",
+      "benign_category": null,
+      "queries": 12,
+      "first_alert_query": null,
+      "first_alert_delay_ms": null,
+      "first_alert_evidence": null,
+      "late_questions_dropped": 0,
+      "query_types": {
+        "1": 12
+      },
+      "nonnegative_interval_groups": {
+        "high": 11
+      },
+      "outcome": "FN",
+      "detected_before_end": false,
+      "early": false,
+      "split": "training"
+    },
+    {
+      "session_id": "train_long_aaaa",
+      "positive": true,
+      "tool": "synthetic",
+      "benign_category": null,
+      "queries": 12,
+      "first_alert_query": null,
+      "first_alert_delay_ms": null,
+      "first_alert_evidence": null,
+      "late_questions_dropped": 0,
+      "query_types": {
+        "28": 12
+      },
+      "nonnegative_interval_groups": {
+        "medium": 11
+      },
+      "outcome": "FN",
+      "detected_before_end": false,
+      "early": false,
+      "split": "training"
+    },
+    {
+      "session_id": "train_long_txt",
+      "positive": true,
+      "tool": "synthetic",
+      "benign_category": null,
+      "queries": 12,
+      "first_alert_query": null,
+      "first_alert_delay_ms": null,
+      "first_alert_evidence": null,
+      "late_questions_dropped": 0,
+      "query_types": {
+        "16": 12
+      },
+      "nonnegative_interval_groups": {
+        "medium": 11
+      },
+      "outcome": "FN",
+      "detected_before_end": false,
+      "early": false,
+      "split": "training"
+    },
+    {
+      "session_id": "train_long_null",
+      "positive": true,
+      "tool": "synthetic",
+      "benign_category": null,
+      "queries": 12,
+      "first_alert_query": null,
+      "first_alert_delay_ms": null,
+      "first_alert_evidence": null,
+      "late_questions_dropped": 0,
+      "query_types": {
+        "10": 12
+      },
+      "nonnegative_interval_groups": {
+        "medium": 11
+      },
+      "outcome": "FN",
+      "detected_before_end": false,
+      "early": false,
+      "split": "training"
+    },
+    {
+      "session_id": "train_multi_a",
+      "positive": true,
+      "tool": "synthetic",
+      "benign_category": null,
+      "queries": 12,
+      "first_alert_query": null,
+      "first_alert_delay_ms": null,
+      "first_alert_evidence": null,
+      "late_questions_dropped": 0,
+      "query_types": {
+        "1": 12
+      },
+      "nonnegative_interval_groups": {
+        "medium": 11
+      },
+      "outcome": "FN",
+      "detected_before_end": false,
+      "early": false,
+      "split": "training"
+    },
+    {
+      "session_id": "train_cdn",
+      "positive": false,
+      "tool": null,
+      "benign_category": "cdn",
+      "queries": 12,
+      "first_alert_query": null,
+      "first_alert_delay_ms": null,
+      "first_alert_evidence": null,
+      "late_questions_dropped": 0,
+      "query_types": {
+        "1": 12
+      },
+      "nonnegative_interval_groups": {
+        "high": 11
+      },
+      "outcome": "TN",
+      "detected_before_end": false,
+      "early": false,
+      "split": "training"
+    },
+    {
+      "session_id": "train_telemetry",
+      "positive": false,
+      "tool": null,
+      "benign_category": "telemetry",
+      "queries": 12,
+      "first_alert_query": null,
+      "first_alert_delay_ms": null,
+      "first_alert_evidence": null,
+      "late_questions_dropped": 0,
+      "query_types": {
+        "1": 12
+      },
+      "nonnegative_interval_groups": {
+        "medium": 11
+      },
+      "outcome": "TN",
+      "detected_before_end": false,
+      "early": false,
+      "split": "training"
+    },
+    {
+      "session_id": "train_discovery",
+      "positive": false,
+      "tool": null,
+      "benign_category": "discovery",
+      "queries": 12,
+      "first_alert_query": null,
+      "first_alert_delay_ms": null,
+      "first_alert_evidence": null,
+      "late_questions_dropped": 0,
+      "query_types": {
+        "33": 12
+      },
+      "nonnegative_interval_groups": {
+        "medium": 11
+      },
+      "outcome": "TN",
+      "detected_before_end": false,
+      "early": false,
+      "split": "training"
+    },
+    {
+      "session_id": "train_txt",
+      "positive": false,
+      "tool": null,
+      "benign_category": "txt",
+      "queries": 12,
+      "first_alert_query": 1,
+      "first_alert_delay_ms": 0.0,
+      "first_alert_evidence": {
+        "domain_length": 78,
+        "domain_label_length": 54,
+        "domain_entropy": 1.1413062181850357,
+        "txt_record": 1.0,
+        "confidence_kind": "heuristic strength",
+        "window_partial": true
+      },
+      "late_questions_dropped": 0,
+      "query_types": {
+        "16": 12
+      },
+      "nonnegative_interval_groups": {
+        "medium": 11
+      },
+      "outcome": "FP",
+      "detected_before_end": true,
+      "early": false,
+      "split": "training"
+    },
+    {
+      "session_id": "train_machine",
+      "positive": false,
+      "tool": null,
+      "benign_category": "machine",
+      "queries": 12,
+      "first_alert_query": null,
+      "first_alert_delay_ms": null,
+      "first_alert_evidence": null,
+      "late_questions_dropped": 0,
+      "query_types": {
+        "28": 12
+      },
+      "nonnegative_interval_groups": {
+        "medium": 11
+      },
+      "outcome": "TN",
+      "detected_before_end": false,
+      "early": false,
+      "split": "training"
+    },
+    {
+      "session_id": "val_long_a",
+      "positive": true,
+      "tool": "synthetic",
+      "benign_category": null,
+      "queries": 12,
+      "first_alert_query": null,
+      "first_alert_delay_ms": null,
+      "first_alert_evidence": null,
+      "late_questions_dropped": 0,
+      "query_types": {
+        "1": 12
+      },
+      "nonnegative_interval_groups": {
+        "medium": 11
+      },
+      "outcome": "FN",
+      "detected_before_end": false,
+      "early": false,
+      "split": "validation"
+    },
+    {
+      "session_id": "val_long_aaaa",
+      "positive": true,
+      "tool": "synthetic",
+      "benign_category": null,
+      "queries": 12,
+      "first_alert_query": null,
+      "first_alert_delay_ms": null,
+      "first_alert_evidence": null,
+      "late_questions_dropped": 0,
+      "query_types": {
+        "28": 12
+      },
+      "nonnegative_interval_groups": {
+        "medium": 11
+      },
+      "outcome": "FN",
+      "detected_before_end": false,
+      "early": false,
+      "split": "validation"
+    },
+    {
+      "session_id": "val_multi_txt",
+      "positive": true,
+      "tool": "synthetic",
+      "benign_category": null,
+      "queries": 12,
+      "first_alert_query": null,
+      "first_alert_delay_ms": null,
+      "first_alert_evidence": null,
+      "late_questions_dropped": 0,
+      "query_types": {
+        "16": 12
+      },
+      "nonnegative_interval_groups": {
+        "medium": 11
+      },
+      "outcome": "FN",
+      "detected_before_end": false,
+      "early": false,
+      "split": "validation"
+    },
+    {
+      "session_id": "val_multi_null",
+      "positive": true,
+      "tool": "synthetic",
+      "benign_category": null,
+      "queries": 12,
+      "first_alert_query": null,
+      "first_alert_delay_ms": null,
+      "first_alert_evidence": null,
+      "late_questions_dropped": 0,
+      "query_types": {
+        "10": 12
+      },
+      "nonnegative_interval_groups": {
+        "medium": 11
+      },
+      "outcome": "FN",
+      "detected_before_end": false,
+      "early": false,
+      "split": "validation"
+    },
+    {
+      "session_id": "val_long_txt",
+      "positive": true,
+      "tool": "synthetic",
+      "benign_category": null,
+      "queries": 12,
+      "first_alert_query": null,
+      "first_alert_delay_ms": null,
+      "first_alert_evidence": null,
+      "late_questions_dropped": 0,
+      "query_types": {
+        "16": 12
+      },
+      "nonnegative_interval_groups": {
+        "medium": 11
+      },
+      "outcome": "FN",
+      "detected_before_end": false,
+      "early": false,
+      "split": "validation"
+    },
+    {
+      "session_id": "val_cdn",
+      "positive": false,
+      "tool": null,
+      "benign_category": "cdn",
+      "queries": 12,
+      "first_alert_query": null,
+      "first_alert_delay_ms": null,
+      "first_alert_evidence": null,
+      "late_questions_dropped": 0,
+      "query_types": {
+        "28": 12
+      },
+      "nonnegative_interval_groups": {
+        "high": 11
+      },
+      "outcome": "TN",
+      "detected_before_end": false,
+      "early": false,
+      "split": "validation"
+    },
+    {
+      "session_id": "val_telemetry",
+      "positive": false,
+      "tool": null,
+      "benign_category": "telemetry",
+      "queries": 12,
+      "first_alert_query": null,
+      "first_alert_delay_ms": null,
+      "first_alert_evidence": null,
+      "late_questions_dropped": 0,
+      "query_types": {
+        "16": 12
+      },
+      "nonnegative_interval_groups": {
+        "medium": 11
+      },
+      "outcome": "TN",
+      "detected_before_end": false,
+      "early": false,
+      "split": "validation"
+    },
+    {
+      "session_id": "val_discovery",
+      "positive": false,
+      "tool": null,
+      "benign_category": "discovery",
+      "queries": 12,
+      "first_alert_query": null,
+      "first_alert_delay_ms": null,
+      "first_alert_evidence": null,
+      "late_questions_dropped": 0,
+      "query_types": {
+        "33": 12
+      },
+      "nonnegative_interval_groups": {
+        "medium": 11
+      },
+      "outcome": "TN",
+      "detected_before_end": false,
+      "early": false,
+      "split": "validation"
+    },
+    {
+      "session_id": "val_txt",
+      "positive": false,
+      "tool": null,
+      "benign_category": "txt",
+      "queries": 12,
+      "first_alert_query": 1,
+      "first_alert_delay_ms": 0.0,
+      "first_alert_evidence": {
+        "domain_length": 79,
+        "domain_label_length": 54,
+        "domain_entropy": 1.1413062181850357,
+        "txt_record": 1.0,
+        "confidence_kind": "heuristic strength",
+        "window_partial": true
+      },
+      "late_questions_dropped": 0,
+      "query_types": {
+        "16": 12
+      },
+      "nonnegative_interval_groups": {
+        "medium": 11
+      },
+      "outcome": "FP",
+      "detected_before_end": true,
+      "early": false,
+      "split": "validation"
+    },
+    {
+      "session_id": "val_machine",
+      "positive": false,
+      "tool": null,
+      "benign_category": "machine",
+      "queries": 12,
+      "first_alert_query": null,
+      "first_alert_delay_ms": null,
+      "first_alert_evidence": null,
+      "late_questions_dropped": 0,
+      "query_types": {
+        "1": 12
+      },
+      "nonnegative_interval_groups": {
+        "high": 11
+      },
+      "outcome": "TN",
+      "detected_before_end": false,
+      "early": false,
+      "split": "validation"
+    }
+  ],
+  "metrics_by_split": {
+    "training": {
+      "TP": 0,
+      "TN": 4,
+      "FP": 1,
+      "FN": 5,
+      "precision": 0.0,
+      "recall": 0.0,
+      "F1": 0.0,
+      "FPR": 0.2,
+      "early_tp_fraction": null,
+      "numerical_checks": {
+        "recall": false,
+        "precision": false,
+        "fpr": false,
+        "timing": false
+      }
+    },
+    "validation": {
+      "TP": 0,
+      "TN": 4,
+      "FP": 1,
+      "FN": 5,
+      "precision": 0.0,
+      "recall": 0.0,
+      "F1": 0.0,
+      "FPR": 0.2,
+      "early_tp_fraction": null,
+      "numerical_checks": {
+        "recall": false,
+        "precision": false,
+        "fpr": false,
+        "timing": false
+      }
+    }
+  }
+}

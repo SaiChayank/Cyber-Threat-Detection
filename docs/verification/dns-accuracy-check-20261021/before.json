@@ -1,0 +1,30 @@
+{
+  "baseline": "47e82c3",
+  "scope": "Already exposed synthetic development and blocked reserved preflight only",
+  "sources_sha256": {
+    "docs/verification/dns-accuracy-check-20261021/PROTOCOL.md": "03fd7b56999d136eb3e57228b55fcf3a0ed6938bb01ee84f8785c1306874606c",
+    "datasets/score_dns_tunnel.py": "ac993e57cc1d2af78da66310eabed669e1d4cfb49815603946b70e0c0456e466",
+    "datasets/evaluate_dns_tunnel_candidate.py": "eadd8df004fbaae74f50c51ef64b655db08399768bf519c25065681c6f090262",
+    "data/dns_tunnel_evaluation_contract.json": "a30b164f22ed1d9bd61a89d9e8f225ab408fc91df2c06449159f6144ec68208b",
+    "data/dns_burgos_verification_20261021.json": "a943d7ec35a6f2fe3ea18356c7e6a7e604d1bb2131b8464351b75c6702d97859",
+    "data/dns_session_source_screen_20261021.json": "2caf277bc960d3fbe0aba10f4259219cdd550e6f7d8948749962e0497063398f"
+  },
+  "source_pins_verified": 23,
+  "quality_gates": {
+    "minimum_positive_sessions": 20,
+    "minimum_benign_sessions": 50,
+    "recall_min": 0.8,
+    "precision_min": 0.95,
+    "benign_session_fpr_max": 0.02,
+    "all_true_positives_before_completion": true,
+    "early_true_positive_fraction_min": 0.9,
+    "early_query_index_max": 10,
+    "early_delay_ms_max": 10000,
+    "early_conditions_combined": "AND",
+    "undefined_denominator": "undefined; cannot pass",
+    "final_query_only_positive": "FN"
+  },
+  "reserved_ready": false,
+  "reserved_manifest": null,
+  "reserved_receipt_exists_before": false
+}

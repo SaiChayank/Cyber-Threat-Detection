@@ -128,23 +128,36 @@
       "matching_runtime_question_sidecars": 72,
       "qualified_reserved_roles": 0,
       "current_protected_files_matching": 130
+    },
+    {
+      "task": "Controlled DNS rule accuracy regression and reserved-readiness check",
+      "completed_client_date": "2026-10-21",
+      "dod": "PASS_CONTROLLED_REGRESSION_ONLY_FORMAL_VALIDATION_BLOCKED",
+      "report": "docs/DNS_ACCURACY_CHECK_20261021.md",
+      "targeted_tests": 115,
+      "candidate_validation_counts": {"TP": 5, "TN": 5, "FP": 0, "FN": 0},
+      "baseline_rule_validation_counts": {"TP": 0, "TN": 4, "FP": 1, "FN": 5},
+      "independent_accuracy": "NOT_ESTABLISHED",
+      "reserved_pass_consumed": false,
+      "current_protected_files_matching": 130
     }
   ],
-  "current_task": "Burgos first benign capture verification completed; formal evaluation remains data-blocked",
+  "current_task": "Controlled DNS accuracy regression completed; independent accuracy validation remains data-blocked",
   "work_running": false,
-  "stopping_reason": "Requested small benign capture verification passes; independent real-tool session/time manifests and full benign category/session coverage are absent. Stop before scoring or promotion",
+  "stopping_reason": "Existing synthetic metrics reproduced, but the frozen contract has no qualified reserved manifest, 20/50 independent sessions or all five benign controls. Reserved scoring correctly refuses; stop before final evaluation/promotion",
   "last_task": {
-    "task": "Burgos first benign capture verification",
-    "report": "docs/BURGOS_BENIGN_VERIFICATION_20261021.md",
-    "status": "PASS_CAPTURE_VERIFICATION_ONLY",
-    "new_tests": 23,
-    "targeted_tests": 139,
-    "complete_dns_client_queries": 72,
-    "matching_runtime_question_sidecars": 72,
+    "task": "Controlled DNS accuracy regression and blocked reserved preflight",
+    "report": "docs/DNS_ACCURACY_CHECK_20261021.md",
+    "status": "PASS_CONTROLLED_REGRESSION_ONLY_FORMAL_VALIDATION_BLOCKED",
+    "targeted_tests": 115,
+    "independent_accuracy": "NOT_ESTABLISHED",
+    "reserved_pass_consumed": false,
     "qualified_evaluation_roles": 0,
     "current_protected_files_matching": 130,
     "reserved_values_opened": false,
-    "new_training_or_scoring": false
+    "new_training": false,
+    "already_exposed_synthetic_development_scored": true,
+    "new_public_or_reserved_scoring": false
   },
   "constraints": [
     "Public datasets only; skip email-gated supplements and author follow-ups",

@@ -1,0 +1,27 @@
+{
+  "status": "PASS_CONTROLLED_REGRESSION_ONLY",
+  "targeted_tests_passed": 115,
+  "synthetic_training_sessions": 10,
+  "synthetic_validation_sessions": 10,
+  "candidate_validation_counts": {
+    "TP": 5,
+    "TN": 5,
+    "FP": 0,
+    "FN": 0
+  },
+  "baseline_rule_validation_counts": {
+    "TP": 0,
+    "TN": 4,
+    "FP": 1,
+    "FN": 5
+  },
+  "independent_accuracy": "NOT_ESTABLISHED",
+  "formal_validation_dod": "BLOCKED",
+  "reserved_pass_consumed": false,
+  "protected_originals_matching": 130,
+  "prior_acquired_captures_unchanged": 2,
+  "prior_frozen_source_packages_unchanged": 2,
+  "runtime_changed": false,
+  "candidate_promoted": false,
+  "release_ready": false
+}

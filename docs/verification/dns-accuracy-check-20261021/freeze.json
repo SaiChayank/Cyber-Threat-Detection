@@ -1,0 +1,20 @@
+{
+  "baseline": "47e82c3",
+  "scope": "Already exposed synthetic controlled accuracy and blocked reserved preflight; no independent accuracy or promotion",
+  "files": {
+    "docs/DNS_ACCURACY_CHECK_20261021.md": "9efdb34b616da03b150288c704f439fb928e842c73eb4d837cb2dd90b1f9d7eb",
+    "docs/verification/dns-accuracy-check-20261021/baseline-rule.json": "348a724965a85e4ea1b08eee81ae1fa8386afac0d61da3d21fb8197bb4cbca45",
+    "docs/verification/dns-accuracy-check-20261021/before.json": "85753a1f8d2579706b90996422ecd705d5cf3445d4628f0ab106ef820ededdaf",
+    "docs/verification/dns-accuracy-check-20261021/before.sha256": "993368c56e6e2d1c0c848f35c60276c411efd6e9cc5ac40b1f5919884ae6bd18",
+    "docs/verification/dns-accuracy-check-20261021/check_evidence.py": "6936bcf0504b56e69670ea889e4ebe5eb32dc8f8a79353ed5fd25288f0a0e7bb",
+    "docs/verification/dns-accuracy-check-20261021/checks.json": "314991487d2887d8c77fae507cb3d4afccfbbf8be09e78ff5c1620fca1c4e64f",
+    "docs/verification/dns-accuracy-check-20261021/commands.json": "4b43c6c19db8cac75793d89b9e0ea93ea4fc44f5f192838e95d1e0baae6704df",
+    "docs/verification/dns-accuracy-check-20261021/compare_baseline.py": "c7653918b525f10af23932a851aaf7ecbb2c69fdc9711bcff280b4194802c1cc",
+    "docs/verification/dns-accuracy-check-20261021/development.json": "620d57611f491f33e900c949df3452ed3994c74511d3f62f5e44e3cfea24d508",
+    "docs/verification/dns-accuracy-check-20261021/integrity-after.json": "73bbff59d1f2bdd4912d266a426d1dd167c51a06eeed5c3089c7bea42b75a700",
+    "docs/verification/dns-accuracy-check-20261021/PROTOCOL.md": "03fd7b56999d136eb3e57228b55fcf3a0ed6938bb01ee84f8785c1306874606c",
+    "docs/verification/dns-accuracy-check-20261021/reserved-preflight.json": "b4f5d82cd81c095ef4dc58044805de5f676c69fa101601955f655d3291c354e8",
+    "docs/verification/dns-accuracy-check-20261021/tests.log": "7989ea391dfb662bde58dd8950e367f7dced5b2333eb475380ff1626c01cd4f2",
+    "docs/verification/dns-accuracy-check-20261021/serialization-receipt.json": "14732063018e3b3440778e3263a16ea14018d96e3e8032b3977f7820eb8a3ef6"
+  }
+}

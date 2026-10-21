@@ -1,0 +1,584 @@
+{
+  "scope": "Already exposed synthetic development only; not independent accuracy",
+  "contract_sha256": "a30b164f22ed1d9bd61a89d9e8f225ab408fc91df2c06449159f6144ec68208b",
+  "promotion_decision": "NOT_EVALUATED_DATA_BLOCKED",
+  "runtime_activated": false,
+  "sessions": [
+    {
+      "session_id": "train_long_a",
+      "positive": true,
+      "tool": "synthetic",
+      "benign_category": null,
+      "queries": 12,
+      "first_alert_query": 5,
+      "first_alert_delay_ms": 1800.0,
+      "first_alert_evidence": {
+        "dns_query_visible": 1,
+        "dns_label_count": 5,
+        "dns_encoded_max_label_length": 58,
+        "dns_encoded_total_length": 64,
+        "dns_encoded_entropy": 4.624389062229566,
+        "dns_base_queries_10s": 5,
+        "dns_base_unique_ratio_10s": 1.0,
+        "dns_base_encoded_queries_10s": 5,
+        "dns_candidate_pattern": "repeated_long_encoded_label",
+        "confidence_kind": "heuristic strength",
+        "window_partial": true
+      },
+      "late_questions_dropped": 0,
+      "query_types": {
+        "1": 12
+      },
+      "nonnegative_interval_groups": {
+        "high": 11
+      },
+      "outcome": "TP",
+      "detected_before_end": true,
+      "early": true,
+      "split": "training"
+    },
+    {
+      "session_id": "train_long_aaaa",
+      "positive": true,
+      "tool": "synthetic",
+      "benign_category": null,
+      "queries": 12,
+      "first_alert_query": 5,
+      "first_alert_delay_ms": 2800.0,
+      "first_alert_evidence": {
+        "dns_query_visible": 1,
+        "dns_label_count": 5,
+        "dns_encoded_max_label_length": 58,
+        "dns_encoded_total_length": 64,
+        "dns_encoded_entropy": 4.642283547037795,
+        "dns_base_queries_10s": 5,
+        "dns_base_unique_ratio_10s": 1.0,
+        "dns_base_encoded_queries_10s": 5,
+        "dns_candidate_pattern": "repeated_long_encoded_label",
+        "confidence_kind": "heuristic strength",
+        "window_partial": true
+      },
+      "late_questions_dropped": 0,
+      "query_types": {
+        "28": 12
+      },
+      "nonnegative_interval_groups": {
+        "medium": 11
+      },
+      "outcome": "TP",
+      "detected_before_end": true,
+      "early": true,
+      "split": "training"
+    },
+    {
+      "session_id": "train_long_txt",
+      "positive": true,
+      "tool": "synthetic",
+      "benign_category": null,
+      "queries": 12,
+      "first_alert_query": 5,
+      "first_alert_delay_ms": 2200.0,
+      "first_alert_evidence": {
+        "dns_query_visible": 1,
+        "dns_label_count": 5,
+        "dns_encoded_max_label_length": 58,
+        "dns_encoded_total_length": 64,
+        "dns_encoded_entropy": 4.718139062229566,
+        "dns_base_queries_10s": 5,
+        "dns_base_unique_ratio_10s": 1.0,
+        "dns_base_encoded_queries_10s": 5,
+        "dns_candidate_pattern": "repeated_long_encoded_label",
+        "confidence_kind": "heuristic strength",
+        "window_partial": true
+      },
+      "late_questions_dropped": 0,
+      "query_types": {
+        "16": 12
+      },
+      "nonnegative_interval_groups": {
+        "medium": 11
+      },
+      "outcome": "TP",
+      "detected_before_end": true,
+      "early": true,
+      "split": "training"
+    },
+    {
+      "session_id": "train_long_null",
+      "positive": true,
+      "tool": "synthetic",
+      "benign_category": null,
+      "queries": 12,
+      "first_alert_query": 5,
+      "first_alert_delay_ms": 2600.0,
+      "first_alert_evidence": {
+        "dns_query_visible": 1,
+        "dns_label_count": 5,
+        "dns_encoded_max_label_length": 58,
+        "dns_encoded_total_length": 64,
+        "dns_encoded_entropy": 4.508063383509937,
+        "dns_base_queries_10s": 5,
+        "dns_base_unique_ratio_10s": 1.0,
+        "dns_base_encoded_queries_10s": 5,
+        "dns_candidate_pattern": "repeated_long_encoded_label",
+        "confidence_kind": "heuristic strength",
+        "window_partial": true
+      },
+      "late_questions_dropped": 0,
+      "query_types": {
+        "10": 12
+      },
+      "nonnegative_interval_groups": {
+        "medium": 11
+      },
+      "outcome": "TP",
+      "detected_before_end": true,
+      "early": true,
+      "split": "training"
+    },
+    {
+      "session_id": "train_multi_a",
+      "positive": true,
+      "tool": "synthetic",
+      "benign_category": null,
+      "queries": 12,
+      "first_alert_query": 5,
+      "first_alert_delay_ms": 3200.0,
+      "first_alert_evidence": {
+        "dns_query_visible": 1,
+        "dns_label_count": 6,
+        "dns_encoded_max_label_length": 24,
+        "dns_encoded_total_length": 77,
+        "dns_encoded_entropy": 4.724342956662326,
+        "dns_base_queries_10s": 5,
+        "dns_base_unique_ratio_10s": 1.0,
+        "dns_base_encoded_queries_10s": 5,
+        "dns_candidate_pattern": "repeated_multi_label_encoding",
+        "confidence_kind": "heuristic strength",
+        "window_partial": true
+      },
+      "late_questions_dropped": 0,
+      "query_types": {
+        "1": 12
+      },
+      "nonnegative_interval_groups": {
+        "medium": 11
+      },
+      "outcome": "TP",
+      "detected_before_end": true,
+      "early": true,
+      "split": "training"
+    },
+    {
+      "session_id": "train_cdn",
+      "positive": false,
+      "tool": null,
+      "benign_category": "cdn",
+      "queries": 12,
+      "first_alert_query": null,
+      "first_alert_delay_ms": null,
+      "first_alert_evidence": null,
+      "late_questions_dropped": 0,
+      "query_types": {
+        "1": 12
+      },
+      "nonnegative_interval_groups": {
+        "high": 11
+      },
+      "outcome": "TN",
+      "detected_before_end": false,
+      "early": false,
+      "split": "training"
+    },
+    {
+      "session_id": "train_telemetry",
+      "positive": false,
+      "tool": null,
+      "benign_category": "telemetry",
+      "queries": 12,
+      "first_alert_query": null,
+      "first_alert_delay_ms": null,
+      "first_alert_evidence": null,
+      "late_questions_dropped": 0,
+      "query_types": {
+        "1": 12
+      },
+      "nonnegative_interval_groups": {
+        "medium": 11
+      },
+      "outcome": "TN",
+      "detected_before_end": false,
+      "early": false,
+      "split": "training"
+    },
+    {
+      "session_id": "train_discovery",
+      "positive": false,
+      "tool": null,
+      "benign_category": "discovery",
+      "queries": 12,
+      "first_alert_query": null,
+      "first_alert_delay_ms": null,
+      "first_alert_evidence": null,
+      "late_questions_dropped": 0,
+      "query_types": {
+        "33": 12
+      },
+      "nonnegative_interval_groups": {
+        "medium": 11
+      },
+      "outcome": "TN",
+      "detected_before_end": false,
+      "early": false,
+      "split": "training"
+    },
+    {
+      "session_id": "train_txt",
+      "positive": false,
+      "tool": null,
+      "benign_category": "txt",
+      "queries": 12,
+      "first_alert_query": null,
+      "first_alert_delay_ms": null,
+      "first_alert_evidence": null,
+      "late_questions_dropped": 0,
+      "query_types": {
+        "16": 12
+      },
+      "nonnegative_interval_groups": {
+        "medium": 11
+      },
+      "outcome": "TN",
+      "detected_before_end": false,
+      "early": false,
+      "split": "training"
+    },
+    {
+      "session_id": "train_machine",
+      "positive": false,
+      "tool": null,
+      "benign_category": "machine",
+      "queries": 12,
+      "first_alert_query": null,
+      "first_alert_delay_ms": null,
+      "first_alert_evidence": null,
+      "late_questions_dropped": 0,
+      "query_types": {
+        "28": 12
+      },
+      "nonnegative_interval_groups": {
+        "medium": 11
+      },
+      "outcome": "TN",
+      "detected_before_end": false,
+      "early": false,
+      "split": "training"
+    },
+    {
+      "session_id": "val_long_a",
+      "positive": true,
+      "tool": "synthetic",
+      "benign_category": null,
+      "queries": 12,
+      "first_alert_query": 5,
+      "first_alert_delay_ms": 7200.0,
+      "first_alert_evidence": {
+        "dns_query_visible": 1,
+        "dns_label_count": 5,
+        "dns_encoded_max_label_length": 58,
+        "dns_encoded_total_length": 66,
+        "dns_encoded_entropy": 4.62889142234994,
+        "dns_base_queries_10s": 5,
+        "dns_base_unique_ratio_10s": 1.0,
+        "dns_base_encoded_queries_10s": 5,
+        "dns_candidate_pattern": "repeated_long_encoded_label",
+        "confidence_kind": "heuristic strength",
+        "window_partial": true
+      },
+      "late_questions_dropped": 0,
+      "query_types": {
+        "1": 12
+      },
+      "nonnegative_interval_groups": {
+        "medium": 11
+      },
+      "outcome": "TP",
+      "detected_before_end": true,
+      "early": true,
+      "split": "validation"
+    },
+    {
+      "session_id": "val_long_aaaa",
+      "positive": true,
+      "tool": "synthetic",
+      "benign_category": null,
+      "queries": 12,
+      "first_alert_query": 5,
+      "first_alert_delay_ms": 4400.0,
+      "first_alert_evidence": {
+        "dns_query_visible": 1,
+        "dns_label_count": 5,
+        "dns_encoded_max_label_length": 58,
+        "dns_encoded_total_length": 66,
+        "dns_encoded_entropy": 4.587743127124853,
+        "dns_base_queries_10s": 5,
+        "dns_base_unique_ratio_10s": 1.0,
+        "dns_base_encoded_queries_10s": 5,
+        "dns_candidate_pattern": "repeated_long_encoded_label",
+        "confidence_kind": "heuristic strength",
+        "window_partial": true
+      },
+      "late_questions_dropped": 0,
+      "query_types": {
+        "28": 12
+      },
+      "nonnegative_interval_groups": {
+        "medium": 11
+      },
+      "outcome": "TP",
+      "detected_before_end": true,
+      "early": true,
+      "split": "validation"
+    },
+    {
+      "session_id": "val_multi_txt",
+      "positive": true,
+      "tool": "synthetic",
+      "benign_category": null,
+      "queries": 12,
+      "first_alert_query": 5,
+      "first_alert_delay_ms": 4800.0,
+      "first_alert_evidence": {
+        "dns_query_visible": 1,
+        "dns_label_count": 6,
+        "dns_encoded_max_label_length": 24,
+        "dns_encoded_total_length": 79,
+        "dns_encoded_entropy": 4.712353223963286,
+        "dns_base_queries_10s": 5,
+        "dns_base_unique_ratio_10s": 1.0,
+        "dns_base_encoded_queries_10s": 5,
+        "dns_candidate_pattern": "repeated_multi_label_encoding",
+        "confidence_kind": "heuristic strength",
+        "window_partial": true
+      },
+      "late_questions_dropped": 0,
+      "query_types": {
+        "16": 12
+      },
+      "nonnegative_interval_groups": {
+        "medium": 11
+      },
+      "outcome": "TP",
+      "detected_before_end": true,
+      "early": true,
+      "split": "validation"
+    },
+    {
+      "session_id": "val_multi_null",
+      "positive": true,
+      "tool": "synthetic",
+      "benign_category": null,
+      "queries": 12,
+      "first_alert_query": 5,
+      "first_alert_delay_ms": 3800.0,
+      "first_alert_evidence": {
+        "dns_query_visible": 1,
+        "dns_label_count": 6,
+        "dns_encoded_max_label_length": 24,
+        "dns_encoded_total_length": 79,
+        "dns_encoded_entropy": 4.739870937776664,
+        "dns_base_queries_10s": 5,
+        "dns_base_unique_ratio_10s": 1.0,
+        "dns_base_encoded_queries_10s": 5,
+        "dns_candidate_pattern": "repeated_multi_label_encoding",
+        "confidence_kind": "heuristic strength",
+        "window_partial": true
+      },
+      "late_questions_dropped": 0,
+      "query_types": {
+        "10": 12
+      },
+      "nonnegative_interval_groups": {
+        "medium": 11
+      },
+      "outcome": "TP",
+      "detected_before_end": true,
+      "early": true,
+      "split": "validation"
+    },
+    {
+      "session_id": "val_long_txt",
+      "positive": true,
+      "tool": "synthetic",
+      "benign_category": null,
+      "queries": 12,
+      "first_alert_query": 5,
+      "first_alert_delay_ms": 6000.0,
+      "first_alert_evidence": {
+        "dns_query_visible": 1,
+        "dns_label_count": 5,
+        "dns_encoded_max_label_length": 58,
+        "dns_encoded_total_length": 66,
+        "dns_encoded_entropy": 4.516090764197572,
+        "dns_base_queries_10s": 5,
+        "dns_base_unique_ratio_10s": 1.0,
+        "dns_base_encoded_queries_10s": 5,
+        "dns_candidate_pattern": "repeated_long_encoded_label",
+        "confidence_kind": "heuristic strength",
+        "window_partial": true
+      },
+      "late_questions_dropped": 0,
+      "query_types": {
+        "16": 12
+      },
+      "nonnegative_interval_groups": {
+        "medium": 11
+      },
+      "outcome": "TP",
+      "detected_before_end": true,
+      "early": true,
+      "split": "validation"
+    },
+    {
+      "session_id": "val_cdn",
+      "positive": false,
+      "tool": null,
+      "benign_category": "cdn",
+      "queries": 12,
+      "first_alert_query": null,
+      "first_alert_delay_ms": null,
+      "first_alert_evidence": null,
+      "late_questions_dropped": 0,
+      "query_types": {
+        "28": 12
+      },
+      "nonnegative_interval_groups": {
+        "high": 11
+      },
+      "outcome": "TN",
+      "detected_before_end": false,
+      "early": false,
+      "split": "validation"
+    },
+    {
+      "session_id": "val_telemetry",
+      "positive": false,
+      "tool": null,
+      "benign_category": "telemetry",
+      "queries": 12,
+      "first_alert_query": null,
+      "first_alert_delay_ms": null,
+      "first_alert_evidence": null,
+      "late_questions_dropped": 0,
+      "query_types": {
+        "16": 12
+      },
+      "nonnegative_interval_groups": {
+        "medium": 11
+      },
+      "outcome": "TN",
+      "detected_before_end": false,
+      "early": false,
+      "split": "validation"
+    },
+    {
+      "session_id": "val_discovery",
+      "positive": false,
+      "tool": null,
+      "benign_category": "discovery",
+      "queries": 12,
+      "first_alert_query": null,
+      "first_alert_delay_ms": null,
+      "first_alert_evidence": null,
+      "late_questions_dropped": 0,
+      "query_types": {
+        "33": 12
+      },
+      "nonnegative_interval_groups": {
+        "medium": 11
+      },
+      "outcome": "TN",
+      "detected_before_end": false,
+      "early": false,
+      "split": "validation"
+    },
+    {
+      "session_id": "val_txt",
+      "positive": false,
+      "tool": null,
+      "benign_category": "txt",
+      "queries": 12,
+      "first_alert_query": null,
+      "first_alert_delay_ms": null,
+      "first_alert_evidence": null,
+      "late_questions_dropped": 0,
+      "query_types": {
+        "16": 12
+      },
+      "nonnegative_interval_groups": {
+        "medium": 11
+      },
+      "outcome": "TN",
+      "detected_before_end": false,
+      "early": false,
+      "split": "validation"
+    },
+    {
+      "session_id": "val_machine",
+      "positive": false,
+      "tool": null,
+      "benign_category": "machine",
+      "queries": 12,
+      "first_alert_query": null,
+      "first_alert_delay_ms": null,
+      "first_alert_evidence": null,
+      "late_questions_dropped": 0,
+      "query_types": {
+        "1": 12
+      },
+      "nonnegative_interval_groups": {
+        "high": 11
+      },
+      "outcome": "TN",
+      "detected_before_end": false,
+      "early": false,
+      "split": "validation"
+    }
+  ],
+  "metrics_by_split": {
+    "training": {
+      "TP": 5,
+      "TN": 5,
+      "FP": 0,
+      "FN": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "F1": 1.0,
+      "FPR": 0.0,
+      "early_tp_fraction": 1.0,
+      "numerical_checks": {
+        "recall": true,
+        "precision": true,
+        "fpr": true,
+        "timing": true
+      }
+    },
+    "validation": {
+      "TP": 5,
+      "TN": 5,
+      "FP": 0,
+      "FN": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "F1": 1.0,
+      "FPR": 0.0,
+      "early_tp_fraction": 1.0,
+      "numerical_checks": {
+        "recall": true,
+        "precision": true,
+        "fpr": true,
+        "timing": true
+      }
+    }
+  }
+}

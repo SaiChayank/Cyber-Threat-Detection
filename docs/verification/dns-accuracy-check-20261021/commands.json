@@ -1,0 +1,18 @@
+[
+  {
+    "command": ".venv/Scripts/python.exe -B -m datasets.score_dns_tunnel --mode development --output docs/verification/dns-accuracy-check-20261021/development.json",
+    "tool_exit_code": 0,
+    "scope": "20 already exposed synthetic scenarios; no independent evaluation"
+  },
+  {
+    "command": ".venv/Scripts/python.exe -B docs/verification/dns-accuracy-check-20261021/compare_baseline.py",
+    "tool_exit_code": 0,
+    "scope": "Same synthetic scenarios, baseline rule-only arm, same BENIGN model override"
+  },
+  {
+    "command": ".venv/Scripts/python.exe -B -m datasets.score_dns_tunnel --mode reserved --output docs/verification/dns-accuracy-check-20261021/reserved.json",
+    "tool_exit_code": 1,
+    "message": "Reserved evaluation blocked: qualified frozen data is unavailable",
+    "scope": "Expected readiness refusal before any reserved pass or data access"
+  }
+]

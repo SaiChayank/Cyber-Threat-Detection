@@ -1,0 +1,18 @@
+{
+  "status": "BLOCKED_BEFORE_SCORING",
+  "tool_exit_code": 1,
+  "message": "Reserved evaluation blocked: qualified frozen data is unavailable",
+  "reserved_ready": false,
+  "reserved_manifest": null,
+  "output_created": false,
+  "reserved_pass_receipt_exists": false,
+  "reserved_pass_consumed": false,
+  "independent_metrics": null,
+  "missing_prerequisites": [
+    "At least 20 independently labelled real-tool positive sessions with tool/client/namespace/time joins",
+    "At least 50 independently labelled benign sessions covering all five specified categories",
+    "Complete eligible original question exports, exposure/disjointness checks and frozen session roles/manifest"
+  ],
+  "available_evidence_scope": "One real-tool capture header plus one inspected benign capture; neither assigned a reserved role",
+  "candidate_runtime_activated": false
+}

@@ -1,0 +1,8 @@
+{
+  "reason": "Existing CLI emits Windows text-mode CRLF; store portable LF without changing JSON values",
+  "file": "docs/verification/dns-accuracy-check-20261021/development.json",
+  "original_cli_sha256": "749df74bc949012fd6565e7c6a0ffa0ec757da2fd745cee39981c5b60db8ddad",
+  "stored_lf_sha256": "620d57611f491f33e900c949df3452ed3994c74511d3f62f5e44e3cfea24d508",
+  "original_reconstruction": "Replace each LF byte with CRLF; exact original SHA256 verified",
+  "json_values_unchanged": true
+}
