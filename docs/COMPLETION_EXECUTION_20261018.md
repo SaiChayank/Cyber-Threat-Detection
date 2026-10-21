@@ -9,13 +9,23 @@ work; scoped performance gates pass. Several required detector-quality gates
 have failed or remain unestablished, preventing final SIH release acceptance.
 Keep the existing architecture, working UI and all passed behavior.
 
-**Latest completed task:** [malformed-alert recovery](MONITOR_ALERT_CONTRACT_20261021.md).
+**Latest completed application fix:** [malformed-alert recovery](MONITOR_ALERT_CONTRACT_20261021.md).
 Three frontend regressions, 616 backend tests, typecheck/build/nine frozen demo
 traces and real proxy/SSE/Monitor recovery pass. All 130 current protected hashes
 match. Valid queue retained through a malformed stored alert; all three records
 return after repair without reload. Freeze this correction; no more refactoring
 unless a later integration reveals a real defect. The earlier fresh-checkout
 rehearsal remains valid for commit `f380837`, not relabelled as this new client fix.
+
+**Latest completed data verification:** [Burgos benign-first capture](BURGOS_BENIGN_VERIFICATION_20261021.md).
+Selected-member CRC/size, supported native classic Ethernet and observed DNS
+visibility pass: 11,005 packets, 72 complete client questions/72 matching runtime
+sidecars, original span 161.583704 seconds. Three backwards capture-time steps
+are retained. Publisher approximate count/duration discrepancies are disclosed.
+23 new cases/139 targeted tests pass; all 130 protected originals and prior source
+package remain unchanged. This is one inspected benign intake, not 50 independent
+DNS sessions, five benign categories, detector scoring or promotion. Full required
+quality validation and final release remain BLOCKED.
 
 ### 1. Qualify missing public evidence — P0
 
@@ -65,6 +75,14 @@ zero. **Exactly next:** separately freeze and qualify only the small Burgos firs
 benign member's native header/CRC, without acquiring the >1 GB second member or
 opening DNS values. This executable partial-source step does not clear the full
 DNS/DGA coverage gates, and failed/unassessed candidates remain disabled.
+
+**Burgos follow-up above is complete:** native header/integrity and separately
+frozen neutral DNS visibility pass for the small first member. Do not repeat that
+task or bulk-acquire the >1 GB second member without specific coverage evidence.
+Exactly next: public executed-session annotations for required real tunnel
+positives, with tool/client/namespace/original-time joins and independently
+documented benign category sessions. This inspected first intake remains outside
+reserve; minimum counts/categories and quality/timing gates are unchanged.
 
 ### 2. Resolve visibility limits, then run one justified experiment — P0
 

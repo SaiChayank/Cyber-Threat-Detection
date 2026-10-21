@@ -1,0 +1,73 @@
+{
+  "status": "MEMBER_INTEGRITY_PASS",
+  "bytes": 8852172,
+  "crc32": "5bd6ba90",
+  "sha256": "f1b0e48cfdbdd38a7701c99b364ed0bd70521224402a9d96eeac7b0dd9845e57",
+  "compressed_sha256": "a115dcfae14cd9c00e92f44373ceb6b1bc62055b6be0649b9b1c17b895bf3399",
+  "header_hex": "d4c3b2a10200040000000000000000000000040001000000",
+  "header_bytes_read": 24,
+  "ranges": [
+    {
+      "start": 1269092427,
+      "length": 311,
+      "sha256": "b0e8df4a6177c9111c6ca24ca33709626f1fd6e5eed66d5a8b280861fa756887"
+    },
+    {
+      "start": 0,
+      "length": 30,
+      "sha256": "d618afe2f59f90631a933f19bffce9ffb445f885404fcf77dd64fde91186befa"
+    },
+    {
+      "start": 30,
+      "length": 21,
+      "sha256": "9a4a373234ca766bab23c78644e28693867f8e4ede5b9216aff9dfc5bf97a165"
+    },
+    {
+      "start": 51,
+      "length": 1048576,
+      "sha256": "c453adcf7338a3ceecf15008a84801387f8931e4306dcbab62dbaa30d7e76b01"
+    },
+    {
+      "start": 1048627,
+      "length": 1048576,
+      "sha256": "793fd5c38c5d95027ecc68eaffbba83e162155892c10732d5f3cf934008664ca"
+    },
+    {
+      "start": 2097203,
+      "length": 1048576,
+      "sha256": "659508052c3fa8e632f55b796c4a458d19fa3c12e2a5b22435214e35d93811d0"
+    },
+    {
+      "start": 3145779,
+      "length": 1048576,
+      "sha256": "702a550b7ae1ea02ed7e4fe5d617a1317db758b70f8a1820aa36fc17d6be8251"
+    },
+    {
+      "start": 4194355,
+      "length": 1048576,
+      "sha256": "9afe751dd0ead83ee3d3985f018b0e7f8682228a1b8cc0a6a9d7816a4b1d094c"
+    },
+    {
+      "start": 5242931,
+      "length": 1048576,
+      "sha256": "b769ca0e36909ceafe294a2a63379d785df11ea1f79d19b97d1dc82357c06585"
+    },
+    {
+      "start": 6291507,
+      "length": 1048576,
+      "sha256": "c2f71710ef63ed13c027cab253718a7e3e9eaed669ce7f97b78189af6913b1f2"
+    },
+    {
+      "start": 7340083,
+      "length": 681061,
+      "sha256": "908578092b5d68c7cca2fd7f4bf52dd59bdd9df665e4277274c08e65c9045d35"
+    }
+  ],
+  "packet_records_parsed": 0,
+  "candidate_scored": false,
+  "role": null,
+  "full_archive_checksum_verified": false,
+  "snaplen": 262144,
+  "native_compatibility": "PASS_CLASSIC_ETHERNET_PCAP",
+  "artifact": "data/raw/burgos-benign-intake-20261021/benign_first_cap.pcap"
+}

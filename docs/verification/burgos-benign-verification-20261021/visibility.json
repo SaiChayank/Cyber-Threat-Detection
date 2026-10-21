@@ -1,0 +1,70 @@
+{
+  "sha256": "f1b0e48cfdbdd38a7701c99b364ed0bd70521224402a9d96eeac7b0dd9845e57",
+  "bytes": 8852172,
+  "counts": {
+    "frames": 11005,
+    "capture_truncated_frames": 0,
+    "backwards_timestamp_steps": 3,
+    "repeated_frame_bytes": 5,
+    "transport_complete": 10970,
+    "non_transport_or_unsupported": 35,
+    "dns_query_messages": 72,
+    "complete_client_question_messages": 72,
+    "multiple_question_messages": 0,
+    "runtime_client_question_sidecars": 72,
+    "runtime_question_mismatches": 0,
+    "dns_responses": 72
+  },
+  "services": {
+    "udp/5353": 1371,
+    "udp/53": 144
+  },
+  "observed_client_qtypes": {
+    "1": 36,
+    "65": 36
+  },
+  "source_question_counts_sha256": {
+    "5a457f6f4e4c07e15f5596383f082d46f9cacbb6de5d2c1c5ad6097db45b39ad": 72
+  },
+  "unique_question_sources": 1,
+  "timestamp_encoding": "microseconds",
+  "first_timestamp_utc": "2025-02-20T12:07:57.295260+00:00",
+  "last_timestamp_utc": "2025-02-20T12:10:38.878964+00:00",
+  "minimum_timestamp_utc": "2025-02-20T12:07:57.295260+00:00",
+  "maximum_timestamp_utc": "2025-02-20T12:10:38.878964+00:00",
+  "observed_span_seconds": 161.583704,
+  "complete_question_name_length_min": 10,
+  "complete_question_name_length_max": 31,
+  "observed_first_label_exposures_sha256": [
+    "043a718774c572bd8a25adbeb1bfcd5c0256ae11cecf9f9c3f925d0e52beaf89",
+    "12423e0482f3e81cb1d23230664e95bb3d11b9f34f06fc199e588d4cdab6e4d4",
+    "1ebc5e6ecfe8bca00f059944e5bea9b0ee276a6eec5b2b0e98b3724bc1305d1b",
+    "24e6654bfd1ab85bebb1f721a4be46e6fdb9ea8974d14442d3aaecd1f971fcbb",
+    "5a638a128ca67348f1073ba0aed26d85905a29128cbd71b250c9cf4e598c7f0d",
+    "5f4ae4ec159fa2943a75b02ab42eb38ca04a18b9f17e19ec939d7cead3694d9b",
+    "7c2ecd07f155648431e0f94b89247d713c5786e1e73e953f2fe7eca39534cd6d",
+    "8a3b2dde19c3466bd265947fa5bf55af83aa04535ed6ad07654b6221c26bf9fd",
+    "8d50c2feb7ab837497cb1244199c19ae6d28256c81d197e7446fd6e55a564f14",
+    "a9d0df1873a041a6e38e2c461ffc6b53d216fd7cfab9bece3e9b5bc5c69b4203",
+    "b29814cf5792e684cd75d6a7fce7a67a11887e312f87ca2ac2496d81f365ff72",
+    "bc62a3c14fec277e3dc6b504bf7c6348c2e421f8acc42032deddb0a96070f078",
+    "cdb59355f3ba293977fc0945fb85f11822d412c45c7520c7121bd2234f6c1f48",
+    "d58a2529845f2fb5fad3f1fe707d60dc63a819075a3afe96047b39f14ae4f3dc",
+    "dc5a2e46e9ef93ecfa28d22ce4a3bca1765a20af1e7336b70bd5cab4e5590d87",
+    "de7d1b721a1e0632b7cf04edf5032c8ecffa9f9a08492152b926f1a5a7e765d7",
+    "e81935fb86434cdaaeee21ebe051cca827243ab4cccfdafeee8202004630924e",
+    "ee7160bfae3f35f9cc86e9e36a46481668c2a76c55e011d92ae95fe56dbb1d79",
+    "f9b89ad44ffd52b6b45b9e8f2b4411b359dbd1f3da3f0d4b79c165ef77b5667a"
+  ],
+  "runtime_parser_errors": {
+    "total_corrupt_packets": 0,
+    "truncated_packets": 0,
+    "unsupported_protocols": 0
+  },
+  "runtime_question_parser_only": true,
+  "detector_called": false,
+  "candidate_scored": false,
+  "certified_independent_dns_sessions": null,
+  "certified_benign_categories": [],
+  "role": null
+}

@@ -115,20 +115,33 @@
       "producer_documented_benign_runs": 2,
       "qualified_reserved_roles": 0,
       "current_protected_files_matching": 130
+    },
+    {
+      "task": "Burgos benign-first selected-member integrity, native header and neutral DNS visibility",
+      "completed_client_date": "2026-10-21",
+      "dod": "PASS_CAPTURE_VERIFICATION_ONLY",
+      "report": "docs/BURGOS_BENIGN_VERIFICATION_20261021.md",
+      "new_tests": 23,
+      "targeted_tests": 139,
+      "packet_records": 11005,
+      "complete_dns_client_queries": 72,
+      "matching_runtime_question_sidecars": 72,
+      "qualified_reserved_roles": 0,
+      "current_protected_files_matching": 130
     }
   ],
-  "current_task": "Public DNS source screen and bounded capture intake completed; next Burgos native-header qualification not started",
+  "current_task": "Burgos first benign capture verification completed; formal evaluation remains data-blocked",
   "work_running": false,
-  "stopping_reason": "Current bounded next-step source screen/intake completed; stop before the separately frozen Burgos native-header task. Full evaluation coverage remains blocked",
+  "stopping_reason": "Requested small benign capture verification passes; independent real-tool session/time manifests and full benign category/session coverage are absent. Stop before scoring or promotion",
   "last_task": {
-    "task": "Public DNS source screen and bounded capture intake",
-    "report": "docs/DNS_PUBLIC_SESSION_SCREEN_20261021.md",
-    "status": "SOURCE_SCREEN_INTAKE_PASS_FORMAL_DATA_BLOCKED",
-    "new_tests": 6,
-    "targeted_tests": 83,
-    "new_receipts": 9,
+    "task": "Burgos first benign capture verification",
+    "report": "docs/BURGOS_BENIGN_VERIFICATION_20261021.md",
+    "status": "PASS_CAPTURE_VERIFICATION_ONLY",
+    "new_tests": 23,
+    "targeted_tests": 139,
+    "complete_dns_client_queries": 72,
+    "matching_runtime_question_sidecars": 72,
     "qualified_evaluation_roles": 0,
-    "publisher_checksummed_supported_captures": 1,
     "current_protected_files_matching": 130,
     "reserved_values_opened": false,
     "new_training_or_scoring": false
@@ -148,7 +161,7 @@
   "research_data_blocked": true,
   "research_track_disposition": "DGA and other unqualified research roles stay data/provenance blocked; passed application fixes are frozen",
   "next_queue": [
-    "Separately freeze and qualify only the Burgos benign_first_cap.pcap native global header and selected-member CRC/identity, without query values, full bulk archive acquisition or the >1 GB second member",
+    "Qualify publicly released executed-session annotations for dnscat2/iodine tool/client/namespace/original-time joins and independently documented benign category sessions; do not repeat the completed first benign capture check",
     "Only data-qualified next steps; no training/scoring or failed activation"
   ]
 }

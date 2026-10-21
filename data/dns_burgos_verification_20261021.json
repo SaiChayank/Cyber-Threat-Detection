@@ -1,0 +1,53 @@
+{
+  "baseline": "26256d7",
+  "date": "2026-10-21",
+  "report": "docs/BURGOS_BENIGN_VERIFICATION_20261021.md",
+  "status": "VERIFIED_INTAKE_AND_DNS_VISIBILITY_NOT_FORMAL_EVALUATION",
+  "source_doi": "10.71486/dgza-t550",
+  "licence": "CC BY 4.0",
+  "producer_permission_and_benign_capture_label_previously_verified": true,
+  "artifact": "data/raw/burgos-benign-intake-20261021/benign_first_cap.pcap",
+  "bytes": 8852172,
+  "sha256": "f1b0e48cfdbdd38a7701c99b364ed0bd70521224402a9d96eeac7b0dd9845e57",
+  "crc32": "5bd6ba90",
+  "conditional_source_identity": "Fri, 07 Nov 2025 12:30:49 GMT",
+  "full_archive_publisher_sha256": null,
+  "native_format": "classic PCAP v2.4 Ethernet/linktype 1",
+  "snaplen": 262144,
+  "original_packet_count": 11005,
+  "original_span_seconds": 161.583704,
+  "first_timestamp_utc": "2025-02-20T12:07:57.295260+00:00",
+  "last_timestamp_utc": "2025-02-20T12:10:38.878964+00:00",
+  "timestamp_encoding": "microseconds",
+  "preserved_backwards_timestamp_steps": 3,
+  "preserved_repeated_frame_byte_strings": 5,
+  "complete_dns53_client_questions": 72,
+  "runtime_dns_question_sidecars": 72,
+  "runtime_qname_qtype_mismatches": 0,
+  "observed_qtypes": {
+    "1": 36,
+    "65": 36
+  },
+  "mdns5353_packets_separate": 1371,
+  "producer_documentation_discrepancies": [
+    "First capture approximate packet count 1087920 vs observed 11005",
+    "First capture approximate duration ten minutes vs observed 161.583704 seconds"
+  ],
+  "inspection_scope": "Inspected development-source qualification; not untouched reserve",
+  "label_scope": "Producer capture-level benign intent; no invented per-query application/session truth",
+  "certified_independent_dns_sessions": null,
+  "certified_benign_categories": [],
+  "roles": {
+    "training": null,
+    "validation": null,
+    "reserved": null
+  },
+  "candidate_scored": false,
+  "runtime_changed": false,
+  "promoted": false,
+  "reserved_ready": false,
+  "release_ready": false,
+  "task_dod": "PASS_CAPTURE_VERIFICATION_ONLY",
+  "feature_validation_dod": "BLOCKED_REQUIRED_COVERAGE",
+  "next_action": "Qualify public executed-session tool/client/namespace/original-time annotations for required real tunnel positives and independently documented benign categories before any candidate scoring"
+}

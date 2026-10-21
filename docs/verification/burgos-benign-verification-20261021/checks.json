@@ -1,0 +1,19 @@
+{
+  "status": "PASS_CAPTURE_VERIFICATION_ONLY",
+  "selected_member_crc_verified": true,
+  "source_and_visibility_freezes_verified": true,
+  "native_classic_ethernet": true,
+  "packet_records": 11005,
+  "complete_client_questions": 72,
+  "runtime_question_matches": 72,
+  "backward_capture_timestamp_steps_preserved": 3,
+  "protected_originals_matching": 130,
+  "prior_source_package_unchanged": true,
+  "prior_attack_intake_unchanged": true,
+  "new_tests": 23,
+  "targeted_tests_passed": 139,
+  "qualified_reserved_roles": 0,
+  "candidate_scored": false,
+  "feature_validation_dod": "BLOCKED",
+  "release_ready": false
+}

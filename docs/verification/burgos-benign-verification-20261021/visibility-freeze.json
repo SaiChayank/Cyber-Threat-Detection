@@ -1,0 +1,15 @@
+{
+  "stage": "B_NEUTRAL_VISIBILITY_BEFORE_ORIGINAL_PACKET_RECORDS",
+  "artifact": "data/raw/burgos-benign-intake-20261021/benign_first_cap.pcap",
+  "artifact_sha256": "f1b0e48cfdbdd38a7701c99b364ed0bd70521224402a9d96eeac7b0dd9845e57",
+  "candidate_scored": false,
+  "reserved_role": null,
+  "sources_sha256": {
+    "docs/verification/burgos-benign-verification-20261021/VISIBILITY_PROTOCOL.md": "70cf5fd7c31b3e45c219628dea9406a3fa656f49986023906acddf97f3e28ea4",
+    "docs/verification/burgos-benign-verification-20261021/inspect_visibility.py": "76898466fd84a92d6556360ed4e3f5a2bb5a50f8bc9be2ca513057af9b104f53",
+    "datasets/audit_dns_visibility.py": "910021f4d28f3f43b42659118121c7f740e582edc7ad2cf86865364309930773",
+    "ingest/pcap_reader.py": "591b09c0f6fc8cf2aab791d6aa52506a9e10adf80f9a4dc72850d78dc4e50157",
+    "ingest/protocol_parsers.py": "cf8cda0df2a543e85f1ad822d0634a2e417c049d2df2b56fd23a23890c56a6cd",
+    "ml/dga.py": "0a03098bf4cc22d8f5b7ff5fe3bd75d82d735479730e1890a7f99bedb9d6c0b7"
+  }
+}

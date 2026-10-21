@@ -1,0 +1,24 @@
+{
+  "baseline": "26256d7",
+  "scope": "Selected benign-source file and neutral DNS visibility verification only; no detector evaluation or gate change",
+  "files": {
+    "data/dns_burgos_verification_20261021.json": "a943d7ec35a6f2fe3ea18356c7e6a7e604d1bb2131b8464351b75c6702d97859",
+    "docs/BURGOS_BENIGN_VERIFICATION_20261021.md": "70db884f5e18f47849ac556fd25f7c0bb6ae9aab87c7192a053329b5f60b3777",
+    "docs/verification/burgos-benign-verification-20261021/acquire_member.py": "13f2a23989ff3d69e06b3d4a19500bd273c29088f662bedb1f78fc0db2b55f15",
+    "docs/verification/burgos-benign-verification-20261021/acquisition.json": "04b78d139e11633895c15fa8a2ec510a155a0f91dfd3ece03098601f5685ebe9",
+    "docs/verification/burgos-benign-verification-20261021/check_evidence.py": "9439fd3d2dc4665f740caac82cf3093ded4658b312ed2bbeee6095bb48feafd9",
+    "docs/verification/burgos-benign-verification-20261021/checks.json": "05605d9119481481bff0179c1fe53165aff3900d216e855706c26a133422434a",
+    "docs/verification/burgos-benign-verification-20261021/inspect_visibility.py": "76898466fd84a92d6556360ed4e3f5a2bb5a50f8bc9be2ca513057af9b104f53",
+    "docs/verification/burgos-benign-verification-20261021/integrity-after.json": "73bbff59d1f2bdd4912d266a426d1dd167c51a06eeed5c3089c7bea42b75a700",
+    "docs/verification/burgos-benign-verification-20261021/PROTOCOL.md": "bd326060a7d49bbfd8ee3d539aa1ae742f136c42a768effc10d69f4ca51b0c64",
+    "docs/verification/burgos-benign-verification-20261021/selection.json": "fb9845d9ee4cf4eb3c36454efb17f125ca72cab96fe78272270f51b850aaf3bc",
+    "docs/verification/burgos-benign-verification-20261021/selection.sha256": "6b6e9f14251c8fc9d7d332ba85b9bd387412562fa8eb6824ca541bface62a8c3",
+    "docs/verification/burgos-benign-verification-20261021/tests.log": "ee2fd2767b6b8b59a54fbeca74410985b1bab053c316c59bc02d2d36b96232dc",
+    "docs/verification/burgos-benign-verification-20261021/visibility-freeze.json": "fcaeb0812426954a94bc844a45467cbd3d64cd741570084feb9ba0d01cae6166",
+    "docs/verification/burgos-benign-verification-20261021/visibility-freeze.sha256": "28af6050d961ac0205a3df1c3febb891eaf42f849db8c0123165718cdc812604",
+    "docs/verification/burgos-benign-verification-20261021/visibility.json": "b74f24661d29c7509b048505ab86b68ab51c13b8fbf1bbddd602ef0de2d3f429",
+    "docs/verification/burgos-benign-verification-20261021/VISIBILITY_PROTOCOL.md": "70cf5fd7c31b3e45c219628dea9406a3fa656f49986023906acddf97f3e28ea4",
+    "tests/test_burgos_benign_intake.py": "65339f6c840a249793bad78cdb3f3c039e0619e356693d87e624b6606c1730b5",
+    "tests/test_burgos_dns_visibility.py": "09172c5b3a13cc4595307d016bbabecacc63ad032d115450410286eae16442d5"
+  }
+}

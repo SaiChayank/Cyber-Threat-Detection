@@ -1,0 +1,21 @@
+{
+  "baseline": "26256d7",
+  "url": "https://riubu.ubu.es/bitstream/handle/10259/11037/Martinez-Raw_Network%20Traffic_Captures_for_IoT-Dataset_2025.zip?sequence=1&isAllowed=y",
+  "archive_bytes": 1269092760,
+  "last_modified": "Fri, 07 Nov 2025 12:30:49 GMT",
+  "directory_offset": 1269092427,
+  "directory_bytes": 311,
+  "directory_sha256": "b0e8df4a6177c9111c6ca24ca33709626f1fd6e5eed66d5a8b280861fa756887",
+  "member_count": 3,
+  "member": "benign_first_cap.pcap",
+  "compressed_bytes": 8021093,
+  "original_bytes": 8852172,
+  "crc32": "5bd6ba90",
+  "permission": "CC BY 4.0; producer run-level benign label",
+  "role": null,
+  "sources_sha256": {
+    "docs/verification/burgos-benign-verification-20261021/PROTOCOL.md": "bd326060a7d49bbfd8ee3d539aa1ae742f136c42a768effc10d69f4ca51b0c64",
+    "docs/verification/burgos-benign-verification-20261021/acquire_member.py": "13f2a23989ff3d69e06b3d4a19500bd273c29088f662bedb1f78fc0db2b55f15",
+    "ingest/pcap_reader.py": "591b09c0f6fc8cf2aab791d6aa52506a9e10adf80f9a4dc72850d78dc4e50157"
+  }
+}
