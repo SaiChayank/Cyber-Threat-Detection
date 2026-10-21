@@ -43,12 +43,16 @@ DoD: public permission, pinned raw identities, independently supported labels,
 compatible runtime observations, sufficient post-exclusion counts and frozen
 disjoint roles all verified. Otherwise keep that track BLOCKED, not "complete".
 
-**Smallest next action, not started:** inspect the public UFU Do53 archive's
-published member/run inventory and native format/link-type evidence, without
-packet values. Current metadata supports a possible lead only. If those facts
-are absent, retain NOT QUALIFIED; no bulk acquisition or new parser is justified.
-Even a successful DNS-reference qualification does not fill all five DGA strata
-or automatically qualify DNS-tunnelling sessions.
+**21 October source follow-up completed:** [UFU Do53 qualification](UFU_DO53_QUALIFICATION_20261021.md)
+verifies five additional public metadata/document receipts, three pinned Git
+blobs and all 130 protected originals. The 34 archive parts total 880,360,679
+bytes, but native headers, actual inner members and executed run/time joins are
+not established; five benign categories and eligible independent counts remain
+unverified. Zero evaluation roles qualify. No packet values, bulk acquisition,
+model experiment or activation; this research track stops as data/provenance
+BLOCKED. Exactly next: a public source with actual member/header/run evidence,
+then category/role qualification before any values. A new download alone cannot
+fill the five DGA strata or certify DNS-tunnelling sessions.
 
 ### 2. Resolve visibility limits, then run one justified experiment — P0
 

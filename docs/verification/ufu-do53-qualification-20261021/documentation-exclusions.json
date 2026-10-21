@@ -1,0 +1,7 @@
+{
+  "scope": "Supplemental development-document first-label exposures only; not a complete final exclusion registry",
+  "canonicalizer": "ml.dga.domain_label",
+  "labels_sha256": [
+    "c0b0109d9439de57fe3cf03abeccbc52f4c98170c732d3b69af5e6395ace574e"
+  ]
+}

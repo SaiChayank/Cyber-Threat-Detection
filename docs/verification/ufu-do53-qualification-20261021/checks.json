@@ -1,0 +1,14 @@
+{
+  "status": "PASS_METADATA_INTEGRITY_ONLY",
+  "reused_receipts": 13,
+  "new_receipts": 5,
+  "new_git_blobs": 3,
+  "protected_files_matching": 130,
+  "do53_parts": 34,
+  "archive_bytes": 880360679,
+  "dataset_values_opened": false,
+  "archives_downloaded": 0,
+  "training_or_scoring": false,
+  "qualified_evaluation_roles": 0,
+  "required_evaluation_dod": "BLOCKED"
+}

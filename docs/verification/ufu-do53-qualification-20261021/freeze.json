@@ -1,0 +1,16 @@
+{
+  "baseline": "e53ede2",
+  "scope": "Metadata qualification only; not an evaluation gate replacement or feature promotion",
+  "files": {
+    "docs/UFU_DO53_QUALIFICATION_20261021.md": "93af9d72082e74ca70e9e5af6f61319a8f451e366a51353e58699b65d4c644a6",
+    "docs/verification/ufu-do53-qualification-20261021/check_metadata.py": "5832079ace3d433312f568195e4e436923e7b66d7a5f08a78bdaa690d98318b1",
+    "docs/verification/ufu-do53-qualification-20261021/checks.json": "1c061d6e9635775a14ca8100de9264469e9023d5c807397c1a6a2e30707933e3",
+    "docs/verification/ufu-do53-qualification-20261021/documentation-exclusions.json": "27b1b1d662e8cd5b95dfe40c102a6bd6a493ba2b25dec2104805c9ae0a345f31",
+    "docs/verification/ufu-do53-qualification-20261021/integrity-after.json": "b9f47bdeaef9b17da5467a2fa5a7dc3576792d993e8bde921176c52e815da244",
+    "docs/verification/ufu-do53-qualification-20261021/PROTOCOL.md": "a9f375235a84e0873b4f882506d01788ca109a80266f18833dfeb07b8bb5b307",
+    "docs/verification/ufu-do53-qualification-20261021/retrievals.json": "8671a59fd51d0df5d395dbd850ca32bdd37639bfc0bf6f40871a3e299c21506c",
+    "docs/verification/ufu-do53-qualification-20261021/retrieve_metadata.py": "4b0bcf2e0b55a524fab6ab043b39ad0f3b6cd0ac0ab5b10638c279c60b6b014a",
+    "docs/verification/ufu-do53-qualification-20261021/source-inventory.json": "575973dc272d20ed14384d80f183e753dffc119156a6321b82b31f2cefe86b6c",
+    "docs/verification/ufu-do53-qualification-20261021/tests.log": "852f941ff4283fd19ba57f6daff6b220f5a95b411b5d2de8a7eeb3ba66e6de42"
+  }
+}

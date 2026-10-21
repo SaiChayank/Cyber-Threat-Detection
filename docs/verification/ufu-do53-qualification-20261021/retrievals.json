@@ -1,0 +1,47 @@
+[
+  {
+    "name": "document-0.txt",
+    "url": "https://raw.githubusercontent.com/CborgesUFU/DNS-360-Dataset/1b3e59ffc3d14f41ccbf143be155cf791eb5e7ae/CITATION.cff",
+    "source_path": "CITATION.cff",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/CborgesUFU/DNS-360-Dataset/1b3e59ffc3d14f41ccbf143be155cf791eb5e7ae/CITATION.cff",
+    "bytes": 907,
+    "sha256": "c1048fba439acb916cf03156282ee762e9b246c2938995c3f7607ce55fcd34fe"
+  },
+  {
+    "name": "document-1.txt",
+    "url": "https://raw.githubusercontent.com/CborgesUFU/DNS-360-Dataset/1b3e59ffc3d14f41ccbf143be155cf791eb5e7ae/data/CSV/UFU-Do53-EXF/Readme",
+    "source_path": "data/CSV/UFU-Do53-EXF/Readme",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/CborgesUFU/DNS-360-Dataset/1b3e59ffc3d14f41ccbf143be155cf791eb5e7ae/data/CSV/UFU-Do53-EXF/Readme",
+    "bytes": 3011,
+    "sha256": "d40e0d96161343828711abdceaf5ab8b7dbbc0406dd1236abe33eaa1d6eebe32"
+  },
+  {
+    "name": "document-2.txt",
+    "url": "https://raw.githubusercontent.com/CborgesUFU/DNS-360-Dataset/1b3e59ffc3d14f41ccbf143be155cf791eb5e7ae/Pipe/dns_exfil_samples/Readme",
+    "source_path": "Pipe/dns_exfil_samples/Readme",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/CborgesUFU/DNS-360-Dataset/1b3e59ffc3d14f41ccbf143be155cf791eb5e7ae/Pipe/dns_exfil_samples/Readme",
+    "bytes": 3584,
+    "sha256": "4a98482fbeaf568591097c421aee1fd1499977a2382c3d954f0f0dbaafdb0ce2"
+  },
+  {
+    "name": "current-head.json",
+    "url": "https://api.github.com/repos/CborgesUFU/DNS-360-Dataset/commits/main",
+    "source_path": null,
+    "status": 200,
+    "final_url": "https://api.github.com/repos/CborgesUFU/DNS-360-Dataset/commits/main",
+    "bytes": 5293,
+    "sha256": "ea4006a91c030fa2dc125f13a5962b7f788adcadc5b278ff5b08d0ed34c9fded"
+  },
+  {
+    "name": "releases.json",
+    "url": "https://api.github.com/repos/CborgesUFU/DNS-360-Dataset/releases?per_page=20",
+    "source_path": null,
+    "status": 200,
+    "final_url": "https://api.github.com/repos/CborgesUFU/DNS-360-Dataset/releases?per_page=20",
+    "bytes": 2,
+    "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  }
+]
