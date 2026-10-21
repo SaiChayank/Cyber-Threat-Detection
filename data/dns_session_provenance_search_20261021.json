@@ -1,0 +1,73 @@
+{
+  "baseline": "905f40a",
+  "date": "2026-10-21",
+  "scope": "Four public documentary collections; one checksummed opaque archive and receiver execution metadata; not detector evaluation",
+  "candidate_scored": false,
+  "runtime_changed": false,
+  "promoted": false,
+  "reserved_ready": false,
+  "reserved_pass_consumed": false,
+  "qualified_reserved_roles": 0,
+  "independent_accuracy": "NOT_ESTABLISHED",
+  "sources": [
+    {
+      "id": "AIT-LDS-v2.1",
+      "url": "https://zenodo.org/records/19483937",
+      "license_id": "cc-by-nc-sa-4.0",
+      "artifact": "data/raw/ait-dns-intake-20261021/russellmitchell_no-pcaps.zip",
+      "bytes": 522084364,
+      "sha256": "51a03f51daea0fbbdcfe9b8abe0dbbe10633716f4f98074f861204a162ee1978",
+      "publisher_md5_verified": "abb43a46c70939ad9f98669e3510d2b7",
+      "tool": "DNSteal",
+      "executed_receiver_metadata_verified": true,
+      "receiver_received_events": 19954,
+      "receiver_saved_file_events": 31,
+      "receiver_files_referenced": 32,
+      "experiment_group": "AIT-LDS-v2.1-russellmitchell",
+      "independent_session_count": null,
+      "observed_dns_question_count": null,
+      "benign_category_counts": null,
+      "role": null,
+      "finding": "Useful original executed transfer ground truth; file completions are not independent sessions. Receiver activity begins before declared simulation start; client/run/time joins and question visibility remain unverified. Not dnscat2/iodine. No resolver/label rows or file payloads opened."
+    },
+    {
+      "id": "splunk-attack-data",
+      "url": "https://github.com/splunk/attack_data",
+      "revision": "eb43d0b905df274a7c105573ce7b2ea9e2b6f413",
+      "license_id": "Apache-2.0",
+      "reviewed_scenario_metadata_files": 6,
+      "role": null,
+      "finding": "Reviewed DNS/exfil YAML files advertise Sysmon or PowerShell host logs, without a session/client/QTYPE/original-query timing join. Long-domain generation is not certified completed tunnelling. No log contents downloaded; no claim about every other Splunk dataset."
+    },
+    {
+      "id": "UWF-ZeekData22",
+      "url": "https://datasets.uwf.edu/",
+      "license_id": "cc-by-4.0",
+      "role": null,
+      "finding": "Producer schema documents DNS query/source/type/time fields and public data indexes, but reviewed pages provide no executed dnscat2/iodine session joins or the five independently attributed benign controls. ATT&CK T1048/T1071 and protocol tunnel logs alone do not prove DNS tunnelling. No CSV/Parquet rows opened."
+    },
+    {
+      "id": "multi-source-2606.18190-v1",
+      "url": "https://arxiv.org/html/2606.18190v1",
+      "paper_license_id": "cc-by-4.0",
+      "dataset_license_id": null,
+      "role": null,
+      "finding": "Paper reports 870 sessions (70 attack/800 benign) but its reviewed links supply no actionable public dataset download or dnscat2/iodine/session-question join. Paper licence is not dataset permission. No data requested from authors."
+    }
+  ],
+  "existing_public_issue": {
+    "url": "https://github.com/Korving-F/dns-tunnel-dataset/issues/3",
+    "public_comments": 0,
+    "new_qualifying_evidence": false,
+    "read_once": true,
+    "messages_sent": false
+  },
+  "metrics_before_after": {
+    "independent_accuracy_before": "NOT_ESTABLISHED",
+    "independent_accuracy_after": "NOT_ESTABLISHED",
+    "qualified_reserved_roles_before": 0,
+    "qualified_reserved_roles_after": 0,
+    "new_executed_receiver_ledger_acquired": 1
+  },
+  "next_eligible_action": "Qualify the AIT receiver-to-original-client/run/question mapping and independence/category annotations from public metadata before opening resolver rows; do not count saved files as independent sessions or score this package."
+}

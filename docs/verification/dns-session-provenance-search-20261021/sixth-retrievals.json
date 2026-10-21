@@ -1,0 +1,62 @@
+[
+  {
+    "name": "splunk-0.yml",
+    "requested_url": "https://raw.githubusercontent.com/splunk/attack_data/eb43d0b905df274a7c105573ce7b2ea9e2b6f413/datasets/attack_techniques/T1071.004/upload_files_dns/upload_files_dns.yml",
+    "retrieved_utc": "2026-10-21T11:38:42.285756+00:00",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/splunk/attack_data/eb43d0b905df274a7c105573ce7b2ea9e2b6f413/datasets/attack_techniques/T1071.004/upload_files_dns/upload_files_dns.yml",
+    "content_type": "text/plain; charset=utf-8",
+    "bytes": 458,
+    "sha256": "edfee4227d1a8382f98540e6c2082a7a15ddfa0508a20b4d856890497ae08cb8"
+  },
+  {
+    "name": "splunk-1.yml",
+    "requested_url": "https://raw.githubusercontent.com/splunk/attack_data/eb43d0b905df274a7c105573ce7b2ea9e2b6f413/datasets/attack_techniques/T1071.004/long_dns_query/atomic_red_team.yml",
+    "retrieved_utc": "2026-10-21T11:38:42.286449+00:00",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/splunk/attack_data/eb43d0b905df274a7c105573ce7b2ea9e2b6f413/datasets/attack_techniques/T1071.004/long_dns_query/atomic_red_team.yml",
+    "content_type": "text/plain; charset=utf-8",
+    "bytes": 496,
+    "sha256": "f12d110c1947464bb1e8964b6a741faa773ef27552ed3df12d1f78f2b579513d"
+  },
+  {
+    "name": "splunk-2.yml",
+    "requested_url": "https://raw.githubusercontent.com/splunk/attack_data/eb43d0b905df274a7c105573ce7b2ea9e2b6f413/datasets/attack_techniques/T1071.004/snapattack/snapattack.yml",
+    "retrieved_utc": "2026-10-21T11:38:42.286931+00:00",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/splunk/attack_data/eb43d0b905df274a7c105573ce7b2ea9e2b6f413/datasets/attack_techniques/T1071.004/snapattack/snapattack.yml",
+    "content_type": "text/plain; charset=utf-8",
+    "bytes": 472,
+    "sha256": "621544177c27cb03e97fed38665c857b5731179dafcd26565733750c4e728688"
+  },
+  {
+    "name": "splunk-3.yml",
+    "requested_url": "https://raw.githubusercontent.com/splunk/attack_data/eb43d0b905df274a7c105573ce7b2ea9e2b6f413/datasets/attack_techniques/T1071.004/windows_powershell_commands_from_dns_txt/snapattack.yml",
+    "retrieved_utc": "2026-10-21T11:38:42.287388+00:00",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/splunk/attack_data/eb43d0b905df274a7c105573ce7b2ea9e2b6f413/datasets/attack_techniques/T1071.004/windows_powershell_commands_from_dns_txt/snapattack.yml",
+    "content_type": "text/plain; charset=utf-8",
+    "bytes": 534,
+    "sha256": "d5cdd6d2b84f27a2a5fdf26196f9348b0c8d578f4dd1481948d0b0c98c7f691d"
+  },
+  {
+    "name": "splunk-4.yml",
+    "requested_url": "https://raw.githubusercontent.com/splunk/attack_data/eb43d0b905df274a7c105573ce7b2ea9e2b6f413/datasets/attack_techniques/T1048.003/long_dns_queries/long_dns_queries.yml",
+    "retrieved_utc": "2026-10-21T11:38:42.724183+00:00",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/splunk/attack_data/eb43d0b905df274a7c105573ce7b2ea9e2b6f413/datasets/attack_techniques/T1048.003/long_dns_queries/long_dns_queries.yml",
+    "content_type": "text/plain; charset=utf-8",
+    "bytes": 457,
+    "sha256": "e8c40bead8ca896e664636b5ef2fd7f3353d89b3d9b22635b27681627dd323e6"
+  },
+  {
+    "name": "splunk-5.yml",
+    "requested_url": "https://raw.githubusercontent.com/splunk/attack_data/eb43d0b905df274a7c105573ce7b2ea9e2b6f413/datasets/attack_techniques/T1048.003/nslookup_exfil/nslookup_exfil.yml",
+    "retrieved_utc": "2026-10-21T11:38:42.742382+00:00",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/splunk/attack_data/eb43d0b905df274a7c105573ce7b2ea9e2b6f413/datasets/attack_techniques/T1048.003/nslookup_exfil/nslookup_exfil.yml",
+    "content_type": "text/plain; charset=utf-8",
+    "bytes": 619,
+    "sha256": "b394217b6e941316f2cc82dc2a08a7dec40b5396d3482b1d87f451ca90549f2b"
+  }
+]

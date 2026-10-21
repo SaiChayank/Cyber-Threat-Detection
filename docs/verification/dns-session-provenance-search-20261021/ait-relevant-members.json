@@ -1,0 +1,72 @@
+[
+  {
+    "name": "dataset.yaml",
+    "bytes": 97,
+    "compressed_bytes": 73,
+    "crc32": "d660d92e",
+    "compression": 8
+  },
+  {
+    "name": "gather/inet-firewall/logs/dnsmasq.log",
+    "bytes": 32228543,
+    "compressed_bytes": 3692715,
+    "crc32": "c4cbb523",
+    "compression": 8
+  },
+  {
+    "name": "gather/inet-dns/logs/dnsmasq.log",
+    "bytes": 32254942,
+    "compressed_bytes": 4107631,
+    "crc32": "e0fd55c8",
+    "compression": 8
+  },
+  {
+    "name": "gather/attacker_0/logs/dnsteal.log",
+    "bytes": 2603032,
+    "compressed_bytes": 173420,
+    "crc32": "e5fbdaa3",
+    "compression": 8
+  },
+  {
+    "name": "gather/attacker_0/logs/attacks.log",
+    "bytes": 2576,
+    "compressed_bytes": 833,
+    "crc32": "28a112a1",
+    "compression": 8
+  },
+  {
+    "name": "labels/inet-firewall/logs/dnsmasq.log",
+    "bytes": 11156515,
+    "compressed_bytes": 181176,
+    "crc32": "7d3931c2",
+    "compression": 8
+  },
+  {
+    "name": "processing/config/servers.yaml",
+    "bytes": 14835,
+    "compressed_bytes": 1719,
+    "crc32": "78534ad9",
+    "compression": 8
+  },
+  {
+    "name": "processing/config/attacker/attacker.yaml",
+    "bytes": 762,
+    "compressed_bytes": 305,
+    "crc32": "718be2e2",
+    "compression": 8
+  },
+  {
+    "name": "processing/config/attacker.yaml",
+    "bytes": 498,
+    "compressed_bytes": 267,
+    "crc32": "017b8c1f",
+    "compression": 8
+  },
+  {
+    "name": "rules/dnsmasq.yaml",
+    "bytes": 38082,
+    "compressed_bytes": 4059,
+    "crc32": "ba39ffc6",
+    "compression": 8
+  }
+]

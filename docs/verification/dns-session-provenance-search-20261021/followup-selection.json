@@ -1,0 +1,18 @@
+[
+  [
+    "splunk-root.json",
+    "https://api.github.com/repos/splunk/attack_data/git/trees/eb43d0b905df274a7c105573ce7b2ea9e2b6f413"
+  ],
+  [
+    "splunk-readme.md",
+    "https://raw.githubusercontent.com/splunk/attack_data/eb43d0b905df274a7c105573ce7b2ea9e2b6f413/README.md"
+  ],
+  [
+    "uwf-dns-description.html",
+    "https://datasets.uwf.edu/description/dns.html"
+  ],
+  [
+    "uwf-data-index.html",
+    "https://datasets.uwf.edu/data/"
+  ]
+]

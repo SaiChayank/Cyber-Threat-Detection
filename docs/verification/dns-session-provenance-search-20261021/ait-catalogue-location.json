@@ -1,0 +1,8 @@
+{
+  "original_path": "docs/verification/dns-session-provenance-search-20261021/ait-local-catalogue.json",
+  "cache": "data/raw/dns-session-provenance-documents-20261021/ait-local-catalogue.json",
+  "bytes": 2935424,
+  "sha256": "355b75f4c2cd2760db34e75bbab1940ea5cdba70c51fb6d2082718b65c15f409",
+  "member_count": 14898,
+  "reason": "Preserve full original inventory in ignored cache; track receipt and relevant member metadata only"
+}

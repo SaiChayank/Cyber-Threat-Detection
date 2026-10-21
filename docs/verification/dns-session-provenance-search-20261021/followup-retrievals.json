@@ -1,0 +1,39 @@
+[
+  {
+    "name": "splunk-root.json",
+    "requested_url": "https://api.github.com/repos/splunk/attack_data/git/trees/eb43d0b905df274a7c105573ce7b2ea9e2b6f413",
+    "retrieved_utc": "2026-10-21T11:26:53.530767+00:00",
+    "status": 200,
+    "final_url": "https://api.github.com/repos/splunk/attack_data/git/trees/eb43d0b905df274a7c105573ce7b2ea9e2b6f413",
+    "content_type": "application/json; charset=utf-8",
+    "bytes": 2301,
+    "sha256": "9c8d961aed7abb7200550cdf1ea55f5d9ec1f53d7966cb262f1a26e264bb8c39"
+  },
+  {
+    "name": "splunk-readme.md",
+    "requested_url": "https://raw.githubusercontent.com/splunk/attack_data/eb43d0b905df274a7c105573ce7b2ea9e2b6f413/README.md",
+    "retrieved_utc": "2026-10-21T11:26:54.877911+00:00",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/splunk/attack_data/eb43d0b905df274a7c105573ce7b2ea9e2b6f413/README.md",
+    "content_type": "text/plain; charset=utf-8",
+    "bytes": 6499,
+    "sha256": "849931b69b5ec45132478071de895ab0e12503b5bc9864ae129137ed443c0ae2"
+  },
+  {
+    "name": "uwf-dns-description.html",
+    "requested_url": "https://datasets.uwf.edu/description/dns.html",
+    "retrieved_utc": "2026-10-21T11:26:55.273209+00:00",
+    "error_type": "HTTPError",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "name": "uwf-data-index.html",
+    "requested_url": "https://datasets.uwf.edu/data/",
+    "retrieved_utc": "2026-10-21T11:26:56.174499+00:00",
+    "status": 200,
+    "final_url": "https://datasets.uwf.edu/data/",
+    "content_type": "text/html",
+    "bytes": 1005,
+    "sha256": "c601adfa8c71117507e5228cadb81379ebd1ca71287a12670334d4cf189675c6"
+  }
+]

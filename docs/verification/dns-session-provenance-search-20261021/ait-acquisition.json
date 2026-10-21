@@ -1,0 +1,79 @@
+{
+  "artifact": "data/raw/ait-dns-intake-20261021/russellmitchell_no-pcaps.zip",
+  "bytes": 522084364,
+  "md5": "abb43a46c70939ad9f98669e3510d2b7",
+  "sha256": "51a03f51daea0fbbdcfe9b8abe0dbbe10633716f4f98074f861204a162ee1978",
+  "publisher_checksum_verified": true,
+  "query_rows_read": false,
+  "role": null,
+  "metadata": [
+    {
+      "suffix": "dataset.yml",
+      "present": false
+    },
+    {
+      "suffix": "gather/attacker_0/logs/attacks.log",
+      "member": "gather/attacker_0/logs/attacks.log",
+      "present": true,
+      "cache": "data/raw/dns-session-provenance-documents-20261021/ait-attacks.log",
+      "bytes": 2576,
+      "crc32": "28a112a1",
+      "sha256": "eb7e96b8ad1270ab96c43de8575631aafb48a0a865e97c1c5c9f8cc117289f06"
+    },
+    {
+      "suffix": "processing/config/servers.yml",
+      "present": false
+    }
+  ],
+  "prefix_bytes": 109051904,
+  "continuation_ranges": [
+    {
+      "start": 109051904,
+      "end_exclusive": 160680962,
+      "bytes": 51629058,
+      "sha256": "766ba4249cb10196f5ded6ce6c778f7800d87fc1be289237a94a2d12ba8042c3"
+    },
+    {
+      "start": 160680962,
+      "end_exclusive": 212310020,
+      "bytes": 51629058,
+      "sha256": "48535775d405e52b96bccf40ddaeff7888b93f1e6f3ac9c81c4570eb77452069"
+    },
+    {
+      "start": 212310020,
+      "end_exclusive": 263939078,
+      "bytes": 51629058,
+      "sha256": "a45af142b71609969f1477bd4c1c5bd7bdc973fc72215d2fe7bef1dfb97b9ef7"
+    },
+    {
+      "start": 263939078,
+      "end_exclusive": 315568136,
+      "bytes": 51629058,
+      "sha256": "564fa74df3be06c3decec719d2e0a1f6c67703effb938d357668a5b8010b666d"
+    },
+    {
+      "start": 315568136,
+      "end_exclusive": 367197194,
+      "bytes": 51629058,
+      "sha256": "23627f4069f68bc79abf881e7c1c467bc8edd4f76e607fc9813e40f79a39aed4"
+    },
+    {
+      "start": 367197194,
+      "end_exclusive": 418826252,
+      "bytes": 51629058,
+      "sha256": "e4b9effabfee743082dff662c5f537d9c7daf11ab93665d0b96973114ca50d8c"
+    },
+    {
+      "start": 418826252,
+      "end_exclusive": 470455310,
+      "bytes": 51629058,
+      "sha256": "3c646a1dace06faf2728c0c1f4b5101d22dcc4b8f580cbc03024924e7c555102"
+    },
+    {
+      "start": 470455310,
+      "end_exclusive": 522084364,
+      "bytes": 51629054,
+      "sha256": "f38d276c5039bf772056401877ccbd0bec7e6e89efaae07dece595fbe370431c"
+    }
+  ]
+}

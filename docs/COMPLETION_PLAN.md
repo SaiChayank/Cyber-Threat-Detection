@@ -9,6 +9,11 @@ The 20 October clean rehearsal is separately scoped to its earlier commit.
 Public-only data/quality blockers remain; final release is NOT READY. No current
 permission-dependent request, reserved tuning or failed-candidate activation.
 
+**21 October DNS evidence follow-up:** [public executed-session intake](DNS_SESSION_PROVENANCE_SEARCH_20261021.md)
+checksums the AIT archive and original receiver timing; seven new tests/36 targeted
+passes. File completions are not independently qualified sessions. No reserved
+roles/scoring, gate/runtime changes or promotion; formal DNS accuracy remains blocked.
+
 **Current baseline verified, 18 October 2026 IST:**
 [regression record](BASELINE_REGRESSION_20261018.md) for `ee8f72d` reports 533 backend
 tests passing/one existing deprecation warning, plus root typecheck and production

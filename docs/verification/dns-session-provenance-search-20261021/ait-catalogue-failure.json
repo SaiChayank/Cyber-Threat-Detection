@@ -1,0 +1,5 @@
+{
+  "error_type": "AssertionError",
+  "error": "Directory-only scope exceeds the frozen request bound",
+  "members_read": false
+}

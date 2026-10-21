@@ -27,6 +27,17 @@ package remain unchanged. This is one inspected benign intake, not 50 independen
 DNS sessions, five benign categories, detector scoring or promotion. Full required
 quality validation and final release remain BLOCKED.
 
+**Latest public session-provenance intake:** [AIT receiver evidence](DNS_SESSION_PROVENANCE_SEARCH_20261021.md).
+Four additional public collections reviewed. AIT's 522,084,364-byte log-only archive
+matches its publisher MD5 and local SHA256; original receiver metadata documents
+31 distinct saved-file completions, not 31 independent sessions. No resolver/label
+rows opened. Seven new tests/36 targeted passes; all 130 originals, three frozen
+packages and 23 contract source pins unchanged. Final DNS data/accuracy remain
+BLOCKED: no qualified reserved roles, required tool/benign coverage or client-session
+joins. Do not repeat synthetic scoring or count transfer files as independent runs.
+Exactly next: public receiver-to-client/run/question and independent benign-app
+annotations before DNS values; preserve all gates and disabled candidate.
+
 ### 1. Qualify missing public evidence — P0
 
 Work one track at a time; permission-gated sources/supplements are skipped.

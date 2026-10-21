@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "etag": null,
+    "last-modified": null,
+    "content-range": "bytes 522018807-522084363/522084364",
+    "content-encoding": null
+  },
+  "range_start": 522018807,
+  "bytes": 65557,
+  "sha256": "af2f34e136af6bf564ad9855bfc475f45f0927211615bf659a2f02473ac37851",
+  "member_count": 14898,
+  "directory_bytes": 2222342,
+  "directory_offset": 519862000,
+  "tail_hex": "504b050600000000323a323a06e92100f076fc1e0000"
+}

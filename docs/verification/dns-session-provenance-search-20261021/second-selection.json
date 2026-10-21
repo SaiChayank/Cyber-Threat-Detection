@@ -1,0 +1,18 @@
+[
+  [
+    "splunk-datasets-tree.json",
+    "https://api.github.com/repos/splunk/attack_data/git/trees/593225b27667ff0ba129a8523ed0fb7208ec08fe?recursive=1"
+  ],
+  [
+    "splunk-license.txt",
+    "https://raw.githubusercontent.com/splunk/attack_data/eb43d0b905df274a7c105573ce7b2ea9e2b6f413/LICENSE"
+  ],
+  [
+    "uwf22-index.html",
+    "https://datasets.uwf.edu/data/UWF-ZeekData22/"
+  ],
+  [
+    "uwf-dns-description-case.html",
+    "https://datasets.uwf.edu/description/DNS.html"
+  ]
+]

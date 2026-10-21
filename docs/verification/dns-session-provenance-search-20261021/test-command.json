@@ -1,0 +1,13 @@
+{
+  "command": [
+    ".venv/Scripts/python.exe",
+    "-m",
+    "pytest",
+    "tests/test_dns_session_metadata_intake.py",
+    "tests/test_dns_source_intake.py",
+    "tests/test_burgos_benign_intake.py",
+    "tests/test_burgos_dns_visibility.py",
+    "-q"
+  ],
+  "exit_code": 0
+}

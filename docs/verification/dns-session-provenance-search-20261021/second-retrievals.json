@@ -1,0 +1,36 @@
+[
+  {
+    "name": "splunk-datasets-tree.json",
+    "requested_url": "https://api.github.com/repos/splunk/attack_data/git/trees/593225b27667ff0ba129a8523ed0fb7208ec08fe?recursive=1",
+    "retrieved_utc": "2026-10-21T11:30:06.800688+00:00",
+    "error_type": "URLError",
+    "error": "<urlopen error _ssl.c:1011: The handshake operation timed out>"
+  },
+  {
+    "name": "splunk-license.txt",
+    "requested_url": "https://raw.githubusercontent.com/splunk/attack_data/eb43d0b905df274a7c105573ce7b2ea9e2b6f413/LICENSE",
+    "retrieved_utc": "2026-10-21T11:30:37.943860+00:00",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/splunk/attack_data/eb43d0b905df274a7c105573ce7b2ea9e2b6f413/LICENSE",
+    "content_type": "text/plain; charset=utf-8",
+    "bytes": 11344,
+    "sha256": "8505946b2464fa90223996d99eecbc7639a86648ca071f0cac21695be2623a0a"
+  },
+  {
+    "name": "uwf22-index.html",
+    "requested_url": "https://datasets.uwf.edu/data/UWF-ZeekData22/",
+    "retrieved_utc": "2026-10-21T11:30:38.283946+00:00",
+    "status": 200,
+    "final_url": "https://datasets.uwf.edu/data/UWF-ZeekData22/",
+    "content_type": "text/html",
+    "bytes": 397,
+    "sha256": "1ba8c3b438fed6c0242bf8411edb719b8b545d74e466c2e35c88e8f3f9b71979"
+  },
+  {
+    "name": "uwf-dns-description-case.html",
+    "requested_url": "https://datasets.uwf.edu/description/DNS.html",
+    "retrieved_utc": "2026-10-21T11:30:39.148166+00:00",
+    "error_type": "HTTPError",
+    "error": "HTTP Error 404: Not Found"
+  }
+]

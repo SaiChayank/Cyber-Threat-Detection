@@ -1,0 +1,92 @@
+[
+  {
+    "name": "ait-record.json",
+    "requested_url": "https://zenodo.org/api/records/19483937",
+    "retrieved_utc": "2026-10-21T11:26:30.674530+00:00",
+    "status": 200,
+    "final_url": "https://zenodo.org/api/records/19483937",
+    "content_type": "application/json",
+    "bytes": 19392,
+    "sha256": "e779bee88a427d92a7f4c79fba54b0b24a1ce1a4b08685239118c65ff326577a"
+  },
+  {
+    "name": "splunk-ref.json",
+    "requested_url": "https://api.github.com/repos/splunk/attack_data/git/ref/heads/master",
+    "retrieved_utc": "2026-10-21T11:26:30.678252+00:00",
+    "status": 200,
+    "final_url": "https://api.github.com/repos/splunk/attack_data/git/ref/heads/master",
+    "content_type": "application/json; charset=utf-8",
+    "bytes": 347,
+    "sha256": "4d58d3623d2d37f5834a6dfdde0a3994d9e35ca4e044d20f34d8f68ce127734f"
+  },
+  {
+    "name": "uwf-index.html",
+    "requested_url": "https://datasets.uwf.edu/",
+    "retrieved_utc": "2026-10-21T11:26:30.682157+00:00",
+    "status": 200,
+    "final_url": "https://datasets.uwf.edu/",
+    "content_type": "text/html",
+    "bytes": 15232,
+    "sha256": "59eda0d126c50df3383defa48029fe9d9b5a72d07249574b9a5e787fed8c1ee5"
+  },
+  {
+    "name": "uwf-techniques.html",
+    "requested_url": "https://datasets.uwf.edu/tables/table5.html",
+    "retrieved_utc": "2026-10-21T11:26:30.682471+00:00",
+    "status": 200,
+    "final_url": "https://datasets.uwf.edu/tables/table5.html",
+    "content_type": "text/html",
+    "bytes": 8560,
+    "sha256": "b38daedbed3237c4efb3bdcb5e68e8e016c24f770893e32f50fb611ab3be9802"
+  },
+  {
+    "name": "uwf-files.html",
+    "requested_url": "https://datasets.uwf.edu/tables/table1.html",
+    "retrieved_utc": "2026-10-21T11:26:30.684514+00:00",
+    "status": 200,
+    "final_url": "https://datasets.uwf.edu/tables/table1.html",
+    "content_type": "text/html",
+    "bytes": 10288,
+    "sha256": "0e046078f36a63096e16d4de625deca2ecddfddab7a525ec8d6372618f70b102"
+  },
+  {
+    "name": "uwf-file-descriptions.html",
+    "requested_url": "https://datasets.uwf.edu/tables/list.html",
+    "retrieved_utc": "2026-10-21T11:26:31.388252+00:00",
+    "status": 200,
+    "final_url": "https://datasets.uwf.edu/tables/list.html",
+    "content_type": "text/html",
+    "bytes": 3189,
+    "sha256": "83d0f4496cbef4cf24ae3b5f9aa2e79aea977c2aed0868eb281c10604ec2dcf5"
+  },
+  {
+    "name": "multisource-paper.html",
+    "requested_url": "https://arxiv.org/html/2606.18190v1",
+    "retrieved_utc": "2026-10-21T11:26:31.807095+00:00",
+    "status": 200,
+    "final_url": "https://arxiv.org/html/2606.18190v1",
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 231262,
+    "sha256": "aeac5d7c8ac90c7e6eed3386306fdd307821b9411676136b5eb88c73c102bc82"
+  },
+  {
+    "name": "korving-issue.json",
+    "requested_url": "https://api.github.com/repos/Korving-F/dns-tunnel-dataset/issues/3",
+    "retrieved_utc": "2026-10-21T11:26:31.831990+00:00",
+    "status": 200,
+    "final_url": "https://api.github.com/repos/Korving-F/dns-tunnel-dataset/issues/3",
+    "content_type": "application/json; charset=utf-8",
+    "bytes": 4505,
+    "sha256": "ec56068adb7e175c3fc8c5e7f4089e7a08fe34fadedb010985e95b6fef598aeb"
+  },
+  {
+    "name": "korving-comments.json",
+    "requested_url": "https://api.github.com/repos/Korving-F/dns-tunnel-dataset/issues/3/comments?per_page=100",
+    "retrieved_utc": "2026-10-21T11:26:31.932881+00:00",
+    "status": 200,
+    "final_url": "https://api.github.com/repos/Korving-F/dns-tunnel-dataset/issues/3/comments?per_page=100",
+    "content_type": "application/json; charset=utf-8",
+    "bytes": 2,
+    "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  }
+]

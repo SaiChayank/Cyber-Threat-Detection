@@ -1,0 +1,12 @@
+{
+  "reason": "Actual archive uses .yaml rather than documentary .yml; inspect only original simulation bounds, host mapping and attack configuration metadata; no query/event/label rows",
+  "archive_sha256": "51a03f51daea0fbbdcfe9b8abe0dbbe10633716f4f98074f861204a162ee1978",
+  "members": [
+    "dataset.yaml",
+    "processing/config/servers.yaml",
+    "processing/config/attacker.yaml",
+    "processing/config/attacker/attacker.yaml"
+  ],
+  "max_member_bytes": 1048576,
+  "reserved_role": null
+}

@@ -1,0 +1,13 @@
+{
+  "item": {
+    "id": "38c3b5bf-5ea7-4c9a-9a4f-e56ba9321498",
+    "key": "russellmitchell_no-pcaps.zip",
+    "size": 522084364,
+    "checksum": "md5:abb43a46c70939ad9f98669e3510d2b7",
+    "links": {
+      "self": "https://zenodo.org/records/19483937/files/russellmitchell_no-pcaps.zip?download=1"
+    }
+  },
+  "scope": "ZIP directory metadata only, reuse existing max 1 MiB directory bound; no member content",
+  "reason": "Smallest no-PCAP testbed archive, actual executed attack records documented"
+}

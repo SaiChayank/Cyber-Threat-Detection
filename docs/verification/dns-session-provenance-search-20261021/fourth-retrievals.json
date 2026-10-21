@@ -1,0 +1,12 @@
+[
+  {
+    "name": "splunk-techniques-root.json",
+    "requested_url": "https://api.github.com/repos/splunk/attack_data/git/trees/8914f462c691e446bc85a31e0ae73b80a1d8a2f6",
+    "retrieved_utc": "2026-10-21T11:38:10.394468+00:00",
+    "status": 200,
+    "final_url": "https://api.github.com/repos/splunk/attack_data/git/trees/8914f462c691e446bc85a31e0ae73b80a1d8a2f6",
+    "content_type": "application/json; charset=utf-8",
+    "bytes": 71469,
+    "sha256": "059887a6d4b786a24fb9b729df23901b302f40707ccde848db08e62b81841b77"
+  }
+]

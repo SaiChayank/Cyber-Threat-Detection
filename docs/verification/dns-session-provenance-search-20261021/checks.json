@@ -1,0 +1,19 @@
+{
+  "status": "PASS_METADATA_INTAKE_ONLY_FORMAL_DATA_BLOCKED",
+  "document_receipts_verified": 29,
+  "retrieval_failures_disclosed": 3,
+  "git_blobs_verified": 8,
+  "new_archive_bytes": 522084364,
+  "full_publisher_archive_checksum_verified": true,
+  "metadata_receipts_verified": 6,
+  "protected_originals_matching": 130,
+  "prior_acquired_captures_unchanged": 2,
+  "prior_frozen_packages_unchanged": 3,
+  "frozen_contract_source_pins": 23,
+  "independent_accuracy": "NOT_ESTABLISHED",
+  "runtime_changed": false,
+  "reserved_pass_consumed": false,
+  "qualified_reserved_roles": 0,
+  "candidate_promoted": false,
+  "release_ready": false
+}

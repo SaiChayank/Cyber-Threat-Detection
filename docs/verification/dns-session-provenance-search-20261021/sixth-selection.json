@@ -1,0 +1,26 @@
+[
+  [
+    "splunk-0.yml",
+    "https://raw.githubusercontent.com/splunk/attack_data/eb43d0b905df274a7c105573ce7b2ea9e2b6f413/datasets/attack_techniques/T1071.004/upload_files_dns/upload_files_dns.yml"
+  ],
+  [
+    "splunk-1.yml",
+    "https://raw.githubusercontent.com/splunk/attack_data/eb43d0b905df274a7c105573ce7b2ea9e2b6f413/datasets/attack_techniques/T1071.004/long_dns_query/atomic_red_team.yml"
+  ],
+  [
+    "splunk-2.yml",
+    "https://raw.githubusercontent.com/splunk/attack_data/eb43d0b905df274a7c105573ce7b2ea9e2b6f413/datasets/attack_techniques/T1071.004/snapattack/snapattack.yml"
+  ],
+  [
+    "splunk-3.yml",
+    "https://raw.githubusercontent.com/splunk/attack_data/eb43d0b905df274a7c105573ce7b2ea9e2b6f413/datasets/attack_techniques/T1071.004/windows_powershell_commands_from_dns_txt/snapattack.yml"
+  ],
+  [
+    "splunk-4.yml",
+    "https://raw.githubusercontent.com/splunk/attack_data/eb43d0b905df274a7c105573ce7b2ea9e2b6f413/datasets/attack_techniques/T1048.003/long_dns_queries/long_dns_queries.yml"
+  ],
+  [
+    "splunk-5.yml",
+    "https://raw.githubusercontent.com/splunk/attack_data/eb43d0b905df274a7c105573ce7b2ea9e2b6f413/datasets/attack_techniques/T1048.003/nslookup_exfil/nslookup_exfil.yml"
+  ]
+]

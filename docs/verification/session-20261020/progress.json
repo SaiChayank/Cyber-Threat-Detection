@@ -135,29 +135,59 @@
       "dod": "PASS_CONTROLLED_REGRESSION_ONLY_FORMAL_VALIDATION_BLOCKED",
       "report": "docs/DNS_ACCURACY_CHECK_20261021.md",
       "targeted_tests": 115,
-      "candidate_validation_counts": {"TP": 5, "TN": 5, "FP": 0, "FN": 0},
-      "baseline_rule_validation_counts": {"TP": 0, "TN": 4, "FP": 1, "FN": 5},
+      "candidate_validation_counts": {
+        "TP": 5,
+        "TN": 5,
+        "FP": 0,
+        "FN": 0
+      },
+      "baseline_rule_validation_counts": {
+        "TP": 0,
+        "TN": 4,
+        "FP": 1,
+        "FN": 5
+      },
       "independent_accuracy": "NOT_ESTABLISHED",
+      "reserved_pass_consumed": false,
+      "current_protected_files_matching": 130
+    },
+    {
+      "task": "Public executed-session provenance search and AIT opaque archive intake",
+      "completed_client_date": "2026-10-21",
+      "dod": "PASS_METADATA_INTAKE_ONLY_FORMAL_DATA_BLOCKED",
+      "report": "docs/DNS_SESSION_PROVENANCE_SEARCH_20261021.md",
+      "new_tests": 7,
+      "targeted_tests": 36,
+      "archive_bytes": 522084364,
+      "archive_publisher_checksum_verified": true,
+      "receiver_saved_file_events": 31,
+      "independent_session_count": null,
+      "qualified_reserved_roles": 0,
       "reserved_pass_consumed": false,
       "current_protected_files_matching": 130
     }
   ],
-  "current_task": "Controlled DNS accuracy regression completed; independent accuracy validation remains data-blocked",
+  "current_task": "Public session-provenance package completed; formal independent DNS accuracy remains data-blocked",
   "work_running": false,
-  "stopping_reason": "Existing synthetic metrics reproduced, but the frozen contract has no qualified reserved manifest, 20/50 independent sessions or all five benign controls. Reserved scoring correctly refuses; stop before final evaluation/promotion",
+  "stopping_reason": "Four-source metadata screen yields original AIT receiver execution records but no complete independently qualified session/client/question and benign-category cohort; stop before resolver values, reserved scoring or promotion",
   "last_task": {
-    "task": "Controlled DNS accuracy regression and blocked reserved preflight",
-    "report": "docs/DNS_ACCURACY_CHECK_20261021.md",
-    "status": "PASS_CONTROLLED_REGRESSION_ONLY_FORMAL_VALIDATION_BLOCKED",
-    "targeted_tests": 115,
-    "independent_accuracy": "NOT_ESTABLISHED",
+    "task": "Public executed-session provenance search and AIT opaque archive intake",
+    "completed_client_date": "2026-10-21",
+    "dod": "PASS_METADATA_INTAKE_ONLY_FORMAL_DATA_BLOCKED",
+    "report": "docs/DNS_SESSION_PROVENANCE_SEARCH_20261021.md",
+    "new_tests": 7,
+    "targeted_tests": 36,
+    "archive_bytes": 522084364,
+    "archive_publisher_checksum_verified": true,
+    "receiver_saved_file_events": 31,
+    "independent_session_count": null,
+    "qualified_reserved_roles": 0,
     "reserved_pass_consumed": false,
-    "qualified_evaluation_roles": 0,
     "current_protected_files_matching": 130,
+    "runtime_changed": false,
+    "candidate_promoted": false,
     "reserved_values_opened": false,
-    "new_training": false,
-    "already_exposed_synthetic_development_scored": true,
-    "new_public_or_reserved_scoring": false
+    "new_training": false
   },
   "constraints": [
     "Public datasets only; skip email-gated supplements and author follow-ups",
@@ -174,7 +204,7 @@
   "research_data_blocked": true,
   "research_track_disposition": "DGA and other unqualified research roles stay data/provenance blocked; passed application fixes are frozen",
   "next_queue": [
-    "Qualify publicly released executed-session annotations for dnscat2/iodine tool/client/namespace/original-time joins and independently documented benign category sessions; do not repeat the completed first benign capture check",
-    "Only data-qualified next steps; no training/scoring or failed activation"
+    "Qualify public receiver-to-original-client/run/question and independently annotated session/application joins, starting with the AIT execution ledger; no file-as-session counting or resolver values before qualification",
+    "Only source-qualified next steps; preserve reserved pass, gates and disabled candidates"
   ]
 }

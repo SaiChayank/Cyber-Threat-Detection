@@ -1,0 +1,18 @@
+[
+  [
+    "splunk-t1071-tree.json",
+    "https://api.github.com/repos/splunk/attack_data/git/trees/193c0add387c733ec24247b3bd0ac68c5c680607?recursive=1"
+  ],
+  [
+    "splunk-t1048-tree.json",
+    "https://api.github.com/repos/splunk/attack_data/git/trees/058c07779a609e8c95ae8f3aaa758a21afcc38e1?recursive=1"
+  ],
+  [
+    "splunk-t1048-003-tree.json",
+    "https://api.github.com/repos/splunk/attack_data/git/trees/f7bffeb967c29c4affdec46ad68ea886ac53fd55?recursive=1"
+  ],
+  [
+    "uwf-week-index.html",
+    "https://datasets.uwf.edu/data/UWF-ZeekData22/parquet/2022-02-06%20-%202022-02-13/"
+  ]
+]

@@ -1,0 +1,18 @@
+[
+  [
+    "splunk-datasets-root.json",
+    "https://api.github.com/repos/splunk/attack_data/git/trees/593225b27667ff0ba129a8523ed0fb7208ec08fe"
+  ],
+  [
+    "uwf22-csv-index.html",
+    "https://datasets.uwf.edu/data/UWF-ZeekData22/csv/"
+  ],
+  [
+    "uwf22-parquet-index.html",
+    "https://datasets.uwf.edu/data/UWF-ZeekData22/parquet/"
+  ],
+  [
+    "uwf-attributes.html",
+    "https://datasets.uwf.edu/tables/table2.html"
+  ]
+]

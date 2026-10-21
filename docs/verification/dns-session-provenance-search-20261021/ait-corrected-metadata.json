@@ -1,0 +1,30 @@
+[
+  {
+    "member": "dataset.yaml",
+    "cache": "data/raw/dns-session-provenance-documents-20261021/ait-corrected-0.yaml",
+    "bytes": 97,
+    "sha256": "fba756deba1ccc5db4cb3e7674026c9d6aa8ba07ba5e601396abc0f81fb1a5e5",
+    "crc32": "d660d92e"
+  },
+  {
+    "member": "processing/config/servers.yaml",
+    "cache": "data/raw/dns-session-provenance-documents-20261021/ait-corrected-1.yaml",
+    "bytes": 14835,
+    "sha256": "992bb3533597cb597023697c6172a92f267605ff1a6c55321934a162c8a808e2",
+    "crc32": "78534ad9"
+  },
+  {
+    "member": "processing/config/attacker.yaml",
+    "cache": "data/raw/dns-session-provenance-documents-20261021/ait-corrected-2.yaml",
+    "bytes": 498,
+    "sha256": "dc15f571ace9231d63c45ff6a479e34cdada960351b5d05d76c53a5569b6fe5b",
+    "crc32": "017b8c1f"
+  },
+  {
+    "member": "processing/config/attacker/attacker.yaml",
+    "cache": "data/raw/dns-session-provenance-documents-20261021/ait-corrected-3.yaml",
+    "bytes": 762,
+    "sha256": "28551d413f6c6c9845966babb55e2893373df6b44ec32aa6939d61b5a0a20ce3",
+    "crc32": "718be2e2"
+  }
+]

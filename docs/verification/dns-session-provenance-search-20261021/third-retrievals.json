@@ -1,0 +1,42 @@
+[
+  {
+    "name": "splunk-datasets-root.json",
+    "requested_url": "https://api.github.com/repos/splunk/attack_data/git/trees/593225b27667ff0ba129a8523ed0fb7208ec08fe",
+    "retrieved_utc": "2026-10-21T11:38:00.790006+00:00",
+    "status": 200,
+    "final_url": "https://api.github.com/repos/splunk/attack_data/git/trees/593225b27667ff0ba129a8523ed0fb7208ec08fe",
+    "content_type": "application/json; charset=utf-8",
+    "bytes": 3818,
+    "sha256": "4fa1cdc582e2ee1df5e024154cca59edbf8db669214127277d4ff88cb7c182c7"
+  },
+  {
+    "name": "uwf22-csv-index.html",
+    "requested_url": "https://datasets.uwf.edu/data/UWF-ZeekData22/csv/",
+    "retrieved_utc": "2026-10-21T11:38:00.790652+00:00",
+    "status": 200,
+    "final_url": "https://datasets.uwf.edu/data/UWF-ZeekData22/csv/",
+    "content_type": "text/html",
+    "bytes": 1003,
+    "sha256": "192604a2a26880d40129f72f6867d46b4cca414f498099e42a2b9198210a23d4"
+  },
+  {
+    "name": "uwf22-parquet-index.html",
+    "requested_url": "https://datasets.uwf.edu/data/UWF-ZeekData22/parquet/",
+    "retrieved_utc": "2026-10-21T11:38:00.791157+00:00",
+    "status": 200,
+    "final_url": "https://datasets.uwf.edu/data/UWF-ZeekData22/parquet/",
+    "content_type": "text/html",
+    "bytes": 1383,
+    "sha256": "2a11a385095f6a14045fcb91af3ba3f5f1d64c0141fd0677dd134e38e0273bcb"
+  },
+  {
+    "name": "uwf-attributes.html",
+    "requested_url": "https://datasets.uwf.edu/tables/table2.html",
+    "retrieved_utc": "2026-10-21T11:38:00.792102+00:00",
+    "status": 200,
+    "final_url": "https://datasets.uwf.edu/tables/table2.html",
+    "content_type": "text/html",
+    "bytes": 10329,
+    "sha256": "c563bc6a171532a6cb6d335bdff287904f1811df2ee7fc946e02b8635e6b75dd"
+  }
+]
