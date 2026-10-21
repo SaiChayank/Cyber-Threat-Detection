@@ -45,5 +45,5 @@ if __name__ == "__main__":
               ("releases.json", f"https://api.github.com/repos/{REPO}/releases?per_page=20", None)]
     with ThreadPoolExecutor(max_workers=5) as pool:
         receipts = list(pool.map(retrieve, items))
-    destination.write_text(json.dumps(receipts, indent=2) + "\n", encoding="utf-8")
+    destination.write_bytes((json.dumps(receipts, indent=2) + "\n").encode("utf-8"))
     print(json.dumps(dict(retrieved=len(receipts), dataset_values_opened=False)))

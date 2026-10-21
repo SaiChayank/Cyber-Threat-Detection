@@ -23,7 +23,7 @@ def sha256(path):
 
 
 def save(name, content):
-    (HERE / name).write_text(json.dumps(content, indent=2) + "\n", encoding="utf-8")
+    (HERE / name).write_bytes((json.dumps(content, indent=2) + "\n").encode("utf-8"))
 
 
 if __name__ == "__main__":
