@@ -1,0 +1,37 @@
+[
+  {
+    "member": "processing/config/groups.yaml",
+    "cache": "data/raw/ait-session-join-20261021/metadata-0.yaml",
+    "bytes": 1702,
+    "sha256": "19db9a2f2c4f8b335c37de3b693ca77e942b46c9223f6057ca085f4d84f561dd",
+    "crc32": "697c6450"
+  },
+  {
+    "member": "processing/config/attack_queries.yaml",
+    "cache": "data/raw/ait-session-join-20261021/metadata-1.yaml",
+    "bytes": 10781,
+    "sha256": "33c069a49ca8d59794e4a747e9212b21054b3549fe304b748e92a20bb8505d1e",
+    "crc32": "affebb44"
+  },
+  {
+    "member": "processing/config/logs.yaml",
+    "cache": "data/raw/ait-session-join-20261021/metadata-2.yaml",
+    "bytes": 2736,
+    "sha256": "213e1c233fa7af47c2e06a91b13df121027da2b6d1a2ea05528eb2c3ed09ee89",
+    "crc32": "6e2a17c1"
+  },
+  {
+    "member": "rules/dnsmasq.yaml",
+    "cache": "data/raw/ait-session-join-20261021/metadata-3.yaml",
+    "bytes": 38082,
+    "sha256": "079c99693dfbcd92da3074f6a18d4cc8aa085891c48e6d49adf200844921ac06",
+    "crc32": "ba39ffc6"
+  },
+  {
+    "member": "gather/internal_employee_0/logs/sm.log",
+    "cache": "data/raw/ait-session-join-20261021/metadata-4.log",
+    "bytes": 490480,
+    "sha256": "957ca78f4a3c91c9746c88c95ab198d2c55b56a32aaeb83a9be508a26110ee44",
+    "crc32": "bd286404"
+  }
+]

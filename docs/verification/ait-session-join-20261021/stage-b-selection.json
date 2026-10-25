@@ -1,0 +1,9 @@
+{
+  "stage": "B_DEVELOPMENT_VISIBILITY",
+  "member": "gather/inet-firewall/logs/dnsmasq.log",
+  "bytes": 32228543,
+  "crc32": "c4cbb523",
+  "max_bytes": 33554432,
+  "excluded_from_reserved_group": "AIT-LDS-v2.1-russellmitchell",
+  "purpose": "Original DNS source/time/QTYPE visibility and receiver end-marker joins only; no detector scoring"
+}

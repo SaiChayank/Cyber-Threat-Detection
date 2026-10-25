@@ -1,0 +1,9 @@
+{
+  "member": "gather/inet-firewall/logs/dnsmasq.log",
+  "cache": "data/raw/ait-session-join-20261021/dnsmasq-original.log",
+  "bytes": 32228543,
+  "sha256": "3b26c8774eab02ea72c46e7c3eead9e7a3601c6f169ce83b3bd4cafd7674888b",
+  "crc32": "c4cbb523",
+  "role": "development_qualification_only",
+  "reserved_eligible": false
+}

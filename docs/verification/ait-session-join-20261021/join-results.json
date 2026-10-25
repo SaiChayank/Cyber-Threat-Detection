@@ -1,0 +1,510 @@
+{
+  "scope": "Development-only DNS visibility/receiver marker join; not accuracy or independent sessions",
+  "counts": {
+    "source_lines": 275900,
+    "complete_client_questions": 81277,
+    "outside_simulation_questions": 0,
+    "backward_adjacent_question_steps": 0,
+    "questions_behind_watermark": 0,
+    "namespace_associated_questions": 17693,
+    "non_query_records": 194623
+  },
+  "qtypes": {
+    "A": 40275,
+    "TXT": 582,
+    "AAAA": 38967,
+    "SRV": 196,
+    "PTR": 1055,
+    "MX": 202
+  },
+  "question_sources": {
+    "10.143.0.103": 17765,
+    "172.19.130.4": 7636,
+    "10.143.1.78": 29956,
+    "172.19.131.174": 11036,
+    "10.143.2.4": 232,
+    "172.19.130.68": 588,
+    "10.143.2.91": 7532,
+    "10.143.3.65": 4331,
+    "10.143.0.35": 89,
+    "172.19.130.106": 349,
+    "10.143.1.36": 48,
+    "172.19.130.244": 48,
+    "172.19.128.1": 62,
+    "10.143.0.1": 62,
+    "10.143.2.25": 1543
+  },
+  "namespace_sources": {
+    "10.143.0.103": 17693
+  },
+  "namespace_qtypes": {
+    "A": 17693
+  },
+  "first_question_second": 1642723209,
+  "last_question_second": 1643068707,
+  "original_timestamp_precision_seconds": 1,
+  "original_order_and_duplicates_preserved": true,
+  "receiver_end_markers": 31,
+  "unsupported_receiver_end_markers": 0,
+  "marker_status_counts": {
+    "UNMATCHED": 11,
+    "EXACT_MARKER_JOIN": 20
+  },
+  "marker_status_counts_in_simulation": {
+    "EXACT_MARKER_JOIN": 20
+  },
+  "markers": [
+    {
+      "receiver_line": 138,
+      "receiver_second": 1642685217,
+      "receiver_in_simulation": false,
+      "file_id_sha256": "8d699c71b3172e7d30d1ff2e7c79ff76223344df9a9b9954cc15a08cba8a1410",
+      "eligible_matches": 0,
+      "time_matches_other_source": 0,
+      "time_matches_wrong_type": 0,
+      "source_matches_other_second": 0,
+      "observed_lines": [],
+      "receiver_key_multiplicity": 1,
+      "status": "UNMATCHED"
+    },
+    {
+      "receiver_line": 296,
+      "receiver_second": 1642687952,
+      "receiver_in_simulation": false,
+      "file_id_sha256": "ff05fa6a32234c614f6207933decace1220002e8ee01e765b37b1e83109fe088",
+      "eligible_matches": 0,
+      "time_matches_other_source": 0,
+      "time_matches_wrong_type": 0,
+      "source_matches_other_second": 0,
+      "observed_lines": [],
+      "receiver_key_multiplicity": 1,
+      "status": "UNMATCHED"
+    },
+    {
+      "receiver_line": 453,
+      "receiver_second": 1642690656,
+      "receiver_in_simulation": false,
+      "file_id_sha256": "340a4f7c411e33a6af64ef22b9d62f8838617b25bc2adbe23121b89255cfb9d3",
+      "eligible_matches": 0,
+      "time_matches_other_source": 0,
+      "time_matches_wrong_type": 0,
+      "source_matches_other_second": 0,
+      "observed_lines": [],
+      "receiver_key_multiplicity": 1,
+      "status": "UNMATCHED"
+    },
+    {
+      "receiver_line": 636,
+      "receiver_second": 1642693759,
+      "receiver_in_simulation": false,
+      "file_id_sha256": "f2cba0a54fce1e7e9dca7f5a68491986ae3ea71ca3c57af6038c7bf8b1cbd808",
+      "eligible_matches": 0,
+      "time_matches_other_source": 0,
+      "time_matches_wrong_type": 0,
+      "source_matches_other_second": 0,
+      "observed_lines": [],
+      "receiver_key_multiplicity": 1,
+      "status": "UNMATCHED"
+    },
+    {
+      "receiver_line": 812,
+      "receiver_second": 1642696727,
+      "receiver_in_simulation": false,
+      "file_id_sha256": "179394fc8c03697a87cb619869329eb68f6a639092392f747d38e1cb47965a81",
+      "eligible_matches": 0,
+      "time_matches_other_source": 0,
+      "time_matches_wrong_type": 0,
+      "source_matches_other_second": 0,
+      "observed_lines": [],
+      "receiver_key_multiplicity": 1,
+      "status": "UNMATCHED"
+    },
+    {
+      "receiver_line": 911,
+      "receiver_second": 1642698417,
+      "receiver_in_simulation": false,
+      "file_id_sha256": "968c39fa04b6cb5fc78bb0456ea6d7a4ee0f79600cc7606477d7ebe5a63166b0",
+      "eligible_matches": 0,
+      "time_matches_other_source": 0,
+      "time_matches_wrong_type": 0,
+      "source_matches_other_second": 0,
+      "observed_lines": [],
+      "receiver_key_multiplicity": 1,
+      "status": "UNMATCHED"
+    },
+    {
+      "receiver_line": 1122,
+      "receiver_second": 1642702019,
+      "receiver_in_simulation": false,
+      "file_id_sha256": "16bfe87301abfbddf97de0b2445856cd72a3bcf67d0be1bec0206e9bc7acf482",
+      "eligible_matches": 0,
+      "time_matches_other_source": 0,
+      "time_matches_wrong_type": 0,
+      "source_matches_other_second": 0,
+      "observed_lines": [],
+      "receiver_key_multiplicity": 1,
+      "status": "UNMATCHED"
+    },
+    {
+      "receiver_line": 1274,
+      "receiver_second": 1642704586,
+      "receiver_in_simulation": false,
+      "file_id_sha256": "ba42d7d0fc80b2217452f7f82c3175580e328f669f2dd5ed0b800aa5139a53f0",
+      "eligible_matches": 0,
+      "time_matches_other_source": 0,
+      "time_matches_wrong_type": 0,
+      "source_matches_other_second": 0,
+      "observed_lines": [],
+      "receiver_key_multiplicity": 1,
+      "status": "UNMATCHED"
+    },
+    {
+      "receiver_line": 1370,
+      "receiver_second": 1642706201,
+      "receiver_in_simulation": false,
+      "file_id_sha256": "6fe20d3f1cb543a554cdaaddc108b4ad916ba0eb2805b5beda413a4ed32c7b05",
+      "eligible_matches": 0,
+      "time_matches_other_source": 0,
+      "time_matches_wrong_type": 0,
+      "source_matches_other_second": 0,
+      "observed_lines": [],
+      "receiver_key_multiplicity": 1,
+      "status": "UNMATCHED"
+    },
+    {
+      "receiver_line": 1561,
+      "receiver_second": 1642709481,
+      "receiver_in_simulation": false,
+      "file_id_sha256": "df842b5dedc782a0081abd817071dbe710297eb27938df6016e7bc7faa442a6d",
+      "eligible_matches": 0,
+      "time_matches_other_source": 0,
+      "time_matches_wrong_type": 0,
+      "source_matches_other_second": 0,
+      "observed_lines": [],
+      "receiver_key_multiplicity": 1,
+      "status": "UNMATCHED"
+    },
+    {
+      "receiver_line": 1747,
+      "receiver_second": 1642712777,
+      "receiver_in_simulation": false,
+      "file_id_sha256": "b9d7c9ff8644d92a60adf7b858092881a9da9acaffb94bf3c2d88e8b70c0a053",
+      "eligible_matches": 0,
+      "time_matches_other_source": 0,
+      "time_matches_wrong_type": 0,
+      "source_matches_other_second": 0,
+      "observed_lines": [],
+      "receiver_key_multiplicity": 1,
+      "status": "UNMATCHED"
+    },
+    {
+      "receiver_line": 2790,
+      "receiver_second": 1642730913,
+      "receiver_in_simulation": true,
+      "file_id_sha256": "d850284b1bac3d71715713701256f7fe4f132d5eea74eec4c2a22f124139e7b5",
+      "eligible_matches": 1,
+      "time_matches_other_source": 0,
+      "time_matches_wrong_type": 0,
+      "source_matches_other_second": 0,
+      "observed_lines": [
+        4365
+      ],
+      "receiver_key_multiplicity": 1,
+      "status": "EXACT_MARKER_JOIN"
+    },
+    {
+      "receiver_line": 3798,
+      "receiver_second": 1642748500,
+      "receiver_in_simulation": true,
+      "file_id_sha256": "f7b37a6ea56e4e39a65a5f0fb5254aa005e810e4c9bd519e20d38a7657a1da27",
+      "eligible_matches": 1,
+      "time_matches_other_source": 0,
+      "time_matches_wrong_type": 0,
+      "source_matches_other_second": 0,
+      "observed_lines": [
+        17022
+      ],
+      "receiver_key_multiplicity": 1,
+      "status": "EXACT_MARKER_JOIN"
+    },
+    {
+      "receiver_line": 4734,
+      "receiver_second": 1642764843,
+      "receiver_in_simulation": true,
+      "file_id_sha256": "c17276a3401a261f3a9738d1253f482eb8a958d18b3222c3ec5e7ef4b7f1f069",
+      "eligible_matches": 1,
+      "time_matches_other_source": 0,
+      "time_matches_wrong_type": 0,
+      "source_matches_other_second": 0,
+      "observed_lines": [
+        35429
+      ],
+      "receiver_key_multiplicity": 1,
+      "status": "EXACT_MARKER_JOIN"
+    },
+    {
+      "receiver_line": 5785,
+      "receiver_second": 1642783191,
+      "receiver_in_simulation": true,
+      "file_id_sha256": "50989d066ce4430804d231c0f20e644b95d8e885bcfec9908ac28c20e7cdcc84",
+      "eligible_matches": 1,
+      "time_matches_other_source": 0,
+      "time_matches_wrong_type": 0,
+      "source_matches_other_second": 0,
+      "observed_lines": [
+        55505
+      ],
+      "receiver_key_multiplicity": 1,
+      "status": "EXACT_MARKER_JOIN"
+    },
+    {
+      "receiver_line": 6824,
+      "receiver_second": 1642801178,
+      "receiver_in_simulation": true,
+      "file_id_sha256": "76de883f336d4f30176ee1bb4d7a8cea870de120db59c9cfc5b3a0c28ed93c6c",
+      "eligible_matches": 1,
+      "time_matches_other_source": 0,
+      "time_matches_wrong_type": 0,
+      "source_matches_other_second": 0,
+      "observed_lines": [
+        68409
+      ],
+      "receiver_key_multiplicity": 1,
+      "status": "EXACT_MARKER_JOIN"
+    },
+    {
+      "receiver_line": 7883,
+      "receiver_second": 1642819479,
+      "receiver_in_simulation": true,
+      "file_id_sha256": "9fb43755c08e957004abc595c7e76c5fa849565d7bf6e8edd0d201476289c9fa",
+      "eligible_matches": 1,
+      "time_matches_other_source": 0,
+      "time_matches_wrong_type": 0,
+      "source_matches_other_second": 0,
+      "observed_lines": [
+        76976
+      ],
+      "receiver_key_multiplicity": 1,
+      "status": "EXACT_MARKER_JOIN"
+    },
+    {
+      "receiver_line": 8944,
+      "receiver_second": 1642837839,
+      "receiver_in_simulation": true,
+      "file_id_sha256": "4b544e082510d394d9dda07955e2cb4f5ef4dff76392c71c8115e672baef0c72",
+      "eligible_matches": 1,
+      "time_matches_other_source": 0,
+      "time_matches_wrong_type": 0,
+      "source_matches_other_second": 0,
+      "observed_lines": [
+        87733
+      ],
+      "receiver_key_multiplicity": 1,
+      "status": "EXACT_MARKER_JOIN"
+    },
+    {
+      "receiver_line": 9954,
+      "receiver_second": 1642855279,
+      "receiver_in_simulation": true,
+      "file_id_sha256": "39ff711b17cfffead1b4b6f72395f5121685eb1a6895713b6a469c949f846142",
+      "eligible_matches": 1,
+      "time_matches_other_source": 0,
+      "time_matches_wrong_type": 0,
+      "source_matches_other_second": 0,
+      "observed_lines": [
+        109257
+      ],
+      "receiver_key_multiplicity": 1,
+      "status": "EXACT_MARKER_JOIN"
+    },
+    {
+      "receiver_line": 10804,
+      "receiver_second": 1642870287,
+      "receiver_in_simulation": true,
+      "file_id_sha256": "63187c87400c6de0599d64c6b07f36b78edcd34dc601b95a8b0e4892b8bbe258",
+      "eligible_matches": 1,
+      "time_matches_other_source": 0,
+      "time_matches_wrong_type": 0,
+      "source_matches_other_second": 0,
+      "observed_lines": [
+        126051
+      ],
+      "receiver_key_multiplicity": 1,
+      "status": "EXACT_MARKER_JOIN"
+    },
+    {
+      "receiver_line": 11771,
+      "receiver_second": 1642887210,
+      "receiver_in_simulation": true,
+      "file_id_sha256": "21a66f105c4e72db2c602509c95b3e1d89d75c7df69ed79a47116131f170b7e5",
+      "eligible_matches": 1,
+      "time_matches_other_source": 0,
+      "time_matches_wrong_type": 0,
+      "source_matches_other_second": 0,
+      "observed_lines": [
+        137610
+      ],
+      "receiver_key_multiplicity": 1,
+      "status": "EXACT_MARKER_JOIN"
+    },
+    {
+      "receiver_line": 12750,
+      "receiver_second": 1642904244,
+      "receiver_in_simulation": true,
+      "file_id_sha256": "15c655cb50adff6c76392d496290d261a681561b8379c267dce6662c5ef13340",
+      "eligible_matches": 1,
+      "time_matches_other_source": 0,
+      "time_matches_wrong_type": 0,
+      "source_matches_other_second": 0,
+      "observed_lines": [
+        145069
+      ],
+      "receiver_key_multiplicity": 1,
+      "status": "EXACT_MARKER_JOIN"
+    },
+    {
+      "receiver_line": 13708,
+      "receiver_second": 1642921159,
+      "receiver_in_simulation": true,
+      "file_id_sha256": "ee8aed93619aa8dc1b90c0e7b60b63ad79aa07cd289a34cf4ae831c8eab4542a",
+      "eligible_matches": 1,
+      "time_matches_other_source": 0,
+      "time_matches_wrong_type": 0,
+      "source_matches_other_second": 0,
+      "observed_lines": [
+        155941
+      ],
+      "receiver_key_multiplicity": 1,
+      "status": "EXACT_MARKER_JOIN"
+    },
+    {
+      "receiver_line": 14655,
+      "receiver_second": 1642937761,
+      "receiver_in_simulation": true,
+      "file_id_sha256": "f3ab1e585253e2a009541823048184588c87c5e0bf29403330ca19660db799a6",
+      "eligible_matches": 1,
+      "time_matches_other_source": 0,
+      "time_matches_wrong_type": 0,
+      "source_matches_other_second": 0,
+      "observed_lines": [
+        174087
+      ],
+      "receiver_key_multiplicity": 1,
+      "status": "EXACT_MARKER_JOIN"
+    },
+    {
+      "receiver_line": 15627,
+      "receiver_second": 1642954792,
+      "receiver_in_simulation": true,
+      "file_id_sha256": "b3286fd44d9aeb705c1157fa71b233c03c1395a3a33488c3ffe5906b998ac132",
+      "eligible_matches": 1,
+      "time_matches_other_source": 0,
+      "time_matches_wrong_type": 0,
+      "source_matches_other_second": 0,
+      "observed_lines": [
+        193388
+      ],
+      "receiver_key_multiplicity": 1,
+      "status": "EXACT_MARKER_JOIN"
+    },
+    {
+      "receiver_line": 16593,
+      "receiver_second": 1642971604,
+      "receiver_in_simulation": true,
+      "file_id_sha256": "3498024fe2e2e9ad23942a10a0b4b046aba97e553a596217b8b303bcc6cb2ea3",
+      "eligible_matches": 1,
+      "time_matches_other_source": 0,
+      "time_matches_wrong_type": 0,
+      "source_matches_other_second": 0,
+      "observed_lines": [
+        207912
+      ],
+      "receiver_key_multiplicity": 1,
+      "status": "EXACT_MARKER_JOIN"
+    },
+    {
+      "receiver_line": 17569,
+      "receiver_second": 1642988709,
+      "receiver_in_simulation": true,
+      "file_id_sha256": "61ad62251f731e17b2156006543f29d8f24db7e269ab180be36d84af03ebd869",
+      "eligible_matches": 1,
+      "time_matches_other_source": 0,
+      "time_matches_wrong_type": 0,
+      "source_matches_other_second": 0,
+      "observed_lines": [
+        215789
+      ],
+      "receiver_key_multiplicity": 1,
+      "status": "EXACT_MARKER_JOIN"
+    },
+    {
+      "receiver_line": 18529,
+      "receiver_second": 1643005503,
+      "receiver_in_simulation": true,
+      "file_id_sha256": "4a870dd7395ab98c2577d48747b126aada0417fb8d75b8637d05e21d0d6e8ab0",
+      "eligible_matches": 1,
+      "time_matches_other_source": 0,
+      "time_matches_wrong_type": 0,
+      "source_matches_other_second": 0,
+      "observed_lines": [
+        224873
+      ],
+      "receiver_key_multiplicity": 1,
+      "status": "EXACT_MARKER_JOIN"
+    },
+    {
+      "receiver_line": 19496,
+      "receiver_second": 1643022522,
+      "receiver_in_simulation": true,
+      "file_id_sha256": "7090b6fa44ad2d08853c1c61b651512c91acffae291a6a162d88b87e681faafd",
+      "eligible_matches": 1,
+      "time_matches_other_source": 0,
+      "time_matches_wrong_type": 0,
+      "source_matches_other_second": 0,
+      "observed_lines": [
+        244120
+      ],
+      "receiver_key_multiplicity": 1,
+      "status": "EXACT_MARKER_JOIN"
+    },
+    {
+      "receiver_line": 19709,
+      "receiver_second": 1643026217,
+      "receiver_in_simulation": true,
+      "file_id_sha256": "255f042054aec55cbdaa70741450e5293c62f846b6b479e2eb86eea6060e106e",
+      "eligible_matches": 1,
+      "time_matches_other_source": 0,
+      "time_matches_wrong_type": 0,
+      "source_matches_other_second": 0,
+      "observed_lines": [
+        249302
+      ],
+      "receiver_key_multiplicity": 1,
+      "status": "EXACT_MARKER_JOIN"
+    },
+    {
+      "receiver_line": 19923,
+      "receiver_second": 1643029913,
+      "receiver_in_simulation": true,
+      "file_id_sha256": "11a3e0804a8e0f2b19176d2d8c1333f015a04194eeb09349c66fd0528bc87083",
+      "eligible_matches": 1,
+      "time_matches_other_source": 0,
+      "time_matches_wrong_type": 0,
+      "source_matches_other_second": 0,
+      "observed_lines": [
+        251504
+      ],
+      "receiver_key_multiplicity": 1,
+      "status": "EXACT_MARKER_JOIN"
+    }
+  ],
+  "diagnostic_role": "development_qualification_only",
+  "reserved_eligible": false,
+  "independent_session_count": null,
+  "detector_scored": false,
+  "input_sha256": {
+    "data/raw/ait-session-join-20261021/dnsmasq-original.log": "3b26c8774eab02ea72c46e7c3eead9e7a3601c6f169ce83b3bd4cafd7674888b",
+    "data/raw/dns-session-provenance-documents-20261021/ait-receiver-metadata.log": "6fd21efa7227e0648a6ce4f9df9a77360d5249021feffc4bbae931c64d93cfda"
+  },
+  "diagnostic_source_sha256": "b860cd7c124b458683503ad28fb6e9c820aa6aafff7baff07e1f53b6c919f0cd"
+}

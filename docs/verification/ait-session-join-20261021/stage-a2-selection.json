@@ -1,0 +1,15 @@
+{
+  "stage": "A2_PLANNED_CONTEXT_ONLY",
+  "reason": "Locate planned exfiltration host before selecting original execution logs; planned context is not executed truth",
+  "members": [
+    {
+      "name": "environment/model/context.yml",
+      "bytes": 10443,
+      "compressed_bytes": 3143,
+      "crc32": "9bcd5410",
+      "compression": 8
+    }
+  ],
+  "max_member_bytes": 32768,
+  "role": null
+}

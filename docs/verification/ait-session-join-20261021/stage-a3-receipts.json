@@ -1,0 +1,44 @@
+[
+  {
+    "member": "gather/internal_share/logs/syslog.2",
+    "cache": "data/raw/ait-session-join-20261021/execution-0.txt",
+    "bytes": 5923,
+    "sha256": "c3e753ae49510e12868a0040faf2000474f10c2668da8a6d948881e7ec8959a4",
+    "crc32": "d6b0e387"
+  },
+  {
+    "member": "gather/internal_share/logs/syslog.4",
+    "cache": "data/raw/ait-session-join-20261021/execution-1.txt",
+    "bytes": 19564,
+    "sha256": "c6501ad46d3c7331b92dbe55f2754faa4fd25c0f7c4be8a0b2f1c96eb299c768",
+    "crc32": "39bad2f1"
+  },
+  {
+    "member": "gather/internal_share/logs/syslog.3",
+    "cache": "data/raw/ait-session-join-20261021/execution-2.txt",
+    "bytes": 5102,
+    "sha256": "afbebfc6ba8b910b1fcc1c7fa9f11126baf7669c1e8f22e8aefc71a145f75b8e",
+    "crc32": "0f2b8aac"
+  },
+  {
+    "member": "gather/internal_share/logs/syslog.1",
+    "cache": "data/raw/ait-session-join-20261021/execution-3.txt",
+    "bytes": 3201,
+    "sha256": "4490f43334142574b6da7bf089c1111a0dca5952755c4a80b12ee02f442d386d",
+    "crc32": "188313d2"
+  },
+  {
+    "member": "gather/internal_share/logs/audit/audit.log",
+    "cache": "data/raw/ait-session-join-20261021/execution-4.txt",
+    "bytes": 130164,
+    "sha256": "3b91178b6874141755e8461779aa9fa3f079de85867855e47a75e1fbde7bb940",
+    "crc32": "ff353b81"
+  },
+  {
+    "member": "gather/internal_share/configs/systemd/system/put.service",
+    "cache": "data/raw/ait-session-join-20261021/execution-5.txt",
+    "bytes": 135,
+    "sha256": "1be78875071a97f087dd58d16926b50b646b765969fa46d5a36752d6e1940646",
+    "crc32": "73fab34e"
+  }
+]

@@ -1,0 +1,50 @@
+{
+  "stage": "A3_ORIGINAL_CLIENT_EXECUTION",
+  "reason": "Only internal_share has the producer-named exfiltration service put; verify actual lifecycle and UTC before DNS observations; do not open the put script",
+  "members": [
+    {
+      "name": "gather/internal_share/logs/syslog.2",
+      "bytes": 5923,
+      "compressed_bytes": 1085,
+      "crc32": "d6b0e387",
+      "compression": 8
+    },
+    {
+      "name": "gather/internal_share/logs/syslog.4",
+      "bytes": 19564,
+      "compressed_bytes": 3063,
+      "crc32": "39bad2f1",
+      "compression": 8
+    },
+    {
+      "name": "gather/internal_share/logs/syslog.3",
+      "bytes": 5102,
+      "compressed_bytes": 1031,
+      "crc32": "0f2b8aac",
+      "compression": 8
+    },
+    {
+      "name": "gather/internal_share/logs/syslog.1",
+      "bytes": 3201,
+      "compressed_bytes": 666,
+      "crc32": "188313d2",
+      "compression": 8
+    },
+    {
+      "name": "gather/internal_share/logs/audit/audit.log",
+      "bytes": 130164,
+      "compressed_bytes": 8569,
+      "crc32": "ff353b81",
+      "compression": 8
+    },
+    {
+      "name": "gather/internal_share/configs/systemd/system/put.service",
+      "bytes": 135,
+      "compressed_bytes": 114,
+      "crc32": "73fab34e",
+      "compression": 8
+    }
+  ],
+  "max_member_bytes": 262144,
+  "role": null
+}

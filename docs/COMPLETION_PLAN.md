@@ -9,6 +9,12 @@ The 20 October clean rehearsal is separately scoped to its earlier commit.
 Public-only data/quality blockers remain; final release is NOT READY. No current
 permission-dependent request, reserved tuning or failed-candidate activation.
 
+**21 October AIT source join completed:** [qualification](AIT_DNS_SESSION_QUALIFICATION_20261021.md)
+verifies original client/question metadata and 20 transfer-marker associations.
+27 new/63 targeted diagnostic tests pass. The whole inspected run is development
+only; independent sessions, benign controls and complete observed runtime inputs
+remain unqualified. No detector accuracy/promotion or reserved pass consumed.
+
 **21 October DNS evidence follow-up:** [public executed-session intake](DNS_SESSION_PROVENANCE_SEARCH_20261021.md)
 checksums the AIT archive and original receiver timing; seven new tests/36 targeted
 passes. File completions are not independently qualified sessions. No reserved

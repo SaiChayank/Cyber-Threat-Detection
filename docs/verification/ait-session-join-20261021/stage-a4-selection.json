@@ -1,0 +1,14 @@
+{
+  "stage": "A4_BENIGN_CHRONOLOGY_FOLLOWUP",
+  "reason": "Actor0 original state trace ends before DNS observation begins; inspect the next internal employee actor whole trace, not classify pre-window actions or assume publisher-wide absence of normal context",
+  "member": {
+    "name": "gather/internal_employee_1/logs/sm.log",
+    "bytes": 3986702,
+    "compressed_bytes": 351896,
+    "crc32": "953a4f07",
+    "compression": 8
+  },
+  "max_member_bytes": 4194304,
+  "whole_run_reserved_exclusion": "AIT-LDS-v2.1-russellmitchell",
+  "detector_scoring": false
+}

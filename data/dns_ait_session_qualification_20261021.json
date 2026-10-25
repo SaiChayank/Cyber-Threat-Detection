@@ -1,0 +1,101 @@
+{
+  "baseline": "425af50",
+  "date": "2026-10-21",
+  "task": "AIT client/question/session and benign-control qualification",
+  "status": "PARTIAL_SOURCE_QUALIFIED_FOR_DEVELOPMENT_ONLY_FINAL_EVALUATION_BLOCKED",
+  "source": {
+    "producer_record": "https://zenodo.org/records/19483937",
+    "license_id": "cc-by-nc-sa-4.0",
+    "archive": "data/raw/ait-dns-intake-20261021/russellmitchell_no-pcaps.zip",
+    "archive_sha256": "51a03f51daea0fbbdcfe9b8abe0dbbe10633716f4f98074f861204a162ee1978",
+    "client_question_log": "data/raw/ait-session-join-20261021/dnsmasq-original.log",
+    "client_question_log_sha256": "3b26c8774eab02ea72c46e7c3eead9e7a3601c6f169ce83b3bd4cafd7674888b",
+    "whole_source_run_group": "AIT-LDS-v2.1-russellmitchell",
+    "role": "development_qualification_only",
+    "all_related_exports_excluded_from_reserved": true,
+    "other_testbeds_opened": false
+  },
+  "observed_episode": {
+    "mechanism": "DNSteal",
+    "namespace": "email-19.kennedy-mendoza.info",
+    "client_ip_observed": "10.143.0.103",
+    "client_host_from_original_metadata": "internal-share",
+    "source_clock_timezone": "UTC",
+    "original_log_precision_seconds": 1,
+    "source_query_records": 81277,
+    "namespace_associated_questions": 17693,
+    "namespace_qtypes": {
+      "A": 17693
+    },
+    "source_time_filename_marker_joins": 20,
+    "receiver_markers_before_dns_observation": 11,
+    "observed_service_start_and_stop_ms": 1643032239298,
+    "original_client_execution_start": null,
+    "complete_original_client_session_boundaries_verified": false,
+    "independent_session_count": null,
+    "derived_manifest": "docs/verification/ait-session-join-20261021/transfer-associations.json"
+  },
+  "capability": {
+    "original_source_time_qname_qtype_visible": true,
+    "independent_per_marker_receiver_association": true,
+    "raw_client_packet_headers_verified": false,
+    "observed_runtime_event_fields": [
+      "timestamp",
+      "src_ip",
+      "dns_name",
+      "dns_type"
+    ],
+    "unobserved_required_runtime_event_fields": [
+      "dst_ip",
+      "protocol",
+      "dst_port"
+    ],
+    "original_transport_port_and_destination_must_not_be_defaulted": true,
+    "clock_offset_independently_verified": false,
+    "runtime_adapter_added": false,
+    "producer_dns_labels": "Domain/time heuristics, not independent received-query or complete-session acknowledgements",
+    "other_dns_is_automatically_benign": false
+  },
+  "benign_context": {
+    "original_actor_traces": 2,
+    "actor0_records": 999,
+    "actor0_records_in_dns_window": 0,
+    "actor1_records": 9606,
+    "actor1_records_in_dns_window": 7493,
+    "documented_application_context": [
+      "mail",
+      "owncloud",
+      "SSH",
+      "WordPress"
+    ],
+    "dns_application_transaction_joins_verified": false,
+    "five_required_categories_qualified": [],
+    "independent_benign_session_count": null
+  },
+  "reserved": {
+    "qualified_positive_sessions": 0,
+    "qualified_benign_sessions": 0,
+    "qualified_roles": 0,
+    "required_tool_coverage": "NOT_MET: DNSteal does not establish dnscat2 or iodine",
+    "ready": false,
+    "single_pass_consumed": false
+  },
+  "metrics": {
+    "TP": null,
+    "TN": null,
+    "FP": null,
+    "FN": null,
+    "precision": null,
+    "recall": null,
+    "F1": null,
+    "FPR": null,
+    "independent_accuracy": "NOT_ESTABLISHED",
+    "detector_scored": false
+  },
+  "runtime_changed": false,
+  "gates_changed": false,
+  "training_performed": false,
+  "candidate_promoted": false,
+  "release_ready": false,
+  "exact_next_action": "Qualify an additional public dnscat2/iodine collection with independently annotated client execution sessions and original client-side packet/question fields; keep this entire exposed AIT run out of reserved evaluation."
+}

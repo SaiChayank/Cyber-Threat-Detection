@@ -165,29 +165,44 @@
       "qualified_reserved_roles": 0,
       "reserved_pass_consumed": false,
       "current_protected_files_matching": 130
+    },
+    {
+      "task": "AIT original client/question/session and benign-context qualification",
+      "completed_client_date": "2026-10-21",
+      "dod": "PASS_DEVELOPMENT_SOURCE_JOIN_FORMAL_EVALUATION_BLOCKED",
+      "report": "docs/AIT_DNS_SESSION_QUALIFICATION_20261021.md",
+      "new_tests": 27,
+      "targeted_tests": 63,
+      "original_dns_question_records": 81277,
+      "source_time_filename_marker_joins": 20,
+      "out_of_window_receiver_markers": 11,
+      "qualified_reserved_roles": 0,
+      "current_protected_files_matching": 130,
+      "runtime_changed": false,
+      "detector_scored": false,
+      "reserved_pass_consumed": false,
+      "candidate_promoted": false
     }
   ],
-  "current_task": "Public session-provenance package completed; formal independent DNS accuracy remains data-blocked",
+  "current_task": "AIT client/question qualification completed; formal independent DNS accuracy remains data-blocked",
   "work_running": false,
-  "stopping_reason": "Four-source metadata screen yields original AIT receiver execution records but no complete independently qualified session/client/question and benign-category cohort; stop before resolver values, reserved scoring or promotion",
+  "stopping_reason": "Actual client/marker associations established, but one left-censored operation is not 20 independent sessions. Benign application traces lack DNS-session/category joins, required dnscat2/iodine coverage is absent, and original DNS logs lack observed destination/protocol/port required by the frozen scorer. Stop before inventing fields/sessions or scoring",
   "last_task": {
-    "task": "Public executed-session provenance search and AIT opaque archive intake",
+    "task": "AIT original client/question/session and benign-context qualification",
     "completed_client_date": "2026-10-21",
-    "dod": "PASS_METADATA_INTAKE_ONLY_FORMAL_DATA_BLOCKED",
-    "report": "docs/DNS_SESSION_PROVENANCE_SEARCH_20261021.md",
-    "new_tests": 7,
-    "targeted_tests": 36,
-    "archive_bytes": 522084364,
-    "archive_publisher_checksum_verified": true,
-    "receiver_saved_file_events": 31,
-    "independent_session_count": null,
+    "dod": "PASS_DEVELOPMENT_SOURCE_JOIN_FORMAL_EVALUATION_BLOCKED",
+    "report": "docs/AIT_DNS_SESSION_QUALIFICATION_20261021.md",
+    "new_tests": 27,
+    "targeted_tests": 63,
+    "original_dns_question_records": 81277,
+    "source_time_filename_marker_joins": 20,
+    "out_of_window_receiver_markers": 11,
     "qualified_reserved_roles": 0,
-    "reserved_pass_consumed": false,
     "current_protected_files_matching": 130,
     "runtime_changed": false,
-    "candidate_promoted": false,
-    "reserved_values_opened": false,
-    "new_training": false
+    "detector_scored": false,
+    "reserved_pass_consumed": false,
+    "candidate_promoted": false
   },
   "constraints": [
     "Public datasets only; skip email-gated supplements and author follow-ups",
@@ -204,7 +219,7 @@
   "research_data_blocked": true,
   "research_track_disposition": "DGA and other unqualified research roles stay data/provenance blocked; passed application fixes are frozen",
   "next_queue": [
-    "Qualify public receiver-to-original-client/run/question and independently annotated session/application joins, starting with the AIT execution ledger; no file-as-session counting or resolver values before qualification",
-    "Only source-qualified next steps; preserve reserved pass, gates and disabled candidates"
+    "Qualify an additional public dnscat2/iodine collection with independently annotated client execution sessions and original client-side packet/question fields; exclude the exposed AIT source/run and all related exports from reserved evaluation",
+    "Only data-qualified followups; preserve gates, artifacts, history, reserved pass and disabled candidates"
   ]
 }

@@ -1,0 +1,18 @@
+{
+  "status": "PASS_DEVELOPMENT_SOURCE_JOIN_FORMAL_EVALUATION_BLOCKED",
+  "new_input_receipts_verified": 14,
+  "source_archive_unchanged": true,
+  "original_dns_question_records": 81277,
+  "original_receiver_marker_joins": 20,
+  "out_of_window_receiver_markers": 11,
+  "reserved_sessions_qualified": 0,
+  "independent_accuracy": "NOT_ESTABLISHED",
+  "protected_originals_matching": 130,
+  "previous_frozen_packages_unchanged": 4,
+  "previous_captures_unchanged": 2,
+  "contract_source_pins_unchanged": 23,
+  "detector_scored": false,
+  "reserved_pass_consumed": false,
+  "candidate_promoted": false,
+  "runtime_changed": false
+}

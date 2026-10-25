@@ -38,6 +38,17 @@ joins. Do not repeat synthetic scoring or count transfer files as independent ru
 Exactly next: public receiver-to-client/run/question and independent benign-app
 annotations before DNS values; preserve all gates and disabled candidate.
 
+**Latest completed source join:** [AIT client/session qualification](AIT_DNS_SESSION_QUALIFICATION_20261021.md).
+Original DNS logs confirm client 10.143.0.103 and 20 exact receiver end-marker
+associations among 81,277 parsed questions; 11 other markers predate observation.
+The whole source/run is now exposed development qualification, never a reserved
+cohort. These are transfers within one operation, not 20 independent sessions.
+Original client start, independent sessions, five benign controls and observed
+transport/destination/port fields remain unqualified. 27 new/63 targeted tests
+pass; all 130 protected hashes/four prior packages/23 source pins unchanged.
+No scoring/training/promotion or runtime/gate changes. Exactly next: another public
+dnscat2/iodine source with independently annotated original client-side sessions.
+
 ### 1. Qualify missing public evidence — P0
 
 Work one track at a time; permission-gated sources/supplements are skipped.
