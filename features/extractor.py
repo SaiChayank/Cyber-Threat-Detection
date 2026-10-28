@@ -174,7 +174,7 @@ class FeatureExtractor:
         values = [rates['packet_rate'], rates['byte_rate'], rates['source_entropy'],
                   sum(e.syn for e in recent) / len(recent),
                   sum(intervals) / len(intervals) if intervals else 0, cv(intervals),
-                  len(set(str(e.dst_ip) for e in recent)), len(set(e.dst_port for e in recent)),
+                  len(set(e.dst_ip for e in recent)), len(set(e.dst_port for e in recent)),
                   dga['domain_entropy'], len(name), dga['domain_digit_ratio'], dga['bigram_surprise'],
                   float(event.dns_type in (10, 16) and bool(name)), float(event.encrypted), cv(sizes),
                   sum(e.bytes for e in history), ratio or 0, float(event.reverse_observed),

@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-28T23:15:31.811546+00:00",
+  "generated_at_utc": "2026-10-28T23:28:42.507581+00:00",
   "python": "3.13.15",
   "platform": "Windows-11-10.0.26300-SP0",
   "hardware": {
@@ -15,17 +15,17 @@
   "capture_sha256": "1f10cd3dfdf5a287319e5a5c05da15b5eb96e7abd953389ab1782d147cbecbe3",
   "capture_duration_seconds": 4.9999,
   "wire_bytes": 37393661,
-  "elapsed_seconds": 39.77752800000599,
-  "packets_per_second": 1256.991133284916,
+  "elapsed_seconds": 38.42780350000248,
+  "packets_per_second": 1301.1412426941542,
   "flows": 3091,
-  "flows_per_second": 77.7071918596735,
-  "sustained_mbps": 7.520560050889914,
+  "flows_per_second": 80.43655162335261,
+  "sustained_mbps": 7.784709526787829,
   "alerts": 2,
   "alerts_by_class": {
     "ENCRYPTED_MALWARE": 2
   },
-  "realtime_factor": 0.12569659934622504,
-  "parse_only_elapsed_seconds": 0.6142772000021068,
-  "parse_only_packets_per_second": 81396.4770299606,
-  "parse_only_sustained_mbps": 486.99396298442133
+  "realtime_factor": 0.13011152198693005,
+  "parse_only_elapsed_seconds": 0.973495099999127,
+  "parse_only_packets_per_second": 51361.32683158327,
+  "parse_only_sustained_mbps": 307.29408704806866
 }

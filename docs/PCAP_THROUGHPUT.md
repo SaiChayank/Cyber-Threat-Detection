@@ -54,8 +54,8 @@ Tests: `.venv/Scripts/python.exe -m pytest -q tests/test_pcap_throughput.py`
 
 | Path | Packets/s | Flows/s | Sustained Mbps |
 | --- | --- | --- | --- |
-| Parse only (reader + adapter) | 81,397 | n/a | 487 |
-| Full path (parse + features + inference) | **1,257** | 77.7 | **7.5** |
+| Parse only (reader + adapter) | 51,361 | n/a | 307 |
+| Full path (parse + features + inference) | **1,301** | 80.4 | **7.8** |
 
 The full path runs at about 0.1x real time on this packet workload, so it
 does **not** sustain 2,000 packets/s. The project's 2,000 events/s gate is
@@ -66,9 +66,14 @@ heavier unit than one summary. Parsing is not the bottleneck.
 Profiling found two causes: per-event failure-safe state copies and the
 20-feature Gaussian model scoring every event. Copying the flow-ID table and
 the new TLS/slow-HTTP state was replaced by a copy-on-write map
-(`features/cow_map.py`), which raised the first run (669 packets/s) to the
-figure above. The remaining copies (per-source history and byte windows) and
-model scoring are the next targets. The workload also raised 2 false
+(`features/cow_map.py`), which raised the first run (669 packets/s) to about 1,257. Hoisting the model's per-class
+constants and dropping per-event IP-string conversion then lifted short runs
+(20,000 packets) to about 2,260 packets/s, but long runs stay near 1,300
+because throughput falls as source histories fill: the extractor rescans each
+source's retained history (up to 512 events in 60 s) on every event, which is part
+of the frozen feature semantics (about 3,300 packets/s over the first 8,000
+packets, about 1,100 by 32,000). Changing that is a feature-contract decision,
+not a safe optimisation. The workload also raised 2 false
 `ENCRYPTED_MALWARE` alerts from the rare-fingerprint rule; tune that in P0-5.
 Treat all figures as one-machine, synthetic-capture results.
 

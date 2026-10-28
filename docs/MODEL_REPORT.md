@@ -264,10 +264,10 @@ Synthetic benign workload: 50,000 packets, 3,091 flows, 5.0 s of capture, one ma
 
 | Path | Packets/s | Flows/s | Sustained Mbps |
 | --- | --- | --- | --- |
-| Parse only (reader and adapter) | 81,396 | n/a | 487.0 |
-| Full path (parse, features, inference) | **1,257.0** | 77.7 | **7.52** |
+| Parse only (reader and adapter) | 51,361 | n/a | 307.3 |
+| Full path (parse, features, inference) | **1,301.1** | 80.4 | **7.78** |
 
-**The full PCAP path is below 2,000 packets/s.** It runs at a realtime factor of 0.126 on this
+**The full PCAP path is below 2,000 packets/s.** It runs at a realtime factor of 0.13 on this
 workload. The 2,000 gate applies to flow-summary metadata events (section 6.4), not packets.
 The run raised 2 benign `ENCRYPTED_MALWARE` alerts from the rare-fingerprint rule.
 
@@ -293,7 +293,7 @@ and the seven detector labels. The letter mapping is **not verified**.
 | Dashboard, SSE, persistence and restart | Implemented (local, single worker) | `frontend/`, `backend/`, `persistence/store.py` |
 | Streaming with bounded latency | Implemented (controlled demo and core scope) | `features/extractor.py`, `benchmarks/run.py` |
 | Core throughput >= 2,000 metadata events/s, p95 < 50 ms | Implemented (one machine, synthetic) | `benchmarks/latest.json` |
-| Full-path packet throughput | Partial: 1,257 packets/s, below 2,000 | `benchmarks/pcap_throughput_latest.json` |
+| Full-path packet throughput | Partial: 1,301 packets/s, below 2,000 | `benchmarks/pcap_throughput_latest.json` |
 | Delivery p95 < 1,000 ms (API to SSE) | Implemented (loopback only) | [Performance validation](PERFORMANCE_VALIDATION.md) |
 | NetFlow, IPFIX, sFlow import | Implemented as file import; no live collector | `ingest/flow_export.py`, [Flow export import](FLOW_EXPORT_IMPORT.md) |
 | Lab evaluation of real captures | Implemented (harness); Not validated on real captures (P0-5 pending) | `datasets/evaluate_lab.py`, [Lab evaluation](LAB_EVALUATION.md) |
@@ -326,8 +326,9 @@ and the seven detector labels. The letter mapping is **not verified**.
 - DoH and DoT hide DNS names. Segmented DNS/TCP questions are not reconstructed.
 
 **Performance.**
-- Full packet path (1,257 packets/s) is below 2,000 packets/s. Parsing is not the bottleneck; per-event state copies
-  and model scoring are (`pcap_throughput_latest.json` notes, `PCAP_THROUGHPUT.md`).
+- Full packet path (1,301 packets/s over 50,000 packets) is below 2,000 packets/s. Parsing is not the bottleneck; the
+  extractor rescans each source's retained history per event, so throughput falls as histories fill
+  (`PCAP_THROUGHPUT.md`).
 - Measurements are one-machine, one-process results, and the core JSON and prose figures differ by date (section 6.4).
 
 **Packaging.** Three inactive public-model JSON files fail hash checks after a Windows CRLF checkout
@@ -338,4 +339,4 @@ and the seven detector labels. The letter mapping is **not verified**.
 2. Score train and validation with `datasets/evaluate_lab`, then tune TLS, slow-HTTP and other thresholds (P0-5).
 3. Score the test split once. Enable a detector only if it passes its predeclared gate.
 4. Fix the inactive-artifact packaging issue (H1) with a checkout regression.
-5. Reduce per-packet state copies and model cost on the full path.
+5. Decide whether to bound the per-source history scan (a feature-contract change) to raise full-path throughput.

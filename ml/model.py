@@ -25,14 +25,18 @@ class Model:
         self.data = json.loads(raw)
         if self.data['features'] != FEATURES:
             raise ValueError('Model feature contract mismatch')
+        # Per-class constants hoisted out of the per-event path; same Gaussian log-likelihood.
+        self._classes = [(label, math.log(stats['prior']),
+                          sum(math.log(2 * math.pi * v) for v in stats['variance']),
+                          stats['mean'], [1 / v for v in stats['variance']])
+                         for label, stats in self.data['classes'].items()]
 
     def predict(self, features):
         x = vector(features)
         scores = {}
-        for label, stats in self.data['classes'].items():
-            scores[label] = math.log(stats['prior']) - .5 * sum(
-                math.log(2 * math.pi * v) + (a - m) ** 2 / v
-                for a, m, v in zip(x, stats['mean'], stats['variance']))
+        for label, log_prior, log_norm, means, inverse in self._classes:
+            scores[label] = log_prior - .5 * (log_norm + sum(
+                (a - m) * (a - m) * i for a, m, i in zip(x, means, inverse)))
         peak = max(scores.values())
         weights = {k: math.exp(max(-700, s-peak)) for k, s in scores.items()}
         total = sum(weights.values())

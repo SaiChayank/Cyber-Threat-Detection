@@ -105,7 +105,7 @@
   "source_sha256": {
     "detection/pipeline.py": "c783f04bd95b682255284f88c07e15bcbd42575ffdc1699d502e126265f695a8",
     "detection/dns_tunnel_candidate.py": "c1713f2a8bbc59753bbad586054e5b103082f4d67bf5c9cfa617383965540a9a",
-    "features/extractor.py": "34cbc02a5e5674b6b23f5e4970762237d4ea1b62b24bb8f6fbcd6d440d238507",
+    "features/extractor.py": "0ad247166c97ff8b521ee9c9f9167fbfaaaae5b7748e030614f88f8e257708a5",
     "features/dns_tunnel.py": "8ded37ba73c2d605f22baf4571f80842791f7b2b1584ce0230ddc365466605eb",
     "features/rate_window.py": "a0d4542ab56b44bb51bdee88ebd56a7df95e9a9d6a79fc569769a9100b65d683",
     "ingest/metadata.py": "f25c26d888a08d0ffbc8174c69ec6ee2a4ad392e9ebf7ab3ea996c6e9910c550",
@@ -118,7 +118,7 @@
     "schemas/tls_metadata.py": "c7cb2d1742a0129c0d8962581d491783fee7453bd789acde329f17be8f717381",
     "schemas/alert.py": "334362e24535863247903d82c0f6ba60e0f21aaa4d3a2f263f7bdf2a81c695f2",
     "schemas/enums.py": "8b8f820eea9af47d7d9cdb05d6963e2245fb44e7b0e641a620a4d0e6b4e2b576",
-    "ml/model.py": "2721a53d667d1ea773154fdebf3d349c5ef221dfdb51e937d5afdba1ffa6f354",
+    "ml/model.py": "68d96c555744bb8fc8aea30068db8afca1d7eae674accba297a698d0e0c6005b",
     "ml/dga.py": "0a03098bf4cc22d8f5b7ff5fe3bd75d82d735479730e1890a7f99bedb9d6c0b7",
     "detection/dga_rules.py": "2d6ea804a0ecf0e4ac9e16ee884e477581e975b767241c4486c3297b07ddee59",
     "ml/artifact.json": "4d8e08323374535789e21f9f7cd1ee3f1c84b663ce555e67bb4ced57c95e8010",

@@ -52,7 +52,7 @@
       "newline_normalized": true
     },
     "features/extractor.py": {
-      "sha256": "34cbc02a5e5674b6b23f5e4970762237d4ea1b62b24bb8f6fbcd6d440d238507",
+      "sha256": "0ad247166c97ff8b521ee9c9f9167fbfaaaae5b7748e030614f88f8e257708a5",
       "newline_normalized": true
     },
     "features/dns_tunnel.py": {
@@ -64,7 +64,7 @@
       "newline_normalized": true
     },
     "ml/model.py": {
-      "sha256": "2721a53d667d1ea773154fdebf3d349c5ef221dfdb51e937d5afdba1ffa6f354",
+      "sha256": "68d96c555744bb8fc8aea30068db8afca1d7eae674accba297a698d0e0c6005b",
       "newline_normalized": true
     },
     "ml/dga.py": {
