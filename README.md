@@ -281,6 +281,7 @@ Offline feature definitions/integrity and known historical drift:
 not a runtime activation change or an accuracy gate).
 Downloaded public sources, replay presets and measured limitations: [Dataset integration](docs/DATASETS.md).
 Scoring detectors on your own labelled lab captures: [Lab evaluation harness](docs/LAB_EVALUATION.md).
+Recording those lab captures (setup, scenarios, labelling, splits): [Lab capture protocol](docs/LAB_CAPTURE_PROTOCOL.md).
 Importing NetFlow/IPFIX/sFlow exports: [Flow export import](docs/FLOW_EXPORT_IMPORT.md).
 Current runtime results and prioritized detection gaps: [Streaming validation](docs/STREAMING_VALIDATION.md).
 Older design documents describe proposals; they do not override the supplied screenshots
