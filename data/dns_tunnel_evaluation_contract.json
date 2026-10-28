@@ -103,7 +103,7 @@
     ]
   },
   "source_sha256": {
-    "detection/pipeline.py": "a2705c78fb9e3e5f191a93a92cec84c4723b12c4f940fa7231660db5d74060c5",
+    "detection/pipeline.py": "c783f04bd95b682255284f88c07e15bcbd42575ffdc1699d502e126265f695a8",
     "detection/dns_tunnel_candidate.py": "c1713f2a8bbc59753bbad586054e5b103082f4d67bf5c9cfa617383965540a9a",
     "features/extractor.py": "34cbc02a5e5674b6b23f5e4970762237d4ea1b62b24bb8f6fbcd6d440d238507",
     "features/dns_tunnel.py": "8ded37ba73c2d605f22baf4571f80842791f7b2b1584ce0230ddc365466605eb",
@@ -126,10 +126,11 @@
     "ml/dga_v2.json": "c0314dd5f1fe360db11e2494326fd6e99f267d6e920fa091f6c9fcebc796996e",
     "ml/dga_v2.sha256": "fb134985e6fd255935bb80fa4f77a73fc490957c0b669afd6bf290f9271ae080",
     "datasets/dns_tunnel_development.py": "3156b012b2a0c9c71321c36ec3d036e1c2510529c9bfc71918c7abc4088520f6",
-    "features/tls_session.py": "765701caf15c90d9a11377537b37eb28ea4f3de10581baf71e164bdfed0671ee",
+    "features/tls_session.py": "9ba0b3a89504799500f6a2d42419590f304b932605006031121659c2f0939afb",
     "detection/tls_indicators.py": "f388daacddd364f126736e62e3116fe53d55366ccb37b1909d6686e1167f37c0",
     "detection/tls_indicators.json": "36ca8bfdf638239874ec8890da4b959b482e66121a3533f1f8adf8e3f8822761",
-    "features/slow_http.py": "ec87620e525e9bd5142b78c6460a49e1921823808789e56db7b34bda17348d3c",
-    "ingest/flow_export.py": "d3d60079319e65586f7904f7cab536730818b1e237a184502070d658b91be1e9"
+    "features/slow_http.py": "9498263fb6686daa2cdb77e902eeb78816945ca022cca45239742a1aa37a0025",
+    "ingest/flow_export.py": "d3d60079319e65586f7904f7cab536730818b1e237a184502070d658b91be1e9",
+    "features/cow_map.py": "6df6284c0e6d49ea67ed09ba4af11596f5e2b93649d3a78832976271acc09c1a"
   }
 }

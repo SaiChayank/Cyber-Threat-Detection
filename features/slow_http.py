@@ -9,6 +9,8 @@ timeout. Request contents are never inspected.
 from collections import OrderedDict
 from copy import copy
 
+from features.cow_map import CowMap
+
 IDLE_EXPIRY_MS = 120000
 DATA_MIN_BYTES = 61  # IP total length above bare TCP/IP headers and common options.
 MAX_PAIRS = 4096
@@ -43,17 +45,11 @@ class Pair:
 
 class SlowHttpState:
     def __init__(self):
-        self.pairs = OrderedDict()  # (client, server, service port) -> Pair
+        self.pairs = CowMap(MAX_PAIRS)  # (client, server, service port) -> Pair, replaced on write
 
     def fork(self, event):
         staged = copy(self)
-        oriented = orient(event)
-        if oriented is None:
-            return staged
-        key = oriented[:3]
-        staged.pairs = self.pairs.copy()
-        if key in staged.pairs:
-            staged.pairs[key] = staged.pairs[key].copy()
+        staged.pairs = self.pairs.fork()
         return staged
 
     def update(self, event):
@@ -62,10 +58,10 @@ class SlowHttpState:
             return empty()
         client, server, service, client_port, from_client = oriented
         key = (client, server, service)
-        pair = self.pairs.pop(key, None)
+        pair = self.pairs.get(key)
         if pair is None and not (from_client and event.bytes >= DATA_MIN_BYTES):
             return empty(f'{server}:{service}')
-        pair = pair or Pair()
+        pair = pair.copy() if pair else Pair()
         now = event.timestamp
         for port in [p for p, row in pair.active.items() if now - row[1] > IDLE_EXPIRY_MS]:
             del pair.active[port]
@@ -77,9 +73,9 @@ class SlowHttpState:
             if len(pair.active) > MAX_ACTIVE:
                 pair.active.popitem(last=False)
         if pair.active:
-            self.pairs[key] = pair
-            if len(self.pairs) > MAX_PAIRS:
-                self.pairs.popitem(last=False)
+            self.pairs.set(key, pair)
+        else:
+            self.pairs.delete(key)
         ages = [(now - row[0]) / 1000 for row in pair.active.values()]
         rates = [row[2] / max(age, 1.0) for row, age in zip(pair.active.values(), ages)]
         slow = sum(age >= MIN_AGE_S and rate <= MAX_CLIENT_RATE_BPS for age, rate in zip(ages, rates))

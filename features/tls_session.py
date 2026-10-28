@@ -6,8 +6,10 @@ server JA3S), packet-size and timing regularity, and fingerprint rarity: how
 many distinct clients have offered the same client fingerprint so far.
 """
 import math
-from collections import OrderedDict, deque
+from collections import deque
 from copy import copy
+
+from features.cow_map import CowMap
 
 IDLE_MS = 60000
 MAX_SESSIONS = 4096
@@ -49,33 +51,26 @@ class Session:
 
 class TlsSessionState:
     def __init__(self):
-        self.sessions = OrderedDict()
-        self.fingerprint_clients = OrderedDict()  # client fingerprint -> frozenset of clients
-        self.clients = OrderedDict()  # TLS clients with an observed client fingerprint
+        self.sessions = CowMap(MAX_SESSIONS)
+        self.fingerprint_clients = CowMap(MAX_FINGERPRINTS)  # client fingerprint -> frozenset of clients
+        self.clients = CowMap(MAX_CLIENTS)  # TLS clients with an observed client fingerprint
 
     def fork(self, event):
-        """Copy only the state this event can change; other entries are never mutated."""
         staged = copy(self)
-        if not event.encrypted:
-            return staged
-        key = session_key(event)
-        staged.sessions = self.sessions.copy()
-        if key in staged.sessions:
-            staged.sessions[key] = staged.sessions[key].copy()
-        staged.fingerprint_clients = self.fingerprint_clients.copy()
-        staged.clients = self.clients.copy()
+        staged.sessions = self.sessions.fork()
+        staged.fingerprint_clients = self.fingerprint_clients.fork()
+        staged.clients = self.clients.fork()
         return staged
 
     def update(self, event):
         if not event.encrypted:
             return empty()
         key = session_key(event)
-        session = self.sessions.pop(key, None)
-        if session is None or event.timestamp - session.last > IDLE_MS:
-            session = Session(event.timestamp)
-        self.sessions[key] = session
-        if len(self.sessions) > MAX_SESSIONS:
-            self.sessions.popitem(last=False)
+        previous = self.sessions.get(key)
+        # Sessions are replaced on write, never mutated, so forks stay independent.
+        session = (previous.copy() if previous is not None and event.timestamp - previous.last <= IDLE_MS
+                   else Session(event.timestamp))
+        self.sessions.set(key, session)
         session.last = event.timestamp
         session.packets += event.packets
         session.sizes.append(event.bytes / event.packets)
@@ -86,16 +81,11 @@ class TlsSessionState:
         fingerprint = event.tls_ja4 or event.tls_fingerprint
         if fingerprint:
             client = key[0]
-            self.clients.pop(client, None)
-            self.clients[client] = True
-            if len(self.clients) > MAX_CLIENTS:
-                self.clients.popitem(last=False)
-            members = self.fingerprint_clients.pop(fingerprint, frozenset())
+            self.clients.set(client, True)
+            members = self.fingerprint_clients.get(fingerprint, frozenset())
             if client not in members and len(members) < MAX_CLIENTS_PER_FINGERPRINT:
                 members = members | {client}
-            self.fingerprint_clients[fingerprint] = members
-            if len(self.fingerprint_clients) > MAX_FINGERPRINTS:
-                self.fingerprint_clients.popitem(last=False)
+            self.fingerprint_clients.set(fingerprint, members)
         session_fingerprint = session.ja4 or session.ja3
         intervals = [(b - a) / 1000 for a, b in zip(session.times, list(session.times)[1:])]
         return dict(

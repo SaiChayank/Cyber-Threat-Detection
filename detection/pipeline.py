@@ -9,6 +9,7 @@ from detection.dga_rules import conservative_rule
 from detection.dns_tunnel_candidate import candidate_reason
 from detection import tls_indicators
 from features import slow_http as slow_http_features
+from features.cow_map import CowMap
 from features.dns_tunnel import FEATURE_NAMES as DNS_TUNNEL_FEATURES
 from schemas.alert import AlertEvent
 from schemas.enums import ThreatClass, Severity, DetectorType
@@ -34,7 +35,7 @@ class Pipeline:
         self.processed = 0
         self.latencies = deque(maxlen=10000)
         self.dedup = {}
-        self.sessions = OrderedDict()
+        self.sessions = CowMap(4096)
         self.dns_tunnel_candidate = dns_tunnel_candidate
         self.tls_indicators = tls_indicators.load()
 
@@ -42,11 +43,9 @@ class Pipeline:
         if event.flow_id:
             return event.flow_id
         key = (str(event.src_ip), str(event.dst_ip), event.src_port, event.dst_port, event.protocol)
-        previous = self.sessions.pop(key, None)
+        previous = self.sessions.get(key)
         start = previous[0] if previous and event.timestamp - previous[1] < 60000 else event.timestamp
-        self.sessions[key] = (start, event.timestamp)
-        if len(self.sessions) > 4096:
-            self.sessions.popitem(last=False)
+        self.sessions.set(key, (start, event.timestamp))
         return FlowRecord.compute_flow_id(*key, start)
 
     def process(self, event, persist=None):
@@ -59,7 +58,7 @@ class Pipeline:
         started = time.perf_counter()
         staged = copy(self)
         staged.extractor = self.extractor.fork(event)
-        staged.sessions = self.sessions.copy()
+        staged.sessions = self.sessions.fork()
         alerts = staged._detect(event)
         processing_ms = (time.perf_counter() - started) * 1000
         result = persist(alerts) if persist is not None else alerts
