@@ -1,5 +1,9 @@
 # Public-only dataset route
 
+> **Superseded 29 October 2026.** Public-dataset qualification has stopped; the
+> active route is owner-recorded, labelled lab captures. See the
+> [current sequence](COMPLETION_EXECUTION_20261018.md). This record is historical.
+
 20 October 2026, Asia/Calcutta. Baseline `42f0be3`.
 **Access-policy change applied. New qualified replacements: zero.**
 

@@ -1,6 +1,31 @@
 # Remaining implementation sequence
 
-## Current completion sequence — 21 October 2026
+## Route change — 29 October 2026 (supersedes the data route below)
+
+The project owner stopped public-dataset qualification. Detector quality is now
+measured on captures the owner records and labels in an isolated lab, using
+the tools the problem statement names. The earlier public-only route and every
+"exactly next" public-source step below are historical, not active work.
+Passive, read-only analysis, frozen gates, protected hashes and disabled
+candidates are unchanged.
+
+Active sequence:
+
+1. **P0-1 — Lab evaluation harness: COMPLETE.** [Lab evaluation](LAB_EVALUATION.md)
+   scores the unchanged pipeline against `ps26145-lab-labels/1` captures.
+2. **P0-2 — Lab capture protocol:** recording, labelling and split rules for the
+   owner's lab captures.
+3. **P0-4 — Encrypted-session metadata:** JA3S and JA4, and size/timing features in
+   place of the single lab-fingerprint check.
+4. **P0-3 — Slow-HTTP exhaustion detector:** passive connection-duration and
+   incomplete-request features.
+5. **P0-5 — Tune and validate on lab captures:** train/validation only; score the
+   test split once; enable candidates only when their gates pass.
+6. **P1 —** NetFlow/IPFIX/sFlow import, PCAP flows/sec and Mbps throughput, one
+   consolidated model/feature/validation report, then demo refresh and clean
+   checkout.
+
+## Completion sequence — 21 October 2026 (historical)
 
 **Engineering assessment: 7/10 overall.** This is a judgement of the working
 prototype, not a measured completion percentage or production-accuracy score.

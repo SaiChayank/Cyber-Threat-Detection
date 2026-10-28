@@ -1,5 +1,10 @@
 # Univect — Passive Threat Intelligence · PS26145
 
+**Route change, 29 October 2026:** public-dataset qualification has stopped.
+Detector quality is now measured on owner-recorded, labelled lab captures with
+the read-only [lab evaluation harness](docs/LAB_EVALUATION.md). No detector, model
+or gate change. See [the current sequence](docs/COMPLETION_EXECUTION_20261018.md).
+
 **Monitor recovery, finalized 21 October 2026:** malformed SSE alerts now trigger
 durable-history reconciliation, preventing a later valid message from hiding a
 missing repaired record. Three frontend regressions, 616 backend tests,
