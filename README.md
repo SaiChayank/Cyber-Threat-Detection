@@ -162,8 +162,10 @@ See [Website guide](docs/FRONTEND.md) for architecture, environment variables an
 - DGA: domain entropy, digits and bigram statistics.
 - DNS tunnelling: long first-label TXT / NULL evidence and synthetic-model hits;
   the broader causal-history candidate is disabled.
-- Encrypted-session malware suspicion: TLS fingerprints and encrypted packet-size /
-  timing patterns; no application payload decryption.
+- Encrypted-session malware suspicion: client JA3/JA4 and server JA3S fingerprints,
+  an operator indicator list, fingerprint rarity and per-session packet-size /
+  timing regularity; no application payload decryption. See
+  [encrypted-session detection](docs/ENCRYPTED_SESSION_DETECTION.md).
 - Reconnaissance: destination host and port fan-out.
 - Exfiltration: outbound volume and observed directional byte ratios when available.
 
@@ -243,7 +245,7 @@ records may include reverse-byte counts only when explicitly passively observed.
 
 The initial encrypted-session model uses controlled synthetic patterns and a lab
 fingerprint, not a production malware feed. Complete single-record TLS ClientHello
-JA3 is parsed from PCAP. QUIC packet dynamics and supplied metadata are accepted,
+JA3/JA4 and ServerHello JA3S are parsed from PCAP. QUIC packet dynamics and supplied metadata are accepted,
 but raw QUIC handshake fingerprint extraction is not implemented. TCP reassembly,
 PCAPNG, IPv6 extension decoding and production authentication are outside this local
 prototype. DoH / DoT hide DNS names. Read the full limits before assessing accuracy.

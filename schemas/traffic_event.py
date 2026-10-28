@@ -1,6 +1,8 @@
 """Validated metadata-only event contract. Times are UTC epoch milliseconds."""
 from typing import Literal
-from pydantic import BaseModel, Field, IPvAnyAddress, model_validator
+from pydantic import BaseModel, Field, IPvAnyAddress, model_serializer, model_validator
+
+OPTIONAL_HANDSHAKE_FIELDS = ('tls_server_fingerprint', 'tls_ja4')
 
 
 class TrafficEvent(BaseModel):
@@ -17,7 +19,9 @@ class TrafficEvent(BaseModel):
     syn_packets: int | None = Field(default=None, ge=0, le=1000000)
     dns_name: str | None = Field(default=None, max_length=253)
     dns_type: int = Field(default=1, ge=0, le=65535)
-    tls_fingerprint: str | None = Field(default=None, max_length=256)
+    tls_fingerprint: str | None = Field(default=None, max_length=256)  # Client JA3 hash
+    tls_server_fingerprint: str | None = Field(default=None, max_length=256)  # Server JA3S hash
+    tls_ja4: str | None = Field(default=None, max_length=64)  # Client JA4
     encrypted: bool = False
     transport: Literal['IP', 'TLS', 'QUIC'] = 'IP'
     reverse_bytes: int | None = Field(default=None, ge=0, le=1000000000)
@@ -33,3 +37,13 @@ class TrafficEvent(BaseModel):
         if self.reverse_observed and self.reverse_bytes is None:
             raise ValueError('reverse_observed requires reverse_bytes')
         return self
+
+    @model_serializer(mode='wrap')
+    def omit_absent_handshake_fields(self, handler):
+        # Events without JA3S/JA4 serialize exactly as before these fields existed,
+        # keeping exported streams and their recorded hashes byte-identical.
+        data = handler(self)
+        for key in OPTIONAL_HANDSHAKE_FIELDS:
+            if data.get(key) is None:
+                data.pop(key, None)
+        return data

@@ -40,7 +40,7 @@
       "newline_normalized": true
     },
     "detection/pipeline.py": {
-      "sha256": "4e70bc3e50546e57fa5f0d9432f3a9be969b906897d837f6f3638311c9b54926",
+      "sha256": "5561c2becebc20815acfc0f6accf1f834043622c5772be0103547735af8e7a43",
       "newline_normalized": true
     },
     "detection/dga_rules.py": {
@@ -52,7 +52,7 @@
       "newline_normalized": true
     },
     "features/extractor.py": {
-      "sha256": "624952f8063464c88466b861c72f121c318be5835a02a3d2a4b24b38b1800ac8",
+      "sha256": "b435ab418c189a2f453afd5368c92d8e0c4884f042524797dbed79765b2bf119",
       "newline_normalized": true
     },
     "features/dns_tunnel.py": {
@@ -72,7 +72,7 @@
       "newline_normalized": true
     },
     "schemas/traffic_event.py": {
-      "sha256": "e5be7daf5689e39e2cbe877b6972a81b947d70176dd2aed23a30620f5c3ae7a4",
+      "sha256": "eba26006fd2a6cdd50f4e52247f643cd41ebdcaf0ba40165c3916d38980ef913",
       "newline_normalized": true
     },
     "schemas/alert.py": {

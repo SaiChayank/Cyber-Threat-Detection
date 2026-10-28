@@ -7,6 +7,7 @@ from ml.model import Model
 from ml.dga import DgaModel, domain_label, FEATURE_VERSION
 from detection.dga_rules import conservative_rule
 from detection.dns_tunnel_candidate import candidate_reason
+from detection import tls_indicators
 from features.dns_tunnel import FEATURE_NAMES as DNS_TUNNEL_FEATURES
 from schemas.alert import AlertEvent
 from schemas.enums import ThreatClass, Severity, DetectorType
@@ -34,6 +35,7 @@ class Pipeline:
         self.dedup = {}
         self.sessions = OrderedDict()
         self.dns_tunnel_candidate = dns_tunnel_candidate
+        self.tls_indicators = tls_indicators.load()
 
     def flow_id(self, event):
         if event.flow_id:
@@ -104,13 +106,17 @@ class Pipeline:
             dga_score = self.dga_model.predict(event.dns_name)
             if dga_score is not None and dga_score >= self.dga_model.threshold:
                 hits['DGA_DOMAINS'] = (dga_score, DetectorType.ML)
+        tls_indicator = tls_indicators.indicator_match(f, self.tls_indicators) if event.encrypted else None
+        tls_behaviour = event.encrypted and tls_indicators.behaviour_match(f)
+        # Handshake-list and behaviour paths supplement the frozen lab-fingerprint feature.
+        tls_session_path = bool(tls_indicator or tls_behaviour) and not f['fingerprint_risk']
         rules = {
             'DDOS': syn_flood if event.protocol == 6 else udp_flood if event.protocol == 17 else f['packet_rate'] >= 1000,
             'RECONNAISSANCE': max(f['destination_count'], f['port_count']) >= 20,
             'DNS_TUNNELLING': bool(tunnel_reason) if self.dns_tunnel_candidate else f['domain_label_length'] >= 50 and f['txt_record'] == 1,
             'DGA_DOMAINS': dga_evidence and not self.dga_model.enabled,
             'BOTNET_C2': f['history_count'] >= 8 and f['iat_mean'] >= 1 and f['iat_cv'] < .05,
-            'ENCRYPTED_MALWARE': f['encrypted'] and f['fingerprint_risk'],
+            'ENCRYPTED_MALWARE': f['encrypted'] and (f['fingerprint_risk'] or tls_session_path),
             'DATA_EXFILTRATION': f['source_forward_bytes_60s'] > 20000000,
         }
         for threat, matched in rules.items():
@@ -137,7 +143,9 @@ class Pipeline:
             if len(self.dedup) >= 4096:
                 self.dedup.pop(next(iter(self.dedup)))
             self.dedup[key] = event.timestamp
-            evidence_keys = DNS_TUNNEL_FEATURES if threat == 'DNS_TUNNELLING' and self.dns_tunnel_candidate else EVIDENCE[threat]
+            evidence_keys = (DNS_TUNNEL_FEATURES if threat == 'DNS_TUNNELLING' and self.dns_tunnel_candidate
+                             else tls_indicators.EVIDENCE if threat == 'ENCRYPTED_MALWARE' and tls_session_path
+                             else EVIDENCE[threat])
             evidence = {k: f[k] for k in evidence_keys}
             if threat == 'DDOS' and syn_flood:
                 evidence.update(packet_rate=f['syn_target_packet_rate'],
@@ -160,6 +168,11 @@ class Pipeline:
                                 packet_size_cv=f['udp_packet_size_cv'],
                                 packet_size_basis=f['udp_packet_size_basis'],
                                 udp_target='destination_udp')
+            if threat == 'ENCRYPTED_MALWARE' and tls_session_path:
+                evidence['tls_basis'] = (f'indicator_{tls_indicator[0]}' if tls_indicator
+                                         else 'rare_fingerprint_regular_session')
+                if tls_indicator:
+                    evidence['tls_indicator_note'] = tls_indicator[2]
             if threat == 'DNS_TUNNELLING' and self.dns_tunnel_candidate:
                 evidence['dns_candidate_pattern'] = tunnel_reason
             if threat == 'DATA_EXFILTRATION':
@@ -189,7 +202,10 @@ class Pipeline:
                     narrative += '; reverse traffic unavailable: volume-only suspicion'
                 elif event.reverse_bytes == 0:
                     narrative += '; reverse observed as zero: finite byte ratio undefined'
-            if threat == 'ENCRYPTED_MALWARE':
+            if threat == 'ENCRYPTED_MALWARE' and tls_session_path:
+                narrative += ('; metadata-only suspicion from handshake fingerprints and session size/timing; '
+                              'payload not decrypted; not proof of malware')
+            elif threat == 'ENCRYPTED_MALWARE':
                 narrative += '; metadata-only suspicion; lab fingerprint, not proof of malware'
             severity = Severity.CRITICAL if threat == 'DDOS' else Severity.HIGH if threat in ('ENCRYPTED_MALWARE', 'DATA_EXFILTRATION', 'BOTNET_C2') else Severity.MEDIUM
             alerts.append(AlertEvent.create(fid, ThreatClass(threat), score, severity, narrative,

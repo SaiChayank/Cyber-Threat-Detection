@@ -1,4 +1,5 @@
 """Exact passive encrypted-metadata visibility regressions."""
+import hashlib
 import struct
 
 from datasets.validate_encrypted import CASES, events
@@ -26,7 +27,10 @@ def test_complete_tls_client_hello_exposes_ja3_and_sidecar_only():
     assert tls.extension_count == 3
     assert tls.cipher_suites == [49195, 49199]
     assert tls.sni == 'api.example.org'
-    assert tls.ja4 is None
+    # TLS 1.2, SNI, 2 ciphers, 3 extensions, no ALPN; SNI excluded from part c.
+    assert tls.ja4 == ('t12d020300_' + hashlib.sha256(b'c02b,c02f').hexdigest()[:12]
+                       + '_' + hashlib.sha256(b'000a,000b').hexdigest()[:12])
+    assert tls.role == 'client' and tls.ja3s_hash is None
     assert tls.is_quic is False
 
     flow = FlowRecord(flow_id='flow', src_ip='192.0.2.1', dst_ip='198.51.100.2',
@@ -38,6 +42,7 @@ def test_complete_tls_client_hello_exposes_ja3_and_sidecar_only():
                       tcp_flags_forward=0, is_unidirectional=True)
     event = from_packet(flow, tls=tls)
     assert event.tls_fingerprint == tls.ja3_hash
+    assert event.tls_ja4 == tls.ja4 and event.tls_server_fingerprint is None
     assert event.transport == 'TLS'
     assert not hasattr(event, 'cipher_suites')
     assert not hasattr(event, 'extension_count')

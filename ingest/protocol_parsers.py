@@ -162,9 +162,10 @@ class ProtocolParser:
                         dns_payload = payload_data[2:2 + message_length] if len(payload_data) >= 2 + message_length else b''
                 dns_record = self._try_parse_dns(dns_payload, flow_id, src_ip, dst_ip, timestamp_ms)
 
-            # Check for TLS ClientHello (Port 443 / TLS handshake)
+            # TLS ClientHello (JA3/JA4) or ServerHello (JA3S) in one segment, any port
             if protocol == 6 and payload_data:
-                tls_record = self._try_parse_tls_client_hello(payload_data, flow_id, total_ip_len)
+                tls_record = (self._try_parse_tls_client_hello(payload_data, flow_id, total_ip_len)
+                              or self._try_parse_tls_server_hello(payload_data, flow_id, total_ip_len))
 
             return flow_record, dns_record, tls_record
 
@@ -307,6 +308,9 @@ class ProtocolParser:
             extensions: List[int] = []
             elliptic_curves: List[int] = []
             point_formats: List[int] = []
+            supported_versions: List[int] = []
+            signature_algorithms: List[int] = []
+            alpn: Optional[bytes] = None
             sni_hostname: Optional[str] = None
 
             if idx + 2 <= len(payload):
@@ -337,11 +341,30 @@ class ProtocolParser:
                         for p_i in range(1, min(1 + num_pts, len(ext_data))):
                             point_formats.append(ext_data[p_i])
 
+                    # Signature Algorithms (Extension 13), offered order
+                    elif ext_type == 13 and len(ext_data) >= 2:
+                        sigs_len = struct.unpack("!H", ext_data[:2])[0]
+                        for s_i in range(2, min(2 + sigs_len, len(ext_data) - 1), 2):
+                            signature_algorithms.append(struct.unpack("!H", ext_data[s_i:s_i + 2])[0])
+
+                    # ALPN (Extension 16): first protocol name only
+                    elif ext_type == 16 and len(ext_data) >= 3 and alpn is None:
+                        alpn = ext_data[3:3 + ext_data[2]]
+
+                    # Supported Versions (Extension 43)
+                    elif ext_type == 43 and len(ext_data) >= 1:
+                        for v_i in range(1, min(1 + ext_data[0], len(ext_data) - 1), 2):
+                            supported_versions.append(struct.unpack("!H", ext_data[v_i:v_i + 2])[0])
+
                     idx += ext_len
 
             # Compute JA3 string and hash
             ja3_str, ja3_hash = TLSMetadataRecord.generate_ja3(
                 client_version, ciphers, extensions, elliptic_curves, point_formats
+            )
+            ja4 = TLSMetadataRecord.generate_ja4(
+                't', client_version, ciphers, extensions, supported_versions,
+                0 in extensions, alpn, signature_algorithms
             )
 
             return TLSMetadataRecord(
@@ -349,11 +372,58 @@ class ProtocolParser:
                 tls_version=client_version,
                 ja3_string=ja3_str,
                 ja3_hash=ja3_hash,
+                ja4=ja4,
                 cipher_suites=ciphers,
                 extension_count=len(extensions),
                 sni=sni_hostname,
                 splt_sequence=[packet_len]
             )
 
+        except Exception:
+            return None
+
+    def _try_parse_tls_server_hello(
+        self,
+        payload: bytes,
+        flow_id: str,
+        packet_len: int
+    ) -> Optional[TLSMetadataRecord]:
+        """Extracts the cleartext ServerHello for JA3S. Metadata only, NO decryption."""
+        try:
+            if len(payload) < 5 or payload[0] != 0x16:
+                return None
+            _, record_len = struct.unpack("!HH", payload[1:5])
+            if len(payload) < 5 + record_len or record_len < 38 or payload[5] != 0x02:
+                return None
+            end = 5 + record_len
+            idx = 9  # Skip handshake type (1) + length (3)
+            server_version = struct.unpack("!H", payload[idx:idx + 2])[0]
+            idx += 2 + 32  # Skip version (2) + random (32)
+            idx += 1 + payload[idx]  # Session ID
+            if idx + 3 > end:
+                return None
+            cipher = struct.unpack("!H", payload[idx:idx + 2])[0]
+            idx += 3  # Selected cipher (2) + compression method (1)
+            extensions: List[int] = []
+            if idx + 2 <= end:
+                ext_end = min(idx + 2 + struct.unpack("!H", payload[idx:idx + 2])[0], end)
+                idx += 2
+                while idx + 4 <= ext_end:
+                    ext_type, ext_len = struct.unpack("!HH", payload[idx:idx + 4])
+                    extensions.append(ext_type)
+                    idx += 4 + ext_len
+            ja3s_str, ja3s_hash = TLSMetadataRecord.generate_ja3s(server_version, cipher, extensions)
+            return TLSMetadataRecord(
+                flow_id=flow_id,
+                tls_version=server_version,
+                ja3_string='',
+                ja3_hash='',
+                cipher_suites=[cipher],
+                extension_count=len(extensions),
+                splt_sequence=[packet_len],
+                role='server',
+                ja3s_string=ja3s_str,
+                ja3s_hash=ja3s_hash
+            )
         except Exception:
             return None

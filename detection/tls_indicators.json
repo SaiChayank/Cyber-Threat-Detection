@@ -1,0 +1,9 @@
+{
+  "format": "ps26145-tls-indicators/1",
+  "description": "Operator-maintained handshake fingerprints treated as malicious-session indicators. Add entries from your threat intelligence or lab captures; each value is a short provenance note.",
+  "ja3": {
+    "7e4d466a0b44cdff79321bd4c7115dc1": "Project synthetic lab fingerprint used by the bundled demo; not a real malware family"
+  },
+  "ja3s": {},
+  "ja4": {}
+}

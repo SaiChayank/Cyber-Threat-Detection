@@ -103,19 +103,19 @@
     ]
   },
   "source_sha256": {
-    "detection/pipeline.py": "4e70bc3e50546e57fa5f0d9432f3a9be969b906897d837f6f3638311c9b54926",
+    "detection/pipeline.py": "5561c2becebc20815acfc0f6accf1f834043622c5772be0103547735af8e7a43",
     "detection/dns_tunnel_candidate.py": "c1713f2a8bbc59753bbad586054e5b103082f4d67bf5c9cfa617383965540a9a",
-    "features/extractor.py": "624952f8063464c88466b861c72f121c318be5835a02a3d2a4b24b38b1800ac8",
+    "features/extractor.py": "b435ab418c189a2f453afd5368c92d8e0c4884f042524797dbed79765b2bf119",
     "features/dns_tunnel.py": "8ded37ba73c2d605f22baf4571f80842791f7b2b1584ce0230ddc365466605eb",
     "features/rate_window.py": "a0d4542ab56b44bb51bdee88ebd56a7df95e9a9d6a79fc569769a9100b65d683",
-    "ingest/metadata.py": "e0f26334b4102928f9ac98a76de44e3ca204f53ed0104e17b1ca51031213eed6",
+    "ingest/metadata.py": "33ca622289a0e1bf5a98f1f633861486fb40826d96072bc5e7cde0995f6abf35",
     "ingest/pcap_reader.py": "591b09c0f6fc8cf2aab791d6aa52506a9e10adf80f9a4dc72850d78dc4e50157",
-    "ingest/protocol_parsers.py": "cf8cda0df2a543e85f1ad822d0634a2e417c049d2df2b56fd23a23890c56a6cd",
+    "ingest/protocol_parsers.py": "8b7e56b8246e3adf02f793e0267005ebd4d35ea2875a4e07997bedf8ab2674c6",
     "ingest/dead_letter.py": "d8e0912dab5537be9ba0f65d129c297732e9702a83ed75e54407fd2e17e8bc6b",
-    "schemas/traffic_event.py": "e5be7daf5689e39e2cbe877b6972a81b947d70176dd2aed23a30620f5c3ae7a4",
+    "schemas/traffic_event.py": "eba26006fd2a6cdd50f4e52247f643cd41ebdcaf0ba40165c3916d38980ef913",
     "schemas/flow_record.py": "026d07266e98a14c53631e81c676ec9d1a0314feae959611c7ca3e3664ce1d24",
     "schemas/dns_record.py": "bf3670d063025c481b851fdf60e30331744993cca7f88fc970eeaa59ed44ea8e",
-    "schemas/tls_metadata.py": "5aa0ecd0b7f33e5d0c4ea9e0103caa9d0f9567dab0db2ef2b0d2cafaa5a09237",
+    "schemas/tls_metadata.py": "c7cb2d1742a0129c0d8962581d491783fee7453bd789acde329f17be8f717381",
     "schemas/alert.py": "334362e24535863247903d82c0f6ba60e0f21aaa4d3a2f263f7bdf2a81c695f2",
     "schemas/enums.py": "8b8f820eea9af47d7d9cdb05d6963e2245fb44e7b0e641a620a4d0e6b4e2b576",
     "ml/model.py": "2721a53d667d1ea773154fdebf3d349c5ef221dfdb51e937d5afdba1ffa6f354",
@@ -125,6 +125,9 @@
     "ml/artifact.sha256": "81e4ef2dc7bdff28a82225e803c3e5ab675f3a3979b273a0ac3bef34241c284b",
     "ml/dga_v2.json": "c0314dd5f1fe360db11e2494326fd6e99f267d6e920fa091f6c9fcebc796996e",
     "ml/dga_v2.sha256": "fb134985e6fd255935bb80fa4f77a73fc490957c0b669afd6bf290f9271ae080",
-    "datasets/dns_tunnel_development.py": "3156b012b2a0c9c71321c36ec3d036e1c2510529c9bfc71918c7abc4088520f6"
+    "datasets/dns_tunnel_development.py": "3156b012b2a0c9c71321c36ec3d036e1c2510529c9bfc71918c7abc4088520f6",
+    "features/tls_session.py": "765701caf15c90d9a11377537b37eb28ea4f3de10581baf71e164bdfed0671ee",
+    "detection/tls_indicators.py": "f388daacddd364f126736e62e3116fe53d55366ccb37b1909d6686e1167f37c0",
+    "detection/tls_indicators.json": "36ca8bfdf638239874ec8890da4b959b482e66121a3533f1f8adf8e3f8822761"
   }
 }
