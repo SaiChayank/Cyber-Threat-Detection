@@ -297,7 +297,7 @@ and the seven detector labels. The letter mapping is **not verified**.
 | Delivery p95 < 1,000 ms (API to SSE) | Implemented (loopback only) | [Performance validation](PERFORMANCE_VALIDATION.md) |
 | NetFlow, IPFIX, sFlow import | Implemented as file import; no live collector | `ingest/flow_export.py`, [Flow export import](FLOW_EXPORT_IMPORT.md) |
 | Lab evaluation of real captures | Implemented (harness); Not validated on real captures (P0-5 pending) | `datasets/evaluate_lab.py`, [Lab evaluation](LAB_EVALUATION.md) |
-| Reproducible models and integrity | Implemented for active model; inactive public JSONs fail Windows checkout hash (H1) | `ml/artifact.json`, [Final release audit](FINAL_RELEASE_AUDIT.md) |
+| Reproducible models and integrity | Implemented for active model; all six model artifacts keep their hashes through a Windows checkout (H1 fixed; verified 29 Oct in a fresh clone) | `ml/artifact.json`, [Final release audit](FINAL_RELEASE_AUDIT.md) |
 | Detector quality gates | FAIL (B1, B2, B3 open) | [Final release audit](FINAL_RELEASE_AUDIT.md) |
 
 ## 8. Known limitations and next steps
@@ -331,12 +331,11 @@ and the seven detector labels. The letter mapping is **not verified**.
   (`PCAP_THROUGHPUT.md`).
 - Measurements are one-machine, one-process results, and the core JSON and prose figures differ by date (section 6.4).
 
-**Packaging.** Three inactive public-model JSON files fail hash checks after a Windows CRLF checkout
-(`public_cic.json`, `public_dga.json`, `public_tls.json`). They are not activated. Fix in a separate task.
+**Packaging.** The 2 Oct audit's H1 issue (three inactive public-model JSON files failing hash checks after a Windows CRLF
+checkout) is fixed by `.gitattributes` `-text` rules; the 29 Oct fresh clone matches all hashes and a checkout regression test covers it.
 
 **Next steps (from the project documents).**
 1. Record labelled lab captures per [Lab capture protocol](LAB_CAPTURE_PROTOCOL.md), with the split fixed before scoring.
 2. Score train and validation with `datasets/evaluate_lab`, then tune TLS, slow-HTTP and other thresholds (P0-5).
 3. Score the test split once. Enable a detector only if it passes its predeclared gate.
-4. Fix the inactive-artifact packaging issue (H1) with a checkout regression.
-5. Decide whether to bound the per-source history scan (a feature-contract change) to raise full-path throughput.
+4. Decide whether to bound the per-source history scan (a feature-contract change) to raise full-path throughput.
