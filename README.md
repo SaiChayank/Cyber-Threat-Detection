@@ -157,7 +157,9 @@ See [Website guide](docs/FRONTEND.md) for architecture, environment variables an
 
 ## Required detection coverage
 
-- DDoS: SYN / high-rate flood summaries, traffic volume and source entropy.
+- DDoS: SYN / high-rate flood summaries, traffic volume and source entropy; slow-HTTP
+  exhaustion from many long-lived, low-rate connections
+  ([slow-HTTP detection](docs/SLOW_HTTP_DETECTION.md)).
 - Botnet C2: inter-arrival regularity and repeated peer communication.
 - DGA: domain entropy, digits and bigram statistics.
 - DNS tunnelling: long first-label TXT / NULL evidence and synthetic-model hits;

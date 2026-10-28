@@ -103,16 +103,16 @@
     ]
   },
   "source_sha256": {
-    "detection/pipeline.py": "5561c2becebc20815acfc0f6accf1f834043622c5772be0103547735af8e7a43",
+    "detection/pipeline.py": "a2705c78fb9e3e5f191a93a92cec84c4723b12c4f940fa7231660db5d74060c5",
     "detection/dns_tunnel_candidate.py": "c1713f2a8bbc59753bbad586054e5b103082f4d67bf5c9cfa617383965540a9a",
-    "features/extractor.py": "b435ab418c189a2f453afd5368c92d8e0c4884f042524797dbed79765b2bf119",
+    "features/extractor.py": "34cbc02a5e5674b6b23f5e4970762237d4ea1b62b24bb8f6fbcd6d440d238507",
     "features/dns_tunnel.py": "8ded37ba73c2d605f22baf4571f80842791f7b2b1584ce0230ddc365466605eb",
     "features/rate_window.py": "a0d4542ab56b44bb51bdee88ebd56a7df95e9a9d6a79fc569769a9100b65d683",
-    "ingest/metadata.py": "33ca622289a0e1bf5a98f1f633861486fb40826d96072bc5e7cde0995f6abf35",
+    "ingest/metadata.py": "f25c26d888a08d0ffbc8174c69ec6ee2a4ad392e9ebf7ab3ea996c6e9910c550",
     "ingest/pcap_reader.py": "591b09c0f6fc8cf2aab791d6aa52506a9e10adf80f9a4dc72850d78dc4e50157",
     "ingest/protocol_parsers.py": "8b7e56b8246e3adf02f793e0267005ebd4d35ea2875a4e07997bedf8ab2674c6",
     "ingest/dead_letter.py": "d8e0912dab5537be9ba0f65d129c297732e9702a83ed75e54407fd2e17e8bc6b",
-    "schemas/traffic_event.py": "eba26006fd2a6cdd50f4e52247f643cd41ebdcaf0ba40165c3916d38980ef913",
+    "schemas/traffic_event.py": "032c9c7ce315227d7cf6b2232b7681f9aa9696cef131bbca9df55f6f68c47070",
     "schemas/flow_record.py": "026d07266e98a14c53631e81c676ec9d1a0314feae959611c7ca3e3664ce1d24",
     "schemas/dns_record.py": "bf3670d063025c481b851fdf60e30331744993cca7f88fc970eeaa59ed44ea8e",
     "schemas/tls_metadata.py": "c7cb2d1742a0129c0d8962581d491783fee7453bd789acde329f17be8f717381",
@@ -128,6 +128,7 @@
     "datasets/dns_tunnel_development.py": "3156b012b2a0c9c71321c36ec3d036e1c2510529c9bfc71918c7abc4088520f6",
     "features/tls_session.py": "765701caf15c90d9a11377537b37eb28ea4f3de10581baf71e164bdfed0671ee",
     "detection/tls_indicators.py": "f388daacddd364f126736e62e3116fe53d55366ccb37b1909d6686e1167f37c0",
-    "detection/tls_indicators.json": "36ca8bfdf638239874ec8890da4b959b482e66121a3533f1f8adf8e3f8822761"
+    "detection/tls_indicators.json": "36ca8bfdf638239874ec8890da4b959b482e66121a3533f1f8adf8e3f8822761",
+    "features/slow_http.py": "ec87620e525e9bd5142b78c6460a49e1921823808789e56db7b34bda17348d3c"
   }
 }

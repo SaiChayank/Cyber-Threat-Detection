@@ -2,7 +2,7 @@
 from typing import Literal
 from pydantic import BaseModel, Field, IPvAnyAddress, model_serializer, model_validator
 
-OPTIONAL_HANDSHAKE_FIELDS = ('tls_server_fingerprint', 'tls_ja4')
+OPTIONAL_OBSERVED_FIELDS = ('tls_server_fingerprint', 'tls_ja4', 'tcp_fin_rst')
 
 
 class TrafficEvent(BaseModel):
@@ -27,6 +27,7 @@ class TrafficEvent(BaseModel):
     reverse_bytes: int | None = Field(default=None, ge=0, le=1000000000)
     reverse_observed: bool = False
     flow_id: str | None = Field(default=None, max_length=128)
+    tcp_fin_rst: bool | None = None  # True when an observed TCP FIN or RST closes the connection
 
     @model_validator(mode='after')
     def check_reverse(self):
@@ -39,11 +40,11 @@ class TrafficEvent(BaseModel):
         return self
 
     @model_serializer(mode='wrap')
-    def omit_absent_handshake_fields(self, handler):
-        # Events without JA3S/JA4 serialize exactly as before these fields existed,
+    def omit_absent_observed_fields(self, handler):
+        # Events without JA3S/JA4/FIN-RST serialize exactly as before these fields existed,
         # keeping exported streams and their recorded hashes byte-identical.
         data = handler(self)
-        for key in OPTIONAL_HANDSHAKE_FIELDS:
+        for key in OPTIONAL_OBSERVED_FIELDS:
             if data.get(key) is None:
                 data.pop(key, None)
         return data

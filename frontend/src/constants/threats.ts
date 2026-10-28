@@ -7,8 +7,8 @@ export const threats = [
     name: 'DDoS & floods',
     title: 'Spot the surge.',
     description:
-      'Flow rates, SYN patterns and source-IP entropy expose suspicious floods and amplification behavior.',
-    signals: ['Flow-level rates', 'SYN statistics', 'Source-IP entropy'],
+      'Flow rates, SYN patterns and source-IP entropy expose suspicious floods and amplification behavior; long-lived trickle connections expose slow-HTTP exhaustion.',
+    signals: ['Flow-level rates', 'SYN statistics', 'Source-IP entropy', 'Slow connections'],
   },
   {
     id: 'BOTNET_C2',

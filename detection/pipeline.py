@@ -8,6 +8,7 @@ from ml.dga import DgaModel, domain_label, FEATURE_VERSION
 from detection.dga_rules import conservative_rule
 from detection.dns_tunnel_candidate import candidate_reason
 from detection import tls_indicators
+from features import slow_http as slow_http_features
 from features.dns_tunnel import FEATURE_NAMES as DNS_TUNNEL_FEATURES
 from schemas.alert import AlertEvent
 from schemas.enums import ThreatClass, Severity, DetectorType
@@ -83,6 +84,8 @@ class Pipeline:
                      and f['syn_target_fraction'] is not None
                      and f['syn_target_fraction'] >= .70)
         udp_flood = event.protocol == 17 and f['udp_target_packet_rate'] >= 1000
+        # Many long-lived, low-rate client connections to one service: slow-HTTP exhaustion.
+        slow_http = event.protocol == 6 and f['slow_http_connections'] >= slow_http_features.MIN_SLOW_CONNECTIONS
         if event.protocol == 6 and not syn_flood:
             # A frozen synthetic-model posterior or high TCP rate alone is not
             # evidence of a SYN flood in established, high-rate TCP traffic.
@@ -111,7 +114,7 @@ class Pipeline:
         # Handshake-list and behaviour paths supplement the frozen lab-fingerprint feature.
         tls_session_path = bool(tls_indicator or tls_behaviour) and not f['fingerprint_risk']
         rules = {
-            'DDOS': syn_flood if event.protocol == 6 else udp_flood if event.protocol == 17 else f['packet_rate'] >= 1000,
+            'DDOS': (syn_flood or slow_http) if event.protocol == 6 else udp_flood if event.protocol == 17 else f['packet_rate'] >= 1000,
             'RECONNAISSANCE': max(f['destination_count'], f['port_count']) >= 20,
             'DNS_TUNNELLING': bool(tunnel_reason) if self.dns_tunnel_candidate else f['domain_label_length'] >= 50 and f['txt_record'] == 1,
             'DGA_DOMAINS': dga_evidence and not self.dga_model.enabled,
@@ -145,6 +148,7 @@ class Pipeline:
             self.dedup[key] = event.timestamp
             evidence_keys = (DNS_TUNNEL_FEATURES if threat == 'DNS_TUNNELLING' and self.dns_tunnel_candidate
                              else tls_indicators.EVIDENCE if threat == 'ENCRYPTED_MALWARE' and tls_session_path
+                             else slow_http_features.EVIDENCE if threat == 'DDOS' and slow_http and not syn_flood
                              else EVIDENCE[threat])
             evidence = {k: f[k] for k in evidence_keys}
             if threat == 'DDOS' and syn_flood:
@@ -168,6 +172,8 @@ class Pipeline:
                                 packet_size_cv=f['udp_packet_size_cv'],
                                 packet_size_basis=f['udp_packet_size_basis'],
                                 udp_target='destination_udp')
+            if threat == 'DDOS' and slow_http and not syn_flood:
+                evidence['ddos_subtype'] = 'slow_http'
             if threat == 'ENCRYPTED_MALWARE' and tls_session_path:
                 evidence['tls_basis'] = (f'indicator_{tls_indicator[0]}' if tls_indicator
                                          else 'rare_fingerprint_regular_session')
@@ -196,6 +202,9 @@ class Pipeline:
                               'passive metadata cannot verify reflection or amplification factor'
                               if f['udp_target_source_count_lower_bound'] >= 16 and f['udp_packet_size_mean'] >= 512
                               else '; high-rate UDP pattern; passive metadata cannot verify reflection or amplification')
+            if threat == 'DDOS' and slow_http and not syn_flood:
+                narrative += ('; many long-lived low-rate connections held open to one service, '
+                              'consistent with slow-HTTP exhaustion; request contents not inspected')
             if threat == 'DATA_EXFILTRATION':
                 narrative += '; behavior consistent with possible exfiltration; content and intent unverified'
                 if not event.reverse_observed:
