@@ -129,6 +129,7 @@
     "features/tls_session.py": "765701caf15c90d9a11377537b37eb28ea4f3de10581baf71e164bdfed0671ee",
     "detection/tls_indicators.py": "f388daacddd364f126736e62e3116fe53d55366ccb37b1909d6686e1167f37c0",
     "detection/tls_indicators.json": "36ca8bfdf638239874ec8890da4b959b482e66121a3533f1f8adf8e3f8822761",
-    "features/slow_http.py": "ec87620e525e9bd5142b78c6460a49e1921823808789e56db7b34bda17348d3c"
+    "features/slow_http.py": "ec87620e525e9bd5142b78c6460a49e1921823808789e56db7b34bda17348d3c",
+    "ingest/flow_export.py": "d3d60079319e65586f7904f7cab536730818b1e237a184502070d658b91be1e9"
   }
 }

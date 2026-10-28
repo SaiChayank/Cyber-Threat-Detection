@@ -20,6 +20,7 @@ from pydantic import ValidationError
 
 from datasets.lab_labels import SPLITS, LabelError, load
 from detection.pipeline import Pipeline
+from ingest.flow_export import FlowExportDecoder, read_flow_export
 from ingest.metadata import from_packet
 from ingest.pcap_reader import PcapReader
 from ml.model import ARTIFACT
@@ -38,8 +39,13 @@ def sha256(path):
     return digest.hexdigest()
 
 
-def read_events(path, ingest):
-    """Yield TrafficEvents from PCAP or JSONL; parser drop counts land in ingest."""
+def read_events(path, ingest, source='packets'):
+    """Yield TrafficEvents from PCAP, flow-export PCAP or JSONL; drop counts land in ingest."""
+    if source == 'flow_export':
+        decoder = FlowExportDecoder()
+        yield from read_flow_export(path, decoder)
+        ingest.update(decoder.stats)
+        return
     if path.suffix.lower() == '.pcap':
         reader = PcapReader()
         for batch in reader.read_packets(path):
@@ -64,7 +70,7 @@ def evaluate_capture(labels, dns_tunnel_candidate=False):
                 for episode in labels.episodes}
     background = dict(events=0, alerts=Counter())
     ingest, events, ambiguous = {}, 0, 0
-    for event in read_events(labels.capture, ingest):
+    for event in read_events(labels.capture, ingest, labels.source):
         matches = labels.matching(event)
         ambiguous += len(matches) > 1
         alerts = pipeline.process(event)
@@ -92,7 +98,7 @@ def evaluate_capture(labels, dns_tunnel_candidate=False):
             first_correct_alert=first))
     return dict(label_file=str(labels.path), label_sha256=sha256(labels.path),
                 capture=str(labels.capture), capture_sha256=sha256(labels.capture),
-                split=labels.split, events=events, late_events=pipeline.extractor.late_events,
+                split=labels.split, source=labels.source, events=events, late_events=pipeline.extractor.late_events,
                 ambiguous_events=ambiguous, ingest=ingest, episodes=results,
                 background=dict(events=background['events'],
                                 alerts=dict(sorted(background['alerts'].items()))))

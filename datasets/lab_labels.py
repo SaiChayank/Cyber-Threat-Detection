@@ -17,6 +17,7 @@ FORMAT = 'ps26145-lab-labels/1'
 LABELS = frozenset(['BENIGN', *(threat.value for threat in ThreatClass)])
 SPLITS = ('train', 'validation', 'test', 'unassigned')
 CAPTURE_SUFFIXES = ('.pcap', '.jsonl')
+SOURCES = ('packets', 'flow_export')
 
 
 class LabelError(ValueError):
@@ -46,6 +47,7 @@ class CaptureLabels:
     capture: Path
     split: str
     episodes: tuple
+    source: str = 'packets'  # flow_export: PCAP of NetFlow/IPFIX/sFlow export datagrams
 
     def matching(self, event):
         return [episode for episode in self.episodes if episode.matches(event)]
@@ -119,6 +121,9 @@ def load(path):
     split = data.get('split', 'unassigned')
     if split not in SPLITS:
         raise LabelError(f'{path}: split must be one of {SPLITS}')
+    source = data.get('source', 'packets')
+    if source not in SOURCES or (source == 'flow_export' and capture_path.suffix.lower() != '.pcap'):
+        raise LabelError(f'{path}: source must be one of {SOURCES}; flow_export needs a .pcap capture')
     entries = data.get('episodes')
     if not isinstance(entries, list):
         raise LabelError(f'{path}: episodes must be a list')
@@ -126,4 +131,4 @@ def load(path):
     ids = [episode.id for episode in episodes]
     if len(ids) != len(set(ids)):
         raise LabelError(f'{path}: episode ids must be unique')
-    return CaptureLabels(path=path, capture=capture_path, split=split, episodes=episodes)
+    return CaptureLabels(path=path, capture=capture_path, split=split, episodes=episodes, source=source)

@@ -7,11 +7,13 @@ import sqlite3
 import tempfile
 from contextlib import asynccontextmanager
 from pathlib import Path
+from typing import Literal
 from fastapi import FastAPI, HTTPException, Query, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import StreamingResponse, RedirectResponse
 from pydantic import BaseModel, Field
 from detection.pipeline import Pipeline
+from ingest.flow_export import FlowExportDecoder, read_flow_export
 from ingest.metadata import from_packet
 from ingest.pcap_reader import PcapReader, validate_header
 from persistence.store import AlertStore
@@ -229,7 +231,8 @@ async def stop():
     return {'status': app.state.replay_status}
 
 @app.post('/api/replay/pcap')
-async def pcap(request: Request, speed: float = Query(20, ge=.1, le=10000)):
+async def pcap(request: Request, speed: float = Query(20, ge=.1, le=10000),
+               source: Literal['packets', 'flow_export'] = Query('packets')):
     if app.state.replay_status == 'running':
         raise HTTPException(409, 'A replay is already running')
     path = None
@@ -251,6 +254,10 @@ async def pcap(request: Request, speed: float = Query(20, ge=.1, le=10000)):
         raise
     def records():
         try:
+            if source == 'flow_export':
+                # Received NetFlow/IPFIX/sFlow datagrams; nothing is sent to exporters.
+                yield from read_flow_export(path, FlowExportDecoder())
+                return
             reader = PcapReader()
             for batch in reader.read_packets(path):
                 for flow, dns, tls in batch:
