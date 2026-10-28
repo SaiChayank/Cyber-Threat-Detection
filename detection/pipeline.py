@@ -7,7 +7,7 @@ from ml.model import Model
 from ml.dga import DgaModel, domain_label, FEATURE_VERSION
 from detection.dga_rules import conservative_rule
 from detection.dns_tunnel_candidate import candidate_reason
-from detection import tls_indicators
+from detection import spoof_indicators, tls_indicators
 from features import slow_http as slow_http_features
 from features.cow_map import CowMap
 from features.dns_tunnel import FEATURE_NAMES as DNS_TUNNEL_FEATURES
@@ -171,6 +171,13 @@ class Pipeline:
                                 packet_size_cv=f['udp_packet_size_cv'],
                                 packet_size_basis=f['udp_packet_size_basis'],
                                 udp_target='destination_udp')
+            spoof_evidence = None
+            if threat == 'DDOS' and (syn_flood or udp_flood):
+                tracked = (self.extractor.syn_targets if event.protocol == 6 else self.extractor.udp_targets)
+                window = tracked.get(str(event.dst_ip))
+                spoof_evidence = spoof_indicators.reserved_sources(window.sources) if window else None
+                if spoof_evidence:
+                    evidence.update(spoof_evidence)
             if threat == 'DDOS' and slow_http and not syn_flood:
                 evidence['ddos_subtype'] = 'slow_http'
             if threat == 'ENCRYPTED_MALWARE' and tls_session_path:
@@ -201,6 +208,9 @@ class Pipeline:
                               'passive metadata cannot verify reflection or amplification factor'
                               if f['udp_target_source_count_lower_bound'] >= 16 and f['udp_packet_size_mean'] >= 512
                               else '; high-rate UDP pattern; passive metadata cannot verify reflection or amplification')
+            if spoof_evidence:
+                narrative += ('; reserved or martian source addresses among flood sources, a passive '
+                              'indicator of forged sources that cannot prove forgery')
             if threat == 'DDOS' and slow_http and not syn_flood:
                 narrative += ('; many long-lived low-rate connections held open to one service, '
                               'consistent with slow-HTTP exhaustion; request contents not inspected')

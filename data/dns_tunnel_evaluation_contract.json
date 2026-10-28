@@ -103,7 +103,7 @@
     ]
   },
   "source_sha256": {
-    "detection/pipeline.py": "c783f04bd95b682255284f88c07e15bcbd42575ffdc1699d502e126265f695a8",
+    "detection/pipeline.py": "88c35b754ca3533bbe077ac433e4262205e10d4c897525bbe1c62b908325246c",
     "detection/dns_tunnel_candidate.py": "c1713f2a8bbc59753bbad586054e5b103082f4d67bf5c9cfa617383965540a9a",
     "features/extractor.py": "0ad247166c97ff8b521ee9c9f9167fbfaaaae5b7748e030614f88f8e257708a5",
     "features/dns_tunnel.py": "8ded37ba73c2d605f22baf4571f80842791f7b2b1584ce0230ddc365466605eb",
@@ -131,6 +131,7 @@
     "detection/tls_indicators.json": "36ca8bfdf638239874ec8890da4b959b482e66121a3533f1f8adf8e3f8822761",
     "features/slow_http.py": "9498263fb6686daa2cdb77e902eeb78816945ca022cca45239742a1aa37a0025",
     "ingest/flow_export.py": "d3d60079319e65586f7904f7cab536730818b1e237a184502070d658b91be1e9",
-    "features/cow_map.py": "6df6284c0e6d49ea67ed09ba4af11596f5e2b93649d3a78832976271acc09c1a"
+    "features/cow_map.py": "6df6284c0e6d49ea67ed09ba4af11596f5e2b93649d3a78832976271acc09c1a",
+    "detection/spoof_indicators.py": "25a2e5bcb68a6f7aea46af5bf53627cb3a6eb38b7660a13ad5e487b235c841c1"
   }
 }
