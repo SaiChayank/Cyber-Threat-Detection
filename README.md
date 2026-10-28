@@ -271,6 +271,7 @@ Offline feature definitions/integrity and known historical drift:
 [Semantic contract preflight](docs/FEATURE_SEMANTIC_CONTRACT.md) (expected exit 1;
 not a runtime activation change or an accuracy gate).
 Downloaded public sources, replay presets and measured limitations: [Dataset integration](docs/DATASETS.md).
+Scoring detectors on your own labelled lab captures: [Lab evaluation harness](docs/LAB_EVALUATION.md).
 Current runtime results and prioritized detection gaps: [Streaming validation](docs/STREAMING_VALIDATION.md).
 Older design documents describe proposals; they do not override the supplied screenshots
 or establish implemented features and measured results.
