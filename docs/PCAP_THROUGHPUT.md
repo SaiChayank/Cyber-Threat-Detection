@@ -54,13 +54,13 @@ Tests: `.venv/Scripts/python.exe -m pytest -q tests/test_pcap_throughput.py`
 
 | Path | Packets/s | Flows/s | Sustained Mbps |
 | --- | --- | --- | --- |
-| Parse only (reader + adapter) | 72,320 | n/a | 433 |
-| Full path (parse + features + inference) | **2,203** | 136.2 | **13.2** |
+| Parse only (reader + adapter) | 67,281 | n/a | 403 |
+| Full path (parse + features + inference) | **2,960** | 183.0 | **17.7** |
 
 The full path clears 2,000 packets/s on this workload (about 0.22x real time on
-a capture compressed into 5 s). Five repeat runs on the same machine gave 2,126 to
-2,240 packets/s; an earlier build ranged 1,745 to 2,155 because the machine had
-background load, so expect roughly +/-10% run to run. The project's separate 2,000 events/s gate on
+a capture compressed into 5 s). The saved run was quiet (no background load); five earlier runs on the same code under
+moderate background load gave 2,126 to 2,240 packets/s, and a slower build ranged 1,745 to
+2,155. Expect roughly 2,100 to 3,000 packets/s depending on machine load. The project's separate 2,000 events/s gate on
 flow-summary metadata events is unchanged and still passes (3,301 events/s,
 p95 0.94 ms, same 1,170 alerts; see [Performance validation](PERFORMANCE_VALIDATION.md)).
 
@@ -92,6 +92,8 @@ is that tables that were first-in-first-out (flow IDs, TLS, slow-HTTP) now evict
 least recently used entry, which only matters beyond their 4,096-entry bounds.
 
 Remaining limits: throughput still declines slowly as histories fill; the same-peer
-timing and size statistics still scan that peer's retained events. The workload also
-raised 2 false `ENCRYPTED_MALWARE` alerts from the rare-fingerprint rule; tune that in
-P0-5. Treat all figures as one-machine, synthetic-capture results.
+timing and size statistics still scan that peer's retained events. The workload used to
+raise 2 false `ENCRYPTED_MALWARE` alerts; they came from the synthetic classifier labelling
+ordinary port-443 flows (no TLS metadata), not from the TLS rules. A guard now requires
+observed TLS or QUIC metadata for a model-only encrypted hit, and the benign workload
+raises 0 alerts. Treat all figures as one-machine, synthetic-capture results.

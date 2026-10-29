@@ -96,6 +96,11 @@ class Pipeline:
             # The frozen synthetic model must not infer a UDP flood from volume
             # elsewhere in the enclave or from a low-rate flow summary.
             hits.pop('DDOS', None)
+        if event.transport == 'IP':
+            # Port 443 alone is not an observed TLS/QUIC session: the synthetic model's
+            # posterior cannot raise encrypted-malware suspicion without handshake or
+            # QUIC metadata. Rule and fingerprint paths below are unaffected.
+            hits.pop('ENCRYPTED_MALWARE', None)
         # The synthetic model's DNS posterior alone does not generalize to real
         # domains. Require the existing lexical rule for DGA alerts, measuring
         # length on the same first label as entropy and bigram surprise.

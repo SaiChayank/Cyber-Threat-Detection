@@ -264,14 +264,14 @@ Synthetic benign workload: 50,000 packets, 3,091 flows, 5.0 s of capture, one ma
 
 | Path | Packets/s | Flows/s | Sustained Mbps |
 | --- | --- | --- | --- |
-| Parse only (reader and adapter) | 72,320 | n/a | 433 |
-| Full path (parse, features, inference) | **2,203** | 136.2 | **13.18** |
+| Parse only (reader and adapter) | 67,281 | n/a | 403 |
+| Full path (parse, features, inference) | **2,960** | 183.0 | **17.71** |
 
-**The full PCAP path clears 2,000 packets/s** (realtime factor 0.22 on this compressed capture; five runs 2,126 to 2,240). Result-neutral
+**The full PCAP path clears 2,000 packets/s** (realtime factor 0.30 on this compressed capture; about 2,100 to 3,000 depending on machine load). Result-neutral
 copy-on-write state and incremental history aggregates raised it from 669 packets/s; a differential run showed zero
 feature differences ([PCAP throughput](PCAP_THROUGHPUT.md)). The separate 2,000-events/s gate applies to
 flow-summary metadata events (section 6.4).
-The run raised 2 benign `ENCRYPTED_MALWARE` alerts from the rare-fingerprint rule.
+The benign run raises 0 alerts. (It previously raised 2 false `ENCRYPTED_MALWARE` alerts from the synthetic classifier on port-443 flows without TLS metadata; a guard now requires observed TLS/QUIC metadata for a model-only encrypted hit.)
 
 ## 7. Requirement traceability
 
@@ -295,7 +295,7 @@ and the seven detector labels. The letter mapping is **not verified**.
 | Dashboard, SSE, persistence and restart | Implemented (local, single worker) | `frontend/`, `backend/`, `persistence/store.py` |
 | Streaming with bounded latency | Implemented (controlled demo and core scope) | `features/extractor.py`, `benchmarks/run.py` |
 | Core throughput >= 2,000 metadata events/s, p95 < 50 ms | Implemented (one machine, synthetic) | `benchmarks/latest.json` |
-| Full-path packet throughput | Implemented: 2,203 packets/s (one machine, synthetic benign capture; about +/-10% run to run) | `benchmarks/pcap_throughput_latest.json` |
+| Full-path packet throughput | Implemented: about 2,100 to 3,000 packets/s (one machine, synthetic benign capture, load-dependent) | `benchmarks/pcap_throughput_latest.json` |
 | Delivery p95 < 1,000 ms (API to SSE) | Implemented (loopback only) | [Performance validation](PERFORMANCE_VALIDATION.md) |
 | NetFlow, IPFIX, sFlow import | Implemented as file import; no live collector | `ingest/flow_export.py`, [Flow export import](FLOW_EXPORT_IMPORT.md) |
 | Lab evaluation of real captures | Implemented (harness); Not validated on real captures (P0-5 pending) | `datasets/evaluate_lab.py`, [Lab evaluation](LAB_EVALUATION.md) |
@@ -328,7 +328,7 @@ and the seven detector labels. The letter mapping is **not verified**.
 - DoH and DoT hide DNS names. Segmented DNS/TCP questions are not reconstructed.
 
 **Performance.**
-- Full packet path: 2,203 packets/s over 50,000 packets. Throughput still declines slowly as per-source histories fill, and
+- Full packet path: 2,960 packets/s over 50,000 packets on a quiet machine (about 2,100 under load). Throughput still declines slowly as per-source histories fill, and
   the figure is one machine, one process, a synthetic benign capture (`PCAP_THROUGHPUT.md`).
 - Measurements are one-machine, one-process results, and the core JSON and prose figures differ by date (section 6.4).
 
