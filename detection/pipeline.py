@@ -6,7 +6,7 @@ from ml.model import Model
 from ml.dga import DgaModel, domain_label, FEATURE_VERSION
 from detection.dga_rules import conservative_rule
 from detection.dns_tunnel_candidate import candidate_reason
-from detection import spoof_indicators, tls_indicators
+from detection import rule_thresholds as thresholds, spoof_indicators, tls_indicators
 from features import slow_http as slow_http_features
 from features import slow_read as slow_read_features
 from features.cow_map import CowMap, shallow
@@ -122,12 +122,13 @@ class Pipeline:
         tls_session_path = bool(tls_indicator or tls_behaviour) and not f['fingerprint_risk']
         rules = {
             'DDOS': (syn_flood or slow_exhaustion) if event.protocol == 6 else udp_flood if event.protocol == 17 else f['packet_rate'] >= 1000,
-            'RECONNAISSANCE': max(f['destination_count'], f['port_count']) >= 20,
+            'RECONNAISSANCE': max(f['destination_count'], f['port_count']) >= thresholds.RECON_MIN_FANOUT,
             'DNS_TUNNELLING': bool(tunnel_reason) if self.dns_tunnel_candidate else f['domain_label_length'] >= 50 and f['txt_record'] == 1,
             'DGA_DOMAINS': dga_evidence and not self.dga_model.enabled,
-            'BOTNET_C2': f['history_count'] >= 8 and f['iat_mean'] >= 1 and f['iat_cv'] < .05,
+            'BOTNET_C2': (f['history_count'] >= thresholds.C2_MIN_HISTORY and f['iat_mean'] >= thresholds.C2_MIN_IAT_MEAN_S
+                          and f['iat_cv'] < thresholds.C2_MAX_IAT_CV),
             'ENCRYPTED_MALWARE': f['encrypted'] and (f['fingerprint_risk'] or tls_session_path),
-            'DATA_EXFILTRATION': f['source_forward_bytes_60s'] > 20000000,
+            'DATA_EXFILTRATION': f['source_forward_bytes_60s'] > thresholds.EXFIL_BYTES_60S,
         }
         for threat, matched in rules.items():
             if matched:
@@ -135,9 +136,9 @@ class Pipeline:
         alerts = []
         self.dedup = {k: t for k, t in self.dedup.items() if event.timestamp - t < 30000}
         for threat, (score, source) in hits.items():
-            if threat == 'RECONNAISSANCE' and max(f['destination_count'], f['port_count']) < 10:
+            if threat == 'RECONNAISSANCE' and max(f['destination_count'], f['port_count']) < thresholds.RECON_ALERT_FLOOR:
                 continue
-            if threat == 'BOTNET_C2' and f['history_count'] < 8:
+            if threat == 'BOTNET_C2' and f['history_count'] < thresholds.C2_MIN_HISTORY:
                 continue
             if threat == 'ENCRYPTED_MALWARE' and not event.encrypted:
                 continue

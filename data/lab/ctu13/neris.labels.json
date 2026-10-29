@@ -1,0 +1,16 @@
+{
+  "format": "ps26145-lab-labels/1",
+  "capture": "../../raw/ctu13-lab/botnet-capture-20110810-neris.pcap",
+  "split": "unassigned",
+  "episodes": [
+    {
+      "id": "ctu13-42-neris",
+      "label": "BOTNET_C2",
+      "scenario": "neris_botnet",
+      "tool": "CTU-13 scenario 1 (Neris), infected-VM interface capture, public CTU Malware Capture Botnet-42",
+      "start_ms": 1312967063000,
+      "end_ms": 1312984170000,
+      "hosts": ["147.32.84.165"]
+    }
+  ]
+}

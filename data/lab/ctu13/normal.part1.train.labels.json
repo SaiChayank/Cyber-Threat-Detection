@@ -1,0 +1,16 @@
+{
+  "format": "ps26145-lab-labels/1",
+  "capture": "../../raw/ctu13-lab/slices/normal-capture-20110817.part1.pcap",
+  "split": "train",
+  "episodes": [
+    {
+      "id": "ctu13-normal-part1",
+      "label": "BENIGN",
+      "scenario": "normal_campus_traffic",
+      "tool": "CTU Botnet-50 normal-capture-20110817 (RDP, SMB, web); time slice of one recording",
+      "start_ms": 1313576912041,
+      "end_ms": 1313579128938,
+      "hosts": []
+    }
+  ]
+}

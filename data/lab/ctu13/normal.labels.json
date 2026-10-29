@@ -1,0 +1,16 @@
+{
+  "format": "ps26145-lab-labels/1",
+  "capture": "../../raw/ctu13-lab/normal-capture-20110817.pcap",
+  "split": "unassigned",
+  "episodes": [
+    {
+      "id": "ctu13-50-normal",
+      "label": "BENIGN",
+      "scenario": "normal_campus_traffic",
+      "tool": "CTU Malware Capture Botnet-50 normal-capture-20110817 (ordinary RDP, SMB, web)",
+      "start_ms": 1313576916000,
+      "end_ms": 1313583559000,
+      "hosts": []
+    }
+  ]
+}

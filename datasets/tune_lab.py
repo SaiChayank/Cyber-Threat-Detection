@@ -20,16 +20,19 @@ from pathlib import Path
 
 from datasets import evaluate_lab
 from datasets.lab_labels import LabelError, load
-from detection import tls_indicators
+from detection import rule_thresholds, tls_indicators
 from features import slow_http, slow_read
 
 MAX_COMBINATIONS = 200
-MODULES = {'tls_indicators': tls_indicators, 'slow_http': slow_http, 'slow_read': slow_read}
+MODULES = {'tls_indicators': tls_indicators, 'slow_http': slow_http, 'slow_read': slow_read,
+           'rule_thresholds': rule_thresholds}
 TUNABLE = {
     'tls_indicators': ('MIN_SESSION_PACKETS', 'MAX_SIZE_CV', 'MAX_IAT_CV', 'MAX_MEAN_BYTES',
                        'MAX_FINGERPRINT_CLIENTS', 'MIN_CLIENT_POPULATION'),
     'slow_http': ('MIN_SLOW_CONNECTIONS', 'MIN_AGE_S', 'MAX_CLIENT_RATE_BPS'),
     'slow_read': ('MIN_SLOW_READ_CONNECTIONS', 'SMALL_WINDOW', 'MIN_AGE_S'),
+    'rule_thresholds': ('C2_MIN_HISTORY', 'C2_MIN_IAT_MEAN_S', 'C2_MAX_IAT_CV', 'RECON_MIN_FANOUT',
+                        'RECON_ALERT_FLOOR', 'EXFIL_BYTES_60S'),
 }
 ALLOWED = {f'{module}.{name}' for module, names in TUNABLE.items() for name in names}
 

@@ -1,0 +1,5 @@
+{
+  "rule_thresholds.C2_MAX_IAT_CV": [0.05, 0.15, 0.3, 0.5],
+  "rule_thresholds.C2_MIN_HISTORY": [8, 16],
+  "rule_thresholds.C2_MIN_IAT_MEAN_S": [1, 5]
+}
