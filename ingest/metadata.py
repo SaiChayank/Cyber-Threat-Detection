@@ -18,4 +18,5 @@ def from_packet(flow, dns=None, tls=None):
                         tls_server_fingerprint=server.ja3s_hash if server else None,
                         tls_ja4=client.ja4 if client else None,
                         tcp_fin_rst=True if flow.protocol == 6 and flow.tcp_flags_forward & 0x05 else None,
+                        tcp_window=flow.tcp_window_forward if flow.protocol == 6 else None,
                         transport='TLS' if tls else 'QUIC' if flow.protocol == 17 and flow.dst_port == 443 else 'IP')

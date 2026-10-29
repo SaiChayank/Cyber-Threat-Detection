@@ -94,6 +94,7 @@ class ProtocolParser:
             src_port: Optional[int] = None
             dst_port: Optional[int] = None
             tcp_flags: int = 0
+            tcp_window: Optional[int] = None
             payload_data: bytes = b""
 
             if protocol == 6:  # TCP
@@ -105,6 +106,8 @@ class ProtocolParser:
                     "!HHIIH", raw_data[l4_offset:l4_offset + 14]
                 )
                 tcp_flags = data_offset_flags & 0x01FF
+                if len(raw_data) >= l4_offset + 16:
+                    tcp_window = struct.unpack("!H", raw_data[l4_offset + 14:l4_offset + 16])[0]
                 tcp_header_len = ((data_offset_flags >> 12) & 0x0F) * 4
                 if tcp_header_len < 20 or l4_offset + tcp_header_len > len(raw_data):
                     self.dlq.record_corrupt_packet('INVALID_TCP_LENGTH', 'Invalid TCP header length', len(raw_data))
@@ -143,7 +146,8 @@ class ProtocolParser:
                 tcp_flags_forward=tcp_flags,
                 tcp_flags_backward=0,
                 inter_arrival_times=[0.0],
-                is_unidirectional=True
+                is_unidirectional=True,
+                tcp_window_forward=tcp_window
             )
 
             # 5. Extract Sidecars (DNS / TLS)

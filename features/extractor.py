@@ -8,6 +8,7 @@ from features.rate_window import RateWindow
 from features.dns_tunnel import dns_tunnel_features
 from features.tls_session import TlsSessionState
 from features.slow_http import SlowHttpState
+from features.slow_read import SlowReadState
 from ml.dga import lexical_features
 
 FEATURES = ['packet_rate', 'byte_rate', 'source_entropy', 'syn_fraction',
@@ -83,6 +84,7 @@ class FeatureExtractor:
         self.evictions = 0
         self.tls = TlsSessionState()
         self.slow_http = SlowHttpState()
+        self.slow_read = SlowReadState()
 
     def fork(self, event):
         """Stage one causal update without copying every source's history.
@@ -106,6 +108,7 @@ class FeatureExtractor:
         staged.global_rates = self.global_rates.fork()
         staged.tls = self.tls.fork(event)
         staged.slow_http = self.slow_http.fork(event)
+        staged.slow_read = self.slow_read.fork(event)
         staged.syn_targets = self.syn_targets.copy()
         staged.udp_targets = self.udp_targets.copy()
         targets = staged.syn_targets if event.protocol == 6 else staged.udp_targets
@@ -179,7 +182,7 @@ class FeatureExtractor:
                   float(event.dns_type in (10, 16) and bool(name)), float(event.encrypted), cv(sizes),
                   sum(e.bytes for e in history), ratio or 0, float(event.reverse_observed),
                   float(any(e.tls_fingerprint == DEMO_FINGERPRINT for e in peer)), len(peer)]
-        return dict(zip(FEATURES, values)) | dns_tunnel_features(event, history) | self.tls.update(event) | self.slow_http.update(event) | {'observed_byte_ratio': ratio,
+        return dict(zip(FEATURES, values)) | dns_tunnel_features(event, history) | self.tls.update(event) | self.slow_http.update(event) | self.slow_read.update(event) | {'observed_byte_ratio': ratio,
                                              'observed_byte_ratio_status': ratio_status,
                                              'source_forward_bytes_60s': source_forward_bytes_60s,
                                              'source_forward_byte_rate_10s': source_forward_byte_rate_10s,

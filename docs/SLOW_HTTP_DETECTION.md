@@ -42,9 +42,28 @@ Thresholds are development defaults; tune them in P0-5 with the
 - Request completeness is not inspected, so long-polling clients, proxies
   or connection pools that keep 50+ quiet connections to one service can
   match; label them as benign look-alikes in lab captures.
-- Slow-read attacks (the client reads the response slowly) are not covered.
+- Slow-read attacks are covered separately (below), not by this rule.
 - Without FIN/RST visibility, closed connections linger until the idle timeout.
 
 All nine demo traces are unchanged; runtime pins were re-frozen with
 `scripts/refreeze_runtime_pins.py`. Core benchmark after this change:
 3,322 metadata events/s, processing + SQLite p95 1.08 ms, same 1,170 alerts.
+
+## Slow-read variant (`features/slow_read.py`)
+
+A slow-read client requests a large response, then advertises a tiny TCP receive
+window so the server keeps the connection open while it drains the reply. The
+client's advertised window is read from the TCP header (new optional
+`TrafficEvent.tcp_window`, from PCAP packets and sFlow headers, omitted when
+absent). Per client/service pair the state tracks connections whose non-SYN
+client packets advertise a window of 256 bytes or less; a larger advertised
+window, a FIN/RST or 120 s idle closes the connection. A TCP event raises
+`DDOS` (CRITICAL) with `ddos_subtype=slow_read` when one pair has **50 or
+more** such connections held for at least 30 s, unless the trickle rule above
+already fired. Evidence: `slow_read_connections`, `slow_read_open_connections`,
+`slow_read_mean_age_s`, `slow_read_mean_window`, `slow_read_target`.
+
+Limits: the window field is unscaled, so a legitimate window-scaled receiver
+can look small; NetFlow/IPFIX carry no window, so only packet captures and
+sFlow samples work; thresholds are development defaults pending lab tuning.
+Tests: `tests/test_slow_read.py`.

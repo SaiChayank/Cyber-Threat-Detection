@@ -103,17 +103,17 @@
     ]
   },
   "source_sha256": {
-    "detection/pipeline.py": "88c35b754ca3533bbe077ac433e4262205e10d4c897525bbe1c62b908325246c",
+    "detection/pipeline.py": "35fdbdbf3b43ae4c2f8d981b1eccbcabd470c2161935fcdb244475f0e75eaeae",
     "detection/dns_tunnel_candidate.py": "c1713f2a8bbc59753bbad586054e5b103082f4d67bf5c9cfa617383965540a9a",
-    "features/extractor.py": "0ad247166c97ff8b521ee9c9f9167fbfaaaae5b7748e030614f88f8e257708a5",
+    "features/extractor.py": "83d6ba037055e0ea7b1c27fabc0c39b3d672e9e830867c4d4d89fad25d2ede8f",
     "features/dns_tunnel.py": "8ded37ba73c2d605f22baf4571f80842791f7b2b1584ce0230ddc365466605eb",
     "features/rate_window.py": "a0d4542ab56b44bb51bdee88ebd56a7df95e9a9d6a79fc569769a9100b65d683",
-    "ingest/metadata.py": "f25c26d888a08d0ffbc8174c69ec6ee2a4ad392e9ebf7ab3ea996c6e9910c550",
+    "ingest/metadata.py": "f46b3a3fa72ff6fd96306c02766c42e801dba58caee83a200c7e84376ceb46f0",
     "ingest/pcap_reader.py": "591b09c0f6fc8cf2aab791d6aa52506a9e10adf80f9a4dc72850d78dc4e50157",
-    "ingest/protocol_parsers.py": "8b7e56b8246e3adf02f793e0267005ebd4d35ea2875a4e07997bedf8ab2674c6",
+    "ingest/protocol_parsers.py": "753f758aeddfd80a1ace754b9e01d382eab7117854ebd15eed4d7c1db3845613",
     "ingest/dead_letter.py": "d8e0912dab5537be9ba0f65d129c297732e9702a83ed75e54407fd2e17e8bc6b",
-    "schemas/traffic_event.py": "032c9c7ce315227d7cf6b2232b7681f9aa9696cef131bbca9df55f6f68c47070",
-    "schemas/flow_record.py": "026d07266e98a14c53631e81c676ec9d1a0314feae959611c7ca3e3664ce1d24",
+    "schemas/traffic_event.py": "581f4d701d583fe030a6c7a31aa92a50c6fd704d40ce060ccdd67b02457141e7",
+    "schemas/flow_record.py": "10e8d93cec06b782c30a887ab76947ab93bdb956ba32cf20e51237968eb03609",
     "schemas/dns_record.py": "bf3670d063025c481b851fdf60e30331744993cca7f88fc970eeaa59ed44ea8e",
     "schemas/tls_metadata.py": "c7cb2d1742a0129c0d8962581d491783fee7453bd789acde329f17be8f717381",
     "schemas/alert.py": "334362e24535863247903d82c0f6ba60e0f21aaa4d3a2f263f7bdf2a81c695f2",
@@ -130,8 +130,9 @@
     "detection/tls_indicators.py": "f388daacddd364f126736e62e3116fe53d55366ccb37b1909d6686e1167f37c0",
     "detection/tls_indicators.json": "36ca8bfdf638239874ec8890da4b959b482e66121a3533f1f8adf8e3f8822761",
     "features/slow_http.py": "9498263fb6686daa2cdb77e902eeb78816945ca022cca45239742a1aa37a0025",
-    "ingest/flow_export.py": "d3d60079319e65586f7904f7cab536730818b1e237a184502070d658b91be1e9",
+    "ingest/flow_export.py": "f442e86bdf49a1784b6bc2047c73b7cf6999037a44162e925447b0305c0269a8",
     "features/cow_map.py": "6df6284c0e6d49ea67ed09ba4af11596f5e2b93649d3a78832976271acc09c1a",
-    "detection/spoof_indicators.py": "25a2e5bcb68a6f7aea46af5bf53627cb3a6eb38b7660a13ad5e487b235c841c1"
+    "detection/spoof_indicators.py": "25a2e5bcb68a6f7aea46af5bf53627cb3a6eb38b7660a13ad5e487b235c841c1",
+    "features/slow_read.py": "b796e30b18fb978a49d1aa85f8fcdd3f711d37ba1d3c45d55170dc248c31890d"
   }
 }

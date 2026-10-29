@@ -57,11 +57,13 @@ def frame_fields(frame):
         proto, src, dst, l4 = frame[offset + 6], frame[offset + 8:offset + 24], frame[offset + 24:offset + 40], offset + 40
     else:
         return None
-    fields = dict(src=_address(src), dst=_address(dst), proto=proto, ip_bytes=total, sport=0, dport=0, flags=0, payload=b'')
+    fields = dict(src=_address(src), dst=_address(dst), proto=proto, ip_bytes=total, sport=0, dport=0, flags=0, window=None, payload=b'')
     if proto in (6, 17) and len(frame) >= l4 + 4:
         fields['sport'], fields['dport'] = struct.unpack('!HH', frame[l4:l4 + 4])
     if proto == 6 and len(frame) >= l4 + 14:
         fields['flags'] = struct.unpack('!H', frame[l4 + 12:l4 + 14])[0] & 0x01FF
+    if proto == 6 and len(frame) >= l4 + 16:
+        fields['window'] = struct.unpack('!H', frame[l4 + 14:l4 + 16])[0]
     if proto == 17 and len(frame) >= l4 + 8:
         length = struct.unpack('!H', frame[l4 + 4:l4 + 6])[0]
         fields['payload'] = frame[l4 + 8:l4 + max(8, length)]
@@ -267,6 +269,7 @@ class FlowExportDecoder:
             # The sampled IP header's total length is exact even when the header is truncated.
             event = flow_event(arrival_ms, fields['src'], fields['dst'], fields['sport'], fields['dport'],
                                fields['proto'], rate, fields['ip_bytes'] * rate, fields['flags'],
+                               tcp_window=fields['window'],
                                dns_name=dns.query_name if dns else None, dns_type=dns.query_type if dns else 1,
                                tls_fingerprint=client.ja3_hash if client else None,
                                tls_ja4=client.ja4 if client else None,

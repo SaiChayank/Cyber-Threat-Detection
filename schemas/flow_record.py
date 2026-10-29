@@ -27,6 +27,7 @@ class FlowRecord:
     tcp_flags_backward: int = 0
     inter_arrival_times: List[float] = field(default_factory=list)  # Inter-packet arrival deltas in seconds
     is_unidirectional: bool = True    # Explicitly flags unidirectional capture invariant
+    tcp_window_forward: Optional[int] = None  # Advertised (unscaled) TCP window of the observed packet
 
     @staticmethod
     def compute_flow_id(
