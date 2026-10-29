@@ -46,8 +46,10 @@ HIGH and the confidence is a heuristic strength, not a probability.
   ServerHello only.
 - Raw QUIC JA4 is deliberately NOT implemented: the Initial ClientHello is
   protected, and reading it would mean deriving keys and decrypting QUIC content,
-  which the project's no-decryption constraint forbids. See the QUIC header
-  fingerprint below.
+  which the project's no-decryption constraint forbids. The project owner confirmed this
+  on 29 October 2026: the constraint has no QUIC exception. See the QUIC header
+  fingerprint below. Revisit only if evaluators require QUIC JA4 or lab captures show the
+  header fingerprint cannot separate clients.
 - Rarity needs a client population; small or single-host captures cannot
   trigger the behaviour path. Rare legitimate software and regular keep-alive
   clients can still match; they appear as false alerts in lab evaluation.
