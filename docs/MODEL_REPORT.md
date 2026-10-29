@@ -297,7 +297,7 @@ and the seven detector labels. The letter mapping is **not verified**.
 | Core throughput >= 2,000 metadata events/s, p95 < 50 ms | Implemented (one machine, synthetic) | `benchmarks/latest.json` |
 | Full-path packet throughput | Implemented: about 2,100 to 3,000 packets/s (one machine, synthetic benign capture, load-dependent) | `benchmarks/pcap_throughput_latest.json` |
 | Delivery p95 < 1,000 ms (API to SSE) | Implemented (loopback only) | [Performance validation](PERFORMANCE_VALIDATION.md) |
-| NetFlow, IPFIX, sFlow import | Implemented as file import; no live collector | `ingest/flow_export.py`, [Flow export import](FLOW_EXPORT_IMPORT.md) |
+| NetFlow, IPFIX, sFlow import | Implemented as file import and a receive-only live collector | `ingest/flow_export.py`, [Flow export import](FLOW_EXPORT_IMPORT.md) |
 | Lab evaluation of real captures | Implemented (harness); Not validated on real captures (P0-5 pending) | `datasets/evaluate_lab.py`, [Lab evaluation](LAB_EVALUATION.md) |
 | Reproducible models and integrity | Implemented for active model; all six model artifacts keep their hashes through a Windows checkout (H1 fixed; verified 29 Oct in a fresh clone) | `ml/artifact.json`, [Final release audit](FINAL_RELEASE_AUDIT.md) |
 | Detector quality gates | FAIL (B1, B2, B3 open) | [Final release audit](FINAL_RELEASE_AUDIT.md) |
@@ -320,7 +320,7 @@ and the seven detector labels. The letter mapping is **not verified**.
   Tuning is P0-5, pending.
 
 **Capture and protocol coverage.**
-- No live NetFlow, IPFIX or sFlow collector. Only file import from captured export datagrams.
+- The live NetFlow/IPFIX/sFlow collector is receive-only (`replay/collector.py`): no replies, no stored history, loopback by default; exporters are not authenticated.
 - Ethernet PCAP and PCAPNG only (`ingest/pcapng.py`: enhanced packet blocks; other link types are rejected). A TLS record or DNS/TCP message is read when it fits one segment or spans in-order segments (bounded, `docs/TCP_REASSEMBLY.md`); there is no full
   TCP reassembly, and TLS 1.3 encrypts the handshake messages after the ServerHello, so only the ServerHello is fingerprinted.
 - No raw QUIC handshake (JA4) fingerprinting, deliberately: it requires decrypting the Initial packet, which the constraints forbid. A clear-header QUIC fingerprint is used instead. JA4+ variants (JA4S, JA4X) are not implemented.

@@ -80,8 +80,32 @@ A truncated PCAP file raises `ValueError`.
 - IPv6 extension headers are not parsed: the next-header value is read
   directly, so flows behind extension headers may be misclassified.
 - Fragmented IPv4 packets are dropped.
-- No live UDP collector runs. The system is passive and read-only, so input is
-  always a capture file.
+- The live collector (below) is receive-only; it has no way to request retransmission of
+  missed templates, so data sets whose template has not yet arrived are dropped and counted.
 - v9 and IPFIX flow end times depend on the exporter's uptime and clock. A
   wrong clock shifts the timeline.
 - Late or out-of-order records are sorted within one datagram only.
+
+## Live collector (receive-only)
+
+`python -m replay.collector --port 2055 [--bind 127.0.0.1] [--allow 192.0.2.1 ...]`
+listens on one UDP port, decodes pushed NetFlow v5/v9, IPFIX and sFlow v5 datagrams
+with the same decoder, runs the pipeline and prints alerts as JSON lines, then a final
+line of counters. Ctrl+C, `--max-datagrams` or `--idle-timeout` stops it.
+
+Why this stays inside the passive, one-directional design: exporters push to a
+collector, so the collector only receives. `ingest/flow_collector.py` never calls
+`send`, `sendto`, `connect` or any client library, never answers an exporter and never
+contacts a host; `tests/test_flow_collector.py` fails if it does (a proxy socket rejects
+any outbound call, and a source scan forbids them). Defaults are conservative:
+
+- binds loopback unless you pass `--bind`; for a non-loopback bind use `--allow` so only
+  your exporters are accepted (other sources are dropped and counted);
+- datagrams are capped at 64 KiB and malformed ones are counted, never raised;
+- nothing is written to the analyst SQLite history; use the offline CLI or upload API
+  if you want alerts stored and shown in the dashboard.
+
+Limits: UDP datagrams can be lost or reordered, templates must arrive before data, and
+the extractor drops late events, so a very out-of-order exporter loses some flows.
+Exporter addresses are not authenticated; an allowlist is not protection against spoofed
+sources on a shared network.

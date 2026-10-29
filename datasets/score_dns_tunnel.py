@@ -12,7 +12,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 CONTRACT = 'data/dns_tunnel_evaluation_contract.json'
-CONTRACT_SHA256 = '4dd81ea24a4bf64d995ad22b569bf6f961ea29d66f1ae0e33edb7bab5a27b019'
+CONTRACT_SHA256 = '9bb39628274976dd54d3c12ac6fdac518168febfd80c0ef41f59a5ffa32f9996'
 RECEIPT = 'data/dns_tunnel_reserved_pass.json'
 PREREQUISITES = ('permission_verified', 'labels_verified', 'visibility_verified',
                  'disjointness_verified', 'roles_frozen', 'client_questions_verified')
