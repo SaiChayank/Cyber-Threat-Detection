@@ -57,11 +57,14 @@ the seed and the intensity in the label's `tool` field where it fits.
 | `DGA_DOMAINS` | Published DGA algorithm samples (DGArchive or equivalent) | `dga_domains` | Replay DGA lookups from one client; include NXDOMAIN answers | client IP + resolver IP |
 | `DNS_TUNNELLING` | dnscat2 or iodine | `dns_tunnel` | Tunnel session >=60 s; record both directions | client IP + authoritative server IP |
 | `ENCRYPTED_MALWARE` | Sandboxed C2 emulator over TLS | `encrypted_c2` | >=10 min of small, regular TLS sessions | infected client + C2 IP |
-| `RECONNAISSANCE` | Not named in the problem statement; use a lab scanner you choose | `recon_scan` | Record scanner, version and scan type in `tool` | scanner IP |
-| `DATA_EXFILTRATION` | Not named in the problem statement; use a lab transfer you choose | `exfil_upload` | Record the transfer method and volume in `tool` | client IP + sink IP |
+| `RECONNAISSANCE` | Not named in the problem statement; recommended default: nmap (TCP SYN scan `-sS`) | `recon_scan` | Vary scan shape (one host, many ports; many hosts, one port; both) and timing (`-T2`, `-T3`, `-T4`); record version and flags in `tool` | scanner IP |
+| `DATA_EXFILTRATION` | Not named in the problem statement; recommended default: a large one-way HTTPS or SCP upload (`curl -T` or `scp`) to a lab sink | `exfil_upload` | Vary volume (hundreds of MB), rate limits and protocol; record method and size in `tool` | client IP + sink IP |
 
 Notes:
 
+- The reconnaissance and exfiltration tools are recommended defaults, not requirements: the problem statement
+  names none, so any authorised lab scanner or transfer works if you record it in `tool`. Scan and
+  upload only hosts you own, inside the isolated lab.
 - Vary intensity, tool and seed across runs. A single setting per threat will
   not show generalisation.
 - For `ENCRYPTED_MALWARE`, you may add the lab family's JA3, JA3S or JA4 to
@@ -79,12 +82,12 @@ Label these `BENIGN` so false alerts are reported separately.
 | Bulk transfer | `iperf3_bulk` | iperf3, Ostinato or TRex | High volume, sustained | client + server IPs |
 | Nightly backup | `nightly_backup` | rsync or similar | Large, long-lived transfer | backup client + target |
 | Health checks and API polling | `health_poll` | Scripted HTTP client | Periodic, regular, like beaconing | monitor + service IPs |
-| Authorised scan or inventory | `auth_inventory` | Lab-only scanner | Many probes, like recon | scanner + lab IPs |
+| Authorised scan or inventory | `auth_inventory` | nmap `-sT` at a slow rate (`-T1`/`--max-rate`) against lab hosts | Many probes, like recon | scanner + lab IPs |
 | Normal browsing | `browse_parallel` | Browser or scripted client | Many parallel connections | client IP |
 | CDN or video | `video_stream` | Scripted or browser client | Large, steady downloads | client IP |
 | Long-poll and keep-alive | `long_poll` | Scripted client | Many quiet connections, like slow HTTP | client + service IPs |
 | Ordinary DNS and TLS | `app_dns_tls` | Lab app traffic | Small, regular sessions, like tunnels or C2 | client + server IPs |
-| Large legitimate upload | `bulk_upload` | Scripted client | Large outbound transfer, like exfiltration | client + sink IPs |
+| Large legitimate upload | `bulk_upload` | `rsync`, `rclone` or `curl -T` to a lab backup server | Large outbound transfer, like exfiltration | client + sink IPs |
 
 Benign runs need at least 3 captures per category (section 6).
 
