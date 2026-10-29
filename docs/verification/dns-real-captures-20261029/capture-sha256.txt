@@ -1,0 +1,4 @@
+b1056baaa15c441aa9fadd23885818db069f3cc5b560dc4f8a184d3494f3d3bd *data/raw/dns-public-session-intake-20261021/dnscat2_dns_tunneling_1hr.pcap
+f1b0e48cfdbdd38a7701c99b364ed0bd70521224402a9d96eeac7b0dd9845e57 *data/raw/burgos-benign-intake-20261021/benign_first_cap.pcap
+2df7769f8e6b4db753ad968ce1da10427275d9456d38548e993eaaaf6484ae99 *data/raw/cicdns2021/pcaps/benign/benign_1.pcap
+5ace9b02ecc7539cb806bbfedb9e7467d1b0b8ad14921938a09e6d7e2d2d3f93 *data/raw/cicdns2021/pcaps/benign/benign_2.pcap

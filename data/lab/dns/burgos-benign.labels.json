@@ -1,0 +1,16 @@
+{
+  "format": "ps26145-lab-labels/1",
+  "capture": "../../raw/burgos-benign-intake-20261021/benign_first_cap.pcap",
+  "split": "unassigned",
+  "episodes": [
+    {
+      "id": "burgos-benign",
+      "label": "BENIGN",
+      "scenario": "benign_dns",
+      "tool": "Public Burgos benign capture, full snap length, 72 ordinary questions",
+      "start_ms": 1740053277000,
+      "end_ms": 1740053439000,
+      "hosts": []
+    }
+  ]
+}

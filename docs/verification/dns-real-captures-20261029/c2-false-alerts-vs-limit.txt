@@ -1,0 +1,6 @@
+C2_MAX_IAT_CV 0.05 C2 false alerts on benign: 13 {'benign_first_cap': 0, 'benign_1': 12, 'benign_2': 1, 'dnscat2_dns_tunnel': 0}
+C2_MAX_IAT_CV 0.1 C2 false alerts on benign: 13 {'benign_first_cap': 0, 'benign_1': 12, 'benign_2': 1, 'dnscat2_dns_tunnel': 0}
+C2_MAX_IAT_CV 0.2 C2 false alerts on benign: 14 {'benign_first_cap': 1, 'benign_1': 12, 'benign_2': 1, 'dnscat2_dns_tunnel': 0}
+C2_MAX_IAT_CV 0.3 C2 false alerts on benign: 15 {'benign_first_cap': 2, 'benign_1': 12, 'benign_2': 1, 'dnscat2_dns_tunnel': 0}
+
+[exited with code 0]

@@ -1,0 +1,16 @@
+{
+  "format": "ps26145-lab-labels/1",
+  "capture": "../../raw/cicdns2021/pcaps/benign/benign_2.pcap",
+  "split": "unassigned",
+  "episodes": [
+    {
+      "id": "cic-benign-2",
+      "label": "BENIGN",
+      "scenario": "benign_dns_truncated",
+      "tool": "CIC DNS 2021 benign capture; snap length 96, so names are cut at about 36 characters",
+      "start_ms": 1605914708000,
+      "end_ms": 1605934659000,
+      "hosts": []
+    }
+  ]
+}

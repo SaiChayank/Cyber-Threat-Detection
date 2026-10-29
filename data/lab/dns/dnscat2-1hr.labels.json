@@ -1,0 +1,18 @@
+{
+  "format": "ps26145-lab-labels/1",
+  "capture": "../../raw/dns-public-session-intake-20261021/dnscat2_dns_tunneling_1hr.pcap",
+  "split": "unassigned",
+  "episodes": [
+    {
+      "id": "dnscat2-1hr",
+      "label": "DNS_TUNNELLING",
+      "scenario": "dnscat2_tunnel",
+      "tool": "Public dnscat2 one-hour tunnel capture, full snap length (names up to 72 chars)",
+      "start_ms": 1623212924000,
+      "end_ms": 1623216524000,
+      "hosts": [
+        "10.20.57.3"
+      ]
+    }
+  ]
+}
