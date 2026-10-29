@@ -92,13 +92,13 @@ export function ReplayControls({
     if (!file) return
     if (file.size > 16 * 1024 * 1024) {
       setNotice({
-        text: 'Capture limit is 16 MiB. Choose a smaller classic PCAP file.',
+        text: 'Capture limit is 16 MiB. Choose a smaller PCAP or PCAPNG file.',
         error: true,
       })
       return
     }
-    if (!file.name.toLowerCase().endsWith('.pcap')) {
-      setNotice({ text: 'Choose a classic .pcap capture. PCAPNG is not supported.', error: true })
+    if (!/\.pcap(ng)?$/i.test(file.name)) {
+      setNotice({ text: 'Choose a .pcap or .pcapng capture (Ethernet).', error: true })
       return
     }
     const parsed = replaySchema.safeParse(getValues())
@@ -236,7 +236,7 @@ export function ReplayControls({
             >
               <input
                 type="file"
-                accept=".pcap"
+                accept=".pcap,.pcapng"
                 aria-label="Replay a PCAP capture"
                 onChange={upload}
                 disabled={running || !!busy || !connected}

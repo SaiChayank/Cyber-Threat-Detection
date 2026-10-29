@@ -5,7 +5,7 @@ Nothing is sent to exporters. Implementation: `ingest/flow_export.py`.
 
 ## What it imports
 
-The input is a classic Ethernet PCAP (version 2.4, linktype 1) holding the
+The input is an Ethernet PCAP (classic version 2.4, linktype 1) or PCAPNG holding the
 export datagrams a collector port received. Only UDP packets to these ports
 are decoded:
 

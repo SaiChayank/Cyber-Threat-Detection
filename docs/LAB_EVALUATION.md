@@ -42,7 +42,7 @@ One JSON file per capture. Paths are relative to the label file.
 
 | Field | Meaning |
 | --- | --- |
-| `capture` | Classic Ethernet `.pcap` (the formats `PcapReader` accepts) or `TrafficEvent` `.jsonl`. |
+| `capture` | Ethernet `.pcap` or `.pcapng` (the formats `PcapReader` accepts) or `TrafficEvent` `.jsonl`. |
 | `split` | `train`, `validation`, `test` or `unassigned` (default). Tune only on train/validation; score test once. |
 | `label` | `BENIGN` or a runtime threat class: `DDOS`, `BOTNET_C2`, `DGA_DOMAINS`, `DNS_TUNNELLING`, `ENCRYPTED_MALWARE`, `RECONNAISSANCE`, `DATA_EXFILTRATION`. |
 | `scenario` | Free text used for the per-scenario breakdown; defaults to the label in lower case. |

@@ -14,7 +14,7 @@ def metadata(path, source='packets'):
     if source == 'flow-export':
         yield from read_flow_export(path)
         return
-    if path.suffix.lower() == '.pcap':
+    if path.suffix.lower() in ('.pcap', '.pcapng'):
         for batch in PcapReader().read_packets(path):
             for flow, dns, tls in batch:
                 yield from_packet(flow, dns, tls)

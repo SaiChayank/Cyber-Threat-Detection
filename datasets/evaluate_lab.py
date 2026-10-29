@@ -46,7 +46,7 @@ def read_events(path, ingest, source='packets'):
         yield from read_flow_export(path, decoder)
         ingest.update(decoder.stats)
         return
-    if path.suffix.lower() == '.pcap':
+    if path.suffix.lower() in ('.pcap', '.pcapng'):
         reader = PcapReader()
         for batch in reader.read_packets(path):
             for flow, dns, tls in batch:

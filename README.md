@@ -126,7 +126,7 @@ produces 15 alerts across seven classes; its benign segment emits no alerts.
 The initial UI speed is 100×. Select 20× explicitly for the demonstration timing
 above; acceleration changes presentation pace, not detector features. Alerts appear while
 processing continues. Click an alert for its connection details and numeric evidence.
-Replay each class individually or upload a classic Ethernet `.pcap` file (up to 16 MiB).
+Replay each class individually or upload an Ethernet `.pcap` or `.pcapng` file (up to 16 MiB).
 Filters and JSON export operate on the latest 200 displayed alerts. SQLite retains the
 full alert history; `/api/alerts` supports sequence-based pagination and class filtering.
 
@@ -249,7 +249,7 @@ The initial encrypted-session model uses controlled synthetic patterns and a lab
 fingerprint, not a production malware feed. Complete single-record TLS ClientHello
 JA3/JA4 and ServerHello JA3S are parsed from PCAP. QUIC packet dynamics and supplied metadata are accepted,
 but raw QUIC handshake fingerprint extraction is not implemented. TCP reassembly,
-PCAPNG, IPv6 extension decoding and production authentication are outside this local
+IPv6 extension decoding and production authentication are outside this local
 prototype. DoH / DoT hide DNS names. Read the full limits before assessing accuracy.
 
 DNS extraction supports UDP/53 and a complete first length-prefixed DNS/TCP message

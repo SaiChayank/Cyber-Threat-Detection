@@ -16,7 +16,7 @@ from schemas.enums import ThreatClass
 FORMAT = 'ps26145-lab-labels/1'
 LABELS = frozenset(['BENIGN', *(threat.value for threat in ThreatClass)])
 SPLITS = ('train', 'validation', 'test', 'unassigned')
-CAPTURE_SUFFIXES = ('.pcap', '.jsonl')
+CAPTURE_SUFFIXES = ('.pcap', '.pcapng', '.jsonl')
 SOURCES = ('packets', 'flow_export')
 
 
@@ -122,7 +122,7 @@ def load(path):
     if split not in SPLITS:
         raise LabelError(f'{path}: split must be one of {SPLITS}')
     source = data.get('source', 'packets')
-    if source not in SOURCES or (source == 'flow_export' and capture_path.suffix.lower() != '.pcap'):
+    if source not in SOURCES or (source == 'flow_export' and capture_path.suffix.lower() not in ('.pcap', '.pcapng')):
         raise LabelError(f'{path}: source must be one of {SOURCES}; flow_export needs a .pcap capture')
     entries = data.get('episodes')
     if not isinstance(entries, list):

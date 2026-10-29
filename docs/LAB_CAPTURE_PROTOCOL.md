@@ -11,7 +11,7 @@ metrics: [Lab evaluation harness](LAB_EVALUATION.md). Flow exports:
   no third-party targets, no internet egress during a run.
 - Passive capture: the capture host listens on a mirror/tap port and sends
   nothing (no DNS lookups, updates or management traffic while recording).
-- Format: classic Ethernet `.pcap`, not pcapng. Use snaplen 65535 so DNS and
+- Format: Ethernet `.pcap` (preferred) or `.pcapng`. Use snaplen 65535 so DNS and
   TLS handshakes are complete.
 - One run = one `.pcap` + one `.labels.json`. Never merge runs or split a run.
 - Clocks: sync every host and the capture host with NTP before the session.

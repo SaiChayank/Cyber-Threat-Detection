@@ -13,6 +13,15 @@ from schemas.dns_record import DNSRecord
 from schemas.tls_metadata import TLSMetadataRecord
 from ingest.protocol_parsers import ProtocolParser
 from ingest.dead_letter import DeadLetterQueue
+from ingest.pcapng import MAGIC as PCAPNG_MAGIC, is_pcapng, iter_pcapng, validate_section_header
+
+
+def validate_capture_header(head):
+    """Pre-flight a capture's leading bytes: classic PCAP (24 bytes) or PCAPNG (28 bytes)."""
+    if is_pcapng(head):
+        validate_section_header(head)
+        return None
+    return validate_header(head[:24])
 
 
 def validate_header(header):
@@ -49,6 +58,20 @@ class PcapReader:
             raise FileNotFoundError(f"PCAP file not found: {pcap_path}")
 
         with open(pcap_file, "rb") as f:
+            if f.read(4) == PCAPNG_MAGIC:
+                f.seek(0)
+                batch = []
+                for timestamp_sec, pkt_data in iter_pcapng(f):
+                    records = self.parser.parse_packet(pkt_data, timestamp_sec)
+                    if records[0] is not None:
+                        batch.append(records)
+                        if len(batch) >= batch_size:
+                            yield batch
+                            batch = []
+                if batch:
+                    yield batch
+                return
+            f.seek(0)
             # 1. Read Global Header (24 bytes)
             global_header = f.read(24)
             snaplen = validate_header(global_header)

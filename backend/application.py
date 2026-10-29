@@ -15,7 +15,7 @@ from pydantic import BaseModel, Field
 from detection.pipeline import Pipeline
 from ingest.flow_export import FlowExportDecoder, read_flow_export
 from ingest.metadata import from_packet
-from ingest.pcap_reader import PcapReader, validate_header
+from ingest.pcap_reader import PcapReader, validate_capture_header
 from persistence.store import AlertStore
 from replay.scenarios import CLASSES, mixed_demo, scenario
 from schemas.traffic_event import TrafficEvent
@@ -134,6 +134,10 @@ PUBLIC_CAPTURE_ERRORS = frozenset({
     'Unsupported capture format; upload classic Ethernet PCAP',
     'Only PCAP v2.4 Ethernet captures are supported',
     'Invalid PCAP snap length',
+    'PCAPNG requires a complete section header',
+    'Invalid PCAPNG block',
+    'Truncated PCAPNG block',
+    'Only Ethernet captures are supported',
     'Truncated PCAP packet header',
     'Invalid PCAP packet length',
     'Uploaded capture contains a truncated packet',
@@ -268,7 +272,7 @@ async def pcap(request: Request, speed: float = Query(20, ge=.1, le=10000),
             path.unlink(missing_ok=True)
     try:
         with path.open('rb') as capture:
-            validate_header(capture.read(24))
+            validate_capture_header(capture.read(32))
         return start_replay(records(), speed, lambda: path.unlink(missing_ok=True))
     except (ValueError, OSError) as exc:
         path.unlink(missing_ok=True)

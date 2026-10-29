@@ -12,6 +12,7 @@ import struct
 from collections import OrderedDict
 
 from ingest.pcap_reader import validate_header
+from ingest.pcapng import is_pcapng, iter_pcapng
 from ingest.protocol_parsers import ProtocolParser
 from schemas.traffic_event import TrafficEvent
 
@@ -283,6 +284,12 @@ class FlowExportDecoder:
 def iter_frames(path):
     """(epoch ms, frame) for each complete packet of a classic Ethernet PCAP."""
     with open(path, 'rb') as capture:
+        if is_pcapng(capture.read(4)):
+            capture.seek(0)
+            for seconds, frame in iter_pcapng(capture):
+                yield seconds * 1000, frame
+            return
+        capture.seek(0)
         header = capture.read(24)
         snaplen = validate_header(header)
         magic = struct.unpack('!I', header[:4])[0]
