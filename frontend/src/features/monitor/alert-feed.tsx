@@ -6,7 +6,7 @@ import { ArrowRight, Download, Radar, ChevronLeft, ChevronRight, Pause, Play } f
 import { Button } from '@/components/ui/button'
 import { Panel, Eyebrow, Skeleton } from '@/components/ui/panel'
 import { Hint } from '@/components/ui/tooltip'
-import { threatName } from '@/constants/threats'
+import { alertTitle, threatName } from '@/constants/threats'
 import { formatTime } from '@/lib/utils'
 import type { AlertRecord } from '@/schemas/api'
 import { Severity } from './severity'
@@ -252,7 +252,7 @@ export function AlertFeed({
                             </span>
                           </td>
                           <td className="px-4 py-4 font-medium whitespace-nowrap">
-                            {threatName(alert.threat_class)}
+                            {alertTitle(alert)}
                           </td>
                           <td className="px-4 py-4 font-mono text-[10px]">
                             <span>{alert.src_ip}</span>

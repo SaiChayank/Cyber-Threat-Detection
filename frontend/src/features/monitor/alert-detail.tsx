@@ -4,7 +4,7 @@ import * as Dialog from '@radix-ui/react-dialog'
 import { X, Copy, Check, Fingerprint, ArrowRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Eyebrow } from '@/components/ui/panel'
-import { threatName } from '@/constants/threats'
+import { alertTitle } from '@/constants/threats'
 import { evidenceValue } from '@/lib/utils'
 import type { AlertRecord } from '@/schemas/api'
 import { Severity } from './severity'
@@ -60,7 +60,7 @@ export function AlertDetail({
             <div>
               <Eyebrow>Alert investigation</Eyebrow>
               <Dialog.Title className="mt-3 font-display text-2xl tracking-[-.035em]">
-                {alert ? threatName(alert.threat_class) : 'Alert detail'}
+                {alert ? alertTitle(alert) : 'Alert detail'}
               </Dialog.Title>
             </div>
             <Dialog.Close asChild>

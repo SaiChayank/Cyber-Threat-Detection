@@ -62,6 +62,15 @@ export const detectionModules = [
   { id: 'DNS_TUNNELLING', name: 'DNS tunnelling', icon: Network },
   ...threats.slice(3),
 ]
+export const alertTitle = (alert: {
+  threat_class: string
+  raw_evidence_metrics: Record<string, unknown>
+}) => {
+  const subtype = alert.raw_evidence_metrics.ddos_subtype
+  const base = threatName(alert.threat_class)
+  return typeof subtype === 'string' ? `${base} · ${subtype.replaceAll('_', ' ')}` : base
+}
+
 export const threatName = (id: string) =>
   id === 'BENIGN'
     ? 'Benign baseline'
