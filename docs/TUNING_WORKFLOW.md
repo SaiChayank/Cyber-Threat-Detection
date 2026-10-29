@@ -35,13 +35,15 @@ combinations):
 `datasets/tune_lab.py` ranks settings by mean episode recall subject to a cap on
 benign false alerts per 1,000 benign events, then fewer false alerts, then
 precision. It **refuses any capture labelled `test`** and never edits the runtime.
-Tunable knobs: `tls_indicators` (`MIN_SESSION_PACKETS`, `MAX_SIZE_CV`, `MAX_IAT_CV`,
+Tunable knobs: `rule_thresholds` (`C2_MIN_HISTORY`, `C2_MIN_IAT_MEAN_S`, `C2_MAX_IAT_CV`,
+`RECON_MIN_FANOUT`, `RECON_ALERT_FLOOR`, `EXFIL_BYTES_60S`), `tls_indicators` (`MIN_SESSION_PACKETS`, `MAX_SIZE_CV`, `MAX_IAT_CV`,
 `MAX_MEAN_BYTES`, `MAX_FINGERPRINT_CLIENTS`, `MIN_CLIENT_POPULATION`), `slow_http`
 (`MIN_SLOW_CONNECTIONS`, `MIN_AGE_S`, `MAX_CLIENT_RATE_BPS`) and `slow_read`
-(`MIN_SLOW_READ_CONNECTIONS`, `SMALL_WINDOW`, `MIN_AGE_S`). Other rule thresholds
-(reconnaissance fan-out 20, C2 history 8 and IAT CV, exfiltration 20 MB, flood rates
-of 1,000/s) are literals in `detection/pipeline.py`; changing one is a code change that
-needs its own regression and a re-freeze.
+(`MIN_SLOW_READ_CONNECTIONS`, `SMALL_WINDOW`, `MIN_AGE_S`). Flood rates
+(1,000/s) are literals in `detection/pipeline.py`; changing one is a code change that needs
+its own regression and a re-freeze. A worked example on real public captures is in
+[Real capture results](REAL_CAPTURE_RESULTS.md); remember the frozen demo traces
+(`python -m replay.demo_pack`) must stay identical, which capped the C2 limit at 0.3.
 
 ## 3. Apply, confirm, then test once
 

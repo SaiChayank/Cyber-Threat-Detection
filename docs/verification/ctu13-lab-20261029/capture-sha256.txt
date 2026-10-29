@@ -1,0 +1,2 @@
+b89cd5931f62d87ceff266568c97c6e36e56dd0330813cacadbc14a6c5576a36 *data/raw/ctu13-lab/botnet-capture-20110810-neris.pcap
+476c2d768494b7cf73cd795a4e5fa99755fae61d38ea7ad2a7e884893167ee35 *data/raw/ctu13-lab/normal-capture-20110817.pcap

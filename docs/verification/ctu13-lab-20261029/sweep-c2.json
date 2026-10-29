@@ -1,0 +1,505 @@
+{
+  "format": "ps26145-lab-sweep/1",
+  "max_false_alerts_per_1000": 1.0,
+  "splits": [
+    "train",
+    "validation"
+  ],
+  "combinations": 16,
+  "best": {
+    "settings": {
+      "rule_thresholds.C2_MAX_IAT_CV": 0.5,
+      "rule_thresholds.C2_MIN_HISTORY": 8,
+      "rule_thresholds.C2_MIN_IAT_MEAN_S": 1
+    },
+    "mean_episode_recall": 1.0,
+    "false_alerts_per_1000_benign_events": 0.8227,
+    "mean_alert_precision": 0.86,
+    "within_false_alert_cap": true,
+    "per_threat": {
+      "DDOS": {
+        "recall": null,
+        "precision": 0.0
+      },
+      "BOTNET_C2": {
+        "recall": 1.0,
+        "precision": 0.86
+      },
+      "DGA_DOMAINS": {
+        "recall": null,
+        "precision": 0.0
+      },
+      "RECONNAISSANCE": {
+        "recall": null,
+        "precision": 0.0
+      }
+    }
+  },
+  "ranked": [
+    {
+      "settings": {
+        "rule_thresholds.C2_MAX_IAT_CV": 0.5,
+        "rule_thresholds.C2_MIN_HISTORY": 8,
+        "rule_thresholds.C2_MIN_IAT_MEAN_S": 1
+      },
+      "mean_episode_recall": 1.0,
+      "false_alerts_per_1000_benign_events": 0.8227,
+      "mean_alert_precision": 0.86,
+      "within_false_alert_cap": true,
+      "per_threat": {
+        "DDOS": {
+          "recall": null,
+          "precision": 0.0
+        },
+        "BOTNET_C2": {
+          "recall": 1.0,
+          "precision": 0.86
+        },
+        "DGA_DOMAINS": {
+          "recall": null,
+          "precision": 0.0
+        },
+        "RECONNAISSANCE": {
+          "recall": null,
+          "precision": 0.0
+        }
+      }
+    },
+    {
+      "settings": {
+        "rule_thresholds.C2_MAX_IAT_CV": 0.5,
+        "rule_thresholds.C2_MIN_HISTORY": 8,
+        "rule_thresholds.C2_MIN_IAT_MEAN_S": 5
+      },
+      "mean_episode_recall": 1.0,
+      "false_alerts_per_1000_benign_events": 0.8227,
+      "mean_alert_precision": 0.8542,
+      "within_false_alert_cap": true,
+      "per_threat": {
+        "DDOS": {
+          "recall": null,
+          "precision": 0.0
+        },
+        "BOTNET_C2": {
+          "recall": 1.0,
+          "precision": 0.8542
+        },
+        "DGA_DOMAINS": {
+          "recall": null,
+          "precision": 0.0
+        },
+        "RECONNAISSANCE": {
+          "recall": null,
+          "precision": 0.0
+        }
+      }
+    },
+    {
+      "settings": {
+        "rule_thresholds.C2_MAX_IAT_CV": 0.3,
+        "rule_thresholds.C2_MIN_HISTORY": 8,
+        "rule_thresholds.C2_MIN_IAT_MEAN_S": 1
+      },
+      "mean_episode_recall": 1.0,
+      "false_alerts_per_1000_benign_events": 0.8227,
+      "mean_alert_precision": 0.6667,
+      "within_false_alert_cap": true,
+      "per_threat": {
+        "DDOS": {
+          "recall": null,
+          "precision": 0.0
+        },
+        "BOTNET_C2": {
+          "recall": 1.0,
+          "precision": 0.6667
+        },
+        "DGA_DOMAINS": {
+          "recall": null,
+          "precision": 0.0
+        },
+        "RECONNAISSANCE": {
+          "recall": null,
+          "precision": 0.0
+        }
+      }
+    },
+    {
+      "settings": {
+        "rule_thresholds.C2_MAX_IAT_CV": 0.3,
+        "rule_thresholds.C2_MIN_HISTORY": 8,
+        "rule_thresholds.C2_MIN_IAT_MEAN_S": 5
+      },
+      "mean_episode_recall": 1.0,
+      "false_alerts_per_1000_benign_events": 0.8227,
+      "mean_alert_precision": 0.6667,
+      "within_false_alert_cap": true,
+      "per_threat": {
+        "DDOS": {
+          "recall": null,
+          "precision": 0.0
+        },
+        "BOTNET_C2": {
+          "recall": 1.0,
+          "precision": 0.6667
+        },
+        "DGA_DOMAINS": {
+          "recall": null,
+          "precision": 0.0
+        },
+        "RECONNAISSANCE": {
+          "recall": null,
+          "precision": 0.0
+        }
+      }
+    },
+    {
+      "settings": {
+        "rule_thresholds.C2_MAX_IAT_CV": 0.05,
+        "rule_thresholds.C2_MIN_HISTORY": 16,
+        "rule_thresholds.C2_MIN_IAT_MEAN_S": 1
+      },
+      "mean_episode_recall": 0.0,
+      "false_alerts_per_1000_benign_events": 0.4114,
+      "mean_alert_precision": 0.0,
+      "within_false_alert_cap": true,
+      "per_threat": {
+        "DDOS": {
+          "recall": null,
+          "precision": 0.0
+        },
+        "BOTNET_C2": {
+          "recall": 0.0,
+          "precision": 0.0
+        },
+        "DGA_DOMAINS": {
+          "recall": null,
+          "precision": 0.0
+        },
+        "RECONNAISSANCE": {
+          "recall": null,
+          "precision": 0.0
+        }
+      }
+    },
+    {
+      "settings": {
+        "rule_thresholds.C2_MAX_IAT_CV": 0.05,
+        "rule_thresholds.C2_MIN_HISTORY": 16,
+        "rule_thresholds.C2_MIN_IAT_MEAN_S": 5
+      },
+      "mean_episode_recall": 0.0,
+      "false_alerts_per_1000_benign_events": 0.4114,
+      "mean_alert_precision": 0.0,
+      "within_false_alert_cap": true,
+      "per_threat": {
+        "DDOS": {
+          "recall": null,
+          "precision": 0.0
+        },
+        "BOTNET_C2": {
+          "recall": 0.0,
+          "precision": 0.0
+        },
+        "DGA_DOMAINS": {
+          "recall": null,
+          "precision": 0.0
+        },
+        "RECONNAISSANCE": {
+          "recall": null,
+          "precision": 0.0
+        }
+      }
+    },
+    {
+      "settings": {
+        "rule_thresholds.C2_MAX_IAT_CV": 0.15,
+        "rule_thresholds.C2_MIN_HISTORY": 16,
+        "rule_thresholds.C2_MIN_IAT_MEAN_S": 1
+      },
+      "mean_episode_recall": 0.0,
+      "false_alerts_per_1000_benign_events": 0.4114,
+      "mean_alert_precision": 0.0,
+      "within_false_alert_cap": true,
+      "per_threat": {
+        "DDOS": {
+          "recall": null,
+          "precision": 0.0
+        },
+        "BOTNET_C2": {
+          "recall": 0.0,
+          "precision": 0.0
+        },
+        "DGA_DOMAINS": {
+          "recall": null,
+          "precision": 0.0
+        },
+        "RECONNAISSANCE": {
+          "recall": null,
+          "precision": 0.0
+        }
+      }
+    },
+    {
+      "settings": {
+        "rule_thresholds.C2_MAX_IAT_CV": 0.15,
+        "rule_thresholds.C2_MIN_HISTORY": 16,
+        "rule_thresholds.C2_MIN_IAT_MEAN_S": 5
+      },
+      "mean_episode_recall": 0.0,
+      "false_alerts_per_1000_benign_events": 0.4114,
+      "mean_alert_precision": 0.0,
+      "within_false_alert_cap": true,
+      "per_threat": {
+        "DDOS": {
+          "recall": null,
+          "precision": 0.0
+        },
+        "BOTNET_C2": {
+          "recall": 0.0,
+          "precision": 0.0
+        },
+        "DGA_DOMAINS": {
+          "recall": null,
+          "precision": 0.0
+        },
+        "RECONNAISSANCE": {
+          "recall": null,
+          "precision": 0.0
+        }
+      }
+    },
+    {
+      "settings": {
+        "rule_thresholds.C2_MAX_IAT_CV": 0.3,
+        "rule_thresholds.C2_MIN_HISTORY": 16,
+        "rule_thresholds.C2_MIN_IAT_MEAN_S": 1
+      },
+      "mean_episode_recall": 0.0,
+      "false_alerts_per_1000_benign_events": 0.4114,
+      "mean_alert_precision": 0.0,
+      "within_false_alert_cap": true,
+      "per_threat": {
+        "DDOS": {
+          "recall": null,
+          "precision": 0.0
+        },
+        "BOTNET_C2": {
+          "recall": 0.0,
+          "precision": 0.0
+        },
+        "DGA_DOMAINS": {
+          "recall": null,
+          "precision": 0.0
+        },
+        "RECONNAISSANCE": {
+          "recall": null,
+          "precision": 0.0
+        }
+      }
+    },
+    {
+      "settings": {
+        "rule_thresholds.C2_MAX_IAT_CV": 0.3,
+        "rule_thresholds.C2_MIN_HISTORY": 16,
+        "rule_thresholds.C2_MIN_IAT_MEAN_S": 5
+      },
+      "mean_episode_recall": 0.0,
+      "false_alerts_per_1000_benign_events": 0.4114,
+      "mean_alert_precision": 0.0,
+      "within_false_alert_cap": true,
+      "per_threat": {
+        "DDOS": {
+          "recall": null,
+          "precision": 0.0
+        },
+        "BOTNET_C2": {
+          "recall": 0.0,
+          "precision": 0.0
+        },
+        "DGA_DOMAINS": {
+          "recall": null,
+          "precision": 0.0
+        },
+        "RECONNAISSANCE": {
+          "recall": null,
+          "precision": 0.0
+        }
+      }
+    },
+    {
+      "settings": {
+        "rule_thresholds.C2_MAX_IAT_CV": 0.5,
+        "rule_thresholds.C2_MIN_HISTORY": 16,
+        "rule_thresholds.C2_MIN_IAT_MEAN_S": 1
+      },
+      "mean_episode_recall": 0.0,
+      "false_alerts_per_1000_benign_events": 0.4114,
+      "mean_alert_precision": 0.0,
+      "within_false_alert_cap": true,
+      "per_threat": {
+        "DDOS": {
+          "recall": null,
+          "precision": 0.0
+        },
+        "BOTNET_C2": {
+          "recall": 0.0,
+          "precision": 0.0
+        },
+        "DGA_DOMAINS": {
+          "recall": null,
+          "precision": 0.0
+        },
+        "RECONNAISSANCE": {
+          "recall": null,
+          "precision": 0.0
+        }
+      }
+    },
+    {
+      "settings": {
+        "rule_thresholds.C2_MAX_IAT_CV": 0.5,
+        "rule_thresholds.C2_MIN_HISTORY": 16,
+        "rule_thresholds.C2_MIN_IAT_MEAN_S": 5
+      },
+      "mean_episode_recall": 0.0,
+      "false_alerts_per_1000_benign_events": 0.4114,
+      "mean_alert_precision": 0.0,
+      "within_false_alert_cap": true,
+      "per_threat": {
+        "DDOS": {
+          "recall": null,
+          "precision": 0.0
+        },
+        "BOTNET_C2": {
+          "recall": 0.0,
+          "precision": 0.0
+        },
+        "DGA_DOMAINS": {
+          "recall": null,
+          "precision": 0.0
+        },
+        "RECONNAISSANCE": {
+          "recall": null,
+          "precision": 0.0
+        }
+      }
+    },
+    {
+      "settings": {
+        "rule_thresholds.C2_MAX_IAT_CV": 0.05,
+        "rule_thresholds.C2_MIN_HISTORY": 8,
+        "rule_thresholds.C2_MIN_IAT_MEAN_S": 1
+      },
+      "mean_episode_recall": 0.0,
+      "false_alerts_per_1000_benign_events": 0.6582,
+      "mean_alert_precision": 0.0,
+      "within_false_alert_cap": true,
+      "per_threat": {
+        "DDOS": {
+          "recall": null,
+          "precision": 0.0
+        },
+        "BOTNET_C2": {
+          "recall": 0.0,
+          "precision": 0.0
+        },
+        "DGA_DOMAINS": {
+          "recall": null,
+          "precision": 0.0
+        },
+        "RECONNAISSANCE": {
+          "recall": null,
+          "precision": 0.0
+        }
+      }
+    },
+    {
+      "settings": {
+        "rule_thresholds.C2_MAX_IAT_CV": 0.05,
+        "rule_thresholds.C2_MIN_HISTORY": 8,
+        "rule_thresholds.C2_MIN_IAT_MEAN_S": 5
+      },
+      "mean_episode_recall": 0.0,
+      "false_alerts_per_1000_benign_events": 0.6582,
+      "mean_alert_precision": 0.0,
+      "within_false_alert_cap": true,
+      "per_threat": {
+        "DDOS": {
+          "recall": null,
+          "precision": 0.0
+        },
+        "BOTNET_C2": {
+          "recall": 0.0,
+          "precision": 0.0
+        },
+        "DGA_DOMAINS": {
+          "recall": null,
+          "precision": 0.0
+        },
+        "RECONNAISSANCE": {
+          "recall": null,
+          "precision": 0.0
+        }
+      }
+    },
+    {
+      "settings": {
+        "rule_thresholds.C2_MAX_IAT_CV": 0.15,
+        "rule_thresholds.C2_MIN_HISTORY": 8,
+        "rule_thresholds.C2_MIN_IAT_MEAN_S": 1
+      },
+      "mean_episode_recall": 0.0,
+      "false_alerts_per_1000_benign_events": 0.8227,
+      "mean_alert_precision": 0.0,
+      "within_false_alert_cap": true,
+      "per_threat": {
+        "DDOS": {
+          "recall": null,
+          "precision": 0.0
+        },
+        "BOTNET_C2": {
+          "recall": 0.0,
+          "precision": 0.0
+        },
+        "DGA_DOMAINS": {
+          "recall": null,
+          "precision": 0.0
+        },
+        "RECONNAISSANCE": {
+          "recall": null,
+          "precision": 0.0
+        }
+      }
+    },
+    {
+      "settings": {
+        "rule_thresholds.C2_MAX_IAT_CV": 0.15,
+        "rule_thresholds.C2_MIN_HISTORY": 8,
+        "rule_thresholds.C2_MIN_IAT_MEAN_S": 5
+      },
+      "mean_episode_recall": 0.0,
+      "false_alerts_per_1000_benign_events": 0.8227,
+      "mean_alert_precision": 0.0,
+      "within_false_alert_cap": true,
+      "per_threat": {
+        "DDOS": {
+          "recall": null,
+          "precision": 0.0
+        },
+        "BOTNET_C2": {
+          "recall": 0.0,
+          "precision": 0.0
+        },
+        "DGA_DOMAINS": {
+          "recall": null,
+          "precision": 0.0
+        },
+        "RECONNAISSANCE": {
+          "recall": null,
+          "precision": 0.0
+        }
+      }
+    }
+  ],
+  "note": "Apply the best settings deliberately, then confirm on the held-out validation split before the single test-split run."
+}

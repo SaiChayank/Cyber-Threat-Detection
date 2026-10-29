@@ -7,6 +7,16 @@ from datasets import analyze_baseline_failures as diagnostic
 from datasets.validate_c2_beacon import events
 
 
+@pytest.fixture(autouse=True)
+def historical_c2_threshold(monkeypatch):
+    """The saved C2 development evidence (14-18 Oct) was produced at the original .05
+    inter-arrival CV limit. The runtime default was tuned to .3 on real CTU-13 captures
+    (docs/REAL_CAPTURE_RESULTS.md); these guards re-score the historical cases at the
+    threshold they were recorded with. tests/test_rule_thresholds.py covers the new default."""
+    from detection import rule_thresholds
+    monkeypatch.setattr(rule_thresholds, 'C2_MAX_IAT_CV', .05)
+
+
 def test_identical_health_check_cannot_be_separated_by_metadata_or_features():
     stream = list(events('fixed_2_5', 130))
     result = diagnostic.c2_pair_detail(stream, stream)

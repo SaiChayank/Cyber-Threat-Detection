@@ -239,7 +239,7 @@ Source: [Lab evaluation](LAB_EVALUATION.md), `datasets/evaluate_lab.py`.
   events, ingest health (late events, corrupt packets). The report records SHA-256 of every input.
 - Command: `python -m datasets.evaluate_lab run01.labels.json ... --out lab-report.json`.
 - Protocol: [Lab capture protocol](LAB_CAPTURE_PROTOCOL.md) (minimum 6 runs per threat class, 3 benign runs per look-alike category, whole-run splits, test scored once).
-- **Status: no labelled lab captures have been scored yet (P0-5 pending).** No lab-capture result exists in the repository.
+- **Status (29 Oct 2026):** the first real-capture result exists, for botnet C2 and benign traffic only (public CTU-13 Neris and normal captures, time-sliced). The tuned C2 default scored 1/1 episode recall with 0.20 benign false alerts per 1,000 events on the held-out test slices. All other detectors are still unmeasured on real traffic. See [Real capture results](REAL_CAPTURE_RESULTS.md); own-lab captures (P0-5 proper) are still welcome.
 
 ### 6.4 Performance (core and delivery)
 

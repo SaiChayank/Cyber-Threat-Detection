@@ -4,6 +4,16 @@ import pytest
 from datasets.validate_c2_beacon import events, score
 
 
+@pytest.fixture(autouse=True)
+def historical_c2_threshold(monkeypatch):
+    """The saved C2 development evidence (14-18 Oct) was produced at the original .05
+    inter-arrival CV limit. The runtime default was tuned to .3 on real CTU-13 captures
+    (docs/REAL_CAPTURE_RESULTS.md); these guards re-score the historical cases at the
+    threshold they were recorded with. tests/test_rule_thresholds.py covers the new default."""
+    from detection import rule_thresholds
+    monkeypatch.setattr(rule_thresholds, 'C2_MAX_IAT_CV', .05)
+
+
 @pytest.mark.parametrize('kind,interval', [
     ('fixed_2_5', 2.5), ('fixed_6', 6), ('fixed_12', 12),
     ('fixed_20', 20), ('fixed_60', 60),
