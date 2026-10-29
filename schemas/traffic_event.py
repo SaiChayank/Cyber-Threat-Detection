@@ -2,7 +2,7 @@
 from typing import Literal
 from pydantic import BaseModel, Field, IPvAnyAddress, model_serializer, model_validator
 
-OPTIONAL_OBSERVED_FIELDS = ('tls_server_fingerprint', 'tls_ja4', 'tcp_fin_rst', 'tcp_window')
+OPTIONAL_OBSERVED_FIELDS = ('tls_server_fingerprint', 'tls_ja4', 'tcp_fin_rst', 'tcp_window', 'quic_fingerprint')
 
 
 class TrafficEvent(BaseModel):
@@ -29,6 +29,7 @@ class TrafficEvent(BaseModel):
     flow_id: str | None = Field(default=None, max_length=128)
     tcp_fin_rst: bool | None = None  # True when an observed TCP FIN or RST closes the connection
     tcp_window: int | None = Field(default=None, ge=0, le=65535)  # Advertised (unscaled) TCP window
+    quic_fingerprint: str | None = Field(default=None, max_length=64)  # QUIC Initial header fingerprint
 
     @model_validator(mode='after')
     def check_reverse(self):

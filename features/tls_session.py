@@ -35,13 +35,13 @@ def session_key(event):
 
 
 class Session:
-    __slots__ = ('first', 'last', 'packets', 'sizes', 'times', 'ja3', 'ja3s', 'ja4')
+    __slots__ = ('first', 'last', 'packets', 'sizes', 'times', 'ja3', 'ja3s', 'ja4', 'quic')
 
     def __init__(self, timestamp):
         self.first = self.last = timestamp
         self.packets = 0
         self.sizes, self.times = deque(maxlen=SEQUENCE), deque(maxlen=SEQUENCE)
-        self.ja3 = self.ja3s = self.ja4 = None
+        self.ja3 = self.ja3s = self.ja4 = self.quic = None
 
     def copy(self):
         staged = copy(self)
@@ -78,7 +78,8 @@ class TlsSessionState:
         session.ja3 = event.tls_fingerprint or session.ja3
         session.ja4 = event.tls_ja4 or session.ja4
         session.ja3s = event.tls_server_fingerprint or session.ja3s
-        fingerprint = event.tls_ja4 or event.tls_fingerprint
+        session.quic = event.quic_fingerprint or session.quic
+        fingerprint = event.tls_ja4 or event.tls_fingerprint or event.quic_fingerprint
         if fingerprint:
             client = key[0]
             self.clients.set(client, True)
@@ -86,10 +87,10 @@ class TlsSessionState:
             if client not in members and len(members) < MAX_CLIENTS_PER_FINGERPRINT:
                 members = members | {client}
             self.fingerprint_clients.set(fingerprint, members)
-        session_fingerprint = session.ja4 or session.ja3
+        session_fingerprint = session.ja4 or session.ja3 or session.quic
         intervals = [(b - a) / 1000 for a, b in zip(session.times, list(session.times)[1:])]
         return dict(
-            tls_ja3=session.ja3, tls_ja3s=session.ja3s, tls_ja4=session.ja4,
+            tls_ja3=session.ja3, tls_ja3s=session.ja3s, tls_ja4=session.ja4, tls_quic=session.quic,
             tls_session_packets=session.packets,
             tls_session_duration_s=(session.last - session.first) / 1000,
             tls_session_mean_bytes=sum(session.sizes) / len(session.sizes),
@@ -102,7 +103,7 @@ class TlsSessionState:
 
 
 def empty():
-    return dict(tls_ja3=None, tls_ja3s=None, tls_ja4=None, tls_session_packets=0,
+    return dict(tls_ja3=None, tls_ja3s=None, tls_ja4=None, tls_quic=None, tls_session_packets=0,
                 tls_session_duration_s=0.0, tls_session_mean_bytes=0.0, tls_session_size_cv=0.0,
                 tls_session_small_fraction=0.0, tls_session_iat_mean_s=0.0, tls_session_iat_cv=0.0,
                 tls_fingerprint_clients=0, tls_client_population=0)

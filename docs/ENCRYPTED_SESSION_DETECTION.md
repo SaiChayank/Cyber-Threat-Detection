@@ -43,8 +43,10 @@ HIGH and the confidence is a heuristic strength, not a probability.
 - ClientHello/ServerHello must be complete in one TCP segment; no TCP
   reassembly. TLS 1.3 encrypts later handshake messages, so JA3S reflects the
   ServerHello only.
-- Raw QUIC handshake fingerprinting is still not implemented; supplied QUIC
-  metadata is accepted as before.
+- Raw QUIC JA4 is deliberately NOT implemented: the Initial ClientHello is
+  protected, and reading it would mean deriving keys and decrypting QUIC content,
+  which the project's no-decryption constraint forbids. See the QUIC header
+  fingerprint below.
 - Rarity needs a client population; small or single-host captures cannot
   trigger the behaviour path. Rare legitimate software and regular keep-alive
   clients can still match; they appear as false alerts in lab evaluation.
@@ -60,3 +62,18 @@ without JA3S/JA4 serialize exactly as before, so recorded stream hashes still
 match. The 14 Oct encrypted training plan is superseded by the lab route; its
 test now accepts only the re-pinned feature contract as a stale reference.
 Run the script (after the demo check) whenever runtime code changes again.
+
+## QUIC header fingerprint (no decryption)
+
+For UDP/443 datagrams whose first byte marks a QUIC Initial long header
+(`0xC0` pattern, non-zero version), `ProtocolParser._quic_initial_fingerprint`
+reads only unencrypted fields and builds
+`q<version hex>.d<dest conn-ID length>.s<source conn-ID length>.t<token present>.l<datagram bytes>`,
+for example `q00000001.d8.s0.t0.l1252`. Stacks differ in connection-ID lengths,
+token use and first-flight padding, so it is a weak client-stack fingerprint,
+not JA4. It travels as optional `TrafficEvent.quic_fingerprint` (omitted when
+absent), joins the session and rarity features (`tls_quic`, shared with the
+JA3/JA4 rarity counts), and can be listed under `"quic"` in
+`detection/tls_indicators.json`. Limits: different QUIC stacks can share a
+value; version negotiation and short-header packets give none; the protected
+payload (and so TLS parameters) is never read. Tests: `tests/test_quic_header.py`.

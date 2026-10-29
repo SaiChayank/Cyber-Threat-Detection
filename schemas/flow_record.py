@@ -28,6 +28,7 @@ class FlowRecord:
     inter_arrival_times: List[float] = field(default_factory=list)  # Inter-packet arrival deltas in seconds
     is_unidirectional: bool = True    # Explicitly flags unidirectional capture invariant
     tcp_window_forward: Optional[int] = None  # Advertised (unscaled) TCP window of the observed packet
+    quic_fingerprint: Optional[str] = None  # Unencrypted QUIC Initial long-header fingerprint
 
     @staticmethod
     def compute_flow_id(

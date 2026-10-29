@@ -72,7 +72,7 @@
       "newline_normalized": true
     },
     "schemas/traffic_event.py": {
-      "sha256": "581f4d701d583fe030a6c7a31aa92a50c6fd704d40ce060ccdd67b02457141e7",
+      "sha256": "5ebe952e479d4f56266aa3b74313f85644214aa5e6cf935dbc978e92dcdd6e0c",
       "newline_normalized": true
     },
     "schemas/alert.py": {
@@ -80,7 +80,7 @@
       "newline_normalized": true
     },
     "schemas/flow_record.py": {
-      "sha256": "10e8d93cec06b782c30a887ab76947ab93bdb956ba32cf20e51237968eb03609",
+      "sha256": "1de1c53805c33de538fa12f3920e1632a4792f7b012feabaa2dc29ad6cfef2e8",
       "newline_normalized": true
     },
     "schemas/enums.py": {

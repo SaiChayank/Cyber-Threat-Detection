@@ -13,7 +13,7 @@ from pathlib import Path
 
 INDICATORS = Path(__file__).with_name('tls_indicators.json')
 FORMAT = 'ps26145-tls-indicators/1'
-KINDS = ('ja3', 'ja3s', 'ja4')
+KINDS = ('ja3', 'ja3s', 'ja4', 'quic')
 
 MIN_SESSION_PACKETS = 8
 MAX_SIZE_CV = .25
@@ -40,7 +40,7 @@ def indicator_match(features, indicators):
 
 
 def behaviour_match(features):
-    return (bool(features.get('tls_ja4') or features.get('tls_ja3'))
+    return (bool(features.get('tls_ja4') or features.get('tls_ja3') or features.get('tls_quic'))
             and features['tls_session_packets'] >= MIN_SESSION_PACKETS
             and features['tls_session_size_cv'] <= MAX_SIZE_CV
             and features['tls_session_iat_cv'] <= MAX_IAT_CV
@@ -49,7 +49,7 @@ def behaviour_match(features):
             and features['tls_fingerprint_clients'] <= MAX_FINGERPRINT_CLIENTS)
 
 
-EVIDENCE = ['encrypted', 'tls_ja3', 'tls_ja3s', 'tls_ja4', 'tls_session_packets',
+EVIDENCE = ['encrypted', 'tls_ja3', 'tls_ja3s', 'tls_ja4', 'tls_quic', 'tls_session_packets',
             'tls_session_duration_s', 'tls_session_mean_bytes', 'tls_session_size_cv',
             'tls_session_small_fraction', 'tls_session_iat_mean_s', 'tls_session_iat_cv',
             'tls_fingerprint_clients', 'tls_client_population']

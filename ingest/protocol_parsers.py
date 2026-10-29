@@ -95,6 +95,7 @@ class ProtocolParser:
             dst_port: Optional[int] = None
             tcp_flags: int = 0
             tcp_window: Optional[int] = None
+            quic_fingerprint: Optional[str] = None
             payload_data: bytes = b""
 
             if protocol == 6:  # TCP
@@ -125,6 +126,8 @@ class ProtocolParser:
                     self.dlq.record_corrupt_packet('INVALID_UDP_LENGTH', 'Invalid UDP length', len(raw_data))
                     return None, None, None
                 payload_data = raw_data[l4_offset + 8:l4_offset + udp_len]
+                if 443 in (src_port, dst_port):
+                    quic_fingerprint = self._quic_initial_fingerprint(payload_data)
 
             # 4. Construct Core FlowRecord
             flow_id = FlowRecord.compute_flow_id(
@@ -147,7 +150,8 @@ class ProtocolParser:
                 tcp_flags_backward=0,
                 inter_arrival_times=[0.0],
                 is_unidirectional=True,
-                tcp_window_forward=tcp_window
+                tcp_window_forward=tcp_window,
+                quic_fingerprint=quic_fingerprint
             )
 
             # 5. Extract Sidecars (DNS / TLS)
@@ -176,6 +180,31 @@ class ProtocolParser:
         except Exception as exc:
             self.dlq.record_corrupt_packet("UNHANDLED_EXCEPTION", str(exc), len(raw_data))
             return None, None, None
+
+    @staticmethod
+    def _quic_initial_fingerprint(payload: bytes) -> Optional[str]:
+        """Fingerprint from the UNENCRYPTED QUIC Initial long header only. No decryption.
+
+        Uses version, connection-ID lengths, token presence and the datagram size. The
+        protected ClientHello (and so JA3/JA4) is never derived or read.
+        """
+        try:
+            if len(payload) < 7 or payload[0] & 0xF0 != 0xC0:  # Long header, fixed bit, Initial type.
+                return None
+            version = struct.unpack('!I', payload[1:5])[0]
+            if version == 0:  # Version negotiation.
+                return None
+            dcid_len = payload[5]
+            pos = 6 + dcid_len
+            scid_len = payload[pos]
+            pos += 1 + scid_len
+            token_len = payload[pos] & 0x3F  # First varint byte; only presence matters.
+            token_present = int(payload[pos] & 0xC0 != 0 or token_len > 0)
+            if dcid_len > 20 or scid_len > 20:
+                return None
+            return f'q{version:08x}.d{dcid_len}.s{scid_len}.t{token_present}.l{len(payload)}'
+        except IndexError:
+            return None
 
     @staticmethod
     def _read_dns_name(payload: bytes, offset: int) -> Tuple[str, int]:
