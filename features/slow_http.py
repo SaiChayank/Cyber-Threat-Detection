@@ -9,7 +9,7 @@ timeout. Request contents are never inspected.
 from collections import OrderedDict
 from copy import copy
 
-from features.cow_map import CowMap
+from features.cow_map import CowMap, shallow
 
 IDLE_EXPIRY_MS = 120000
 DATA_MIN_BYTES = 61  # IP total length above bare TCP/IP headers and common options.
@@ -48,7 +48,7 @@ class SlowHttpState:
         self.pairs = CowMap(MAX_PAIRS)  # (client, server, service port) -> Pair, replaced on write
 
     def fork(self, event):
-        staged = copy(self)
+        staged = shallow(self)
         staged.pairs = self.pairs.fork()
         return staged
 

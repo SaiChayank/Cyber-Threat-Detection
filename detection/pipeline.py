@@ -1,6 +1,5 @@
 """Incremental passive inference. No networking operations."""
 import time
-from copy import copy
 from collections import deque, OrderedDict
 from features.extractor import FeatureExtractor
 from ml.model import Model
@@ -10,7 +9,7 @@ from detection.dns_tunnel_candidate import candidate_reason
 from detection import spoof_indicators, tls_indicators
 from features import slow_http as slow_http_features
 from features import slow_read as slow_read_features
-from features.cow_map import CowMap
+from features.cow_map import CowMap, shallow
 from features.dns_tunnel import FEATURE_NAMES as DNS_TUNNEL_FEATURES
 from schemas.alert import AlertEvent
 from schemas.enums import ThreatClass, Severity, DetectorType
@@ -57,7 +56,7 @@ class Pipeline:
         Models are immutable during inference; no full model/history copy is made.
         """
         started = time.perf_counter()
-        staged = copy(self)
+        staged = shallow(self)
         staged.extractor = self.extractor.fork(event)
         staged.sessions = self.sessions.fork()
         alerts = staged._detect(event)

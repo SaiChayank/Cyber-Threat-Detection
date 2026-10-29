@@ -9,7 +9,7 @@ import math
 from collections import deque
 from copy import copy
 
-from features.cow_map import CowMap
+from features.cow_map import CowMap, shallow
 
 IDLE_MS = 60000
 MAX_SESSIONS = 4096
@@ -56,7 +56,7 @@ class TlsSessionState:
         self.clients = CowMap(MAX_CLIENTS)  # TLS clients with an observed client fingerprint
 
     def fork(self, event):
-        staged = copy(self)
+        staged = shallow(self)
         staged.sessions = self.sessions.fork()
         staged.fingerprint_clients = self.fingerprint_clients.fork()
         staged.clients = self.clients.fork()

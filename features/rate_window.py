@@ -1,6 +1,6 @@
 """Bounded, causal rate aggregates; packet totals never depend on buffer length."""
 import math
-from copy import copy
+from features.cow_map import shallow
 from collections import Counter, deque
 from dataclasses import dataclass, field
 
@@ -43,11 +43,11 @@ class RateWindow:
 
     def fork(self):
         """Copy writable state for one update; expired buckets are read-only."""
-        staged = copy(self)
+        staged = shallow(self)
         staged.sources = self.sources.copy()
         staged.buckets = self.buckets.copy()
         if staged.buckets:
-            last = copy(staged.buckets[-1])
+            last = shallow(staged.buckets[-1])
             last.sources = last.sources.copy()
             staged.buckets[-1] = last
         return staged

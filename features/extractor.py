@@ -1,7 +1,6 @@
 """Causal bounded metadata features, shared by training and runtime."""
 import math
 import hashlib
-from copy import copy
 from collections import Counter, OrderedDict, deque
 from schemas.traffic_event import TrafficEvent
 from features.rate_window import RateWindow
@@ -9,6 +8,8 @@ from features.dns_tunnel import dns_tunnel_features
 from features.tls_session import TlsSessionState
 from features.slow_http import SlowHttpState
 from features.slow_read import SlowReadState
+from features.source_history import SourceHistory
+from features.cow_map import CowMap, shallow
 from ml.dga import lexical_features
 
 FEATURES = ['packet_rate', 'byte_rate', 'source_entropy', 'syn_fraction',
@@ -70,13 +71,19 @@ class ForwardByteWindow:
         return self.bytes_60s, bytes_10s / 10
 
 
+def copy_byte_window(window):
+    staged = shallow(window)
+    staged.buckets = deque([bucket.copy() for bucket in window.buckets])
+    return staged
+
+
 class FeatureExtractor:
     def __init__(self, max_sources=4096, max_events=512):
-        self.sources = OrderedDict()
-        self.source_byte_windows = OrderedDict()
+        self.sources = CowMap(None)
+        self.source_byte_windows = CowMap(None)
         self.global_rates = RateWindow(max_sources=max_sources)
-        self.syn_targets = OrderedDict()
-        self.udp_targets = OrderedDict()
+        self.syn_targets = CowMap(None)
+        self.udp_targets = CowMap(None)
         self.max_sources = max_sources
         self.max_events = max_events
         self.watermark = -1.0
@@ -93,27 +100,17 @@ class FeatureExtractor:
         the global rate window are copied. Other entries are never mutated by
         update(), including entries removed by expiration or LRU eviction.
         """
-        staged = copy(self)
+        staged = shallow(self)
         if event.timestamp / 1000 < self.watermark:
             return staged  # Late update changes only the scalar drop counter.
-        src, target = str(event.src_ip), str(event.dst_ip)
-        staged.sources = self.sources.copy()
-        if src in staged.sources:
-            staged.sources[src] = staged.sources[src].copy()
-        staged.source_byte_windows = self.source_byte_windows.copy()
-        if src in staged.source_byte_windows:
-            window = copy(staged.source_byte_windows[src])
-            window.buckets = deque([bucket.copy() for bucket in window.buckets])
-            staged.source_byte_windows[src] = window
+        staged.sources = self.sources.fork()
+        staged.source_byte_windows = self.source_byte_windows.fork()
         staged.global_rates = self.global_rates.fork()
         staged.tls = self.tls.fork(event)
         staged.slow_http = self.slow_http.fork(event)
         staged.slow_read = self.slow_read.fork(event)
-        staged.syn_targets = self.syn_targets.copy()
-        staged.udp_targets = self.udp_targets.copy()
-        targets = staged.syn_targets if event.protocol == 6 else staged.udp_targets
-        if event.protocol in (6, 17) and target in targets:
-            targets[target] = targets[target].fork()
+        staged.syn_targets = self.syn_targets.fork()
+        staged.udp_targets = self.udp_targets.fork()
         return staged
 
     def update(self, event: TrafficEvent):
@@ -123,48 +120,48 @@ class FeatureExtractor:
             return None  # Explicit drop: never poison causal state with late events.
         self.watermark = t
         src = str(event.src_ip)
-        history = self.sources.pop(src, deque(maxlen=self.max_events))
+        history = self.sources.get(src)
+        # Entries are replaced on write, never mutated in place, so staged forks stay independent.
+        history = history.copy() if history is not None else SourceHistory(self.max_events)
         while history and history[0].timestamp < event.timestamp - 60000:
             history.popleft()
         if len(history) == self.max_events:
             self.evictions += 1
         history.append(event)
-        self.sources[src] = history
+        self.sources.set(src, history)
         if len(self.sources) > self.max_sources:
-            evicted_source, _ = self.sources.popitem(last=False)
-            self.source_byte_windows.pop(evicted_source, None)
+            evicted_source, _ = self.sources.popitem_oldest()
+            self.source_byte_windows.delete(evicted_source)
             self.evictions += 1
-        byte_window = self.source_byte_windows.pop(src, None)
-        if byte_window is None:
-            byte_window = ForwardByteWindow()
+        byte_window = self.source_byte_windows.get(src)
+        byte_window = copy_byte_window(byte_window) if byte_window is not None else ForwardByteWindow()
         source_forward_bytes_60s, source_forward_byte_rate_10s = byte_window.update(event.timestamp, event.bytes)
-        self.source_byte_windows[src] = byte_window
+        self.source_byte_windows.set(src, byte_window)
         rates = self.global_rates.update(event)
         syn_target = None
         if event.protocol == 6:
             target = str(event.dst_ip)
-            target_window = self.syn_targets.pop(target, None)
-            if target_window is None:
-                target_window = RateWindow(max_sources=min(self.max_sources, 256), source_weight_packets=True)
+            target_window = self.syn_targets.get(target)
+            target_window = (target_window.fork() if target_window is not None else
+                             RateWindow(max_sources=min(self.max_sources, 256), source_weight_packets=True))
             syn_target = target_window.update(event)
-            self.syn_targets[target] = target_window
+            self.syn_targets.set(target, target_window)
             if len(self.syn_targets) > 512:
-                self.syn_targets.popitem(last=False)
+                self.syn_targets.popitem_oldest()
         udp_target = None
         udp_concentration = 0.0
         if event.protocol == 17:
             target = str(event.dst_ip)
-            target_window = self.udp_targets.pop(target, None)
-            if target_window is None:
-                target_window = RateWindow(max_sources=min(self.max_sources, 256), source_weight_packets=True)
+            target_window = self.udp_targets.get(target)
+            target_window = (target_window.fork() if target_window is not None else
+                             RateWindow(max_sources=min(self.max_sources, 256), source_weight_packets=True))
             udp_target = target_window.update(event)
             udp_concentration = target_window.packets / self.global_rates.packets
-            self.udp_targets[target] = target_window
+            self.udp_targets.set(target, target_window)
             if len(self.udp_targets) > 512:
-                self.udp_targets.popitem(last=False)
-        recent = [e for e in history if e.timestamp >= event.timestamp - 10000]
+                self.udp_targets.popitem_oldest()
         # Timing is per source/destination/service, not across unrelated browsing flows.
-        peer = [e for e in history if e.dst_ip == event.dst_ip and e.dst_port == event.dst_port]
+        peer = list(history.peer(event))
         intervals = [(b.timestamp - a.timestamp) / 1000 for a, b in zip(peer, peer[1:])]
         name = (event.dns_name or '').lower().rstrip('.')
         dga = dga_lexical_features(name)
@@ -175,12 +172,12 @@ class FeatureExtractor:
                         'finite_observed_ratio')
         sizes = [e.bytes / e.packets for e in peer]
         values = [rates['packet_rate'], rates['byte_rate'], rates['source_entropy'],
-                  sum(e.syn for e in recent) / len(recent),
+                  history.recent_syn / len(history.recent),
                   sum(intervals) / len(intervals) if intervals else 0, cv(intervals),
-                  len(set(e.dst_ip for e in recent)), len(set(e.dst_port for e in recent)),
+                  len(history.recent_dst), len(history.recent_ports),
                   dga['domain_entropy'], len(name), dga['domain_digit_ratio'], dga['bigram_surprise'],
                   float(event.dns_type in (10, 16) and bool(name)), float(event.encrypted), cv(sizes),
-                  sum(e.bytes for e in history), ratio or 0, float(event.reverse_observed),
+                  history.total_bytes, ratio or 0, float(event.reverse_observed),
                   float(any(e.tls_fingerprint == DEMO_FINGERPRINT for e in peer)), len(peer)]
         return dict(zip(FEATURES, values)) | dns_tunnel_features(event, history) | self.tls.update(event) | self.slow_http.update(event) | self.slow_read.update(event) | {'observed_byte_ratio': ratio,
                                              'observed_byte_ratio_status': ratio_status,

@@ -7,9 +7,7 @@ whose client packets keep advertising a window at or below SMALL_WINDOW. SYN
 packets are ignored (the handshake window is unscaled and unrepresentative).
 Connections close on an observed FIN/RST or after an idle timeout.
 """
-from copy import copy
-
-from features.cow_map import CowMap
+from features.cow_map import CowMap, shallow
 from features.slow_http import IDLE_EXPIRY_MS, MAX_ACTIVE, MAX_PAIRS, MIN_AGE_S, orient
 
 SMALL_WINDOW = 256
@@ -23,7 +21,7 @@ class SlowReadState:
         self.pairs = CowMap(MAX_PAIRS)  # (client, server, service) -> {client port: (first, last, window)}
 
     def fork(self, event):
-        staged = copy(self)
+        staged = shallow(self)
         staged.pairs = self.pairs.fork()
         return staged
 

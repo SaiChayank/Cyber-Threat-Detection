@@ -54,26 +54,44 @@ Tests: `.venv/Scripts/python.exe -m pytest -q tests/test_pcap_throughput.py`
 
 | Path | Packets/s | Flows/s | Sustained Mbps |
 | --- | --- | --- | --- |
-| Parse only (reader + adapter) | 51,361 | n/a | 307 |
-| Full path (parse + features + inference) | **1,301** | 80.4 | **7.8** |
+| Parse only (reader + adapter) | 72,320 | n/a | 433 |
+| Full path (parse + features + inference) | **2,203** | 136.2 | **13.2** |
 
-The full path runs at about 0.1x real time on this packet workload, so it
-does **not** sustain 2,000 packets/s. The project's 2,000 events/s gate is
-defined on flow-summary metadata events (3,000+ events/s, p95 about 1 ms, see
-[Performance validation](PERFORMANCE_VALIDATION.md)); one packet is a much
-heavier unit than one summary. Parsing is not the bottleneck.
+The full path clears 2,000 packets/s on this workload (about 0.22x real time on
+a capture compressed into 5 s). Five repeat runs on the same machine gave 2,126 to
+2,240 packets/s; an earlier build ranged 1,745 to 2,155 because the machine had
+background load, so expect roughly +/-10% run to run. The project's separate 2,000 events/s gate on
+flow-summary metadata events is unchanged and still passes (3,301 events/s,
+p95 0.94 ms, same 1,170 alerts; see [Performance validation](PERFORMANCE_VALIDATION.md)).
 
-Profiling found two causes: per-event failure-safe state copies and the
-20-feature Gaussian model scoring every event. Copying the flow-ID table and
-the new TLS/slow-HTTP state was replaced by a copy-on-write map
-(`features/cow_map.py`), which raised the first run (669 packets/s) to about 1,257. Hoisting the model's per-class
-constants and dropping per-event IP-string conversion then lifted short runs
-(20,000 packets) to about 2,260 packets/s, but long runs stay near 1,300
-because throughput falls as source histories fill: the extractor rescans each
-source's retained history (up to 512 events in 60 s) on every event, which is part
-of the frozen feature semantics (about 3,300 packets/s over the first 8,000
-packets, about 1,100 by 32,000). Changing that is a feature-contract decision,
-not a safe optimisation. The workload also raised 2 false
-`ENCRYPTED_MALWARE` alerts from the rare-fingerprint rule; tune that in P0-5.
-Treat all figures as one-machine, synthetic-capture results.
+## How it got there
 
+The first run measured 669 packets/s. Profiling found that the cost was the
+failure-safe staging copying whole state tables on every event, then the
+extractor rescanning each source's retained history (up to 512 events in 60 s)
+several times per event, which made throughput fall as histories filled
+(about 1,300 packets/s over 50,000 packets).
+
+1. `features/cow_map.py`: a copy-on-write LRU map replaces whole-table copies for the
+   flow-ID, TLS-session, slow-HTTP/slow-read, per-source history, byte-window
+   and SYN/UDP target tables. A failed event is still discarded without side effects.
+2. `features/source_history.py`: each source's history keeps a running byte total, the
+   10-second window's SYN count and distinct destination/port counts, and a
+   per-peer index, instead of rescanning the history on every event.
+3. The model's per-class constants are computed once, recent destinations are
+   no longer stringified per event, and staged copies of plain objects use a direct
+   `__dict__` clone instead of `copy.copy`.
+
+**Results are bit-identical.** A differential run of the previous extractor against the
+new one over 20,000 events produced zero differing feature values with the default
+bounds, a tiny per-source event limit, a tiny source limit (forcing eviction) and a
+90-second gap (forcing expiry). The nine demo traces and the frozen model are
+unchanged, so no feature-contract change was needed. `tests/test_source_history.py`
+checks the new structures against brute-force scans. The only intended difference
+is that tables that were first-in-first-out (flow IDs, TLS, slow-HTTP) now evict the
+least recently used entry, which only matters beyond their 4,096-entry bounds.
+
+Remaining limits: throughput still declines slowly as histories fill; the same-peer
+timing and size statistics still scan that peer's retained events. The workload also
+raised 2 false `ENCRYPTED_MALWARE` alerts from the rare-fingerprint rule; tune that in
+P0-5. Treat all figures as one-machine, synthetic-capture results.

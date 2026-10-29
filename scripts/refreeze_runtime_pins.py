@@ -25,7 +25,7 @@ DNS_CONTRACT = ROOT / 'data/dns_tunnel_evaluation_contract.json'
 DNS_SCORER = ROOT / 'datasets/score_dns_tunnel.py'
 # Runtime modules added after the DNS contract was first frozen.
 DNS_RUNTIME_ADDITIONS = ('features/tls_session.py', 'detection/tls_indicators.py', 'detection/tls_indicators.json',
-                         'features/slow_http.py', 'ingest/flow_export.py', 'features/cow_map.py', 'detection/spoof_indicators.py', 'features/slow_read.py', 'ingest/pcapng.py')
+                         'features/slow_http.py', 'ingest/flow_export.py', 'features/cow_map.py', 'detection/spoof_indicators.py', 'features/slow_read.py', 'ingest/pcapng.py', 'features/source_history.py')
 
 
 def raw_hash(path):

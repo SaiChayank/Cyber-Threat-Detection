@@ -264,11 +264,13 @@ Synthetic benign workload: 50,000 packets, 3,091 flows, 5.0 s of capture, one ma
 
 | Path | Packets/s | Flows/s | Sustained Mbps |
 | --- | --- | --- | --- |
-| Parse only (reader and adapter) | 51,361 | n/a | 307.3 |
-| Full path (parse, features, inference) | **1,301.1** | 80.4 | **7.78** |
+| Parse only (reader and adapter) | 72,320 | n/a | 433 |
+| Full path (parse, features, inference) | **2,203** | 136.2 | **13.18** |
 
-**The full PCAP path is below 2,000 packets/s.** It runs at a realtime factor of 0.13 on this
-workload. The 2,000 gate applies to flow-summary metadata events (section 6.4), not packets.
+**The full PCAP path clears 2,000 packets/s** (realtime factor 0.22 on this compressed capture; five runs 2,126 to 2,240). Result-neutral
+copy-on-write state and incremental history aggregates raised it from 669 packets/s; a differential run showed zero
+feature differences ([PCAP throughput](PCAP_THROUGHPUT.md)). The separate 2,000-events/s gate applies to
+flow-summary metadata events (section 6.4).
 The run raised 2 benign `ENCRYPTED_MALWARE` alerts from the rare-fingerprint rule.
 
 ## 7. Requirement traceability
@@ -293,7 +295,7 @@ and the seven detector labels. The letter mapping is **not verified**.
 | Dashboard, SSE, persistence and restart | Implemented (local, single worker) | `frontend/`, `backend/`, `persistence/store.py` |
 | Streaming with bounded latency | Implemented (controlled demo and core scope) | `features/extractor.py`, `benchmarks/run.py` |
 | Core throughput >= 2,000 metadata events/s, p95 < 50 ms | Implemented (one machine, synthetic) | `benchmarks/latest.json` |
-| Full-path packet throughput | Partial: 1,301 packets/s, below 2,000 | `benchmarks/pcap_throughput_latest.json` |
+| Full-path packet throughput | Implemented: 2,203 packets/s (one machine, synthetic benign capture; about +/-10% run to run) | `benchmarks/pcap_throughput_latest.json` |
 | Delivery p95 < 1,000 ms (API to SSE) | Implemented (loopback only) | [Performance validation](PERFORMANCE_VALIDATION.md) |
 | NetFlow, IPFIX, sFlow import | Implemented as file import; no live collector | `ingest/flow_export.py`, [Flow export import](FLOW_EXPORT_IMPORT.md) |
 | Lab evaluation of real captures | Implemented (harness); Not validated on real captures (P0-5 pending) | `datasets/evaluate_lab.py`, [Lab evaluation](LAB_EVALUATION.md) |
@@ -326,9 +328,8 @@ and the seven detector labels. The letter mapping is **not verified**.
 - DoH and DoT hide DNS names. Segmented DNS/TCP questions are not reconstructed.
 
 **Performance.**
-- Full packet path (1,301 packets/s over 50,000 packets) is below 2,000 packets/s. Parsing is not the bottleneck; the
-  extractor rescans each source's retained history per event, so throughput falls as histories fill
-  (`PCAP_THROUGHPUT.md`).
+- Full packet path: 2,203 packets/s over 50,000 packets. Throughput still declines slowly as per-source histories fill, and
+  the figure is one machine, one process, a synthetic benign capture (`PCAP_THROUGHPUT.md`).
 - Measurements are one-machine, one-process results, and the core JSON and prose figures differ by date (section 6.4).
 
 **Packaging.** The 2 Oct audit's H1 issue (three inactive public-model JSON files failing hash checks after a Windows CRLF
@@ -338,4 +339,3 @@ checkout) is fixed by `.gitattributes` `-text` rules; the 29 Oct fresh clone mat
 1. Record labelled lab captures per [Lab capture protocol](LAB_CAPTURE_PROTOCOL.md), with the split fixed before scoring.
 2. Score train and validation with `datasets/evaluate_lab`, then tune TLS, slow-HTTP and other thresholds (P0-5).
 3. Score the test split once. Enable a detector only if it passes its predeclared gate.
-4. Decide whether to bound the per-source history scan (a feature-contract change) to raise full-path throughput.
