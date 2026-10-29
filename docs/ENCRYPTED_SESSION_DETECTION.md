@@ -40,8 +40,9 @@ HIGH and the confidence is a heuristic strength, not a probability.
 
 ## Limits
 
-- ClientHello/ServerHello must be complete in one TCP segment; no TCP
-  reassembly. TLS 1.3 encrypts later handshake messages, so JA3S reflects the
+- A ClientHello/ServerHello is read when complete in one segment or when its single TLS record
+  spans in-order segments (bounded reassembly, see TCP_REASSEMBLY.md). Lost or reordered segments are
+  not reconstructed. TLS 1.3 encrypts later handshake messages, so JA3S reflects the
   ServerHello only.
 - Raw QUIC JA4 is deliberately NOT implemented: the Initial ClientHello is
   protected, and reading it would mean deriving keys and decrypting QUIC content,

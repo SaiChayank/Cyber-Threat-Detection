@@ -110,7 +110,7 @@
     "features/rate_window.py": "a0d4542ab56b44bb51bdee88ebd56a7df95e9a9d6a79fc569769a9100b65d683",
     "ingest/metadata.py": "9fffc1c547c184765cf139fc50f11cfe70a587d43b309bbf43dcd8978f8c3fdb",
     "ingest/pcap_reader.py": "24b2e0ecd9d0f9b15a6ed28b724a452e277e2c657502a879c4bb6939f67a4387",
-    "ingest/protocol_parsers.py": "76013b181c2995d56e08af602e8cc361cad0f8488a9fcf685aa33b0739e8f813",
+    "ingest/protocol_parsers.py": "2725d8445352de827c7b776e18efd0d0f53129b845625427825ead91e10e717a",
     "ingest/dead_letter.py": "d8e0912dab5537be9ba0f65d129c297732e9702a83ed75e54407fd2e17e8bc6b",
     "schemas/traffic_event.py": "5ebe952e479d4f56266aa3b74313f85644214aa5e6cf935dbc978e92dcdd6e0c",
     "schemas/flow_record.py": "1de1c53805c33de538fa12f3920e1632a4792f7b012feabaa2dc29ad6cfef2e8",

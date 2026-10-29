@@ -319,7 +319,7 @@ and the seven detector labels. The letter mapping is **not verified**.
 
 **Capture and protocol coverage.**
 - No live NetFlow, IPFIX or sFlow collector. Only file import from captured export datagrams.
-- Ethernet PCAP and PCAPNG only (`ingest/pcapng.py`: enhanced packet blocks; other link types are rejected). TLS ClientHello and ServerHello must be complete in one TCP segment; there is no
+- Ethernet PCAP and PCAPNG only (`ingest/pcapng.py`: enhanced packet blocks; other link types are rejected). A TLS record or DNS/TCP message is read when it fits one segment or spans in-order segments (bounded, `docs/TCP_REASSEMBLY.md`); there is no full
   TCP reassembly, and TLS 1.3 encrypts the handshake messages after the ServerHello, so only the ServerHello is fingerprinted.
 - No raw QUIC handshake (JA4) fingerprinting, deliberately: it requires decrypting the Initial packet, which the constraints forbid. A clear-header QUIC fingerprint is used instead. JA4+ variants (JA4S, JA4X) are not implemented.
 - Rarity needs a client population. Single-host captures cannot trigger the behaviour path.

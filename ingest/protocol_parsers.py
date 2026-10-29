@@ -6,6 +6,7 @@ Extracts: Ethernet, IPv4/v6, TCP/UDP, DNS, and TLS ClientHello (JA3 fingerprinti
 
 import socket
 import struct
+from collections import OrderedDict
 from typing import Optional, Tuple, List, Dict, Any
 
 from schemas.flow_record import FlowRecord
@@ -14,11 +15,17 @@ from schemas.tls_metadata import TLSMetadataRecord
 from ingest.dead_letter import DeadLetterQueue
 
 
+MAX_STREAMS = 256
+MAX_STREAM_BYTES = 16 * 1024 + 5
+STREAM_IDLE_SECONDS = 10.0
+
+
 class ProtocolParser:
     """Fast, zero-copy binary parser for network frames"""
 
     def __init__(self, dlq: Optional[DeadLetterQueue] = None):
         self.dlq = dlq or DeadLetterQueue()
+        self.streams = OrderedDict()  # (src, dst, sport, dport) -> [next_seq, bytes, needed, last_seen]
 
     def parse_packet(
         self,
@@ -95,6 +102,7 @@ class ProtocolParser:
             dst_port: Optional[int] = None
             tcp_flags: int = 0
             tcp_window: Optional[int] = None
+            tcp_seq: int = 0
             quic_fingerprint: Optional[str] = None
             payload_data: bytes = b""
 
@@ -107,6 +115,7 @@ class ProtocolParser:
                     "!HHIIH", raw_data[l4_offset:l4_offset + 14]
                 )
                 tcp_flags = data_offset_flags & 0x01FF
+                tcp_seq = seq
                 if len(raw_data) >= l4_offset + 16:
                     tcp_window = struct.unpack("!H", raw_data[l4_offset + 14:l4_offset + 16])[0]
                 tcp_header_len = ((data_offset_flags >> 12) & 0x0F) * 4
@@ -160,26 +169,82 @@ class ProtocolParser:
 
             # DNS/TCP prefixes each message with a two-byte length. Parse only a
             # complete first message; TCP stream reassembly is deliberately absent.
-            if protocol in (6, 17) and (src_port == 53 or dst_port == 53) and payload_data:
-                dns_payload = payload_data
+            # Bounded in-order TCP reassembly of one TLS record or DNS message that spans segments.
+            stream_payload = payload_data
+            if protocol == 6 and payload_data:
+                stream_payload = self._tcp_stream_payload(src_ip, dst_ip, src_port, dst_port, tcp_seq,
+                                                          tcp_flags, payload_data, timestamp_sec)
+            elif protocol == 6 and tcp_flags & 0x05:
+                self.streams.pop((src_ip, dst_ip, src_port, dst_port), None)
+            if protocol in (6, 17) and (src_port == 53 or dst_port == 53) and stream_payload:
+                payload_data_dns = stream_payload if protocol == 6 else payload_data
+                dns_payload = payload_data_dns
                 if protocol == 6:
-                    if len(payload_data) < 2:
+                    if len(payload_data_dns) < 2:
                         dns_payload = b''
                     else:
-                        message_length = struct.unpack('!H', payload_data[:2])[0]
-                        dns_payload = payload_data[2:2 + message_length] if len(payload_data) >= 2 + message_length else b''
+                        message_length = struct.unpack('!H', payload_data_dns[:2])[0]
+                        dns_payload = payload_data_dns[2:2 + message_length] if len(payload_data_dns) >= 2 + message_length else b''
                 dns_record = self._try_parse_dns(dns_payload, flow_id, src_ip, dst_ip, timestamp_ms)
 
             # TLS ClientHello (JA3/JA4) or ServerHello (JA3S) in one segment, any port
-            if protocol == 6 and payload_data:
-                tls_record = (self._try_parse_tls_client_hello(payload_data, flow_id, total_ip_len)
-                              or self._try_parse_tls_server_hello(payload_data, flow_id, total_ip_len))
+            if protocol == 6 and stream_payload:
+                tls_record = (self._try_parse_tls_client_hello(stream_payload, flow_id, total_ip_len)
+                              or self._try_parse_tls_server_hello(stream_payload, flow_id, total_ip_len))
 
             return flow_record, dns_record, tls_record
 
         except Exception as exc:
             self.dlq.record_corrupt_packet("UNHANDLED_EXCEPTION", str(exc), len(raw_data))
             return None, None, None
+
+    @staticmethod
+    def _message_length(payload: bytes, dns: bool) -> int:
+        """Total bytes of the TLS record or DNS/TCP message starting this payload; 0 if neither."""
+        if dns:
+            return 2 + struct.unpack('!H', payload[:2])[0] if len(payload) >= 2 else 0
+        if len(payload) >= 5 and payload[0] == 0x16 and payload[1] == 0x03:
+            return 5 + struct.unpack('!H', payload[3:5])[0]
+        return 0
+
+    def _tcp_stream_payload(self, src, dst, sport, dport, seq, flags, payload, now):
+        """Payload to parse for this segment, or None while a message is still incomplete.
+
+        Only a TLS record or DNS message that begins in a segment and does not fit it is
+        buffered (at most MAX_STREAMS flows, MAX_STREAM_BYTES each, STREAM_IDLE_SECONDS idle).
+        Out-of-order or lost segments abandon the buffer rather than guess; retransmits are
+        ignored. No payload is decrypted; only record/message framing is read.
+        """
+        key = (src, dst, sport, dport)
+        if flags & 0x05:  # FIN or RST ends the stream.
+            self.streams.pop(key, None)
+            return payload
+        entry = self.streams.get(key)
+        if entry is not None and now - entry[3] > STREAM_IDLE_SECONDS:
+            self.streams.pop(key, None)
+            entry = None
+        if entry is not None:
+            gap = (seq - entry[0]) & 0xFFFFFFFF
+            if gap == 0:
+                entry[1] += payload
+                entry[0] = (entry[0] + len(payload)) & 0xFFFFFFFF
+                entry[3] = now
+                if len(entry[1]) >= entry[2]:
+                    del self.streams[key]
+                    return bytes(entry[1][:entry[2]])
+                self.streams.move_to_end(key)
+                return None
+            if gap > 0x7FFFFFFF:  # Retransmission of bytes already buffered.
+                return None
+            del self.streams[key]  # Gap: a segment is missing or reordered; never guess.
+            return payload
+        needed = self._message_length(payload, dns=53 in (sport, dport))
+        if needed > len(payload) and needed <= MAX_STREAM_BYTES:
+            self.streams[key] = [(seq + len(payload)) & 0xFFFFFFFF, bytearray(payload), needed, now]
+            while len(self.streams) > MAX_STREAMS:
+                self.streams.popitem(last=False)
+            return None
+        return payload
 
     @staticmethod
     def _quic_initial_fingerprint(payload: bytes) -> Optional[str]:
