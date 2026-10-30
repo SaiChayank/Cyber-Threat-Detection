@@ -1,5 +1,7 @@
 # PS26145 / Univect final release audit
 
+> **Historical (2 October 2026).** This audit's counts and verdict describe that snapshot. The current state, with real-traffic results and all later work, is in [Current status](CURRENT_STATUS.md).
+
 **FINAL SIH RELEASE STATUS: NOT READY**
 
 Audited 2 October 2026 (Asia/Calcutta). Three BLOCKERs remain. The working local
