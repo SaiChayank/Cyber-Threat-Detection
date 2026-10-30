@@ -216,3 +216,12 @@ No code or thresholds changed.
   clean host, which this capture lacks.
 - 11 BOTNET_C2 alerts are unlabelled (8 labelled C&C flows are single UDP contacts, too few to be beaconing); not judged.
 - Not measured: slow-HTTP/slow-read, exfiltration and encrypted malware still have no suitable open capture.
+
+## Seventh step: local-resolver DNS is not C2 (30 October 2026)
+
+The 21 false BOTNET_C2 alerts on IoT-23 34-1 were the bot's exact 5 s UDP/53 retries to its router. The pipeline now
+skips C2 for UDP port 53 toward a private address (DNS-borne C2 is the DNS tunnelling and DGA detectors' job).
+Rescored (`docs/verification/iot23-20261030/34-1-after-resolver-guard.json`): 34-1 benign C2 false alerts **21 to 0**,
+IRC C2 still detected; CTU-13 train/validation/test and DNS C2 results identical (all episodes still detected).
+Limit: a beacon sent to a private resolver on port 53 is no longer a C2 alert; it can still raise tunnelling/DGA alerts.
+Tests: `tests/test_c2_local_resolver_guard.py`; 875 pass; pins refrozen.

@@ -167,6 +167,10 @@ class Pipeline:
             if threat == 'BOTNET_C2' and (event.dst_ip.is_multicast or str(event.dst_ip) == '255.255.255.255'):
                 # Multicast/broadcast name services (LLMNR, mDNS, NetBIOS) are never a C2 server.
                 continue
+            if threat == 'BOTNET_C2' and event.dst_port == 53 and event.protocol == 17 and event.dst_ip.is_private:
+                # Fixed-cadence queries to the local resolver are a client retry loop; DNS-borne C2 is the
+                # DNS tunnelling and DGA detectors' job. Measured: 21 such alerts from one IoT-23 bot.
+                continue
             if threat == 'ENCRYPTED_MALWARE' and not event.encrypted:
                 continue
             if threat in ('DGA_DOMAINS', 'DNS_TUNNELLING') and not event.dns_name:

@@ -1,0 +1,397 @@
+{
+  "format": "ps26145-lab-evaluation/1",
+  "generated_at_utc": "2026-10-30T16:35:56.343048+00:00",
+  "pipeline": {
+    "dns_tunnel_candidate": false,
+    "dga_model_enabled": false,
+    "model_sha256": "4d8e08323374535789e21f9f7cd1ee3f1c84b663ce555e67bb4ced57c95e8010"
+  },
+  "scope": "Runtime alerts on operator-labelled lab captures. Episode recall counts an episode once it has one alert of its labelled class; precision is per alert. Labels are only as reliable as the operator ground truth.",
+  "captures": [
+    {
+      "label_file": "data\\lab\\iot23\\capture-34-1.audited.labels.json",
+      "label_sha256": "6300d471c98ed8ea6af7320e729a901eea715aeafb0b1a72e031d3f0a189ff3a",
+      "capture": "data\\lab\\iot23\\..\\..\\raw\\iot23-lab\\34-1.pcap",
+      "capture_sha256": "92ec7e2f6658ee4b007d0b816986c46cc0338bc5e2bec6ceaaca566c695e4699",
+      "split": "unassigned",
+      "source": "packets",
+      "events": 170980,
+      "late_events": 0,
+      "ambiguous_events": 0,
+      "ingest": {
+        "total_corrupt_packets": 0,
+        "truncated_packets": 0,
+        "unsupported_protocols": 62885
+      },
+      "episodes": [
+        {
+          "id": "iot23-34-1-ddos-flagabuse",
+          "label": "DDOS",
+          "scenario": "mirai_flood_flagabuse",
+          "tool": "Stratosphere IoT-23 Capture-34-1, Zeek DDoS flows to 123.59.209.185:80; SYN+PSH+ACK+URG 1 KB packets (flags 0x3a) to :80",
+          "start_ms": 1545466958988.0,
+          "end_ms": 1545466990008.0,
+          "events": 28431,
+          "first_event_ms": 1545466958988.497,
+          "observed": true,
+          "detected": true,
+          "correct_alerts": 1,
+          "other_alerts": {
+            "DATA_EXFILTRATION": 1
+          },
+          "first_correct_alert": {
+            "timestamp_ms": 1545466969423.035,
+            "events_into_episode": 10042,
+            "time_to_detect_ms": 10434.537841796875
+          }
+        },
+        {
+          "id": "iot23-34-1-ddos-syn",
+          "label": "DDOS",
+          "scenario": "mirai_flood_syn",
+          "tool": "Stratosphere IoT-23 Capture-34-1, Zeek DDoS flows to 71.61.66.148:80; pure SYN 60-byte packets to :80",
+          "start_ms": 1545475806968.0,
+          "end_ms": 1545475829998.0,
+          "events": 40568,
+          "first_event_ms": 1545475806968.06,
+          "observed": true,
+          "detected": true,
+          "correct_alerts": 1,
+          "other_alerts": {},
+          "first_correct_alert": {
+            "timestamp_ms": 1545475812347.525,
+            "events_into_episode": 10000,
+            "time_to_detect_ms": 5379.46484375
+          }
+        },
+        {
+          "id": "iot23-34-1-cc",
+          "label": "BOTNET_C2",
+          "scenario": "mirai_irc_c2",
+          "tool": "Stratosphere IoT-23 Capture-34-1, Zeek C&C flows to 185.244.25.235:6667",
+          "start_ms": 1545404132353.0,
+          "end_ms": 1545490214942.0,
+          "events": 37910,
+          "first_event_ms": 1545404132353.979,
+          "observed": true,
+          "detected": true,
+          "correct_alerts": 1214,
+          "other_alerts": {
+            "DATA_EXFILTRATION": 2
+          },
+          "first_correct_alert": {
+            "timestamp_ms": 1545404437462.0781,
+            "events_into_episode": 300,
+            "time_to_detect_ms": 305108.09912109375
+          }
+        },
+        {
+          "id": "iot23-34-1-audit-syn_burst_a",
+          "label": "DDOS",
+          "scenario": "mirai_flood_syn_burst_a",
+          "tool": "Audit from raw packets: pure SYN 60-byte packets to 66.67.61.168",
+          "start_ms": 1545426295412.0,
+          "end_ms": 1545426317001.0,
+          "events": 38060,
+          "first_event_ms": 1545426295412.093,
+          "observed": true,
+          "detected": true,
+          "correct_alerts": 1,
+          "other_alerts": {},
+          "first_correct_alert": {
+            "timestamp_ms": 1545426300780.291,
+            "events_into_episode": 10000,
+            "time_to_detect_ms": 5368.197998046875
+          }
+        },
+        {
+          "id": "iot23-34-1-audit-syn_burst_b",
+          "label": "DDOS",
+          "scenario": "mirai_flood_syn_burst_b",
+          "tool": "Audit from raw packets: pure SYN 60-byte packets to 50.50.50.53",
+          "start_ms": 1545457280248.0,
+          "end_ms": 1545457292000.0,
+          "events": 19437,
+          "first_event_ms": 1545457280248.46,
+          "observed": true,
+          "detected": true,
+          "correct_alerts": 1,
+          "other_alerts": {},
+          "first_correct_alert": {
+            "timestamp_ms": 1545457285921.46,
+            "events_into_episode": 10000,
+            "time_to_detect_ms": 5673.0
+          }
+        }
+      ],
+      "background": {
+        "events": 6574,
+        "alerts": {}
+      }
+    }
+  ],
+  "summary": {
+    "all": {
+      "captures": 1,
+      "events": 170980,
+      "late_events": 0,
+      "ambiguous_events": 0,
+      "threats": {
+        "DDOS": {
+          "episodes": 4,
+          "observed_episodes": 4,
+          "detected_episodes": 4,
+          "episode_recall": 1.0,
+          "alerts": 4,
+          "correct_alerts": 4,
+          "alert_precision": 1.0,
+          "false_alerts_on_benign": 0,
+          "median_time_to_detect_ms": 5526.232421875,
+          "max_time_to_detect_ms": 10434.537841796875
+        },
+        "BOTNET_C2": {
+          "episodes": 1,
+          "observed_episodes": 1,
+          "detected_episodes": 1,
+          "episode_recall": 1.0,
+          "alerts": 1214,
+          "correct_alerts": 1214,
+          "alert_precision": 1.0,
+          "false_alerts_on_benign": 0,
+          "median_time_to_detect_ms": 305108.09912109375,
+          "max_time_to_detect_ms": 305108.09912109375
+        },
+        "DGA_DOMAINS": {
+          "episodes": 0,
+          "observed_episodes": 0,
+          "detected_episodes": 0,
+          "episode_recall": null,
+          "alerts": 0,
+          "correct_alerts": 0,
+          "alert_precision": null,
+          "false_alerts_on_benign": 0,
+          "median_time_to_detect_ms": null,
+          "max_time_to_detect_ms": null
+        },
+        "DNS_TUNNELLING": {
+          "episodes": 0,
+          "observed_episodes": 0,
+          "detected_episodes": 0,
+          "episode_recall": null,
+          "alerts": 0,
+          "correct_alerts": 0,
+          "alert_precision": null,
+          "false_alerts_on_benign": 0,
+          "median_time_to_detect_ms": null,
+          "max_time_to_detect_ms": null
+        },
+        "ENCRYPTED_MALWARE": {
+          "episodes": 0,
+          "observed_episodes": 0,
+          "detected_episodes": 0,
+          "episode_recall": null,
+          "alerts": 0,
+          "correct_alerts": 0,
+          "alert_precision": null,
+          "false_alerts_on_benign": 0,
+          "median_time_to_detect_ms": null,
+          "max_time_to_detect_ms": null
+        },
+        "RECONNAISSANCE": {
+          "episodes": 0,
+          "observed_episodes": 0,
+          "detected_episodes": 0,
+          "episode_recall": null,
+          "alerts": 0,
+          "correct_alerts": 0,
+          "alert_precision": null,
+          "false_alerts_on_benign": 0,
+          "median_time_to_detect_ms": null,
+          "max_time_to_detect_ms": null
+        },
+        "DATA_EXFILTRATION": {
+          "episodes": 0,
+          "observed_episodes": 0,
+          "detected_episodes": 0,
+          "episode_recall": null,
+          "alerts": 3,
+          "correct_alerts": 0,
+          "alert_precision": 0.0,
+          "false_alerts_on_benign": 0,
+          "median_time_to_detect_ms": null,
+          "max_time_to_detect_ms": null
+        }
+      },
+      "benign": {
+        "events": 6574,
+        "alerts": {},
+        "false_alerts_per_1000_events": 0.0,
+        "labelled_episodes": 0,
+        "labelled_episodes_with_alerts": 0
+      },
+      "scenarios": {
+        "mirai_flood_flagabuse": {
+          "label": "DDOS",
+          "episodes": 1,
+          "detected": 1,
+          "with_any_alert": 1
+        },
+        "mirai_flood_syn": {
+          "label": "DDOS",
+          "episodes": 1,
+          "detected": 1,
+          "with_any_alert": 1
+        },
+        "mirai_flood_syn_burst_a": {
+          "label": "DDOS",
+          "episodes": 1,
+          "detected": 1,
+          "with_any_alert": 1
+        },
+        "mirai_flood_syn_burst_b": {
+          "label": "DDOS",
+          "episodes": 1,
+          "detected": 1,
+          "with_any_alert": 1
+        },
+        "mirai_irc_c2": {
+          "label": "BOTNET_C2",
+          "episodes": 1,
+          "detected": 1,
+          "with_any_alert": 1
+        }
+      }
+    },
+    "unassigned": {
+      "captures": 1,
+      "events": 170980,
+      "late_events": 0,
+      "ambiguous_events": 0,
+      "threats": {
+        "DDOS": {
+          "episodes": 4,
+          "observed_episodes": 4,
+          "detected_episodes": 4,
+          "episode_recall": 1.0,
+          "alerts": 4,
+          "correct_alerts": 4,
+          "alert_precision": 1.0,
+          "false_alerts_on_benign": 0,
+          "median_time_to_detect_ms": 5526.232421875,
+          "max_time_to_detect_ms": 10434.537841796875
+        },
+        "BOTNET_C2": {
+          "episodes": 1,
+          "observed_episodes": 1,
+          "detected_episodes": 1,
+          "episode_recall": 1.0,
+          "alerts": 1214,
+          "correct_alerts": 1214,
+          "alert_precision": 1.0,
+          "false_alerts_on_benign": 0,
+          "median_time_to_detect_ms": 305108.09912109375,
+          "max_time_to_detect_ms": 305108.09912109375
+        },
+        "DGA_DOMAINS": {
+          "episodes": 0,
+          "observed_episodes": 0,
+          "detected_episodes": 0,
+          "episode_recall": null,
+          "alerts": 0,
+          "correct_alerts": 0,
+          "alert_precision": null,
+          "false_alerts_on_benign": 0,
+          "median_time_to_detect_ms": null,
+          "max_time_to_detect_ms": null
+        },
+        "DNS_TUNNELLING": {
+          "episodes": 0,
+          "observed_episodes": 0,
+          "detected_episodes": 0,
+          "episode_recall": null,
+          "alerts": 0,
+          "correct_alerts": 0,
+          "alert_precision": null,
+          "false_alerts_on_benign": 0,
+          "median_time_to_detect_ms": null,
+          "max_time_to_detect_ms": null
+        },
+        "ENCRYPTED_MALWARE": {
+          "episodes": 0,
+          "observed_episodes": 0,
+          "detected_episodes": 0,
+          "episode_recall": null,
+          "alerts": 0,
+          "correct_alerts": 0,
+          "alert_precision": null,
+          "false_alerts_on_benign": 0,
+          "median_time_to_detect_ms": null,
+          "max_time_to_detect_ms": null
+        },
+        "RECONNAISSANCE": {
+          "episodes": 0,
+          "observed_episodes": 0,
+          "detected_episodes": 0,
+          "episode_recall": null,
+          "alerts": 0,
+          "correct_alerts": 0,
+          "alert_precision": null,
+          "false_alerts_on_benign": 0,
+          "median_time_to_detect_ms": null,
+          "max_time_to_detect_ms": null
+        },
+        "DATA_EXFILTRATION": {
+          "episodes": 0,
+          "observed_episodes": 0,
+          "detected_episodes": 0,
+          "episode_recall": null,
+          "alerts": 3,
+          "correct_alerts": 0,
+          "alert_precision": 0.0,
+          "false_alerts_on_benign": 0,
+          "median_time_to_detect_ms": null,
+          "max_time_to_detect_ms": null
+        }
+      },
+      "benign": {
+        "events": 6574,
+        "alerts": {},
+        "false_alerts_per_1000_events": 0.0,
+        "labelled_episodes": 0,
+        "labelled_episodes_with_alerts": 0
+      },
+      "scenarios": {
+        "mirai_flood_flagabuse": {
+          "label": "DDOS",
+          "episodes": 1,
+          "detected": 1,
+          "with_any_alert": 1
+        },
+        "mirai_flood_syn": {
+          "label": "DDOS",
+          "episodes": 1,
+          "detected": 1,
+          "with_any_alert": 1
+        },
+        "mirai_flood_syn_burst_a": {
+          "label": "DDOS",
+          "episodes": 1,
+          "detected": 1,
+          "with_any_alert": 1
+        },
+        "mirai_flood_syn_burst_b": {
+          "label": "DDOS",
+          "episodes": 1,
+          "detected": 1,
+          "with_any_alert": 1
+        },
+        "mirai_irc_c2": {
+          "label": "BOTNET_C2",
+          "episodes": 1,
+          "detected": 1,
+          "with_any_alert": 1
+        }
+      }
+    }
+  }
+}
