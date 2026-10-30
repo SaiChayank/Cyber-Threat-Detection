@@ -1,0 +1,45 @@
+{
+  "format": "ps26145-dga-final-evaluation/1",
+  "declared": "2026-10-30, before any score on these sources was computed",
+  "purpose": "One independent evaluation of the frozen OOF DGA candidate to decide runtime promotion. Replaces the unmaterialized reserved set of docs/DGA_EVALUATION_PROTOCOL.md with the sources actually available; the four gates are unchanged.",
+  "candidate": {
+    "artifact": "ml/dga_oof_candidate.json",
+    "artifact_sha256": "266b80bc7edac63dda815b61ef6ef162d2af9b919e70bfa168958133431b730b",
+    "decision_threshold": 0.9,
+    "frozen": "No refit, no retune, no second candidate, no re-run after seeing results."
+  },
+  "sources": {
+    "dga_positives": "data/raw/dga-evaluation-intake/drift-2025/T25_dga.parquet (2025 DGA families, columns domain/family)",
+    "benign_domains": "data/raw/dga-evaluation-intake/drift-2025/T25_benign.parquet",
+    "benign_dns": "data/raw/ait-session-join-20261021/dnsmasq-original.log: real client DNS questions of the AIT testbed, excluding the controlled exfiltration namespace kennedy-mendoza.info (17,693 questions from one host); not used for training or design"
+  },
+  "family_exclusion": {
+    "rule": "A family is excluded if its name, lower-cased and stripped of non-alphanumeric characters, starts with any development root below: an algorithm and its variants cannot be split between development and evaluation.",
+    "development_roots": ["alureon", "banjori", "bedep", "ccleaner", "chinad", "corebot", "cryptolocker", "dircrypt", "dyre", "fobber", "gozi", "kraken", "locky", "matsnu", "murofet", "necurs", "nymaim", "padcrypt", "pizd", "proslikefan", "pushdo", "pykspa", "qadars", "qakbot", "ramdo", "ramnit", "ranbyus", "rovnix", "shiotob", "simda", "sisron", "suppobox", "symmi", "tempedreve", "tinba", "vawtrak", "zeus", "newgoz"],
+    "aliases_excluded": ["gameover", "zloader"]
+  },
+  "overlap_exclusion": "Any first label present in the development lists (data/raw/umudga and data/raw/umudga-expanded, legitimate and DGA) or in the CIC DNS benign_1/benign_2 captures is dropped from every evaluation set.",
+  "sampling": {
+    "seed": 20261030,
+    "per_family_cap": 2000,
+    "min_family_domains_in_source": 200,
+    "benign_domain_sample": 100000,
+    "reservoir": "uniform reservoir sampling (Algorithm R) in file order"
+  },
+  "scoring": "Candidate score on the canonical first label (ml.dga.domain_label); a name the label function rejects (for example internationalized names) cannot be scored and counts as a MISS for positives and as NOT a false positive for benign.",
+  "metrics": {
+    "recall": "micro over all sampled unseen-family domains (macro and per-family reported)",
+    "precision": "at 1:1 prevalence: recall / (recall + domain_fpr)",
+    "domain_fpr": "false positives / scored benign domains from the T25 benign sample",
+    "benign_dns_fpr": "false positives / unique eligible first labels of the AIT benign DNS names"
+  },
+  "gates": {
+    "recall_min": 0.80,
+    "precision_min": 0.95,
+    "domain_fpr_max": 0.02,
+    "benign_dns_fpr_max": 0.02,
+    "min_benign_dns_labels": 2500,
+    "min_eligible_families": 10
+  },
+  "decision": "Promote the candidate to runtime only if ALL four gates pass and the minimum counts hold. Any failure leaves it disabled, with the failure analysis recorded; the evaluation is not repeated."
+}
