@@ -13,7 +13,7 @@ checked on this date; nothing is marked done that was not run.
 | Dependency audit (`npm audit`) | 0 vulnerabilities |
 | Frozen demo preflight (`python -m replay.demo_pack`) | passes; nine traces identical |
 | Live production run (API + dashboard) | demo replay: 256 events, 15 alerts in 7 classes, p95 0.84 ms; SSE resume from sequence 10; real 8.8 MB PCAP upload processed (10,980 events); garbage upload rejected (HTTP 422) |
-| Fresh clone install and tests | see the last section |
+| Fresh clone from GitHub (`0a22465`), new venv and `npm ci` | 810 passed, 3 skipped, demo passes, typecheck and build pass, 0 vulnerabilities. The working copy collects 820 tests because it also has the optional `stream-unzip` research package; its 8 dependent tests skip cleanly in a minimal install |
 
 ## Requirements (problem statement) and status
 
