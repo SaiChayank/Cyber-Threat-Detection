@@ -47,3 +47,30 @@ def test_replies_from_a_service_port_and_multicast_targets_are_not_scans():
 def test_real_scans_from_ephemeral_ports_still_alert():
     assert recon(fan_out(49152, syn=True))
     assert recon(fan_out(49152, syn=False))  # UDP scan from an ephemeral port.
+
+
+def test_tcp_fan_out_with_almost_no_syn_packets_is_browsing_not_recon():
+    browsing = [TrafficEvent(timestamp=START + i * 100, src_ip='10.0.0.9', dst_ip=f'198.51.100.{i % 30 + 1}', src_port=50000,
+                             dst_port=443, protocol=6, packets=1, bytes=1200, syn=False, syn_packets=0) for i in range(60)]
+    assert recon(browsing) == [] and recon(browsing, model='RECONNAISSANCE') == []
+
+
+def test_syn_probe_fan_out_still_alerts():
+    scan = [TrafficEvent(timestamp=START + i * 100, src_ip='10.0.0.9', dst_ip=f'198.51.100.{i % 30 + 1}', src_port=50000 + i,
+                         dst_port=23, protocol=6, packets=1, bytes=60, syn=True, syn_packets=1) for i in range(60)]
+    assert recon(scan)
+
+
+def test_mixed_source_with_mostly_established_tcp_is_not_recon_but_pure_udp_scan_is():
+    tcp = [TrafficEvent(timestamp=START + i * 10, src_ip='10.0.0.9', dst_ip='198.51.100.1', src_port=50000, dst_port=443,
+                        protocol=6, packets=1, bytes=1200, syn=i < 4, syn_packets=int(i < 4)) for i in range(200)]
+    queries = [TrafficEvent(timestamp=START + 2000 + i * 100, src_ip='10.0.0.9', dst_ip=f'198.51.100.{i % 30 + 1}',
+                            src_port=50000 + i, dst_port=53, protocol=17, packets=1, bytes=80) for i in range(60)]
+    assert recon(tcp + queries) == []
+    assert recon(queries)
+
+
+def test_quic_fan_out_is_not_recon():
+    quic = [TrafficEvent(timestamp=START + i * 100, src_ip='10.0.0.9', dst_ip=f'198.51.100.{i % 30 + 1}', src_port=50000 + i,
+                         dst_port=443, protocol=17, packets=1, bytes=1200, transport='QUIC') for i in range(60)]
+    assert recon(quic) == [] and recon(quic, model='RECONNAISSANCE') == []

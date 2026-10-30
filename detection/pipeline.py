@@ -159,6 +159,16 @@ class Pipeline:
                 # Scans target unicast hosts from ephemeral ports; replies from a service port
                 # (for example a DNS resolver) and multicast name services are not scans.
                 continue
+            if threat == 'RECONNAISSANCE' and event.transport in ('TLS', 'QUIC'):
+                # An observed TLS/QUIC session is an established service, not a probe (benign QUIC browsing, 14 hosts).
+                continue
+            if (threat == 'RECONNAISSANCE' and f['syn_fraction'] is not None
+                    and f['syn_fraction'] < thresholds.RECON_MIN_SYN_FRACTION
+                    and (event.protocol == 6 or f['syn_fraction'] > 0)):
+                # Many destinations over mostly established TCP (low SYN share, or a TCP event with none) is
+                # browsing, not probing: two benign captures (syn_fraction 0.0 and 0.0217, 14-20 destinations).
+                # A pure-UDP/ICMP scan has no TCP in its window (share exactly 0) and still alerts.
+                continue
             fast_c2 = (f['history_count'] >= thresholds.C2_MIN_HISTORY and f['iat_mean'] >= thresholds.C2_MIN_IAT_MEAN_S
                        and f['iat_cv'] < thresholds.C2_MAX_IAT_CV)
             slow_only = threat == 'BOTNET_C2' and slow_beacon and not fast_c2

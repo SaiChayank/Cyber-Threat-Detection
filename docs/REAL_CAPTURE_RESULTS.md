@@ -225,3 +225,15 @@ Rescored (`docs/verification/iot23-20261030/34-1-after-resolver-guard.json`): 34
 IRC C2 still detected; CTU-13 train/validation/test and DNS C2 results identical (all episodes still detected).
 Limit: a beacon sent to a private resolver on port 53 is no longer a C2 alert; it can still raise tunnelling/DGA alerts.
 Tests: `tests/test_c2_local_resolver_guard.py`; 875 pass; pins refrozen.
+
+## Eighth step: browsing fan-out is not reconnaissance (31 October 2026)
+
+Benign web/QUIC browsing (many destinations, no connection attempts) raised RECONNAISSANCE alerts on the DNS lab
+captures. Two guards were added in `detection/pipeline.py`: recon is skipped when a TLS or QUIC session was observed
+(a completed handshake is not a probe), and when the source's SYN share is below `RECON_MIN_SYN_FRACTION` (0.1, in
+`detection/rule_thresholds.py`) for TCP, or for sources with some TCP SYNs. Pure-UDP scans are not affected.
+Rescored: DNS lab benign recon alerts **2 to 0**; IoT-23 1-1 Telnet scan still detected 1/1 at ~2.0 s, with the same
+alert count as before. The 2 CTU-13 normal-host alerts (10-SYN probes to ports 3128/1433) are kept: they look like scans.
+Limit: a scanner that completes TLS/QUIC handshakes, or hides probes among many non-SYN packets, would be skipped.
+Tests: 4 added to `tests/test_ddos_recon_guards.py`; 879 pass; pins refrozen. Evidence:
+`docs/verification/iot23-20261030/1-1-after-recon-guards.json`.

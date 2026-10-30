@@ -103,7 +103,7 @@
     ]
   },
   "source_sha256": {
-    "detection/pipeline.py": "989d321c70e1045f80967016e6040b4fbdf8badb877c40a1752c0a7e04ae1919",
+    "detection/pipeline.py": "8a075748c884fe824eb05e7ba48361b02fdc986c73fdf3e9565d2591e29e6e22",
     "detection/dns_tunnel_candidate.py": "c1713f2a8bbc59753bbad586054e5b103082f4d67bf5c9cfa617383965540a9a",
     "features/extractor.py": "3562b1e1a9267fedb31181a7ae12a3f5b75abcf3c29fa293c1c032e6d54f8a99",
     "features/dns_tunnel.py": "8ded37ba73c2d605f22baf4571f80842791f7b2b1584ce0230ddc365466605eb",
@@ -137,7 +137,7 @@
     "ingest/pcapng.py": "922000f923831a330bfd8366995fd7e4c4230a935912e316c0019bc0582463b3",
     "features/source_history.py": "9276b6fbc9e472815c3abd3a237b4578babc772037f971ee1cc540fca450756c",
     "ingest/flow_collector.py": "3c36437d139f32c868fb826c023415c53ce82380afc5f822b60c937d618e6985",
-    "detection/rule_thresholds.py": "c3ca7f25f98abef2141eea4cbfe5160f3c2cf08cb066f1b8185b6e8d328c9c73",
+    "detection/rule_thresholds.py": "b14aa9694fc8742fe27808eb5380c261159533e5a440fe99664e913448ebd553",
     "features/beacon_tracker.py": "677dc663c24279f4af596883214ec362f5928f09b2beb26f65ee39cade6b6d81"
   }
 }
