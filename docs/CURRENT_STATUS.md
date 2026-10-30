@@ -22,7 +22,7 @@ checked on this date; nothing is marked done that was not run.
 | Read-only ingest, no probes, no return path, no inline blocking | Implemented | Tests forbid outbound sockets in the pipeline and in the live collector ([Flow export](FLOW_EXPORT_IMPORT.md)) |
 | No TLS/QUIC decryption | Implemented; raw QUIC JA4 deliberately omitted | [Encrypted-session detection](ENCRYPTED_SESSION_DETECTION.md) |
 | Streaming, bounded latency | Implemented | Alerts mid-replay; core p95 about 1 ms ([Performance](PERFORMANCE_VALIDATION.md)) |
-| Stated throughput | Implemented | Core metadata about 2,000-2,700 events/s on a loaded machine (earlier quiet runs 3,300; the benchmark's periodic repetition now raises twice the alerts, see [Slow beacon detection](SLOW_BEACON_DETECTION.md)); full PCAP path about 1,800-3,000 packets/s depending on load ([PCAP throughput](PCAP_THROUGHPUT.md)). Both clear the 2,000 gate, the core one narrowly under load |
+| Stated throughput | Implemented | Core metadata about 5,000-5,500 events/s (p95 0.33 ms) after the SQLite durability setting change; API-to-SSE p95 about 250 ms; full PCAP path about 2,400 packets/s, 150 flows/s, 14.6 Mbps ([Performance, 30 Oct](PERFORMANCE_20261030.md), [PCAP throughput](PCAP_THROUGHPUT.md)); results vary about +/-10-30% with machine load |
 | Standard alert schema | Implemented | Timestamp, flow ID, class, confidence, evidence, severity |
 | Inputs: PCAP, PCAPNG, NetFlow v5/v9, IPFIX, sFlow | Implemented (files and a receive-only live collector) | [Flow export](FLOW_EXPORT_IMPORT.md), [PCAPNG](PCAPNG.md) |
 | DDoS: SYN, UDP, spoofed-source, slow-HTTP/slow-read | Implemented | Spoofed sources are an evidence field, not a class ([Spoof indicators](SPOOF_INDICATORS.md)) |

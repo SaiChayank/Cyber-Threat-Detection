@@ -1,0 +1,57 @@
+{
+  "generated_at_utc": "2026-10-30T10:09:08.699001+00:00",
+  "runtime_source_sha256": {
+    "detection/pipeline.py": "7ccadd8d1a7f439e4039c68dfbd9040916cda30d38e3fed6acec75448cf45e1a",
+    "features/extractor.py": "c2310b173552e027f08a101f0c24f5640305f8d9735f83311fc57e83c355f97e",
+    "features/rate_window.py": "233504951ecb2c5211992a25220f9ce8311497228212b9388b16fbba0326f138",
+    "ml/model.py": "68d96c555744bb8fc8aea30068db8afca1d7eae674accba297a698d0e0c6005b",
+    "ml/dga.py": "0a03098bf4cc22d8f5b7ff5fe3bd75d82d735479730e1890a7f99bedb9d6c0b7",
+    "persistence/store.py": "cc25c545343a95d590ffbae2caf896b4717f986929f6d5e8e684d4150fd61d14",
+    "detection/dga_rules.py": "5494667d60cc32ea5a3434b9805be1a27ea4ee5baa6923f8ee92024646df8cfe",
+    "detection/dns_tunnel_candidate.py": "c1713f2a8bbc59753bbad586054e5b103082f4d67bf5c9cfa617383965540a9a",
+    "features/dns_tunnel.py": "8ded37ba73c2d605f22baf4571f80842791f7b2b1584ce0230ddc365466605eb",
+    "schemas/traffic_event.py": "5ebe952e479d4f56266aa3b74313f85644214aa5e6cf935dbc978e92dcdd6e0c",
+    "schemas/alert.py": "334362e24535863247903d82c0f6ba60e0f21aaa4d3a2f263f7bdf2a81c695f2",
+    "schemas/flow_record.py": "1de1c53805c33de538fa12f3920e1632a4792f7b012feabaa2dc29ad6cfef2e8",
+    "schemas/enums.py": "8b8f820eea9af47d7d9cdb05d6963e2245fb44e7b0e641a620a4d0e6b4e2b576",
+    "replay/scenarios.py": "e24b4dbb24b729fc4fa98faaf7de83554e3beac58e243a17d56ed38b3234ed2d"
+  },
+  "benchmark_source_sha256": {
+    "benchmarks/run.py": "ff4673495e853a152285c35cc584fce1731d4b3efac764e6fc196143c079d2d7",
+    "benchmarks/environment.py": "f9d1012bc5b4823aea70bc1298fae7e5fea73dd08c840816d7f0ee73ac06fe6c"
+  },
+  "model_sha256": "4d8e08323374535789e21f9f7cd1ee3f1c84b663ce555e67bb4ced57c95e8010",
+  "events": 20000,
+  "alerts": 2166,
+  "elapsed_seconds": 3.721011699992232,
+  "metadata_events_per_second": 5374.882320322119,
+  "throughput_target": 2000,
+  "throughput_pass": true,
+  "processing_and_persistence_p50_ms": 0.14170000213198364,
+  "processing_and_persistence_p95_ms": 0.34389999927952886,
+  "latency_target_ms": 50,
+  "latency_pass": true,
+  "percentile_method": "Sorted zero-based index floor(n * fraction); unchanged core convention",
+  "workload": "Repeated eight-class synthetic metadata sessions with SQLite alert commits",
+  "scope": "Core event processing + persistence; excludes capture, HTTP, SSE and rendering",
+  "python": "3.13.15",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "hardware": {
+    "cpu_model": "AMD Ryzen 7 8845HS w/ Radeon 780M Graphics",
+    "logical_cpus": 16,
+    "architecture": "AMD64",
+    "physical_memory_bytes": 16356941824
+  },
+  "telemetry": {
+    "processed": 20000,
+    "late_events": 0,
+    "state_evictions": 0,
+    "active_sources": 33,
+    "dga_detector": "conservative-lexical-guard",
+    "dga_candidate_enabled": false,
+    "dns_tunnel_candidate_enabled": false,
+    "rate_window_resolution_ms": 1000,
+    "source_entropy_partial": false,
+    "processing_p95_ms": 0.34389999927952886
+  }
+}

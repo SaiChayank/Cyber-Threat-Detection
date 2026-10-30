@@ -11,6 +11,7 @@ import math
 import os
 import platform
 import socket
+import sqlite3
 import subprocess
 import sys
 import tempfile
@@ -168,7 +169,8 @@ def main():
     if not 10 <= args.events <= 500:
         parser.error('Use 10 to 500 simulated events')
     environment = hardware()
-    with tempfile.TemporaryDirectory() as directory:
+    # ignore_cleanup_errors: on Windows a just-terminated server can briefly hold its SQLite files.
+    with tempfile.TemporaryDirectory(ignore_cleanup_errors=True) as directory:
         with socket.socket() as probe:
             probe.bind(('127.0.0.1', 0))
             port = probe.getsockname()[1]
@@ -207,7 +209,15 @@ def main():
                 except subprocess.TimeoutExpired:
                     process.kill()
                     process.wait(timeout=5)
-        reopened = AlertStore(Path(directory) / 'delivery.sqlite3')
+        reopened = None
+        for attempt in range(40):  # The terminated server's file locks can linger briefly on Windows.
+            try:
+                reopened = AlertStore(Path(directory) / 'delivery.sqlite3')
+                break
+            except sqlite3.OperationalError:
+                if attempt == 39:
+                    raise
+                time.sleep(.25)
         try:
             durable_rows = reopened.list(limit=1000)
         finally:

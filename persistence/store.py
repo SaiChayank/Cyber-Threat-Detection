@@ -9,6 +9,10 @@ class AlertStore:
         Path(path).parent.mkdir(parents=True, exist_ok=True)
         self.connection = sqlite3.connect(path, check_same_thread=False)
         self.connection.execute('PRAGMA journal_mode=WAL')
+        # WAL + NORMAL: a committed alert survives application crashes and restarts and the database is never
+        # corrupted; only an operating-system crash or power loss can lose the last few commits. FULL would
+        # sync the disk on every alert (about 30-45% lower throughput, p95 about 3x higher).
+        self.connection.execute('PRAGMA synchronous=NORMAL')
         self.connection.execute('CREATE TABLE IF NOT EXISTS alerts (sequence INTEGER PRIMARY KEY AUTOINCREMENT, alert_id TEXT UNIQUE, threat TEXT, body TEXT)')
         self.connection.commit()
 

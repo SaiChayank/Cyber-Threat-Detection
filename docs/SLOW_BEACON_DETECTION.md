@@ -47,8 +47,8 @@ The 0.1 limit was chosen from the data before building: benign periodic peers me
   generalisation (see [Real capture results](REAL_CAPTURE_RESULTS.md)).
 - The core benchmark repeats its scenarios on a fixed schedule, which is genuinely periodic contact:
   its alert count rose from 1,170 to 2,322 and its rate from about 2,700 to about 2,000-2,500
-  events/s (the extra cost is SQLite alert commits; an in-process A/B showed no measurable tracker
-  overhead on the PCAP path). The 2,000 events/s gate still passes with a thin margin on a loaded
-  machine.
+  events/s at the time (the extra cost was SQLite alert commits; an in-process A/B showed no measurable
+  tracker overhead on the PCAP path). The later SQLite `synchronous=NORMAL` change restored a wide margin
+  (about 5,000 events/s; see [Performance, 30 Oct](PERFORMANCE_20261030.md)).
 
 Tests: `tests/test_slow_beacon.py`.
