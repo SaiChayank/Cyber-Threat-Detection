@@ -1,7 +1,7 @@
 # Univect — Passive Threat Intelligence · PS26145
 
 **Status, 30 October 2026: a working passive prototype with every required feature built, tested
-and pushed.** 820 backend tests and 3 frontend tests pass, TypeScript and the production build
+and pushed.** 832 backend tests and 3 frontend tests pass, TypeScript and the production build
 pass, `npm audit` reports 0 vulnerabilities, and a live run of the production app replayed the
 demo (256 events, 15 alerts, 7 classes, p95 0.84 ms) and a real 8.8 MB capture. Detector quality is
 measured on **real traffic only for botnet C2 and DNS tunnelling**; the other detectors are validated

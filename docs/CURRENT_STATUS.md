@@ -8,12 +8,12 @@ checked on this date; nothing is marked done that was not run.
 
 | Check | Result |
 | --- | --- |
-| Backend tests (`pytest -q`) | 820 passed |
+| Backend tests (`pytest -q`) | 832 passed |
 | Frontend tests, TypeScript, production build | 3 passed; typecheck passes; build passes |
 | Dependency audit (`npm audit`) | 0 vulnerabilities |
 | Frozen demo preflight (`python -m replay.demo_pack`) | passes; nine traces identical |
 | Live production run (API + dashboard) | demo replay: 256 events, 15 alerts in 7 classes, p95 0.84 ms; SSE resume from sequence 10; real 8.8 MB PCAP upload processed (10,980 events); garbage upload rejected (HTTP 422) |
-| Fresh clone from GitHub (`0a22465`), new venv and `npm ci` | 810 passed, 3 skipped, demo passes, typecheck and build pass, 0 vulnerabilities. The working copy collects 820 tests because it also has the optional `stream-unzip` research package; its 8 dependent tests skip cleanly in a minimal install |
+| Fresh clone from GitHub (`8d38307`), new venv and `npm ci` | 822 passed, 3 skipped, demo passes, pinned hashes current, 3 frontend tests pass, typecheck and build pass, 0 vulnerabilities. The working copy has the optional `stream-unzip` research package, whose dependent tests skip cleanly in a minimal install |
 
 ## Requirements (problem statement) and status
 
@@ -22,7 +22,7 @@ checked on this date; nothing is marked done that was not run.
 | Read-only ingest, no probes, no return path, no inline blocking | Implemented | Tests forbid outbound sockets in the pipeline and in the live collector ([Flow export](FLOW_EXPORT_IMPORT.md)) |
 | No TLS/QUIC decryption | Implemented; raw QUIC JA4 deliberately omitted | [Encrypted-session detection](ENCRYPTED_SESSION_DETECTION.md) |
 | Streaming, bounded latency | Implemented | Alerts mid-replay; core p95 about 1 ms ([Performance](PERFORMANCE_VALIDATION.md)) |
-| Stated throughput | Implemented | About 3,300 metadata events/s; full PCAP path about 2,100-3,000 packets/s ([PCAP throughput](PCAP_THROUGHPUT.md)) |
+| Stated throughput | Implemented | Core metadata about 2,000-2,700 events/s on a loaded machine (earlier quiet runs 3,300; the benchmark's periodic repetition now raises twice the alerts, see [Slow beacon detection](SLOW_BEACON_DETECTION.md)); full PCAP path about 1,800-3,000 packets/s depending on load ([PCAP throughput](PCAP_THROUGHPUT.md)). Both clear the 2,000 gate, the core one narrowly under load |
 | Standard alert schema | Implemented | Timestamp, flow ID, class, confidence, evidence, severity |
 | Inputs: PCAP, PCAPNG, NetFlow v5/v9, IPFIX, sFlow | Implemented (files and a receive-only live collector) | [Flow export](FLOW_EXPORT_IMPORT.md), [PCAPNG](PCAPNG.md) |
 | DDoS: SYN, UDP, spoofed-source, slow-HTTP/slow-read | Implemented | Spoofed sources are an evidence field, not a class ([Spoof indicators](SPOOF_INDICATORS.md)) |
