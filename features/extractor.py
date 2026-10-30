@@ -196,6 +196,7 @@ class FeatureExtractor:
                                              'syn_target_source_entropy': syn_target['source_entropy'] if syn_target else 0.0,
                                              'syn_target_source_count_lower_bound': syn_target['source_count_lower_bound'] if syn_target else 0,
                                              'syn_target_entropy_partial': syn_target['source_entropy_partial'] if syn_target else False,
+                                             'syn_target_ack_fraction': syn_target['syn_ack_fraction'] if syn_target else 0.0,
                                              'syn_target_fraction_basis': syn_target['syn_fraction_basis'] if syn_target else 'not_tcp',
                                              'udp_target_packet_rate': udp_target['packet_rate'] if udp_target else 0.0,
                                              'udp_target_byte_rate': udp_target['byte_rate'] if udp_target else 0.0,

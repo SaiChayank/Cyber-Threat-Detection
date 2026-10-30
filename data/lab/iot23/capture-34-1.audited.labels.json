@@ -1,0 +1,63 @@
+{
+  "format": "ps26145-lab-labels/1",
+  "capture": "../../raw/iot23-lab/34-1.pcap",
+  "split": "unassigned",
+  "episodes": [
+    {
+      "id": "iot23-34-1-ddos-flagabuse",
+      "label": "DDOS",
+      "scenario": "mirai_flood_flagabuse",
+      "tool": "Stratosphere IoT-23 Capture-34-1, Zeek DDoS flows to 123.59.209.185:80; SYN+PSH+ACK+URG 1 KB packets (flags 0x3a) to :80",
+      "start_ms": 1545466958988,
+      "end_ms": 1545466990008,
+      "hosts": [
+        "123.59.209.185"
+      ]
+    },
+    {
+      "id": "iot23-34-1-ddos-syn",
+      "label": "DDOS",
+      "scenario": "mirai_flood_syn",
+      "tool": "Stratosphere IoT-23 Capture-34-1, Zeek DDoS flows to 71.61.66.148:80; pure SYN 60-byte packets to :80",
+      "start_ms": 1545475806968,
+      "end_ms": 1545475829998,
+      "hosts": [
+        "71.61.66.148"
+      ]
+    },
+    {
+      "id": "iot23-34-1-cc",
+      "label": "BOTNET_C2",
+      "scenario": "mirai_irc_c2",
+      "tool": "Stratosphere IoT-23 Capture-34-1, Zeek C&C flows to 185.244.25.235:6667",
+      "start_ms": 1545404132353,
+      "end_ms": 1545490214942,
+      "hosts": [
+        "185.244.25.235"
+      ]
+    },
+    {
+      "id": "iot23-34-1-audit-syn_burst_a",
+      "label": "DDOS",
+      "scenario": "mirai_flood_syn_burst_a",
+      "tool": "Audit from raw packets: pure SYN 60-byte packets to 66.67.61.168",
+      "start_ms": 1545426295412,
+      "end_ms": 1545426317001,
+      "hosts": [
+        "66.67.61.168"
+      ]
+    },
+    {
+      "id": "iot23-34-1-audit-syn_burst_b",
+      "label": "DDOS",
+      "scenario": "mirai_flood_syn_burst_b",
+      "tool": "Audit from raw packets: pure SYN 60-byte packets to 50.50.50.53",
+      "start_ms": 1545457280248,
+      "end_ms": 1545457292000,
+      "hosts": [
+        "50.50.50.53"
+      ]
+    }
+  ],
+  "audit": "IoT-23 labels two pure-SYN floods (38,060 and 19,437 60-byte SYN packets from one source port in 20.6 s and 10.8 s) as a port scan and as unlabelled. Added as DDOS from raw packet evidence, independent of runtime alerts."
+}

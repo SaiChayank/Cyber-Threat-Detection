@@ -11,6 +11,7 @@ class Bucket:
     packets: int = 0
     bytes: int = 0
     syn_packets: int = 0
+    syn_ack_packets: int = 0
     unknown_syn_packets: int = 0
     summary_events: int = 0
     size_squared_packet_sum: float = 0.0
@@ -37,7 +38,7 @@ class RateWindow:
         self.buckets = deque()
         self.sources = Counter()
         self.packets = self.bytes = self.observations = 0
-        self.syn_packets = self.unknown_syn_packets = self.summary_events = 0
+        self.syn_packets = self.syn_ack_packets = self.unknown_syn_packets = self.summary_events = 0
         self.size_squared_packet_sum = 0.0
         self.count_log_sum = 0.0
 
@@ -71,6 +72,7 @@ class RateWindow:
             self.packets -= expired.packets
             self.bytes -= expired.bytes
             self.syn_packets -= expired.syn_packets
+            self.syn_ack_packets -= expired.syn_ack_packets
             self.unknown_syn_packets -= expired.unknown_syn_packets
             self.summary_events -= expired.summary_events
             self.size_squared_packet_sum -= expired.size_squared_packet_sum
@@ -86,12 +88,15 @@ class RateWindow:
         weight = event.packets if self.source_weight_packets else 1
         syn_packets = (event.syn_packets if event.syn_packets is not None else
                        int(event.syn) if event.packets == 1 else 0) if event.protocol == 6 else 0
+        # SYN with ACK (reply or flag-abuse packet): an observed single packet whose initial-SYN count is zero.
+        syn_ack_packets = int(event.protocol == 6 and event.packets == 1 and event.syn and event.syn_packets == 0)
         unknown_syn_packets = event.packets if event.protocol == 6 and event.packets > 1 and event.syn_packets is None else 0
         summary_event = int(event.packets > 1)
         size_squared_packet_sum = event.bytes * event.bytes / event.packets
         bucket.packets += event.packets
         bucket.bytes += event.bytes
         bucket.syn_packets += syn_packets
+        bucket.syn_ack_packets += syn_ack_packets
         bucket.unknown_syn_packets += unknown_syn_packets
         bucket.summary_events += summary_event
         bucket.size_squared_packet_sum += size_squared_packet_sum
@@ -99,6 +104,7 @@ class RateWindow:
         self.packets += event.packets
         self.bytes += event.bytes
         self.syn_packets += syn_packets
+        self.syn_ack_packets += syn_ack_packets
         self.unknown_syn_packets += unknown_syn_packets
         self.summary_events += summary_event
         self.size_squared_packet_sum += size_squared_packet_sum
@@ -114,6 +120,8 @@ class RateWindow:
                     source_count_lower_bound=len(self.sources),
                     syn_fraction=(self.syn_packets / self.packets
                                   if self.packets and not self.unknown_syn_packets else None),
+                    syn_ack_fraction=(self.syn_ack_packets / self.packets
+                                      if self.packets and not self.unknown_syn_packets else None),
                     syn_fraction_basis=('unavailable' if self.unknown_syn_packets else
                                         'declared_summary_counts' if self.summary_events else 'packet_exact'),
                     source_entropy_partial=bool(self.sources.get(None)),

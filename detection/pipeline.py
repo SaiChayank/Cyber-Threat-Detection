@@ -81,9 +81,14 @@ class Pipeline:
         label, confidence = self.model.predict(f)
         fid = self.flow_id(event)
         hits = {label: (confidence, DetectorType.ML)} if label != 'BENIGN' and confidence >= .8 else {}
-        syn_flood = (event.protocol == 6 and f['syn_target_packet_rate'] >= 1000
-                     and f['syn_target_fraction'] is not None
-                     and f['syn_target_fraction'] >= .70)
+        pure_syn_flood = (event.protocol == 6 and f['syn_target_packet_rate'] >= 1000
+                          and f['syn_target_fraction'] is not None
+                          and f['syn_target_fraction'] >= .70)
+        # Same rate and share, but the packets carry SYN together with ACK (observed on a Mirai-family flood
+        # of SYN+PSH+ACK+URG packets): a host sending 1,000+ such packets/s at one target is a flood or its backscatter.
+        syn_ack_flood = (not pure_syn_flood and event.protocol == 6 and f['syn_target_packet_rate'] >= 1000
+                         and f['syn_target_ack_fraction'] is not None and f['syn_target_ack_fraction'] >= .70)
+        syn_flood = pure_syn_flood or syn_ack_flood
         udp_flood = event.protocol == 17 and f['udp_target_packet_rate'] >= 1000
         # Many long-lived, low-rate client connections to one service: slow-HTTP exhaustion.
         slow_http = event.protocol == 6 and f['slow_http_connections'] >= slow_http_features.MIN_SLOW_CONNECTIONS
@@ -196,6 +201,8 @@ class Pipeline:
                                 source_count_lower_bound=f['syn_target_source_count_lower_bound'],
                                 source_entropy_partial=f['syn_target_entropy_partial'],
                                 syn_target='destination_tcp')
+            if threat == 'DDOS' and syn_ack_flood:
+                evidence.update(ddos_subtype='syn_ack_flood', syn_ack_fraction=f['syn_target_ack_fraction'])
             if threat == 'DDOS' and udp_flood:
                 evidence.update(packet_rate=f['udp_target_packet_rate'],
                                 byte_rate=f['udp_target_byte_rate'],

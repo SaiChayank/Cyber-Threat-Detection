@@ -1,0 +1,40 @@
+{
+  "format": "ps26145-lab-labels/1",
+  "capture": "../../raw/iot23-lab/34-1.pcap",
+  "split": "unassigned",
+  "episodes": [
+    {
+      "id": "iot23-34-1-ddos-flagabuse",
+      "label": "DDOS",
+      "scenario": "mirai_flood_flagabuse",
+      "tool": "Stratosphere IoT-23 Capture-34-1, Zeek DDoS flows to 123.59.209.185:80; SYN+PSH+ACK+URG 1 KB packets (flags 0x3a) to :80",
+      "start_ms": 1545466958988,
+      "end_ms": 1545466990008,
+      "hosts": [
+        "123.59.209.185"
+      ]
+    },
+    {
+      "id": "iot23-34-1-ddos-syn",
+      "label": "DDOS",
+      "scenario": "mirai_flood_syn",
+      "tool": "Stratosphere IoT-23 Capture-34-1, Zeek DDoS flows to 71.61.66.148:80; pure SYN 60-byte packets to :80",
+      "start_ms": 1545475806968,
+      "end_ms": 1545475829998,
+      "hosts": [
+        "71.61.66.148"
+      ]
+    },
+    {
+      "id": "iot23-34-1-cc",
+      "label": "BOTNET_C2",
+      "scenario": "mirai_irc_c2",
+      "tool": "Stratosphere IoT-23 Capture-34-1, Zeek C&C flows to 185.244.25.235:6667",
+      "start_ms": 1545404132353,
+      "end_ms": 1545490214942,
+      "hosts": [
+        "185.244.25.235"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "format": "ps26145-lab-labels/1",
+  "capture": "../../raw/iot23-lab/1-1.pcap",
+  "split": "unassigned",
+  "episodes": [
+    {
+      "id": "iot23-1-1-scan",
+      "label": "RECONNAISSANCE",
+      "scenario": "mirai_telnet_scan",
+      "tool": "Stratosphere IoT-23 Capture-1-1 (Mirai-family), Zeek PartOfAHorizontalPortScan flows from 192.168.100.103 to ports 23/2323/8080/9527 across about 1,400 hosts",
+      "start_ms": 1525879831015,
+      "end_ms": 1525882519021,
+      "hosts": [
+        "192.168.100.103"
+      ]
+    }
+  ]
+}
