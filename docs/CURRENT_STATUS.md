@@ -8,7 +8,7 @@ checked on this date; nothing is marked done that was not run.
 
 | Check | Result |
 | --- | --- |
-| Backend tests (`pytest -q`) | 832 passed |
+| Backend tests (`pytest -q`) | 873 passed |
 | Frontend tests, TypeScript, production build | 3 passed; typecheck passes; build passes |
 | Dependency audit (`npm audit`) | 0 vulnerabilities |
 | Frozen demo preflight (`python -m replay.demo_pack`) | passes; nine traces identical |
@@ -25,7 +25,7 @@ checked on this date; nothing is marked done that was not run.
 | Stated throughput | Implemented | Core metadata about 5,000-5,500 events/s (p95 0.33 ms) after the SQLite durability setting change; API-to-SSE p95 about 250 ms; full PCAP path about 2,400 packets/s, 150 flows/s, 14.6 Mbps ([Performance, 30 Oct](PERFORMANCE_20261030.md), [PCAP throughput](PCAP_THROUGHPUT.md)); results vary about +/-10-30% with machine load |
 | Standard alert schema | Implemented | Timestamp, flow ID, class, confidence, evidence, severity |
 | Inputs: PCAP, PCAPNG, NetFlow v5/v9, IPFIX, sFlow | Implemented (files and a receive-only live collector) | [Flow export](FLOW_EXPORT_IMPORT.md), [PCAPNG](PCAPNG.md) |
-| DDoS: SYN, UDP, spoofed-source, slow-HTTP/slow-read | Implemented | Spoofed sources are an evidence field, not a class ([Spoof indicators](SPOOF_INDICATORS.md)) |
+| DDoS: SYN, SYN+ACK-flag, UDP, spoofed-source, slow-HTTP/slow-read | Implemented | Measured on a real Mirai-family capture: both floods detected in about 8 s, none missed after the SYN+ACK fix; one bot, one capture ([results](REAL_CAPTURE_RESULTS.md)). Spoofed sources are an evidence field, not a class ([Spoof indicators](SPOOF_INDICATORS.md)) |
 | Botnet C2 beaconing | Implemented; **measured on real traffic** | [Real capture results](REAL_CAPTURE_RESULTS.md) |
 | DGA domains and DNS tunnelling | Implemented; tunnelling **measured on a real tool capture** | Same |
 | Malware in encrypted sessions (JA3/JA3S/JA4, sizes, timing) | Implemented; synthetic validation only | [Encrypted-session detection](ENCRYPTED_SESSION_DETECTION.md) |
