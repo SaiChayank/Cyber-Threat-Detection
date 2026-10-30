@@ -1,0 +1,419 @@
+{
+  "format": "ps26145-lab-evaluation/1",
+  "generated_at_utc": "2026-10-30T07:52:37.384481+00:00",
+  "pipeline": {
+    "dns_tunnel_candidate": false,
+    "dga_model_enabled": false,
+    "model_sha256": "4d8e08323374535789e21f9f7cd1ee3f1c84b663ce555e67bb4ced57c95e8010"
+  },
+  "scope": "Runtime alerts on operator-labelled lab captures. Episode recall counts an episode once it has one alert of its labelled class; precision is per alert. Labels are only as reliable as the operator ground truth.",
+  "captures": [
+    {
+      "label_file": "data\\lab\\dns\\burgos-benign.labels.json",
+      "label_sha256": "e3bc077b72b76cbc21b2d124241c0b79d17eedf1acd334353eda3e03e8842c84",
+      "capture": "data\\lab\\dns\\..\\..\\raw\\burgos-benign-intake-20261021\\benign_first_cap.pcap",
+      "capture_sha256": "f1b0e48cfdbdd38a7701c99b364ed0bd70521224402a9d96eeac7b0dd9845e57",
+      "split": "unassigned",
+      "source": "packets",
+      "events": 10980,
+      "late_events": 3,
+      "ambiguous_events": 0,
+      "ingest": {
+        "total_corrupt_packets": 0,
+        "truncated_packets": 0,
+        "unsupported_protocols": 25
+      },
+      "episodes": [
+        {
+          "id": "burgos-benign",
+          "label": "BENIGN",
+          "scenario": "benign_dns",
+          "tool": "Public Burgos benign capture, full snap length, 72 ordinary questions",
+          "start_ms": 1740053277000.0,
+          "end_ms": 1740053439000.0,
+          "events": 10980,
+          "first_event_ms": 1740053277295.26,
+          "observed": true,
+          "detected": false,
+          "correct_alerts": 0,
+          "other_alerts": {
+            "RECONNAISSANCE": 1
+          },
+          "first_correct_alert": null
+        }
+      ],
+      "background": {
+        "events": 0,
+        "alerts": {}
+      }
+    },
+    {
+      "label_file": "data\\lab\\dns\\cic-benign-1.labels.json",
+      "label_sha256": "50594aae5f95e9230c19f2e0ab14dea7659c571c1f6a2e72645d567f33659755",
+      "capture": "data\\lab\\dns\\..\\..\\raw\\cicdns2021\\pcaps\\benign\\benign_1.pcap",
+      "capture_sha256": "2df7769f8e6b4db753ad968ce1da10427275d9456d38548e993eaaaf6484ae99",
+      "split": "unassigned",
+      "source": "packets",
+      "events": 132180,
+      "late_events": 2,
+      "ambiguous_events": 0,
+      "ingest": {
+        "total_corrupt_packets": 143675,
+        "truncated_packets": 0,
+        "unsupported_protocols": 0
+      },
+      "episodes": [
+        {
+          "id": "cic-benign-1",
+          "label": "BENIGN",
+          "scenario": "benign_dns_truncated",
+          "tool": "CIC DNS 2021 benign capture; snap length 96, so names are cut at about 36 characters",
+          "start_ms": 1605880718000.0,
+          "end_ms": 1605914514000.0,
+          "events": 132180,
+          "first_event_ms": 1605880718988.039,
+          "observed": true,
+          "detected": false,
+          "correct_alerts": 0,
+          "other_alerts": {
+            "DGA_DOMAINS": 6
+          },
+          "first_correct_alert": null
+        }
+      ],
+      "background": {
+        "events": 0,
+        "alerts": {}
+      }
+    },
+    {
+      "label_file": "data\\lab\\dns\\cic-benign-2.labels.json",
+      "label_sha256": "d8b4ee55f2f2c65051d792e514766a9eb4b57d337e5b069844cd969039a1d534",
+      "capture": "data\\lab\\dns\\..\\..\\raw\\cicdns2021\\pcaps\\benign\\benign_2.pcap",
+      "capture_sha256": "5ace9b02ecc7539cb806bbfedb9e7467d1b0b8ad14921938a09e6d7e2d2d3f93",
+      "split": "unassigned",
+      "source": "packets",
+      "events": 93684,
+      "late_events": 2,
+      "ambiguous_events": 0,
+      "ingest": {
+        "total_corrupt_packets": 107741,
+        "truncated_packets": 0,
+        "unsupported_protocols": 0
+      },
+      "episodes": [
+        {
+          "id": "cic-benign-2",
+          "label": "BENIGN",
+          "scenario": "benign_dns_truncated",
+          "tool": "CIC DNS 2021 benign capture; snap length 96, so names are cut at about 36 characters",
+          "start_ms": 1605914708000.0,
+          "end_ms": 1605934659000.0,
+          "events": 93684,
+          "first_event_ms": 1605914708168.242,
+          "observed": true,
+          "detected": false,
+          "correct_alerts": 0,
+          "other_alerts": {
+            "DGA_DOMAINS": 8,
+            "RECONNAISSANCE": 1
+          },
+          "first_correct_alert": null
+        }
+      ],
+      "background": {
+        "events": 0,
+        "alerts": {}
+      }
+    },
+    {
+      "label_file": "data\\lab\\dns\\dnscat2-1hr.labels.json",
+      "label_sha256": "ddc31b99f62594faeb651ae79a314a4f1215c55d533e946416d10dfab54e07b5",
+      "capture": "data\\lab\\dns\\..\\..\\raw\\dns-public-session-intake-20261021\\dnscat2_dns_tunneling_1hr.pcap",
+      "capture_sha256": "b1056baaa15c441aa9fadd23885818db069f3cc5b560dc4f8a184d3494f3d3bd",
+      "split": "unassigned",
+      "source": "packets",
+      "events": 14628,
+      "late_events": 11,
+      "ambiguous_events": 0,
+      "ingest": {
+        "total_corrupt_packets": 0,
+        "truncated_packets": 0,
+        "unsupported_protocols": 178
+      },
+      "episodes": [
+        {
+          "id": "dnscat2-1hr",
+          "label": "DNS_TUNNELLING",
+          "scenario": "dnscat2_tunnel",
+          "tool": "Public dnscat2 one-hour tunnel capture, full snap length (names up to 72 chars)",
+          "start_ms": 1623212924000.0,
+          "end_ms": 1623216524000.0,
+          "events": 14627,
+          "first_event_ms": 1623212924825.154,
+          "observed": true,
+          "detected": true,
+          "correct_alerts": 125,
+          "other_alerts": {
+            "DGA_DOMAINS": 241
+          },
+          "first_correct_alert": {
+            "timestamp_ms": 1623212926743.469,
+            "events_into_episode": 7,
+            "time_to_detect_ms": 1918.31494140625
+          }
+        }
+      ],
+      "background": {
+        "events": 1,
+        "alerts": {}
+      }
+    }
+  ],
+  "summary": {
+    "all": {
+      "captures": 4,
+      "events": 251472,
+      "late_events": 18,
+      "ambiguous_events": 0,
+      "threats": {
+        "DDOS": {
+          "episodes": 0,
+          "observed_episodes": 0,
+          "detected_episodes": 0,
+          "episode_recall": null,
+          "alerts": 0,
+          "correct_alerts": 0,
+          "alert_precision": null,
+          "false_alerts_on_benign": 0,
+          "median_time_to_detect_ms": null,
+          "max_time_to_detect_ms": null
+        },
+        "BOTNET_C2": {
+          "episodes": 0,
+          "observed_episodes": 0,
+          "detected_episodes": 0,
+          "episode_recall": null,
+          "alerts": 0,
+          "correct_alerts": 0,
+          "alert_precision": null,
+          "false_alerts_on_benign": 0,
+          "median_time_to_detect_ms": null,
+          "max_time_to_detect_ms": null
+        },
+        "DGA_DOMAINS": {
+          "episodes": 0,
+          "observed_episodes": 0,
+          "detected_episodes": 0,
+          "episode_recall": null,
+          "alerts": 255,
+          "correct_alerts": 0,
+          "alert_precision": 0.0,
+          "false_alerts_on_benign": 14,
+          "median_time_to_detect_ms": null,
+          "max_time_to_detect_ms": null
+        },
+        "DNS_TUNNELLING": {
+          "episodes": 1,
+          "observed_episodes": 1,
+          "detected_episodes": 1,
+          "episode_recall": 1.0,
+          "alerts": 125,
+          "correct_alerts": 125,
+          "alert_precision": 1.0,
+          "false_alerts_on_benign": 0,
+          "median_time_to_detect_ms": 1918.31494140625,
+          "max_time_to_detect_ms": 1918.31494140625
+        },
+        "ENCRYPTED_MALWARE": {
+          "episodes": 0,
+          "observed_episodes": 0,
+          "detected_episodes": 0,
+          "episode_recall": null,
+          "alerts": 0,
+          "correct_alerts": 0,
+          "alert_precision": null,
+          "false_alerts_on_benign": 0,
+          "median_time_to_detect_ms": null,
+          "max_time_to_detect_ms": null
+        },
+        "RECONNAISSANCE": {
+          "episodes": 0,
+          "observed_episodes": 0,
+          "detected_episodes": 0,
+          "episode_recall": null,
+          "alerts": 2,
+          "correct_alerts": 0,
+          "alert_precision": 0.0,
+          "false_alerts_on_benign": 2,
+          "median_time_to_detect_ms": null,
+          "max_time_to_detect_ms": null
+        },
+        "DATA_EXFILTRATION": {
+          "episodes": 0,
+          "observed_episodes": 0,
+          "detected_episodes": 0,
+          "episode_recall": null,
+          "alerts": 0,
+          "correct_alerts": 0,
+          "alert_precision": null,
+          "false_alerts_on_benign": 0,
+          "median_time_to_detect_ms": null,
+          "max_time_to_detect_ms": null
+        }
+      },
+      "benign": {
+        "events": 236845,
+        "alerts": {
+          "DGA_DOMAINS": 14,
+          "RECONNAISSANCE": 2
+        },
+        "false_alerts_per_1000_events": 0.0676,
+        "labelled_episodes": 3,
+        "labelled_episodes_with_alerts": 3
+      },
+      "scenarios": {
+        "benign_dns": {
+          "label": "BENIGN",
+          "episodes": 1,
+          "detected": 0,
+          "with_any_alert": 1
+        },
+        "benign_dns_truncated": {
+          "label": "BENIGN",
+          "episodes": 2,
+          "detected": 0,
+          "with_any_alert": 2
+        },
+        "dnscat2_tunnel": {
+          "label": "DNS_TUNNELLING",
+          "episodes": 1,
+          "detected": 1,
+          "with_any_alert": 1
+        }
+      }
+    },
+    "unassigned": {
+      "captures": 4,
+      "events": 251472,
+      "late_events": 18,
+      "ambiguous_events": 0,
+      "threats": {
+        "DDOS": {
+          "episodes": 0,
+          "observed_episodes": 0,
+          "detected_episodes": 0,
+          "episode_recall": null,
+          "alerts": 0,
+          "correct_alerts": 0,
+          "alert_precision": null,
+          "false_alerts_on_benign": 0,
+          "median_time_to_detect_ms": null,
+          "max_time_to_detect_ms": null
+        },
+        "BOTNET_C2": {
+          "episodes": 0,
+          "observed_episodes": 0,
+          "detected_episodes": 0,
+          "episode_recall": null,
+          "alerts": 0,
+          "correct_alerts": 0,
+          "alert_precision": null,
+          "false_alerts_on_benign": 0,
+          "median_time_to_detect_ms": null,
+          "max_time_to_detect_ms": null
+        },
+        "DGA_DOMAINS": {
+          "episodes": 0,
+          "observed_episodes": 0,
+          "detected_episodes": 0,
+          "episode_recall": null,
+          "alerts": 255,
+          "correct_alerts": 0,
+          "alert_precision": 0.0,
+          "false_alerts_on_benign": 14,
+          "median_time_to_detect_ms": null,
+          "max_time_to_detect_ms": null
+        },
+        "DNS_TUNNELLING": {
+          "episodes": 1,
+          "observed_episodes": 1,
+          "detected_episodes": 1,
+          "episode_recall": 1.0,
+          "alerts": 125,
+          "correct_alerts": 125,
+          "alert_precision": 1.0,
+          "false_alerts_on_benign": 0,
+          "median_time_to_detect_ms": 1918.31494140625,
+          "max_time_to_detect_ms": 1918.31494140625
+        },
+        "ENCRYPTED_MALWARE": {
+          "episodes": 0,
+          "observed_episodes": 0,
+          "detected_episodes": 0,
+          "episode_recall": null,
+          "alerts": 0,
+          "correct_alerts": 0,
+          "alert_precision": null,
+          "false_alerts_on_benign": 0,
+          "median_time_to_detect_ms": null,
+          "max_time_to_detect_ms": null
+        },
+        "RECONNAISSANCE": {
+          "episodes": 0,
+          "observed_episodes": 0,
+          "detected_episodes": 0,
+          "episode_recall": null,
+          "alerts": 2,
+          "correct_alerts": 0,
+          "alert_precision": 0.0,
+          "false_alerts_on_benign": 2,
+          "median_time_to_detect_ms": null,
+          "max_time_to_detect_ms": null
+        },
+        "DATA_EXFILTRATION": {
+          "episodes": 0,
+          "observed_episodes": 0,
+          "detected_episodes": 0,
+          "episode_recall": null,
+          "alerts": 0,
+          "correct_alerts": 0,
+          "alert_precision": null,
+          "false_alerts_on_benign": 0,
+          "median_time_to_detect_ms": null,
+          "max_time_to_detect_ms": null
+        }
+      },
+      "benign": {
+        "events": 236845,
+        "alerts": {
+          "DGA_DOMAINS": 14,
+          "RECONNAISSANCE": 2
+        },
+        "false_alerts_per_1000_events": 0.0676,
+        "labelled_episodes": 3,
+        "labelled_episodes_with_alerts": 3
+      },
+      "scenarios": {
+        "benign_dns": {
+          "label": "BENIGN",
+          "episodes": 1,
+          "detected": 0,
+          "with_any_alert": 1
+        },
+        "benign_dns_truncated": {
+          "label": "BENIGN",
+          "episodes": 2,
+          "detected": 0,
+          "with_any_alert": 2
+        },
+        "dnscat2_tunnel": {
+          "label": "DNS_TUNNELLING",
+          "episodes": 1,
+          "detected": 1,
+          "with_any_alert": 1
+        }
+      }
+    }
+  }
+}

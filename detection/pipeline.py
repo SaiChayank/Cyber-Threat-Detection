@@ -96,6 +96,9 @@ class Pipeline:
             # The frozen synthetic model must not infer a UDP flood from volume
             # elsewhere in the enclave or from a low-rate flow summary.
             hits.pop('DDOS', None)
+        if event.protocol not in (6, 17) and f['packet_rate'] < 1000:
+            # ICMP and other protocols: the frozen synthetic model alone cannot raise a flood alert.
+            hits.pop('DDOS', None)
         if event.transport == 'IP':
             # Port 443 alone is not an observed TLS/QUIC session: the synthetic model's
             # posterior cannot raise encrypted-malware suspicion without handshake or
@@ -138,11 +141,22 @@ class Pipeline:
         for threat, (score, source) in hits.items():
             if threat == 'RECONNAISSANCE' and max(f['destination_count'], f['port_count']) < thresholds.RECON_ALERT_FLOOR:
                 continue
+            if threat == 'RECONNAISSANCE' and (event.dst_ip.is_multicast or str(event.dst_ip) == '255.255.255.255'
+                                               or (0 < event.src_port < 1024 and not event.syn)):
+                # Scans target unicast hosts from ephemeral ports; replies from a service port
+                # (for example a DNS resolver) and multicast name services are not scans.
+                continue
             if threat == 'BOTNET_C2' and f['history_count'] < thresholds.C2_MIN_HISTORY:
+                continue
+            if threat == 'BOTNET_C2' and (event.dst_ip.is_multicast or str(event.dst_ip) == '255.255.255.255'):
+                # Multicast/broadcast name services (LLMNR, mDNS, NetBIOS) are never a C2 server.
                 continue
             if threat == 'ENCRYPTED_MALWARE' and not event.encrypted:
                 continue
             if threat in ('DGA_DOMAINS', 'DNS_TUNNELLING') and not event.dns_name:
+                continue
+            if threat == 'DGA_DOMAINS' and (event.dns_name or '').lower().startswith('xn--'):
+                # An internationalized (punycode) first label is an encoding, not a generated-domain signal.
                 continue
             if threat == 'DGA_DOMAINS' and not self.dga_model.enabled and not dga_evidence:
                 continue

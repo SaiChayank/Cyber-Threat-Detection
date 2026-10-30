@@ -120,3 +120,33 @@ added two false alerts over 236,845 benign events; the rest pre-date it (`c2-fal
 .venv/Scripts/python.exe -m datasets.evaluate_lab data/lab/dns/*.labels.json
 .venv/Scripts/python.exe -m datasets.evaluate_lab data/lab/dns/*.labels.json --dns-tunnel-candidate
 ```
+
+---
+
+# Third step: false-positive fixes found on real benign traffic (30 October 2026)
+
+Diagnosing the benign false alerts from the first two measurements showed each was a clear
+class with a principled guard, not a threshold problem. Every guard has a regression test
+(`tests/test_c2_unicast_guard.py`, `test_dga_punycode_guard.py`, `test_ddos_recon_guards.py`),
+leaves the nine frozen demo traces identical, and was re-measured on all real captures
+(evidence: `docs/verification/real-captures-after-guards-20261030/`).
+
+| False-positive class (real cause) | Guard | Benign alerts before -> after (236,845 DNS events) |
+| --- | --- | --- |
+| C2 on multicast name lookups (LLMNR 224.0.0.252, mDNS 224.0.0.251): synthetic model and, at the tuned limit, the rule | A C2 peer must be a unicast host: multicast/broadcast destinations never raise C2 | 15 -> 0 |
+| DGA on internationalized domain names (`xn--80aalwclyias7g0b.xn--p1ai`): punycode is an encoding | A first label starting `xn--` is never a DGA signal | DGA 25 -> 14 |
+| Model-only DDoS on low-rate ICMP (23-98 packets/s) | The synthetic model alone cannot raise a flood alert for protocols other than TCP/UDP unless the rate rule holds | 3 -> 0 |
+| Reconnaissance from a resolver's replies to many client ports, and from multicast LLMNR | Scans come from ephemeral ports and target unicast hosts: replies from a service port (<1024, no SYN) and multicast/broadcast targets are not scans | 4 -> 2 |
+
+Overall benign false alerts on the real DNS captures fell from **47 to 16** (0.198 -> **0.068 per 1,000
+events**). DNS tunnelling is unchanged: 1/1 detected, 125 alerts all correct, 0 false. The held-out
+CTU-13 Neris test slice is unchanged (1/1, 10 of 11 C2 alerts correct); its train+validation benign false
+alerts fell from 0.82 to 0.74 per 1,000.
+
+**Remaining known false alerts (not fixed, by design or not fixable here):** 14 DGA alerts on real long
+domains made of concatenated words (for example `youtubethumbnaildownloader.com`), the known hard case
+for lexical DGA detection; 2 reconnaissance alerts, including a browser contacting 20 CDN hosts in 10 s
+(browsing and scanning are indistinguishable by fan-out alone); and the late C2 detection noted above.
+The CIC captures' 96-byte snap length also means DGA behaviour on their truncated names may differ from
+full-length names.
+

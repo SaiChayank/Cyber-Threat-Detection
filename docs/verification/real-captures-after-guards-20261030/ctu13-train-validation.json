@@ -1,0 +1,529 @@
+{
+  "format": "ps26145-lab-evaluation/1",
+  "generated_at_utc": "2026-10-30T07:55:47.567333+00:00",
+  "pipeline": {
+    "dns_tunnel_candidate": false,
+    "dga_model_enabled": false,
+    "model_sha256": "4d8e08323374535789e21f9f7cd1ee3f1c84b663ce555e67bb4ced57c95e8010"
+  },
+  "scope": "Runtime alerts on operator-labelled lab captures. Episode recall counts an episode once it has one alert of its labelled class; precision is per alert. Labels are only as reliable as the operator ground truth.",
+  "captures": [
+    {
+      "label_file": "data\\lab\\ctu13\\neris.part1.train.labels.json",
+      "label_sha256": "902deac90d83f00f42e5c56dac468d796dc1e42a762fc5fd16ad3e2008dfb830",
+      "capture": "data\\lab\\ctu13\\..\\..\\raw\\ctu13-lab\\slices\\botnet-capture-20110810-neris.part1.pcap",
+      "capture_sha256": "ce904f71149a28b132a9017c07a5642a7b2ddb623c23bef70ec43507dd0db758",
+      "split": "train",
+      "source": "packets",
+      "events": 86789,
+      "late_events": 0,
+      "ambiguous_events": 0,
+      "ingest": {
+        "total_corrupt_packets": 0,
+        "truncated_packets": 0,
+        "unsupported_protocols": 305
+      },
+      "episodes": [
+        {
+          "id": "ctu13-neris-part1",
+          "label": "BOTNET_C2",
+          "scenario": "neris_botnet",
+          "tool": "CTU-13 scenario 1 (Neris), infected-VM interface capture; time slice of one recording",
+          "start_ms": 1312966899475.0,
+          "end_ms": 1312972657709.0,
+          "events": 86789,
+          "first_event_ms": 1312967063241.0369,
+          "observed": true,
+          "detected": true,
+          "correct_alerts": 1,
+          "other_alerts": {
+            "RECONNAISSANCE": 162
+          },
+          "first_correct_alert": {
+            "timestamp_ms": 1312972397255.5881,
+            "events_into_episode": 82494,
+            "time_to_detect_ms": 5334014.551269531
+          }
+        }
+      ],
+      "background": {
+        "events": 0,
+        "alerts": {}
+      }
+    },
+    {
+      "label_file": "data\\lab\\ctu13\\normal.part1.train.labels.json",
+      "label_sha256": "7d49c957d46dd71cd7fd411caccf5ab08629014440918e9f5e4fccc8249dd917",
+      "capture": "data\\lab\\ctu13\\..\\..\\raw\\ctu13-lab\\slices\\normal-capture-20110817.part1.pcap",
+      "capture_sha256": "cdfc97e33b4ef030d5ce54c9bfe1b289630daada63a9aa469c13cc093fcc0fca",
+      "split": "train",
+      "source": "packets",
+      "events": 6087,
+      "late_events": 0,
+      "ambiguous_events": 0,
+      "ingest": {
+        "total_corrupt_packets": 0,
+        "truncated_packets": 0,
+        "unsupported_protocols": 1057
+      },
+      "episodes": [
+        {
+          "id": "ctu13-normal-part1",
+          "label": "BENIGN",
+          "scenario": "normal_campus_traffic",
+          "tool": "CTU Botnet-50 normal-capture-20110817 (RDP, SMB, web); time slice of one recording",
+          "start_ms": 1313576912041.0,
+          "end_ms": 1313579128938.0,
+          "events": 6087,
+          "first_event_ms": 1313576916256.653,
+          "observed": true,
+          "detected": false,
+          "correct_alerts": 0,
+          "other_alerts": {
+            "BOTNET_C2": 5,
+            "RECONNAISSANCE": 1
+          },
+          "first_correct_alert": null
+        }
+      ],
+      "background": {
+        "events": 0,
+        "alerts": {}
+      }
+    },
+    {
+      "label_file": "data\\lab\\ctu13\\neris.part2.validation.labels.json",
+      "label_sha256": "9b1f6ee834090a181f7e9836844b2fe56f2f66fb30727d62b40e2b3487937b64",
+      "capture": "data\\lab\\ctu13\\..\\..\\raw\\ctu13-lab\\slices\\botnet-capture-20110810-neris.part2.pcap",
+      "capture_sha256": "cf1bf9004defc4e2237aa5a266d271249c66f98710ba98fdf55395611f9c8df3",
+      "split": "validation",
+      "source": "packets",
+      "events": 132392,
+      "late_events": 0,
+      "ambiguous_events": 0,
+      "ingest": {
+        "total_corrupt_packets": 0,
+        "truncated_packets": 0,
+        "unsupported_protocols": 303
+      },
+      "episodes": [
+        {
+          "id": "ctu13-neris-part2",
+          "label": "BOTNET_C2",
+          "scenario": "neris_botnet",
+          "tool": "CTU-13 scenario 1 (Neris), infected-VM interface capture; time slice of one recording",
+          "start_ms": 1312972655851.0,
+          "end_ms": 1312978413957.0,
+          "events": 132392,
+          "first_event_ms": 1312972656851.819,
+          "observed": true,
+          "detected": true,
+          "correct_alerts": 13,
+          "other_alerts": {
+            "DGA_DOMAINS": 4,
+            "RECONNAISSANCE": 186
+          },
+          "first_correct_alert": {
+            "timestamp_ms": 1312974528138.4111,
+            "events_into_episode": 36269,
+            "time_to_detect_ms": 1871286.5920410156
+          }
+        }
+      ],
+      "background": {
+        "events": 0,
+        "alerts": {}
+      }
+    },
+    {
+      "label_file": "data\\lab\\ctu13\\normal.part2.validation.labels.json",
+      "label_sha256": "f42997181180232fb301bd77192bfbcc2bbed900025762a9aeff2f9cb759f13b",
+      "capture": "data\\lab\\ctu13\\..\\..\\raw\\ctu13-lab\\slices\\normal-capture-20110817.part2.pcap",
+      "capture_sha256": "79eff02bf0c96327050db245f2cbb77c5d00815a265600711f43495ac9bc2619",
+      "split": "validation",
+      "source": "packets",
+      "events": 6068,
+      "late_events": 0,
+      "ambiguous_events": 0,
+      "ingest": {
+        "total_corrupt_packets": 0,
+        "truncated_packets": 0,
+        "unsupported_protocols": 1191
+      },
+      "episodes": [
+        {
+          "id": "ctu13-normal-part2",
+          "label": "BENIGN",
+          "scenario": "normal_campus_traffic",
+          "tool": "CTU Botnet-50 normal-capture-20110817 (RDP, SMB, web); time slice of one recording",
+          "start_ms": 1313579127176.0,
+          "end_ms": 1313581332129.0,
+          "events": 6068,
+          "first_event_ms": 1313579128176.424,
+          "observed": true,
+          "detected": false,
+          "correct_alerts": 0,
+          "other_alerts": {
+            "BOTNET_C2": 2,
+            "RECONNAISSANCE": 1
+          },
+          "first_correct_alert": null
+        }
+      ],
+      "background": {
+        "events": 0,
+        "alerts": {}
+      }
+    }
+  ],
+  "summary": {
+    "all": {
+      "captures": 4,
+      "events": 231336,
+      "late_events": 0,
+      "ambiguous_events": 0,
+      "threats": {
+        "DDOS": {
+          "episodes": 0,
+          "observed_episodes": 0,
+          "detected_episodes": 0,
+          "episode_recall": null,
+          "alerts": 0,
+          "correct_alerts": 0,
+          "alert_precision": null,
+          "false_alerts_on_benign": 0,
+          "median_time_to_detect_ms": null,
+          "max_time_to_detect_ms": null
+        },
+        "BOTNET_C2": {
+          "episodes": 2,
+          "observed_episodes": 2,
+          "detected_episodes": 2,
+          "episode_recall": 1.0,
+          "alerts": 21,
+          "correct_alerts": 14,
+          "alert_precision": 0.6667,
+          "false_alerts_on_benign": 7,
+          "median_time_to_detect_ms": 3602650.5716552734,
+          "max_time_to_detect_ms": 5334014.551269531
+        },
+        "DGA_DOMAINS": {
+          "episodes": 0,
+          "observed_episodes": 0,
+          "detected_episodes": 0,
+          "episode_recall": null,
+          "alerts": 4,
+          "correct_alerts": 0,
+          "alert_precision": 0.0,
+          "false_alerts_on_benign": 0,
+          "median_time_to_detect_ms": null,
+          "max_time_to_detect_ms": null
+        },
+        "DNS_TUNNELLING": {
+          "episodes": 0,
+          "observed_episodes": 0,
+          "detected_episodes": 0,
+          "episode_recall": null,
+          "alerts": 0,
+          "correct_alerts": 0,
+          "alert_precision": null,
+          "false_alerts_on_benign": 0,
+          "median_time_to_detect_ms": null,
+          "max_time_to_detect_ms": null
+        },
+        "ENCRYPTED_MALWARE": {
+          "episodes": 0,
+          "observed_episodes": 0,
+          "detected_episodes": 0,
+          "episode_recall": null,
+          "alerts": 0,
+          "correct_alerts": 0,
+          "alert_precision": null,
+          "false_alerts_on_benign": 0,
+          "median_time_to_detect_ms": null,
+          "max_time_to_detect_ms": null
+        },
+        "RECONNAISSANCE": {
+          "episodes": 0,
+          "observed_episodes": 0,
+          "detected_episodes": 0,
+          "episode_recall": null,
+          "alerts": 350,
+          "correct_alerts": 0,
+          "alert_precision": 0.0,
+          "false_alerts_on_benign": 2,
+          "median_time_to_detect_ms": null,
+          "max_time_to_detect_ms": null
+        },
+        "DATA_EXFILTRATION": {
+          "episodes": 0,
+          "observed_episodes": 0,
+          "detected_episodes": 0,
+          "episode_recall": null,
+          "alerts": 0,
+          "correct_alerts": 0,
+          "alert_precision": null,
+          "false_alerts_on_benign": 0,
+          "median_time_to_detect_ms": null,
+          "max_time_to_detect_ms": null
+        }
+      },
+      "benign": {
+        "events": 12155,
+        "alerts": {
+          "BOTNET_C2": 7,
+          "RECONNAISSANCE": 2
+        },
+        "false_alerts_per_1000_events": 0.7404,
+        "labelled_episodes": 2,
+        "labelled_episodes_with_alerts": 2
+      },
+      "scenarios": {
+        "neris_botnet": {
+          "label": "BOTNET_C2",
+          "episodes": 2,
+          "detected": 2,
+          "with_any_alert": 2
+        },
+        "normal_campus_traffic": {
+          "label": "BENIGN",
+          "episodes": 2,
+          "detected": 0,
+          "with_any_alert": 2
+        }
+      }
+    },
+    "train": {
+      "captures": 2,
+      "events": 92876,
+      "late_events": 0,
+      "ambiguous_events": 0,
+      "threats": {
+        "DDOS": {
+          "episodes": 0,
+          "observed_episodes": 0,
+          "detected_episodes": 0,
+          "episode_recall": null,
+          "alerts": 0,
+          "correct_alerts": 0,
+          "alert_precision": null,
+          "false_alerts_on_benign": 0,
+          "median_time_to_detect_ms": null,
+          "max_time_to_detect_ms": null
+        },
+        "BOTNET_C2": {
+          "episodes": 1,
+          "observed_episodes": 1,
+          "detected_episodes": 1,
+          "episode_recall": 1.0,
+          "alerts": 6,
+          "correct_alerts": 1,
+          "alert_precision": 0.1667,
+          "false_alerts_on_benign": 5,
+          "median_time_to_detect_ms": 5334014.551269531,
+          "max_time_to_detect_ms": 5334014.551269531
+        },
+        "DGA_DOMAINS": {
+          "episodes": 0,
+          "observed_episodes": 0,
+          "detected_episodes": 0,
+          "episode_recall": null,
+          "alerts": 0,
+          "correct_alerts": 0,
+          "alert_precision": null,
+          "false_alerts_on_benign": 0,
+          "median_time_to_detect_ms": null,
+          "max_time_to_detect_ms": null
+        },
+        "DNS_TUNNELLING": {
+          "episodes": 0,
+          "observed_episodes": 0,
+          "detected_episodes": 0,
+          "episode_recall": null,
+          "alerts": 0,
+          "correct_alerts": 0,
+          "alert_precision": null,
+          "false_alerts_on_benign": 0,
+          "median_time_to_detect_ms": null,
+          "max_time_to_detect_ms": null
+        },
+        "ENCRYPTED_MALWARE": {
+          "episodes": 0,
+          "observed_episodes": 0,
+          "detected_episodes": 0,
+          "episode_recall": null,
+          "alerts": 0,
+          "correct_alerts": 0,
+          "alert_precision": null,
+          "false_alerts_on_benign": 0,
+          "median_time_to_detect_ms": null,
+          "max_time_to_detect_ms": null
+        },
+        "RECONNAISSANCE": {
+          "episodes": 0,
+          "observed_episodes": 0,
+          "detected_episodes": 0,
+          "episode_recall": null,
+          "alerts": 163,
+          "correct_alerts": 0,
+          "alert_precision": 0.0,
+          "false_alerts_on_benign": 1,
+          "median_time_to_detect_ms": null,
+          "max_time_to_detect_ms": null
+        },
+        "DATA_EXFILTRATION": {
+          "episodes": 0,
+          "observed_episodes": 0,
+          "detected_episodes": 0,
+          "episode_recall": null,
+          "alerts": 0,
+          "correct_alerts": 0,
+          "alert_precision": null,
+          "false_alerts_on_benign": 0,
+          "median_time_to_detect_ms": null,
+          "max_time_to_detect_ms": null
+        }
+      },
+      "benign": {
+        "events": 6087,
+        "alerts": {
+          "BOTNET_C2": 5,
+          "RECONNAISSANCE": 1
+        },
+        "false_alerts_per_1000_events": 0.9857,
+        "labelled_episodes": 1,
+        "labelled_episodes_with_alerts": 1
+      },
+      "scenarios": {
+        "neris_botnet": {
+          "label": "BOTNET_C2",
+          "episodes": 1,
+          "detected": 1,
+          "with_any_alert": 1
+        },
+        "normal_campus_traffic": {
+          "label": "BENIGN",
+          "episodes": 1,
+          "detected": 0,
+          "with_any_alert": 1
+        }
+      }
+    },
+    "validation": {
+      "captures": 2,
+      "events": 138460,
+      "late_events": 0,
+      "ambiguous_events": 0,
+      "threats": {
+        "DDOS": {
+          "episodes": 0,
+          "observed_episodes": 0,
+          "detected_episodes": 0,
+          "episode_recall": null,
+          "alerts": 0,
+          "correct_alerts": 0,
+          "alert_precision": null,
+          "false_alerts_on_benign": 0,
+          "median_time_to_detect_ms": null,
+          "max_time_to_detect_ms": null
+        },
+        "BOTNET_C2": {
+          "episodes": 1,
+          "observed_episodes": 1,
+          "detected_episodes": 1,
+          "episode_recall": 1.0,
+          "alerts": 15,
+          "correct_alerts": 13,
+          "alert_precision": 0.8667,
+          "false_alerts_on_benign": 2,
+          "median_time_to_detect_ms": 1871286.5920410156,
+          "max_time_to_detect_ms": 1871286.5920410156
+        },
+        "DGA_DOMAINS": {
+          "episodes": 0,
+          "observed_episodes": 0,
+          "detected_episodes": 0,
+          "episode_recall": null,
+          "alerts": 4,
+          "correct_alerts": 0,
+          "alert_precision": 0.0,
+          "false_alerts_on_benign": 0,
+          "median_time_to_detect_ms": null,
+          "max_time_to_detect_ms": null
+        },
+        "DNS_TUNNELLING": {
+          "episodes": 0,
+          "observed_episodes": 0,
+          "detected_episodes": 0,
+          "episode_recall": null,
+          "alerts": 0,
+          "correct_alerts": 0,
+          "alert_precision": null,
+          "false_alerts_on_benign": 0,
+          "median_time_to_detect_ms": null,
+          "max_time_to_detect_ms": null
+        },
+        "ENCRYPTED_MALWARE": {
+          "episodes": 0,
+          "observed_episodes": 0,
+          "detected_episodes": 0,
+          "episode_recall": null,
+          "alerts": 0,
+          "correct_alerts": 0,
+          "alert_precision": null,
+          "false_alerts_on_benign": 0,
+          "median_time_to_detect_ms": null,
+          "max_time_to_detect_ms": null
+        },
+        "RECONNAISSANCE": {
+          "episodes": 0,
+          "observed_episodes": 0,
+          "detected_episodes": 0,
+          "episode_recall": null,
+          "alerts": 187,
+          "correct_alerts": 0,
+          "alert_precision": 0.0,
+          "false_alerts_on_benign": 1,
+          "median_time_to_detect_ms": null,
+          "max_time_to_detect_ms": null
+        },
+        "DATA_EXFILTRATION": {
+          "episodes": 0,
+          "observed_episodes": 0,
+          "detected_episodes": 0,
+          "episode_recall": null,
+          "alerts": 0,
+          "correct_alerts": 0,
+          "alert_precision": null,
+          "false_alerts_on_benign": 0,
+          "median_time_to_detect_ms": null,
+          "max_time_to_detect_ms": null
+        }
+      },
+      "benign": {
+        "events": 6068,
+        "alerts": {
+          "BOTNET_C2": 2,
+          "RECONNAISSANCE": 1
+        },
+        "false_alerts_per_1000_events": 0.4944,
+        "labelled_episodes": 1,
+        "labelled_episodes_with_alerts": 1
+      },
+      "scenarios": {
+        "neris_botnet": {
+          "label": "BOTNET_C2",
+          "episodes": 1,
+          "detected": 1,
+          "with_any_alert": 1
+        },
+        "normal_campus_traffic": {
+          "label": "BENIGN",
+          "episodes": 1,
+          "detected": 0,
+          "with_any_alert": 1
+        }
+      }
+    }
+  }
+}
