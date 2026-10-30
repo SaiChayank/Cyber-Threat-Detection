@@ -2,11 +2,12 @@
 import json
 import random
 
-import pyarrow as pa
-import pyarrow.parquet as pq
 import pytest
 
-from datasets import evaluate_dga_final as ev
+pa = pytest.importorskip('pyarrow')  # Optional research dependency; skip cleanly in a minimal install.
+pq = pytest.importorskip('pyarrow.parquet')
+
+from datasets import evaluate_dga_final as ev  # noqa: E402
 
 CONFIG = json.loads(ev.CONFIG.read_text(encoding='utf-8'))
 
