@@ -150,3 +150,15 @@ for lexical DGA detection; 2 reconnaissance alerts, including a browser contacti
 The CIC captures' 96-byte snap length also means DGA behaviour on their truncated names may differ from
 full-length names.
 
+---
+
+# Fourth step: slow periodic beaconing (30 October 2026)
+
+The late C2 detection (73.6 of 95 minutes) was a design limit, not a threshold: the 60-second history
+cannot see a beacon that calls home once a minute. Real Neris peers beacon at 58-122 s with variation
+0.00-0.01, so a long-horizon tracker was added ([Slow beacon detection](SLOW_BEACON_DETECTION.md)) with
+a 0.1 variation limit chosen from the data before it was built. Result on the held-out Neris test slice:
+**first correct alert at 9.4 minutes instead of 73.6**, 21 of 22 C2 alerts correct, benign false alerts
+unchanged on every benign capture (0 C2 alerts on 236,845 benign DNS events). Evidence:
+`docs/verification/slow-beacon-20261030/`. The remaining caveats above (one family, time slices) still apply.
+

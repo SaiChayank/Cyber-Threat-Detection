@@ -74,7 +74,7 @@ heuristic strength. Rules as coded in `detection/pipeline.py`:
 | DDOS (UDP) | Destination UDP packet rate >= 1,000 packets/s |
 | DDOS (other protocols) | Global packet rate >= 1,000 packets/s |
 | RECONNAISSANCE | Source host or port fan-out over 10 s >= 20 (suppressed below 10) |
-| BOTNET_C2 | Same-peer history >= 8, IAT mean >= 1 s, IAT CV < 0.05 |
+| BOTNET_C2 | Fast: same-peer history >= 8 in 60 s, IAT mean >= 1 s, IAT CV < 0.3 (tuned on real data from 0.05). Slow: >= 10 contacts at a near-constant 8-1,800 s interval (CV <= 0.1) from the long-horizon tracker. Never toward multicast/broadcast |
 | DNS_TUNNELLING | Default rule: first label >= 50 characters AND TXT or NULL query |
 | DATA_EXFILTRATION | Source-forward bytes in 60 s > 20,000,000 |
 | ENCRYPTED_MALWARE | Encrypted AND (lab fingerprint risk OR TLS indicator-list hit OR rare-fingerprint regular session) |

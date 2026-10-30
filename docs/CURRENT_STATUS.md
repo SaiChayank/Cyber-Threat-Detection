@@ -37,7 +37,8 @@ checked on this date; nothing is marked done that was not run.
 
 - **Botnet C2:** real CTU-13 Neris and benign captures. After tuning on train/validation slices, the
   held-out test slice detected the botnet (1/1; 10 of 11 alerts correct; 0.20 benign false alerts per
-  1,000 events), though late.
+  1,000 events). A slow-beacon tracker (Neris peers call home every 58-122 s, beyond the 60 s history) cut
+  time to first detection from 73.6 to 9.4 minutes with 21 of 22 alerts correct and no new false alerts.
 - **DNS tunnelling:** a real dnscat2 one-hour capture is detected (125 alerts, all correct) with 0
   tunnelling false alerts in 236,845 benign events.
 - **False-positive fixes from real data:** four principled guards cut benign false alerts on real DNS
@@ -50,8 +51,9 @@ checked on this date; nothing is marked done that was not run.
   cover (for example benign look-alikes such as backups versus exfiltration) can still alert.
 - **Weak independence:** the C2 test slices come from one recording of one botnet family; the DNS
   result is one tunnel run, not the frozen protocol's 20 positive and 50 benign sessions.
-- **Known remaining false alerts:** DGA on real concatenated-word domains, browsing fan-out as
-  reconnaissance, late C2 detection (about 74 of 95 minutes on the test slice).
+- **Known remaining false alerts and gaps:** DGA on real concatenated-word domains, browsing fan-out as
+  reconnaissance, fixed-interval health checks looking like slow beacons, and jittered or
+  destination-rotating beacons (limits in [Slow beacon detection](SLOW_BEACON_DETECTION.md)).
 - **Models:** the classifier is trained on synthetic data; confidence is a heuristic strength or an
   uncalibrated posterior, never a probability. The DGA and DNS-tunnel candidate models stay disabled.
 - **Scope:** single-worker local service, no authentication or multi-user support, Ethernet captures

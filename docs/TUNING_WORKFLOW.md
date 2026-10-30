@@ -36,7 +36,8 @@ combinations):
 benign false alerts per 1,000 benign events, then fewer false alerts, then
 precision. It **refuses any capture labelled `test`** and never edits the runtime.
 Tunable knobs: `rule_thresholds` (`C2_MIN_HISTORY`, `C2_MIN_IAT_MEAN_S`, `C2_MAX_IAT_CV`,
-`RECON_MIN_FANOUT`, `RECON_ALERT_FLOOR`, `EXFIL_BYTES_60S`), `tls_indicators` (`MIN_SESSION_PACKETS`, `MAX_SIZE_CV`, `MAX_IAT_CV`,
+`RECON_MIN_FANOUT`, `RECON_ALERT_FLOOR`, `EXFIL_BYTES_60S`, `SLOW_C2_MIN_EVENTS`, `SLOW_C2_MIN_MEAN_S`,
+`SLOW_C2_MAX_MEAN_S`, `SLOW_C2_MAX_CV`), `tls_indicators` (`MIN_SESSION_PACKETS`, `MAX_SIZE_CV`, `MAX_IAT_CV`,
 `MAX_MEAN_BYTES`, `MAX_FINGERPRINT_CLIENTS`, `MIN_CLIENT_POPULATION`), `slow_http`
 (`MIN_SLOW_CONNECTIONS`, `MIN_AGE_S`, `MAX_CLIENT_RATE_BPS`) and `slow_read`
 (`MIN_SLOW_READ_CONNECTIONS`, `SMALL_WINDOW`, `MIN_AGE_S`). Flood rates

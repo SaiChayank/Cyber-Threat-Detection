@@ -32,7 +32,8 @@ TUNABLE = {
     'slow_http': ('MIN_SLOW_CONNECTIONS', 'MIN_AGE_S', 'MAX_CLIENT_RATE_BPS'),
     'slow_read': ('MIN_SLOW_READ_CONNECTIONS', 'SMALL_WINDOW', 'MIN_AGE_S'),
     'rule_thresholds': ('C2_MIN_HISTORY', 'C2_MIN_IAT_MEAN_S', 'C2_MAX_IAT_CV', 'RECON_MIN_FANOUT',
-                        'RECON_ALERT_FLOOR', 'EXFIL_BYTES_60S'),
+                        'RECON_ALERT_FLOOR', 'EXFIL_BYTES_60S', 'SLOW_C2_MIN_EVENTS', 'SLOW_C2_MIN_MEAN_S',
+                        'SLOW_C2_MAX_MEAN_S', 'SLOW_C2_MAX_CV'),
 }
 ALLOWED = {f'{module}.{name}' for module, names in TUNABLE.items() for name in names}
 

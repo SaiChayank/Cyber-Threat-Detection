@@ -9,6 +9,7 @@ from detection.dns_tunnel_candidate import candidate_reason
 from detection import rule_thresholds as thresholds, spoof_indicators, tls_indicators
 from features import slow_http as slow_http_features
 from features import slow_read as slow_read_features
+from features import beacon_tracker
 from features.cow_map import CowMap, shallow
 from features.dns_tunnel import FEATURE_NAMES as DNS_TUNNEL_FEATURES
 from schemas.alert import AlertEvent
@@ -88,6 +89,10 @@ class Pipeline:
         slow_read = (event.protocol == 6 and not slow_http
                      and f['slow_read_connections'] >= slow_read_features.MIN_SLOW_READ_CONNECTIONS)
         slow_exhaustion = slow_http or slow_read
+        slow_beacon = (event.dst_port not in thresholds.SLOW_C2_EXCLUDED_PORTS
+                       and f['slow_beacon_events'] >= thresholds.SLOW_C2_MIN_EVENTS
+                       and thresholds.SLOW_C2_MIN_MEAN_S <= f['slow_beacon_mean_s'] <= thresholds.SLOW_C2_MAX_MEAN_S
+                       and f['slow_beacon_cv'] <= thresholds.SLOW_C2_MAX_CV)
         if event.protocol == 6 and not syn_flood:
             # A frozen synthetic-model posterior or high TCP rate alone is not
             # evidence of a SYN flood in established, high-rate TCP traffic.
@@ -128,8 +133,8 @@ class Pipeline:
             'RECONNAISSANCE': max(f['destination_count'], f['port_count']) >= thresholds.RECON_MIN_FANOUT,
             'DNS_TUNNELLING': bool(tunnel_reason) if self.dns_tunnel_candidate else f['domain_label_length'] >= 50 and f['txt_record'] == 1,
             'DGA_DOMAINS': dga_evidence and not self.dga_model.enabled,
-            'BOTNET_C2': (f['history_count'] >= thresholds.C2_MIN_HISTORY and f['iat_mean'] >= thresholds.C2_MIN_IAT_MEAN_S
-                          and f['iat_cv'] < thresholds.C2_MAX_IAT_CV),
+            'BOTNET_C2': ((f['history_count'] >= thresholds.C2_MIN_HISTORY and f['iat_mean'] >= thresholds.C2_MIN_IAT_MEAN_S
+                           and f['iat_cv'] < thresholds.C2_MAX_IAT_CV) or slow_beacon),
             'ENCRYPTED_MALWARE': f['encrypted'] and (f['fingerprint_risk'] or tls_session_path),
             'DATA_EXFILTRATION': f['source_forward_bytes_60s'] > thresholds.EXFIL_BYTES_60S,
         }
@@ -137,7 +142,7 @@ class Pipeline:
             if matched:
                 hits[threat] = (hits[threat][0], DetectorType.HYBRID) if threat in hits else (.8, DetectorType.RULE)
         alerts = []
-        self.dedup = {k: t for k, t in self.dedup.items() if event.timestamp - t < 30000}
+        self.dedup = {k: expiry for k, expiry in self.dedup.items() if expiry > event.timestamp}
         for threat, (score, source) in hits.items():
             if threat == 'RECONNAISSANCE' and max(f['destination_count'], f['port_count']) < thresholds.RECON_ALERT_FLOOR:
                 continue
@@ -146,7 +151,10 @@ class Pipeline:
                 # Scans target unicast hosts from ephemeral ports; replies from a service port
                 # (for example a DNS resolver) and multicast name services are not scans.
                 continue
-            if threat == 'BOTNET_C2' and f['history_count'] < thresholds.C2_MIN_HISTORY:
+            fast_c2 = (f['history_count'] >= thresholds.C2_MIN_HISTORY and f['iat_mean'] >= thresholds.C2_MIN_IAT_MEAN_S
+                       and f['iat_cv'] < thresholds.C2_MAX_IAT_CV)
+            slow_only = threat == 'BOTNET_C2' and slow_beacon and not fast_c2
+            if threat == 'BOTNET_C2' and f['history_count'] < thresholds.C2_MIN_HISTORY and not slow_beacon:
                 continue
             if threat == 'BOTNET_C2' and (event.dst_ip.is_multicast or str(event.dst_ip) == '255.255.255.255'):
                 # Multicast/broadcast name services (LLMNR, mDNS, NetBIOS) are never a C2 server.
@@ -160,18 +168,20 @@ class Pipeline:
                 continue
             if threat == 'DGA_DOMAINS' and not self.dga_model.enabled and not dga_evidence:
                 continue
-            key = ((str(event.src_ip), threat) if threat == 'RECONNAISSANCE'
+            key = ((str(event.src_ip), str(event.dst_ip), 'BOTNET_C2_SLOW') if slow_only
+                   else (str(event.src_ip), threat) if threat == 'RECONNAISSANCE'
                    else (str(event.dst_ip), threat) if threat == 'DDOS' and (syn_flood or udp_flood)
                    else (str(event.src_ip), str(event.dst_ip), threat))
             if key in self.dedup:
                 continue
             if len(self.dedup) >= 4096:
                 self.dedup.pop(next(iter(self.dedup)))
-            self.dedup[key] = event.timestamp
+            self.dedup[key] = event.timestamp + (thresholds.SLOW_C2_DEDUP_S * 1000 if slow_only else 30000)
             evidence_keys = (DNS_TUNNEL_FEATURES if threat == 'DNS_TUNNELLING' and self.dns_tunnel_candidate
                              else tls_indicators.EVIDENCE if threat == 'ENCRYPTED_MALWARE' and tls_session_path
                              else slow_http_features.EVIDENCE if threat == 'DDOS' and slow_http and not syn_flood
                              else slow_read_features.EVIDENCE if threat == 'DDOS' and slow_read and not syn_flood
+                             else (EVIDENCE['BOTNET_C2'] + beacon_tracker.EVIDENCE) if slow_only
                              else EVIDENCE[threat])
             evidence = {k: f[k] for k in evidence_keys}
             if threat == 'DDOS' and syn_flood:
@@ -202,6 +212,9 @@ class Pipeline:
                 spoof_evidence = spoof_indicators.reserved_sources(window.sources) if window else None
                 if spoof_evidence:
                     evidence.update(spoof_evidence)
+            if slow_only:
+                evidence['c2_basis'] = 'slow_periodic_contact'
+                evidence['slow_beacon_peer'] = f'{event.dst_ip}:{event.dst_port}'
             if threat == 'DDOS' and slow_exhaustion and not syn_flood:
                 evidence['ddos_subtype'] = 'slow_http' if slow_http else 'slow_read'
             if threat == 'ENCRYPTED_MALWARE' and tls_session_path:
@@ -238,6 +251,9 @@ class Pipeline:
             if threat == 'DDOS' and slow_http and not syn_flood:
                 narrative += ('; many long-lived low-rate connections held open to one service, '
                               'consistent with slow-HTTP exhaustion; request contents not inspected')
+            if slow_only:
+                narrative += ('; repeated contact with one service at near-constant long intervals '
+                              '(slow periodic beaconing); content not inspected')
             if threat == 'DDOS' and slow_read and not syn_flood:
                 narrative += ('; many connections held open with a tiny advertised receive window, '
                               'consistent with a slow-read attack; contents not inspected')
