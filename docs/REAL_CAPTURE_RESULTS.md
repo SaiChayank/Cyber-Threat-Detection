@@ -162,3 +162,57 @@ a 0.1 variation limit chosen from the data before it was built. Result on the he
 unchanged on every benign capture (0 C2 alerts on 236,845 benign DNS events). Evidence:
 `docs/verification/slow-beacon-20261030/`. The remaining caveats above (one family, time slices) still apply.
 
+
+# Fifth step: floods on a real IoT botnet capture (30 October 2026)
+
+Source: Stratosphere IoT-23, **Capture-34-1** (Mirai-family bot 192.168.1.195, open download from
+`mcfp.felk.cvut.cz`, `2018-12-21-15-50-14-192.168.1.195.pcap`, 126 MB, 24 h, 233,865 packets, 170,980 events).
+Ground truth comes from the dataset's own Zeek `conn.log.labeled` flows (labels, times, targets), not from our
+alerts. Labels: `data/lab/iot23/capture-34-1.labels.json`; evidence: `docs/verification/iot23-20261030/`.
+
+What the bot really did (checked on the raw packets): a **pure-SYN flood** (40,568 packets of 60 bytes to
+71.61.66.148:80), a **flag-abuse flood** (28,431 packets of 1,078 bytes with flags SYN+PSH+ACK+URG to
+123.59.209.185:80, 800-1,500 packets/s for 32 s), IRC command-and-control to 185.244.25.235:6667 all day, and
+two further pure-SYN bursts (38,060 and 19,437 packets) that IoT-23 labels as a port scan and as nothing.
+
+| Measurement | Before | After the fix |
+| --- | --- | --- |
+| Labelled DDoS episodes detected | 1 of 2 (pure SYN flood in 5.4 s; the SYN+PSH+ACK+URG flood missed) | **2 of 2**, median time to detect 7.9 s |
+| DDoS alerts judged against IoT-23's own labels | 3 alerts, 1 correct | 4 alerts, 2 correct; the 2 others are the unlabelled pure-SYN bursts |
+| Same, with the two bursts audited as DDoS from raw packets (`capture-34-1.audited.labels.json`) | 3 of 4 episodes | **4 of 4, precision 1.00, 0 false DDoS alerts** |
+| Botnet C2 (IRC, 6,706 flows) | detected, time to detect 305 s, precision 0.98 | unchanged |
+
+**The fix:** the SYN-flood rule counted only pure SYN packets, so a flood of SYN+ACK-flagged packets was invisible.
+The rate window now also tracks the SYN+ACK share of a target's packets, and the same 1,000 packets/s and 70%
+conditions flag it as `ddos_subtype=syn_ack_flood` (no new thresholds, no tuning). Regression: DDOS and
+RECONNAISSANCE results on all earlier real captures (CTU-13 train/validation/test, the DNS set) are identical,
+with zero benign DDoS alerts; 4 new tests, 869 existing tests pass, demo traces unchanged.
+
+**Limits, stated plainly:**
+- One bot, one capture, two flood types: this is evidence of detection, not a recall estimate. The audit
+  relabelling of two bursts was decided from raw packets, but it was done after seeing our alerts, so the
+  official-label column is the conservative number.
+- **Time to detect for the flag-abuse flood is about 8-10 s** because the rule needs a full 10 s window above 1,000 packets/s.
+  Floods below 1,000 packets/s are not alerted by this rule.
+- 21 BOTNET_C2 alerts are the infected device's own exact 5 s DNS retries to its router (periodic, `iat_cv`
+  0.0003). They are unlabelled in IoT-23 and counted as false alerts here, though they are plausibly malware
+  behaviour (failing to resolve its C2 name).
+- 3 DATA_EXFILTRATION alerts fire on the flood and C2 connections: the egress budget is per source, so flood
+  bytes (over 20 MB in 60 s) are attributed to whichever destination the source touched at that moment.
+  Content is not inspected; the alerts say "possible exfiltration" and are wrong about intent in this capture.
+
+## Sixth step: reconnaissance on IoT-23 Capture-1-1 (30 October 2026)
+
+Source: Stratosphere IoT-23 Capture-1-1 (Mirai-family bot 192.168.100.103, open download, `2018-05-09-192.168.100.103.pcap`,
+146 MB, 1,653,042 events). Labels: `data/lab/iot23/capture-1-1.labels.json` (Zeek `PartOfAHorizontalPortScan`, 4,000 flows
+on ports 23/2323/8080/9527 across about 1,400 hosts, 09 May 15:30-16:15 UTC); report: `docs/verification/iot23-20261030/1-1-report.json`.
+No code or thresholds changed.
+
+- **Scan episode detected: 1 of 1, first alert 2.0 s after the episode's first event.**
+- The scorer reports 13,280 "benign" reconnaissance alerts. These are **not clean false positives**: alert sources are
+  almost entirely the same infected bot (192.168.100.103) scanning outside the labelled 45 minutes (09 and 10 May), plus a
+  handful of external hosts probing inward. IoT-23 labels only a capped subset of flows, so precision (0.01) here
+  measures label coverage, not detector error. A trustworthy precision needs a labelled-benign window from a
+  clean host, which this capture lacks.
+- 11 BOTNET_C2 alerts are unlabelled (8 labelled C&C flows are single UDP contacts, too few to be beaconing); not judged.
+- Not measured: slow-HTTP/slow-read, exfiltration and encrypted malware still have no suitable open capture.
