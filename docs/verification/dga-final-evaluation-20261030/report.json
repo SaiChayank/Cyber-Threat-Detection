@@ -1,0 +1,655 @@
+{
+  "format": "ps26145-dga-final-report/1",
+  "config_sha256": "b188de7ec292c741846437a2cdf5b76c19d7fefd31af15429aa7641f3303989a",
+  "candidate_sha256": "266b80bc7edac63dda815b61ef6ef162d2af9b919e70bfa168958133431b730b",
+  "threshold": 0.9,
+  "verdict": "FAIL",
+  "gates": {
+    "recall": {
+      "value": 0.5946,
+      "gate": 0.8,
+      "passed": false
+    },
+    "precision_at_1_to_1": {
+      "value": 0.9413,
+      "gate": 0.95,
+      "passed": false
+    },
+    "domain_fpr": {
+      "value": 0.037,
+      "gate": 0.02,
+      "passed": false
+    },
+    "benign_dns_fpr": {
+      "value": 0.1024,
+      "gate": 0.02,
+      "passed": false
+    }
+  },
+  "counts": {
+    "eligible_families": 81,
+    "positives_evaluated": 123372,
+    "true_positives": 73353,
+    "positives_unscorable_counted_as_misses": 0,
+    "positives_dropped_overlap": 2029,
+    "benign_scored": 93499,
+    "benign_false_positives": 3464,
+    "benign_unscorable": 1,
+    "benign_dropped_overlap": 6500,
+    "benign_source_rows": 2336094,
+    "benign_dns_labels": 1308,
+    "benign_dns_false_positives": 134
+  },
+  "per_family": {
+    "abcbot": {
+      "domains_in_source": 324,
+      "evaluated": 324,
+      "detected": 153,
+      "unscorable": 0,
+      "recall": 0.4722
+    },
+    "alien": {
+      "domains_in_source": 396,
+      "evaluated": 396,
+      "detected": 396,
+      "unscorable": 0,
+      "recall": 1.0
+    },
+    "allasenha": {
+      "domains_in_source": 2190,
+      "evaluated": 2000,
+      "detected": 1999,
+      "unscorable": 0,
+      "recall": 0.9995
+    },
+    "ares": {
+      "domains_in_source": 1800,
+      "evaluated": 1800,
+      "detected": 1700,
+      "unscorable": 0,
+      "recall": 0.9444
+    },
+    "bamital": {
+      "domains_in_source": 37960,
+      "evaluated": 2000,
+      "detected": 2000,
+      "unscorable": 0,
+      "recall": 1.0
+    },
+    "bazarbackdoor": {
+      "domains_in_source": 878088,
+      "evaluated": 2000,
+      "detected": 1015,
+      "unscorable": 0,
+      "recall": 0.5075
+    },
+    "bigviktor": {
+      "domains_in_source": 12000,
+      "evaluated": 1737,
+      "detected": 531,
+      "unscorable": 0,
+      "recall": 0.3057
+    },
+    "bobax": {
+      "domains_in_source": 600,
+      "evaluated": 0,
+      "detected": 0,
+      "unscorable": 0,
+      "recall": null
+    },
+    "bumblebee": {
+      "domains_in_source": 3200,
+      "evaluated": 2000,
+      "detected": 1596,
+      "unscorable": 0,
+      "recall": 0.798
+    },
+    "carnavalheist": {
+      "domains_in_source": 11448,
+      "evaluated": 1999,
+      "detected": 1844,
+      "unscorable": 0,
+      "recall": 0.9225
+    },
+    "chaes": {
+      "domains_in_source": 1092,
+      "evaluated": 1092,
+      "detected": 0,
+      "unscorable": 0,
+      "recall": 0.0
+    },
+    "coffeeloader": {
+      "domains_in_source": 365,
+      "evaluated": 365,
+      "detected": 0,
+      "unscorable": 0,
+      "recall": 0.0
+    },
+    "conficker": {
+      "domains_in_source": 182462,
+      "evaluated": 2000,
+      "detected": 1026,
+      "unscorable": 0,
+      "recall": 0.513
+    },
+    "coper": {
+      "domains_in_source": 66038,
+      "evaluated": 2000,
+      "detected": 2000,
+      "unscorable": 0,
+      "recall": 1.0
+    },
+    "copperstealer": {
+      "domains_in_source": 1712,
+      "evaluated": 1712,
+      "detected": 1553,
+      "unscorable": 0,
+      "recall": 0.9071
+    },
+    "darkshell": {
+      "domains_in_source": 1039,
+      "evaluated": 1039,
+      "detected": 10,
+      "unscorable": 0,
+      "recall": 0.0096
+    },
+    "darkwatchman": {
+      "domains_in_source": 584000,
+      "evaluated": 2000,
+      "detected": 161,
+      "unscorable": 0,
+      "recall": 0.0805
+    },
+    "dmsniff": {
+      "domains_in_source": 539,
+      "evaluated": 539,
+      "detected": 296,
+      "unscorable": 0,
+      "recall": 0.5492
+    },
+    "ebury": {
+      "domains_in_source": 66737,
+      "evaluated": 2000,
+      "detected": 1693,
+      "unscorable": 0,
+      "recall": 0.8465
+    },
+    "ekforward": {
+      "domains_in_source": 730,
+      "evaluated": 730,
+      "detected": 49,
+      "unscorable": 0,
+      "recall": 0.0671
+    },
+    "emotet": {
+      "domains_in_source": 2000,
+      "evaluated": 2000,
+      "detected": 1991,
+      "unscorable": 0,
+      "recall": 0.9955
+    },
+    "enviserv": {
+      "domains_in_source": 500,
+      "evaluated": 500,
+      "detected": 163,
+      "unscorable": 0,
+      "recall": 0.326
+    },
+    "errorfather": {
+      "domains_in_source": 2928,
+      "evaluated": 2000,
+      "detected": 1650,
+      "unscorable": 0,
+      "recall": 0.825
+    },
+    "feodo": {
+      "domains_in_source": 247,
+      "evaluated": 247,
+      "detected": 247,
+      "unscorable": 0,
+      "recall": 1.0
+    },
+    "flashback": {
+      "domains_in_source": 1825,
+      "evaluated": 1825,
+      "detected": 1785,
+      "unscorable": 0,
+      "recall": 0.9781
+    },
+    "flubot": {
+      "domains_in_source": 666924,
+      "evaluated": 2000,
+      "detected": 1981,
+      "unscorable": 0,
+      "recall": 0.9905
+    },
+    "fosniw": {
+      "domains_in_source": 202,
+      "evaluated": 202,
+      "detected": 0,
+      "unscorable": 0,
+      "recall": 0.0
+    },
+    "ftcode": {
+      "domains_in_source": 1054,
+      "evaluated": 1054,
+      "detected": 880,
+      "unscorable": 0,
+      "recall": 0.8349
+    },
+    "g01": {
+      "domains_in_source": 8760,
+      "evaluated": 2000,
+      "detected": 93,
+      "unscorable": 0,
+      "recall": 0.0465
+    },
+    "gazavat": {
+      "domains_in_source": 81889,
+      "evaluated": 2000,
+      "detected": 12,
+      "unscorable": 0,
+      "recall": 0.006
+    },
+    "ghostweaver": {
+      "domains_in_source": 50350,
+      "evaluated": 2000,
+      "detected": 1976,
+      "unscorable": 0,
+      "recall": 0.988
+    },
+    "grandoreiro": {
+      "domains_in_source": 25449,
+      "evaluated": 2000,
+      "detected": 825,
+      "unscorable": 0,
+      "recall": 0.4125
+    },
+    "gspy": {
+      "domains_in_source": 245,
+      "evaluated": 245,
+      "detected": 214,
+      "unscorable": 0,
+      "recall": 0.8735
+    },
+    "infy": {
+      "domains_in_source": 10500,
+      "evaluated": 2000,
+      "detected": 145,
+      "unscorable": 0,
+      "recall": 0.0725
+    },
+    "kingminer": {
+      "domains_in_source": 2005,
+      "evaluated": 2000,
+      "detected": 50,
+      "unscorable": 0,
+      "recall": 0.025
+    },
+    "lechiket": {
+      "domains_in_source": 300,
+      "evaluated": 300,
+      "detected": 180,
+      "unscorable": 0,
+      "recall": 0.6
+    },
+    "m0yv": {
+      "domains_in_source": 887,
+      "evaluated": 887,
+      "detected": 334,
+      "unscorable": 0,
+      "recall": 0.3766
+    },
+    "m0yvtdd": {
+      "domains_in_source": 28411,
+      "evaluated": 2000,
+      "detected": 737,
+      "unscorable": 0,
+      "recall": 0.3685
+    },
+    "makloader": {
+      "domains_in_source": 512,
+      "evaluated": 512,
+      "detected": 512,
+      "unscorable": 0,
+      "recall": 1.0
+    },
+    "mekotio": {
+      "domains_in_source": 2957,
+      "evaluated": 2000,
+      "detected": 1956,
+      "unscorable": 0,
+      "recall": 0.978
+    },
+    "metastealer": {
+      "domains_in_source": 100000,
+      "evaluated": 2000,
+      "detected": 1964,
+      "unscorable": 0,
+      "recall": 0.982
+    },
+    "mintsloader": {
+      "domains_in_source": 12723,
+      "evaluated": 2000,
+      "detected": 1972,
+      "unscorable": 0,
+      "recall": 0.986
+    },
+    "mirai": {
+      "domains_in_source": 280,
+      "evaluated": 280,
+      "detected": 264,
+      "unscorable": 0,
+      "recall": 0.9429
+    },
+    "mirainomi": {
+      "domains_in_source": 918,
+      "evaluated": 918,
+      "detected": 272,
+      "unscorable": 0,
+      "recall": 0.2963
+    },
+    "monerominer": {
+      "domains_in_source": 910680,
+      "evaluated": 2000,
+      "detected": 1359,
+      "unscorable": 0,
+      "recall": 0.6795
+    },
+    "mydoom": {
+      "domains_in_source": 2100,
+      "evaluated": 2000,
+      "detected": 1452,
+      "unscorable": 0,
+      "recall": 0.726
+    },
+    "mydoomtid": {
+      "domains_in_source": 10000,
+      "evaluated": 2000,
+      "detected": 1417,
+      "unscorable": 0,
+      "recall": 0.7085
+    },
+    "n3cr0m0rph": {
+      "domains_in_source": 4757,
+      "evaluated": 2000,
+      "detected": 1945,
+      "unscorable": 0,
+      "recall": 0.9725
+    },
+    "ngioweb": {
+      "domains_in_source": 8923,
+      "evaluated": 2000,
+      "detected": 852,
+      "unscorable": 0,
+      "recall": 0.426
+    },
+    "oderoor": {
+      "domains_in_source": 5216,
+      "evaluated": 1024,
+      "detected": 780,
+      "unscorable": 0,
+      "recall": 0.7617
+    },
+    "orchard": {
+      "domains_in_source": 35047,
+      "evaluated": 2000,
+      "detected": 173,
+      "unscorable": 0,
+      "recall": 0.0865
+    },
+    "orchardgenesis": {
+      "domains_in_source": 89168,
+      "evaluated": 2000,
+      "detected": 139,
+      "unscorable": 0,
+      "recall": 0.0695
+    },
+    "pandabanker": {
+      "domains_in_source": 8221,
+      "evaluated": 2000,
+      "detected": 1272,
+      "unscorable": 0,
+      "recall": 0.636
+    },
+    "phorpiex": {
+      "domains_in_source": 1431,
+      "evaluated": 1431,
+      "detected": 1279,
+      "unscorable": 0,
+      "recall": 0.8938
+    },
+    "pitou": {
+      "domains_in_source": 23158,
+      "evaluated": 2000,
+      "detected": 88,
+      "unscorable": 0,
+      "recall": 0.044
+    },
+    "prometei": {
+      "domains_in_source": 23360,
+      "evaluated": 2000,
+      "detected": 1087,
+      "unscorable": 0,
+      "recall": 0.5435
+    },
+    "pseudomanuscrypt": {
+      "domains_in_source": 2300,
+      "evaluated": 1999,
+      "detected": 1470,
+      "unscorable": 0,
+      "recall": 0.7354
+    },
+    "qsnatch": {
+      "domains_in_source": 5978199,
+      "evaluated": 1938,
+      "detected": 4,
+      "unscorable": 0,
+      "recall": 0.0021
+    },
+    "recjs": {
+      "domains_in_source": 8755,
+      "evaluated": 1998,
+      "detected": 18,
+      "unscorable": 0,
+      "recall": 0.009
+    },
+    "runforestrun": {
+      "domains_in_source": 15695,
+      "evaluated": 2000,
+      "detected": 1994,
+      "unscorable": 0,
+      "recall": 0.997
+    },
+    "sharkbot": {
+      "domains_in_source": 3675,
+      "evaluated": 2000,
+      "detected": 1962,
+      "unscorable": 0,
+      "recall": 0.981
+    },
+    "shifu": {
+      "domains_in_source": 2331,
+      "evaluated": 2000,
+      "detected": 964,
+      "unscorable": 0,
+      "recall": 0.482
+    },
+    "sinowal": {
+      "domains_in_source": 4692,
+      "evaluated": 2000,
+      "detected": 864,
+      "unscorable": 0,
+      "recall": 0.432
+    },
+    "sphinx": {
+      "domains_in_source": 44157,
+      "evaluated": 2000,
+      "detected": 1991,
+      "unscorable": 0,
+      "recall": 0.9955
+    },
+    "szribi": {
+      "domains_in_source": 1798,
+      "evaluated": 1798,
+      "detected": 1080,
+      "unscorable": 0,
+      "recall": 0.6007
+    },
+    "tinyfluff": {
+      "domains_in_source": 30000,
+      "evaluated": 2000,
+      "detected": 0,
+      "unscorable": 0,
+      "recall": 0.0
+    },
+    "tinynuke": {
+      "domains_in_source": 46720,
+      "evaluated": 2000,
+      "detected": 2000,
+      "unscorable": 0,
+      "recall": 1.0
+    },
+    "tofsee": {
+      "domains_in_source": 1060,
+      "evaluated": 1060,
+      "detected": 208,
+      "unscorable": 0,
+      "recall": 0.1962
+    },
+    "toxicpanda": {
+      "domains_in_source": 924,
+      "evaluated": 924,
+      "detected": 308,
+      "unscorable": 0,
+      "recall": 0.3333
+    },
+    "tufik": {
+      "domains_in_source": 372300,
+      "evaluated": 2000,
+      "detected": 1987,
+      "unscorable": 0,
+      "recall": 0.9935
+    },
+    "urlzone": {
+      "domains_in_source": 32020,
+      "evaluated": 1876,
+      "detected": 1662,
+      "unscorable": 0,
+      "recall": 0.8859
+    },
+    "verblecon": {
+      "domains_in_source": 365,
+      "evaluated": 365,
+      "detected": 365,
+      "unscorable": 0,
+      "recall": 1.0
+    },
+    "vidro": {
+      "domains_in_source": 13178,
+      "evaluated": 2000,
+      "detected": 1471,
+      "unscorable": 0,
+      "recall": 0.7355
+    },
+    "vidrotid": {
+      "domains_in_source": 300,
+      "evaluated": 300,
+      "detected": 228,
+      "unscorable": 0,
+      "recall": 0.76
+    },
+    "virut": {
+      "domains_in_source": 3607083,
+      "evaluated": 2000,
+      "detected": 63,
+      "unscorable": 0,
+      "recall": 0.0315
+    },
+    "vo1d": {
+      "domains_in_source": 69000,
+      "evaluated": 2000,
+      "detected": 1719,
+      "unscorable": 0,
+      "recall": 0.8595
+    },
+    "vobfus": {
+      "domains_in_source": 728,
+      "evaluated": 728,
+      "detected": 0,
+      "unscorable": 0,
+      "recall": 0.0
+    },
+    "volatilecedar": {
+      "domains_in_source": 498,
+      "evaluated": 498,
+      "detected": 97,
+      "unscorable": 0,
+      "recall": 0.1948
+    },
+    "wd": {
+      "domains_in_source": 21448,
+      "evaluated": 2000,
+      "detected": 2000,
+      "unscorable": 0,
+      "recall": 1.0
+    },
+    "xxhex": {
+      "domains_in_source": 4400,
+      "evaluated": 2000,
+      "detected": 498,
+      "unscorable": 0,
+      "recall": 0.249
+    },
+    "zeroaccess": {
+      "domains_in_source": 730,
+      "evaluated": 730,
+      "detected": 332,
+      "unscorable": 0,
+      "recall": 0.4548
+    }
+  },
+  "macro_family_recall": 0.5788,
+  "worst_families": [
+    [
+      "chaes",
+      0.0
+    ],
+    [
+      "coffeeloader",
+      0.0
+    ],
+    [
+      "fosniw",
+      0.0
+    ],
+    [
+      "tinyfluff",
+      0.0
+    ],
+    [
+      "vobfus",
+      0.0
+    ],
+    [
+      "qsnatch",
+      0.0021
+    ],
+    [
+      "gazavat",
+      0.006
+    ],
+    [
+      "recjs",
+      0.009
+    ],
+    [
+      "darkshell",
+      0.0096
+    ],
+    [
+      "kingminer",
+      0.025
+    ]
+  ]
+}

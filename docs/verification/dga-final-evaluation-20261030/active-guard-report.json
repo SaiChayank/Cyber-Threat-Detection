@@ -1,0 +1,424 @@
+{
+  "format": "ps26145-dga-guard-report/1",
+  "note": "Same samples/seed as the candidate evaluation; the guard has no tunable parameters.",
+  "recall": 0.0647,
+  "domain_fpr": 0.00198,
+  "precision_at_1_to_1": 0.9703,
+  "benign_dns_fpr": 0.0,
+  "positives_evaluated": 123372,
+  "true_positives": 7979,
+  "benign_scored": 93499,
+  "benign_false_positives": 185,
+  "benign_dns_names": 1494,
+  "benign_dns_false_positives": 0,
+  "macro_family_recall": 0.0757,
+  "families_at_80_percent": 6,
+  "families": 81,
+  "per_family": {
+    "abcbot": {
+      "evaluated": 324,
+      "detected": 0,
+      "recall": 0.0
+    },
+    "alien": {
+      "evaluated": 396,
+      "detected": 324,
+      "recall": 0.8182
+    },
+    "allasenha": {
+      "evaluated": 2000,
+      "detected": 0,
+      "recall": 0.0
+    },
+    "ares": {
+      "evaluated": 1800,
+      "detected": 502,
+      "recall": 0.2789
+    },
+    "bamital": {
+      "evaluated": 2000,
+      "detected": 1216,
+      "recall": 0.608
+    },
+    "bazarbackdoor": {
+      "evaluated": 2000,
+      "detected": 0,
+      "recall": 0.0
+    },
+    "bigviktor": {
+      "evaluated": 1737,
+      "detected": 1,
+      "recall": 0.0006
+    },
+    "bobax": {
+      "evaluated": 0,
+      "detected": 0,
+      "recall": null
+    },
+    "bumblebee": {
+      "evaluated": 2000,
+      "detected": 0,
+      "recall": 0.0
+    },
+    "carnavalheist": {
+      "evaluated": 1999,
+      "detected": 0,
+      "recall": 0.0
+    },
+    "chaes": {
+      "evaluated": 1092,
+      "detected": 0,
+      "recall": 0.0
+    },
+    "coffeeloader": {
+      "evaluated": 365,
+      "detected": 0,
+      "recall": 0.0
+    },
+    "conficker": {
+      "evaluated": 2000,
+      "detected": 0,
+      "recall": 0.0
+    },
+    "coper": {
+      "evaluated": 2000,
+      "detected": 1654,
+      "recall": 0.827
+    },
+    "copperstealer": {
+      "evaluated": 1712,
+      "detected": 0,
+      "recall": 0.0
+    },
+    "darkshell": {
+      "evaluated": 1039,
+      "detected": 0,
+      "recall": 0.0
+    },
+    "darkwatchman": {
+      "evaluated": 2000,
+      "detected": 0,
+      "recall": 0.0
+    },
+    "dmsniff": {
+      "evaluated": 539,
+      "detected": 0,
+      "recall": 0.0
+    },
+    "ebury": {
+      "evaluated": 2000,
+      "detected": 0,
+      "recall": 0.0
+    },
+    "ekforward": {
+      "evaluated": 730,
+      "detected": 0,
+      "recall": 0.0
+    },
+    "emotet": {
+      "evaluated": 2000,
+      "detected": 0,
+      "recall": 0.0
+    },
+    "enviserv": {
+      "evaluated": 500,
+      "detected": 0,
+      "recall": 0.0
+    },
+    "errorfather": {
+      "evaluated": 2000,
+      "detected": 0,
+      "recall": 0.0
+    },
+    "feodo": {
+      "evaluated": 247,
+      "detected": 0,
+      "recall": 0.0
+    },
+    "flashback": {
+      "evaluated": 1825,
+      "detected": 0,
+      "recall": 0.0
+    },
+    "flubot": {
+      "evaluated": 2000,
+      "detected": 0,
+      "recall": 0.0
+    },
+    "fosniw": {
+      "evaluated": 202,
+      "detected": 0,
+      "recall": 0.0
+    },
+    "ftcode": {
+      "evaluated": 1054,
+      "detected": 0,
+      "recall": 0.0
+    },
+    "g01": {
+      "evaluated": 2000,
+      "detected": 0,
+      "recall": 0.0
+    },
+    "gazavat": {
+      "evaluated": 2000,
+      "detected": 0,
+      "recall": 0.0
+    },
+    "ghostweaver": {
+      "evaluated": 2000,
+      "detected": 0,
+      "recall": 0.0
+    },
+    "grandoreiro": {
+      "evaluated": 2000,
+      "detected": 0,
+      "recall": 0.0
+    },
+    "gspy": {
+      "evaluated": 245,
+      "detected": 0,
+      "recall": 0.0
+    },
+    "infy": {
+      "evaluated": 2000,
+      "detected": 0,
+      "recall": 0.0
+    },
+    "kingminer": {
+      "evaluated": 2000,
+      "detected": 0,
+      "recall": 0.0
+    },
+    "lechiket": {
+      "evaluated": 300,
+      "detected": 0,
+      "recall": 0.0
+    },
+    "m0yv": {
+      "evaluated": 887,
+      "detected": 0,
+      "recall": 0.0
+    },
+    "m0yvtdd": {
+      "evaluated": 2000,
+      "detected": 0,
+      "recall": 0.0
+    },
+    "makloader": {
+      "evaluated": 512,
+      "detected": 500,
+      "recall": 0.9766
+    },
+    "mekotio": {
+      "evaluated": 2000,
+      "detected": 0,
+      "recall": 0.0
+    },
+    "metastealer": {
+      "evaluated": 2000,
+      "detected": 0,
+      "recall": 0.0
+    },
+    "mintsloader": {
+      "evaluated": 2000,
+      "detected": 0,
+      "recall": 0.0
+    },
+    "mirai": {
+      "evaluated": 280,
+      "detected": 0,
+      "recall": 0.0
+    },
+    "mirainomi": {
+      "evaluated": 918,
+      "detected": 0,
+      "recall": 0.0
+    },
+    "monerominer": {
+      "evaluated": 2000,
+      "detected": 0,
+      "recall": 0.0
+    },
+    "mydoom": {
+      "evaluated": 2000,
+      "detected": 0,
+      "recall": 0.0
+    },
+    "mydoomtid": {
+      "evaluated": 2000,
+      "detected": 0,
+      "recall": 0.0
+    },
+    "n3cr0m0rph": {
+      "evaluated": 2000,
+      "detected": 0,
+      "recall": 0.0
+    },
+    "ngioweb": {
+      "evaluated": 2000,
+      "detected": 77,
+      "recall": 0.0385
+    },
+    "oderoor": {
+      "evaluated": 1024,
+      "detected": 0,
+      "recall": 0.0
+    },
+    "orchard": {
+      "evaluated": 2000,
+      "detected": 0,
+      "recall": 0.0
+    },
+    "orchardgenesis": {
+      "evaluated": 2000,
+      "detected": 0,
+      "recall": 0.0
+    },
+    "pandabanker": {
+      "evaluated": 2000,
+      "detected": 0,
+      "recall": 0.0
+    },
+    "phorpiex": {
+      "evaluated": 1431,
+      "detected": 0,
+      "recall": 0.0
+    },
+    "pitou": {
+      "evaluated": 2000,
+      "detected": 0,
+      "recall": 0.0
+    },
+    "prometei": {
+      "evaluated": 2000,
+      "detected": 0,
+      "recall": 0.0
+    },
+    "pseudomanuscrypt": {
+      "evaluated": 1999,
+      "detected": 0,
+      "recall": 0.0
+    },
+    "qsnatch": {
+      "evaluated": 1938,
+      "detected": 0,
+      "recall": 0.0
+    },
+    "recjs": {
+      "evaluated": 1998,
+      "detected": 0,
+      "recall": 0.0
+    },
+    "runforestrun": {
+      "evaluated": 2000,
+      "detected": 0,
+      "recall": 0.0
+    },
+    "sharkbot": {
+      "evaluated": 2000,
+      "detected": 0,
+      "recall": 0.0
+    },
+    "shifu": {
+      "evaluated": 2000,
+      "detected": 0,
+      "recall": 0.0
+    },
+    "sinowal": {
+      "evaluated": 2000,
+      "detected": 0,
+      "recall": 0.0
+    },
+    "sphinx": {
+      "evaluated": 2000,
+      "detected": 0,
+      "recall": 0.0
+    },
+    "szribi": {
+      "evaluated": 1798,
+      "detected": 0,
+      "recall": 0.0
+    },
+    "tinyfluff": {
+      "evaluated": 2000,
+      "detected": 0,
+      "recall": 0.0
+    },
+    "tinynuke": {
+      "evaluated": 2000,
+      "detected": 1647,
+      "recall": 0.8235
+    },
+    "tofsee": {
+      "evaluated": 1060,
+      "detected": 0,
+      "recall": 0.0
+    },
+    "toxicpanda": {
+      "evaluated": 924,
+      "detected": 0,
+      "recall": 0.0
+    },
+    "tufik": {
+      "evaluated": 2000,
+      "detected": 0,
+      "recall": 0.0
+    },
+    "urlzone": {
+      "evaluated": 1876,
+      "detected": 0,
+      "recall": 0.0
+    },
+    "verblecon": {
+      "evaluated": 365,
+      "detected": 294,
+      "recall": 0.8055
+    },
+    "vidro": {
+      "evaluated": 2000,
+      "detected": 0,
+      "recall": 0.0
+    },
+    "vidrotid": {
+      "evaluated": 300,
+      "detected": 0,
+      "recall": 0.0
+    },
+    "virut": {
+      "evaluated": 2000,
+      "detected": 0,
+      "recall": 0.0
+    },
+    "vo1d": {
+      "evaluated": 2000,
+      "detected": 0,
+      "recall": 0.0
+    },
+    "vobfus": {
+      "evaluated": 728,
+      "detected": 0,
+      "recall": 0.0
+    },
+    "volatilecedar": {
+      "evaluated": 498,
+      "detected": 0,
+      "recall": 0.0
+    },
+    "wd": {
+      "evaluated": 2000,
+      "detected": 1764,
+      "recall": 0.882
+    },
+    "xxhex": {
+      "evaluated": 2000,
+      "detected": 0,
+      "recall": 0.0
+    },
+    "zeroaccess": {
+      "evaluated": 730,
+      "detected": 0,
+      "recall": 0.0
+    }
+  }
+}

@@ -25,7 +25,7 @@ def dga_event(index):
     return dict(timestamp=START + index * 31_000,
                 src_ip='192.0.2.40', dst_ip='198.51.100.53',
                 dst_port=53, protocol=17, packets=1, bytes=90,
-                dns_name='q7x9k2z4m6b8v1j3p5d0r2s4w6.example.org',
+                dns_name='q7x9k2z4m6b8v1j3p5d0r2s4w6.org',
                 flow_id=f'sqlite-dga-{index}')
 
 

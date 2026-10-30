@@ -85,8 +85,8 @@ Model-only DDOS hits are removed unless the protocol-specific flood rule also ho
 
 ### 3.3 DGA: conservative guard (active) and candidates (disabled)
 
-- **Active:** `detection/dga_rules.py::conservative_rule`. First-label entropy >= 3.5,
-  bigram surprise >= 0.8 and label length >= 20. A DGA alert also needs a DNS name
+- **Active:** `detection/dga_rules.py::conservative_rule`. Entropy >= 3.5,
+  bigram surprise >= 0.8 and label length >= 20, judged on the registrable label (two-label names as the first label). A DGA alert also needs a DNS name
   (`pipeline.py`). Known weakness: recall is low on short and word-based families.
 - **Disabled candidate 1, `ml/dga_v2.json`** (SHA-256 `c0314dd5...96fc`, `runtime_enabled=false`,
   threshold 0.9). Inspected development comparison: TP46503 / TN14659 / FP251 / FN14074,

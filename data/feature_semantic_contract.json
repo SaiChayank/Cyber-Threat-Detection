@@ -44,7 +44,7 @@
     "ml/model.py": "68d96c555744bb8fc8aea30068db8afca1d7eae674accba297a698d0e0c6005b",
     "features/extractor.py": "c2310b173552e027f08a101f0c24f5640305f8d9735f83311fc57e83c355f97e",
     "features/rate_window.py": "233504951ecb2c5211992a25220f9ce8311497228212b9388b16fbba0326f138",
-    "detection/pipeline.py": "b901afddf78378348951fe5bebe2af36ccd09829592b6c5e81961c31976c5a75",
+    "detection/pipeline.py": "7ccadd8d1a7f439e4039c68dfbd9040916cda30d38e3fed6acec75448cf45e1a",
     "replay/scenarios.py": "e24b4dbb24b729fc4fa98faaf7de83554e3beac58e243a17d56ed38b3234ed2d",
     "ingest/metadata.py": "9fffc1c547c184765cf139fc50f11cfe70a587d43b309bbf43dcd8978f8c3fdb",
     "datasets/audit_feature_parity.py": "bcad1dd77b6471e27595937634cd8e9f57e7532ea0f9c52ba620880fec2d3f15",

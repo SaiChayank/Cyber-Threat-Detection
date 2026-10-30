@@ -12,7 +12,7 @@ checked on this date; nothing is marked done that was not run.
 | Frontend tests, TypeScript, production build | 3 passed; typecheck passes; build passes |
 | Dependency audit (`npm audit`) | 0 vulnerabilities |
 | Frozen demo preflight (`python -m replay.demo_pack`) | passes; nine traces identical |
-| Live production run (API + dashboard) | demo replay: 256 events, 15 alerts in 7 classes, p95 0.84 ms; SSE resume from sequence 10; real 8.8 MB PCAP upload processed (10,980 events); garbage upload rejected (HTTP 422) |
+| Live production run (API + dashboard) | demo replay: 256 events, 15 alerts (13 after the 30 Oct registrable-label DGA guard) in 7 classes, p95 0.84 ms; SSE resume from sequence 10; real 8.8 MB PCAP upload processed (10,980 events); garbage upload rejected (HTTP 422) |
 | Fresh clone from GitHub (`8d38307`), new venv and `npm ci` | 822 passed, 3 skipped, demo passes, pinned hashes current, 3 frontend tests pass, typecheck and build pass, 0 vulnerabilities. The working copy has the optional `stream-unzip` research package, whose dependent tests skip cleanly in a minimal install |
 
 ## Requirements (problem statement) and status
@@ -51,6 +51,7 @@ checked on this date; nothing is marked done that was not run.
   cover (for example benign look-alikes such as backups versus exfiltration) can still alert.
 - **Weak independence:** the C2 test slices come from one recording of one botnet family; the DNS
   result is one tunnel run, not the frozen protocol's 20 positive and 50 benign sessions.
+- **DGA:** independently evaluated on 81 unseen 2025 families: the frozen candidate fails all four gates (recall 59.5%, domain FPR 3.7%, real benign-DNS FPR 10.2%) and stays disabled; the active guard has about 6% recall with 0.2% domain FPR and 0 false positives on real client DNS ([DGA real-data results](DGA_REAL_DATA_RESULTS.md)).
 - **Known remaining false alerts and gaps:** DGA on real concatenated-word domains, browsing fan-out as
   reconnaissance, fixed-interval health checks looking like slow beacons, and jittered or
   destination-rotating beacons (limits in [Slow beacon detection](SLOW_BEACON_DETECTION.md)).

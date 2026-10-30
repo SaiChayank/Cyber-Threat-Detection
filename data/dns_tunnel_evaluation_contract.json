@@ -103,7 +103,7 @@
     ]
   },
   "source_sha256": {
-    "detection/pipeline.py": "b901afddf78378348951fe5bebe2af36ccd09829592b6c5e81961c31976c5a75",
+    "detection/pipeline.py": "7ccadd8d1a7f439e4039c68dfbd9040916cda30d38e3fed6acec75448cf45e1a",
     "detection/dns_tunnel_candidate.py": "c1713f2a8bbc59753bbad586054e5b103082f4d67bf5c9cfa617383965540a9a",
     "features/extractor.py": "c2310b173552e027f08a101f0c24f5640305f8d9735f83311fc57e83c355f97e",
     "features/dns_tunnel.py": "8ded37ba73c2d605f22baf4571f80842791f7b2b1584ce0230ddc365466605eb",
@@ -120,7 +120,7 @@
     "schemas/enums.py": "8b8f820eea9af47d7d9cdb05d6963e2245fb44e7b0e641a620a4d0e6b4e2b576",
     "ml/model.py": "68d96c555744bb8fc8aea30068db8afca1d7eae674accba297a698d0e0c6005b",
     "ml/dga.py": "0a03098bf4cc22d8f5b7ff5fe3bd75d82d735479730e1890a7f99bedb9d6c0b7",
-    "detection/dga_rules.py": "2d6ea804a0ecf0e4ac9e16ee884e477581e975b767241c4486c3297b07ddee59",
+    "detection/dga_rules.py": "5494667d60cc32ea5a3434b9805be1a27ea4ee5baa6923f8ee92024646df8cfe",
     "ml/artifact.json": "4d8e08323374535789e21f9f7cd1ee3f1c84b663ce555e67bb4ced57c95e8010",
     "ml/artifact.sha256": "81e4ef2dc7bdff28a82225e803c3e5ab675f3a3979b273a0ac3bef34241c284b",
     "ml/dga_v2.json": "c0314dd5f1fe360db11e2494326fd6e99f267d6e920fa091f6c9fcebc796996e",

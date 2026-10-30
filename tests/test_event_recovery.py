@@ -89,7 +89,7 @@ def test_failed_processing_preserves_state_and_retry_matches_baseline(tmp_path, 
 def test_second_alert_insert_failure_rolls_back_whole_event_and_history(tmp_path, monkeypatch):
     monkeypatch.setenv('ALERT_DB', str(tmp_path / 'batch.sqlite3'))
     event = ddos_event(1) | dict(packets=1, bytes=90, dst_port=53, dns_type=16,
-        dns_name='q7x9k2z4m6b8v1j3p5d0r2s4w6y8a1c3e5f7g9h0i2l4n6o8u1t3.example.org')
+        dns_name='q7x9k2z4m6b8v1j3p5d0r2s4w6y8a1c3e5f7g9h0i2l4n6o8u1t3.org')
     with TestClient(application.app, raise_server_exceptions=False) as client:
         saved = client.post('/api/events', json=ddos_event(0)).json()
         pipeline = application.app.state.pipeline

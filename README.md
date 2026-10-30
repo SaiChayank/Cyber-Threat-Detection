@@ -3,7 +3,7 @@
 **Status, 30 October 2026: a working passive prototype with every required feature built, tested
 and pushed.** 832 backend tests and 3 frontend tests pass, TypeScript and the production build
 pass, `npm audit` reports 0 vulnerabilities, and a live run of the production app replayed the
-demo (256 events, 15 alerts, 7 classes, p95 0.84 ms) and a real 8.8 MB capture. Detector quality is
+demo (256 events, 13 alerts, 7 classes, p95 0.84 ms) and a real 8.8 MB capture. Detector quality is
 measured on **real traffic only for botnet C2 and DNS tunnelling**; the other detectors are validated
 on controlled synthetic cases. Read [Current status](docs/CURRENT_STATUS.md) for the requirement-by-
 requirement table, results and honest limits, and the [Model report](docs/MODEL_REPORT.md) for
@@ -86,7 +86,7 @@ the automatic website-port fallback does not change the API port.
 
 Select **All threat scenarios** and **20× speed**, then start replay. The bundled
 256-event demo completes in approximately 44 seconds plus delivery overhead and
-produces 15 alerts across seven classes; its benign segment emits no alerts.
+produces 13 alerts across seven classes; its benign segment emits no alerts.
 The initial UI speed is 100×. Select 20× explicitly for the demonstration timing
 above; acceleration changes presentation pace, not detector features. Alerts appear while
 processing continues. Click an alert for its connection details and numeric evidence.

@@ -40,11 +40,11 @@
       "newline_normalized": true
     },
     "detection/pipeline.py": {
-      "sha256": "b901afddf78378348951fe5bebe2af36ccd09829592b6c5e81961c31976c5a75",
+      "sha256": "7ccadd8d1a7f439e4039c68dfbd9040916cda30d38e3fed6acec75448cf45e1a",
       "newline_normalized": true
     },
     "detection/dga_rules.py": {
-      "sha256": "2d6ea804a0ecf0e4ac9e16ee884e477581e975b767241c4486c3297b07ddee59",
+      "sha256": "5494667d60cc32ea5a3434b9805be1a27ea4ee5baa6923f8ee92024646df8cfe",
       "newline_normalized": true
     },
     "detection/dns_tunnel_candidate.py": {
@@ -363,9 +363,8 @@
       "approximate_duration_wall_seconds_at_20x": 1.5303,
       "expected": {
         "events": 32,
-        "alert_count": 4,
+        "alert_count": 2,
         "alerts_by_class": {
-          "DGA_DOMAINS": 2,
           "DNS_TUNNELLING": 2
         },
         "first_alerts": {
@@ -395,38 +394,10 @@
                 "window_partial": true
               }
             }
-          },
-          "DGA_DOMAINS": {
-            "event_position": 1,
-            "observed_delay_seconds": 0.0,
-            "alert": {
-              "timestamp": 1700000000376.7715,
-              "flow_id": "bd43652d96f35f5772a9c18be51f80eb",
-              "threat_class": "DGA_DOMAINS",
-              "confidence_score": 0.8,
-              "severity": "MEDIUM",
-              "supporting_evidence": "domain_entropy=3.8587; domain_length=62; domain_label_length=50; bigram_surprise=1.0; confidence_kind=heuristic strength; observed_dns_name=657ddc82b04130fe055706826fdfa6ef0fa186eb1344596bd3.tunnel.test; window_partial=True",
-              "src_ip": "10.0.0.10",
-              "dst_ip": "198.51.100.20",
-              "src_port": 49152,
-              "dst_port": 53,
-              "protocol": 17,
-              "detection_source": "RULE",
-              "occurrence_count": 1,
-              "raw_evidence_metrics": {
-                "domain_entropy": 3.85868857,
-                "domain_length": 62,
-                "domain_label_length": 50,
-                "bigram_surprise": 1.0,
-                "confidence_kind": "heuristic strength",
-                "observed_dns_name": "657ddc82b04130fe055706826fdfa6ef0fa186eb1344596bd3.tunnel.test",
-                "window_partial": true
-              }
-            }
           }
         },
         "observed_duration_seconds": 30.605831299,
-        "stable_alert_trace_sha256": "5e5d4a6bfce3ea00e0895a213a214945903ac0226701e66cbb1a9e8dfb441c68"
+        "stable_alert_trace_sha256": "f4a9a572e130a1187cbd108e3da557715c24dc3b40e271d8984dba8d43751a5c"
       }
     },
     {
@@ -626,12 +597,12 @@
       "approximate_duration_wall_seconds_at_20x": 43.7225,
       "expected": {
         "events": 256,
-        "alert_count": 15,
+        "alert_count": 13,
         "alerts_by_class": {
           "BOTNET_C2": 2,
           "DATA_EXFILTRATION": 2,
           "DDOS": 2,
-          "DGA_DOMAINS": 4,
+          "DGA_DOMAINS": 2,
           "DNS_TUNNELLING": 2,
           "ENCRYPTED_MALWARE": 2,
           "RECONNAISSANCE": 1
@@ -838,7 +809,7 @@
           }
         },
         "observed_duration_seconds": 874.450741699,
-        "stable_alert_trace_sha256": "ae0603f4c1d3317fc20e0c3709abc7fd05eb2a95a744df8325474b414f4d6cc1"
+        "stable_alert_trace_sha256": "6ef65638d1327636ec9b3d2f052579543c4c0c5495db104c64fdce548540b36f"
       }
     }
   ]

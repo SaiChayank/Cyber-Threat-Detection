@@ -109,13 +109,14 @@ For one presentation, select **All threat scenarios** (`ALL`) at **20Ãƒâ€�
 `mixed_demo(seed=100)`: eight 32-event segments, seeds 100Ã¢â‚¬â€œ107, starts separated
 by 120 seconds. This differs from concatenating standalone seed-100 files.
 `data/demo/all.jsonl` is the exact frozen combined fallback. One shared pipeline
-receives 256 events and emits 15 alerts; approximate duration is **43.72 seconds**
+receives 256 events and emits 13 alerts (15 before the 30 October registrable-label DGA guard, which stopped
+labelling tunnel subdomains as DGA); approximate duration is **43.72 seconds**
 plus delivery overhead.
 
 Present in this order: benign Ã¢â€ â€™ DDoS Ã¢â€ â€™ C2 Ã¢â€ â€™ DGA Ã¢â€ â€™ DNS tunnelling Ã¢â€ â€™ encrypted-session
 indicators Ã¢â€ â€™ reconnaissance Ã¢â€ â€™ possible exfiltration. Wait for **Complete**, confirm
 seven threat classes, open one record per class, inspect evidence, filter and
-export JSON. ALL contains four DGA records (two from TXT overlap), two each for
+export JSON. ALL contains two DGA records, two each for
 DDoS/C2/tunnelling/encrypted/exfiltration, and one reconnaissance record.
 
 Full first-alert payloads, observed DNS names, numeric evidence, detection source,

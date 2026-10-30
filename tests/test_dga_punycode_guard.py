@@ -26,7 +26,7 @@ def test_punycode_labels_are_never_dga_even_with_a_confident_model(name):
 
 
 def test_random_ascii_labels_still_alert_by_rule_and_model():
-    name = 'q8f3k2x9z1m7v4b6n0w5j2.example.test'
+    name = 'q8f3k2x9z1m7v4b6n0w5j2.test'
     assert any(a.detection_source in ('RULE', 'HYBRID') for a in dga(name))
     assert dga(name, model=True)
     assert dga('q8f3k2x9z1m7v4b6n0w5j2.xn--p1ai', model=True)  # Only a FIRST label starting with xn-- is exempt.

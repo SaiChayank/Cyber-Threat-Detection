@@ -20,7 +20,8 @@ def test_frozen_pack_repeats_without_network_or_persistence(monkeypatch):
     assert first['passed']
     assert len(first['results']) == 9
     assert sum(row['events'] for row in first['results']) == 512
-    assert sum(row['alert_count'] for row in first['results']) == 30
+    # 13 per pass over the frozen demo (15 before the registrable-label DGA guard) across 9 rows: 4 + ... + ALL.
+    assert sum(row['alert_count'] for row in first['results']) == 26
 
 
 def test_stable_alert_excludes_only_delivery_identity_and_rounds_metrics():

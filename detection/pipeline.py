@@ -4,7 +4,7 @@ from collections import deque, OrderedDict
 from features.extractor import FeatureExtractor
 from ml.model import Model
 from ml.dga import DgaModel, domain_label, FEATURE_VERSION
-from detection.dga_rules import conservative_rule
+from detection.dga_rules import conservative_rule, registrable_name
 from detection.dns_tunnel_candidate import candidate_reason
 from detection import rule_thresholds as thresholds, spoof_indicators, tls_indicators
 from features import slow_http as slow_http_features
@@ -12,6 +12,7 @@ from features import slow_read as slow_read_features
 from features import beacon_tracker
 from features.cow_map import CowMap, shallow
 from features.dns_tunnel import FEATURE_NAMES as DNS_TUNNEL_FEATURES
+from features.extractor import dga_lexical_features
 from schemas.alert import AlertEvent
 from schemas.enums import ThreatClass, Severity, DetectorType
 from schemas.flow_record import FlowRecord
@@ -112,7 +113,9 @@ class Pipeline:
         # The synthetic model's DNS posterior alone does not generalize to real
         # domains. Require the existing lexical rule for DGA alerts, measuring
         # length on the same first label as entropy and bigram surprise.
-        dga_evidence = conservative_rule(f)
+        # Judge the registrable label: random subdomains of cloud/CDN providers are not generated domains.
+        dga_evidence = (conservative_rule(f) if registrable_name(event.dns_name) == (event.dns_name or '').lower().rstrip('.')
+                        else conservative_rule(dga_lexical_features(registrable_name(event.dns_name))))
         tunnel_reason = candidate_reason(f) if self.dns_tunnel_candidate else None
         if self.dns_tunnel_candidate:
             # Keep synthetic-model DNS hits out of development comparisons.

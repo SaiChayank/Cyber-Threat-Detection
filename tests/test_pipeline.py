@@ -62,7 +62,7 @@ def test_long_random_txt_query_keeps_both_lexical_alerts_and_evidence():
     pipeline = Pipeline()
     pipeline.dga_model.enabled = False
     pipeline.model.predict = lambda _: ('BENIGN', 1.0)
-    name = 'q7x9k2z4m6b8v1j3p5d0r2s4w6y8a1c3e5f7g9h0i2l4n6o8u1t3' + '.example.org'
+    name = 'q7x9k2z4m6b8v1j3p5d0r2s4w6y8a1c3e5f7g9h0i2l4n6o8u1t3' + '.org'  # Random registrable label.
     event = TrafficEvent(timestamp=1700000000000, src_ip='192.0.2.1',
                          dst_ip='192.0.2.53', dst_port=53, protocol=17,
                          dns_name=name, dns_type=16)
@@ -71,6 +71,11 @@ def test_long_random_txt_query_keeps_both_lexical_alerts_and_evidence():
     for alert in alerts:
         assert alert.raw_evidence_metrics['domain_label_length'] == len(name.split('.')[0])
         assert alert.raw_evidence_metrics['confidence_kind'] == 'heuristic strength'
+    # The same random label as a SUBDOMAIN of a stable domain is tunnelling only, not a generated domain.
+    subdomain = Pipeline()
+    subdomain.dga_model.enabled = False
+    subdomain.model.predict = lambda _: ('BENIGN', 1.0)
+    assert {a.threat_class for a in subdomain.process(event.model_copy(update={'dns_name': name[:-4] + '.example.org'}))} == {'DNS_TUNNELLING'}
 
 
 def test_udp_flood_and_encrypted_sequences_without_fingerprint():
