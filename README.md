@@ -41,7 +41,7 @@ Current local updates are not all published to the remote repository. See the
 
 **Packaging follow-up, 3 October 2026:** all seven frozen models now preserve their
 raw checksums in the corrected Windows-style checkout. Its isolated installation,
-873 backend tests, TypeScript, production build and incremental demo passed.
+885 backend tests, TypeScript, production build and incremental demo passed.
 This fix is still pending publication; detection-quality blockers are unchanged.
 See [model packaging validation](docs/MODEL_PACKAGING_VALIDATION.md).
 
