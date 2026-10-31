@@ -259,3 +259,12 @@ A first version using private addresses only had no effect, because the CTU-13 h
 Rescored on all CTU-13 splits: benign C2 false alerts **8 to 1** (the remaining one is inbound RDP from a public host),
 Neris episodes still 3/3. Limit: C2 carried over SNMP or ICMP inside one subnet is now skipped.
 Tests: `tests/test_c2_monitoring_guard.py`; 885 pass; pins refrozen.
+
+## Eleventh step: multilingual word list tried for DGA false alerts, not adopted (31 October 2026)
+
+Source: top 3,000 words (5+ ASCII letters) of de/pl/pt/es/fr/it/nl from hermitdave/FrequencyWords (MIT,
+OpenSubtitles), 11,845 words, seven files of about 650 KB each, kept out of git. Banjori, corebot, dircrypt, necurs,
+ramnit and random strings stayed at 0% cleared (up to 20,000 words per language tested), but matsnu, a dictionary-word
+DGA, rose from about 1% to about 4% cleared. Benign DGA alerts on the DNS lab stayed at **11 (no change)**: the
+remaining names are place names, compounds and rarer words, not common vocabulary. Reverted; the English guard of the
+ninth step stays. Closing this line of work needs a model trained on readable benign names, not a larger word list.
