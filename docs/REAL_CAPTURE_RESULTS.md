@@ -268,3 +268,20 @@ ramnit and random strings stayed at 0% cleared (up to 20,000 words per language 
 DGA, rose from about 1% to about 4% cleared. Benign DGA alerts on the DNS lab stayed at **11 (no change)**: the
 remaining names are place names, compounds and rarer words, not common vocabulary. Reverted; the English guard of the
 ninth step stays. Closing this line of work needs a model trained on readable benign names, not a larger word list.
+
+## Twelfth step: slow-HTTP on the Ulm SUEE1 capture, not detected (1 November 2026)
+
+Source: `SUEE1.pcap` (163,705,594 bytes, release v1.1 of github.com/vs-uulm/2017-SUEE-data-set; no licence stated),
+kept out of git. It mixes 150 labelled attacker hosts (slowloris, slowhttptest, slowloris-ng; `10.128.0.1-150`)
+against one web server (`192.168.1.9:80`) into 2,089,436 events. The authors say `10.128.0.50` and `.100` are used
+twice and should be left out of an evaluation.
+**Result: the pipeline raised no DDoS alert (0 detected).** It raised 17 RECONNAISSANCE alerts from `192.168.0.1`,
+not judged.
+Why, from `python -m datasets.profile_suee_slow_http`: the 997 attacker connections have a median lifetime of 7 s (only
+90 last 30 s or more) and about 2 connections per attacker, so no client reaches the 50 long, slow connections the
+detector needs; most attack packets are 40-60 bytes, below its 61-byte data threshold. The capture is also not time-ordered
+(342 backward timestamp steps, the largest about 71 minutes), so attack windows cannot be defined cleanly and no label file
+was written.
+Not changed: a server-level rule counting slow connections across clients would also match chat and push servers, and one
+capture is not enough to tune it safely. Slow-HTTP detection stays measured on synthetic and unit tests only, with this
+real capture recorded as a miss for distributed short-lived slow attacks.
