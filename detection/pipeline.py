@@ -5,6 +5,7 @@ from features.extractor import FeatureExtractor
 from ml.model import Model
 from ml.dga import DgaModel, domain_label, FEATURE_VERSION
 from detection.dga_rules import conservative_rule, registrable_name
+from detection.dga_words import is_readable_label
 from detection.dns_tunnel_candidate import candidate_reason
 from detection import rule_thresholds as thresholds, spoof_indicators, tls_indicators
 from features import slow_http as slow_http_features
@@ -187,6 +188,9 @@ class Pipeline:
                 continue
             if threat == 'DGA_DOMAINS' and (event.dns_name or '').lower().startswith('xn--'):
                 # An internationalized (punycode) first label is an encoding, not a generated-domain signal.
+                continue
+            if threat == 'DGA_DOMAINS' and is_readable_label(domain_label(registrable_name(event.dns_name))):
+                # A name that splits fully into common words is readable, not generated (small English list).
                 continue
             if threat == 'DGA_DOMAINS' and not self.dga_model.enabled and not dga_evidence:
                 continue

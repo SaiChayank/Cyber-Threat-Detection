@@ -237,3 +237,14 @@ alert count as before. The 2 CTU-13 normal-host alerts (10-SYN probes to ports 3
 Limit: a scanner that completes TLS/QUIC handshakes, or hides probes among many non-SYN packets, would be skipped.
 Tests: 4 added to `tests/test_ddos_recon_guards.py`; 879 pass; pins refrozen. Evidence:
 `docs/verification/iot23-20261030/1-1-after-recon-guards.json`.
+
+## Ninth step: readable-word names and DGA alerts (31 October 2026)
+
+`detection/dga_words.py` skips a DGA alert when the registrable label splits fully into words from a small curated
+English/web list (hyphen parts checked separately; single words and labels with digits are not skipped). The list
+excludes words taken from the benign alerts under test. Rescored on the DNS lab: benign DGA alerts **12 to 11**
+(a small gain), DNS tunnelling still 1/1. Most remaining false alerts are non-English names (German, Polish,
+Portuguese) or contain digits, which an English list cannot clear. Cost: about 1% of matsnu (a dictionary-word DGA)
+is now skipped; banjori, corebot, dircrypt, necurs and ramnit (1,000 names each) are unaffected.
+Tests: `tests/test_dga_readable_words.py`; 882 pass; pins refrozen. A fuller fix would need a multilingual
+dictionary or a model trained on readable benign names, which was not attempted.

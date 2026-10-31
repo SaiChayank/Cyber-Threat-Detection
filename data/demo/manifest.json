@@ -40,7 +40,7 @@
       "newline_normalized": true
     },
     "detection/pipeline.py": {
-      "sha256": "8a075748c884fe824eb05e7ba48361b02fdc986c73fdf3e9565d2591e29e6e22",
+      "sha256": "8a878d408398670ce6f73e11d9ee1664f2bd01b0c6a545676e44f487959d3784",
       "newline_normalized": true
     },
     "detection/dga_rules.py": {
