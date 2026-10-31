@@ -248,3 +248,14 @@ Portuguese) or contain digits, which an English list cannot clear. Cost: about 1
 is now skipped; banjori, corebot, dircrypt, necurs and ramnit (1,000 names each) are unaffected.
 Tests: `tests/test_dga_readable_words.py`; 882 pass; pins refrozen. A fuller fix would need a multilingual
 dictionary or a model trained on readable benign names, which was not attempted.
+
+## Tenth step: monitoring traffic is not C2 (31 October 2026)
+
+No benign slow-beacon alert exists on any capture held (CTU-13 train/validation/test, IoT-23 34-1), so the
+"health checks as slow beacons" concern is not supported by data. The real benign C2 false alerts were the fast rule
+firing on fixed-cadence monitoring: SNMP polling (UDP 161) and ICMP echo between hosts on one network. The pipeline now
+skips C2 for those two when source and destination are both private or share an IPv4 /24 (`detection/local_network.py`).
+A first version using private addresses only had no effect, because the CTU-13 hosts use public address space.
+Rescored on all CTU-13 splits: benign C2 false alerts **8 to 1** (the remaining one is inbound RDP from a public host),
+Neris episodes still 3/3. Limit: C2 carried over SNMP or ICMP inside one subnet is now skipped.
+Tests: `tests/test_c2_monitoring_guard.py`; 885 pass; pins refrozen.

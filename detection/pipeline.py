@@ -6,6 +6,7 @@ from ml.model import Model
 from ml.dga import DgaModel, domain_label, FEATURE_VERSION
 from detection.dga_rules import conservative_rule, registrable_name
 from detection.dga_words import is_readable_label
+from detection.local_network import same_local_network
 from detection.dns_tunnel_candidate import candidate_reason
 from detection import rule_thresholds as thresholds, spoof_indicators, tls_indicators
 from features import slow_http as slow_http_features
@@ -181,6 +182,11 @@ class Pipeline:
             if threat == 'BOTNET_C2' and event.dst_port == 53 and event.protocol == 17 and event.dst_ip.is_private:
                 # Fixed-cadence queries to the local resolver are a client retry loop; DNS-borne C2 is the
                 # DNS tunnelling and DGA detectors' job. Measured: 21 such alerts from one IoT-23 bot.
+                continue
+            if (threat == 'BOTNET_C2' and same_local_network(event.src_ip, event.dst_ip)
+                    and ((event.protocol == 17 and event.dst_port == 161) or event.protocol == 1)):
+                # SNMP polling and ICMP echo inside one network are fixed-cadence monitoring, not C2. Measured:
+                # 7 of the 8 benign CTU-13 C2 false alerts were these two.
                 continue
             if threat == 'ENCRYPTED_MALWARE' and not event.encrypted:
                 continue
