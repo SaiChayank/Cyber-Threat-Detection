@@ -285,3 +285,12 @@ was written.
 Not changed: a server-level rule counting slow connections across clients would also match chat and push servers, and one
 capture is not enough to tune it safely. Slow-HTTP detection stays measured on synthetic and unit tests only, with this
 real capture recorded as a miss for distributed short-lived slow attacks.
+
+## Thirteenth step: exfiltration and encrypted-malware data search, nothing usable found (1 November 2026)
+
+The University of Twente "Data Exfiltration Malware" page (`utwente.nl/en/eemcs/scs/downloads/20171127_DEM`) returns
+HTTP 404 and the group's site no longer lists it. An extended web search found no open, directly downloadable,
+labelled exfiltration or encrypted-malware PCAP set: the candidates were a Google-Drive-gated malware corpus
+(Root0ne/malware-pcap-dataset, download link unconfirmed, live-malware payloads), the password-protected
+malware-traffic-analysis.net zips (live samples, no confirmed TLS-malware capture, file-level labels only) and 2.9 TB
+DEDALE. None was downloaded. DATA_EXFILTRATION and ENCRYPTED_MALWARE therefore remain unmeasured on real captures.
