@@ -62,3 +62,9 @@ passes. Full test suite: 885 passed locally, 856 passed with 4 skipped in a fres
 
 The deliverable is a functionally complete, tested prototype meeting every item of the brief's expected solution and
 constraints. It is not a field-validated classifier.
+
+## Loopback lab (2 November 2026)
+
+Scripted labelled PCAP (`datasets/lab_pcap_generator.py`): DDoS variants 3/3, exfiltration 1/1, benign backup and
+download raise exfiltration alerts (volume overlap). Same-project generator, so not independent accuracy. See the
+Fifteenth step in `REAL_CAPTURE_RESULTS.md`.

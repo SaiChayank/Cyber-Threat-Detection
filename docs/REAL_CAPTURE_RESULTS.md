@@ -306,3 +306,28 @@ guard clears 4 of 478 names the rule catches in six UMUDGA families (0.8 per cen
 Caveats: the cutoff was set after seeing both the demo failure and the 11 domains, so 11 to 6 is a development number
 with no independent holdout; the remaining 6 are consonant-heavy compounds and place names (vowel share 0.26-0.35).
 Tests: `tests/test_dga_natural_language_guard.py`; 887 pass; pins refrozen.
+
+## Fifteenth step: loopback lab and SYN+ACK fix (2 November 2026)
+
+`datasets/lab_pcap_generator.py` writes a labelled PCAP straight to disk (seed 26145, reserved documentation and
+benchmark addresses, nothing ever transmitted). Scenarios: single-client slow-HTTP, slow-read, UDP reflection
+amplification, bulk-upload exfiltration, plus a nightly backup and a large download as benign look-alikes, over light
+web background. Scored with `python -m datasets.evaluate_lab data/lab/generated/loopback-lab-v1.labels.json`
+(report: `docs/verification/lab-generated-20261101/report.json`).
+
+| Result | Value |
+|---|---|
+| DDoS episodes detected | 3 / 3 |
+| Exfiltration episodes detected | 1 / 1 |
+| Benign alerts | 2, both `DATA_EXFILTRATION` (backup, download) |
+| Benign events | 71,818 (0.028 false alerts per 1,000) |
+
+The first run raised 28 benign `RECONNAISSANCE` alerts from the lab web server. Cause: its SYN+ACK replies counted as
+scan SYN probes in `features/source_history.py`. `is_probe_syn` now counts only SYN without ACK. Recon false alerts on
+the lab went 28 to 0; the IoT-23 `capture-1-1` Telnet scan is still 1/1 at about 2 s; the demo manifest is unchanged.
+
+Limits: the backup and download alerts are the known volume overlap (a detector of volume cannot see intent). The
+generator and the detectors are written by the same project, so this measures the packet parser and the tuned rules
+on scripted traffic, not independent real-world accuracy. Distributed slow-HTTP remains undetected.
+
+Tests: `tests/test_recon_server_replies.py`; 889 pass.

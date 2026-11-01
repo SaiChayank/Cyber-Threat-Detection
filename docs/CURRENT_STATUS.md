@@ -1,4 +1,4 @@
-# Current status (1 November 2026)
+# Current status (2 November 2026)
 
 Univect (PS26145) is a passive, read-only detector of six threat categories in unidirectional IP
 traffic, with a streaming pipeline, a standard alert schema and a dashboard. Everything below was
@@ -8,7 +8,7 @@ checked on this date; nothing is marked done that was not run.
 
 | Check | Result |
 | --- | --- |
-| Backend tests (`pytest -q`) | 887 passed |
+| Backend tests (`pytest -q`) | 889 passed |
 | Frontend tests, TypeScript, production build | 3 passed; typecheck passes; build passes |
 | Dependency audit (`npm audit`) | 0 vulnerabilities |
 | Frozen demo preflight (`python -m replay.demo_pack`) | passes; nine traces identical |
