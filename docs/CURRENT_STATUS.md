@@ -1,4 +1,4 @@
-# Current status (30 October 2026)
+# Current status (1 November 2026)
 
 Univect (PS26145) is a passive, read-only detector of six threat categories in unidirectional IP
 traffic, with a streaming pipeline, a standard alert schema and a dashboard. Everything below was
@@ -46,15 +46,16 @@ checked on this date; nothing is marked done that was not run.
 
 ## Honest limits
 
-- **Unmeasured on real traffic:** DDoS floods, slow-HTTP/slow-read, exfiltration, DGA recall and
-  encrypted malware are validated only on controlled synthetic cases. Whatever those cases do not
+- **Unmeasured or missed on real traffic:** slow-read, exfiltration and encrypted malware are validated only on
+  controlled synthetic cases (no open labelled real capture was found). Slow-HTTP was measured on the real Ulm SUEE1
+  capture and **not detected** (short-lived attack spread over 150 hosts; [results](REAL_CAPTURE_RESULTS.md)). Whatever those cases do not
   cover (for example benign look-alikes such as backups versus exfiltration) can still alert.
 - **Weak independence:** the C2 test slices come from one recording of one botnet family; the DNS
   result is one tunnel run, not the frozen protocol's 20 positive and 50 benign sessions.
 - **DGA:** independently evaluated on 81 unseen 2025 families: the frozen candidate fails all four gates (recall 59.5%, domain FPR 3.7%, real benign-DNS FPR 10.2%) and stays disabled; the active guard has about 6% recall with 0.2% domain FPR and 0 false positives on real client DNS ([DGA real-data results](DGA_REAL_DATA_RESULTS.md)).
-- **Known remaining false alerts and gaps:** DGA on real concatenated-word domains, browsing fan-out as
-  reconnaissance, fixed-interval health checks looking like slow beacons, and jittered or
-  destination-rotating beacons (limits in [Slow beacon detection](SLOW_BEACON_DETECTION.md)).
+- **Known remaining false alerts and gaps:** DGA on real non-English or digit-containing names (11 benign alerts on the
+  DNS lab), CTU-13 10-SYN probes kept as scan-like, and jittered or destination-rotating beacons. Browsing fan-out
+  recon, router-DNS C2 and in-network SNMP/ICMP C2 false alerts were reduced in November (limits in [Slow beacon detection](SLOW_BEACON_DETECTION.md)).
 - **Models:** the classifier is trained on synthetic data; confidence is a heuristic strength or an
   uncalibrated posterior, never a probability. The DGA and DNS-tunnel candidate models stay disabled.
 - **Scope:** single-worker local service, no authentication or multi-user support, Ethernet captures
