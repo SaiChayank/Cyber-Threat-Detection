@@ -8,7 +8,7 @@ checked on this date; nothing is marked done that was not run.
 
 | Check | Result |
 | --- | --- |
-| Backend tests (`pytest -q`) | 885 passed |
+| Backend tests (`pytest -q`) | 887 passed |
 | Frontend tests, TypeScript, production build | 3 passed; typecheck passes; build passes |
 | Dependency audit (`npm audit`) | 0 vulnerabilities |
 | Frozen demo preflight (`python -m replay.demo_pack`) | passes; nine traces identical |
@@ -53,7 +53,7 @@ checked on this date; nothing is marked done that was not run.
 - **Weak independence:** the C2 test slices come from one recording of one botnet family; the DNS
   result is one tunnel run, not the frozen protocol's 20 positive and 50 benign sessions.
 - **DGA:** independently evaluated on 81 unseen 2025 families: the frozen candidate fails all four gates (recall 59.5%, domain FPR 3.7%, real benign-DNS FPR 10.2%) and stays disabled; the active guard has about 6% recall with 0.2% domain FPR and 0 false positives on real client DNS ([DGA real-data results](DGA_REAL_DATA_RESULTS.md)).
-- **Known remaining false alerts and gaps:** DGA on real non-English or digit-containing names (11 benign alerts on the
+- **Known remaining false alerts and gaps:** DGA on consonant-heavy compound names and place names (6 benign alerts on the
   DNS lab), CTU-13 10-SYN probes kept as scan-like, and jittered or destination-rotating beacons. Browsing fan-out
   recon, router-DNS C2 and in-network SNMP/ICMP C2 false alerts were reduced in November (limits in [Slow beacon detection](SLOW_BEACON_DETECTION.md)).
 - **Models:** the classifier is trained on synthetic data; confidence is a heuristic strength or an

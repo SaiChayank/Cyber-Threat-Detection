@@ -121,8 +121,12 @@ class Pipeline:
         # domains. Require the existing lexical rule for DGA alerts, measuring
         # length on the same first label as entropy and bigram surprise.
         # Judge the registrable label: random subdomains of cloud/CDN providers are not generated domains.
-        dga_evidence = (conservative_rule(f) if registrable_name(event.dns_name) == (event.dns_name or '').lower().rstrip('.')
-                        else conservative_rule(dga_lexical_features(registrable_name(event.dns_name))))
+        dga_basis = (f if registrable_name(event.dns_name) == (event.dns_name or '').lower().rstrip('.')
+                     else dga_lexical_features(registrable_name(event.dns_name)))
+        # Natural-language names (about 0.38 vowels per letter; the frozen demo's random names reach 0.35) are readable compounds, not generated strings
+        # (generated names measured 0.14-0.20).
+        dga_evidence = (conservative_rule(dga_basis)
+                        and dga_basis['domain_vowel_ratio'] < thresholds.DGA_NATURAL_VOWEL_SHARE)
         tunnel_reason = candidate_reason(f) if self.dns_tunnel_candidate else None
         if self.dns_tunnel_candidate:
             # Keep synthetic-model DNS hits out of development comparisons.

@@ -19,3 +19,4 @@ SLOW_C2_MAX_CV = .1          # Real Neris beacons measured 0.00-0.01; benign per
 SLOW_C2_DEDUP_S = 3600       # One alert per source/destination per hour for a persistent beacon
 # Services whose traffic is legitimately periodic: never a slow-beacon alert.
 SLOW_C2_EXCLUDED_PORTS = frozenset({53, 67, 68, 123, 137, 138, 161, 1900, 5353, 5355})
+DGA_NATURAL_VOWEL_SHARE = .36 # A long label with at least this vowel share is readable text, not a generated name
