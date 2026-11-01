@@ -135,7 +135,7 @@
     "detection/spoof_indicators.py": "25a2e5bcb68a6f7aea46af5bf53627cb3a6eb38b7660a13ad5e487b235c841c1",
     "features/slow_read.py": "d879809d1820b0dbab2654a58e655886208f2ac7d1f4a696619018ad43068022",
     "ingest/pcapng.py": "922000f923831a330bfd8366995fd7e4c4230a935912e316c0019bc0582463b3",
-    "features/source_history.py": "9276b6fbc9e472815c3abd3a237b4578babc772037f971ee1cc540fca450756c",
+    "features/source_history.py": "68b02093f592260d37bb4202087e27cf227893b95c21a1286b20fa0d5c3b0870",
     "ingest/flow_collector.py": "3c36437d139f32c868fb826c023415c53ce82380afc5f822b60c937d618e6985",
     "detection/rule_thresholds.py": "5cc0cba25b0e260271bb8f956162ba24dd9f55004498a02580a5e02adf64b914",
     "features/beacon_tracker.py": "677dc663c24279f4af596883214ec362f5928f09b2beb26f65ee39cade6b6d81"
