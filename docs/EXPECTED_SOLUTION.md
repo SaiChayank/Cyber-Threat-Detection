@@ -1,5 +1,7 @@
 # PS26145: requirement traceability and actual delivery
 
+> **Historical (2 October 2026).** Superseded by [Brief traceability](BRIEF_TRACEABILITY.md) and [Current status](CURRENT_STATUS.md); several limits below (PCAPNG, native flow collectors, "NOT READY") have since changed.
+
 Audited **2 October 2026**. The owner's four screenshots govern this prototype:
 one-way passive IP observation, AI/ML classification/scoring, incremental alerts,
 evidence/severity/confidence dashboard, throughput evidence and source/model/

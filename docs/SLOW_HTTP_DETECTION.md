@@ -67,3 +67,9 @@ Limits: the window field is unscaled, so a legitimate window-scaled receiver
 can look small; NetFlow/IPFIX carry no window, so only packet captures and
 sFlow samples work; thresholds are development defaults pending lab tuning.
 Tests: `tests/test_slow_read.py`.
+
+## Real-capture result (1 November 2026)
+
+On the real Ulm SUEE1 capture the detector raised **no alert**: the attack is short-lived (median connection 7 s) and spread over
+150 hosts at about 2 connections each, so no client reaches the 50 slow connections required. See
+[Real capture results](REAL_CAPTURE_RESULTS.md), twelfth step. Distributed slow-HTTP is a known gap.

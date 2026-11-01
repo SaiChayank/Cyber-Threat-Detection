@@ -236,7 +236,7 @@ tunnelling; the available captures still need independently labelled attack flow
 - `replay/`: offline scenario simulation, JSONL export and passive CLI replay.
 - `benchmarks/` and `tests/`: measured performance and behavior verification.
 
-Current implementation and requirement traceability: [Expected solution](docs/EXPECTED_SOLUTION.md).
+Current requirement traceability against the official brief: [Brief traceability](docs/BRIEF_TRACEABILITY.md) (the 2 October [Expected solution](docs/EXPECTED_SOLUTION.md) is historical).
 Remaining work, acceptance checks and current progress: [Completion plan](docs/COMPLETION_PLAN.md).
 Stream-accounting fix and delivery verification: [Streaming reliability](docs/STREAM_RELIABILITY.md).
 Model, features and evaluation: [Model documentation](docs/MODEL_AND_VALIDATION.md).
