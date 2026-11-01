@@ -1,0 +1,73 @@
+{
+  "format": "ps26145-lab-labels/1",
+  "capture": "../../raw/lab-generated/loopback-lab-v1.pcap",
+  "split": "unassigned",
+  "episodes": [
+    {
+      "id": "slow-http-1",
+      "label": "DDOS",
+      "scenario": "slow_http_single_client",
+      "tool": "lab_pcap_generator",
+      "start_ms": 1700000060000,
+      "end_ms": 1700000250000,
+      "hosts": [
+        "198.51.100.77"
+      ]
+    },
+    {
+      "id": "slow-read-1",
+      "label": "DDOS",
+      "scenario": "slow_read_single_client",
+      "tool": "lab_pcap_generator",
+      "start_ms": 1700000300000,
+      "end_ms": 1700000430000,
+      "hosts": [
+        "198.51.100.88"
+      ]
+    },
+    {
+      "id": "udp-amp-1",
+      "label": "DDOS",
+      "scenario": "udp_reflection_amplification",
+      "tool": "lab_pcap_generator",
+      "start_ms": 1700000480000,
+      "end_ms": 1700000505000,
+      "hosts": [
+        "192.0.2.50"
+      ]
+    },
+    {
+      "id": "exfil-1",
+      "label": "DATA_EXFILTRATION",
+      "scenario": "bulk_upload_exfiltration_like",
+      "tool": "lab_pcap_generator",
+      "start_ms": 1700000600000,
+      "end_ms": 1700000670000,
+      "hosts": [
+        "10.20.0.15"
+      ]
+    },
+    {
+      "id": "backup-1",
+      "label": "BENIGN",
+      "scenario": "nightly_backup",
+      "tool": "lab_pcap_generator",
+      "start_ms": 1700000780000,
+      "end_ms": 1700000850000,
+      "hosts": [
+        "10.20.0.30"
+      ]
+    },
+    {
+      "id": "download-1",
+      "label": "BENIGN",
+      "scenario": "large_download",
+      "tool": "lab_pcap_generator",
+      "start_ms": 1700000870000,
+      "end_ms": 1700000940000,
+      "hosts": [
+        "10.20.0.40"
+      ]
+    }
+  ]
+}

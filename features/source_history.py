@@ -19,6 +19,11 @@ from collections import deque
 WINDOW_MS = 10_000
 
 
+def is_probe_syn(event):
+    """SYN flag set and not a lone SYN+ACK reply (a server answering clients is not probing)."""
+    return int(bool(event.syn) and event.syn_packets != 0)
+
+
 class SourceHistory:
     __slots__ = ('events', 'maxlen', 'total_bytes', 'peers', '_owned',
                  'recent', 'recent_syn', 'recent_dst', 'recent_ports')
@@ -71,7 +76,7 @@ class SourceHistory:
 
     def _leave_window(self):
         event = self.recent.popleft()
-        self.recent_syn -= event.syn
+        self.recent_syn -= is_probe_syn(event)
         for counts, value in ((self.recent_dst, event.dst_ip), (self.recent_ports, event.dst_port)):
             if counts[value] == 1:
                 del counts[value]
@@ -101,7 +106,7 @@ class SourceHistory:
         self.total_bytes += event.bytes
         self._own(self.key(event)).append(event)
         self.recent.append(event)
-        self.recent_syn += event.syn
+        self.recent_syn += is_probe_syn(event)
         self.recent_dst[event.dst_ip] = self.recent_dst.get(event.dst_ip, 0) + 1
         self.recent_ports[event.dst_port] = self.recent_ports.get(event.dst_port, 0) + 1
 

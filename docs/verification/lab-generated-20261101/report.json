@@ -1,0 +1,426 @@
+{
+  "format": "ps26145-lab-evaluation/1",
+  "generated_at_utc": "2026-11-01T12:14:56.429911+00:00",
+  "pipeline": {
+    "dns_tunnel_candidate": false,
+    "dga_model_enabled": false,
+    "model_sha256": "4d8e08323374535789e21f9f7cd1ee3f1c84b663ce555e67bb4ced57c95e8010"
+  },
+  "scope": "Runtime alerts on operator-labelled lab captures. Episode recall counts an episode once it has one alert of its labelled class; precision is per alert. Labels are only as reliable as the operator ground truth.",
+  "captures": [
+    {
+      "label_file": "data\\lab\\generated\\loopback-lab-v1.labels.json",
+      "label_sha256": "f1c106a879567d2783f8b82aef3d19aed615446fb9aaa9d5c3cf1ce315e2f591",
+      "capture": "data\\lab\\generated\\..\\..\\raw\\lab-generated\\loopback-lab-v1.pcap",
+      "capture_sha256": "72f7d03d4415d3cba09d81ec6b15174dda137b864853b6d30979b77c5e9fb1a3",
+      "split": "unassigned",
+      "source": "packets",
+      "events": 135645,
+      "late_events": 0,
+      "ambiguous_events": 0,
+      "ingest": {
+        "total_corrupt_packets": 0,
+        "truncated_packets": 0,
+        "unsupported_protocols": 0
+      },
+      "episodes": [
+        {
+          "id": "slow-http-1",
+          "label": "DDOS",
+          "scenario": "slow_http_single_client",
+          "tool": "lab_pcap_generator",
+          "start_ms": 1700000060000.0,
+          "end_ms": 1700000250000.0,
+          "events": 3974,
+          "first_event_ms": 1700000060000.0,
+          "observed": true,
+          "detected": true,
+          "correct_alerts": 8,
+          "other_alerts": {
+            "BOTNET_C2": 1
+          },
+          "first_correct_alert": {
+            "timestamp_ms": 1700000102355.013,
+            "events_into_episode": 961,
+            "time_to_detect_ms": 42355.012939453125
+          }
+        },
+        {
+          "id": "slow-read-1",
+          "label": "DDOS",
+          "scenario": "slow_read_single_client",
+          "tool": "lab_pcap_generator",
+          "start_ms": 1700000300000.0,
+          "end_ms": 1700000430000.0,
+          "events": 4988,
+          "first_event_ms": 1700000300000.0,
+          "observed": true,
+          "detected": true,
+          "correct_alerts": 6,
+          "other_alerts": {},
+          "first_correct_alert": {
+            "timestamp_ms": 1700000344819.246,
+            "events_into_episode": 1653,
+            "time_to_detect_ms": 44819.24609375
+          }
+        },
+        {
+          "id": "udp-amp-1",
+          "label": "DDOS",
+          "scenario": "udp_reflection_amplification",
+          "tool": "lab_pcap_generator",
+          "start_ms": 1700000480000.0,
+          "end_ms": 1700000505000.0,
+          "events": 30000,
+          "first_event_ms": 1700000480000.0,
+          "observed": true,
+          "detected": true,
+          "correct_alerts": 1,
+          "other_alerts": {},
+          "first_correct_alert": {
+            "timestamp_ms": 1700000486665.999,
+            "events_into_episode": 10000,
+            "time_to_detect_ms": 6665.9990234375
+          }
+        },
+        {
+          "id": "exfil-1",
+          "label": "DATA_EXFILTRATION",
+          "scenario": "bulk_upload_exfiltration_like",
+          "tool": "lab_pcap_generator",
+          "start_ms": 1700000600000.0,
+          "end_ms": 1700000670000.0,
+          "events": 24865,
+          "first_event_ms": 1700000600000.0,
+          "observed": true,
+          "detected": true,
+          "correct_alerts": 1,
+          "other_alerts": {},
+          "first_correct_alert": {
+            "timestamp_ms": 1700000648754.518,
+            "events_into_episode": 20164,
+            "time_to_detect_ms": 48754.51806640625
+          }
+        },
+        {
+          "id": "backup-1",
+          "label": "BENIGN",
+          "scenario": "nightly_backup",
+          "tool": "lab_pcap_generator",
+          "start_ms": 1700000780000.0,
+          "end_ms": 1700000850000.0,
+          "events": 24865,
+          "first_event_ms": 1700000780000.0,
+          "observed": true,
+          "detected": false,
+          "correct_alerts": 0,
+          "other_alerts": {
+            "DATA_EXFILTRATION": 1
+          },
+          "first_correct_alert": null
+        },
+        {
+          "id": "download-1",
+          "label": "BENIGN",
+          "scenario": "large_download",
+          "tool": "lab_pcap_generator",
+          "start_ms": 1700000870000.0,
+          "end_ms": 1700000940000.0,
+          "events": 24865,
+          "first_event_ms": 1700000870000.0,
+          "observed": true,
+          "detected": false,
+          "correct_alerts": 0,
+          "other_alerts": {
+            "DATA_EXFILTRATION": 1
+          },
+          "first_correct_alert": null
+        }
+      ],
+      "background": {
+        "events": 22088,
+        "alerts": {}
+      }
+    }
+  ],
+  "summary": {
+    "all": {
+      "captures": 1,
+      "events": 135645,
+      "late_events": 0,
+      "ambiguous_events": 0,
+      "threats": {
+        "DDOS": {
+          "episodes": 3,
+          "observed_episodes": 3,
+          "detected_episodes": 3,
+          "episode_recall": 1.0,
+          "alerts": 15,
+          "correct_alerts": 15,
+          "alert_precision": 1.0,
+          "false_alerts_on_benign": 0,
+          "median_time_to_detect_ms": 42355.012939453125,
+          "max_time_to_detect_ms": 44819.24609375
+        },
+        "BOTNET_C2": {
+          "episodes": 0,
+          "observed_episodes": 0,
+          "detected_episodes": 0,
+          "episode_recall": null,
+          "alerts": 1,
+          "correct_alerts": 0,
+          "alert_precision": 0.0,
+          "false_alerts_on_benign": 0,
+          "median_time_to_detect_ms": null,
+          "max_time_to_detect_ms": null
+        },
+        "DGA_DOMAINS": {
+          "episodes": 0,
+          "observed_episodes": 0,
+          "detected_episodes": 0,
+          "episode_recall": null,
+          "alerts": 0,
+          "correct_alerts": 0,
+          "alert_precision": null,
+          "false_alerts_on_benign": 0,
+          "median_time_to_detect_ms": null,
+          "max_time_to_detect_ms": null
+        },
+        "DNS_TUNNELLING": {
+          "episodes": 0,
+          "observed_episodes": 0,
+          "detected_episodes": 0,
+          "episode_recall": null,
+          "alerts": 0,
+          "correct_alerts": 0,
+          "alert_precision": null,
+          "false_alerts_on_benign": 0,
+          "median_time_to_detect_ms": null,
+          "max_time_to_detect_ms": null
+        },
+        "ENCRYPTED_MALWARE": {
+          "episodes": 0,
+          "observed_episodes": 0,
+          "detected_episodes": 0,
+          "episode_recall": null,
+          "alerts": 0,
+          "correct_alerts": 0,
+          "alert_precision": null,
+          "false_alerts_on_benign": 0,
+          "median_time_to_detect_ms": null,
+          "max_time_to_detect_ms": null
+        },
+        "RECONNAISSANCE": {
+          "episodes": 0,
+          "observed_episodes": 0,
+          "detected_episodes": 0,
+          "episode_recall": null,
+          "alerts": 0,
+          "correct_alerts": 0,
+          "alert_precision": null,
+          "false_alerts_on_benign": 0,
+          "median_time_to_detect_ms": null,
+          "max_time_to_detect_ms": null
+        },
+        "DATA_EXFILTRATION": {
+          "episodes": 1,
+          "observed_episodes": 1,
+          "detected_episodes": 1,
+          "episode_recall": 1.0,
+          "alerts": 3,
+          "correct_alerts": 1,
+          "alert_precision": 0.3333,
+          "false_alerts_on_benign": 2,
+          "median_time_to_detect_ms": 48754.51806640625,
+          "max_time_to_detect_ms": 48754.51806640625
+        }
+      },
+      "benign": {
+        "events": 71818,
+        "alerts": {
+          "DATA_EXFILTRATION": 2
+        },
+        "false_alerts_per_1000_events": 0.0278,
+        "labelled_episodes": 2,
+        "labelled_episodes_with_alerts": 2
+      },
+      "scenarios": {
+        "bulk_upload_exfiltration_like": {
+          "label": "DATA_EXFILTRATION",
+          "episodes": 1,
+          "detected": 1,
+          "with_any_alert": 1
+        },
+        "large_download": {
+          "label": "BENIGN",
+          "episodes": 1,
+          "detected": 0,
+          "with_any_alert": 1
+        },
+        "nightly_backup": {
+          "label": "BENIGN",
+          "episodes": 1,
+          "detected": 0,
+          "with_any_alert": 1
+        },
+        "slow_http_single_client": {
+          "label": "DDOS",
+          "episodes": 1,
+          "detected": 1,
+          "with_any_alert": 1
+        },
+        "slow_read_single_client": {
+          "label": "DDOS",
+          "episodes": 1,
+          "detected": 1,
+          "with_any_alert": 1
+        },
+        "udp_reflection_amplification": {
+          "label": "DDOS",
+          "episodes": 1,
+          "detected": 1,
+          "with_any_alert": 1
+        }
+      }
+    },
+    "unassigned": {
+      "captures": 1,
+      "events": 135645,
+      "late_events": 0,
+      "ambiguous_events": 0,
+      "threats": {
+        "DDOS": {
+          "episodes": 3,
+          "observed_episodes": 3,
+          "detected_episodes": 3,
+          "episode_recall": 1.0,
+          "alerts": 15,
+          "correct_alerts": 15,
+          "alert_precision": 1.0,
+          "false_alerts_on_benign": 0,
+          "median_time_to_detect_ms": 42355.012939453125,
+          "max_time_to_detect_ms": 44819.24609375
+        },
+        "BOTNET_C2": {
+          "episodes": 0,
+          "observed_episodes": 0,
+          "detected_episodes": 0,
+          "episode_recall": null,
+          "alerts": 1,
+          "correct_alerts": 0,
+          "alert_precision": 0.0,
+          "false_alerts_on_benign": 0,
+          "median_time_to_detect_ms": null,
+          "max_time_to_detect_ms": null
+        },
+        "DGA_DOMAINS": {
+          "episodes": 0,
+          "observed_episodes": 0,
+          "detected_episodes": 0,
+          "episode_recall": null,
+          "alerts": 0,
+          "correct_alerts": 0,
+          "alert_precision": null,
+          "false_alerts_on_benign": 0,
+          "median_time_to_detect_ms": null,
+          "max_time_to_detect_ms": null
+        },
+        "DNS_TUNNELLING": {
+          "episodes": 0,
+          "observed_episodes": 0,
+          "detected_episodes": 0,
+          "episode_recall": null,
+          "alerts": 0,
+          "correct_alerts": 0,
+          "alert_precision": null,
+          "false_alerts_on_benign": 0,
+          "median_time_to_detect_ms": null,
+          "max_time_to_detect_ms": null
+        },
+        "ENCRYPTED_MALWARE": {
+          "episodes": 0,
+          "observed_episodes": 0,
+          "detected_episodes": 0,
+          "episode_recall": null,
+          "alerts": 0,
+          "correct_alerts": 0,
+          "alert_precision": null,
+          "false_alerts_on_benign": 0,
+          "median_time_to_detect_ms": null,
+          "max_time_to_detect_ms": null
+        },
+        "RECONNAISSANCE": {
+          "episodes": 0,
+          "observed_episodes": 0,
+          "detected_episodes": 0,
+          "episode_recall": null,
+          "alerts": 0,
+          "correct_alerts": 0,
+          "alert_precision": null,
+          "false_alerts_on_benign": 0,
+          "median_time_to_detect_ms": null,
+          "max_time_to_detect_ms": null
+        },
+        "DATA_EXFILTRATION": {
+          "episodes": 1,
+          "observed_episodes": 1,
+          "detected_episodes": 1,
+          "episode_recall": 1.0,
+          "alerts": 3,
+          "correct_alerts": 1,
+          "alert_precision": 0.3333,
+          "false_alerts_on_benign": 2,
+          "median_time_to_detect_ms": 48754.51806640625,
+          "max_time_to_detect_ms": 48754.51806640625
+        }
+      },
+      "benign": {
+        "events": 71818,
+        "alerts": {
+          "DATA_EXFILTRATION": 2
+        },
+        "false_alerts_per_1000_events": 0.0278,
+        "labelled_episodes": 2,
+        "labelled_episodes_with_alerts": 2
+      },
+      "scenarios": {
+        "bulk_upload_exfiltration_like": {
+          "label": "DATA_EXFILTRATION",
+          "episodes": 1,
+          "detected": 1,
+          "with_any_alert": 1
+        },
+        "large_download": {
+          "label": "BENIGN",
+          "episodes": 1,
+          "detected": 0,
+          "with_any_alert": 1
+        },
+        "nightly_backup": {
+          "label": "BENIGN",
+          "episodes": 1,
+          "detected": 0,
+          "with_any_alert": 1
+        },
+        "slow_http_single_client": {
+          "label": "DDOS",
+          "episodes": 1,
+          "detected": 1,
+          "with_any_alert": 1
+        },
+        "slow_read_single_client": {
+          "label": "DDOS",
+          "episodes": 1,
+          "detected": 1,
+          "with_any_alert": 1
+        },
+        "udp_reflection_amplification": {
+          "label": "DDOS",
+          "episodes": 1,
+          "detected": 1,
+          "with_any_alert": 1
+        }
+      }
+    }
+  }
+}
