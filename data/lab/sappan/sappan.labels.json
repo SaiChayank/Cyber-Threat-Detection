@@ -1,0 +1,51 @@
+{
+  "format": "ps26145-lab-labels/1",
+  "capture": "../../raw/sappan-20261102/sappan-ethernet.pcap",
+  "split": "unassigned",
+  "episodes": [
+    {
+      "id": "sappan-c2-1",
+      "label": "BOTNET_C2",
+      "scenario": "poshc2_implant_beaconing",
+      "tool": "SAPPAN Advanced Threat Data (Zenodo 5547862, CC BY 4.0), POshC2 attacker 10.0.11.111; windows derived by hand from test_protocol.xlsx step times (UTC)",
+      "start_ms": 1612787880000,
+      "end_ms": 1612788570000,
+      "hosts": [
+        "10.0.11.111"
+      ]
+    },
+    {
+      "id": "sappan-exfil-ws1",
+      "label": "DATA_EXFILTRATION",
+      "scenario": "draft_zip_4_6mb_via_implant",
+      "tool": "SAPPAN Advanced Threat Data (Zenodo 5547862, CC BY 4.0), POshC2 attacker 10.0.11.111; windows derived by hand from test_protocol.xlsx step times (UTC)",
+      "start_ms": 1612788570000,
+      "end_ms": 1612788720000,
+      "hosts": [
+        "10.0.11.111"
+      ]
+    },
+    {
+      "id": "sappan-c2-2",
+      "label": "BOTNET_C2",
+      "scenario": "poshc2_implant_beaconing",
+      "tool": "SAPPAN Advanced Threat Data (Zenodo 5547862, CC BY 4.0), POshC2 attacker 10.0.11.111; windows derived by hand from test_protocol.xlsx step times (UTC)",
+      "start_ms": 1612788720000,
+      "end_ms": 1612790640000,
+      "hosts": [
+        "10.0.11.111"
+      ]
+    },
+    {
+      "id": "sappan-exfil-ws2",
+      "label": "DATA_EXFILTRATION",
+      "scenario": "second_exfiltration_via_ws1_remoting",
+      "tool": "SAPPAN Advanced Threat Data (Zenodo 5547862, CC BY 4.0), POshC2 attacker 10.0.11.111; windows derived by hand from test_protocol.xlsx step times (UTC)",
+      "start_ms": 1612790640000,
+      "end_ms": 1612790730000,
+      "hosts": [
+        "10.0.11.111"
+      ]
+    }
+  ]
+}

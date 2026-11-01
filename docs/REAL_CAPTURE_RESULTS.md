@@ -331,3 +331,35 @@ generator and the detectors are written by the same project, so this measures th
 on scripted traffic, not independent real-world accuracy. Distributed slow-HTTP remains undetected.
 
 Tests: `tests/test_recon_server_replies.py`; 889 pass.
+
+## Sixteenth step: SAPPAN APT29-style capture (2 November 2026)
+
+Source: [SAPPAN Advanced Threat Data](https://zenodo.org/record/5547862), Zenodo, CC BY 4.0. Downloaded
+`network_traffic_capture.pcap` (28.0 MB, md5 verified) and `test_protocol.xlsx` (14.6 kB). A simulated attack
+(POshC2 implant, not real malware in the wild) on two Windows workstations: C2 over HTTPS from 172.18.3.31 and
+172.18.3.32 to the attacker 10.0.11.111, a 4.6 MB `Draft.zip` pulled from Workstation1, a second extraction via
+Workstation2. The record has no ground-truth labels: the episodes in `data/lab/sappan/sappan.labels.json` are my
+reading of the protocol's step times (UTC, 2021-02-08 12:37 to 13:28), labelled by the attacker address only, so
+alerts to other destinations count as unlabelled. Report: `docs/verification/sappan-20261102/report.json`.
+
+The capture uses Linux cooked framing (link type 113), which the runtime reader rejects by design. The offline
+converter `datasets/sll_to_ethernet.py` rewrites it to Ethernet bytes for scoring; the runtime contract is unchanged.
+
+| Episode (label) | Alerts raised | Detected as labelled |
+|---|---|---|
+| C2 beaconing, 2 episodes (`BOTNET_C2`) | 34 `ENCRYPTED_MALWARE`, 0 `BOTNET_C2` | 0 / 2 |
+| Exfiltration, 2 episodes (`DATA_EXFILTRATION`) | 3 `ENCRYPTED_MALWARE`, 0 `DATA_EXFILTRATION` | 0 / 2 |
+
+What this shows:
+- Every attacker episode was flagged. All 37 `ENCRYPTED_MALWARE` alerts fall on the attacker channel, the first about
+  two minutes after the implant started, with no benign alert on labelled-benign traffic. The attacker's HTTPS channel
+  is therefore seen, under the encrypted-malware class rather than the botnet-C2 class I had labelled. POshC2 over TLS
+  fits both classes; I labelled it `BOTNET_C2` before scoring and did not relabel afterwards.
+- Exfiltration is missed by design. `Draft.zip` is 4.6 MB and the rule needs 20 MB in 60 s from one source, so no
+  `DATA_EXFILTRATION` alert fires. Lowering the threshold would also alert on backups and downloads (Fifteenth step).
+- 10 `BOTNET_C2` alerts fire on workstation connections to cloud addresses (51.103.5.159, 54.194.126.28,
+  52.210.46.20, 52.17.49.227). They are outside the attacker label so they count as false alerts here
+  (0.76 per 1,000 benign events, 13,146 events), but the protocol does not say they are benign, so this is unverified.
+
+Limits: one scripted scenario, hand-derived labels, nothing here is an accuracy estimate.
+Tests: `tests/test_sll_to_ethernet.py`.

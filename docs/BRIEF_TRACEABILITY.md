@@ -63,6 +63,10 @@ passes. Full test suite: 885 passed locally, 856 passed with 4 skipped in a fres
 The deliverable is a functionally complete, tested prototype meeting every item of the brief's expected solution and
 constraints. It is not a field-validated classifier.
 
+## SAPPAN capture (2 November 2026)
+
+Independent APT29-style capture: attacker HTTPS channel flagged (as ENCRYPTED_MALWARE, not BOTNET_C2); 4.6 MB exfiltration missed by the 20 MB rule. See the Sixteenth step in `REAL_CAPTURE_RESULTS.md`.
+
 ## Loopback lab (2 November 2026)
 
 Scripted labelled PCAP (`datasets/lab_pcap_generator.py`): DDoS variants 3/3, exfiltration 1/1, benign backup and

@@ -1,0 +1,348 @@
+{
+  "format": "ps26145-lab-evaluation/1",
+  "generated_at_utc": "2026-11-01T19:38:24.466069+00:00",
+  "pipeline": {
+    "dns_tunnel_candidate": false,
+    "dga_model_enabled": false,
+    "model_sha256": "4d8e08323374535789e21f9f7cd1ee3f1c84b663ce555e67bb4ced57c95e8010"
+  },
+  "scope": "Runtime alerts on operator-labelled lab captures. Episode recall counts an episode once it has one alert of its labelled class; precision is per alert. Labels are only as reliable as the operator ground truth.",
+  "captures": [
+    {
+      "label_file": "data\\lab\\sappan\\sappan.labels.json",
+      "label_sha256": "4a5a5c2c945e4e30b0c0756804b91efe54376b6adc6dd24fa991c4274653b192",
+      "capture": "data\\lab\\sappan\\..\\..\\raw\\sappan-20261102\\sappan-ethernet.pcap",
+      "capture_sha256": "32912e962a4f26ad03a5934aac799dcf10aa90d8efc8e56221dbd25b0b6d92d2",
+      "split": "unassigned",
+      "source": "packets",
+      "events": 32191,
+      "late_events": 0,
+      "ambiguous_events": 0,
+      "ingest": {
+        "total_corrupt_packets": 0,
+        "truncated_packets": 0,
+        "unsupported_protocols": 582
+      },
+      "episodes": [
+        {
+          "id": "sappan-c2-1",
+          "label": "BOTNET_C2",
+          "scenario": "poshc2_implant_beaconing",
+          "tool": "SAPPAN Advanced Threat Data (Zenodo 5547862, CC BY 4.0), POshC2 attacker 10.0.11.111; windows derived by hand from test_protocol.xlsx step times (UTC)",
+          "start_ms": 1612787880000.0,
+          "end_ms": 1612788570000.0,
+          "events": 1822,
+          "first_event_ms": 1612787928708.451,
+          "observed": true,
+          "detected": false,
+          "correct_alerts": 0,
+          "other_alerts": {
+            "ENCRYPTED_MALWARE": 9
+          },
+          "first_correct_alert": null
+        },
+        {
+          "id": "sappan-exfil-ws1",
+          "label": "DATA_EXFILTRATION",
+          "scenario": "draft_zip_4_6mb_via_implant",
+          "tool": "SAPPAN Advanced Threat Data (Zenodo 5547862, CC BY 4.0), POshC2 attacker 10.0.11.111; windows derived by hand from test_protocol.xlsx step times (UTC)",
+          "start_ms": 1612788570000.0,
+          "end_ms": 1612788720000.0,
+          "events": 2322,
+          "first_event_ms": 1612788572030.114,
+          "observed": true,
+          "detected": false,
+          "correct_alerts": 0,
+          "other_alerts": {
+            "ENCRYPTED_MALWARE": 1
+          },
+          "first_correct_alert": null
+        },
+        {
+          "id": "sappan-c2-2",
+          "label": "BOTNET_C2",
+          "scenario": "poshc2_implant_beaconing",
+          "tool": "SAPPAN Advanced Threat Data (Zenodo 5547862, CC BY 4.0), POshC2 attacker 10.0.11.111; windows derived by hand from test_protocol.xlsx step times (UTC)",
+          "start_ms": 1612788720000.0,
+          "end_ms": 1612790640000.0,
+          "events": 14693,
+          "first_event_ms": 1612788721246.959,
+          "observed": true,
+          "detected": false,
+          "correct_alerts": 0,
+          "other_alerts": {
+            "ENCRYPTED_MALWARE": 25
+          },
+          "first_correct_alert": null
+        },
+        {
+          "id": "sappan-exfil-ws2",
+          "label": "DATA_EXFILTRATION",
+          "scenario": "second_exfiltration_via_ws1_remoting",
+          "tool": "SAPPAN Advanced Threat Data (Zenodo 5547862, CC BY 4.0), POshC2 attacker 10.0.11.111; windows derived by hand from test_protocol.xlsx step times (UTC)",
+          "start_ms": 1612790640000.0,
+          "end_ms": 1612790730000.0,
+          "events": 208,
+          "first_event_ms": 1612790642717.0369,
+          "observed": true,
+          "detected": false,
+          "correct_alerts": 0,
+          "other_alerts": {
+            "ENCRYPTED_MALWARE": 2
+          },
+          "first_correct_alert": null
+        }
+      ],
+      "background": {
+        "events": 13146,
+        "alerts": {
+          "BOTNET_C2": 10
+        }
+      }
+    }
+  ],
+  "summary": {
+    "all": {
+      "captures": 1,
+      "events": 32191,
+      "late_events": 0,
+      "ambiguous_events": 0,
+      "threats": {
+        "DDOS": {
+          "episodes": 0,
+          "observed_episodes": 0,
+          "detected_episodes": 0,
+          "episode_recall": null,
+          "alerts": 0,
+          "correct_alerts": 0,
+          "alert_precision": null,
+          "false_alerts_on_benign": 0,
+          "median_time_to_detect_ms": null,
+          "max_time_to_detect_ms": null
+        },
+        "BOTNET_C2": {
+          "episodes": 2,
+          "observed_episodes": 2,
+          "detected_episodes": 0,
+          "episode_recall": 0.0,
+          "alerts": 10,
+          "correct_alerts": 0,
+          "alert_precision": 0.0,
+          "false_alerts_on_benign": 10,
+          "median_time_to_detect_ms": null,
+          "max_time_to_detect_ms": null
+        },
+        "DGA_DOMAINS": {
+          "episodes": 0,
+          "observed_episodes": 0,
+          "detected_episodes": 0,
+          "episode_recall": null,
+          "alerts": 0,
+          "correct_alerts": 0,
+          "alert_precision": null,
+          "false_alerts_on_benign": 0,
+          "median_time_to_detect_ms": null,
+          "max_time_to_detect_ms": null
+        },
+        "DNS_TUNNELLING": {
+          "episodes": 0,
+          "observed_episodes": 0,
+          "detected_episodes": 0,
+          "episode_recall": null,
+          "alerts": 0,
+          "correct_alerts": 0,
+          "alert_precision": null,
+          "false_alerts_on_benign": 0,
+          "median_time_to_detect_ms": null,
+          "max_time_to_detect_ms": null
+        },
+        "ENCRYPTED_MALWARE": {
+          "episodes": 0,
+          "observed_episodes": 0,
+          "detected_episodes": 0,
+          "episode_recall": null,
+          "alerts": 37,
+          "correct_alerts": 0,
+          "alert_precision": 0.0,
+          "false_alerts_on_benign": 0,
+          "median_time_to_detect_ms": null,
+          "max_time_to_detect_ms": null
+        },
+        "RECONNAISSANCE": {
+          "episodes": 0,
+          "observed_episodes": 0,
+          "detected_episodes": 0,
+          "episode_recall": null,
+          "alerts": 0,
+          "correct_alerts": 0,
+          "alert_precision": null,
+          "false_alerts_on_benign": 0,
+          "median_time_to_detect_ms": null,
+          "max_time_to_detect_ms": null
+        },
+        "DATA_EXFILTRATION": {
+          "episodes": 2,
+          "observed_episodes": 2,
+          "detected_episodes": 0,
+          "episode_recall": 0.0,
+          "alerts": 0,
+          "correct_alerts": 0,
+          "alert_precision": null,
+          "false_alerts_on_benign": 0,
+          "median_time_to_detect_ms": null,
+          "max_time_to_detect_ms": null
+        }
+      },
+      "benign": {
+        "events": 13146,
+        "alerts": {
+          "BOTNET_C2": 10
+        },
+        "false_alerts_per_1000_events": 0.7607,
+        "labelled_episodes": 0,
+        "labelled_episodes_with_alerts": 0
+      },
+      "scenarios": {
+        "draft_zip_4_6mb_via_implant": {
+          "label": "DATA_EXFILTRATION",
+          "episodes": 1,
+          "detected": 0,
+          "with_any_alert": 1
+        },
+        "poshc2_implant_beaconing": {
+          "label": "BOTNET_C2",
+          "episodes": 2,
+          "detected": 0,
+          "with_any_alert": 2
+        },
+        "second_exfiltration_via_ws1_remoting": {
+          "label": "DATA_EXFILTRATION",
+          "episodes": 1,
+          "detected": 0,
+          "with_any_alert": 1
+        }
+      }
+    },
+    "unassigned": {
+      "captures": 1,
+      "events": 32191,
+      "late_events": 0,
+      "ambiguous_events": 0,
+      "threats": {
+        "DDOS": {
+          "episodes": 0,
+          "observed_episodes": 0,
+          "detected_episodes": 0,
+          "episode_recall": null,
+          "alerts": 0,
+          "correct_alerts": 0,
+          "alert_precision": null,
+          "false_alerts_on_benign": 0,
+          "median_time_to_detect_ms": null,
+          "max_time_to_detect_ms": null
+        },
+        "BOTNET_C2": {
+          "episodes": 2,
+          "observed_episodes": 2,
+          "detected_episodes": 0,
+          "episode_recall": 0.0,
+          "alerts": 10,
+          "correct_alerts": 0,
+          "alert_precision": 0.0,
+          "false_alerts_on_benign": 10,
+          "median_time_to_detect_ms": null,
+          "max_time_to_detect_ms": null
+        },
+        "DGA_DOMAINS": {
+          "episodes": 0,
+          "observed_episodes": 0,
+          "detected_episodes": 0,
+          "episode_recall": null,
+          "alerts": 0,
+          "correct_alerts": 0,
+          "alert_precision": null,
+          "false_alerts_on_benign": 0,
+          "median_time_to_detect_ms": null,
+          "max_time_to_detect_ms": null
+        },
+        "DNS_TUNNELLING": {
+          "episodes": 0,
+          "observed_episodes": 0,
+          "detected_episodes": 0,
+          "episode_recall": null,
+          "alerts": 0,
+          "correct_alerts": 0,
+          "alert_precision": null,
+          "false_alerts_on_benign": 0,
+          "median_time_to_detect_ms": null,
+          "max_time_to_detect_ms": null
+        },
+        "ENCRYPTED_MALWARE": {
+          "episodes": 0,
+          "observed_episodes": 0,
+          "detected_episodes": 0,
+          "episode_recall": null,
+          "alerts": 37,
+          "correct_alerts": 0,
+          "alert_precision": 0.0,
+          "false_alerts_on_benign": 0,
+          "median_time_to_detect_ms": null,
+          "max_time_to_detect_ms": null
+        },
+        "RECONNAISSANCE": {
+          "episodes": 0,
+          "observed_episodes": 0,
+          "detected_episodes": 0,
+          "episode_recall": null,
+          "alerts": 0,
+          "correct_alerts": 0,
+          "alert_precision": null,
+          "false_alerts_on_benign": 0,
+          "median_time_to_detect_ms": null,
+          "max_time_to_detect_ms": null
+        },
+        "DATA_EXFILTRATION": {
+          "episodes": 2,
+          "observed_episodes": 2,
+          "detected_episodes": 0,
+          "episode_recall": 0.0,
+          "alerts": 0,
+          "correct_alerts": 0,
+          "alert_precision": null,
+          "false_alerts_on_benign": 0,
+          "median_time_to_detect_ms": null,
+          "max_time_to_detect_ms": null
+        }
+      },
+      "benign": {
+        "events": 13146,
+        "alerts": {
+          "BOTNET_C2": 10
+        },
+        "false_alerts_per_1000_events": 0.7607,
+        "labelled_episodes": 0,
+        "labelled_episodes_with_alerts": 0
+      },
+      "scenarios": {
+        "draft_zip_4_6mb_via_implant": {
+          "label": "DATA_EXFILTRATION",
+          "episodes": 1,
+          "detected": 0,
+          "with_any_alert": 1
+        },
+        "poshc2_implant_beaconing": {
+          "label": "BOTNET_C2",
+          "episodes": 2,
+          "detected": 0,
+          "with_any_alert": 2
+        },
+        "second_exfiltration_via_ws1_remoting": {
+          "label": "DATA_EXFILTRATION",
+          "episodes": 1,
+          "detected": 0,
+          "with_any_alert": 1
+        }
+      }
+    }
+  }
+}
