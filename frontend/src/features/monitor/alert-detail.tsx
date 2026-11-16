@@ -5,7 +5,7 @@ import { X, Copy, Check, Fingerprint, ArrowRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Eyebrow } from '@/components/ui/panel'
 import { alertTitle } from '@/constants/threats'
-import { evidenceValue } from '@/lib/utils'
+import { evidenceMetric, evidenceValue } from '@/lib/utils'
 import type { AlertRecord } from '@/schemas/api'
 import { Severity } from './severity'
 
@@ -116,8 +116,11 @@ export function AlertDetail({
                       <dt className="text-[9px] tracking-[.04em] text-muted uppercase">
                         {key.replaceAll('_', ' ')}
                       </dt>
-                      <dd className="mt-2 text-xs font-medium break-words text-white">
-                        {evidenceValue(value)}
+                      <dd
+                        className="mt-2 text-xs font-medium break-words text-white"
+                        title={evidenceValue(value)}
+                      >
+                        {evidenceMetric(key, value)}
                       </dd>
                     </div>
                   ))}
