@@ -17,6 +17,7 @@ Start here:
 - [Brief traceability](docs/BRIEF_TRACEABILITY.md): each line of the official brief mapped to code and evidence.
 - [Real capture results](docs/REAL_CAPTURE_RESULTS.md): every evaluation step, including negative results.
 - [Model report](docs/MODEL_REPORT.md): models, features, training and validation.
+- [Next steps for the project owner](docs/NEXT_STEPS_FOR_OWNER.md): what data would close the remaining gaps.
 - Earlier dated checkpoints: [docs/history](docs/history/README_STATUS_NOTES_20261116.md).
 
 Univect means a unidirectional vector: one-way traffic, deeper insight. See
